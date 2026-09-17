@@ -1,0 +1,28 @@
+=== 打包前结构 ===
+  model_dir
+  output_dir
+  output_dir 图片数: 100
+  model_dir 内容:
+    35 config.yaml
+    2.8K runner.py
+    655M tinysr_x1.pt
+=== 压缩（output_dir 与 model_dir 位于 zip 根）===
+  赛题二_TinyEnhance_干就完了_18020768360.zip  1.3G  (1322304021 bytes)
+  大小合规（<=10GB）
+=== 校验 zip 内部结构 ===
+Archive:  赛题二_TinyEnhance_干就完了_18020768360.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+        0  2026-08-08 00:35   output_dir/
+  5141491  2026-08-08 00:35   output_dir/case97.jpg
+  6106688  2026-08-08 00:35   output_dir/case51.jpg
+  6843277  2026-08-08 00:35   output_dir/case40.jpg
+ 10155685  2026-08-08 00:35   output_dir/case13.jpg
+  ...
+  output_dir 图片数: 100
+   model_dir/
+   model_dir/config.yaml
+   model_dir/runner.py
+   model_dir/tinysr_x1.pt
+PACK_DONE
+PK2_EXIT:0

@@ -1,0 +1,17 @@
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/MANIQA_PIPAL-ae6d356b.pth
+=== teacher2 ===
+DiT 载入：缺失 0 多余 4
+LoRA 目标模块: ['k_linear', 'proj', 'q_linear', 'qkv', 'v_linear', 'w12', 'w3']
+  微调 ckpt 已装载：LoRA 450 个张量（未匹配 0），含 LightDecoder
+  [验证集全尺度] lpips=0.6661 dists=0.4183 niqe=3.501 musiq=65.56 maniqa=1.1032 clipiqa=0.8845 psnr=18.06 Score=4.2087
+      测试集 25/100
+      测试集 50/100
+      测试集 75/100
+      测试集 100/100
+  [测试集100张] niqe=3.598 musiq=65.18 maniqa=1.1045 clipiqa=0.8837 NR=3.2801
+
+对照 TinySR：combo NR 2.6144→榜72.60 | ref1 2.5986 | run12 2.5250/Score4.0025 | run8 2.4535→榜71.54
+ALLDONE

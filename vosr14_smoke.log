@@ -1,0 +1,25 @@
+########## 1.4B 分支 ##########
+DiT 载入：缺失 0 多余 4
+LoRA 目标模块: ['k_linear', 'proj', 'q_linear', 'qkv', 'v_linear', 'w12', 'w3']
+可训练参数 21.26 M
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/MANIQA_PIPAL-ae6d356b.pth
+train images=60493 repeat=1
+[0] score=3.3636 PSNR=25.704 lpips=0.3681 dists=0.3014 niqe=5.906 musiq=61.62 maniqa=0.5291 clipiqa=0.4784
+[val 6] score=3.3598 PSNR=25.777 lpips=0.3671 dists=0.2974 niqe=6.014 musiq=61.73 maniqa=0.5253 clipiqa=0.4832 <- best
+done. best score=3.3598
+########## 0.5B 回归 ##########
+DiT 载入：缺失 0 多余 4
+LoRA 目标模块: ['k_linear', 'proj', 'q_linear', 'qkv', 'v_linear', 'w12', 'w3']
+可训练参数 24.03 M
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/MANIQA_PIPAL-ae6d356b.pth
+train images=60493 repeat=1
+[0] score=2.4987 PSNR=24.197 lpips=0.5141 dists=0.3635 niqe=8.179 musiq=37.06 maniqa=0.3953 clipiqa=0.4284
+[val 4] score=2.7997 PSNR=23.648 lpips=0.5022 dists=0.3698 niqe=7.179 musiq=45.60 maniqa=0.4625 clipiqa=0.4710 <- best
+done. best score=2.7997
+ALLDONE

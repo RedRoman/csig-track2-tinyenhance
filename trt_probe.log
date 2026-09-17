@@ -1,0 +1,35 @@
+Unable to import quantization op. Please install modelopt library (https://github.com/NVIDIA/TensorRT-Model-Optimizer?tab=readme-ov-file#installation) to add support for compiling quantized models
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['transformer_blocks.1.scale_mlp', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.3.shift_mlp', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.10.scale_mlp', 'transformer_blocks.10.gate_msa', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.5.shift_mlp', 'transformer_blocks.4.gate_mlp', 'transformer_blocks.8.shift_msa', 'transformer_blocks.5.gate_msa', 'transformer_blocks.11.gate_msa', 'transformer_blocks.4.shift_mlp', 'transformer_blocks.11.shift_msa', 'transformer_blocks.0.gate_mlp', 'transformer_blocks.0.gate_msa', 'transformer_blocks.6.shift_msa', 'transformer_blocks.10.scale_msa', 'transformer_blocks.6.gate_msa', 'transformer_blocks.1.gate_mlp', 'transformer_blocks.3.shift_msa', 'scale', 'transformer_blocks.3.scale_msa', 'transformer_blocks.6.scale_msa', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.7.shift_msa', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.8.scale_msa', 'transformer_blocks.8.gate_msa', 'transformer_blocks.8.gate_mlp', 'transformer_blocks.4.gate_msa', 'transformer_blocks.3.gate_mlp', 'transformer_blocks.0.scale_msa', 'transformer_blocks.5.scale_mlp', 'transformer_blocks.6.scale_mlp', 'transformer_blocks.5.gate_mlp', 'shift', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.7.shift_mlp', 'transformer_blocks.2.scale_msa', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.9.scale_msa', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.7.gate_msa', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.2.shift_mlp', 'transformer_blocks.1.scale_msa', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.5.shift_msa', 'transformer_blocks.11.scale_mlp', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.0.shift_msa', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.7.scale_msa', 'transformer_blocks.2.gate_msa', 'transformer_blocks.5.scale_msa', 'transformer_blocks.10.shift_msa', 'transformer_blocks.4.scale_msa', 'transformer_blocks.9.shift_msa', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.9.gate_msa', 'transformer_blocks.3.scale_mlp', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.2.shift_msa', 'transformer_blocks.4.shift_msa', 'transformer_blocks.3.gate_msa', 'transformer_blocks.8.shift_mlp', 'transformer_blocks.1.gate_msa', 'transformer_blocks.1.shift_msa', 'transformer_blocks.11.scale_msa']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+eager fp16: 24.88 ms  (输出范围 [0.107,0.904])
+Traceback (most recent call last):
+  File "/cache/zihaohe/trt_probe.py", line 50, in <module>
+    jit_model = torch.jit.optimize_for_inference(jit_model)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/jit/_freeze.py", line 224, in optimize_for_inference
+    mod = freeze(mod.eval(), preserved_attrs=other_methods)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/jit/_freeze.py", line 121, in freeze
+    run_frozen_optimizations(out, optimize_numerics, preserved_methods)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/jit/_freeze.py", line 171, in run_frozen_optimizations
+    torch._C._jit_pass_optimize_frozen_graph(mod.graph, optimize_numerics)
+RuntimeError: stack_out && stack_out->size() == 1 INTERNAL ASSERT FAILED at "../torch/csrc/jit/passes/frozen_conv_folding.cpp":348, please report a bug to PyTorch. 
+ALLDONE

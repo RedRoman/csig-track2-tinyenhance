@@ -1,0 +1,39 @@
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.
+  deprecate("Transformer2DModelOutput", "1.0.0", deprecation_message)
+配对 crop 数：24
+
+====================================================================================
+实验 1：latent 往返重建上限（区分 latent 容量 vs decoder 能力）
+====================================================================================
+  SD2.1 VAE: latent_channels=4, decoder 参数 49.5M
+    encode->decode(GT) PSNR = 36.514 dB
+
+====================================================================================
+实验 2：对比基准 —— LQ 自身 与 Samsung 4通道架构
+====================================================================================
+  LQ 什么都不做              PSNR = 26.928 dB   <- 必须超过这条线
+  Samsung 4通道架构上限       PSNR = 23.482 dB   (前一实验实测)
+  SD2.1 VAE (4ch, 大decoder)            36.514 dB   高于基线 +9.59 dB
+  Samsung 4ch 轻量架构 (端到端)               23.482 dB   低于基线 -3.45 dB
+
+====================================================================================
+实验 3：残差结构的兜底能力
+====================================================================================
+  结构 out = in + G(in)，G 输出恒为 0 时退化到 LQ 原样：
+    最差情况 PSNR = 26.928 dB（等于 LQ 基线，不会净亏）
+  对比非残差结构：
+    最差情况 PSNR = 23.482 dB（架构上限，已低于基线 4.27 dB）
+
+  latent 域残差(TinySR 式)的上限 = VAE 往返重建上限（见实验 1）
+
+====================================================================================
+实验 4：高频残差的能量分布（决定所需 latent 容量）
+====================================================================================
+  GT 低频幅度          0.34792
+  GT 高频幅度          0.02927
+  需重建的残差(GT-LQ)  0.03691
+  残差 / 低频 = 10.6%   残差 / 高频 = 126.1%
+
+  => 残差幅度仅为低频的百分之几，让网络只学残差比让它重建整幅图容易得多，
+     且低频经 identity 路径完全无损通过。
+CAP_EXIT:0

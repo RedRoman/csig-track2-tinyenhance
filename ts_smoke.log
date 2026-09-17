@@ -1,0 +1,36 @@
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+学生 net 参数 6.07M
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+蒸馏样本 20000 对
+Traceback (most recent call last):
+  File "/cache/zihaohe/train_tiny_student.py", line 227, in <module>
+    main()
+  File "/cache/zihaohe/train_tiny_student.py", line 138, in main
+    ev = evaluate_model(wrap, val_items, M, device=DEV, dtype=DT, robust_beta=0.15)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/v3/code/eval_utils.py", line 94, in evaluate_model
+    v = fn(out)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/models/inference_model.py", line 82, in forward
+    output = self.net(target.to(device), **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/maniqa_arch.py", line 209, in forward
+    x = tab(x)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/maniqa_arch.py", line 49, in forward
+    attn = q @ k.transpose(-2, -1) * self.norm_fact
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 720.00 MiB. GPU 0 has a total capacity of 79.33 GiB of which 73.25 MiB is free. Process 593573 has 27.77 GiB memory in use. Process 2024688 has 39.49 GiB memory in use. Process 2191062 has 11.98 GiB memory in use. Of the allocated memory 11.41 GiB is allocated by PyTorch, and 37.06 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+ALLDONE

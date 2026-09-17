@@ -1,0 +1,12 @@
+解压到 /tmp/tmp.5cycBbCsV1
+=== 解压后结构 ===
+  model_dir
+  output_dir
+  output_dir: 100 张
+  model_dir : config.yaml runner.py tinysr_x1.pt 
+=== 用解压出的包跑 Runner ===
+  Runner 加载成功 device=cuda:0 dtype=torch.float16
+  infer: (1, 3, 512, 512) -> (1, 3, 512, 512)  range [-1.000,1.000]
+  512x512 时延 44.036 ms   加速比 4.83x (OSEDiff 212.77ms)
+FINAL_OK
+FC_EXIT:0

@@ -1,0 +1,16 @@
+created virtual environment CPython3.10.12.final.0-64-x86_64 in 316ms
+  creator CPython3Posix(dest=/cache/zihaohe/csig_isr/venv_ose, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, via=copy, app_data_dir=/cache/zihaohe/hf_cache/virtualenv)
+    added seed packages: pip==26.2, setuptools==83.0.0
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator,XonshActivator
+=== 装 torch (走 pip cache) ===
+
+Successfully installed MarkupSafe-3.0.3 filelock-3.29.0 fsspec-2026.4.0 jinja2-3.1.6 mpmath-1.3.0 networkx-3.4.2 numpy-2.2.6 nvidia-cublas-cu12-12.4.5.8 nvidia-cuda-cupti-cu12-12.4.127 nvidia-cuda-nvrtc-cu12-12.4.127 nvidia-cuda-runtime-cu12-12.4.127 nvidia-cudnn-cu12-9.1.0.70 nvidia-cufft-cu12-11.2.1.3 nvidia-curand-cu12-10.3.5.147 nvidia-cusolver-cu12-11.6.1.9 nvidia-cusparse-cu12-12.3.1.170 nvidia-nccl-cu12-2.21.5 nvidia-nvjitlink-cu12-12.4.127 nvidia-nvtx-cu12-12.4.127 pillow-12.2.0 sympy-1.13.1 torch-2.5.1+cu124 torchvision-0.20.1+cu124 triton-3.1.0 typing-extensions-4.15.0
+=== 装 OSEDiff 依赖 ===
+
+[notice] A new release of pip is available: 26.2 -> 26.2.1
+[notice] To update, run: /cache/zihaohe/csig_isr/venv_ose/bin/python -m pip install --upgrade pip
+=== 验证 ===
+torch 2.5.1+cu124 cuda True
+diffusers 0.25.0 transformers 4.28.1
+OSE_ENV_DONE

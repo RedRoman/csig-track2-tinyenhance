@@ -1,0 +1,141 @@
+[nanny] try=1 gpu=1 free=19194MB 启动
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+VAE=(出厂 separable)  LATENT_SCALE=1.0  测试图 100 张
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['transformer_blocks.3.scale_msa', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.11.gate_msa', 'transformer_blocks.4.shift_msa', 'transformer_blocks.3.shift_msa', 'transformer_blocks.3.gate_mlp', 'scale', 'transformer_blocks.11.shift_msa', 'transformer_blocks.0.shift_msa', 'transformer_blocks.9.gate_msa', 'transformer_blocks.6.shift_msa', 'transformer_blocks.7.shift_msa', 'transformer_blocks.0.gate_msa', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.6.scale_msa', 'transformer_blocks.5.scale_mlp', 'shift', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.8.gate_mlp', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.3.gate_msa', 'transformer_blocks.4.gate_mlp', 'transformer_blocks.4.scale_msa', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.11.scale_msa', 'transformer_blocks.3.shift_mlp', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.5.scale_msa', 'transformer_blocks.10.scale_msa', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.7.gate_msa', 'transformer_blocks.5.shift_mlp', 'transformer_blocks.7.shift_mlp', 'transformer_blocks.6.gate_msa', 'transformer_blocks.1.gate_msa', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.6.scale_mlp', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.2.gate_msa', 'transformer_blocks.1.gate_mlp', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.8.gate_msa', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.0.scale_msa', 'transformer_blocks.5.gate_mlp', 'transformer_blocks.2.scale_msa', 'transformer_blocks.2.shift_mlp', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.9.scale_msa', 'transformer_blocks.8.shift_msa', 'transformer_blocks.10.gate_msa', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.10.scale_mlp', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.7.scale_msa', 'transformer_blocks.1.scale_msa', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.1.shift_msa', 'transformer_blocks.3.scale_mlp', 'transformer_blocks.5.gate_msa', 'transformer_blocks.0.gate_mlp', 'transformer_blocks.4.gate_msa', 'transformer_blocks.5.shift_msa', 'transformer_blocks.1.scale_mlp', 'transformer_blocks.4.shift_mlp', 'transformer_blocks.10.shift_msa', 'transformer_blocks.8.scale_msa', 'transformer_blocks.2.shift_msa', 'transformer_blocks.8.shift_mlp', 'transformer_blocks.9.shift_msa', 'transformer_blocks.11.scale_mlp']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+Traceback (most recent call last):
+  File "/cache/zihaohe/eval_ck.py", line 83, in <module>
+    acc[k].append(float(M[k](sr, gt) if k in ("lpips", "dists") else M[k](sr)))
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/models/inference_model.py", line 80, in forward
+    output = self.net(target.to(device), ref.to(device), **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/dists_arch.py", line 140, in forward
+    x_var = ((feats0[k] - x_mean)**2).mean([2, 3], keepdim=True)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/_tensor.py", line 39, in wrapped
+    return f(*args, **kwargs)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.00 GiB. GPU 0 has a total capacity of 79.33 GiB of which 1.87 GiB is free. Process 3583569 has 60.57 GiB memory in use. Process 4146919 has 16.87 GiB memory in use. Of the allocated memory 16.08 GiB is allocated by PyTorch, and 305.42 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[nanny] OOM，重排队
+[nanny] try=2 gpu=1 free=19194MB 启动
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+VAE=(出厂 separable)  LATENT_SCALE=1.0  测试图 100 张
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['transformer_blocks.7.shift_mlp', 'transformer_blocks.2.scale_msa', 'transformer_blocks.10.shift_msa', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.2.gate_msa', 'transformer_blocks.0.shift_msa', 'transformer_blocks.6.gate_msa', 'transformer_blocks.3.gate_msa', 'transformer_blocks.3.shift_msa', 'transformer_blocks.2.shift_mlp', 'transformer_blocks.1.gate_mlp', 'transformer_blocks.10.gate_msa', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.3.shift_mlp', 'scale', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.9.shift_msa', 'transformer_blocks.8.scale_msa', 'transformer_blocks.6.scale_msa', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.6.shift_msa', 'transformer_blocks.5.scale_mlp', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.5.gate_msa', 'transformer_blocks.7.scale_msa', 'transformer_blocks.1.gate_msa', 'transformer_blocks.5.shift_msa', 'transformer_blocks.1.shift_msa', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.7.shift_msa', 'transformer_blocks.8.gate_mlp', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.11.gate_msa', 'transformer_blocks.3.scale_msa', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.4.shift_mlp', 'transformer_blocks.5.scale_msa', 'transformer_blocks.11.scale_mlp', 'transformer_blocks.8.gate_msa', 'transformer_blocks.8.shift_mlp', 'transformer_blocks.5.gate_mlp', 'transformer_blocks.3.scale_mlp', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.0.scale_msa', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.11.shift_msa', 'transformer_blocks.4.scale_msa', 'transformer_blocks.5.shift_mlp', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.0.gate_mlp', 'transformer_blocks.0.gate_msa', 'transformer_blocks.11.scale_msa', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.9.scale_msa', 'transformer_blocks.2.shift_msa', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.4.gate_mlp', 'transformer_blocks.3.gate_mlp', 'transformer_blocks.1.scale_mlp', 'transformer_blocks.7.gate_msa', 'transformer_blocks.8.shift_msa', 'transformer_blocks.1.scale_msa', 'transformer_blocks.10.scale_msa', 'shift', 'transformer_blocks.4.gate_msa', 'transformer_blocks.10.scale_mlp', 'transformer_blocks.6.scale_mlp', 'transformer_blocks.9.gate_msa', 'transformer_blocks.4.shift_msa']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+Traceback (most recent call last):
+  File "/cache/zihaohe/eval_ck.py", line 83, in <module>
+    acc[k].append(float(M[k](sr, gt) if k in ("lpips", "dists") else M[k](sr)))
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/models/inference_model.py", line 80, in forward
+    output = self.net(target.to(device), ref.to(device), **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/dists_arch.py", line 140, in forward
+    x_var = ((feats0[k] - x_mean)**2).mean([2, 3], keepdim=True)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/_tensor.py", line 39, in wrapped
+    return f(*args, **kwargs)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.00 GiB. GPU 0 has a total capacity of 79.33 GiB of which 1.87 GiB is free. Process 3583569 has 60.57 GiB memory in use. Process 64094 has 16.87 GiB memory in use. Of the allocated memory 16.08 GiB is allocated by PyTorch, and 305.42 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[nanny] OOM，重排队
+[nanny] try=3 gpu=1 free=19194MB 启动
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+VAE=(出厂 separable)  LATENT_SCALE=1.0  测试图 100 张
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['shift', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.4.shift_msa', 'transformer_blocks.7.gate_msa', 'scale', 'transformer_blocks.1.gate_mlp', 'transformer_blocks.9.gate_msa', 'transformer_blocks.1.scale_msa', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.0.scale_msa', 'transformer_blocks.11.shift_msa', 'transformer_blocks.4.gate_msa', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.0.gate_msa', 'transformer_blocks.2.gate_msa', 'transformer_blocks.5.scale_msa', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.11.gate_msa', 'transformer_blocks.3.gate_mlp', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.3.scale_msa', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.7.shift_msa', 'transformer_blocks.5.scale_mlp', 'transformer_blocks.5.shift_msa', 'transformer_blocks.4.shift_mlp', 'transformer_blocks.2.shift_msa', 'transformer_blocks.5.gate_mlp', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.3.scale_mlp', 'transformer_blocks.0.gate_mlp', 'transformer_blocks.2.shift_mlp', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.6.scale_msa', 'transformer_blocks.3.shift_mlp', 'transformer_blocks.9.shift_msa', 'transformer_blocks.3.gate_msa', 'transformer_blocks.10.shift_msa', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.8.gate_msa', 'transformer_blocks.10.gate_msa', 'transformer_blocks.2.scale_msa', 'transformer_blocks.1.gate_msa', 'transformer_blocks.10.scale_mlp', 'transformer_blocks.11.scale_msa', 'transformer_blocks.5.shift_mlp', 'transformer_blocks.8.scale_msa', 'transformer_blocks.8.gate_mlp', 'transformer_blocks.0.shift_msa', 'transformer_blocks.1.shift_msa', 'transformer_blocks.8.shift_mlp', 'transformer_blocks.6.shift_msa', 'transformer_blocks.1.scale_mlp', 'transformer_blocks.6.gate_msa', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.7.shift_mlp', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.11.scale_mlp', 'transformer_blocks.9.scale_msa', 'transformer_blocks.4.scale_msa', 'transformer_blocks.4.gate_mlp', 'transformer_blocks.7.scale_msa', 'transformer_blocks.5.gate_msa', 'transformer_blocks.10.scale_msa', 'transformer_blocks.8.shift_msa', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.3.shift_msa', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.6.scale_mlp']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+Traceback (most recent call last):
+  File "/cache/zihaohe/eval_ck.py", line 83, in <module>
+    acc[k].append(float(M[k](sr, gt) if k in ("lpips", "dists") else M[k](sr)))
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/models/inference_model.py", line 80, in forward
+    output = self.net(target.to(device), ref.to(device), **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/dists_arch.py", line 140, in forward
+    x_var = ((feats0[k] - x_mean)**2).mean([2, 3], keepdim=True)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/_tensor.py", line 39, in wrapped
+    return f(*args, **kwargs)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.00 GiB. GPU 0 has a total capacity of 79.33 GiB of which 1.87 GiB is free. Process 3583569 has 60.57 GiB memory in use. Process 176380 has 16.87 GiB memory in use. Of the allocated memory 16.08 GiB is allocated by PyTorch, and 305.42 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[nanny] OOM，重排队

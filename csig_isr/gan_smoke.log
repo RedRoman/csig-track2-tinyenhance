@@ -1,0 +1,63 @@
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.
+  deprecate("Transformer2DModelOutput", "1.0.0", deprecation_message)
+  + lsdir512: 57300 张
+训练图 60493 张（基础 3193）
+  repeat=1, 等效样本 60493
+/cache/zihaohe/csig_isr/TinySR/models/tinysr/tinysd3.py:74: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.register_buffer("pos_embed", torch.load("dataset/cache/pos_embed.pt"))
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['transformer_blocks.8.gate_msa', 'transformer_blocks.0.shift_msa', 'transformer_blocks.10.scale_msa', 'transformer_blocks.2.shift_msa', 'transformer_blocks.6.gate_msa', 'transformer_blocks.0.gate_mlp', 'transformer_blocks.4.gate_mlp', 'transformer_blocks.1.shift_msa', 'transformer_blocks.7.scale_msa', 'transformer_blocks.3.gate_msa', 'transformer_blocks.1.scale_msa', 'transformer_blocks.7.shift_msa', 'transformer_blocks.4.gate_msa', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.10.scale_mlp', 'scale', 'transformer_blocks.8.scale_msa', 'transformer_blocks.5.shift_msa', 'transformer_blocks.2.scale_msa', 'transformer_blocks.2.shift_mlp', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.1.gate_mlp', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.7.shift_mlp', 'transformer_blocks.11.scale_msa', 'transformer_blocks.2.gate_msa', 'transformer_blocks.3.scale_msa', 'transformer_blocks.9.shift_msa', 'transformer_blocks.9.gate_msa', 'transformer_blocks.5.gate_mlp', 'transformer_blocks.3.scale_mlp', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.11.scale_mlp', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.6.shift_msa', 'transformer_blocks.9.scale_msa', 'transformer_blocks.8.shift_msa', 'transformer_blocks.4.shift_msa', 'transformer_blocks.3.shift_mlp', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.11.gate_msa', 'transformer_blocks.8.shift_mlp', 'transformer_blocks.4.scale_msa', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.4.shift_mlp', 'transformer_blocks.5.scale_mlp', 'transformer_blocks.5.gate_msa', 'transformer_blocks.5.shift_mlp', 'transformer_blocks.1.scale_mlp', 'transformer_blocks.8.gate_mlp', 'transformer_blocks.3.shift_msa', 'transformer_blocks.0.scale_msa', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.6.scale_msa', 'transformer_blocks.1.gate_msa', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.3.gate_mlp', 'transformer_blocks.7.gate_msa', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.10.shift_msa', 'transformer_blocks.6.scale_mlp', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.5.scale_msa', 'shift', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.0.gate_msa', 'transformer_blocks.11.shift_msa', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.10.gate_msa']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+/cache/zihaohe/csig_isr/train_tinysr.py:191: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  pooled = torch.load(f"{TS}/dataset/default/pool_embeds.pt", map_location=dev).to(dtype=dt)
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+  惰性缓存已触发（AdaLN scale/shift 固定）
+  续训自 /cache/zihaohe/csig_isr/train_out/tinysr10_bigdata/best.pth (step 1800) LoRA 146 项
+  可训练：LoRA 21.34 M
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/clip/clip.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/arch_util.py:118: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location=torch.device("cpu"))
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/_factory.py:138: UserWarning: Mapping deprecated model name vit_small_patch16_224_dino to current vit_small_patch16_224.dino.
+  model = create_fn(
+/cache/zihaohe/csig_isr/TinySR/models/discriminator.py:117: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  reload_model_(self.model, torch.load('dinov2/dino_deitsmall16_pretrain.pth'))
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+  判别器可训练 7.39 M，GAN 从 step 20 开始
+  验证集 48 crop  分层: 重16 中17 轻15  (LQ PSNR 分界 23.72/29.52)
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/MANIQA_PIPAL-ae6d356b.pth
+[step 0] LQ=27.382dB 模型=25.596dB Score=3.7638 (重3.763 中3.794 轻3.731)
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+[val 40] PSNR=25.643dB Score=3.7296 (重3.708 中3.766 轻3.711)  <- best, saved
+[   50/120] loss -1.4535 (l1 0.0500 lpips 0.2138 dists 0.1368 iqa 1.6985 fid 0.0069 gan +0.528 D 1.759) lr 6.48e-06 1.85s/it
+[val 80] PSNR=25.681dB Score=3.7303 (重3.715 中3.765 轻3.708)  <- best, saved
+[  100/120] loss -1.3108 (l1 0.0600 lpips 0.2607 dists 0.1520 iqa 1.6601 fid 0.0068 gan +0.729 D 1.744) lr 1.14e-06 1.85s/it
+[val 120] PSNR=25.650dB Score=3.7411 (重3.728 中3.776 轻3.716)  <- best, saved
+训练完成，best Score = 3.7411
+GS_EXIT:0

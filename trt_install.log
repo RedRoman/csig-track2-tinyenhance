@@ -1,0 +1,54 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting torch_tensorrt==2.5.0
+  Downloading torch_tensorrt-2.5.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_34_x86_64.whl (3.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 6.2 MB/s  0:00:00
+Collecting tensorrt==10.3.0
+  Downloading tensorrt-10.3.0.tar.gz (16 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting tensorrt_cu12==10.3.0
+  Downloading tensorrt-cu12-10.3.0.tar.gz (18 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting tensorrt-cu12-bindings==10.3.0
+  Downloading tensorrt_cu12_bindings-10.3.0-cp310-none-manylinux_2_17_x86_64.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 30.9 MB/s  0:00:00
+Collecting tensorrt-cu12-libs==10.3.0
+  Downloading tensorrt_cu12_libs-10.3.0.tar.gz (630 bytes)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: tensorrt, tensorrt_cu12, tensorrt-cu12-libs
+  Building wheel for tensorrt (pyproject.toml): started
+  Building wheel for tensorrt (pyproject.toml): finished with status 'done'
+  Created wheel for tensorrt: filename=tensorrt-10.3.0-py2.py3-none-any.whl size=16390 sha256=bafe1b830c84f28e73597293d8d0e64842723cd2e6eea34ac1f43c39aa918f0e
+  Stored in directory: /tmp/pip-ephem-wheel-cache-53ckjkpa/wheels/51/12/03/f0fe5612dc967598c5ef0ea31b56a44f04e9286f46b3514f80
+  Building wheel for tensorrt_cu12 (pyproject.toml): started
+  Building wheel for tensorrt_cu12 (pyproject.toml): finished with status 'done'
+  Created wheel for tensorrt_cu12: filename=tensorrt_cu12-10.3.0-py2.py3-none-any.whl size=17652 sha256=f0b3fd30b7b488b240f03f19acaedb14bedb7b06d4ffadd64a92138a8b5b1b36
+  Stored in directory: /tmp/pip-ephem-wheel-cache-53ckjkpa/wheels/68/7a/7d/93db39288a293270bfa2c21b012c956f4226879ff3dec4d471
+  Building wheel for tensorrt-cu12-libs (pyproject.toml): started
+  Building wheel for tensorrt-cu12-libs (pyproject.toml): finished with status 'done'
+  Created wheel for tensorrt-cu12-libs: filename=tensorrt_cu12_libs-10.3.0-py2.py3-none-manylinux_2_17_x86_64.whl size=2037510258 sha256=736cb205d2d4ece7584f3b35e2495754864161895e9cbe3ff7d46b58c9680311
+  Stored in directory: /tmp/pip-ephem-wheel-cache-53ckjkpa/wheels/06/ad/e8/5022b35f34f0ce3e78604ada95a02cde11ee1032f03be6d6e2
+Successfully built tensorrt tensorrt_cu12 tensorrt-cu12-libs
+Installing collected packages: tensorrt-cu12-libs, tensorrt-cu12-bindings, tensorrt, torch_tensorrt, tensorrt_cu12
+
+Successfully installed tensorrt-10.3.0 tensorrt-cu12-bindings-10.3.0 tensorrt-cu12-libs-10.3.0 tensorrt_cu12-10.3.0 torch_tensorrt-2.5.0
+
+[notice] A new release of pip is available: 26.2 -> 26.2.1
+[notice] To update, run: /cache/zihaohe/csig_isr/venv/bin/python -m pip install --upgrade pip
+DONE

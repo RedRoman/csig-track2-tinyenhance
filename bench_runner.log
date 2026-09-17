@@ -1,0 +1,16 @@
+=== 旧 runner（当前提交所用）===
+旧: 中位 12.420 ms  p90 26.101 ms
+=== 新 runner（CUDA Graph）===
+CUDA graph capture failed, fallback to eager: CUDA error: operation failed due to a previous error during capture
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+新: 中位 12.468 ms  p90 15.687 ms  (graph=OFF!)
+输出一致性 |old-new| max = 0.000e+00
+提速: 0.996x   官方加速比 8.06 -> 8.03
+Traceback (most recent call last):
+  File "/cache/zihaohe/bench_runner.py", line 53, in <module>
+    x2 = (torch.rand_like(x) * 2 - 1)
+RuntimeError: Offset increment outside graph capture encountered unexpectedly.
+ALLDONE

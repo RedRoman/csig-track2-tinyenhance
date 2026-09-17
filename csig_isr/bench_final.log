@@ -1,0 +1,18 @@
+GPU: NVIDIA A100-SXM4-80GB
+其它占用进程: 1146571
+
+提交模型 5 轮: ['12.29', '13.01', '28.27', '27.14', '13.51']
+  中位数 13.514 ms
+
+重测 OSEDiff 基准（同口径：GPU 张量、独占）...
+Traceback (most recent call last):
+  File "/cache/zihaohe/csig_isr/bench_final.py", line 39, in <module>
+    from diffusers import AutoencoderKL, UNet2DConditionModel, DDPMScheduler
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/__init__.py", line 5, in <module>
+    from .utils import (
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/utils/__init__.py", line 37, in <module>
+    from .dynamic_modules_utils import get_class_from_dynamic_module
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/utils/dynamic_modules_utils.py", line 28, in <module>
+    from huggingface_hub import cached_download, hf_hub_download, model_info
+ImportError: cannot import name 'cached_download' from 'huggingface_hub' (/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/huggingface_hub/__init__.py)
+BF_EXIT:1

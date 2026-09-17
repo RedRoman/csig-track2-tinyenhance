@@ -1,0 +1,190 @@
+##### 中壳烟测 #####
+规格                                       参数M     时延ms      加速比  spd^0.2   S=4.05预测   S=4.35预测
+r8 base64 x4blk                         0.52    0.355    281.9    3.090      171.8      211.6
+    恒等检查 |y-x|max = 1.22e-04
+r8 base96 x6blk                         1.33    0.532    188.1    2.850      158.5      195.1
+    恒等检查 |y-x|max = 1.22e-04
+r8 base128 x8blk                        2.80    0.723    138.5    2.681      149.1      183.5
+    恒等检查 |y-x|max = 1.22e-04
+r8 base128 x6blk down                   8.34    0.695    144.0    2.702      150.3      185.0
+    恒等检查 |y-x|max = 1.22e-04
+r8 base192 x8blk down                  23.75    1.200     83.4    2.423      134.7      165.9
+    恒等检查 |y-x|max = 1.22e-04
+r4 base64 x4blk down                    1.44    0.497    201.7    2.890      160.7      197.9
+    恒等检查 |y-x|max = 1.22e-04
+midshell 参数 17.7M (r4 base96 (2, 3, 4))
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+蒸馏样本 9195 对
+[0] score=2.0084 PSNR=29.196
+[val 8] score=1.9235 robust=1.8943 PSNR=28.760 <- best
+done. best robust=1.8943
+##### 中壳正式 r4 base96 (~40M) #####
+规格                                       参数M     时延ms      加速比  spd^0.2   S=4.05预测   S=4.35预测
+r8 base64 x4blk                         0.52    0.356    281.0    3.089      171.7      211.4
+    恒等检查 |y-x|max = 1.22e-04
+r8 base96 x6blk                         1.33    0.531    188.4    2.851      158.5      195.2
+    恒等检查 |y-x|max = 1.22e-04
+r8 base128 x8blk                        2.80    0.717    139.7    2.686      149.3      183.9
+    恒等检查 |y-x|max = 1.22e-04
+r8 base128 x6blk down                   8.34    0.691    144.9    2.705      150.4      185.2
+    恒等检查 |y-x|max = 1.22e-04
+r8 base192 x8blk down                  23.75    1.196     83.7    2.424      134.8      166.0
+    恒等检查 |y-x|max = 1.22e-04
+r4 base64 x4blk down                    1.44    0.487    205.5    2.901      161.3      198.6
+    恒等检查 |y-x|max = 1.22e-04
+midshell 参数 17.7M (r4 base96 (2, 3, 4))
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+蒸馏样本 9395 对
+[0] score=2.0327 PSNR=28.992
+[100/12000] G=1.5576 D=0.0000 tLPIPS=0.2806 gLPIPS=0.2313 lf_top=0.0151 gan=off 0.40s/it
+[200/12000] G=1.5326 D=0.0000 tLPIPS=0.2542 gLPIPS=0.2442 lf_top=0.0263 gan=off 0.39s/it
+[300/12000] G=1.3941 D=0.0000 tLPIPS=0.2214 gLPIPS=0.1925 lf_top=0.0227 gan=off 0.37s/it
+[400/12000] G=1.3337 D=0.0000 tLPIPS=0.2169 gLPIPS=0.1931 lf_top=0.0191 gan=off 0.36s/it
+[500/12000] G=1.2806 D=0.0000 tLPIPS=0.1969 gLPIPS=0.1654 lf_top=0.0200 gan=off 0.36s/it
+[val 500] score=2.1570 robust=2.1053 PSNR=27.774 <- best
+[600/12000] G=1.3012 D=0.0000 tLPIPS=0.2185 gLPIPS=0.1865 lf_top=0.0151 gan=off 0.44s/it
+[700/12000] G=1.3387 D=0.0000 tLPIPS=0.2246 gLPIPS=0.2102 lf_top=0.0141 gan=off 0.43s/it
+[800/12000] G=1.4943 D=0.0000 tLPIPS=0.2589 gLPIPS=0.2420 lf_top=0.0104 gan=off 0.42s/it
+[900/12000] G=1.3133 D=0.0000 tLPIPS=0.2267 gLPIPS=0.2209 lf_top=0.0169 gan=off 0.41s/it
+[1000/12000] G=1.2247 D=0.0000 tLPIPS=0.2054 gLPIPS=0.1558 lf_top=0.0134 gan=off 0.41s/it
+[val 1000] score=2.3015 robust=2.2560 PSNR=27.816 <- best
+[1100/12000] G=1.3252 D=0.0000 tLPIPS=0.2083 gLPIPS=0.1777 lf_top=0.0136 gan=off 0.44s/it
+[1200/12000] G=1.4712 D=0.0000 tLPIPS=0.2199 gLPIPS=0.1996 lf_top=0.0135 gan=off 0.44s/it
+[1300/12000] G=1.1842 D=0.0000 tLPIPS=0.1969 gLPIPS=0.1613 lf_top=0.0182 gan=off 0.43s/it
+[1400/12000] G=1.2428 D=0.0000 tLPIPS=0.2057 gLPIPS=0.1702 lf_top=0.0177 gan=off 0.43s/it
+[1500/12000] G=1.3275 D=0.0000 tLPIPS=0.2208 gLPIPS=0.1840 lf_top=0.0140 gan=off 0.42s/it
+[val 1500] score=2.3036 robust=2.2548 PSNR=27.697
+[1600/12000] G=1.2524 D=0.0000 tLPIPS=0.2163 gLPIPS=0.1722 lf_top=0.0172 gan=off 0.45s/it
+[1700/12000] G=1.1442 D=0.0000 tLPIPS=0.1863 gLPIPS=0.1351 lf_top=0.0135 gan=off 0.44s/it
+[1800/12000] G=1.2373 D=0.0000 tLPIPS=0.2049 gLPIPS=0.1806 lf_top=0.0127 gan=off 0.44s/it
+[1900/12000] G=1.1951 D=0.0000 tLPIPS=0.1960 gLPIPS=0.1914 lf_top=0.0198 gan=off 0.43s/it
+[2000/12000] G=1.3789 D=1.4066 tLPIPS=0.2184 gLPIPS=0.2105 lf_top=0.0162 gan=on 0.43s/it
+[val 2000] score=2.4485 robust=2.3997 PSNR=27.749 <- best
+[2100/12000] G=1.1992 D=1.3678 tLPIPS=0.1916 gLPIPS=0.1464 lf_top=0.0178 gan=on 0.45s/it
+[2200/12000] G=1.3204 D=1.2953 tLPIPS=0.2139 gLPIPS=0.1654 lf_top=0.0212 gan=on 0.45s/it
+[2300/12000] G=1.2432 D=1.3754 tLPIPS=0.1818 gLPIPS=0.1873 lf_top=0.0131 gan=on 0.45s/it
+[2400/12000] G=1.3015 D=1.3010 tLPIPS=0.2003 gLPIPS=0.1802 lf_top=0.0145 gan=on 0.45s/it
+[2500/12000] G=1.2949 D=1.5663 tLPIPS=0.2038 gLPIPS=0.1757 lf_top=0.0238 gan=on 0.44s/it
+[val 2500] score=2.3283 robust=2.2837 PSNR=27.691
+[2600/12000] G=1.4183 D=1.2524 tLPIPS=0.2170 gLPIPS=0.2038 lf_top=0.0192 gan=on 0.46s/it
+[2700/12000] G=144.1797 D=1.9880 tLPIPS=0.4412 gLPIPS=0.4569 lf_top=0.0478 gan=on 0.46s/it
+[2800/12000] G=1.2983 D=1.2994 tLPIPS=0.1691 gLPIPS=0.1355 lf_top=0.0403 gan=on 0.46s/it
+[2900/12000] G=1.2640 D=1.0349 tLPIPS=0.1789 gLPIPS=0.1605 lf_top=0.0213 gan=on 0.45s/it
+[3000/12000] G=1.3176 D=1.6549 tLPIPS=0.2048 gLPIPS=0.1990 lf_top=0.0294 gan=on 0.45s/it
+[val 3000] score=2.4243 robust=2.3640 PSNR=27.357
+[3100/12000] G=1.2739 D=1.5074 tLPIPS=0.1870 gLPIPS=0.1712 lf_top=0.0362 gan=on 0.47s/it
+[3200/12000] G=1.2963 D=1.4018 tLPIPS=0.1981 gLPIPS=0.1584 lf_top=0.0338 gan=on 0.46s/it
+[3300/12000] G=1.2405 D=1.2787 tLPIPS=0.1737 gLPIPS=0.1542 lf_top=0.0336 gan=on 0.46s/it
+[3400/12000] G=1.2772 D=1.3053 tLPIPS=0.1653 gLPIPS=0.1409 lf_top=0.0369 gan=on 0.46s/it
+[3500/12000] G=1.5414 D=0.9712 tLPIPS=0.2120 gLPIPS=0.1904 lf_top=0.0392 gan=on 0.46s/it
+[val 3500] score=2.4053 robust=2.3591 PSNR=27.251
+[3600/12000] G=1.3559 D=1.6339 tLPIPS=0.1922 gLPIPS=0.1908 lf_top=0.0310 gan=on 0.47s/it
+[3700/12000] G=1.4420 D=1.1624 tLPIPS=0.1989 gLPIPS=0.1995 lf_top=0.0282 gan=on 0.47s/it
+[3800/12000] G=1.6198 D=1.0943 tLPIPS=0.2242 gLPIPS=0.1962 lf_top=0.0394 gan=on 0.47s/it
+[3900/12000] G=1.3559 D=1.0357 tLPIPS=0.1877 gLPIPS=0.1693 lf_top=0.0351 gan=on 0.46s/it
+[4000/12000] G=1.5226 D=1.3328 tLPIPS=0.2210 gLPIPS=0.2151 lf_top=0.0342 gan=on 0.46s/it
+[val 4000] score=2.2096 robust=2.1632 PSNR=26.774
+[4100/12000] G=1.4889 D=0.9349 tLPIPS=0.2150 gLPIPS=0.2101 lf_top=0.0366 gan=on 0.47s/it
+[4200/12000] G=1.6239 D=1.0593 tLPIPS=0.2285 gLPIPS=0.2258 lf_top=0.0307 gan=on 0.47s/it
+[4300/12000] G=1.3871 D=0.7494 tLPIPS=0.2073 gLPIPS=0.1883 lf_top=0.0348 gan=on 0.47s/it
+[4400/12000] G=2.3197 D=2.1467 tLPIPS=0.2108 gLPIPS=0.2208 lf_top=0.0336 gan=on 0.47s/it
+[4500/12000] G=1.5193 D=0.5996 tLPIPS=0.2062 gLPIPS=0.2060 lf_top=0.0306 gan=on 0.47s/it
+[val 4500] score=2.4465 robust=2.4030 PSNR=26.685 <- best
+[4600/12000] G=1.5489 D=0.6785 tLPIPS=0.2143 gLPIPS=0.2335 lf_top=0.0361 gan=on 0.48s/it
+[4700/12000] G=1.5133 D=0.7321 tLPIPS=0.2009 gLPIPS=0.1848 lf_top=0.0362 gan=on 0.47s/it
+[4800/12000] G=1.4085 D=1.3209 tLPIPS=0.1984 gLPIPS=0.1978 lf_top=0.0384 gan=on 0.47s/it
+[4900/12000] G=1.6859 D=0.9563 tLPIPS=0.2198 gLPIPS=0.2324 lf_top=0.0409 gan=on 0.47s/it
+[5000/12000] G=1.7079 D=1.2241 tLPIPS=0.2250 gLPIPS=0.2208 lf_top=0.0372 gan=on 0.47s/it
+[val 5000] score=2.5099 robust=2.4570 PSNR=26.967 <- best
+[5100/12000] G=1.5951 D=0.5054 tLPIPS=0.2182 gLPIPS=0.2245 lf_top=0.0350 gan=on 0.48s/it
+[5200/12000] G=1.3641 D=0.8915 tLPIPS=0.2011 gLPIPS=0.1946 lf_top=0.0363 gan=on 0.48s/it
+[5300/12000] G=2.2783 D=1.1119 tLPIPS=0.2352 gLPIPS=0.2501 lf_top=0.0336 gan=on 0.48s/it
+[5400/12000] G=1.5992 D=0.6129 tLPIPS=0.2125 gLPIPS=0.2230 lf_top=0.0345 gan=on 0.47s/it
+[5500/12000] G=1.8770 D=0.8206 tLPIPS=0.2086 gLPIPS=0.2039 lf_top=0.0425 gan=on 0.47s/it
+[val 5500] score=2.5504 robust=2.5033 PSNR=26.761 <- best
+[5600/12000] G=1.8111 D=1.1219 tLPIPS=0.2278 gLPIPS=0.2331 lf_top=0.0417 gan=on 0.48s/it
+[5700/12000] G=2.0591 D=1.3099 tLPIPS=0.2310 gLPIPS=0.2592 lf_top=0.0403 gan=on 0.48s/it
+[5800/12000] G=1.4581 D=1.2661 tLPIPS=0.1779 gLPIPS=0.1744 lf_top=0.0383 gan=on 0.48s/it
+[5900/12000] G=1.9562 D=1.2800 tLPIPS=0.2105 gLPIPS=0.1992 lf_top=0.0418 gan=on 0.48s/it
+[6000/12000] G=1.6463 D=0.5471 tLPIPS=0.2182 gLPIPS=0.2346 lf_top=0.0314 gan=on 0.48s/it
+[val 6000] score=2.5084 robust=2.4562 PSNR=26.552
+[6100/12000] G=1.4273 D=1.0169 tLPIPS=0.2024 gLPIPS=0.1962 lf_top=0.0392 gan=on 0.48s/it
+[6200/12000] G=1.4461 D=0.7181 tLPIPS=0.1980 gLPIPS=0.1834 lf_top=0.0353 gan=on 0.48s/it
+[6300/12000] G=1.6409 D=0.5225 tLPIPS=0.2113 gLPIPS=0.2124 lf_top=0.0328 gan=on 0.48s/it
+[6400/12000] G=1.5740 D=0.6704 tLPIPS=0.2421 gLPIPS=0.2544 lf_top=0.0319 gan=on 0.48s/it
+[6500/12000] G=3.4546 D=2.0053 tLPIPS=0.2151 gLPIPS=0.2315 lf_top=0.0432 gan=on 0.48s/it
+[val 6500] score=2.4983 robust=2.4547 PSNR=26.357
+[6600/12000] G=1.7644 D=0.9523 tLPIPS=0.1978 gLPIPS=0.2298 lf_top=0.0312 gan=on 0.48s/it
+[6700/12000] G=1.5007 D=0.3447 tLPIPS=0.2059 gLPIPS=0.2020 lf_top=0.0357 gan=on 0.48s/it
+[6800/12000] G=2.5966 D=0.5535 tLPIPS=0.2205 gLPIPS=0.2483 lf_top=0.0442 gan=on 0.47s/it
+[6900/12000] G=1.6100 D=0.3289 tLPIPS=0.2083 gLPIPS=0.2246 lf_top=0.0380 gan=on 0.47s/it
+[7000/12000] G=1.6334 D=0.3340 tLPIPS=0.2035 gLPIPS=0.1919 lf_top=0.0373 gan=on 0.47s/it
+[val 7000] score=2.2420 robust=2.1980 PSNR=26.490
+[7100/12000] G=1.5791 D=0.4852 tLPIPS=0.2089 gLPIPS=0.2116 lf_top=0.0348 gan=on 0.47s/it
+[7200/12000] G=1.7366 D=0.6186 tLPIPS=0.2213 gLPIPS=0.2349 lf_top=0.0327 gan=on 0.46s/it
+[7300/12000] G=2.0286 D=2.4069 tLPIPS=0.2210 gLPIPS=0.2346 lf_top=0.0403 gan=on 0.46s/it
+[7400/12000] G=1.7410 D=0.2316 tLPIPS=0.1935 gLPIPS=0.1963 lf_top=0.0412 gan=on 0.46s/it
+[7500/12000] G=1.5648 D=0.8948 tLPIPS=0.2389 gLPIPS=0.2483 lf_top=0.0354 gan=on 0.46s/it
+[val 7500] score=2.3814 robust=2.3409 PSNR=26.431
+[7600/12000] G=1.7921 D=0.2909 tLPIPS=0.2137 gLPIPS=0.2190 lf_top=0.0383 gan=on 0.46s/it
+[7700/12000] G=1.6582 D=0.3399 tLPIPS=0.2273 gLPIPS=0.2506 lf_top=0.0361 gan=on 0.45s/it
+[7800/12000] G=2.2829 D=0.6533 tLPIPS=0.2068 gLPIPS=0.2045 lf_top=0.0360 gan=on 0.45s/it
+[7900/12000] G=1.9760 D=0.4011 tLPIPS=0.2268 gLPIPS=0.2549 lf_top=0.0419 gan=on 0.45s/it
+[8000/12000] G=2.4248 D=0.1841 tLPIPS=0.1994 gLPIPS=0.2174 lf_top=0.0371 gan=on 0.44s/it
+[val 8000] score=2.3913 robust=2.3476 PSNR=26.134
+[8100/12000] G=1.8223 D=0.2553 tLPIPS=0.2190 gLPIPS=0.2219 lf_top=0.0351 gan=on 0.45s/it
+[8200/12000] G=1.7531 D=0.2792 tLPIPS=0.2253 gLPIPS=0.2353 lf_top=0.0373 gan=on 0.44s/it
+[8300/12000] G=2.0312 D=0.1890 tLPIPS=0.2424 gLPIPS=0.2571 lf_top=0.0346 gan=on 0.44s/it
+[8400/12000] G=2.1363 D=0.3649 tLPIPS=0.2262 gLPIPS=0.2513 lf_top=0.0339 gan=on 0.44s/it
+[8500/12000] G=1.6421 D=0.1968 tLPIPS=0.2095 gLPIPS=0.2144 lf_top=0.0353 gan=on 0.44s/it
+[val 8500] score=2.4986 robust=2.4574 PSNR=26.687
+[8600/12000] G=1.8919 D=0.9989 tLPIPS=0.2154 gLPIPS=0.2169 lf_top=0.0402 gan=on 0.44s/it
+[8700/12000] G=1.7635 D=0.1762 tLPIPS=0.2386 gLPIPS=0.2534 lf_top=0.0354 gan=on 0.43s/it
+[8800/12000] G=1.7486 D=0.4047 tLPIPS=0.2168 gLPIPS=0.2212 lf_top=0.0370 gan=on 0.43s/it
+[8900/12000] G=1.8159 D=0.1243 tLPIPS=0.2224 gLPIPS=0.2403 lf_top=0.0324 gan=on 0.43s/it
+[9000/12000] G=1.9470 D=0.4113 tLPIPS=0.2179 gLPIPS=0.2431 lf_top=0.0363 gan=on 0.43s/it
+[val 9000] score=2.5293 robust=2.4790 PSNR=26.855
+[9100/12000] G=1.6333 D=0.1459 tLPIPS=0.2084 gLPIPS=0.2146 lf_top=0.0375 gan=on 0.43s/it
+[9200/12000] G=1.8108 D=0.3407 tLPIPS=0.2222 gLPIPS=0.2385 lf_top=0.0400 gan=on 0.43s/it
+[9300/12000] G=1.6845 D=1.2818 tLPIPS=0.2293 gLPIPS=0.2338 lf_top=0.0400 gan=on 0.42s/it
+[9400/12000] G=2.0922 D=0.3846 tLPIPS=0.2141 gLPIPS=0.2211 lf_top=0.0379 gan=on 0.42s/it
+[9500/12000] G=4.7431 D=0.1131 tLPIPS=0.2526 gLPIPS=0.2483 lf_top=0.0377 gan=on 0.42s/it
+[val 9500] score=2.6338 robust=2.5933 PSNR=26.688 <- best
+[9600/12000] G=1.8851 D=0.1410 tLPIPS=0.2343 gLPIPS=0.2455 lf_top=0.0404 gan=on 0.42s/it
+[9700/12000] G=1.7241 D=0.1113 tLPIPS=0.2174 gLPIPS=0.2063 lf_top=0.0350 gan=on 0.42s/it
+[9800/12000] G=1.8710 D=0.0684 tLPIPS=0.2406 gLPIPS=0.2429 lf_top=0.0346 gan=on 0.42s/it
+[9900/12000] G=4.7464 D=0.1917 tLPIPS=0.2256 gLPIPS=0.2503 lf_top=0.0379 gan=on 0.42s/it
+[10000/12000] G=1.8623 D=0.0949 tLPIPS=0.2123 gLPIPS=0.2280 lf_top=0.0374 gan=on 0.41s/it
+[val 10000] score=2.5408 robust=2.4945 PSNR=26.694
+[10100/12000] G=2.0235 D=0.1507 tLPIPS=0.2163 gLPIPS=0.2230 lf_top=0.0358 gan=on 0.42s/it
+[10200/12000] G=2.3172 D=0.0299 tLPIPS=0.2496 gLPIPS=0.2706 lf_top=0.0375 gan=on 0.41s/it
+[10300/12000] G=2.0559 D=0.0635 tLPIPS=0.2165 gLPIPS=0.2279 lf_top=0.0388 gan=on 0.41s/it
+[10400/12000] G=2.0351 D=0.0983 tLPIPS=0.2178 gLPIPS=0.2409 lf_top=0.0392 gan=on 0.41s/it
+[10500/12000] G=2.2683 D=0.3074 tLPIPS=0.2207 gLPIPS=0.2370 lf_top=0.0340 gan=on 0.41s/it
+[val 10500] score=2.6704 robust=2.6255 PSNR=26.302 <- best
+[10600/12000] G=2.1611 D=0.1378 tLPIPS=0.2486 gLPIPS=0.2518 lf_top=0.0407 gan=on 0.41s/it
+[10700/12000] G=3.2729 D=0.0219 tLPIPS=0.2352 gLPIPS=0.2463 lf_top=0.0373 gan=on 0.41s/it
+[10800/12000] G=1.7713 D=0.1342 tLPIPS=0.2028 gLPIPS=0.2120 lf_top=0.0363 gan=on 0.41s/it
+[10900/12000] G=2.1487 D=0.0448 tLPIPS=0.2427 gLPIPS=0.2541 lf_top=0.0392 gan=on 0.41s/it
+[11000/12000] G=1.6259 D=0.1457 tLPIPS=0.2135 gLPIPS=0.2122 lf_top=0.0369 gan=on 0.41s/it
+[val 11000] score=2.6387 robust=2.5938 PSNR=26.720
+[11100/12000] G=1.9298 D=0.0844 tLPIPS=0.2537 gLPIPS=0.2603 lf_top=0.0361 gan=on 0.41s/it
+[11200/12000] G=2.0613 D=0.1536 tLPIPS=0.2355 gLPIPS=0.2362 lf_top=0.0318 gan=on 0.41s/it
+[11300/12000] G=1.9415 D=0.0189 tLPIPS=0.2288 gLPIPS=0.2319 lf_top=0.0331 gan=on 0.41s/it
+[11400/12000] G=2.9991 D=0.5064 tLPIPS=0.2007 gLPIPS=0.1997 lf_top=0.0362 gan=on 0.41s/it
+[11500/12000] G=1.7849 D=0.1755 tLPIPS=0.1871 gLPIPS=0.1900 lf_top=0.0354 gan=on 0.41s/it
+[val 11500] score=2.7082 robust=2.6638 PSNR=26.723 <- best
+[11600/12000] G=2.1675 D=0.0107 tLPIPS=0.2385 gLPIPS=0.2585 lf_top=0.0352 gan=on 0.41s/it
+[11700/12000] G=1.7836 D=0.1307 tLPIPS=0.2263 gLPIPS=0.2436 lf_top=0.0363 gan=on 0.41s/it
+[11800/12000] G=2.0383 D=0.0422 tLPIPS=0.2002 gLPIPS=0.2322 lf_top=0.0365 gan=on 0.41s/it
+[11900/12000] G=1.9617 D=0.2501 tLPIPS=0.2320 gLPIPS=0.2670 lf_top=0.0384 gan=on 0.41s/it
+[12000/12000] G=5.8774 D=0.0280 tLPIPS=0.2503 gLPIPS=0.2639 lf_top=0.0354 gan=on 0.41s/it
+[val 12000] score=2.6690 robust=2.6285 PSNR=26.689
+done. best robust=2.6638
+ALLDONE

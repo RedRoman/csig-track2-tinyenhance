@@ -1,0 +1,17 @@
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.
+  deprecate("Transformer2DModelOutput", "1.0.0", deprecation_message)
+Using cache found in preset/ckpts/torch_cache/facebookresearch_dinov2_main
+/cache/zihaohe/VOSR/preset/ckpts/torch_cache/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/cache/zihaohe/VOSR/preset/ckpts/torch_cache/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/cache/zihaohe/VOSR/preset/ckpts/torch_cache/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+Loading model from /cache/zihaohe/VOSR_weights/VOSR_1.4B_ms...
+Loading weights from /cache/zihaohe/VOSR_weights/VOSR_1.4B_ms/checkpoints/ema_model.safetensors
+Processing 1 images...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:04<00:00,  4.70s/it]100%|██████████| 1/1 [00:04<00:00,  4.70s/it]
+Output size: 512x512, input size: 512x512
+[Tiled Latent]: latent 64x64 fits in tile 64, no tiling needed.
+Done!
+ALLDONE

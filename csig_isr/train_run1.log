@@ -1,0 +1,160 @@
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.
+  deprecate("Transformer2DModelOutput", "1.0.0", deprecation_message)
+训练图 3193 张
+Loaded combined weights from /cache/zihaohe/csig_isr/NTIRE2026/model_zoo/team11_SamsungAICamera/team11_mobile_samsung/weights.pth
+参数量 199.96 M
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/clip/clip.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/arch_util.py:118: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location=torch.device("cpu"))
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+[step 0] 真实验证集 LQ=27.272 dB  模型=27.272 dB  增益 -0.000
+[   50/6000] loss 0.6281 (l1 0.0316 lpips 0.2375 dists 0.1795) |zc| 0.00291 lr 1.50e-04 1.06s/it
+[  100/6000] loss 0.5635 (l1 0.0334 lpips 0.2207 dists 0.1547) |zc| 0.00417 lr 1.50e-04 1.02s/it
+[  150/6000] loss 0.5421 (l1 0.0336 lpips 0.2004 dists 0.1540) |zc| 0.00441 lr 1.50e-04 1.02s/it
+[  200/6000] loss 0.4812 (l1 0.0308 lpips 0.1630 dists 0.1437) |zc| 0.00493 lr 1.50e-04 1.02s/it
+[  250/6000] loss 0.5196 (l1 0.0344 lpips 0.1883 dists 0.1485) |zc| 0.00515 lr 1.49e-04 1.01s/it
+[val 250] LQ=27.272  模型=26.832  增益 -0.440 dB  <- best, saved
+[  300/6000] loss 0.4757 (l1 0.0287 lpips 0.1645 dists 0.1412) |zc| 0.00521 lr 1.49e-04 1.02s/it
+[  350/6000] loss 0.4439 (l1 0.0313 lpips 0.1625 dists 0.1251) |zc| 0.00540 lr 1.49e-04 1.01s/it
+[  400/6000] loss 0.4362 (l1 0.0278 lpips 0.1524 dists 0.1280) |zc| 0.00553 lr 1.48e-04 1.01s/it
+[  450/6000] loss 0.4544 (l1 0.0284 lpips 0.1621 dists 0.1320) |zc| 0.00566 lr 1.48e-04 1.01s/it
+[  500/6000] loss 0.4545 (l1 0.0299 lpips 0.1678 dists 0.1284) |zc| 0.00583 lr 1.48e-04 1.00s/it
+[val 500] LQ=27.272  模型=26.690  增益 -0.582 dB
+[  550/6000] loss 0.4647 (l1 0.0363 lpips 0.1719 dists 0.1283) |zc| 0.00587 lr 1.47e-04 1.01s/it
+[  600/6000] loss 0.4601 (l1 0.0326 lpips 0.1659 dists 0.1308) |zc| 0.00603 lr 1.47e-04 1.00s/it
+[  650/6000] loss 0.4023 (l1 0.0292 lpips 0.1361 dists 0.1185) |zc| 0.00604 lr 1.46e-04 1.00s/it
+[  700/6000] loss 0.4158 (l1 0.0321 lpips 0.1376 dists 0.1231) |zc| 0.00608 lr 1.45e-04 1.00s/it
+[  750/6000] loss 0.4555 (l1 0.0314 lpips 0.1601 dists 0.1320) |zc| 0.00611 lr 1.45e-04 1.00s/it
+[val 750] LQ=27.272  模型=26.766  增益 -0.506 dB
+[  800/6000] loss 0.3920 (l1 0.0307 lpips 0.1369 dists 0.1122) |zc| 0.00613 lr 1.44e-04 1.00s/it
+[  850/6000] loss 0.4440 (l1 0.0346 lpips 0.1612 dists 0.1241) |zc| 0.00619 lr 1.43e-04 1.00s/it
+[  900/6000] loss 0.4026 (l1 0.0321 lpips 0.1453 dists 0.1126) |zc| 0.00640 lr 1.42e-04 1.00s/it
+[  950/6000] loss 0.4057 (l1 0.0312 lpips 0.1470 dists 0.1137) |zc| 0.00637 lr 1.41e-04 1.00s/it
+[ 1000/6000] loss 0.3821 (l1 0.0269 lpips 0.1313 dists 0.1119) |zc| 0.00641 lr 1.40e-04 1.00s/it
+[val 1000] LQ=27.272  模型=26.764  增益 -0.508 dB
+[ 1050/6000] loss 0.4045 (l1 0.0339 lpips 0.1401 dists 0.1153) |zc| 0.00657 lr 1.40e-04 1.00s/it
+[ 1100/6000] loss 0.3885 (l1 0.0285 lpips 0.1378 dists 0.1111) |zc| 0.00655 lr 1.39e-04 1.00s/it
+[ 1150/6000] loss 0.3761 (l1 0.0302 lpips 0.1350 dists 0.1055) |zc| 0.00669 lr 1.37e-04 1.00s/it
+[ 1200/6000] loss 0.4037 (l1 0.0326 lpips 0.1477 dists 0.1117) |zc| 0.00672 lr 1.36e-04 1.00s/it
+[ 1250/6000] loss 0.3939 (l1 0.0297 lpips 0.1336 dists 0.1153) |zc| 0.00671 lr 1.35e-04 1.00s/it
+[val 1250] LQ=27.272  模型=26.821  增益 -0.451 dB
+[ 1300/6000] loss 0.3711 (l1 0.0295 lpips 0.1279 dists 0.1069) |zc| 0.00674 lr 1.34e-04 1.00s/it
+[ 1350/6000] loss 0.3883 (l1 0.0283 lpips 0.1361 dists 0.1120) |zc| 0.00673 lr 1.33e-04 1.00s/it
+[ 1400/6000] loss 0.3663 (l1 0.0267 lpips 0.1239 dists 0.1079) |zc| 0.00678 lr 1.32e-04 1.00s/it
+[ 1450/6000] loss 0.4221 (l1 0.0354 lpips 0.1472 dists 0.1197) |zc| 0.00685 lr 1.30e-04 1.00s/it
+[ 1500/6000] loss 0.3827 (l1 0.0327 lpips 0.1326 dists 0.1087) |zc| 0.00689 lr 1.29e-04 1.00s/it
+[val 1500] LQ=27.272  模型=26.696  增益 -0.576 dB
+[ 1550/6000] loss 0.3783 (l1 0.0349 lpips 0.1270 dists 0.1082) |zc| 0.00686 lr 1.28e-04 1.00s/it
+[ 1600/6000] loss 0.3678 (l1 0.0331 lpips 0.1317 dists 0.1015) |zc| 0.00693 lr 1.26e-04 1.00s/it
+[ 1650/6000] loss 0.3315 (l1 0.0250 lpips 0.1104 dists 0.0981) |zc| 0.00682 lr 1.25e-04 1.00s/it
+[ 1700/6000] loss 0.3502 (l1 0.0284 lpips 0.1214 dists 0.1002) |zc| 0.00697 lr 1.24e-04 1.00s/it
+[ 1750/6000] loss 0.3942 (l1 0.0340 lpips 0.1392 dists 0.1105) |zc| 0.00688 lr 1.22e-04 0.99s/it
+[val 1750] LQ=27.272  模型=26.753  增益 -0.519 dB
+[ 1800/6000] loss 0.3332 (l1 0.0264 lpips 0.1108 dists 0.0980) |zc| 0.00705 lr 1.21e-04 1.00s/it
+[ 1850/6000] loss 0.3676 (l1 0.0284 lpips 0.1266 dists 0.1063) |zc| 0.00698 lr 1.19e-04 1.00s/it
+[ 1900/6000] loss 0.3316 (l1 0.0269 lpips 0.1127 dists 0.0960) |zc| 0.00709 lr 1.18e-04 0.99s/it
+[ 1950/6000] loss 0.3483 (l1 0.0292 lpips 0.1235 dists 0.0978) |zc| 0.00705 lr 1.16e-04 0.99s/it
+[ 2000/6000] loss 0.3477 (l1 0.0301 lpips 0.1231 dists 0.0973) |zc| 0.00708 lr 1.14e-04 0.99s/it
+[val 2000] LQ=27.272  模型=26.599  增益 -0.673 dB
+[ 2050/6000] loss 0.3654 (l1 0.0297 lpips 0.1230 dists 0.1063) |zc| 0.00704 lr 1.13e-04 1.00s/it
+[ 2100/6000] loss 0.3344 (l1 0.0290 lpips 0.1174 dists 0.0940) |zc| 0.00703 lr 1.11e-04 1.00s/it
+[ 2150/6000] loss 0.3874 (l1 0.0366 lpips 0.1389 dists 0.1060) |zc| 0.00706 lr 1.09e-04 1.00s/it
+[ 2200/6000] loss 0.3646 (l1 0.0325 lpips 0.1336 dists 0.0992) |zc| 0.00705 lr 1.08e-04 0.99s/it
+[ 2250/6000] loss 0.3460 (l1 0.0292 lpips 0.1181 dists 0.0994) |zc| 0.00713 lr 1.06e-04 0.99s/it
+[val 2250] LQ=27.272  模型=26.777  增益 -0.495 dB
+[ 2300/6000] loss 0.3598 (l1 0.0349 lpips 0.1274 dists 0.0987) |zc| 0.00714 lr 1.04e-04 1.00s/it
+[ 2350/6000] loss 0.3509 (l1 0.0328 lpips 0.1226 dists 0.0977) |zc| 0.00716 lr 1.03e-04 1.00s/it
+[ 2400/6000] loss 0.3386 (l1 0.0340 lpips 0.1222 dists 0.0912) |zc| 0.00711 lr 1.01e-04 0.99s/it
+[ 2450/6000] loss 0.3702 (l1 0.0323 lpips 0.1340 dists 0.1020) |zc| 0.00714 lr 9.90e-05 0.99s/it
+[ 2500/6000] loss 0.3244 (l1 0.0292 lpips 0.1091 dists 0.0930) |zc| 0.00717 lr 9.72e-05 0.99s/it
+[val 2500] LQ=27.272  模型=26.763  增益 -0.509 dB
+[ 2550/6000] loss 0.3115 (l1 0.0273 lpips 0.1084 dists 0.0879) |zc| 0.00717 lr 9.54e-05 0.99s/it
+[ 2600/6000] loss 0.3383 (l1 0.0288 lpips 0.1126 dists 0.0984) |zc| 0.00722 lr 9.36e-05 0.99s/it
+[ 2650/6000] loss 0.3372 (l1 0.0324 lpips 0.1184 dists 0.0932) |zc| 0.00723 lr 9.17e-05 0.99s/it
+[ 2700/6000] loss 0.3320 (l1 0.0338 lpips 0.1156 dists 0.0913) |zc| 0.00725 lr 8.99e-05 0.99s/it
+[ 2750/6000] loss 0.3145 (l1 0.0286 lpips 0.1061 dists 0.0899) |zc| 0.00726 lr 8.80e-05 0.99s/it
+[val 2750] LQ=27.272  模型=26.857  增益 -0.415 dB  <- best, saved
+[ 2800/6000] loss 0.3287 (l1 0.0306 lpips 0.1115 dists 0.0933) |zc| 0.00727 lr 8.62e-05 1.00s/it
+[ 2850/6000] loss 0.3562 (l1 0.0352 lpips 0.1234 dists 0.0988) |zc| 0.00731 lr 8.43e-05 0.99s/it
+[ 2900/6000] loss 0.3323 (l1 0.0315 lpips 0.1174 dists 0.0917) |zc| 0.00735 lr 8.25e-05 0.99s/it
+[ 2950/6000] loss 0.3010 (l1 0.0277 lpips 0.0961 dists 0.0886) |zc| 0.00734 lr 8.06e-05 0.99s/it
+[ 3000/6000] loss 0.3305 (l1 0.0288 lpips 0.1071 dists 0.0973) |zc| 0.00737 lr 7.88e-05 0.99s/it
+[val 3000] LQ=27.272  模型=26.762  增益 -0.510 dB
+[ 3050/6000] loss 0.3132 (l1 0.0282 lpips 0.1049 dists 0.0900) |zc| 0.00734 lr 7.69e-05 0.99s/it
+[ 3100/6000] loss 0.2907 (l1 0.0262 lpips 0.1013 dists 0.0816) |zc| 0.00740 lr 7.50e-05 1.00s/it
+[ 3150/6000] loss 0.3554 (l1 0.0332 lpips 0.1229 dists 0.0996) |zc| 0.00740 lr 7.32e-05 1.00s/it
+[ 3200/6000] loss 0.3300 (l1 0.0294 lpips 0.1148 dists 0.0929) |zc| 0.00741 lr 7.13e-05 1.00s/it
+[ 3250/6000] loss 0.3086 (l1 0.0271 lpips 0.1007 dists 0.0904) |zc| 0.00741 lr 6.95e-05 1.00s/it
+[val 3250] LQ=27.272  模型=26.838  增益 -0.434 dB
+[ 3300/6000] loss 0.2785 (l1 0.0240 lpips 0.0893 dists 0.0826) |zc| 0.00741 lr 6.76e-05 1.00s/it
+[ 3350/6000] loss 0.2916 (l1 0.0279 lpips 0.0986 dists 0.0825) |zc| 0.00746 lr 6.58e-05 1.00s/it
+[ 3400/6000] loss 0.3148 (l1 0.0278 lpips 0.1043 dists 0.0913) |zc| 0.00748 lr 6.39e-05 1.00s/it
+[ 3450/6000] loss 0.3515 (l1 0.0321 lpips 0.1238 dists 0.0978) |zc| 0.00749 lr 6.21e-05 1.00s/it
+[ 3500/6000] loss 0.3055 (l1 0.0281 lpips 0.1007 dists 0.0884) |zc| 0.00747 lr 6.03e-05 1.00s/it
+[val 3500] LQ=27.272  模型=26.826  增益 -0.446 dB
+[ 3550/6000] loss 0.3034 (l1 0.0298 lpips 0.0986 dists 0.0875) |zc| 0.00750 lr 5.85e-05 1.00s/it
+[ 3600/6000] loss 0.2957 (l1 0.0282 lpips 0.0955 dists 0.0860) |zc| 0.00753 lr 5.67e-05 1.00s/it
+[ 3650/6000] loss 0.2899 (l1 0.0280 lpips 0.0967 dists 0.0826) |zc| 0.00756 lr 5.50e-05 1.00s/it
+[ 3700/6000] loss 0.3064 (l1 0.0284 lpips 0.1060 dists 0.0860) |zc| 0.00756 lr 5.32e-05 1.00s/it
+[ 3750/6000] loss 0.3289 (l1 0.0320 lpips 0.1194 dists 0.0888) |zc| 0.00757 lr 5.15e-05 1.00s/it
+[val 3750] LQ=27.272  模型=26.727  增益 -0.545 dB
+[ 3800/6000] loss 0.2846 (l1 0.0258 lpips 0.0948 dists 0.0820) |zc| 0.00760 lr 4.98e-05 1.00s/it
+[ 3850/6000] loss 0.3033 (l1 0.0311 lpips 0.1005 dists 0.0859) |zc| 0.00760 lr 4.81e-05 1.00s/it
+[ 3900/6000] loss 0.3143 (l1 0.0328 lpips 0.1047 dists 0.0884) |zc| 0.00760 lr 4.64e-05 1.00s/it
+[ 3950/6000] loss 0.2907 (l1 0.0247 lpips 0.0925 dists 0.0867) |zc| 0.00759 lr 4.48e-05 1.00s/it
+[ 4000/6000] loss 0.3166 (l1 0.0299 lpips 0.1150 dists 0.0859) |zc| 0.00763 lr 4.31e-05 1.00s/it
+[val 4000] LQ=27.272  模型=26.769  增益 -0.503 dB
+[ 4050/6000] loss 0.3114 (l1 0.0326 lpips 0.1052 dists 0.0868) |zc| 0.00767 lr 4.15e-05 1.00s/it
+[ 4100/6000] loss 0.3018 (l1 0.0299 lpips 0.1028 dists 0.0845) |zc| 0.00764 lr 3.99e-05 1.00s/it
+[ 4150/6000] loss 0.3053 (l1 0.0308 lpips 0.0999 dists 0.0873) |zc| 0.00765 lr 3.84e-05 1.00s/it
+[ 4200/6000] loss 0.3320 (l1 0.0375 lpips 0.1156 dists 0.0894) |zc| 0.00766 lr 3.69e-05 1.00s/it
+[ 4250/6000] loss 0.2907 (l1 0.0275 lpips 0.0953 dists 0.0839) |zc| 0.00765 lr 3.54e-05 1.00s/it
+[val 4250] LQ=27.272  模型=26.788  增益 -0.484 dB
+[ 4300/6000] loss 0.2852 (l1 0.0268 lpips 0.0945 dists 0.0820) |zc| 0.00768 lr 3.39e-05 1.00s/it
+[ 4350/6000] loss 0.3236 (l1 0.0339 lpips 0.1122 dists 0.0888) |zc| 0.00768 lr 3.25e-05 1.00s/it
+[ 4400/6000] loss 0.2870 (l1 0.0286 lpips 0.0962 dists 0.0811) |zc| 0.00769 lr 3.11e-05 1.00s/it
+[ 4450/6000] loss 0.3191 (l1 0.0348 lpips 0.1102 dists 0.0871) |zc| 0.00771 lr 2.97e-05 1.00s/it
+[ 4500/6000] loss 0.2967 (l1 0.0297 lpips 0.1041 dists 0.0814) |zc| 0.00770 lr 2.84e-05 1.00s/it
+[val 4500] LQ=27.272  模型=26.817  增益 -0.455 dB
+[ 4550/6000] loss 0.3063 (l1 0.0316 lpips 0.1030 dists 0.0858) |zc| 0.00771 lr 2.71e-05 1.00s/it
+[ 4600/6000] loss 0.2968 (l1 0.0287 lpips 0.1068 dists 0.0807) |zc| 0.00770 lr 2.58e-05 1.00s/it
+[ 4650/6000] loss 0.2995 (l1 0.0304 lpips 0.1037 dists 0.0827) |zc| 0.00771 lr 2.46e-05 1.00s/it
+[ 4700/6000] loss 0.3015 (l1 0.0289 lpips 0.1021 dists 0.0852) |zc| 0.00772 lr 2.34e-05 1.00s/it
+[ 4750/6000] loss 0.2733 (l1 0.0295 lpips 0.0910 dists 0.0764) |zc| 0.00772 lr 2.22e-05 1.00s/it
+[val 4750] LQ=27.272  模型=26.782  增益 -0.490 dB
+[ 4800/6000] loss 0.2849 (l1 0.0283 lpips 0.0963 dists 0.0802) |zc| 0.00771 lr 2.11e-05 1.00s/it
+[ 4850/6000] loss 0.3044 (l1 0.0328 lpips 0.1059 dists 0.0829) |zc| 0.00774 lr 2.00e-05 1.00s/it
+[ 4900/6000] loss 0.3131 (l1 0.0316 lpips 0.1089 dists 0.0863) |zc| 0.00774 lr 1.90e-05 1.00s/it
+[ 4950/6000] loss 0.2985 (l1 0.0300 lpips 0.0954 dists 0.0865) |zc| 0.00775 lr 1.80e-05 1.00s/it
+[ 5000/6000] loss 0.3106 (l1 0.0322 lpips 0.1096 dists 0.0844) |zc| 0.00775 lr 1.70e-05 1.00s/it
+[val 5000] LQ=27.272  模型=26.767  增益 -0.505 dB
+[ 5050/6000] loss 0.2973 (l1 0.0317 lpips 0.0960 dists 0.0848) |zc| 0.00776 lr 1.61e-05 1.00s/it
+[ 5100/6000] loss 0.3117 (l1 0.0311 lpips 0.1126 dists 0.0840) |zc| 0.00777 lr 1.53e-05 1.01s/it
+[ 5150/6000] loss 0.2985 (l1 0.0311 lpips 0.1046 dists 0.0814) |zc| 0.00775 lr 1.44e-05 1.01s/it
+[ 5200/6000] loss 0.3181 (l1 0.0291 lpips 0.1134 dists 0.0878) |zc| 0.00777 lr 1.37e-05 1.01s/it
+[ 5250/6000] loss 0.2917 (l1 0.0286 lpips 0.1025 dists 0.0803) |zc| 0.00777 lr 1.29e-05 1.01s/it
+[val 5250] LQ=27.272  模型=26.800  增益 -0.472 dB
+[ 5300/6000] loss 0.2887 (l1 0.0267 lpips 0.0965 dists 0.0827) |zc| 0.00777 lr 1.22e-05 1.01s/it
+[ 5350/6000] loss 0.3034 (l1 0.0288 lpips 0.1044 dists 0.0851) |zc| 0.00778 lr 1.16e-05 1.01s/it
+[ 5400/6000] loss 0.3148 (l1 0.0362 lpips 0.1102 dists 0.0842) |zc| 0.00780 lr 1.10e-05 1.00s/it
+[ 5450/6000] loss 0.3350 (l1 0.0369 lpips 0.1232 dists 0.0875) |zc| 0.00779 lr 1.04e-05 1.00s/it
+[ 5500/6000] loss 0.2845 (l1 0.0278 lpips 0.0950 dists 0.0809) |zc| 0.00780 lr 9.93e-06 1.00s/it
+[val 5500] LQ=27.272  模型=26.792  增益 -0.480 dB
+[ 5550/6000] loss 0.3033 (l1 0.0327 lpips 0.1043 dists 0.0832) |zc| 0.00780 lr 9.47e-06 1.00s/it
+[ 5600/6000] loss 0.3095 (l1 0.0333 lpips 0.1122 dists 0.0820) |zc| 0.00780 lr 9.06e-06 1.00s/it
+[ 5650/6000] loss 0.3074 (l1 0.0325 lpips 0.1039 dists 0.0855) |zc| 0.00781 lr 8.69e-06 1.00s/it
+[ 5700/6000] loss 0.2876 (l1 0.0295 lpips 0.0998 dists 0.0792) |zc| 0.00780 lr 8.38e-06 1.00s/it
+[ 5750/6000] loss 0.2866 (l1 0.0308 lpips 0.0988 dists 0.0785) |zc| 0.00781 lr 8.11e-06 1.00s/it
+[val 5750] LQ=27.272  模型=26.779  增益 -0.493 dB
+[ 5800/6000] loss 0.3034 (l1 0.0316 lpips 0.1087 dists 0.0816) |zc| 0.00781 lr 7.89e-06 1.00s/it
+[ 5850/6000] loss 0.2847 (l1 0.0317 lpips 0.0996 dists 0.0767) |zc| 0.00781 lr 7.72e-06 1.00s/it
+[ 5900/6000] loss 0.2952 (l1 0.0287 lpips 0.1031 dists 0.0817) |zc| 0.00781 lr 7.60e-06 1.00s/it
+[ 5950/6000] loss 0.2773 (l1 0.0257 lpips 0.0962 dists 0.0777) |zc| 0.00781 lr 7.52e-06 1.00s/it
+[ 6000/6000] loss 0.2982 (l1 0.0343 lpips 0.1059 dists 0.0790) |zc| 0.00781 lr 7.50e-06 1.00s/it
+[val 6000] LQ=27.272  模型=26.776  增益 -0.496 dB
+训练完成，best 真实验证 PSNR = 26.857 dB
+TRAIN_EXIT:0

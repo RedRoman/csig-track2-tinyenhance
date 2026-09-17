@@ -1,0 +1,99 @@
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Traceback (most recent call last):
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPSConnection(host='huggingface.co', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /timm/vit_base_patch8_224.augreg2_in21k_ft_in1k/resolve/main/pytorch_model.bin (Caused by NewConnectionError("HTTPSConnection(host='huggingface.co', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1746, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1666, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 364, in _request_wrapper
+    response = _request_wrapper(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 387, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 93, in send
+    return super().send(request, *args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/requests/adapters.py", line 729, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: (MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /timm/vit_base_patch8_224.augreg2_in21k_ft_in1k/resolve/main/pytorch_model.bin (Caused by NewConnectionError("HTTPSConnection(host=\'huggingface.co\', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable"))'), '(Request ID: b8594fab-6c9b-4e1c-84b2-e7b12ee76574)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/cache/zihaohe/eval_vosr.py", line 85, in <module>
+    M = create_metrics(DEV)
+  File "/cache/zihaohe/csig_isr/v3/code/metrics_utils.py", line 58, in create_metrics
+    out[key] = pyiqa.create_metric(names[key], **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/api_helpers.py", line 11, in create_metric
+    metric = InferenceModel(metric_name, as_loss=as_loss, device=device, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/models/inference_model.py", line 55, in __init__
+    self.net = ARCH_REGISTRY.get(network_type)(**net_opts)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/maniqa_arch.py", line 111, in __init__
+    self.vit = timm.create_model('vit_base_patch8_224', pretrained=True)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/_factory.py", line 138, in create_model
+    model = create_fn(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/vision_transformer.py", line 3213, in vit_base_patch8_224
+    model = _create_vision_transformer('vit_base_patch8_224', pretrained=pretrained, **dict(model_args, **kwargs))
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/vision_transformer.py", line 3093, in _create_vision_transformer
+    return build_model_with_cfg(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/_builder.py", line 457, in build_model_with_cfg
+    load_pretrained(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/_builder.py", line 226, in load_pretrained
+    state_dict = load_state_dict_from_hf(pretrained_loc, weights_only=True, cache_dir=cache_dir)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/_hub.py", line 241, in load_state_dict_from_hf
+    cached_file = hf_hub_download(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1232, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1339, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1857, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.

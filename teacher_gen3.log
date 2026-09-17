@@ -1,0 +1,15 @@
+########## VOSR_0.5B_ms steps=25 ##########
+[Tiled VAE decode]: latent 512x384, tile=64, overlap=8, grid=9x7
+[Tiled VAE encode]: pixel 3072x4096 -> latent 384x512, tile=64, overlap=8, grid=7x9
+[Tiled Latent]: latent 384x512, tile=64, overlap=32, grid=11x15
+[Tiled VAE decode]: latent 384x512, tile=64, overlap=8, grid=7x9
+Done!
+耗时 2153.72 秒
+########## VOSR_1.4B_os steps=1 ##########
+[Tiled VAE decode]: latent 512x384, tile=64, overlap=8, grid=9x7
+[Tiled VAE encode]: pixel 3072x4096 -> latent 384x512, tile=64, overlap=8, grid=7x9
+[Tiled Latent]: latent 384x512, tile=64, overlap=32, grid=11x15
+[Tiled VAE decode]: latent 384x512, tile=64, overlap=8, grid=7x9
+Done!
+耗时 196.40 秒
+ALLDONE

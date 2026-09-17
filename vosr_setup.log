@@ -1,0 +1,161 @@
+=== 克隆代码 ===
+Cloning into 'VOSR'...
+  成功: https://gh-proxy.com/https://github.com/cswry/VOSR
+=== 仓库内容 ===
+LICENSE
+README.md
+assets
+configs
+dataloaders
+inference_vosr.py
+inference_vosr_onestep.py
+models
+preset
+requirements.txt
+tiled_vae.py
+train_vosr.py
+train_vosr_distill.py
+vosr.py
+=== 下 0.5B 单步权重 ===
+Fetching 242 files:   0%|          | 0/242 [00:00<?, ?it/s]Fetching 242 files:   3%|▎         | 8/242 [00:13<06:37,  1.70s/it]Fetching 242 files:   4%|▎         | 9/242 [00:14<06:07,  1.58s/it]Fetching 242 files:   4%|▍         | 10/242 [00:14<05:34,  1.44s/it]Fetching 242 files:   5%|▍         | 11/242 [00:14<05:08,  1.33s/it]Fetching 242 files:   5%|▍         | 12/242 [00:15<04:59,  1.30s/it]Fetching 242 files:   6%|▌         | 14/242 [00:15<04:17,  1.13s/it]Fetching 242 files:   7%|▋         | 16/242 [00:17<04:02,  1.07s/it]Fetching 242 files:   8%|▊         | 19/242 [00:17<03:22,  1.10it/s]Fetching 242 files:   9%|▉         | 22/242 [00:18<03:04,  1.19it/s]Fetching 242 files:  10%|█         | 25/242 [00:19<02:48,  1.29it/s]Fetching 242 files:  12%|█▏        | 28/242 [00:20<02:36,  1.37it/s]Fetching 242 files:  13%|█▎        | 31/242 [00:21<02:25,  1.45it/s]Fetching 242 files:  14%|█▍        | 34/242 [00:22<02:15,  1.54it/s]Fetching 242 files:  15%|█▌        | 37/242 [00:23<02:07,  1.60it/s]Fetching 242 files:  17%|█▋        | 40/242 [00:24<02:02,  1.65it/s]Fetching 242 files:  18%|█▊        | 43/242 [00:24<01:54,  1.73it/s]Fetching 242 files:  19%|█▉        | 46/242 [00:25<01:50,  1.77it/s]Fetching 242 files:  20%|██        | 49/242 [00:26<01:45,  1.82it/s]Fetching 242 files:  21%|██▏       | 52/242 [00:27<01:40,  1.90it/s]Fetching 242 files:  23%|██▎       | 55/242 [00:28<01:36,  1.93it/s]Fetching 242 files:  24%|██▍       | 58/242 [00:28<01:31,  2.01it/s]Fetching 242 files:  25%|██▌       | 61/242 [00:29<01:28,  2.04it/s]Fetching 242 files:  26%|██▋       | 64/242 [00:31<01:26,  2.06it/s]Fetching 242 files:  28%|██▊       | 67/242 [00:32<01:24,  2.08it/s]Fetching 242 files:  29%|██▉       | 70/242 [00:33<01:21,  2.10it/s]Fetching 242 files:  30%|███       | 73/242 [00:34<01:18,  2.15it/s]Fetching 242 files:  31%|███▏      | 76/242 [00:34<01:15,  2.19it/s]Fetching 242 files:  33%|███▎      | 79/242 [00:35<01:14,  2.20it/s]Fetching 242 files:  34%|███▍      | 83/242 [00:36<01:10,  2.27it/s]Fetching 242 files:  36%|███▌      | 87/242 [00:37<01:07,  2.31it/s]Fetching 242 files:  38%|███▊      | 91/242 [00:38<01:04,  2.36it/s]Fetching 242 files:  39%|███▉      | 95/242 [00:39<01:01,  2.41it/s]Fetching 242 files:  41%|████      | 99/242 [00:40<00:57,  2.47it/s]Fetching 242 files:  43%|████▎     | 103/242 [00:41<00:55,  2.51it/s]Fetching 242 files:  44%|████▍     | 107/242 [00:41<00:52,  2.59it/s]Fetching 242 files:  46%|████▌     | 111/242 [00:42<00:49,  2.62it/s]Fetching 242 files:  48%|████▊     | 115/242 [00:43<00:47,  2.66it/s]Fetching 242 files:  49%|████▉     | 119/242 [00:43<00:45,  2.71it/s]Fetching 242 files:  51%|█████     | 123/242 [00:45<00:43,  2.72it/s]Fetching 242 files:  52%|█████▏    | 127/242 [00:46<00:42,  2.73it/s]Fetching 242 files:  54%|█████▍    | 131/242 [00:46<00:39,  2.79it/s]Fetching 242 files:  56%|█████▌    | 135/242 [00:47<00:37,  2.83it/s]Fetching 242 files:  57%|█████▋    | 139/242 [00:49<00:36,  2.83it/s]Fetching 242 files:  59%|█████▉    | 143/242 [00:49<00:34,  2.87it/s]Fetching 242 files:  61%|██████    | 147/242 [00:51<00:33,  2.87it/s]Fetching 242 files:  62%|██████▏   | 151/242 [00:52<00:31,  2.89it/s]Fetching 242 files:  64%|██████▍   | 155/242 [00:52<00:29,  2.93it/s]Fetching 242 files:  66%|██████▌   | 159/242 [00:54<00:28,  2.93it/s]Fetching 242 files:  67%|██████▋   | 163/242 [00:55<00:27,  2.92it/s]Fetching 242 files:  69%|██████▉   | 167/242 [00:56<00:25,  2.96it/s]Fetching 242 files:  71%|███████   | 171/242 [00:57<00:23,  2.98it/s]Fetching 242 files:  72%|███████▏  | 175/242 [00:58<00:22,  2.99it/s]Fetching 242 files:  74%|███████▍  | 179/242 [00:59<00:20,  3.02it/s]Fetching 242 files:  76%|███████▌  | 183/242 [01:00<00:19,  3.01it/s]Fetching 242 files:  77%|███████▋  | 187/242 [01:01<00:18,  3.02it/s]Fetching 242 files:  79%|███████▉  | 191/242 [01:02<00:16,  3.05it/s]Fetching 242 files:  81%|████████  | 195/242 [01:03<00:15,  3.08it/s]Fetching 242 files:  82%|████████▏ | 199/242 [01:04<00:13,  3.10it/s]Fetching 242 files:  84%|████████▍ | 203/242 [01:05<00:12,  3.12it/s]Fetching 242 files:  86%|████████▌ | 207/242 [01:05<00:11,  3.16it/s]Fetching 242 files:  87%|████████▋ | 211/242 [01:06<00:09,  3.19it/s]Fetching 242 files:  89%|████████▉ | 215/242 [01:06<00:08,  3.22it/s]Fetching 242 files:  90%|█████████ | 219/242 [01:06<00:07,  3.27it/s]Fetching 242 files:  92%|█████████▏| 223/242 [01:07<00:05,  3.29it/s]Fetching 242 files:  94%|█████████▍| 227/242 [01:08<00:04,  3.31it/s]Fetching 242 files:  95%|█████████▌| 231/242 [01:09<00:03,  3.34it/s]Fetching 242 files:  97%|█████████▋| 235/242 [01:10<00:02,  3.35it/s]Fetching 242 files:  99%|█████████▉| 239/242 [01:10<00:00,  3.39it/s]Fetching 242 files: 100%|█████████▉| 241/242 [01:30<00:00,  2.68it/s]Fetching 242 files: 100%|██████████| 242/242 [09:07<00:00,  2.26s/it]Fetching 242 files: 100%|██████████| 242/242 [09:07<00:00,  2.26s/it]
+Traceback (most recent call last):
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 406, in hf_raise_for_status
+    response.raise_for_status()
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://hf-mirror.com/api/resolve-cache/models/CSWRY/VOSR/bf5da48b5eaa4affe063e4b53b3e5d70d532615b/torch_cache%2Ffacebookresearch_dinov2_main%2F.github%2Fworkflows%2Flint.yaml
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/_snapshot_download.py", line 290, in snapshot_download
+    thread_map(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/tqdm/contrib/concurrent.py", line 191, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/tqdm/contrib/concurrent.py", line 163, in _executor_map
+    return list(ex.map(
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
+    yield _result_or_cancel(fs.pop())
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/_snapshot_download.py", line 264, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1212, in hf_hub_download
+    return _hf_hub_download_to_local_dir(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1508, in _hf_hub_download_to_local_dir
+    _download_to_tmp_and_move(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1915, in _download_to_tmp_and_move
+    http_get(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 455, in http_get
+    r = _request_wrapper(
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 388, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 468, in hf_raise_for_status
+    raise _format(HfHubHTTPError, message, response) from e
+huggingface_hub.errors.HfHubHTTPError: 403 Forbidden: None.
+Cannot access content at: https://hf-mirror.com/api/resolve-cache/models/CSWRY/VOSR/bf5da48b5eaa4affe063e4b53b3e5d70d532615b/torch_cache%2Ffacebookresearch_dinov2_main%2F.github%2Fworkflows%2Flint.yaml.
+Make sure your token has the correct permissions.
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<title>Attention Required! | Cloudflare</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" />
+<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->
+<style>body{margin:0;padding:0}</style>
+
+
+<!--[if gte IE 10]><!-->
+<script>
+  if (!navigator.cookieEnabled) {
+    window.addEventListener('DOMContentLoaded', function () {
+      var cookieEl = document.getElementById('cookie-alert');
+      cookieEl.style.display = 'block';
+    })
+  }
+</script>
+<!--<![endif]-->
+
+</head>
+<body>
+  <div id="cf-wrapper">
+    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>
+    <div id="cf-error-details" class="cf-error-details-wrapper">
+      <div class="cf-wrapper cf-header cf-error-overview">
+        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>
+        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> hf-mirror.com</h2>
+      </div><!-- /.header -->
+
+      <div class="cf-section cf-highlight">
+        <div class="cf-wrapper">
+          <div class="cf-screenshot-container cf-screenshot-full">
+            
+              <span class="cf-no-screenshot error"></span>
+            
+          </div>
+        </div>
+      </div><!-- /.captcha-container -->
+
+      <div class="cf-section cf-wrapper">
+        <div class="cf-columns two">
+          <div class="cf-column">
+            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>
+
+            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>
+          </div>
+
+          <div class="cf-column">
+            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>
+
+            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>
+          </div>
+        </div>
+      </div><!-- /.section -->
+
+      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+    <p class="text-13">
+      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">a2c2a2318c874439</strong></span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+      <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+        Your IP:
+        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+        <span class="hidden" id="cf-footer-ip">160.16.86.14</span>
+        <span class="cf-footer-separator sm:hidden">&bull;</span>
+      </span>
+      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+      
+    </p>
+    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+  </div><!-- /.error-footer -->
+
+    </div><!-- /#cf-error-details -->
+  </div><!-- /#cf-wrapper -->
+
+  <script>
+    window._cf_translation = {};
+    
+    
+  </script>
+</body>
+</html>
+VOSR_SETUP_DONE

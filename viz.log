@@ -1,0 +1,63 @@
+##### src #####
+  A_楼顶 源图已存
+  B_楼面 源图已存
+  C_树冠 源图已存
+  D_轻退化 源图已存
+##### tinysr #####
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['transformer_blocks.10.gate_msa', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.8.shift_msa', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.9.gate_msa', 'transformer_blocks.8.scale_msa', 'transformer_blocks.9.shift_msa', 'transformer_blocks.3.scale_mlp', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.0.scale_msa', 'transformer_blocks.4.scale_msa', 'transformer_blocks.0.gate_msa', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.5.scale_msa', 'transformer_blocks.7.gate_msa', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.2.shift_mlp', 'transformer_blocks.7.shift_mlp', 'transformer_blocks.3.gate_mlp', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.8.gate_mlp', 'transformer_blocks.7.scale_msa', 'transformer_blocks.6.shift_msa', 'transformer_blocks.9.scale_msa', 'transformer_blocks.3.scale_msa', 'transformer_blocks.4.shift_mlp', 'transformer_blocks.5.scale_mlp', 'transformer_blocks.3.gate_msa', 'transformer_blocks.8.shift_mlp', 'transformer_blocks.5.gate_msa', 'transformer_blocks.5.gate_mlp', 'transformer_blocks.8.gate_msa', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.6.gate_msa', 'transformer_blocks.5.shift_mlp', 'transformer_blocks.10.scale_msa', 'transformer_blocks.2.gate_msa', 'transformer_blocks.2.shift_msa', 'transformer_blocks.1.scale_msa', 'transformer_blocks.10.scale_mlp', 'transformer_blocks.1.scale_mlp', 'transformer_blocks.0.shift_msa', 'transformer_blocks.11.gate_msa', 'scale', 'transformer_blocks.1.gate_mlp', 'transformer_blocks.7.shift_msa', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.0.gate_mlp', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.4.gate_msa', 'transformer_blocks.3.shift_msa', 'transformer_blocks.4.gate_mlp', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.4.shift_msa', 'shift', 'transformer_blocks.3.shift_mlp', 'transformer_blocks.6.scale_msa', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.11.shift_msa', 'transformer_blocks.10.shift_msa', 'transformer_blocks.11.scale_mlp', 'transformer_blocks.2.scale_msa', 'transformer_blocks.6.scale_mlp', 'transformer_blocks.5.shift_msa', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.11.scale_msa', 'transformer_blocks.1.gate_msa', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.1.shift_msa']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+  run12_基线 完成
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['transformer_blocks.10.gate_msa', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.8.shift_msa', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.9.gate_msa', 'transformer_blocks.8.scale_msa', 'transformer_blocks.9.shift_msa', 'transformer_blocks.3.scale_mlp', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.0.scale_msa', 'transformer_blocks.4.scale_msa', 'transformer_blocks.0.gate_msa', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.5.scale_msa', 'transformer_blocks.7.gate_msa', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.2.shift_mlp', 'transformer_blocks.7.shift_mlp', 'transformer_blocks.3.gate_mlp', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.8.gate_mlp', 'transformer_blocks.7.scale_msa', 'transformer_blocks.6.shift_msa', 'transformer_blocks.9.scale_msa', 'transformer_blocks.3.scale_msa', 'transformer_blocks.4.shift_mlp', 'transformer_blocks.5.scale_mlp', 'transformer_blocks.3.gate_msa', 'transformer_blocks.8.shift_mlp', 'transformer_blocks.5.gate_msa', 'transformer_blocks.5.gate_mlp', 'transformer_blocks.8.gate_msa', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.6.gate_msa', 'transformer_blocks.5.shift_mlp', 'transformer_blocks.10.scale_msa', 'transformer_blocks.2.gate_msa', 'transformer_blocks.2.shift_msa', 'transformer_blocks.1.scale_msa', 'transformer_blocks.10.scale_mlp', 'transformer_blocks.1.scale_mlp', 'transformer_blocks.0.shift_msa', 'transformer_blocks.11.gate_msa', 'scale', 'transformer_blocks.1.gate_mlp', 'transformer_blocks.7.shift_msa', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.0.gate_mlp', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.4.gate_msa', 'transformer_blocks.3.shift_msa', 'transformer_blocks.4.gate_mlp', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.4.shift_msa', 'shift', 'transformer_blocks.3.shift_mlp', 'transformer_blocks.6.scale_msa', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.11.shift_msa', 'transformer_blocks.10.shift_msa', 'transformer_blocks.11.scale_mlp', 'transformer_blocks.2.scale_msa', 'transformer_blocks.6.scale_mlp', 'transformer_blocks.5.shift_msa', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.11.scale_msa', 'transformer_blocks.1.gate_msa', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.1.shift_msa']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+  distill_v1_学生 完成
+##### vosr #####
+DiT 载入：缺失 0 多余 4
+LoRA 目标模块: ['k_linear', 'proj', 'q_linear', 'qkv', 'v_linear', 'w12', 'w3']
+  vosr_cap_教师 完成
+DiT 载入：缺失 0 多余 4
+LoRA 目标模块: ['k_linear', 'proj', 'q_linear', 'qkv', 'v_linear', 'w12', 'w3']
+  teacher2_加强版 完成
+场景: ['A_楼顶', 'B_楼面', 'C_树冠', 'D_轻退化']
+列: ['00_LQ输入', '01_run12_基线', '02_distill_v1_学生', '03_vosr_cap_教师', '04_teacher2_加强版', '99_GT真值']
+已存 /cache/zihaohe/viz_compare.png (2435, 1585)
+ALLDONE

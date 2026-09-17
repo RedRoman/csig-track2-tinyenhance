@@ -1,0 +1,209 @@
+"""跨架构蒸馏：VOSR 0.5B 教师（86.5ms, Score 4.1093）-> TinySR 学生（12.75ms）。
+
+路线 B 的第一步：先量朴素输出回归的损耗，它是 rCM 必须超过的基线。
+
+设计要点：
+  1. 主项是对教师输出做回归 —— 稠密、局部、不可被指标利用。
+     现在学生学 NR 靠对四个指标网络做梯度上升，那条路径已被证明必然沿着
+     坏的帕累托方向滑（三次独立运行都是 MANIQA 涨、4K MUSIQ 跌）。
+  2. 保留对 GT 的 FR 项 + 势垒 —— 教师自身 FR 只有 1.208，不兜底会连它的缺陷一起学。
+  3. 保留小权重 IQA —— 纯回归会向均值收敛导致发糊，NR 掉一截。
+  4. MUSIQ 走 mosaic 口径（512 直算与官方 4K 排序相关 -0.544，是反的）。
+
+数据集种子必须与 gen_teacher.py 完全一致，否则教师输出对不上 lq。
+"""
+from __future__ import annotations
+import argparse, glob, json, os, sys, time, warnings
+warnings.filterwarnings("ignore")
+os.environ.setdefault("CSIG_MANIQA_SAMPLES", "20")
+
+sys.path.insert(0, "/cache/zihaohe/csig_isr/v3/code")
+import cv2
+import numpy as np, torch, torch.nn.functional as F
+from PIL import Image
+from torch.utils.data import Dataset, DataLoader
+from settings import ROOT
+from degradation import degrade as degrade_legacy
+from metrics_utils import create_metrics
+from eval_utils import collect_crops, evaluate_model
+from tinysr_runtime import build_model, checkpoint_payload
+
+Image.MAX_IMAGE_PIXELS = None
+DEV, DT = torch.device("cuda"), torch.float16
+
+
+def crop_seed(idx):
+    """必须与 gen_teacher.py 逐字一致"""
+    return (idx * 104729 + 7919) % (2 ** 31)
+
+
+class DistillDataset(Dataset):
+    def __init__(self, paths, teacher_dir, size=512):
+        self.size = int(size)
+        self.teacher_dir = teacher_dir
+        self.items = [(i, p) for i, p in enumerate(paths)
+                      if os.path.exists(os.path.join(teacher_dir, f"{i:06d}.png"))]
+
+    def __len__(self):
+        return len(self.items)
+
+    def __getitem__(self, k):
+        i, path = self.items[k]
+        rng = np.random.RandomState(crop_seed(i))
+        gt = np.asarray(Image.open(path).convert("RGB"), dtype=np.uint8)
+        h, w, _ = gt.shape
+        s = self.size
+        if h > s or w > s:
+            y = rng.randint(0, max(h - s, 0) + 1); x = rng.randint(0, max(w - s, 0) + 1)
+            gt = gt[y:y + s, x:x + s]
+        if gt.shape[0] != s or gt.shape[1] != s:
+            gt = cv2.resize(gt, (s, s), interpolation=cv2.INTER_CUBIC)
+        if rng.random() < 0.5:
+            gt = gt[:, ::-1]
+        k4 = int(rng.randint(4))
+        if k4:
+            gt = np.rot90(gt, k4)
+        gt = np.ascontiguousarray(gt)
+        lq = degrade_legacy(gt, rng)
+        te = np.asarray(Image.open(os.path.join(self.teacher_dir, f"{i:06d}.png")
+                                   ).convert("RGB"), dtype=np.uint8)
+        to_t = lambda a: torch.from_numpy(a.astype(np.float32) / 255.).permute(2, 0, 1)
+        return to_t(lq), to_t(gt), to_t(te)
+
+
+def mosaic_in(t, mode):
+    if mode != "mosaic4k":
+        return t
+    t = t[:1]
+    H = int(os.environ.get("CSIG_MOSAIC_H", 2304))
+    W = int(os.environ.get("CSIG_MOSAIC_W", 3072))
+    ry = -(-H // t.shape[-2]); rx = -(-W // t.shape[-1])
+    return t.repeat(1, 1, ry, rx)[:, :, :H, :W]
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--init_ckpt", default=f"{ROOT}/train_out/run12_iqa30/best.pth")
+    ap.add_argument("--teacher_dir", default="/cache/zihaohe/distill_data/vosr_cap")
+    ap.add_argument("--steps", type=int, default=1500)
+    ap.add_argument("--bs", type=int, default=4)
+    ap.add_argument("--lr", type=float, default=2e-5)
+    ap.add_argument("--workers", type=int, default=8)
+    # 蒸馏项（对教师）
+    ap.add_argument("--w_t_l1", type=float, default=1.0)
+    ap.add_argument("--w_t_lpips", type=float, default=2.0)
+    ap.add_argument("--w_t_dists", type=float, default=2.0)
+    # 保真项（对 GT）
+    ap.add_argument("--w_l1", type=float, default=0.5)
+    ap.add_argument("--w_lpips", type=float, default=1.0)
+    ap.add_argument("--w_dists", type=float, default=1.5)
+    ap.add_argument("--w_fid", type=float, default=1.5)
+    ap.add_argument("--lpips_cap", type=float, default=0.26)
+    ap.add_argument("--dists_cap", type=float, default=0.19)
+    ap.add_argument("--w_barrier", type=float, default=3000.0)
+    # 残余 IQA（防回归到均值发糊）
+    ap.add_argument("--w_iqa", type=float, default=0.5)
+    ap.add_argument("--musiq_proxy", default="mosaic4k")
+    ap.add_argument("--iqa_batch", type=int, default=1)
+    ap.add_argument("--val_every", type=int, default=150)
+    ap.add_argument("--val_crops", type=int, default=12)
+    ap.add_argument("--out", default=f"{ROOT}/train_out/distill_v1")
+    args = ap.parse_args()
+    os.makedirs(args.out, exist_ok=True)
+
+    model, rep = build_model(args.init_ckpt, device=DEV, dtype=DT, merge_lora=False,
+                             alpha_mode="fixed", fixed_alpha=1.0)
+    print("load report:", rep, flush=True)
+    for p in model.parameters():
+        p.requires_grad_(False)
+    params = []
+    for n, p in model.tr.named_parameters():
+        if "lora_" in n:
+            p.requires_grad_(True); p.data = p.data.float(); params.append(p)
+    print(f"可训练 {sum(p.numel() for p in params)/1e6:.2f} M", flush=True)
+    opt = torch.optim.AdamW([{"params": params, "lr": args.lr}], weight_decay=0.0)
+    scaler = torch.amp.GradScaler("cuda")
+    M = create_metrics(DEV, as_loss=True, include_psnr=True)
+
+    paths = sorted(glob.glob(os.path.join(ROOT, "train_data", "lsdir512", "*.png")))
+    ds = DistillDataset(paths, args.teacher_dir)
+    print(f"蒸馏样本 {len(ds)} 对（教师输出已生成的部分）", flush=True)
+    if len(ds) < 100:
+        raise RuntimeError("教师输出太少，先跑 gen_teacher.py")
+    dl = DataLoader(ds, batch_size=args.bs, shuffle=True, num_workers=args.workers,
+                    drop_last=True, pin_memory=True, persistent_workers=args.workers > 0)
+
+    val_items = collect_crops(args.val_crops)
+    ev = evaluate_model(model, val_items, M, device=DEV, dtype=DT, robust_beta=0.15)
+    ev.pop("rows", None)
+    print(f"[0] score={ev['score']:.4f} robust={ev['robust_score']:.4f} "
+          f"PSNR={ev['metrics']['psnr']:.3f}", flush=True)
+
+    best, hist, step, t0 = -1e9, [], 0, time.time()
+    it = iter(dl)
+    while step < args.steps:
+        try:
+            lq, gt, te = next(it)
+        except StopIteration:
+            it = iter(dl); continue
+        step += 1
+        lq = lq.to(DEV, non_blocking=True); gt = gt.to(DEV, non_blocking=True)
+        te = te.to(DEV, non_blocking=True)
+        with torch.autocast(device_type="cuda", dtype=DT):
+            out, _ = model.forward_train(lq)
+        out = out.float(); gt = gt.float(); lq = lq.float(); te = te.float()
+        # 以下全在 fp32：DISTS 在 autocast 下反传会全 nan
+        t_l1 = F.l1_loss(out, te)
+        t_lp = M["lpips"](out, te).mean()
+        t_ds = M["dists"](out, te).mean()
+        loss = args.w_t_l1 * t_l1 + args.w_t_lpips * t_lp + args.w_t_dists * t_ds
+
+        g_l1 = F.l1_loss(out, gt)
+        g_lp = M["lpips"](out, gt).mean()
+        g_ds = M["dists"](out, gt).mean()
+        loss = loss + args.w_l1 * g_l1 + args.w_lpips * g_lp + args.w_dists * g_ds
+        loss = loss + args.w_fid * F.l1_loss(F.avg_pool2d(out, 16), F.avg_pool2d(lq, 16))
+        if args.w_barrier > 0:
+            bar = F.relu(g_lp - args.lpips_cap) ** 2 + F.relu(g_ds - args.dists_cap) ** 2
+            loss = loss + args.w_barrier * bar
+
+        iq = out[:min(args.iqa_batch, out.shape[0])]
+        which = step % 3
+        if which == 0:
+            r = 3.0 * M["clipiqa"](iq).mean()
+        elif which == 1:
+            r = 3.0 * M["maniqa"](iq).mean()
+        else:
+            r = 3.0 * (M["musiq"](mosaic_in(iq, args.musiq_proxy)).mean() / 100.0)
+        loss = loss - args.w_iqa * r
+
+        opt.zero_grad(set_to_none=True)
+        scaler.scale(loss).backward()
+        scaler.unscale_(opt)
+        torch.nn.utils.clip_grad_norm_(params, 1.0)
+        scaler.step(opt); scaler.update()
+
+        if step % 25 == 0:
+            print(f"[{step}/{args.steps}] loss={loss.item():.4f} "
+                  f"教师L1={t_l1.item():.4f} 教师LPIPS={t_lp.item():.4f} "
+                  f"GT_LPIPS={g_lp.item():.4f} GT_DISTS={g_ds.item():.4f} "
+                  f"iqa={r.item():.4f} {(time.time()-t0)/step:.2f}s/it", flush=True)
+        if step % args.val_every == 0 or step == args.steps:
+            ev = evaluate_model(model, val_items, M, device=DEV, dtype=DT, robust_beta=0.15)
+            ev.pop("rows", None)
+            hist.append({"step": step, "score": float(ev["score"]),
+                         **{k: float(v) for k, v in ev["metrics"].items()}})
+            flag = ""
+            if ev["robust_score"] > best:
+                best = ev["robust_score"]; flag = " <- best"
+                torch.save(checkpoint_payload(model, step, train_vae_decoder=False,
+                                              dense_names=[], args_dict=vars(args)),
+                           os.path.join(args.out, "best.pth"))
+            print(f"[val {step}] score={ev['score']:.4f} robust={ev['robust_score']:.4f} "
+                  f"PSNR={ev['metrics']['psnr']:.3f}{flag}", flush=True)
+            json.dump(hist, open(os.path.join(args.out, "log.json"), "w"), indent=2)
+    print(f"done. best robust={best:.4f}", flush=True)
+
+
+if __name__ == "__main__":
+    main()

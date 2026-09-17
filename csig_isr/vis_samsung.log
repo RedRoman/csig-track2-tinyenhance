@@ -1,0 +1,29 @@
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.
+  deprecate("Transformer2DModelOutput", "1.0.0", deprecation_message)
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/clip/clip.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/arch_util.py:118: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location=torch.device("cpu"))
+Loaded combined weights from /cache/zihaohe/csig_isr/NTIRE2026/model_zoo/team11_SamsungAICamera/team11_mobile_samsung/weights.pth
+Samsung 载入 (step 2750)
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+
+crop      方法                  PSNR    LPIPS  CLIPIQA
+------------------------------------------------------
+case1_1   Samsung            27.28   0.4427   0.4429
+case1_1   LQ                 27.87   0.4776   0.2421
+case1_2   Samsung            25.82   0.4464   0.2020
+case1_2   LQ                 26.16   0.5594   0.1509
+case2_1   Samsung            36.82   0.0992   0.6134
+case2_1   LQ                 36.98   0.1439   0.3689
+case2_2   Samsung            34.94   0.2000   0.5224
+case2_2   LQ                 35.64   0.2926   0.3121
+case3_1   Samsung            27.45   0.5793   0.1742
+case3_1   LQ                 27.72   0.6648   0.1399
+case3_2   Samsung            27.40   0.4079   0.4716
+case3_2   LQ                 27.73   0.4733   0.2342
+
+已导出到 /cache/zihaohe/csig_isr/visualizations/x1_compare
+VS_EXIT:0

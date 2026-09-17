@@ -1,0 +1,127 @@
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.
+  deprecate("Transformer2DModelOutput", "1.0.0", deprecation_message)
+训练图 3193 张
+/cache/zihaohe/csig_isr/TinySR/models/tinysr/tinysd3.py:74: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.register_buffer("pos_embed", torch.load("dataset/cache/pos_embed.pt"))
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['transformer_blocks.8.shift_msa', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.11.gate_msa', 'transformer_blocks.10.scale_msa', 'transformer_blocks.11.scale_mlp', 'transformer_blocks.9.scale_msa', 'transformer_blocks.0.gate_msa', 'shift', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.4.gate_mlp', 'transformer_blocks.4.shift_mlp', 'transformer_blocks.6.scale_msa', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.3.shift_msa', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.3.scale_mlp', 'transformer_blocks.5.shift_mlp', 'transformer_blocks.3.gate_mlp', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.5.scale_msa', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.0.shift_msa', 'transformer_blocks.1.scale_mlp', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.10.scale_mlp', 'transformer_blocks.4.gate_msa', 'transformer_blocks.1.scale_msa', 'transformer_blocks.5.gate_msa', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.1.shift_msa', 'transformer_blocks.7.scale_msa', 'scale', 'transformer_blocks.1.gate_mlp', 'transformer_blocks.4.scale_msa', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.8.shift_mlp', 'transformer_blocks.0.scale_msa', 'transformer_blocks.2.gate_msa', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.8.scale_msa', 'transformer_blocks.5.shift_msa', 'transformer_blocks.2.shift_msa', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.5.scale_mlp', 'transformer_blocks.7.gate_msa', 'transformer_blocks.8.gate_msa', 'transformer_blocks.2.scale_msa', 'transformer_blocks.5.gate_mlp', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.10.gate_msa', 'transformer_blocks.0.gate_mlp', 'transformer_blocks.1.gate_msa', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.3.gate_msa', 'transformer_blocks.7.shift_msa', 'transformer_blocks.4.shift_msa', 'transformer_blocks.9.shift_msa', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.6.shift_msa', 'transformer_blocks.3.scale_msa', 'transformer_blocks.7.shift_mlp', 'transformer_blocks.6.scale_mlp', 'transformer_blocks.2.shift_mlp', 'transformer_blocks.6.gate_msa', 'transformer_blocks.10.shift_msa', 'transformer_blocks.11.shift_msa', 'transformer_blocks.11.scale_msa', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.8.gate_mlp', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.3.shift_mlp', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.9.gate_msa']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+/cache/zihaohe/csig_isr/train_tinysr.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  pooled = torch.load(f"{TS}/dataset/default/pool_embeds.pt", map_location=dev).to(dtype=dt)
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+  惰性缓存已触发（AdaLN scale/shift 固定）
+  可训练：LoRA 21.34 M
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/clip/clip.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/arch_util.py:118: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location=torch.device("cpu"))
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/MANIQA_PIPAL-ae6d356b.pth
+[step 0] LQ=27.272dB  模型=23.759dB  Score=3.3242
+[   50/3000] loss 0.0989 (l1 0.0451 lpips 0.1660 dists 0.1566 iqa 1.3902) lr 2.00e-05 0.90s/it
+[  100/3000] loss 0.1258 (l1 0.0392 lpips 0.1757 dists 0.1475 iqa 1.3030) lr 1.99e-05 0.86s/it
+[  150/3000] loss -0.0026 (l1 0.0346 lpips 0.1661 dists 0.1231 iqa 1.4353) lr 1.99e-05 0.84s/it
+[val 150] PSNR=25.834dB  Score=3.2011  <- best, saved
+[  200/3000] loss 0.0637 (l1 0.0488 lpips 0.1997 dists 0.1398 iqa 1.5149) lr 1.98e-05 0.85s/it
+[  250/3000] loss 0.0153 (l1 0.0411 lpips 0.1547 dists 0.1328 iqa 1.4082) lr 1.97e-05 0.82s/it
+[  300/3000] loss 0.0842 (l1 0.0444 lpips 0.1985 dists 0.1425 iqa 1.4717) lr 1.95e-05 0.79s/it
+[val 300] PSNR=25.864dB  Score=3.2493  <- best, saved
+[  350/3000] loss -0.0069 (l1 0.0412 lpips 0.1622 dists 0.1282 iqa 1.4664) lr 1.94e-05 0.80s/it
+[  400/3000] loss 0.0355 (l1 0.0443 lpips 0.1840 dists 0.1441 iqa 1.5449) lr 1.92e-05 0.79s/it
+[  450/3000] loss 0.0380 (l1 0.0363 lpips 0.1637 dists 0.1429 iqa 1.4446) lr 1.90e-05 0.78s/it
+[val 450] PSNR=25.998dB  Score=3.1947
+[  500/3000] loss -0.0842 (l1 0.0331 lpips 0.1333 dists 0.1253 iqa 1.5200) lr 1.87e-05 0.79s/it
+[  550/3000] loss -0.0611 (l1 0.0395 lpips 0.1588 dists 0.1117 iqa 1.4874) lr 1.85e-05 0.78s/it
+[  600/3000] loss -0.0705 (l1 0.0415 lpips 0.1347 dists 0.1266 iqa 1.5056) lr 1.82e-05 0.77s/it
+[val 600] PSNR=25.862dB  Score=3.2676  <- best, saved
+[  650/3000] loss -0.0002 (l1 0.0388 lpips 0.1702 dists 0.1316 iqa 1.5001) lr 1.79e-05 0.78s/it
+[  700/3000] loss 0.0002 (l1 0.0408 lpips 0.1580 dists 0.1286 iqa 1.4336) lr 1.76e-05 0.77s/it
+[  750/3000] loss -0.0285 (l1 0.0377 lpips 0.1667 dists 0.1317 iqa 1.5564) lr 1.72e-05 0.77s/it
+[val 750] PSNR=26.069dB  Score=3.2614
+[  800/3000] loss -0.0135 (l1 0.0462 lpips 0.1782 dists 0.1289 iqa 1.5549) lr 1.69e-05 0.77s/it
+[  850/3000] loss -0.0395 (l1 0.0412 lpips 0.1514 dists 0.1263 iqa 1.4930) lr 1.65e-05 0.77s/it
+[  900/3000] loss -0.0460 (l1 0.0442 lpips 0.1720 dists 0.1210 iqa 1.5623) lr 1.61e-05 0.76s/it
+[val 900] PSNR=25.910dB  Score=3.2954  <- best, saved
+[  950/3000] loss -0.0337 (l1 0.0338 lpips 0.1388 dists 0.1252 iqa 1.4159) lr 1.57e-05 0.77s/it
+[ 1000/3000] loss -0.0131 (l1 0.0446 lpips 0.1760 dists 0.1248 iqa 1.5189) lr 1.52e-05 0.76s/it
+[ 1050/3000] loss -0.0576 (l1 0.0361 lpips 0.1478 dists 0.1265 iqa 1.5214) lr 1.48e-05 0.76s/it
+[val 1050] PSNR=25.817dB  Score=3.3309  <- best, saved
+[ 1100/3000] loss -0.0853 (l1 0.0361 lpips 0.1153 dists 0.1285 iqa 1.4724) lr 1.44e-05 0.76s/it
+[ 1150/3000] loss -0.0327 (l1 0.0570 lpips 0.1785 dists 0.1180 iqa 1.5461) lr 1.39e-05 0.76s/it
+[ 1200/3000] loss -0.0486 (l1 0.0374 lpips 0.1481 dists 0.1309 iqa 1.5272) lr 1.34e-05 0.76s/it
+[val 1200] PSNR=26.081dB  Score=3.2900
+[ 1250/3000] loss 0.0035 (l1 0.0354 lpips 0.1635 dists 0.1326 iqa 1.4674) lr 1.30e-05 0.76s/it
+[ 1300/3000] loss -0.1313 (l1 0.0387 lpips 0.1289 dists 0.1116 iqa 1.5424) lr 1.25e-05 0.76s/it
+[ 1350/3000] loss -0.0385 (l1 0.0459 lpips 0.1435 dists 0.1339 iqa 1.5082) lr 1.20e-05 0.75s/it
+[val 1350] PSNR=26.002dB  Score=3.2932
+[ 1400/3000] loss -0.0674 (l1 0.0463 lpips 0.1496 dists 0.1206 iqa 1.5249) lr 1.15e-05 0.76s/it
+[ 1450/3000] loss -0.0045 (l1 0.0464 lpips 0.1705 dists 0.1296 iqa 1.5055) lr 1.10e-05 0.76s/it
+[ 1500/3000] loss -0.0855 (l1 0.0360 lpips 0.1315 dists 0.1145 iqa 1.4536) lr 1.05e-05 0.75s/it
+[val 1500] PSNR=26.110dB  Score=3.2532
+[ 1550/3000] loss -0.0715 (l1 0.0425 lpips 0.1484 dists 0.1215 iqa 1.5332) lr 1.00e-05 0.76s/it
+[ 1600/3000] loss -0.0321 (l1 0.0396 lpips 0.1572 dists 0.1282 iqa 1.5081) lr 9.51e-06 0.75s/it
+[ 1650/3000] loss -0.0788 (l1 0.0381 lpips 0.1457 dists 0.1134 iqa 1.4891) lr 9.01e-06 0.75s/it
+[val 1650] PSNR=26.137dB  Score=3.2615
+[ 1700/3000] loss -0.0175 (l1 0.0344 lpips 0.1512 dists 0.1339 iqa 1.4775) lr 8.52e-06 0.76s/it
+[ 1750/3000] loss -0.1033 (l1 0.0360 lpips 0.1405 dists 0.1101 iqa 1.5081) lr 8.04e-06 0.75s/it
+[ 1800/3000] loss -0.0288 (l1 0.0556 lpips 0.1807 dists 0.1230 iqa 1.5744) lr 7.56e-06 0.75s/it
+[val 1800] PSNR=26.033dB  Score=3.3094
+[ 1850/3000] loss -0.0134 (l1 0.0600 lpips 0.1718 dists 0.1267 iqa 1.5262) lr 7.10e-06 0.75s/it
+[ 1900/3000] loss -0.0980 (l1 0.0390 lpips 0.1290 dists 0.1147 iqa 1.4783) lr 6.64e-06 0.75s/it
+[ 1950/3000] loss -0.1476 (l1 0.0288 lpips 0.1326 dists 0.1041 iqa 1.5458) lr 6.19e-06 0.75s/it
+[val 1950] PSNR=26.024dB  Score=3.3450  <- best, saved
+[ 2000/3000] loss -0.0757 (l1 0.0504 lpips 0.1713 dists 0.1124 iqa 1.5866) lr 5.75e-06 0.75s/it
+[ 2050/3000] loss -0.0859 (l1 0.0432 lpips 0.1552 dists 0.1165 iqa 1.5665) lr 5.33e-06 0.75s/it
+[ 2100/3000] loss -0.0064 (l1 0.0348 lpips 0.1433 dists 0.1326 iqa 1.4110) lr 4.92e-06 0.75s/it
+[val 2100] PSNR=26.097dB  Score=3.2863
+[ 2150/3000] loss -0.0673 (l1 0.0396 lpips 0.1588 dists 0.1209 iqa 1.5582) lr 4.52e-06 0.75s/it
+[ 2200/3000] loss -0.0468 (l1 0.0436 lpips 0.1650 dists 0.1174 iqa 1.5143) lr 4.14e-06 0.75s/it
+[ 2250/3000] loss -0.0775 (l1 0.0444 lpips 0.1526 dists 0.1173 iqa 1.5407) lr 3.78e-06 0.75s/it
+[val 2250] PSNR=26.045dB  Score=3.3258
+[ 2300/3000] loss -0.0905 (l1 0.0362 lpips 0.1245 dists 0.1158 iqa 1.4465) lr 3.44e-06 0.75s/it
+[ 2350/3000] loss -0.0844 (l1 0.0367 lpips 0.1431 dists 0.1119 iqa 1.4825) lr 3.12e-06 0.75s/it
+[ 2400/3000] loss -0.0578 (l1 0.0414 lpips 0.1516 dists 0.1255 iqa 1.5353) lr 2.81e-06 0.75s/it
+[val 2400] PSNR=26.043dB  Score=3.3410
+[ 2450/3000] loss -0.1021 (l1 0.0394 lpips 0.1319 dists 0.1142 iqa 1.4979) lr 2.53e-06 0.75s/it
+[ 2500/3000] loss -0.0014 (l1 0.0509 lpips 0.1817 dists 0.1242 iqa 1.5138) lr 2.27e-06 0.75s/it
+[ 2550/3000] loss -0.1686 (l1 0.0342 lpips 0.1138 dists 0.1040 iqa 1.5263) lr 2.04e-06 0.75s/it
+[val 2550] PSNR=26.100dB  Score=3.3164
+[ 2600/3000] loss -0.0673 (l1 0.0404 lpips 0.1585 dists 0.1190 iqa 1.5467) lr 1.82e-06 0.75s/it
+[ 2650/3000] loss -0.1546 (l1 0.0369 lpips 0.1261 dists 0.1068 iqa 1.5590) lr 1.63e-06 0.75s/it
+[ 2700/3000] loss -0.0563 (l1 0.0425 lpips 0.1506 dists 0.1207 iqa 1.4992) lr 1.46e-06 0.75s/it
+[val 2700] PSNR=26.074dB  Score=3.3207
+[ 2750/3000] loss -0.0489 (l1 0.0405 lpips 0.1570 dists 0.1218 iqa 1.5114) lr 1.32e-06 0.75s/it
+[ 2800/3000] loss -0.0932 (l1 0.0414 lpips 0.1524 dists 0.1149 iqa 1.5634) lr 1.21e-06 0.75s/it
+[ 2850/3000] loss -0.1346 (l1 0.0358 lpips 0.1369 dists 0.1070 iqa 1.5526) lr 1.12e-06 0.75s/it
+[val 2850] PSNR=26.061dB  Score=3.3159
+[ 2900/3000] loss -0.0918 (l1 0.0324 lpips 0.1387 dists 0.1145 iqa 1.4957) lr 1.05e-06 0.75s/it
+[ 2950/3000] loss -0.0871 (l1 0.0426 lpips 0.1604 dists 0.1097 iqa 1.5495) lr 1.01e-06 0.75s/it
+[ 3000/3000] loss -0.0514 (l1 0.0511 lpips 0.1518 dists 0.1222 iqa 1.5073) lr 1.00e-06 0.75s/it
+[val 3000] PSNR=26.095dB  Score=3.3220
+训练完成，best Score = 3.3450
+TS4_EXIT:0

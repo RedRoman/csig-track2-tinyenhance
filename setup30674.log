@@ -1,0 +1,29 @@
+=== [1/7] venv (no conda, no python3-venv on these hosts) ===
+ERROR: THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE. If you have updated the package versions, please update the hashes. Otherwise, examine the package contents carefully; someone may have tampered with them.
+    virtualenv from http://repo.myhuaweicloud.com/repository/pypi/packages/40/4c/eb2f52aeeaf30dbd073d315a251a63ae2b8263171ec4428c135140cb0802/virtualenv-21.7.4-py3-none-any.whl#sha256=376ec93cd6aab3044fa395d7db226db38043b7b5748948044b2a87168525e843:
+        Expected sha256 376ec93cd6aab3044fa395d7db226db38043b7b5748948044b2a87168525e843
+             Got        781e3fabb5f3baeaf76601789b19f1ecdc47505d2b1c518146d9ff0e84ea1f9d
+
+/temp/zihaohe/fastwam_results/setup_fastwam_host.sh: line 26: /home/ma-user/.local/bin/virtualenv: No such file or directory
+=== [2/7] torch (pytorch.org is FAST here: ~8MB/s) ===
+/temp/zihaohe/fastwam_results/setup_fastwam_host.sh: line 29: ./venv/bin/pip: No such file or directory
+=== [3/7] FastWAM source + package (no-deps: skip av/deepspeed/datasets bloat) ===
+/temp/zihaohe/fastwam_results/setup_fastwam_host.sh: line 37: ./venv/bin/pip: No such file or directory
+/temp/zihaohe/fastwam_results/setup_fastwam_host.sh: line 38: ./venv/bin/pip: No such file or directory
+=== [4/7] LIBERO ===
+Cloning into 'LIBERO'...
+Updating files:  39% (446/1116)Updating files:  40% (447/1116)Updating files:  41% (458/1116)Updating files:  42% (469/1116)Updating files:  43% (480/1116)Updating files:  44% (492/1116)Updating files:  45% (503/1116)Updating files:  46% (514/1116)Updating files:  47% (525/1116)Updating files:  48% (536/1116)Updating files:  49% (547/1116)Updating files:  50% (558/1116)Updating files:  51% (570/1116)Updating files:  52% (581/1116)Updating files:  53% (592/1116)Updating files:  54% (603/1116)Updating files:  55% (614/1116)Updating files:  56% (625/1116)Updating files:  57% (637/1116)Updating files:  58% (648/1116)Updating files:  59% (659/1116)Updating files:  60% (670/1116)Updating files:  61% (681/1116)Updating files:  62% (692/1116)Updating files:  63% (704/1116)Updating files:  64% (715/1116)Updating files:  65% (726/1116)Updating files:  66% (737/1116)Updating files:  67% (748/1116)Updating files:  68% (759/1116)Updating files:  69% (771/1116)Updating files:  70% (782/1116)Updating files:  71% (793/1116)Updating files:  72% (804/1116)Updating files:  73% (815/1116)Updating files:  74% (826/1116)Updating files:  75% (837/1116)Updating files:  76% (849/1116)Updating files:  77% (860/1116)Updating files:  78% (871/1116)Updating files:  79% (882/1116)Updating files:  80% (893/1116)Updating files:  81% (904/1116)Updating files:  82% (916/1116)Updating files:  83% (927/1116)Updating files:  84% (938/1116)Updating files:  85% (949/1116)Updating files:  86% (960/1116)Updating files:  87% (971/1116)Updating files:  88% (983/1116)Updating files:  89% (994/1116)Updating files:  90% (1005/1116)Updating files:  91% (1016/1116)Updating files:  92% (1027/1116)Updating files:  93% (1038/1116)Updating files:  94% (1050/1116)Updating files:  95% (1061/1116)Updating files:  96% (1072/1116)Updating files:  97% (1083/1116)Updating files:  98% (1094/1116)Updating files:  99% (1105/1116)Updating files: 100% (1116/1116)Updating files: 100% (1116/1116), done.
+/temp/zihaohe/fastwam_results/setup_fastwam_host.sh: line 59: ./venv/bin/pip: No such file or directory
+/temp/zihaohe/fastwam_results/setup_fastwam_host.sh: line 61: ./venv/bin/pip: No such file or directory
+=== [5/7] LIBERO config (PITFALL F: first import prompts interactively) ===
+=== [6/7] checkpoints (ckpt 12G from HF; VAE+T5 pulled by loader from modelscope) ===
+/temp/zihaohe/fastwam_results/setup_fastwam_host.sh: line 77: ./../venv/bin/huggingface-cli: No such file or directory
+=== [7/7] verify ===
+  FAIL torch
+  FAIL fastwam
+  FAIL libero
+  FAIL robosuite
+  FAIL mujoco
+/temp/zihaohe/fastwam_results/setup_fastwam_host.sh: line 89: ./venv/bin/python: No such file or directory
+=== SETUP COMPLETE: /cache/zihaohe/fastwam_lab ===
+SETUP_EXIT=0

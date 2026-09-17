@@ -1,0 +1,28 @@
+=== 补依赖 ===
+[notice] A new release of pip is available: 26.2 -> 26.2.1
+[notice] To update, run: /cache/zihaohe/csig_isr/venv/bin/python -m pip install --upgrade pip
+=== 备测试图 ===
+ok 3072 4096
+=== 跑推理 ===
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.
+  deprecate("Transformer2DModelOutput", "1.0.0", deprecation_message)
+/cache/zihaohe/VOSR/inference_vosr_onestep.py:381: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(SD2_LWDECODER_PATH, map_location="cpu")
+Using cache found in preset/ckpts/torch_cache/facebookresearch_dinov2_main
+/cache/zihaohe/VOSR/preset/ckpts/torch_cache/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/cache/zihaohe/VOSR/preset/ckpts/torch_cache/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/cache/zihaohe/VOSR/preset/ckpts/torch_cache/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+Loading model from /cache/zihaohe/VOSR_weights/VOSR_0.5B_os...
+Inference steps: 1, Seed: 42
+Loading LightDecoder from preset/ckpts/sd21_lwdecoder.pth...
+Loading weights from /cache/zihaohe/VOSR_weights/VOSR_0.5B_os/checkpoints/ema_model.safetensors
+Processing 1 images...
+  0%|          | 0/1 [00:00<?, ?it/s]/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/_inductor/compile_fx.py:167: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+100%|██████████| 1/1 [00:08<00:00,  8.41s/it]100%|██████████| 1/1 [00:08<00:00,  8.41s/it]
+Output size: 512x512, input size: 512x512
+Done!
+VOSR_PROBE_DONE

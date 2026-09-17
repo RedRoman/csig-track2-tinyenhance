@@ -1,0 +1,413 @@
+"""CSIG track-2 TinySR v3 training.
+
+Recommended first ablation after canonical P0 checks:
+  python train_tinysr.py --init_ckpt <run12/best.pth> \
+      --w_iqa 3.0 --w_fid 3.0 --w_niqe 2.0 \
+      --steps 450 --lr 1e-5 --lr_horizon 1800 \
+      --out <.../v3_sched_h1800>
+
+The script keeps the old LoRA path available, while adding:
+  * unified CLIP-IQA + MANIQA + MUSIQ optimization;
+  * optional severity-adaptive latent residual strength alpha(x);
+  * canonical validation aggregation shared with score_eval.py;
+  * LR schedule horizon decoupled from training length;
+  * optional GT-aware high-frequency overshoot regularization;
+  * robust checkpoint selection across cases/tier variance;
+  * optional VAE decoder and last-N DiT dense fine-tuning (zero inference ops);
+  * optional narrow ISP-mixture degradation.
+"""
+from __future__ import annotations
+import argparse
+import glob
+import json
+import os
+import time
+
+import cv2
+import numpy as np
+import torch
+import torch.nn.functional as F
+from PIL import Image
+from torch.utils.data import Dataset, DataLoader
+
+from settings import ROOT
+from degradation import degrade as degrade_legacy, degrade_v2
+from metrics_utils import create_metrics, load_metric_names
+from eval_utils import collect_crops, evaluate_model
+from hf_regularization import gt_aware_hf_overshoot_loss
+from schedule_utils import lr_multiplier
+from tinysr_runtime import build_model, checkpoint_payload
+
+Image.MAX_IMAGE_PIXELS = None
+DEV = torch.device("cuda")
+DT = torch.float16
+
+
+class PairDataset(Dataset):
+    def __init__(self, paths, size=512, repeat=1, degradation="legacy"):
+        self.paths = paths * repeat
+        self.size = int(size)
+        self.degradation = degradation
+
+    def __len__(self):
+        return len(self.paths)
+
+    def __getitem__(self, i):
+        seed = (int(torch.initial_seed()) % 100003 * 7919 + i * 104729) % (2 ** 31)
+        rng = np.random.RandomState(seed)
+        gt = np.asarray(Image.open(self.paths[i]).convert("RGB"), dtype=np.uint8)
+        h, w, _ = gt.shape
+        s = self.size
+        if h > s or w > s:
+            y = rng.randint(0, max(h - s, 0) + 1)
+            x = rng.randint(0, max(w - s, 0) + 1)
+            gt = gt[y:y + s, x:x + s]
+        if gt.shape[0] != s or gt.shape[1] != s:
+            gt = cv2.resize(gt, (s, s), interpolation=cv2.INTER_CUBIC)
+        if rng.random() < 0.5:
+            gt = gt[:, ::-1]
+        k = int(rng.randint(4))
+        if k:
+            gt = np.rot90(gt, k)
+        gt = np.ascontiguousarray(gt)
+
+        operator_severity = None
+        if self.degradation == "v2":
+            lq, meta = degrade_v2(gt, rng, return_meta=True)
+            operator_severity = float(meta["severity"])
+        else:
+            # Preserve the original calibrated chain for clean ablations.
+            lq = degrade_legacy(gt, rng)
+
+        # Weak severity supervision is computed from the synthetic pair itself.
+        # Mapping roughly covers the three real validation PSNR regimes (~21/28/33 dB).
+        mse = float(np.mean((lq.astype(np.float32) - gt.astype(np.float32)) ** 2))
+        psnr = 10.0 * np.log10((255.0 ** 2) / max(mse, 1e-8))
+        pair_severity = float(np.clip((34.0 - psnr) / 14.0, 0.0, 1.0))
+        severity = pair_severity if operator_severity is None else 0.5 * (pair_severity + operator_severity)
+
+        to_t = lambda a: torch.from_numpy(a.astype(np.float32) / 255.0).permute(2, 0, 1)
+        return to_t(lq), to_t(gt), torch.tensor(severity, dtype=torch.float32)
+
+
+def select_dense_params(model, last_n):
+    """Unfreeze the last N DiT blocks without changing inference structure."""
+    if last_n <= 0:
+        return [], []
+    blocks = list(model.tr.transformer_blocks)
+    chosen = blocks[-min(last_n, len(blocks)):]
+    ids = {id(p) for b in chosen for p in b.parameters()}
+    params, names = [], []
+    for name, p in model.tr.named_parameters():
+        if id(p) in ids and "lora_" not in name:
+            p.requires_grad_(True)
+            p.data = p.data.float()  # fp32 master weight; autocast keeps forward efficient
+            params.append(p)
+            names.append(name)
+    return params, names
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--steps", type=int, default=1800)
+    ap.add_argument("--bs", type=int, default=6)
+    ap.add_argument("--lr", type=float, default=1e-5)
+    ap.add_argument("--dense_lr", type=float, default=1e-6)
+    ap.add_argument("--lr_schedule", choices=["cosine", "constant"], default="cosine")
+    ap.add_argument("--lr_horizon", type=int, default=0,
+                    help="cosine horizon in optimizer steps; 0 means --steps. Can exceed --steps.")
+    ap.add_argument("--lr_floor", type=float, default=0.05,
+                    help="minimum multiplicative LR factor after cosine horizon")
+    ap.add_argument("--workers", type=int, default=8)
+    ap.add_argument("--no_grad_scaler", action="store_true")
+    ap.add_argument("--val_every", type=int, default=150)
+    ap.add_argument("--val_crops", type=int, default=12)
+    ap.add_argument("--robust_beta", type=float, default=0.15)
+    ap.add_argument("--select_by", choices=["score", "robust_score"], default="robust_score")
+
+    ap.add_argument("--w_l1", type=float, default=0.5)
+    ap.add_argument("--w_lpips", type=float, default=1.0)
+    ap.add_argument("--w_dists", type=float, default=1.5)
+    ap.add_argument("--w_fid", type=float, default=1.5)
+    ap.add_argument("--w_iqa", type=float, default=1.0)
+    ap.add_argument("--w_clipiqa", type=float, default=1.0)
+    ap.add_argument("--w_maniqa", type=float, default=1.0)
+    ap.add_argument("--w_musiq", type=float, default=1.0)
+    # NIQE 在 Score 里贡献 (10-niqe)/10，这里按同一尺度加惩罚 w_niqe*niqe/10。
+    # 0=关闭（历史行为）。NIQE 无网络、显存开销可忽略，故常开而不进 round-robin。
+    ap.add_argument("--w_niqe", type=float, default=0.0)
+    ap.add_argument("--iqa_batch", type=int, default=2,
+                    help="IQA loss uses first N batch items to cap memory")
+    ap.add_argument("--iqa_mode", choices=["roundrobin", "all"], default="roundrobin",
+                    help="roundrobin gives an unbiased 3-metric objective with much lower activation memory")
+
+    # GT-aware artifact suppression. Disabled by default for clean ablations.
+    ap.add_argument("--w_hf_over", type=float, default=0.0,
+                    help="weight of GT-aware smooth-region high-frequency overshoot loss")
+    ap.add_argument("--hf_blur_kernel", type=int, default=5)
+    ap.add_argument("--hf_local_kernel", type=int, default=9)
+    ap.add_argument("--hf_margin", type=float, default=0.35,
+                    help="allow SR HF energy up to (1+margin)*GT before penalty")
+    ap.add_argument("--hf_slack", type=float, default=2e-4,
+                    help="absolute HF-energy slack to avoid over-penalizing nearly flat GT")
+    ap.add_argument("--hf_smooth_quantile", type=float, default=0.35)
+    ap.add_argument("--hf_mask_softness", type=float, default=0.20)
+    ap.add_argument("--hf_smooth_abs_cap", type=float, default=0.0,
+                    help="optional absolute cap for GT smooth threshold; 0 disables")
+
+    ap.add_argument("--adaptive_alpha", action="store_true")
+    ap.add_argument("--fixed_alpha", type=float, default=1.0)
+    ap.add_argument("--alpha_min", type=float, default=0.72)
+    ap.add_argument("--alpha_max", type=float, default=1.10)
+    ap.add_argument("--alpha_hidden", type=int, default=32)
+    ap.add_argument("--w_alpha_prior", type=float, default=0.02,
+                    help="weak synthetic severity ordering; set 0 for fully unsupervised gate")
+    ap.add_argument("--alpha_light", type=float, default=0.82)
+    ap.add_argument("--alpha_heavy", type=float, default=1.06)
+
+    ap.add_argument("--train_vae_decoder", action="store_true")
+    ap.add_argument("--freeze_lora", action="store_true",
+                    help="train only new zero-overhead modules (e.g. alpha gate/decoder), useful for clean ablations")
+    ap.add_argument("--unfreeze_last_n", type=int, default=0)
+    ap.add_argument("--degradation", choices=["legacy", "v2"], default="legacy")
+    ap.add_argument("--extra_data", type=str, default=None)
+    ap.add_argument("--init_ckpt", type=str, default=None)
+    ap.add_argument("--out", type=str, default=os.path.join(ROOT, "train_out", "v3_train"))
+    args = ap.parse_args()
+    os.makedirs(args.out, exist_ok=True)
+
+    print("Metric config:", load_metric_names(), flush=True)
+    paths = (sorted(glob.glob(os.path.join(ROOT, "AdcSR/testset/DIV2K-Val/HR/*.png")))
+             + sorted(glob.glob(os.path.join(ROOT, "AdcSR/testset/DRealSR/HR/*.png")))
+             + sorted(glob.glob(os.path.join(ROOT, "AdcSR/testset/RealSR/HR/*.png"))))
+    if args.extra_data:
+        for d in args.extra_data.split(","):
+            paths += sorted(glob.glob(os.path.join(d.strip(), "*.png")))
+    if not paths:
+        raise RuntimeError("no training images found; check CSIG_ROOT/--extra_data paths")
+    rep = 20 if len(paths) < 8000 else max(1, 60000 // max(len(paths), 1))
+    print(f"train images={len(paths)} repeat={rep} degradation={args.degradation}", flush=True)
+    dl = DataLoader(PairDataset(paths, repeat=rep, degradation=args.degradation),
+                    batch_size=args.bs, shuffle=True, num_workers=args.workers,
+                    drop_last=True, pin_memory=True, persistent_workers=args.workers > 0)
+
+    model, report = build_model(
+        args.init_ckpt, device=DEV, dtype=DT, merge_lora=False,
+        alpha_mode="adaptive" if args.adaptive_alpha else "fixed",
+        fixed_alpha=args.fixed_alpha, adaptive_alpha=args.adaptive_alpha,
+        alpha_min=args.alpha_min, alpha_max=args.alpha_max, alpha_hidden=args.alpha_hidden,
+        init_alpha=args.fixed_alpha)
+    print("load report:", report, flush=True)
+
+    # Freeze first, then explicitly open only the zero-inference-overhead adaptation groups.
+    for p in model.parameters():
+        p.requires_grad_(False)
+    main_params = []
+    for name, p in model.tr.named_parameters():
+        if "lora_" in name and not args.freeze_lora:
+            p.requires_grad_(True)
+            p.data = p.data.float()
+            main_params.append(p)
+    if model.alpha_gate is not None:
+        for p in model.alpha_gate.parameters():
+            p.requires_grad_(True)
+            p.data = p.data.float()
+            main_params.append(p)
+    if args.train_vae_decoder:
+        for name, p in model.vae.named_parameters():
+            if name.startswith("decoder"):
+                p.requires_grad_(True)
+                p.data = p.data.float()  # stable AdamW master weights; forward is under autocast
+                main_params.append(p)
+    dense_params, dense_names = select_dense_params(model, args.unfreeze_last_n)
+
+    if not main_params and not dense_params:
+        raise ValueError("no trainable parameters: enable LoRA, adaptive alpha, decoder, or dense FT")
+    groups = []
+    if main_params:
+        groups.append({"params": main_params, "lr": args.lr})
+    if dense_params:
+        groups.append({"params": dense_params, "lr": args.dense_lr})
+    opt = torch.optim.AdamW(groups, weight_decay=1e-4)
+    # Multiplicative schedule keeps the dense/main LR ratio intact. v3 decouples
+    # the cosine horizon from --steps so we can test whether niqe_long's step-450
+    # peak came from slow LR decay rather than from 1800-step optimization.
+    horizon = int(args.lr_horizon) if int(args.lr_horizon) > 0 else int(args.steps)
+    if not (0.0 <= args.lr_floor <= 1.0):
+        raise ValueError("--lr_floor must be in [0,1]")
+    def lr_factor(s):
+        return lr_multiplier(s, schedule=args.lr_schedule, horizon=horizon, floor=args.lr_floor)
+    sched = torch.optim.lr_scheduler.LambdaLR(opt, lr_lambda=lr_factor)
+    try:
+        scaler = torch.amp.GradScaler("cuda", enabled=not args.no_grad_scaler)
+    except Exception:
+        scaler = torch.cuda.amp.GradScaler(enabled=not args.no_grad_scaler)
+    print(f"trainable main={sum(p.numel() for p in main_params)/1e6:.2f}M "
+          f"dense={sum(p.numel() for p in dense_params)/1e6:.2f}M ", end="", flush=True)
+    print(f"schedule={args.lr_schedule} horizon={horizon} floor={args.lr_floor}", flush=True)
+
+    # One shared metric set: as_loss=True only enables gradients; under no_grad it
+    # is also the validation scorer. Avoid duplicating MANIQA/MUSIQ/CLIP weights on GPU.
+    loss_metrics = create_metrics(DEV, as_loss=True, include_psnr=True)
+    val_metrics = loss_metrics
+    val_items = collect_crops(args.val_crops)
+    print(f"validation crops={len(val_items)} selection={args.select_by} beta={args.robust_beta}", flush=True)
+
+    ev0 = evaluate_model(model, val_items, val_metrics, device=DEV, dtype=DT,
+                         robust_beta=args.robust_beta)
+    ev0.pop("rows", None)
+    print(f"[0] score={ev0['score']:.4f} robust={ev0['robust_score']:.4f} "
+          f"PSNR={ev0['metrics']['psnr']:.3f} alpha={ev0['alpha_mean']:.3f}±{ev0['alpha_std']:.3f} "
+          f"case={ev0['case']} tier={ev0['tier']}", flush=True)
+
+    best = float(ev0[args.select_by])
+    step = 0
+    t0 = time.time()
+    log = [{"step": 0, **ev0, "selection": best, "is_initial": True}]
+    # Keep the initialization as a valid candidate. This is especially important
+    # for short FR-repair runs: if every update hurts, best.pth remains the input
+    # model rather than the least-bad damaged checkpoint.
+    init_payload = checkpoint_payload(
+        model, 0, train_vae_decoder=args.train_vae_decoder,
+        dense_names=dense_names, args_dict=vars(args))
+    init_payload["val"] = ev0
+    torch.save(init_payload, os.path.join(args.out, "best.pth"))
+    with open(os.path.join(args.out, "log.json"), "w", encoding="utf-8") as f:
+        json.dump(log, f, indent=2, ensure_ascii=False)
+    model.train()
+    while step < args.steps:
+        for lq, gt, severity in dl:
+            if step >= args.steps:
+                break
+            lq = lq.to(DEV, non_blocking=True)
+            gt = gt.to(DEV, non_blocking=True)
+            severity = severity.to(DEV, non_blocking=True)
+            with torch.autocast(device_type="cuda", dtype=DT):
+                out, alpha = model.forward_train(lq)
+            out = out.float()
+            # 以下全部在 fp32 计算。曾经这一整段被包在 autocast 里，
+            # 导致 DISTS 的反传全 nan（前向值正常，梯度 2133 万元素皆 nan），
+            # GradScaler 于是每步跳过，训练完全空转。原始脚本没有 autocast，
+            # 所以只有 v2 受影响。改动务必保持：autocast 只包模型前向。
+            if True:
+                l1 = F.l1_loss(out, gt)
+                lp = loss_metrics["lpips"](out, gt).mean()
+                ds = loss_metrics["dists"](out, gt).mean()
+                loss = args.w_l1 * l1 + args.w_lpips * lp + args.w_dists * ds
+
+                fid = F.l1_loss(F.avg_pool2d(out, 16), F.avg_pool2d(lq, 16))
+                loss = loss + args.w_fid * fid
+
+                n_iqa = min(args.iqa_batch, out.shape[0])
+                iq = out[:n_iqa]
+                # All three are higher-better. In round-robin mode, multiplying
+                # the sampled term by 3 makes the gradient an unbiased estimate
+                # of the full three-metric sum while avoiding three large graphs.
+                ci = torch.tensor(float("nan"), device=DEV)
+                ma = torch.tensor(float("nan"), device=DEV)
+                mu = torch.tensor(float("nan"), device=DEV)
+                if args.iqa_mode == "all":
+                    ci = loss_metrics["clipiqa"](iq).mean()
+                    ma = loss_metrics["maniqa"](iq).mean()
+                    mu = loss_metrics["musiq"](iq).mean() / 100.0
+                    iqa_reward = args.w_clipiqa * ci + args.w_maniqa * ma + args.w_musiq * mu
+                else:
+                    which = step % 3
+                    if which == 0:
+                        ci = loss_metrics["clipiqa"](iq).mean()
+                        iqa_reward = 3.0 * args.w_clipiqa * ci
+                    elif which == 1:
+                        ma = loss_metrics["maniqa"](iq).mean()
+                        iqa_reward = 3.0 * args.w_maniqa * ma
+                    else:
+                        mu = loss_metrics["musiq"](iq).mean() / 100.0
+                        iqa_reward = 3.0 * args.w_musiq * mu
+                loss = loss - args.w_iqa * iqa_reward
+
+                # NIQE：Score 六项里唯一从未被直接优化的一项，却贡献了
+                # alpha 扫描 46% / soup 扫描 145% 的增益。pyiqa 的实现可反传。
+                # 在 fp32 下算，autocast 的 fp16 会让 MSCN 统计量不稳。
+                nq = torch.tensor(float("nan"), device=DEV)
+                if args.w_niqe > 0:
+                    nq = loss_metrics["niqe"](iq.clamp(0, 1)).mean()
+                    loss = loss + args.w_niqe * nq / 10.0
+
+                hf_over = torch.tensor(0.0, device=DEV)
+                hf_diag = {"hf_sr_gt_ratio": float("nan"),
+                           "hf_smooth_sr_gt_ratio": float("nan"),
+                           "hf_overshoot": 0.0, "hf_mask_mean": float("nan")}
+                if args.w_hf_over > 0:
+                    hf_over, hf_diag = gt_aware_hf_overshoot_loss(
+                        out, gt,
+                        blur_kernel=args.hf_blur_kernel,
+                        local_kernel=args.hf_local_kernel,
+                        margin=args.hf_margin,
+                        slack=args.hf_slack,
+                        smooth_quantile=args.hf_smooth_quantile,
+                        mask_softness=args.hf_mask_softness,
+                        smooth_abs_cap=args.hf_smooth_abs_cap,
+                    )
+                    loss = loss + args.w_hf_over * hf_over
+
+                alpha_prior = torch.tensor(0.0, device=DEV)
+                if model.alpha_gate is not None and args.w_alpha_prior > 0:
+                    target = args.alpha_light + severity[:, None, None, None] * (args.alpha_heavy - args.alpha_light)
+                    alpha_prior = F.smooth_l1_loss(alpha.float(), target.float())
+                    loss = loss + args.w_alpha_prior * alpha_prior
+
+            _dbg = os.environ.get("CSIG_DEBUG_NIQE") and step < 5
+            if _dbg:
+                _ref = next(p for g in groups for p in g["params"] if p.requires_grad)
+                _before = _ref.detach().clone()
+            opt.zero_grad(set_to_none=True)
+            scaler.scale(loss).backward()
+            scaler.unscale_(opt)
+            _tot = torch.nn.utils.clip_grad_norm_([p for g in groups for p in g["params"]], 1.0)
+            scaler.step(opt)
+            scaler.update()
+            if _dbg:
+                print(f"    [dbg] 梯度范数={float(_tot):.4e} scale={scaler.get_scale():.0f} "
+                      f"参数移动={(_ref.detach()-_before).abs().max().item():.4e} "
+                      f"niqe={float(nq) if args.w_niqe>0 else float('nan'):.3f}", flush=True)
+            sched.step()
+            step += 1
+
+            if step % 50 == 0:
+                print(f"[{step}/{args.steps}] loss={loss.item():.4f} l1={l1.item():.4f} "
+                      f"lp={lp.item():.4f} dists={ds.item():.4f} fid={fid.item():.4f} "
+                      f"IQA={iqa_reward.item():.4f} clip={ci.item():.4f} maniqa={ma.item():.4f} musiq={mu.item():.4f} niqe={nq.item():.3f} "
+                      f"hf={hf_over.item():.6f} hfR={hf_diag['hf_smooth_sr_gt_ratio']:.2f} "
+                      f"alpha={alpha.float().mean().item():.3f} prior={alpha_prior.item():.4f} "
+                      f"lr={opt.param_groups[0]['lr']:.3e} {(time.time()-t0)/step:.2f}s/it", flush=True)
+
+            if step % args.val_every == 0:
+                ev = evaluate_model(model, val_items, val_metrics, device=DEV, dtype=DT,
+                                    robust_beta=args.robust_beta)
+                ev.pop("rows", None)
+                key = ev[args.select_by]
+                row = {"step": step, **ev, "selection": key}
+                log.append(row)
+                flag = ""
+                if key > best:
+                    best = key
+                    payload = checkpoint_payload(
+                        model, step, train_vae_decoder=args.train_vae_decoder,
+                        dense_names=dense_names, args_dict=vars(args))
+                    payload["val"] = ev
+                    torch.save(payload, os.path.join(args.out, "best.pth"))
+                    flag = " <- best"
+                print(f"[val {step}] score={ev['score']:.4f} robust={ev['robust_score']:.4f} "
+                      f"PSNR={ev['metrics']['psnr']:.3f} alpha={ev['alpha_mean']:.3f}±{ev['alpha_std']:.3f} "
+                      f"case={ev['case']} tier={ev['tier']}{flag}", flush=True)
+                with open(os.path.join(args.out, "log.json"), "w", encoding="utf-8") as f:
+                    json.dump(log, f, indent=2, ensure_ascii=False)
+                model.train()
+
+    torch.save(checkpoint_payload(model, step, train_vae_decoder=args.train_vae_decoder,
+                                  dense_names=dense_names, args_dict=vars(args)),
+               os.path.join(args.out, "final.pth"))
+    print(f"done. best {args.select_by}={best:.4f}", flush=True)
+
+
+if __name__ == "__main__":
+    main()

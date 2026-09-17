@@ -1,0 +1,11 @@
+=== [1] venv ===
+created virtual environment CPython3.10.12.final.0-64-x86_64 in 320ms
+  creator CPython3Posix(dest=/cache/zihaohe/fastwam_lab/venv, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, via=copy, app_data_dir=/home/ma-user/.cache/virtualenv)
+    added seed packages: pip==26.2.1, setuptools==84.0.0
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator,XonshActivator
+=== [2] torch (pytorch.org) ===
+  WARNING: Connection interrupted while downloading.
+  WARNING: Attempting to resume incomplete download (0 bytes/8.1 MB, attempt 1)
+/cache/zihaohe/continue_setup.sh: line 15: 439996 Killed                  ./venv/bin/pip install -q torch==2.7.1 torchvision --extra-index-url https://download.pytorch.org/whl/cu128
+EXIT=1

@@ -1,0 +1,42 @@
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/utils/outputs.py:63: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/utils/outputs.py:63: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+载入 SD2.1 结构 ...
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/utils/outputs.py:63: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+载入 OSEDiff 合并后权重 ...
+  vae  missing=0 unexpected=0
+  unet missing=0 unexpected=0
+载入 RAM/DAPE ...
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/timm/models/hub.py:4: FutureWarning: Importing from timm.models.hub is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/timm/models/registry.py:4: FutureWarning: Importing from timm.models.registry is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/timm/models/helpers.py:7: FutureWarning: Importing from timm.models.helpers is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+Traceback (most recent call last):
+  File "/cache/zihaohe/csig_isr/bench_ose2.py", line 176, in <module>
+    main()
+  File "/cache/zihaohe/csig_isr/bench_ose2.py", line 72, in main
+    DAPE_m = ram(pretrained=RAM, pretrained_condition=DAPE, image_size=384, vit="swin_l")
+  File "/cache/zihaohe/csig_isr/OSEDiff/ram/models/ram_lora.py", line 329, in ram
+    model = RAMLora(**kwargs)
+  File "/cache/zihaohe/csig_isr/OSEDiff/ram/models/ram_lora.py", line 109, in __init__
+    self.tokenizer = init_tokenizer()
+  File "/cache/zihaohe/csig_isr/OSEDiff/ram/models/utils.py", line 132, in init_tokenizer
+    tokenizer = BertTokenizer.from_pretrained('/home/notebook/data/group/LowLevelLLM/LLM/bert-base-uncased', local_files_only=True)
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 1770, in from_pretrained
+    resolved_vocab_files[file_id] = cached_file(
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/transformers/utils/hub.py", line 409, in cached_file
+    resolved_file = hf_hub_download(
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/home/notebook/data/group/LowLevelLLM/LLM/bert-base-uncased'. Use `repo_type` argument if needed.
+B2_EXIT:1

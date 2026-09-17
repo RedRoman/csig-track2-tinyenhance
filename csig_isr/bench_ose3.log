@@ -1,0 +1,67 @@
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/utils/outputs.py:63: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/utils/outputs.py:63: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+载入 SD2.1 结构 ...
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/utils/outputs.py:63: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+载入 OSEDiff 合并后权重 ...
+  vae  missing=0 unexpected=0
+  unet missing=0 unexpected=0
+载入 RAM/DAPE ...
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/timm/models/hub.py:4: FutureWarning: Importing from timm.models.hub is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/timm/models/registry.py:4: FutureWarning: Importing from timm.models.registry is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/timm/models/helpers.py:7: FutureWarning: Importing from timm.models.helpers is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/encoder/layer/0/crossattention/self/query is tied
+/encoder/layer/0/crossattention/self/key is tied
+/encoder/layer/0/crossattention/self/value is tied
+/encoder/layer/0/crossattention/output/dense is tied
+/encoder/layer/0/crossattention/output/LayerNorm is tied
+/encoder/layer/0/intermediate/dense is tied
+/encoder/layer/0/output/dense is tied
+/encoder/layer/0/output/LayerNorm is tied
+/encoder/layer/1/crossattention/self/query is tied
+/encoder/layer/1/crossattention/self/key is tied
+/encoder/layer/1/crossattention/self/value is tied
+/encoder/layer/1/crossattention/output/dense is tied
+/encoder/layer/1/crossattention/output/LayerNorm is tied
+/encoder/layer/1/intermediate/dense is tied
+/encoder/layer/1/output/dense is tied
+/encoder/layer/1/output/LayerNorm is tied
+Loading default thretholds from .txt....
+--------------
+/cache/zihaohe/csig_isr/AdcSR/weight/pretrained/ram_swin_large_14m.pth
+--------------
+load checkpoint from /cache/zihaohe/csig_isr/AdcSR/weight/pretrained/ram_swin_large_14m.pth
+vit: swin_l
+load lora from /cache/zihaohe/csig_isr/AdcSR/weight/pretrained/DAPE.pth
+
+参数量  UNet 865.9M  VAE 83.7M  TextEnc 340.4M  RAM/DAPE 470.9M  合计 1760.9M
+Traceback (most recent call last):
+  File "/cache/zihaohe/csig_isr/bench_ose2.py", line 176, in <module>
+    main()
+  File "/cache/zihaohe/csig_isr/bench_ose2.py", line 132, in main
+    out = f_all()
+  File "/cache/zihaohe/csig_isr/bench_ose2.py", line 129, in f_all
+    return vae.decode(zo / vae.config.scaling_factor).sample
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/utils/accelerate_utils.py", line 46, in wrapper
+    return method(self, *args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/models/autoencoders/autoencoder_kl.py", line 304, in decode
+    decoded = self._decode(z).sample
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/models/autoencoders/autoencoder_kl.py", line 274, in _decode
+    z = self.post_quant_conv(z)
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 554, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 549, in _conv_forward
+    return F.conv2d(
+RuntimeError: Input type (float) and bias type (c10::Half) should be the same
+B3_EXIT:1

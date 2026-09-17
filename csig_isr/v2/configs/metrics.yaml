@@ -1,0 +1,12 @@
+# Single source of truth for local proxy evaluation.
+# Keep this identical across training validation, sweeps and final audit.
+metrics:
+  lpips: lpips
+  dists: dists
+  niqe: niqe
+  musiq: musiq
+  maniqa: maniqa-pipal
+  clipiqa: clipiqa
+score:
+  # Proxy only; do not treat as the organizer's unpublished final formula.
+  expression: "(1-lpips)+(1-dists)+clipiqa+maniqa+musiq/100+max(0,(10-niqe)/10)"

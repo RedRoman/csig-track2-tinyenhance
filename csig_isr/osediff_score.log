@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/cache/zihaohe/csig_isr/eval_osediff_score.py", line 27, in <module>
+    from diffusers import AutoencoderKL, UNet2DConditionModel, DDPMScheduler
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/__init__.py", line 5, in <module>
+    from .utils import (
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/utils/__init__.py", line 37, in <module>
+    from .dynamic_modules_utils import get_class_from_dynamic_module
+  File "/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/utils/dynamic_modules_utils.py", line 28, in <module>
+    from huggingface_hub import cached_download, hf_hub_download, model_info
+ImportError: cannot import name 'cached_download' from 'huggingface_hub' (/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/huggingface_hub/__init__.py)
+OS_EXIT:1

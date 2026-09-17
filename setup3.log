@@ -1,0 +1,37 @@
+=== [2] torch (BOTH pinned -> no dependency backtracking) ===
+  torch 2.7.1+cu128 cuda True
+=== [3] fastwam + deps ===
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+fastwam 0.1.0 requires av==15.1.0, which is not installed.
+fastwam 0.1.0 requires deepspeed==0.18.7, which is not installed.
+fastwam 0.1.0 requires torchcodec==0.4.0, which is not installed.
+fastwam 0.1.0 requires wandb==0.23.1, which is not installed.
+fastwam 0.1.0 requires boto3==1.35.99, but you have boto3 1.43.78 which is incompatible.
+fastwam 0.1.0 requires datasets==4.8.5, but you have datasets 5.0.1 which is incompatible.
+fastwam 0.1.0 requires einops==0.8.1, but you have einops 0.8.2 which is incompatible.
+fastwam 0.1.0 requires gitpython==3.1.45, but you have gitpython 3.1.59 which is incompatible.
+fastwam 0.1.0 requires imageio==2.37.0, but you have imageio 2.37.4 which is incompatible.
+fastwam 0.1.0 requires packaging==25.0, but you have packaging 26.3 which is incompatible.
+fastwam 0.1.0 requires pandas==2.2.3, but you have pandas 2.3.3 which is incompatible.
+fastwam 0.1.0 requires pillow==12.0.0, but you have pillow 12.3.0 which is incompatible.
+fastwam 0.1.0 requires pyarrow==24.0.0, but you have pyarrow 25.0.1 which is incompatible.
+fastwam 0.1.0 requires regex==2025.11.3, but you have regex 2026.7.19 which is incompatible.
+fastwam 0.1.0 requires rich==14.2.0, but you have rich 15.0.0 which is incompatible.
+fastwam 0.1.0 requires safetensors==0.5.3, but you have safetensors 0.8.0 which is incompatible.
+fastwam 0.1.0 requires termcolor==2.5.0, but you have termcolor 3.3.0 which is incompatible.
+fastwam 0.1.0 requires tqdm==4.68.3, but you have tqdm 4.70.0 which is incompatible.
+fastwam 0.1.0 requires typing-extensions==4.15.0, but you have typing-extensions 4.16.0 which is incompatible.
+=== [4] LIBERO patches + deps ===
+=== [5] verify ===
+  OK   torch
+  OK   fastwam
+  OK   libero
+  OK   robosuite
+  OK   mujoco
+  LIBERO n_tasks = 10
+=== [6] checkpoint 12G ===
+Fetching 2 files: 100%|██████████| 2/2 [08:16<00:00, 248.40s/it]Fetching 2 files: 100%|██████████| 2/2 [08:16<00:00, 248.40s/it]
+/cache/zihaohe/fastwam_lab/FastWAM/checkpoints/fastwam_release
+12G	./checkpoints/fastwam_release
+=== ALL DONE ===
+EXIT=0

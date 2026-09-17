@@ -1,0 +1,26 @@
+# Human-readable recommended starting point; train_tinysr.py still uses CLI arguments.
+training:
+  init: run12_iqa30/best.pth
+  steps: 1800
+  batch_size: 6
+  lr: 1.0e-5
+  degradation: legacy
+  losses:
+    l1: 0.5
+    lpips: 1.0
+    dists: 1.5
+    low_frequency_fidelity: 1.5
+    iqa_total: 1.0
+    clipiqa: 1.0
+    maniqa: 1.0
+    musiq: 1.0
+adaptive_alpha:
+  enabled: true
+  min: 0.72
+  max: 1.10
+  hidden: 32
+  weak_severity_prior: 0.02
+validation:
+  crops_per_case: 12
+  robust_beta: 0.15
+  select_by: robust_score

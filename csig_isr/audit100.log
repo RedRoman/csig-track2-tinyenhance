@@ -1,0 +1,48 @@
+审计 100 张
+  20/100
+  40/100
+  60/100
+  80/100
+  100/100
+
+==============================================================================
+全量统计
+==============================================================================
+  指标                    均值        中位       P95        最大
+  grad_ratio        2.1677    2.0660    3.6234    4.5320
+  hf_ratio          1.2894    1.2459    1.6401    1.7806
+  lf_shift          0.0020    0.0020    0.0022    0.0022
+  seam              1.1927    1.1404    1.5657    1.9599
+  sat_delta        -0.0014   -0.0001    0.0015    0.0057
+
+==============================================================================
+可疑样本 22 / 100
+==============================================================================
+  case1.jpg     色偏                        grad2.113 hf1.240 seam1.138 sat+0.0001
+  case6.jpg     过曝变化                      grad1.238 hf0.992 seam1.113 sat-0.0216
+  case7.jpg     接缝,过曝变化                   grad1.833 hf1.162 seam1.415 sat-0.0224
+  case11.jpg    接缝                        grad2.353 hf1.303 seam1.534 sat+0.0001
+  case15.jpg    接缝                        grad1.871 hf1.142 seam1.378 sat-0.0023
+  case18.jpg    接缝                        grad2.194 hf1.385 seam1.960 sat-0.0141
+  case21.jpg    色偏                        grad1.807 hf1.284 seam1.208 sat+0.0001
+  case24.jpg    高频异常                      grad3.558 hf1.697 seam1.129 sat+0.0000
+  case25.jpg    过锐化,高频异常                  grad3.766 hf1.753 seam1.028 sat+0.0000
+  case31.jpg    接缝                        grad1.957 hf1.199 seam1.369 sat-0.0023
+  case32.jpg    过锐化                       grad3.883 hf1.641 seam1.180 sat+0.0005
+  case37.jpg    接缝                        grad1.761 hf1.169 seam1.590 sat-0.0009
+  case56.jpg    接缝                        grad2.000 hf1.254 seam1.785 sat+0.0003
+  case61.jpg    过锐化,高频异常                  grad4.532 hf1.781 seam1.149 sat-0.0011
+  case62.jpg    接缝                        grad1.982 hf1.236 seam1.564 sat-0.0007
+  case63.jpg    色偏                        grad1.383 hf1.117 seam1.127 sat-0.0003
+  case66.jpg    接缝                        grad1.583 hf1.199 seam1.389 sat+0.0005
+  case69.jpg    接缝                        grad1.908 hf1.225 seam1.799 sat-0.0015
+  case79.jpg    接缝                        grad1.737 hf1.241 seam1.388 sat+0.0000
+  case82.jpg    接缝                        grad1.425 hf1.131 seam1.496 sat+0.0001
+  case88.jpg    接缝                        grad2.106 hf1.220 seam1.359 sat-0.0007
+  case92.jpg    接缝                        grad2.107 hf1.209 seam1.710 sat-0.0003
+
+导出可疑样本对比图 6 张 ...
+  已存 /cache/zihaohe/csig_isr/visualizations/audit
+
+审计完成
+AU_EXIT:0

@@ -1,0 +1,120 @@
+import os
+import sys
+
+sys.path.append(os.getcwd())
+
+import logging
+
+import numpy as np
+import torch
+import yaml
+from torchvision import transforms
+import time
+
+logger = logging.getLogger(__name__)
+
+
+def _load_config(model_dir: str) -> dict:
+    cfg_path = os.path.join(model_dir, "config.yaml")
+    if os.path.exists(cfg_path):
+        with open(cfg_path, "r") as f:
+            return yaml.safe_load(f)
+    return {}
+
+
+class Runner:
+    def __init__(self, model_dir: str):
+        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        self.model_dir = model_dir
+        self.config = _load_config(model_dir)
+
+        # WARNING: All models must be using fp16 precision for fair comparisons
+        self.weight_dtype = torch.float16
+
+        models_cfg = self.config.get("models", {})
+
+        # 单模型单步扩散：一个 jit 模型完成 VAE 编码 -> DiT 残差预测 -> VAE 解码。
+        self.core_model = self._load_jit(
+            models_cfg.get("core_model", "tinysr_x1.pt")
+        )
+
+        # CUDA Graph：固定 512x512 输入形状下捕获整图一次前向，
+        # 消除逐核 launch 开销。回放与 eager 数值逐位一致（同一批 kernel、同一顺序）。
+        self._graph = None
+        self._static_in = None
+        self._static_out = None
+        self._warmup()
+        if self.device.type == "cuda":
+            self._capture(512)
+
+    def _load_jit(self, filename: str):
+        path = os.path.join(self.model_dir, filename)
+        if os.path.exists(path):
+            # capture 兼容性：关闭 cudnn autotune（capture 期间换算法会导致
+            # "previous error during capture"），并冻结 jit profiling 执行器
+            torch.backends.cudnn.benchmark = False
+            try:
+                torch._C._jit_set_profiling_executor(False)
+                torch._C._jit_set_profiling_mode(False)
+            except Exception:
+                pass
+            model = torch.jit.load(path, map_location=self.device)
+            model.eval()
+            return model
+        raise Exception(f"JIT model not found: {path}")
+
+    @torch.no_grad()
+    def _warmup(self, size: int = 512, iters: int = 10):
+        dummy = torch.zeros(1, 3, size, size, device=self.device,
+                            dtype=self.weight_dtype)
+        for _ in range(iters):
+            self.core_model(dummy)
+        if self.device.type == "cuda":
+            torch.cuda.synchronize()
+
+    @torch.no_grad()
+    def _capture(self, size: int):
+        try:
+            self._static_in = torch.zeros(1, 3, size, size, device=self.device,
+                                          dtype=self.weight_dtype)
+            # 捕获前在侧流上再热身几次，确保内存池与 autotune 稳定
+            s = torch.cuda.Stream()
+            s.wait_stream(torch.cuda.current_stream())
+            with torch.cuda.stream(s):
+                for _ in range(8):
+                    self.core_model(self._static_in)
+            torch.cuda.current_stream().wait_stream(s)
+            torch.cuda.synchronize()
+            g = torch.cuda.CUDAGraph()
+            with torch.cuda.graph(g, pool=torch.cuda.graph_pool_handle()):
+                self._static_out = self.core_model(self._static_in)
+            self._graph = g
+            torch.cuda.synchronize()
+        except Exception as exc:  # 捕获失败则安全回退到普通路径
+            logger.warning("CUDA graph capture failed, fallback to eager: %s", exc)
+            self._graph = None
+            self._static_in = None
+            self._static_out = None
+
+    @torch.no_grad()
+    def infer(self, image_tensor: torch.Tensor, prompt: str = "") -> torch.Tensor:
+        """Run full inference pipeline.
+
+        Args:
+            image_tensor: [1, 3, H, W] tensor in [-1, 1] range.
+            prompt: Optional user prompt (unused in this solution).
+
+        Returns:
+            output_tensor: [1, 3, H, W] tensor in [-1, 1] range.
+        """
+        x = image_tensor
+        if x.device != self.device:
+            x = x.to(device=self.device)
+        if x.dtype != self.weight_dtype:
+            x = x.to(dtype=self.weight_dtype)
+        # 固定 512 输入走 CUDA Graph 回放；其它形状回退普通路径
+        if (self._graph is not None and x.shape == self._static_in.shape):
+            self._static_in.copy_(x)
+            self._graph.replay()
+            return self._static_out.clone()
+        return self.core_model(x)

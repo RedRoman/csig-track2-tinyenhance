@@ -1,0 +1,75 @@
+源图 20000 张，输出 /cache/zihaohe/distill_data/v8_teacher
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['transformer_blocks.2.shift_mlp', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.0.shift_msa', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.3.scale_mlp', 'transformer_blocks.5.scale_msa', 'transformer_blocks.11.scale_mlp', 'transformer_blocks.2.gate_msa', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.11.shift_msa', 'transformer_blocks.0.gate_mlp', 'transformer_blocks.11.scale_msa', 'transformer_blocks.1.gate_msa', 'transformer_blocks.4.shift_msa', 'transformer_blocks.10.scale_mlp', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.4.scale_msa', 'transformer_blocks.2.scale_msa', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.3.scale_msa', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.7.shift_msa', 'transformer_blocks.8.gate_mlp', 'transformer_blocks.1.gate_mlp', 'transformer_blocks.6.scale_mlp', 'transformer_blocks.8.gate_msa', 'transformer_blocks.6.shift_msa', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.11.gate_msa', 'transformer_blocks.1.scale_mlp', 'transformer_blocks.5.scale_mlp', 'shift', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.10.scale_msa', 'transformer_blocks.6.gate_msa', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.10.shift_msa', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.4.gate_msa', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.7.gate_msa', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.1.scale_msa', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.8.shift_mlp', 'transformer_blocks.2.shift_msa', 'transformer_blocks.3.shift_msa', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.3.shift_mlp', 'transformer_blocks.0.scale_msa', 'transformer_blocks.5.gate_mlp', 'transformer_blocks.7.scale_msa', 'transformer_blocks.5.shift_mlp', 'transformer_blocks.1.shift_msa', 'transformer_blocks.0.gate_msa', 'transformer_blocks.10.gate_msa', 'transformer_blocks.9.shift_msa', 'transformer_blocks.9.gate_msa', 'transformer_blocks.4.gate_mlp', 'transformer_blocks.3.gate_mlp', 'transformer_blocks.9.scale_msa', 'scale', 'transformer_blocks.3.gate_msa', 'transformer_blocks.5.gate_msa', 'transformer_blocks.8.scale_msa', 'transformer_blocks.6.scale_msa', 'transformer_blocks.5.shift_msa', 'transformer_blocks.7.shift_mlp', 'transformer_blocks.4.shift_mlp', 'transformer_blocks.8.shift_msa']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+  400/20000  21s  预计总计 17.2 分钟
+  800/20000  40s  预计总计 16.5 分钟
+  1200/20000  59s  预计总计 16.3 分钟
+  1600/20000  77s  预计总计 16.1 分钟
+  2000/20000  96s  预计总计 16.0 分钟
+  2400/20000  114s  预计总计 15.9 分钟
+  2800/20000  133s  预计总计 15.8 分钟
+  3200/20000  151s  预计总计 15.8 分钟
+  3600/20000  170s  预计总计 15.8 分钟
+  4000/20000  189s  预计总计 15.7 分钟
+  4400/20000  208s  预计总计 15.7 分钟
+  4800/20000  226s  预计总计 15.7 分钟
+  5200/20000  245s  预计总计 15.7 分钟
+  5600/20000  264s  预计总计 15.7 分钟
+  6000/20000  283s  预计总计 15.7 分钟
+  6400/20000  301s  预计总计 15.7 分钟
+  6800/20000  320s  预计总计 15.7 分钟
+  7200/20000  339s  预计总计 15.7 分钟
+  7600/20000  358s  预计总计 15.7 分钟
+  8000/20000  376s  预计总计 15.7 分钟
+  8400/20000  395s  预计总计 15.7 分钟
+  8800/20000  413s  预计总计 15.7 分钟
+  9200/20000  432s  预计总计 15.6 分钟
+  9600/20000  450s  预计总计 15.6 分钟
+  10000/20000  469s  预计总计 15.6 分钟
+  10400/20000  487s  预计总计 15.6 分钟
+  10800/20000  505s  预计总计 15.6 分钟
+  11200/20000  524s  预计总计 15.6 分钟
+  11600/20000  542s  预计总计 15.6 分钟
+  12000/20000  560s  预计总计 15.6 分钟
+  12400/20000  579s  预计总计 15.6 分钟
+  12800/20000  598s  预计总计 15.6 分钟
+  13200/20000  617s  预计总计 15.6 分钟
+  13600/20000  636s  预计总计 15.6 分钟
+  14000/20000  655s  预计总计 15.6 分钟
+  14400/20000  674s  预计总计 15.6 分钟
+  14800/20000  693s  预计总计 15.6 分钟
+  15200/20000  711s  预计总计 15.6 分钟
+  15600/20000  730s  预计总计 15.6 分钟
+  16000/20000  749s  预计总计 15.6 分钟
+  16400/20000  768s  预计总计 15.6 分钟
+  16800/20000  787s  预计总计 15.6 分钟
+  17200/20000  806s  预计总计 15.6 分钟
+  17600/20000  825s  预计总计 15.6 分钟
+  18000/20000  844s  预计总计 15.6 分钟
+  18400/20000  863s  预计总计 15.6 分钟
+  18800/20000  881s  预计总计 15.6 分钟
+  19200/20000  899s  预计总计 15.6 分钟
+  19600/20000  918s  预计总计 15.6 分钟
+  20000/20000  936s  预计总计 15.6 分钟
+完成 20000 张，用时 15.6 分钟
+V8GEN_DONE

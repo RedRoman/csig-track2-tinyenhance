@@ -1,0 +1,338 @@
+"""跨架构蒸馏：VOSR 0.5B 教师（86.5ms, Score 4.1093）-> TinySR 学生（12.75ms）。
+
+路线 B 的第一步：先量朴素输出回归的损耗，它是 rCM 必须超过的基线。
+
+设计要点：
+  1. 主项是对教师输出做回归 —— 稠密、局部、不可被指标利用。
+     现在学生学 NR 靠对四个指标网络做梯度上升，那条路径已被证明必然沿着
+     坏的帕累托方向滑（三次独立运行都是 MANIQA 涨、4K MUSIQ 跌）。
+  2. 保留对 GT 的 FR 项 + 势垒 —— 教师自身 FR 只有 1.208，不兜底会连它的缺陷一起学。
+  3. 保留小权重 IQA —— 纯回归会向均值收敛导致发糊，NR 掉一截。
+  4. MUSIQ 走 mosaic 口径（512 直算与官方 4K 排序相关 -0.544，是反的）。
+
+数据集种子必须与 gen_teacher.py 完全一致，否则教师输出对不上 lq。
+"""
+from __future__ import annotations
+import argparse, glob, json, os, sys, time, warnings
+warnings.filterwarnings("ignore")
+os.environ.setdefault("CSIG_MANIQA_SAMPLES", "20")
+
+sys.path.insert(0, "/cache/zihaohe/csig_isr/v3/code")
+import cv2
+import numpy as np, torch, torch.nn.functional as F
+from PIL import Image
+from torch.utils.data import Dataset, DataLoader
+from settings import ROOT
+from degradation import degrade as degrade_legacy
+from metrics_utils import create_metrics
+from eval_utils import collect_crops, evaluate_model
+from tinysr_runtime import build_model, checkpoint_payload
+
+Image.MAX_IMAGE_PIXELS = None
+DEV, DT = torch.device("cuda"), torch.float16
+
+
+class PatchD(torch.nn.Module):
+    """条件 PatchGAN：判断 (图, LQ) 对是否为教师风格。midshell 已验证的结构。"""
+
+    def __init__(self, ch=64):
+        super().__init__()
+        import torch.nn as nn
+        def blk(i, o, st):
+            return [nn.Conv2d(i, o, 4, stride=st, padding=1),
+                    nn.GroupNorm(8, o), nn.LeakyReLU(0.2, inplace=True)]
+        self.net = nn.Sequential(
+            nn.Conv2d(6, ch, 4, stride=2, padding=1), nn.LeakyReLU(0.2, inplace=True),
+            *blk(ch, 2 * ch, 2), *blk(2 * ch, 4 * ch, 2), *blk(4 * ch, 4 * ch, 1),
+            nn.Conv2d(4 * ch, 1, 4, padding=1))
+
+    def forward(self, img, lq):
+        return self.net(torch.cat([img, lq], 1))
+
+
+def crop_seed(idx):
+    """必须与 gen_teacher.py 逐字一致"""
+    return (idx * 104729 + 7919) % (2 ** 31)
+
+
+class DistillDataset(Dataset):
+    def __init__(self, paths, teacher_dir, size=512, mix=0.0):
+        self.size = int(size)
+        self.mix = float(mix)
+        self.teacher_dir = teacher_dir
+        self.items = [(i, p) for i, p in enumerate(paths)
+                      if os.path.exists(os.path.join(teacher_dir, f"{i:06d}.png"))]
+
+    def __len__(self):
+        return len(self.items)
+
+    def __getitem__(self, k):
+        i, path = self.items[k]
+        rng = np.random.RandomState(crop_seed(i))
+        gt = np.asarray(Image.open(path).convert("RGB"), dtype=np.uint8)
+        h, w, _ = gt.shape
+        s = self.size
+        if h > s or w > s:
+            y = rng.randint(0, max(h - s, 0) + 1); x = rng.randint(0, max(w - s, 0) + 1)
+            gt = gt[y:y + s, x:x + s]
+        if gt.shape[0] != s or gt.shape[1] != s:
+            gt = cv2.resize(gt, (s, s), interpolation=cv2.INTER_CUBIC)
+        if rng.random() < 0.5:
+            gt = gt[:, ::-1]
+        k4 = int(rng.randint(4))
+        if k4:
+            gt = np.rot90(gt, k4)
+        gt = np.ascontiguousarray(gt)
+        # mix 退化（与 gen_teacher.DetPairDataset 逐字一致，rng 采样顺序不可改）
+        if self.mix > 0 and rng.random() < self.mix:
+            img = cv2.bilateralFilter(gt, d=9, sigmaColor=110, sigmaSpace=110)
+            img = cv2.GaussianBlur(img, (9, 9), 1.8)
+            import io as _io
+            buf = _io.BytesIO()
+            Image.fromarray(img).save(buf, format="JPEG", quality=55)
+            buf.seek(0)
+            lq = np.ascontiguousarray(np.asarray(Image.open(buf).convert("RGB"), dtype=np.uint8))
+        else:
+            lq = degrade_legacy(gt, rng)
+        te = np.asarray(Image.open(os.path.join(self.teacher_dir, f"{i:06d}.png")
+                                   ).convert("RGB"), dtype=np.uint8)
+        to_t = lambda a: torch.from_numpy(a.astype(np.float32) / 255.).permute(2, 0, 1)
+        return to_t(lq), to_t(gt), to_t(te)
+
+
+def mosaic_in(t, mode):
+    if mode != "mosaic4k":
+        return t
+    t = t[:1]
+    H = int(os.environ.get("CSIG_MOSAIC_H", 2304))
+    W = int(os.environ.get("CSIG_MOSAIC_W", 3072))
+    ry = -(-H // t.shape[-2]); rx = -(-W // t.shape[-1])
+    return t.repeat(1, 1, ry, rx)[:, :, :H, :W]
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--init_ckpt", default=f"{ROOT}/train_out/run12_iqa30/best.pth")
+    ap.add_argument("--keep_layers", default="",
+                    help="逗号分隔的 DiT 层号，如 0,2,4,6,8,10 —— 砍层后蒸馏治愈")
+    ap.add_argument("--dense_lr", type=float, default=0.0,
+                    help=">0 时对保留的 DiT 块做 dense 微调（砍层治愈必需，LoRA 不够）")
+    ap.add_argument("--teacher_dir", default="/cache/zihaohe/distill_data/vosr_cap")
+    ap.add_argument("--steps", type=int, default=1500)
+    ap.add_argument("--bs", type=int, default=4)
+    ap.add_argument("--lr", type=float, default=2e-5)
+    ap.add_argument("--workers", type=int, default=8)
+    # 蒸馏项（对教师）
+    ap.add_argument("--w_t_l1", type=float, default=1.0)
+    ap.add_argument("--w_t_lpips", type=float, default=2.0)
+    ap.add_argument("--w_t_dists", type=float, default=2.0)
+    # 保真项（对 GT）
+    ap.add_argument("--w_l1", type=float, default=0.5)
+    ap.add_argument("--w_lpips", type=float, default=1.0)
+    ap.add_argument("--w_dists", type=float, default=1.5)
+    ap.add_argument("--w_fid", type=float, default=1.5)
+    ap.add_argument("--lpips_cap", type=float, default=0.26)
+    ap.add_argument("--dists_cap", type=float, default=0.19)
+    ap.add_argument("--w_barrier", type=float, default=3000.0)
+    # 残余 IQA（防回归到均值发糊）
+    ap.add_argument("--w_iqa", type=float, default=0.5)
+    ap.add_argument("--w_niqe", type=float, default=0.0,
+                    help="学生侧 NIQE 项（此前缺失，distill_v1 的 3.29 全靠教师带）")
+    ap.add_argument("--w_maniqa", type=float, default=1.0)
+    ap.add_argument("--w_clipiqa", type=float, default=1.0)
+    ap.add_argument("--w_musiq", type=float, default=1.0)
+    ap.add_argument("--data_mix", type=float, default=0.0,
+                    help="蒸馏数据混入加强退化的比例（teacher_v3 同款 σ1.8/q55）")
+    ap.add_argument("--w_gan", type=float, default=0.0,
+                    help="对抗蒸馏：真样本=教师输出。分布匹配传纹理，绕开指标直推")
+    ap.add_argument("--d_lr", type=float, default=1e-4)
+    ap.add_argument("--gan_start", type=int, default=500)
+    ap.add_argument("--w_hf_over", type=float, default=0.0,
+                    help="GT 感知高频超预算（治鳞片，权重需 1500 量级）")
+    ap.add_argument("--musiq_proxy", default="mosaic4k")
+    ap.add_argument("--iqa_batch", type=int, default=1)
+    ap.add_argument("--val_every", type=int, default=150)
+    ap.add_argument("--val_crops", type=int, default=12)
+    ap.add_argument("--ema_decay", type=float, default=0.0,
+                    help=">0 启用 EMA(如 0.999);val 与保存用 EMA 权重")
+    ap.add_argument("--adaptive_alpha", action="store_true",
+                    help="训练输入自适应 alpha gate（alpha_sweep: 中/重档偏好 1.15）")
+    ap.add_argument("--alpha_min", type=float, default=0.85)
+    ap.add_argument("--alpha_max", type=float, default=1.25)
+    ap.add_argument("--alpha_lr", type=float, default=1e-3)
+    ap.add_argument("--out", default=f"{ROOT}/train_out/distill_v1")
+    args = ap.parse_args()
+    os.makedirs(args.out, exist_ok=True)
+
+    model, rep = build_model(args.init_ckpt, device=DEV, dtype=DT, merge_lora=False,
+                             alpha_mode="adaptive" if args.adaptive_alpha else "fixed",
+                             fixed_alpha=1.0, alpha_min=args.alpha_min,
+                             alpha_max=args.alpha_max, init_alpha=1.0)
+    print("load report:", rep, flush=True)
+    for p in model.parameters():
+        p.requires_grad_(False)
+    params = []
+    if args.keep_layers:
+        keep = [int(x) for x in args.keep_layers.split(",")]
+        import torch.nn as nn
+        blocks = model.tr.transformer_blocks
+        model.tr.transformer_blocks = nn.ModuleList([blocks[i] for i in keep])
+        print(f"DiT 砍层: 12 -> {len(keep)} (保留 {keep})", flush=True)
+    gate_params = []
+    if args.adaptive_alpha and model.alpha_gate is not None:
+        for p in model.alpha_gate.parameters():
+            p.requires_grad_(True); p.data = p.data.float(); gate_params.append(p)
+        print(f"alpha gate 可训练参数 {sum(p.numel() for p in gate_params)}", flush=True)
+    for n, p in model.tr.named_parameters():
+        if "lora_" in n:
+            p.requires_grad_(True); p.data = p.data.float(); params.append(p)
+    dense_params, dense_param_names = [], []
+    if args.dense_lr > 0:
+        for n, p in model.tr.named_parameters():
+            if "lora_" not in n and p.dim() > 0:
+                p.requires_grad_(True); p.data = p.data.float()
+                dense_params.append(p); dense_param_names.append(n)
+        print(f"dense 参数 {sum(q.numel() for q in dense_params)/1e6:.1f}M @ lr={args.dense_lr}", flush=True)
+    print(f"可训练 {sum(p.numel() for p in params)/1e6:.2f} M", flush=True)
+    groups = [{"params": params, "lr": args.lr}]
+    if args.dense_lr > 0 and dense_params:
+        groups.append({"params": dense_params, "lr": args.dense_lr})
+    if gate_params:
+        groups.append({"params": gate_params, "lr": args.alpha_lr})
+    opt = torch.optim.AdamW(groups, weight_decay=0.0)
+    ema_shadow = None
+    if args.ema_decay > 0:
+        ema_params = [p for g in groups for p in g["params"]]
+        ema_shadow = [p.detach().clone() for p in ema_params]
+        print(f"EMA 启用 decay={args.ema_decay}, {sum(p.numel() for p in ema_params)/1e6:.2f}M 参数", flush=True)
+    disc, d_opt = None, None
+    if args.w_gan > 0:
+        disc = PatchD().to(DEV).float()
+        d_opt = torch.optim.AdamW(disc.parameters(), lr=args.d_lr, weight_decay=0.0)
+    scaler = torch.amp.GradScaler("cuda")
+    M = create_metrics(DEV, as_loss=True, include_psnr=True)
+
+    paths = sorted(glob.glob(os.path.join(ROOT, "train_data", "lsdir512", "*.png")))
+    ds = DistillDataset(paths, args.teacher_dir, mix=args.data_mix)
+    print(f"蒸馏样本 {len(ds)} 对（教师输出已生成的部分）", flush=True)
+    if len(ds) < 100:
+        raise RuntimeError("教师输出太少，先跑 gen_teacher.py")
+    dl = DataLoader(ds, batch_size=args.bs, shuffle=True, num_workers=args.workers,
+                    drop_last=True, pin_memory=True, persistent_workers=args.workers > 0)
+
+    val_items = collect_crops(args.val_crops)
+    ev = evaluate_model(model, val_items, M, device=DEV, dtype=DT, robust_beta=0.15)
+    ev.pop("rows", None)
+    print(f"[0] score={ev['score']:.4f} robust={ev['robust_score']:.4f} "
+          f"PSNR={ev['metrics']['psnr']:.3f}", flush=True)
+
+    best, hist, step, t0 = -1e9, [], 0, time.time()
+    it = iter(dl)
+    while step < args.steps:
+        try:
+            lq, gt, te = next(it)
+        except StopIteration:
+            it = iter(dl); continue
+        step += 1
+        lq = lq.to(DEV, non_blocking=True); gt = gt.to(DEV, non_blocking=True)
+        te = te.to(DEV, non_blocking=True)
+        with torch.autocast(device_type="cuda", dtype=DT):
+            out, _ = model.forward_train(lq)
+        out = out.float(); gt = gt.float(); lq = lq.float(); te = te.float()
+        # 以下全在 fp32：DISTS 在 autocast 下反传会全 nan
+        t_l1 = F.l1_loss(out, te)
+        t_lp = M["lpips"](out, te).mean()
+        t_ds = M["dists"](out, te).mean()
+        loss = args.w_t_l1 * t_l1 + args.w_t_lpips * t_lp + args.w_t_dists * t_ds
+
+        g_l1 = F.l1_loss(out, gt)
+        g_lp = M["lpips"](out, gt).mean()
+        g_ds = M["dists"](out, gt).mean()
+        loss = loss + args.w_l1 * g_l1 + args.w_lpips * g_lp + args.w_dists * g_ds
+        loss = loss + args.w_fid * F.l1_loss(F.avg_pool2d(out, 16), F.avg_pool2d(lq, 16))
+        if args.w_barrier > 0:
+            bar = F.relu(g_lp - args.lpips_cap) ** 2 + F.relu(g_ds - args.dists_cap) ** 2
+            loss = loss + args.w_barrier * bar
+
+        if args.w_iqa <= 0:
+            r = torch.tensor(0.0, device=DEV)
+            iq = out[:1]
+        else:
+            iq = out[:min(args.iqa_batch, out.shape[0])]
+            which = step % 3
+            if which == 0:
+                r = 3.0 * args.w_clipiqa * M["clipiqa"](iq).mean()
+            elif which == 1:
+                r = 3.0 * args.w_maniqa * M["maniqa"](iq).mean()
+            else:
+                r = 3.0 * args.w_musiq * (M["musiq"](iq).mean() / 100.0)
+        loss = loss - args.w_iqa * r
+        gan_on = args.w_gan > 0 and step >= args.gan_start
+        if gan_on:
+            loss = loss + args.w_gan * F.softplus(-disc(out, lq)).mean()
+        if args.w_niqe > 0:
+            loss = loss + args.w_niqe * M["niqe"](iq.clamp(0, 1)).mean() / 10.0
+        if args.w_hf_over > 0:
+            from hf_regularization import gt_aware_hf_overshoot_loss
+            iq_n = iq.shape[0]
+            hf = gt_aware_hf_overshoot_loss(out[:iq_n], gt[:iq_n])
+            if torch.is_tensor(hf):
+                loss = loss + args.w_hf_over * hf
+
+        opt.zero_grad(set_to_none=True)
+        scaler.scale(loss).backward()
+        scaler.unscale_(opt)
+        torch.nn.utils.clip_grad_norm_(params + dense_params if args.dense_lr > 0 else params, 1.0)
+        scaler.step(opt); scaler.update()
+        if ema_shadow is not None:
+            with torch.no_grad():
+                for sh, p in zip(ema_shadow, ema_params):
+                    sh.mul_(args.ema_decay).add_(p.detach(), alpha=1 - args.ema_decay)
+        if gan_on:
+            d_loss = (F.softplus(disc(out.detach(), lq)).mean()
+                      + F.softplus(-disc(te, lq)).mean())
+            d_opt.zero_grad(set_to_none=True)
+            d_loss.backward()
+            d_opt.step()
+
+        if step % 25 == 0:
+            print(f"[{step}/{args.steps}] loss={loss.item():.4f} "
+                  f"教师L1={t_l1.item():.4f} 教师LPIPS={t_lp.item():.4f} "
+                  f"GT_LPIPS={g_lp.item():.4f} GT_DISTS={g_ds.item():.4f} "
+                  f"iqa={r.item():.4f} {(time.time()-t0)/step:.2f}s/it", flush=True)
+        if step % args.val_every == 0 or step == args.steps:
+            if ema_shadow is not None:
+                backup = [p.detach().clone() for p in ema_params]
+                with torch.no_grad():
+                    for p, sh in zip(ema_params, ema_shadow):
+                        p.copy_(sh)
+            ev = evaluate_model(model, val_items, M, device=DEV, dtype=DT, robust_beta=0.15)
+            ev.pop("rows", None)
+            hist.append({"step": step, "score": float(ev["score"]),
+                         **{k: float(v) for k, v in ev["metrics"].items()}})
+            flag = ""
+            if ev["robust_score"] > best:
+                best = ev["robust_score"]; flag = " <- best"
+                torch.save(checkpoint_payload(model, step, train_vae_decoder=False,
+                                              dense_names=[], args_dict=vars(args)),
+                           os.path.join(args.out, "best.pth"))
+                if args.keep_layers:
+                    # dense 治愈的权重不经 payload（dense_names 与剪层索引会错位），
+                    # 直接整存剪层后的 tr，配 eval_pruned.py 恢复
+                    torch.save({"tr_full": {k: v.cpu() for k, v in model.tr.state_dict().items()},
+                                "keep_layers": [int(x) for x in args.keep_layers.split(",")],
+                                "init_ckpt": args.init_ckpt, "step": step,
+                                "args": vars(args)},
+                               os.path.join(args.out, "pruned_full.pth"))
+            print(f"[val {step}] score={ev['score']:.4f} robust={ev['robust_score']:.4f} "
+                  f"PSNR={ev['metrics']['psnr']:.3f}{flag}", flush=True)
+            json.dump(hist, open(os.path.join(args.out, "log.json"), "w"), indent=2)
+            if ema_shadow is not None:
+                with torch.no_grad():
+                    for p_, bk in zip(ema_params, backup):
+                        p_.copy_(bk)
+    print(f"done. best robust={best:.4f}", flush=True)
+
+
+if __name__ == "__main__":
+    main()

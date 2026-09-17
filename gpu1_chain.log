@@ -1,0 +1,179 @@
+##### 推理端扫描 #####
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['transformer_blocks.0.gate_mlp', 'transformer_blocks.4.gate_msa', 'transformer_blocks.0.scale_msa', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.6.gate_msa', 'transformer_blocks.8.shift_mlp', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.5.shift_msa', 'transformer_blocks.2.shift_msa', 'transformer_blocks.1.scale_mlp', 'transformer_blocks.1.scale_msa', 'transformer_blocks.1.shift_msa', 'transformer_blocks.8.scale_msa', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.5.scale_mlp', 'transformer_blocks.5.gate_msa', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.3.gate_msa', 'transformer_blocks.5.scale_msa', 'transformer_blocks.8.shift_msa', 'transformer_blocks.4.shift_mlp', 'transformer_blocks.6.scale_mlp', 'transformer_blocks.11.scale_mlp', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.3.scale_mlp', 'shift', 'scale', 'transformer_blocks.11.shift_msa', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.6.scale_msa', 'transformer_blocks.7.shift_msa', 'transformer_blocks.9.shift_msa', 'transformer_blocks.7.gate_msa', 'transformer_blocks.8.gate_mlp', 'transformer_blocks.4.shift_msa', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.7.shift_mlp', 'transformer_blocks.11.scale_msa', 'transformer_blocks.0.shift_msa', 'transformer_blocks.4.scale_msa', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.6.shift_msa', 'transformer_blocks.10.scale_msa', 'transformer_blocks.3.gate_mlp', 'transformer_blocks.2.gate_msa', 'transformer_blocks.2.shift_mlp', 'transformer_blocks.10.gate_msa', 'transformer_blocks.9.scale_msa', 'transformer_blocks.2.scale_msa', 'transformer_blocks.4.gate_mlp', 'transformer_blocks.11.gate_msa', 'transformer_blocks.1.gate_mlp', 'transformer_blocks.7.scale_msa', 'transformer_blocks.3.shift_mlp', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.10.shift_msa', 'transformer_blocks.9.gate_msa', 'transformer_blocks.0.gate_msa', 'transformer_blocks.5.shift_mlp', 'transformer_blocks.8.gate_msa', 'transformer_blocks.1.gate_msa', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.5.gate_mlp', 'transformer_blocks.3.shift_msa', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.3.scale_msa', 'transformer_blocks.10.scale_mlp']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+ov=192 colorfix=none     lpips=0.3822 dists=0.3029 niqe=3.709 musiq=61.08 maniqa=0.6322 clipiqa=0.8618 Score=4.0486
+ov=192 colorfix=wavelet  lpips=0.3796 dists=0.3016 niqe=3.707 musiq=60.22 maniqa=0.6240 clipiqa=0.8573 Score=4.0316
+ov=256 colorfix=none     lpips=0.3805 dists=0.3049 niqe=3.676 musiq=61.67 maniqa=0.6277 clipiqa=0.8609 Score=4.0522
+ov=256 colorfix=wavelet  lpips=0.3779 dists=0.3036 niqe=3.677 musiq=60.73 maniqa=0.6197 clipiqa=0.8571 Score=4.0351
+ov=320 colorfix=none     lpips=0.3727 dists=0.3041 niqe=3.548 musiq=61.43 maniqa=0.6167 clipiqa=0.8583 Score=4.0577
+ov=320 colorfix=wavelet  lpips=0.3700 dists=0.3027 niqe=3.546 musiq=60.46 maniqa=0.6091 clipiqa=0.8542 Score=4.0407
+
+基线对照：distill_v2b ov256/none 此前实测 Score=4.0522
+##### 1.4B koniq 咬合势垒重赛 #####
+DiT 载入：缺失 0 多余 4
+LoRA 目标模块: ['k_linear', 'proj', 'q_linear', 'qkv', 'v_linear', 'w12', 'w3']
+可训练参数 42.52 M
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+train images=60493 repeat=1
+[0] score=3.2265 PSNR=25.573 lpips=0.3510 dists=0.2955 niqe=5.997 musiq=61.24 maniqa=0.4008 clipiqa=0.4596
+[25/3000] loss=-4.8740 l1=0.0389 lp=0.1577 dists=0.1333 iqa=1.8406 1.14s/it
+[50/3000] loss=-5.1197 l1=0.0481 lp=0.2158 dists=0.1786 iqa=2.0490 1.09s/it
+[75/3000] loss=-5.3708 l1=0.0560 lp=0.2060 dists=0.1486 iqa=2.0266 1.06s/it
+[100/3000] loss=-5.5641 l1=0.0239 lp=0.0635 dists=0.1518 iqa=2.0603 1.06s/it
+[125/3000] loss=16.4562 l1=0.0638 lp=0.3248 dists=0.1525 iqa=1.9794 1.05s/it
+[150/3000] loss=-1.2271 l1=0.0558 lp=0.2737 dists=0.1665 iqa=1.8138 1.05s/it
+[175/3000] loss=7.2630 l1=0.0593 lp=0.3008 dists=0.1926 iqa=2.0906 1.05s/it
+[200/3000] loss=-4.1958 l1=0.0324 lp=0.2036 dists=0.1729 iqa=1.6808 1.05s/it
+[225/3000] loss=-6.1824 l1=0.0501 lp=0.1810 dists=0.1355 iqa=2.2817 1.04s/it
+[250/3000] loss=-5.6804 l1=0.0621 lp=0.2107 dists=0.1249 iqa=2.1063 1.05s/it
+[val 250] score=3.3857 PSNR=26.560 lpips=0.3589 dists=0.2629 niqe=7.833 musiq=63.15 maniqa=0.5262 clipiqa=0.6331 <- best
+[275/3000] loss=-1.4332 l1=0.1076 lp=0.1758 dists=0.1763 iqa=0.7795 1.18s/it
+[300/3000] loss=-5.4587 l1=0.1045 lp=0.2543 dists=0.1574 iqa=2.2889 1.17s/it
+[325/3000] loss=-1.9195 l1=0.0796 lp=0.2695 dists=0.1602 iqa=1.7746 1.16s/it
+[350/3000] loss=6.9227 l1=0.0698 lp=0.2794 dists=0.2045 iqa=0.7227 1.15s/it
+[375/3000] loss=-5.0041 l1=0.0894 lp=0.2551 dists=0.1912 iqa=2.6224 1.14s/it
+[400/3000] loss=-6.5148 l1=0.0772 lp=0.2007 dists=0.1138 iqa=2.3955 1.13s/it
+[425/3000] loss=-2.2368 l1=0.0243 lp=0.1021 dists=0.1432 iqa=0.9471 1.13s/it
+[450/3000] loss=-0.5808 l1=0.1109 lp=0.2350 dists=0.2125 iqa=2.3023 1.12s/it
+[475/3000] loss=-6.1946 l1=0.0459 lp=0.1595 dists=0.1288 iqa=2.2642 1.12s/it
+[500/3000] loss=28.8109 l1=0.1140 lp=0.3131 dists=0.2392 iqa=0.8595 1.12s/it
+[val 500] score=3.4651 PSNR=26.202 lpips=0.3649 dists=0.2672 niqe=7.714 musiq=63.06 maniqa=0.5685 clipiqa=0.6694 <- best
+[525/3000] loss=-6.7280 l1=0.0326 lp=0.1088 dists=0.1571 iqa=2.4570 1.18s/it
+[550/3000] loss=-6.2556 l1=0.0762 lp=0.1909 dists=0.1663 iqa=2.3321 1.18s/it
+[575/3000] loss=-1.6993 l1=0.0396 lp=0.1808 dists=0.1388 iqa=0.8016 1.17s/it
+[600/3000] loss=-5.6377 l1=0.0881 lp=0.2378 dists=0.1656 iqa=2.1229 1.16s/it
+[625/3000] loss=-3.5277 l1=0.0495 lp=0.2656 dists=0.1761 iqa=2.1272 1.16s/it
+[650/3000] loss=0.3115 l1=0.0847 lp=0.2639 dists=0.1569 iqa=0.7324 1.16s/it
+[675/3000] loss=-6.4380 l1=0.0346 lp=0.1098 dists=0.1297 iqa=2.3481 1.15s/it
+[700/3000] loss=-5.6516 l1=0.0443 lp=0.2380 dists=0.1728 iqa=2.1517 1.15s/it
+[725/3000] loss=-4.7525 l1=0.0592 lp=0.1673 dists=0.1808 iqa=1.9458 1.14s/it
+[750/3000] loss=-5.5266 l1=0.0249 lp=0.1114 dists=0.1183 iqa=2.0483 1.14s/it
+[val 750] score=3.4551 PSNR=26.145 lpips=0.3628 dists=0.2674 niqe=7.454 musiq=61.71 maniqa=0.5606 clipiqa=0.6530
+[775/3000] loss=-7.0257 l1=0.0484 lp=0.1649 dists=0.1249 iqa=2.5648 1.18s/it
+[800/3000] loss=-1.5934 l1=0.0429 lp=0.2404 dists=0.1313 iqa=0.7616 1.18s/it
+[825/3000] loss=-6.5010 l1=0.0289 lp=0.1399 dists=0.1540 iqa=2.4014 1.17s/it
+[850/3000] loss=-3.2343 l1=0.0821 lp=0.2672 dists=0.1592 iqa=2.0721 1.17s/it
+[875/3000] loss=-1.4218 l1=0.0620 lp=0.1279 dists=0.1563 iqa=0.7409 1.17s/it
+[900/3000] loss=2.5457 l1=0.0796 lp=0.2956 dists=0.1525 iqa=2.5041 1.16s/it
+[925/3000] loss=-6.8694 l1=0.0457 lp=0.1598 dists=0.1532 iqa=2.5199 1.16s/it
+[950/3000] loss=-5.3615 l1=0.0334 lp=0.1582 dists=0.1463 iqa=1.9954 1.16s/it
+[975/3000] loss=-2.6073 l1=0.0442 lp=0.2235 dists=0.1807 iqa=1.2444 1.15s/it
+[1000/3000] loss=-4.7949 l1=0.0455 lp=0.2217 dists=0.1651 iqa=1.8346 1.15s/it
+[val 1000] score=3.4812 PSNR=26.198 lpips=0.3603 dists=0.2604 niqe=7.580 musiq=62.97 maniqa=0.5623 clipiqa=0.6680 <- best
+[1025/3000] loss=-0.5457 l1=0.0825 lp=0.2187 dists=0.1908 iqa=0.8647 1.18s/it
+[1050/3000] loss=-5.3207 l1=0.0433 lp=0.1459 dists=0.1764 iqa=2.0434 1.18s/it
+[1075/3000] loss=-6.2865 l1=0.0611 lp=0.2256 dists=0.1539 iqa=2.3349 1.18s/it
+[1100/3000] loss=-5.6898 l1=0.0528 lp=0.1968 dists=0.1068 iqa=2.1046 1.17s/it
+[1125/3000] loss=3.5684 l1=0.0144 lp=0.2416 dists=0.2272 iqa=2.4508 1.17s/it
+[1150/3000] loss=-6.4971 l1=0.0606 lp=0.1409 dists=0.1089 iqa=2.3526 1.17s/it
+[1175/3000] loss=-5.4773 l1=0.0397 lp=0.2094 dists=0.1537 iqa=2.0596 1.17s/it
+[1200/3000] loss=-6.5972 l1=0.0932 lp=0.2540 dists=0.1747 iqa=2.6727 1.16s/it
+[1225/3000] loss=-4.9277 l1=0.0385 lp=0.1129 dists=0.1498 iqa=1.8499 1.16s/it
+[1250/3000] loss=-4.2678 l1=0.0787 lp=0.2166 dists=0.1255 iqa=1.6596 1.16s/it
+[val 1250] score=3.6269 PSNR=25.837 lpips=0.3449 dists=0.2668 niqe=6.953 musiq=65.69 maniqa=0.5850 clipiqa=0.6920 <- best
+[1275/3000] loss=-6.7192 l1=0.0720 lp=0.2085 dists=0.1143 iqa=2.4442 1.19s/it
+[1300/3000] loss=-6.7324 l1=0.0737 lp=0.2272 dists=0.1348 iqa=2.4835 1.18s/it
+[1325/3000] loss=-1.4654 l1=0.0479 lp=0.2301 dists=0.1614 iqa=0.7463 1.18s/it
+[1350/3000] loss=-5.0373 l1=0.0359 lp=0.2030 dists=0.1880 iqa=2.2772 1.18s/it
+[1375/3000] loss=-4.6839 l1=0.0618 lp=0.2179 dists=0.1407 iqa=1.7730 1.18s/it
+[1400/3000] loss=-0.7076 l1=0.0792 lp=0.2568 dists=0.1492 iqa=0.7650 1.17s/it
+[1425/3000] loss=-5.4174 l1=0.0560 lp=0.2263 dists=0.1401 iqa=2.0524 1.17s/it
+[1450/3000] loss=-5.4289 l1=0.0861 lp=0.2219 dists=0.1333 iqa=2.0321 1.17s/it
+[1475/3000] loss=-3.6957 l1=0.1046 lp=0.2466 dists=0.1508 iqa=1.5365 1.17s/it
+[1500/3000] loss=-6.6778 l1=0.0520 lp=0.2375 dists=0.1317 iqa=2.4435 1.16s/it
+[val 1500] score=3.6276 PSNR=26.194 lpips=0.3571 dists=0.2743 niqe=6.368 musiq=63.36 maniqa=0.5745 clipiqa=0.6876 <- best
+[1525/3000] loss=-6.2305 l1=0.0881 lp=0.2384 dists=0.1590 iqa=2.3420 1.19s/it
+[1550/3000] loss=-5.4216 l1=0.0709 lp=0.2009 dists=0.1576 iqa=2.0332 1.19s/it
+[1575/3000] loss=-6.1065 l1=0.0352 lp=0.1861 dists=0.1642 iqa=2.2506 1.18s/it
+[1600/3000] loss=-3.4100 l1=0.0703 lp=0.2600 dists=0.1701 iqa=1.7838 1.18s/it
+[1625/3000] loss=-1.6041 l1=0.0546 lp=0.1691 dists=0.1471 iqa=0.7543 1.18s/it
+[1650/3000] loss=-5.6626 l1=0.0422 lp=0.2060 dists=0.1800 iqa=2.2579 1.18s/it
+[1675/3000] loss=-6.5501 l1=0.0781 lp=0.2120 dists=0.1229 iqa=2.3910 1.18s/it
+[1700/3000] loss=-3.2447 l1=0.0824 lp=0.2649 dists=0.1395 iqa=1.9378 1.17s/it
+[1725/3000] loss=-5.9267 l1=0.0663 lp=0.1817 dists=0.1446 iqa=2.1897 1.17s/it
+[1750/3000] loss=-6.5142 l1=0.0353 lp=0.1280 dists=0.1293 iqa=2.3624 1.17s/it
+[val 1750] score=3.6488 PSNR=26.350 lpips=0.3554 dists=0.2734 niqe=6.416 musiq=63.87 maniqa=0.5937 clipiqa=0.6867 <- best
+[1775/3000] loss=-3.8777 l1=0.0770 lp=0.2557 dists=0.1609 iqa=1.7865 1.19s/it
+[1800/3000] loss=-5.9964 l1=0.0481 lp=0.1548 dists=0.1367 iqa=2.2185 1.19s/it
+[1825/3000] loss=-6.2801 l1=0.0542 lp=0.1516 dists=0.1371 iqa=2.3113 1.19s/it
+[1850/3000] loss=2.9712 l1=0.0602 lp=0.2615 dists=0.2017 iqa=0.7562 1.18s/it
+[1875/3000] loss=-6.0636 l1=0.0306 lp=0.2097 dists=0.1360 iqa=2.2555 1.18s/it
+[1900/3000] loss=-6.7967 l1=0.0534 lp=0.1525 dists=0.1269 iqa=2.4902 1.18s/it
+[1925/3000] loss=-1.7135 l1=0.0632 lp=0.1207 dists=0.1743 iqa=0.8347 1.18s/it
+[1950/3000] loss=1.6023 l1=0.0361 lp=0.2853 dists=0.1847 iqa=2.0131 1.18s/it
+[1975/3000] loss=-5.6038 l1=0.0699 lp=0.2282 dists=0.1420 iqa=2.0999 1.18s/it
+[2000/3000] loss=-5.2510 l1=0.0657 lp=0.2435 dists=0.1402 iqa=1.9980 1.17s/it
+[val 2000] score=3.5926 PSNR=26.405 lpips=0.3534 dists=0.2720 niqe=6.700 musiq=63.67 maniqa=0.5803 clipiqa=0.6711
+[2025/3000] loss=-6.5983 l1=0.0351 lp=0.1359 dists=0.1490 iqa=2.4225 1.19s/it
+[2050/3000] loss=-4.5703 l1=0.0667 lp=0.2584 dists=0.1611 iqa=2.1183 1.19s/it
+[2075/3000] loss=-4.7153 l1=0.0330 lp=0.1814 dists=0.1660 iqa=1.8008 1.19s/it
+[2100/3000] loss=2.2276 l1=0.0499 lp=0.2945 dists=0.1744 iqa=2.5124 1.19s/it
+[2125/3000] loss=-6.7368 l1=0.0362 lp=0.1454 dists=0.1612 iqa=2.4685 1.18s/it
+[2150/3000] loss=0.6367 l1=0.0185 lp=0.0726 dists=0.2110 iqa=1.7957 1.18s/it
+[2175/3000] loss=-6.0764 l1=0.0976 lp=0.1609 dists=0.1622 iqa=2.2931 1.18s/it
+[2200/3000] loss=-5.4869 l1=0.0880 lp=0.2554 dists=0.1778 iqa=2.3935 1.18s/it
+[2225/3000] loss=-5.8447 l1=0.0267 lp=0.1482 dists=0.1312 iqa=2.1298 1.18s/it
+[2250/3000] loss=-6.0493 l1=0.0483 lp=0.2160 dists=0.1661 iqa=2.2454 1.18s/it
+[val 2250] score=3.5324 PSNR=26.522 lpips=0.3541 dists=0.2687 niqe=6.825 musiq=62.32 maniqa=0.5685 clipiqa=0.6459
+[2275/3000] loss=1.1366 l1=0.1172 lp=0.2743 dists=0.1967 iqa=1.8168 1.19s/it
+[2300/3000] loss=-1.5259 l1=0.0500 lp=0.1045 dists=0.1110 iqa=0.7356 1.19s/it
+[2325/3000] loss=-6.2936 l1=0.0571 lp=0.2040 dists=0.1163 iqa=2.3027 1.19s/it
+[2350/3000] loss=-4.4218 l1=0.0412 lp=0.2602 dists=0.1547 iqa=2.1288 1.19s/it
+[2375/3000] loss=-1.5710 l1=0.0569 lp=0.1926 dists=0.1482 iqa=0.7479 1.19s/it
+[2400/3000] loss=-6.8959 l1=0.0985 lp=0.2271 dists=0.1710 iqa=2.5531 1.18s/it
+[2425/3000] loss=-5.2938 l1=0.0793 lp=0.2333 dists=0.1476 iqa=2.0017 1.18s/it
+[2450/3000] loss=-1.6166 l1=0.0778 lp=0.2091 dists=0.1352 iqa=0.7610 1.18s/it
+[2475/3000] loss=-5.1136 l1=0.0497 lp=0.1955 dists=0.1370 iqa=1.9271 1.18s/it
+[2500/3000] loss=-6.3861 l1=0.0561 lp=0.1764 dists=0.1541 iqa=2.3608 1.18s/it
+[val 2500] score=3.6293 PSNR=26.318 lpips=0.3475 dists=0.2726 niqe=6.493 musiq=63.29 maniqa=0.5897 clipiqa=0.6761
+[2525/3000] loss=-2.1896 l1=0.0769 lp=0.2343 dists=0.1455 iqa=0.9608 1.19s/it
+[2550/3000] loss=1.7203 l1=0.0720 lp=0.2828 dists=0.1937 iqa=2.1012 1.19s/it
+[2575/3000] loss=-6.8297 l1=0.0648 lp=0.2116 dists=0.1385 iqa=2.5219 1.19s/it
+[2600/3000] loss=3.1085 l1=0.0692 lp=0.2781 dists=0.1974 iqa=1.4635 1.19s/it
+[2625/3000] loss=-6.0401 l1=0.0409 lp=0.1712 dists=0.1274 iqa=2.2376 1.19s/it
+[2650/3000] loss=-6.6809 l1=0.0456 lp=0.1917 dists=0.1539 iqa=2.4565 1.18s/it
+[2675/3000] loss=-4.5179 l1=0.0656 lp=0.1798 dists=0.1873 iqa=2.0507 1.18s/it
+[2700/3000] loss=-6.8972 l1=0.0543 lp=0.1791 dists=0.1509 iqa=2.5378 1.18s/it
+[2725/3000] loss=14.2371 l1=0.0774 lp=0.3217 dists=0.1755 iqa=2.2486 1.18s/it
+[2750/3000] loss=-2.0837 l1=0.0603 lp=0.1698 dists=0.1580 iqa=0.9346 1.18s/it
+[val 2750] score=3.6434 PSNR=26.151 lpips=0.3537 dists=0.2731 niqe=6.613 musiq=63.98 maniqa=0.6056 clipiqa=0.6861
+[2775/3000] loss=46.7749 l1=0.1130 lp=0.3692 dists=0.2013 iqa=2.4176 1.19s/it
+[2800/3000] loss=-7.1650 l1=0.0707 lp=0.1768 dists=0.1543 iqa=2.6418 1.19s/it
+[2825/3000] loss=-5.0142 l1=0.0498 lp=0.1412 dists=0.1243 iqa=1.8792 1.19s/it
+[2850/3000] loss=-6.8268 l1=0.0407 lp=0.1370 dists=0.1769 iqa=2.5729 1.19s/it
+[2875/3000] loss=-6.9788 l1=0.0571 lp=0.2293 dists=0.1208 iqa=2.5386 1.19s/it
+[2900/3000] loss=-5.3025 l1=0.0905 lp=0.2444 dists=0.1386 iqa=2.0262 1.19s/it
+[2925/3000] loss=-5.6126 l1=0.0648 lp=0.2258 dists=0.1293 iqa=2.0877 1.18s/it
+[2950/3000] loss=19.8700 l1=0.1052 lp=0.3184 dists=0.2105 iqa=1.5222 1.18s/it
+[2975/3000] loss=8.7591 l1=0.0866 lp=0.3073 dists=0.1825 iqa=2.0490 1.18s/it
+[3000/3000] loss=-5.2672 l1=0.0440 lp=0.2068 dists=0.1633 iqa=2.0051 1.18s/it
+[val 3000] score=3.6258 PSNR=26.261 lpips=0.3554 dists=0.2799 niqe=6.132 musiq=62.25 maniqa=0.5837 clipiqa=0.6682
+done. best score=3.6488
+ALLDONE

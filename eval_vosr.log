@@ -1,0 +1,29 @@
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/MANIQA_PIPAL-ae6d356b.pth
+=== vosr_iqa3 ===
+DiT 载入：缺失 0 多余 4
+LoRA 目标模块: ['k_linear', 'proj', 'q_linear', 'qkv', 'v_linear', 'w12', 'w3']
+  LoRA 张量 450 个已装载（未匹配 0）
+  LightDecoder 权重已装载
+  [验证集全尺度] lpips=0.5001 dists=0.3463 niqe=5.801 musiq=32.62 maniqa=0.8573 clipiqa=0.8542 psnr=22.53 Score=3.6111
+      测试集 25/100
+      测试集 50/100
+      测试集 75/100
+      测试集 100/100
+  [测试集100张] niqe=5.486 musiq=33.30 maniqa=0.8727 clipiqa=0.8656 NR=2.5226
+=== vosr_iqa1 ===
+DiT 载入：缺失 0 多余 4
+LoRA 目标模块: ['k_linear', 'proj', 'q_linear', 'qkv', 'v_linear', 'w12', 'w3']
+  LoRA 张量 450 个已装载（未匹配 0）
+  LightDecoder 权重已装载
+  [验证集全尺度] lpips=0.3447 dists=0.2380 niqe=4.778 musiq=51.78 maniqa=0.6090 clipiqa=0.8294 psnr=24.39 Score=3.8957
+      测试集 25/100
+      测试集 50/100
+      测试集 75/100
+      测试集 100/100
+  [测试集100张] niqe=4.620 musiq=44.57 maniqa=0.6504 clipiqa=0.8392 NR=2.4733
+
+对照 TinySR：combo NR 2.6144→榜72.60 | ref1 2.5986 | run12 2.5250/Score4.0025 | run8 2.4535→榜71.54
+ALLDONE

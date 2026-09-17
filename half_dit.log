@@ -1,0 +1,282 @@
+===== 烟测 =====
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['transformer_blocks.11.scale_msa', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.2.shift_mlp', 'transformer_blocks.5.gate_mlp', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.4.gate_msa', 'transformer_blocks.3.scale_msa', 'transformer_blocks.9.scale_msa', 'transformer_blocks.2.scale_msa', 'transformer_blocks.2.gate_msa', 'transformer_blocks.3.scale_mlp', 'transformer_blocks.8.gate_msa', 'transformer_blocks.9.gate_msa', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.3.shift_msa', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.11.gate_msa', 'transformer_blocks.7.scale_msa', 'transformer_blocks.7.gate_msa', 'transformer_blocks.2.shift_msa', 'transformer_blocks.6.scale_msa', 'transformer_blocks.5.shift_msa', 'transformer_blocks.10.scale_mlp', 'transformer_blocks.1.shift_msa', 'transformer_blocks.11.scale_mlp', 'transformer_blocks.0.gate_mlp', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.5.shift_mlp', 'transformer_blocks.1.gate_msa', 'transformer_blocks.1.scale_msa', 'transformer_blocks.4.scale_msa', 'transformer_blocks.6.shift_msa', 'transformer_blocks.9.shift_msa', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.8.gate_mlp', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.3.shift_mlp', 'transformer_blocks.0.gate_msa', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.3.gate_mlp', 'transformer_blocks.5.scale_mlp', 'transformer_blocks.0.shift_msa', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.10.gate_msa', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.5.gate_msa', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.4.gate_mlp', 'transformer_blocks.1.gate_mlp', 'transformer_blocks.7.shift_msa', 'transformer_blocks.1.scale_mlp', 'transformer_blocks.8.shift_mlp', 'shift', 'transformer_blocks.4.shift_msa', 'transformer_blocks.11.shift_msa', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.3.gate_msa', 'transformer_blocks.5.scale_msa', 'transformer_blocks.8.shift_msa', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.4.shift_mlp', 'scale', 'transformer_blocks.10.shift_msa', 'transformer_blocks.10.scale_msa', 'transformer_blocks.8.scale_msa', 'transformer_blocks.0.scale_msa', 'transformer_blocks.6.gate_msa', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.6.scale_mlp', 'transformer_blocks.7.shift_mlp']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+load report: {'checkpoint': '/cache/zihaohe/csig_isr/train_out/distill_v2b/best.pth', 'step': 2250, 'merged': False, 'lora_hit': 146, 'dense_tr_hit': 0, 'vae_decoder_hit': 0, 'alpha_mode': 'fixed', 'fixed_alpha': 1.0}
+DiT 砍层: 12 -> 6 (保留 [0, 2, 4, 6, 8, 10])
+dense 参数 170.2M @ lr=1e-05
+可训练 10.72 M
+[nanny] try=1 gpu=0 free=44438MB 启动
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['transformer_blocks.6.scale_mlp', 'transformer_blocks.3.scale_msa', 'transformer_blocks.1.scale_msa', 'transformer_blocks.7.gate_msa', 'transformer_blocks.7.scale_msa', 'transformer_blocks.8.gate_msa', 'transformer_blocks.10.shift_msa', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.9.gate_msa', 'transformer_blocks.4.shift_mlp', 'transformer_blocks.2.shift_mlp', 'shift', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.6.shift_msa', 'transformer_blocks.10.scale_mlp', 'transformer_blocks.6.scale_msa', 'transformer_blocks.8.shift_msa', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.0.gate_mlp', 'transformer_blocks.6.gate_msa', 'transformer_blocks.2.gate_msa', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.3.gate_msa', 'transformer_blocks.8.shift_mlp', 'transformer_blocks.1.shift_msa', 'transformer_blocks.4.scale_msa', 'transformer_blocks.9.shift_msa', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.3.gate_mlp', 'transformer_blocks.2.shift_msa', 'transformer_blocks.5.shift_mlp', 'transformer_blocks.5.gate_msa', 'transformer_blocks.3.shift_msa', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.11.shift_msa', 'transformer_blocks.0.scale_msa', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.3.shift_mlp', 'transformer_blocks.4.gate_mlp', 'transformer_blocks.0.shift_msa', 'transformer_blocks.2.scale_msa', 'transformer_blocks.11.scale_msa', 'transformer_blocks.5.gate_mlp', 'transformer_blocks.11.scale_mlp', 'transformer_blocks.0.gate_msa', 'transformer_blocks.5.scale_msa', 'transformer_blocks.9.scale_msa', 'transformer_blocks.4.gate_msa', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.7.shift_msa', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.4.shift_msa', 'transformer_blocks.8.gate_mlp', 'scale', 'transformer_blocks.1.scale_mlp', 'transformer_blocks.5.shift_msa', 'transformer_blocks.8.scale_msa', 'transformer_blocks.10.gate_msa', 'transformer_blocks.5.scale_mlp', 'transformer_blocks.11.gate_msa', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.3.scale_mlp', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.1.gate_msa', 'transformer_blocks.1.gate_mlp', 'transformer_blocks.7.shift_mlp', 'transformer_blocks.10.scale_msa']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+load report: {'checkpoint': '/cache/zihaohe/csig_isr/train_out/distill_v3c_iqa15/best.pth', 'step': 1000, 'merged': False, 'lora_hit': 146, 'dense_tr_hit': 0, 'vae_decoder_hit': 0, 'alpha_mode': 'fixed', 'fixed_alpha': 1.0}
+DiT 砍层: 12 -> 6 (保留 [0, 2, 4, 6, 8, 10])
+dense 参数 170.2M @ lr=1e-05
+可训练 10.72 M
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+蒸馏样本 20000 对（教师输出已生成的部分）
+[0] score=2.4113 robust=2.4041 PSNR=20.752
+[25/5000] loss=66.5749 教师L1=0.0741 教师LPIPS=0.3594 GT_LPIPS=0.3930 GT_DISTS=0.2530 iqa=1.1598 1.12s/it
+[50/5000] loss=1.5253 教师L1=0.0624 教师LPIPS=0.2655 GT_LPIPS=0.2753 GT_DISTS=0.1964 iqa=1.8071 1.12s/it
+[75/5000] loss=33.0082 教师L1=0.0754 教师LPIPS=0.3146 GT_LPIPS=0.3461 GT_DISTS=0.2459 iqa=1.1383 1.12s/it
+[100/5000] loss=7.7107 教师L1=0.0578 教师LPIPS=0.2843 GT_LPIPS=0.2876 GT_DISTS=0.2287 iqa=1.6023 1.09s/it
+[125/5000] loss=3.3797 教师L1=0.0769 教师LPIPS=0.2728 GT_LPIPS=0.2896 GT_DISTS=0.1987 iqa=2.2370 1.07s/it
+[150/5000] loss=0.7044 教师L1=0.0581 教师LPIPS=0.2744 GT_LPIPS=0.2592 GT_DISTS=0.1993 iqa=2.3540 1.06s/it
+[175/5000] loss=8.4199 教师L1=0.0900 教师LPIPS=0.2384 GT_LPIPS=0.2608 GT_DISTS=0.2398 iqa=1.4351 1.05s/it
+[200/5000] loss=46.1187 教师L1=0.0979 教师LPIPS=0.3310 GT_LPIPS=0.3746 GT_DISTS=0.2339 iqa=2.0763 1.03s/it
+[225/5000] loss=0.4467 教师L1=0.0629 教师LPIPS=0.2646 GT_LPIPS=0.2613 GT_DISTS=0.1758 iqa=2.1548 1.01s/it
+[250/5000] loss=2.3957 教师L1=0.0697 教师LPIPS=0.2616 GT_LPIPS=0.2837 GT_DISTS=0.1909 iqa=1.7715 1.01s/it
+[val 250] score=3.0745 robust=3.0454 PSNR=27.079 <- best
+[275/5000] loss=12.3822 教师L1=0.0845 教师LPIPS=0.2811 GT_LPIPS=0.3170 GT_DISTS=0.2149 iqa=1.9651 1.17s/it
+[300/5000] loss=9.6841 教师L1=0.0844 教师LPIPS=0.3066 GT_LPIPS=0.3130 GT_DISTS=0.2041 iqa=2.2378 1.15s/it
+[325/5000] loss=4.2114 教师L1=0.0744 教师LPIPS=0.2683 GT_LPIPS=0.2939 GT_DISTS=0.1920 iqa=1.6575 1.15s/it
+[350/5000] loss=2.6783 教师L1=0.0720 教师LPIPS=0.2597 GT_LPIPS=0.2834 GT_DISTS=0.2018 iqa=1.9829 1.14s/it
+[375/5000] loss=0.7947 教师L1=0.0601 教师LPIPS=0.2415 GT_LPIPS=0.2356 GT_DISTS=0.1995 iqa=1.8913 1.13s/it
+[400/5000] loss=0.6848 教师L1=0.0718 教师LPIPS=0.2215 GT_LPIPS=0.2343 GT_DISTS=0.1865 iqa=1.4695 1.12s/it
+[425/5000] loss=0.8209 教师L1=0.0841 教师LPIPS=0.2418 GT_LPIPS=0.2701 GT_DISTS=0.1875 iqa=2.0062 1.12s/it
+[450/5000] loss=5.9009 教师L1=0.0601 教师LPIPS=0.2452 GT_LPIPS=0.2965 GT_DISTS=0.2117 iqa=2.1371 1.11s/it
+[475/5000] loss=3.8707 教师L1=0.0831 教师LPIPS=0.2309 GT_LPIPS=0.2432 GT_DISTS=0.2225 iqa=1.6944 1.11s/it
+[500/5000] loss=4.1734 教师L1=0.0625 教师LPIPS=0.2437 GT_LPIPS=0.2949 GT_DISTS=0.1965 iqa=2.2624 1.10s/it
+[val 500] score=3.1498 robust=3.1137 PSNR=26.763 <- best
+[525/5000] loss=0.3792 教师L1=0.0755 教师LPIPS=0.2439 GT_LPIPS=0.2646 GT_DISTS=0.1807 iqa=2.3433 1.18s/it
+[550/5000] loss=0.6766 教师L1=0.0538 教师LPIPS=0.2538 GT_LPIPS=0.2649 GT_DISTS=0.1883 iqa=1.7710 1.18s/it
+[575/5000] loss=2.6074 教师L1=0.0625 教师LPIPS=0.2891 GT_LPIPS=0.2777 GT_DISTS=0.2091 iqa=2.2381 1.17s/it
+[600/5000] loss=0.3073 教师L1=0.0707 教师LPIPS=0.2401 GT_LPIPS=0.2497 GT_DISTS=0.1661 iqa=2.2789 1.16s/it
+[625/5000] loss=0.5028 教师L1=0.0859 教师LPIPS=0.2439 GT_LPIPS=0.2373 GT_DISTS=0.1930 iqa=2.0444 1.16s/it
+[650/5000] loss=0.3523 教师L1=0.0643 教师LPIPS=0.2388 GT_LPIPS=0.2419 GT_DISTS=0.1801 iqa=2.2256 1.15s/it
+[675/5000] loss=0.3947 教师L1=0.0643 教师LPIPS=0.2298 GT_LPIPS=0.2314 GT_DISTS=0.1872 iqa=2.0392 1.14s/it
+[700/5000] loss=0.4616 教师L1=0.0624 教师LPIPS=0.2154 GT_LPIPS=0.2381 GT_DISTS=0.1914 iqa=1.8428 1.14s/it
+[725/5000] loss=0.3417 教师L1=0.0745 教师LPIPS=0.2371 GT_LPIPS=0.2487 GT_DISTS=0.1808 iqa=2.2111 1.14s/it
+[750/5000] loss=0.1331 教师L1=0.0606 教师LPIPS=0.2216 GT_LPIPS=0.2471 GT_DISTS=0.1628 iqa=2.4743 1.14s/it
+[val 750] score=3.2595 robust=3.2323 PSNR=26.845 <- best
+[775/5000] loss=0.4135 教师L1=0.0750 教师LPIPS=0.2036 GT_LPIPS=0.2416 GT_DISTS=0.1866 iqa=1.9374 1.19s/it
+[800/5000] loss=4.8935 教师L1=0.0790 教师LPIPS=0.2605 GT_LPIPS=0.2977 GT_DISTS=0.1963 iqa=2.1370 1.19s/it
+[825/5000] loss=0.1381 教师L1=0.0631 教师LPIPS=0.2050 GT_LPIPS=0.2001 GT_DISTS=0.1867 iqa=2.3886 1.18s/it
+[850/5000] loss=3.8756 教师L1=0.0696 教师LPIPS=0.2687 GT_LPIPS=0.2929 GT_DISTS=0.1917 iqa=1.9220 1.18s/it
+[875/5000] loss=0.1602 教师L1=0.0644 教师LPIPS=0.2019 GT_LPIPS=0.2199 GT_DISTS=0.1748 iqa=2.3572 1.17s/it
+[900/5000] loss=0.0926 教师L1=0.0592 教师LPIPS=0.2138 GT_LPIPS=0.2204 GT_DISTS=0.1891 iqa=2.5189 1.17s/it
+[925/5000] loss=0.3345 教师L1=0.0836 教师LPIPS=0.2166 GT_LPIPS=0.2488 GT_DISTS=0.1734 iqa=2.0484 1.16s/it
+[950/5000] loss=0.3276 教师L1=0.0993 教师LPIPS=0.2164 GT_LPIPS=0.2268 GT_DISTS=0.1861 iqa=2.2681 1.16s/it
+[975/5000] loss=1.4890 教师L1=0.0890 教师LPIPS=0.2383 GT_LPIPS=0.2801 GT_DISTS=0.1838 iqa=2.4605 1.15s/it
+[1000/5000] loss=0.3044 教师L1=0.0807 教师LPIPS=0.2075 GT_LPIPS=0.2407 GT_DISTS=0.1807 iqa=2.1549 1.15s/it
+[val 1000] score=3.4796 robust=3.4590 PSNR=26.407 <- best
+[1025/5000] loss=2.1050 教师L1=0.0818 教师LPIPS=0.2505 GT_LPIPS=0.2810 GT_DISTS=0.1984 iqa=1.9763 1.19s/it
+[1050/5000] loss=1.6417 教师L1=0.0575 教师LPIPS=0.2225 GT_LPIPS=0.2731 GT_DISTS=0.2056 iqa=2.0983 1.19s/it
+[1075/5000] loss=0.4140 教师L1=0.0653 教师LPIPS=0.2288 GT_LPIPS=0.2613 GT_DISTS=0.1841 iqa=2.0009 1.19s/it
+[1100/5000] loss=0.1747 教师L1=0.0702 教师LPIPS=0.1920 GT_LPIPS=0.2065 GT_DISTS=0.1789 iqa=2.2911 1.18s/it
+[1125/5000] loss=0.1166 教师L1=0.0569 教师LPIPS=0.2377 GT_LPIPS=0.2472 GT_DISTS=0.1639 iqa=2.5316 1.18s/it
+[1150/5000] loss=0.9207 教师L1=0.0824 教师LPIPS=0.2099 GT_LPIPS=0.2743 GT_DISTS=0.1798 iqa=2.1838 1.17s/it
+[1175/5000] loss=0.2880 教师L1=0.0774 教师LPIPS=0.2200 GT_LPIPS=0.2464 GT_DISTS=0.1776 iqa=2.1897 1.17s/it
+[1200/5000] loss=3.2064 教师L1=0.0671 教师LPIPS=0.2357 GT_LPIPS=0.2913 GT_DISTS=0.1678 iqa=2.2539 1.16s/it
+[1225/5000] loss=0.2074 教师L1=0.0522 教师LPIPS=0.1881 GT_LPIPS=0.2063 GT_DISTS=0.1869 iqa=2.0568 1.16s/it
+[1250/5000] loss=0.1550 教师L1=0.0661 教师LPIPS=0.1999 GT_LPIPS=0.2299 GT_DISTS=0.1605 iqa=2.2304 1.16s/it
+[val 1250] score=3.4452 robust=3.4252 PSNR=26.625
+[1275/5000] loss=-0.0227 教师L1=0.0712 教师LPIPS=0.1989 GT_LPIPS=0.2114 GT_DISTS=0.1675 iqa=2.5973 1.19s/it
+[1300/5000] loss=0.4002 教师L1=0.0821 教师LPIPS=0.2137 GT_LPIPS=0.2656 GT_DISTS=0.1724 iqa=2.1297 1.19s/it
+[1325/5000] loss=0.1172 教师L1=0.0645 教师LPIPS=0.2080 GT_LPIPS=0.2239 GT_DISTS=0.1549 iqa=2.2798 1.19s/it
+[1350/5000] loss=0.0630 教师L1=0.0677 教师LPIPS=0.1981 GT_LPIPS=0.2321 GT_DISTS=0.1650 iqa=2.4239 1.18s/it
+[1375/5000] loss=0.3702 教师L1=0.0670 教师LPIPS=0.2000 GT_LPIPS=0.2512 GT_DISTS=0.1818 iqa=1.9087 1.18s/it
+[1400/5000] loss=2.9945 教师L1=0.0843 教师LPIPS=0.2370 GT_LPIPS=0.2892 GT_DISTS=0.1937 iqa=2.2323 1.18s/it
+[1425/5000] loss=0.1652 教师L1=0.0578 教师LPIPS=0.2077 GT_LPIPS=0.2219 GT_DISTS=0.1695 iqa=2.2585 1.18s/it
+[1450/5000] loss=0.1746 教师L1=0.0504 教师LPIPS=0.1772 GT_LPIPS=0.1869 GT_DISTS=0.1513 iqa=1.9143 1.17s/it
+[1475/5000] loss=0.1704 教师L1=0.0682 教师LPIPS=0.1985 GT_LPIPS=0.2232 GT_DISTS=0.1740 iqa=2.2534 1.17s/it
+[1500/5000] loss=0.0651 教师L1=0.0730 教师LPIPS=0.1993 GT_LPIPS=0.2273 GT_DISTS=0.1754 iqa=2.4861 1.17s/it
+[val 1500] score=3.4840 robust=3.4585 PSNR=26.793
+[1525/5000] loss=0.3091 教师L1=0.0607 教师LPIPS=0.2218 GT_LPIPS=0.2360 GT_DISTS=0.1657 iqa=2.0615 1.19s/it
+[1550/5000] loss=0.2471 教师L1=0.0814 教师LPIPS=0.2166 GT_LPIPS=0.2567 GT_DISTS=0.1852 iqa=2.2870 1.19s/it
+[1575/5000] loss=0.3963 教师L1=0.0594 教师LPIPS=0.1900 GT_LPIPS=0.2018 GT_DISTS=0.1999 iqa=2.4124 1.19s/it
+[1600/5000] loss=0.2743 教师L1=0.0616 教师LPIPS=0.2077 GT_LPIPS=0.2257 GT_DISTS=0.1780 iqa=2.1267 1.18s/it
+[1625/5000] loss=0.3199 教师L1=0.0543 教师LPIPS=0.2113 GT_LPIPS=0.2309 GT_DISTS=0.1970 iqa=2.3506 1.18s/it
+[1650/5000] loss=0.1378 教师L1=0.0801 教师LPIPS=0.2414 GT_LPIPS=0.2539 GT_DISTS=0.1662 iqa=2.6063 1.18s/it
+[1675/5000] loss=0.3328 教师L1=0.0652 教师LPIPS=0.2244 GT_LPIPS=0.2567 GT_DISTS=0.1844 iqa=2.1004 1.18s/it
+[1700/5000] loss=0.2452 教师L1=0.0680 教师LPIPS=0.2157 GT_LPIPS=0.2424 GT_DISTS=0.1886 iqa=2.1974 1.17s/it
+[1725/5000] loss=-0.0837 教师L1=0.0694 教师LPIPS=0.1845 GT_LPIPS=0.2066 GT_DISTS=0.1717 iqa=2.6283 1.17s/it
+[1750/5000] loss=0.1002 教师L1=0.0633 教师LPIPS=0.1655 GT_LPIPS=0.1909 GT_DISTS=0.1603 iqa=2.1137 1.17s/it
+[val 1750] score=3.4771 robust=3.4536 PSNR=26.646
+[1775/5000] loss=0.3021 教师L1=0.0857 教师LPIPS=0.2086 GT_LPIPS=0.2500 GT_DISTS=0.1775 iqa=2.1453 1.20s/it
+[1800/5000] loss=0.0470 教师L1=0.0690 教师LPIPS=0.1991 GT_LPIPS=0.2393 GT_DISTS=0.1858 iqa=2.5303 1.19s/it
+[1825/5000] loss=0.2851 教师L1=0.0787 教师LPIPS=0.2158 GT_LPIPS=0.2405 GT_DISTS=0.1637 iqa=2.1073 1.19s/it
+[1850/5000] loss=0.2190 教师L1=0.0638 教师LPIPS=0.1799 GT_LPIPS=0.2295 GT_DISTS=0.1960 iqa=2.3648 1.19s/it
+[1875/5000] loss=0.0839 教师L1=0.0615 教师LPIPS=0.2014 GT_LPIPS=0.2411 GT_DISTS=0.1828 iqa=2.4559 1.18s/it
+[1900/5000] loss=0.2435 教师L1=0.0761 教师LPIPS=0.1873 GT_LPIPS=0.2294 GT_DISTS=0.1714 iqa=2.0586 1.18s/it
+[1925/5000] loss=0.0690 教师L1=0.0589 教师LPIPS=0.1875 GT_LPIPS=0.1889 GT_DISTS=0.1766 iqa=2.3120 1.18s/it
+[1950/5000] loss=2.0269 教师L1=0.0755 教师LPIPS=0.1973 GT_LPIPS=0.2075 GT_DISTS=0.2153 iqa=2.5768 1.18s/it
+[1975/5000] loss=0.3417 教师L1=0.0628 教师LPIPS=0.2001 GT_LPIPS=0.2476 GT_DISTS=0.1845 iqa=1.9894 1.18s/it
+[2000/5000] loss=0.3944 教师L1=0.0749 教师LPIPS=0.2152 GT_LPIPS=0.2671 GT_DISTS=0.1769 iqa=2.2740 1.18s/it
+[val 2000] score=3.5247 robust=3.4957 PSNR=26.308 <- best
+[2025/5000] loss=0.0233 教师L1=0.0655 教师LPIPS=0.2029 GT_LPIPS=0.2288 GT_DISTS=0.1626 iqa=2.4859 1.19s/it
+[2050/5000] loss=0.1660 教师L1=0.0679 教师LPIPS=0.1910 GT_LPIPS=0.2135 GT_DISTS=0.1656 iqa=2.1957 1.19s/it
+[2075/5000] loss=0.0700 教师L1=0.0629 教师LPIPS=0.1822 GT_LPIPS=0.1936 GT_DISTS=0.1665 iqa=2.2309 1.19s/it
+[2100/5000] loss=0.1922 教师L1=0.0714 教师LPIPS=0.2024 GT_LPIPS=0.2504 GT_DISTS=0.1816 iqa=2.2907 1.19s/it
+[2125/5000] loss=0.2410 教师L1=0.0681 教师LPIPS=0.1973 GT_LPIPS=0.2369 GT_DISTS=0.1652 iqa=2.0169 1.19s/it
+[2150/5000] loss=0.1934 教师L1=0.0890 教师LPIPS=0.2007 GT_LPIPS=0.2563 GT_DISTS=0.1744 iqa=2.3163 1.18s/it
+[2175/5000] loss=-0.1116 教师L1=0.0668 教师LPIPS=0.1938 GT_LPIPS=0.2083 GT_DISTS=0.1511 iqa=2.6181 1.18s/it
+[2200/5000] loss=0.0274 教师L1=0.0550 教师LPIPS=0.1706 GT_LPIPS=0.2026 GT_DISTS=0.1671 iqa=2.2352 1.18s/it
+[2225/5000] loss=0.0512 教师L1=0.0582 教师LPIPS=0.1858 GT_LPIPS=0.1921 GT_DISTS=0.1636 iqa=2.3048 1.18s/it
+[2250/5000] loss=0.2470 教师L1=0.0666 教师LPIPS=0.1957 GT_LPIPS=0.2280 GT_DISTS=0.1911 iqa=2.1189 1.18s/it
+[val 2250] score=3.5014 robust=3.4764 PSNR=26.702
+[2275/5000] loss=0.1945 教师L1=0.0899 教师LPIPS=0.2135 GT_LPIPS=0.2494 GT_DISTS=0.1629 iqa=2.2783 1.19s/it
+[2300/5000] loss=0.0974 教师L1=0.0638 教师LPIPS=0.1806 GT_LPIPS=0.2193 GT_DISTS=0.1685 iqa=2.2238 1.19s/it
+[2325/5000] loss=0.1480 教师L1=0.0647 教师LPIPS=0.1999 GT_LPIPS=0.2213 GT_DISTS=0.1636 iqa=2.2365 1.19s/it
+[2350/5000] loss=0.5301 教师L1=0.0652 教师LPIPS=0.1845 GT_LPIPS=0.2530 GT_DISTS=0.2007 iqa=2.1873 1.19s/it
+[2375/5000] loss=0.0789 教师L1=0.0702 教师LPIPS=0.1879 GT_LPIPS=0.2083 GT_DISTS=0.1673 iqa=2.3069 1.18s/it
+[2400/5000] loss=14.7463 教师L1=0.0790 教师LPIPS=0.2491 GT_LPIPS=0.3255 GT_DISTS=0.2129 iqa=2.5871 1.18s/it
+[2425/5000] loss=0.1393 教师L1=0.0753 教师LPIPS=0.1805 GT_LPIPS=0.2089 GT_DISTS=0.1489 iqa=2.0981 1.18s/it
+[2450/5000] loss=0.9322 教师L1=0.0932 教师LPIPS=0.2086 GT_LPIPS=0.2497 GT_DISTS=0.2046 iqa=2.3030 1.18s/it
+[2475/5000] loss=-0.1083 教师L1=0.0616 教师LPIPS=0.1777 GT_LPIPS=0.2218 GT_DISTS=0.1665 iqa=2.6425 1.18s/it
+[2500/5000] loss=0.3927 教师L1=0.0665 教师LPIPS=0.2047 GT_LPIPS=0.2110 GT_DISTS=0.1986 iqa=2.3100 1.18s/it
+[val 2500] score=3.5102 robust=3.4796 PSNR=26.429
+[2525/5000] loss=0.0931 教师L1=0.0712 教师LPIPS=0.1683 GT_LPIPS=0.2102 GT_DISTS=0.1830 iqa=2.2702 1.19s/it
+[2550/5000] loss=0.0686 教师L1=0.0646 教师LPIPS=0.2097 GT_LPIPS=0.2520 GT_DISTS=0.1721 iqa=2.5779 1.19s/it
+[2575/5000] loss=0.1939 教师L1=0.0498 教师LPIPS=0.1862 GT_LPIPS=0.1850 GT_DISTS=0.1646 iqa=1.9971 1.19s/it
+[2600/5000] loss=0.2135 教师L1=0.0812 教师LPIPS=0.2047 GT_LPIPS=0.2346 GT_DISTS=0.1591 iqa=2.1807 1.19s/it
+[2625/5000] loss=0.0474 教师L1=0.0660 教师LPIPS=0.2045 GT_LPIPS=0.2136 GT_DISTS=0.1723 iqa=2.4675 1.19s/it
+[2650/5000] loss=0.1953 教师L1=0.0634 教师LPIPS=0.1972 GT_LPIPS=0.2221 GT_DISTS=0.1629 iqa=2.1568 1.19s/it
+[2675/5000] loss=1.1911 教师L1=0.0502 教师LPIPS=0.1885 GT_LPIPS=0.2350 GT_DISTS=0.2073 iqa=2.0848 1.18s/it
+[2700/5000] loss=-0.0208 教师L1=0.0633 教师LPIPS=0.1867 GT_LPIPS=0.2029 GT_DISTS=0.1733 iqa=2.4855 1.18s/it
+[2725/5000] loss=0.2169 教师L1=0.0611 教师LPIPS=0.1850 GT_LPIPS=0.2010 GT_DISTS=0.1774 iqa=2.0137 1.18s/it
+[2750/5000] loss=-0.0154 教师L1=0.0665 教师LPIPS=0.1633 GT_LPIPS=0.2095 GT_DISTS=0.1715 iqa=2.3560 1.18s/it
+[val 2750] score=3.5461 robust=3.5197 PSNR=26.925 <- best
+[2775/5000] loss=0.3425 教师L1=0.0758 教师LPIPS=0.1953 GT_LPIPS=0.2398 GT_DISTS=0.1830 iqa=2.0035 1.19s/it
+[2800/5000] loss=0.1570 教师L1=0.0698 教师LPIPS=0.1779 GT_LPIPS=0.2082 GT_DISTS=0.1659 iqa=2.1047 1.19s/it
+[2825/5000] loss=0.0869 教师L1=0.0603 教师LPIPS=0.1808 GT_LPIPS=0.2191 GT_DISTS=0.1812 iqa=2.2770 1.19s/it
+[2850/5000] loss=0.0701 教师L1=0.0678 教师LPIPS=0.1881 GT_LPIPS=0.2220 GT_DISTS=0.1884 iqa=2.4131 1.19s/it
+[2875/5000] loss=0.2136 教师L1=0.0547 教师LPIPS=0.2125 GT_LPIPS=0.2127 GT_DISTS=0.1767 iqa=2.1155 1.19s/it
+[2900/5000] loss=0.0848 教师L1=0.0540 教师LPIPS=0.2010 GT_LPIPS=0.2252 GT_DISTS=0.1557 iqa=2.3032 1.19s/it
+[2925/5000] loss=-0.1772 教师L1=0.0553 教师LPIPS=0.1900 GT_LPIPS=0.2169 GT_DISTS=0.1627 iqa=2.7856 1.19s/it
+[2950/5000] loss=0.1927 教师L1=0.0573 教师LPIPS=0.1853 GT_LPIPS=0.2592 GT_DISTS=0.1808 iqa=2.1604 1.19s/it
+[2975/5000] loss=0.0392 教师L1=0.0630 教师LPIPS=0.1822 GT_LPIPS=0.2129 GT_DISTS=0.1640 iqa=2.3225 1.19s/it
+[3000/5000] loss=0.1600 教师L1=0.0812 教师LPIPS=0.2142 GT_LPIPS=0.2622 GT_DISTS=0.1763 iqa=2.4196 1.18s/it
+[val 3000] score=3.5247 robust=3.5006 PSNR=26.470
+[3025/5000] loss=0.2608 教师L1=0.0686 教师LPIPS=0.2010 GT_LPIPS=0.2195 GT_DISTS=0.1744 iqa=2.0095 1.20s/it
+[3050/5000] loss=0.2201 教师L1=0.0658 教师LPIPS=0.2214 GT_LPIPS=0.2631 GT_DISTS=0.1818 iqa=2.3213 1.20s/it
+[3075/5000] loss=0.1055 教师L1=0.0726 教师LPIPS=0.1837 GT_LPIPS=0.2402 GT_DISTS=0.1748 iqa=2.2974 1.19s/it
+[3100/5000] loss=0.3051 教师L1=0.0920 教师LPIPS=0.2050 GT_LPIPS=0.2533 GT_DISTS=0.1893 iqa=2.1675 1.19s/it
+[3125/5000] loss=0.2031 教师L1=0.0712 教师LPIPS=0.2088 GT_LPIPS=0.2451 GT_DISTS=0.1639 iqa=2.2245 1.19s/it
+[3150/5000] loss=-0.0287 教师L1=0.0674 教师LPIPS=0.1847 GT_LPIPS=0.1954 GT_DISTS=0.1625 iqa=2.4408 1.19s/it
+[3175/5000] loss=0.0702 教师L1=0.0587 教师LPIPS=0.1789 GT_LPIPS=0.2002 GT_DISTS=0.1769 iqa=2.2561 1.19s/it
+[3200/5000] loss=6.7626 教师L1=0.0719 教师LPIPS=0.2007 GT_LPIPS=0.3067 GT_DISTS=0.1915 iqa=2.3060 1.19s/it
+[3225/5000] loss=-0.1767 教师L1=0.0547 教师LPIPS=0.1655 GT_LPIPS=0.1915 GT_DISTS=0.1665 iqa=2.6169 1.19s/it
+[3250/5000] loss=0.0937 教师L1=0.0604 教师LPIPS=0.1786 GT_LPIPS=0.2314 GT_DISTS=0.1811 iqa=2.2914 1.19s/it
+[val 3250] score=3.5339 robust=3.5096 PSNR=26.651
+[3275/5000] loss=0.0805 教师L1=0.0652 教师LPIPS=0.1806 GT_LPIPS=0.2264 GT_DISTS=0.1652 iqa=2.2095 1.20s/it
+[3300/5000] loss=-0.0166 教师L1=0.0566 教师LPIPS=0.1724 GT_LPIPS=0.2024 GT_DISTS=0.1741 iqa=2.4020 1.20s/it
+[3325/5000] loss=0.1804 教师L1=0.0668 教师LPIPS=0.1806 GT_LPIPS=0.2054 GT_DISTS=0.1701 iqa=2.0636 1.20s/it
+[3350/5000] loss=0.0760 教师L1=0.0638 教师LPIPS=0.1803 GT_LPIPS=0.2153 GT_DISTS=0.1646 iqa=2.2060 1.19s/it
+[3375/5000] loss=0.1097 教师L1=0.0639 教师LPIPS=0.2069 GT_LPIPS=0.2430 GT_DISTS=0.1664 iqa=2.3228 1.19s/it
+[3400/5000] loss=0.1615 教师L1=0.0587 教师LPIPS=0.1880 GT_LPIPS=0.2306 GT_DISTS=0.1625 iqa=2.1023 1.19s/it
+[3425/5000] loss=4.9425 教师L1=0.0592 教师LPIPS=0.2107 GT_LPIPS=0.2928 GT_DISTS=0.2118 iqa=2.3063 1.19s/it
+[3450/5000] loss=0.0824 教师L1=0.0704 教师LPIPS=0.1998 GT_LPIPS=0.2491 GT_DISTS=0.1860 iqa=2.4878 1.19s/it
+[3475/5000] loss=0.2973 教师L1=0.0781 教师LPIPS=0.1959 GT_LPIPS=0.2263 GT_DISTS=0.1643 iqa=2.0165 1.19s/it
+[3500/5000] loss=0.0969 教师L1=0.0657 教师LPIPS=0.1867 GT_LPIPS=0.2059 GT_DISTS=0.1670 iqa=2.2878 1.19s/it
+[val 3500] score=3.5253 robust=3.5010 PSNR=26.825
+[3525/5000] loss=-0.0564 教师L1=0.0612 教师LPIPS=0.1979 GT_LPIPS=0.2180 GT_DISTS=0.1774 iqa=2.6391 1.20s/it
+[3550/5000] loss=0.2831 教师L1=0.0726 教师LPIPS=0.2003 GT_LPIPS=0.2509 GT_DISTS=0.1775 iqa=2.0866 1.20s/it
+[3575/5000] loss=0.0806 教师L1=0.0765 教师LPIPS=0.1841 GT_LPIPS=0.2170 GT_DISTS=0.1755 iqa=2.3086 1.19s/it
+[3600/5000] loss=0.0822 教师L1=0.0617 教师LPIPS=0.1717 GT_LPIPS=0.2240 GT_DISTS=0.1763 iqa=2.2316 1.19s/it
+[3625/5000] loss=0.2334 教师L1=0.0623 教师LPIPS=0.1952 GT_LPIPS=0.2219 GT_DISTS=0.1671 iqa=2.0179 1.19s/it
+[3650/5000] loss=0.1413 教师L1=0.0674 教师LPIPS=0.2022 GT_LPIPS=0.2488 GT_DISTS=0.1707 iqa=2.2971 1.19s/it
+[3675/5000] loss=-0.0371 教师L1=0.0599 教师LPIPS=0.1963 GT_LPIPS=0.2087 GT_DISTS=0.1659 iqa=2.5370 1.19s/it
+[3700/5000] loss=0.1726 教师L1=0.0644 教师LPIPS=0.1979 GT_LPIPS=0.2630 GT_DISTS=0.1771 iqa=2.3042 1.19s/it
+[3725/5000] loss=0.0196 教师L1=0.0641 教师LPIPS=0.1777 GT_LPIPS=0.2004 GT_DISTS=0.1674 iqa=2.3338 1.19s/it
+[3750/5000] loss=0.7610 教师L1=0.0908 教师LPIPS=0.2280 GT_LPIPS=0.2702 GT_DISTS=0.1949 iqa=2.1891 1.19s/it
+[val 3750] score=3.6214 robust=3.6015 PSNR=26.679 <- best
+[3775/5000] loss=0.0361 教师L1=0.0740 教师LPIPS=0.1836 GT_LPIPS=0.2368 GT_DISTS=0.1710 iqa=2.4152 1.20s/it
+[3800/5000] loss=-0.0612 教师L1=0.0575 教师LPIPS=0.1735 GT_LPIPS=0.2149 GT_DISTS=0.1478 iqa=2.3456 1.20s/it
+[3825/5000] loss=0.1761 教师L1=0.0802 教师LPIPS=0.1979 GT_LPIPS=0.2340 GT_DISTS=0.1719 iqa=2.2486 1.20s/it
+[3850/5000] loss=0.0540 教师L1=0.0618 教师LPIPS=0.1791 GT_LPIPS=0.2210 GT_DISTS=0.1750 iqa=2.2739 1.19s/it
+[3875/5000] loss=-0.0387 教师L1=0.0505 教师LPIPS=0.1586 GT_LPIPS=0.1917 GT_DISTS=0.1839 iqa=2.3346 1.19s/it
+[3900/5000] loss=0.2200 教师L1=0.0811 教师LPIPS=0.2040 GT_LPIPS=0.2564 GT_DISTS=0.1769 iqa=2.2553 1.19s/it
+[3925/5000] loss=0.2520 教师L1=0.0662 教师LPIPS=0.1859 GT_LPIPS=0.2292 GT_DISTS=0.1836 iqa=2.0418 1.19s/it
+[3950/5000] loss=0.0218 教师L1=0.0564 教师LPIPS=0.1743 GT_LPIPS=0.2250 GT_DISTS=0.1734 iqa=2.3194 1.19s/it
+[3975/5000] loss=-0.1608 教师L1=0.0617 教师LPIPS=0.1504 GT_LPIPS=0.1832 GT_DISTS=0.1705 iqa=2.5309 1.19s/it
+[4000/5000] loss=0.1001 教师L1=0.0756 教师LPIPS=0.1768 GT_LPIPS=0.2104 GT_DISTS=0.1922 iqa=2.3922 1.19s/it
+[val 4000] score=3.6375 robust=3.6160 PSNR=26.447 <- best
+[4025/5000] loss=0.0223 教师L1=0.0606 教师LPIPS=0.1730 GT_LPIPS=0.2016 GT_DISTS=0.1619 iqa=2.3124 1.20s/it
+[4050/5000] loss=0.1022 教师L1=0.0741 教师LPIPS=0.2046 GT_LPIPS=0.2363 GT_DISTS=0.1641 iqa=2.4400 1.20s/it
+[4075/5000] loss=0.1624 教师L1=0.0707 教师LPIPS=0.1853 GT_LPIPS=0.2294 GT_DISTS=0.1802 iqa=2.1934 1.20s/it
+[4100/5000] loss=0.3191 教师L1=0.0672 教师LPIPS=0.1935 GT_LPIPS=0.2686 GT_DISTS=0.1645 iqa=2.3583 1.19s/it
+[4125/5000] loss=-0.0073 教师L1=0.0898 教师LPIPS=0.2108 GT_LPIPS=0.2439 GT_DISTS=0.1553 iqa=2.6341 1.19s/it
+[4150/5000] loss=0.0370 教师L1=0.0616 教师LPIPS=0.1790 GT_LPIPS=0.2189 GT_DISTS=0.1565 iqa=2.2659 1.19s/it
+[4175/5000] loss=0.1145 教师L1=0.0685 教师LPIPS=0.1796 GT_LPIPS=0.2127 GT_DISTS=0.1749 iqa=2.2495 1.19s/it
+[4200/5000] loss=-0.0610 教师L1=0.0652 教师LPIPS=0.1842 GT_LPIPS=0.2173 GT_DISTS=0.1830 iqa=2.6232 1.19s/it
+[4225/5000] loss=0.2744 教师L1=0.0567 教师LPIPS=0.1864 GT_LPIPS=0.2301 GT_DISTS=0.1799 iqa=1.9485 1.19s/it
+[4250/5000] loss=0.0462 教师L1=0.0676 教师LPIPS=0.1787 GT_LPIPS=0.2170 GT_DISTS=0.1534 iqa=2.2866 1.19s/it
+[val 4250] score=3.5728 robust=3.5476 PSNR=26.434
+[4275/5000] loss=-0.1662 教师L1=0.0623 教师LPIPS=0.1572 GT_LPIPS=0.1993 GT_DISTS=0.1924 iqa=2.7208 1.20s/it
+[4300/5000] loss=0.2041 教师L1=0.0703 教师LPIPS=0.2060 GT_LPIPS=0.2586 GT_DISTS=0.1743 iqa=2.2515 1.20s/it
+[4325/5000] loss=0.0490 教师L1=0.0662 教师LPIPS=0.1884 GT_LPIPS=0.2138 GT_DISTS=0.1696 iqa=2.3619 1.20s/it
+[4350/5000] loss=-0.1071 教师L1=0.0706 教师LPIPS=0.1870 GT_LPIPS=0.2362 GT_DISTS=0.1566 iqa=2.6510 1.19s/it
+[4375/5000] loss=0.0718 教师L1=0.0759 教师LPIPS=0.1864 GT_LPIPS=0.2113 GT_DISTS=0.1710 iqa=2.3397 1.19s/it
+[4400/5000] loss=0.3391 教师L1=0.0756 教师LPIPS=0.1995 GT_LPIPS=0.2680 GT_DISTS=0.1787 iqa=2.3537 1.19s/it
+[4425/5000] loss=0.0800 教师L1=0.0844 教师LPIPS=0.2113 GT_LPIPS=0.2480 GT_DISTS=0.1750 iqa=2.5837 1.19s/it
+[4450/5000] loss=0.1749 教师L1=0.0597 教师LPIPS=0.1701 GT_LPIPS=0.1902 GT_DISTS=0.1883 iqa=2.0529 1.19s/it
+[4475/5000] loss=0.0176 教师L1=0.0622 教师LPIPS=0.1835 GT_LPIPS=0.2135 GT_DISTS=0.1654 iqa=2.2798 1.19s/it
+[4500/5000] loss=0.1325 教师L1=0.0748 教师LPIPS=0.1973 GT_LPIPS=0.2671 GT_DISTS=0.1835 iqa=2.6811 1.19s/it
+[val 4500] score=3.5376 robust=3.5064 PSNR=26.652
+[4525/5000] loss=0.1327 教师L1=0.0669 教师LPIPS=0.1797 GT_LPIPS=0.2140 GT_DISTS=0.1770 iqa=2.2027 1.20s/it
+[4550/5000] loss=0.0861 教师L1=0.0582 教师LPIPS=0.1787 GT_LPIPS=0.2364 GT_DISTS=0.1735 iqa=2.2551 1.20s/it
+[4575/5000] loss=0.1831 教师L1=0.0704 教师LPIPS=0.1849 GT_LPIPS=0.2547 GT_DISTS=0.1826 iqa=2.1968 1.20s/it
+[4600/5000] loss=0.1624 教师L1=0.0752 教师LPIPS=0.2082 GT_LPIPS=0.2563 GT_DISTS=0.1629 iqa=2.2796 1.19s/it
+[4625/5000] loss=0.0443 教师L1=0.0671 教师LPIPS=0.1699 GT_LPIPS=0.2117 GT_DISTS=0.1593 iqa=2.2177 1.19s/it
+[4650/5000] loss=-0.0216 教师L1=0.0650 教师LPIPS=0.1768 GT_LPIPS=0.2270 GT_DISTS=0.1746 iqa=2.4687 1.19s/it
+[4675/5000] loss=1.8336 教师L1=0.0721 教师LPIPS=0.1537 GT_LPIPS=0.1947 GT_DISTS=0.2125 iqa=1.9294 1.19s/it
+[4700/5000] loss=1.9155 教师L1=0.0825 教师LPIPS=0.2203 GT_LPIPS=0.2827 GT_DISTS=0.1870 iqa=2.1443 1.19s/it
+[4725/5000] loss=-0.0977 教师L1=0.0762 教师LPIPS=0.1814 GT_LPIPS=0.2307 GT_DISTS=0.1635 iqa=2.6257 1.19s/it
+[4750/5000] loss=0.1400 教师L1=0.0678 教师LPIPS=0.1969 GT_LPIPS=0.2285 GT_DISTS=0.1692 iqa=2.2297 1.19s/it
+[val 4750] score=3.6724 robust=3.6526 PSNR=26.716 <- best
+[4775/5000] loss=0.1301 教师L1=0.0772 教师LPIPS=0.1920 GT_LPIPS=0.2534 GT_DISTS=0.1685 iqa=2.2757 1.20s/it
+[4800/5000] loss=0.0483 教师L1=0.0663 教师LPIPS=0.2023 GT_LPIPS=0.2322 GT_DISTS=0.1701 iqa=2.4629 1.20s/it
+[4825/5000] loss=0.1223 教师L1=0.0721 教师LPIPS=0.1755 GT_LPIPS=0.2235 GT_DISTS=0.1718 iqa=2.1770 1.20s/it
+[4850/5000] loss=0.0228 教师L1=0.0601 教师LPIPS=0.1857 GT_LPIPS=0.2213 GT_DISTS=0.1630 iqa=2.3290 1.19s/it
+[4875/5000] loss=-0.1281 教师L1=0.0498 教师LPIPS=0.1542 GT_LPIPS=0.1650 GT_DISTS=0.1872 iqa=2.5414 1.19s/it
+[4900/5000] loss=-0.0120 教师L1=0.0667 教师LPIPS=0.1745 GT_LPIPS=0.2042 GT_DISTS=0.1615 iqa=2.3054 1.19s/it
+[4925/5000] loss=0.1255 教师L1=0.0725 教师LPIPS=0.1773 GT_LPIPS=0.2096 GT_DISTS=0.1895 iqa=2.2180 1.19s/it
+[4950/5000] loss=-0.0647 教师L1=0.0675 教师LPIPS=0.1837 GT_LPIPS=0.2200 GT_DISTS=0.1552 iqa=2.4858 1.19s/it
+[4975/5000] loss=0.1385 教师L1=0.0550 教师LPIPS=0.1719 GT_LPIPS=0.2310 GT_DISTS=0.1925 iqa=2.2367 1.19s/it
+[5000/5000] loss=0.2306 教师L1=0.0740 教师LPIPS=0.1903 GT_LPIPS=0.2551 GT_DISTS=0.1846 iqa=2.1563 1.19s/it
+[val 5000] score=3.7075 robust=3.6896 PSNR=26.138 <- best
+done. best robust=3.6896
+ALLDONE

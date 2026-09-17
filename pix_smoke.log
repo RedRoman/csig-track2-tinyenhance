@@ -1,0 +1,38 @@
+[nanny] try=1 gpu=1 free=15154MB 启动
+PixUNet chs=(128, 256, 512) nb=3 ps=4 参数 42.8M
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+蒸馏样本 20000 对
+Traceback (most recent call last):
+  File "/cache/zihaohe/train_pix.py", line 143, in <module>
+    main()
+  File "/cache/zihaohe/train_pix.py", line 104, in main
+    elif which == 1: r = 3.0 * args.w_maniqa * M["maniqa"](iq).mean()
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/models/inference_model.py", line 82, in forward
+    output = self.net(target.to(device), **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/maniqa_arch.py", line 209, in forward
+    x = tab(x)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/maniqa_arch.py", line 45, in forward
+    q = self.c_q(x)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 184.00 MiB. GPU 0 has a total capacity of 79.33 GiB of which 144.62 MiB is free. Process 1300380 has 64.52 GiB memory in use. Process 1884205 has 14.65 GiB memory in use. Of the allocated memory 14.06 GiB is allocated by PyTorch, and 84.02 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[nanny] OOM，重排队

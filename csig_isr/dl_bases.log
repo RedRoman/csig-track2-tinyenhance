@@ -1,0 +1,18 @@
+=== PiSA-SR (可调保真/语义双 LoRA，最适配) ===
+  [完成] lora/pisa_pix.safetensors  16M
+  [完成] lora/pisa_sem.safetensors  16M
+  [完成] unet_pix/config.json  4.0K
+  [完成] unet_pix/diffusion_pytorch_model.safetensors  1.7G
+=== S3Diff ===
+  [完成] s3diff.pkl  132M
+  [完成] de_net.pth  9.0M
+=== FiDeSR (CVPR2026) ===
+  [完成] fidesr.pkl  34M
+=== 清单 ===
+34M /cache/zihaohe/csig_isr/bases/fidesr/fidesr.pkl
+132M /cache/zihaohe/csig_isr/bases/s3diff/s3diff.pkl
+9.0M /cache/zihaohe/csig_isr/bases/s3diff/de_net.pth
+1.7G /cache/zihaohe/csig_isr/bases/pisasr/unet_pix/diffusion_pytorch_model.safetensors
+16M /cache/zihaohe/csig_isr/bases/pisasr/lora/pisa_pix.safetensors
+16M /cache/zihaohe/csig_isr/bases/pisasr/lora/pisa_sem.safetensors
+BASES_DONE

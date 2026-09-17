@@ -1,0 +1,17 @@
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/MANIQA_PIPAL-ae6d356b.pth
+=== vosr14_cap ===
+DiT 载入：缺失 0 多余 4
+LoRA 目标模块: ['k_linear', 'proj', 'q_linear', 'qkv', 'v_linear', 'w12', 'w3']
+  LoRA 张量 578 个已装载（未匹配 0）
+  [验证集全尺度] lpips=0.3105 dists=0.2178 niqe=4.924 musiq=45.87 maniqa=0.6231 clipiqa=0.6999 psnr=24.35 Score=3.7610
+      测试集 25/100
+      测试集 50/100
+      测试集 75/100
+      测试集 100/100
+  [测试集100张] niqe=4.387 musiq=45.41 maniqa=0.6254 clipiqa=0.6919 NR=2.3327
+
+对照 TinySR：combo NR 2.6144→榜72.60 | ref1 2.5986 | run12 2.5250/Score4.0025 | run8 2.4535→榜71.54
+ALLDONE

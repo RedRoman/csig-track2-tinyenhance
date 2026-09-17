@@ -1,0 +1,22 @@
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/diffusers/utils/outputs.py:63: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/timm/models/hub.py:4: FutureWarning: Importing from timm.models.hub is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/timm/models/registry.py:4: FutureWarning: Importing from timm.models.registry is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/cache/zihaohe/csig_isr/venv_ose/lib/python3.10/site-packages/timm/models/helpers.py:7: FutureWarning: Importing from timm.models.helpers is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+载入 OSEDiff ...
+Traceback (most recent call last):
+  File "/cache/zihaohe/csig_isr/bench_osediff.py", line 121, in <module>
+    main()
+  File "/cache/zihaohe/csig_isr/bench_osediff.py", line 60, in main
+    model = OSEDiff_test(A())
+  File "/cache/zihaohe/csig_isr/OSEDiff/osediff.py", line 266, in __init__
+    self.load_ckpt(osediff)
+  File "/cache/zihaohe/csig_isr/OSEDiff/osediff.py", line 284, in load_ckpt
+    lora_conf_encoder = LoraConfig(r=model["rank_unet"], init_lora_weights="gaussian", target_modules=model["unet_lora_encoder_modules"])
+KeyError: 'rank_unet'
+OSE_BENCH_EXIT:1

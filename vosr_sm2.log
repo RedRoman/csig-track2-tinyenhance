@@ -1,0 +1,12 @@
+DiT 载入：缺失 0 多余 4
+LoRA 目标模块: ['k_linear', 'proj', 'q_linear', 'qkv', 'v_linear', 'w12', 'w3']
+可训练参数 24.03 M
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/MANIQA_PIPAL-ae6d356b.pth
+train images=60493 repeat=1
+[0] score=2.4987 PSNR=24.197 lpips=0.5141 dists=0.3635 niqe=8.179 musiq=37.06 maniqa=0.3953 clipiqa=0.4284
+[val 6] score=2.6837 PSNR=23.694 lpips=0.4933 dists=0.3669 niqe=7.008 musiq=40.40 maniqa=0.4156 clipiqa=0.4251 <- best
+done. best score=2.6837
+ALLDONE

@@ -1,0 +1,332 @@
+"""Shared TinySR runtime for training/evaluation/export (v3).
+
+This file removes the previous source of truth drift: every v2 script loads the
+same checkpoint format, the same TinySR base, the same optional VAE-decoder
+weights, and the same residual-strength controller.
+"""
+from __future__ import annotations
+import math
+import os
+import sys
+from dataclasses import dataclass
+from typing import Dict, Optional, Tuple
+
+import torch
+import torch.nn as nn
+
+from settings import ROOT, TS
+
+if TS not in sys.path:
+    sys.path.insert(0, TS)
+if os.path.isdir(TS):
+    os.chdir(TS)
+
+# TinySR uses relative imports assuming its repository is importable.
+from models.tinysr.tinysd3 import TinySD3Transformer2DModel
+from models.vae.autoencoder_tiny import AutoencoderTiny
+from utils.util import load_lora_state_dict
+from peft import LoraConfig
+from diffusers import StableDiffusion3Pipeline
+
+
+LORA_TARGETS = ["to_k", "to_q", "to_v", "to_out.0", "proj",
+                "linear", "linear_1", "linear_2", "net.2"]
+
+
+class DenseBlock(nn.Module):
+    def __init__(self, in_ch: int, growth: int = 32):
+        super().__init__()
+        self.conv1 = nn.Conv2d(in_ch, growth, 3, 1, 1)
+        self.conv2 = nn.Conv2d(in_ch + growth, growth, 3, 1, 1)
+        self.conv3 = nn.Conv2d(in_ch + 2 * growth, growth, 3, 1, 1)
+        self.conv4 = nn.Conv2d(in_ch + 3 * growth, growth, 3, 1, 1)
+        self.conv5 = nn.Conv2d(in_ch + 4 * growth, in_ch, 3, 1, 1)
+        self.act = nn.SiLU()
+        nn.init.zeros_(self.conv5.weight)
+        nn.init.zeros_(self.conv5.bias)
+
+    def forward(self, x):
+        x1 = self.act(self.conv1(x))
+        x2 = self.act(self.conv2(torch.cat([x, x1], 1)))
+        x3 = self.act(self.conv3(torch.cat([x, x1, x2], 1)))
+        x4 = self.act(self.conv4(torch.cat([x, x1, x2, x3], 1)))
+        return self.conv5(torch.cat([x, x1, x2, x3, x4], 1))
+
+
+class LRRB(nn.Module):
+    """Legacy latent refinement support; disabled in the recommended v2 path."""
+    def __init__(self, in_ch=32, mid_ch=64, growth=32, res_scale=0.2):
+        super().__init__()
+        self.in_conv = nn.Conv2d(in_ch, mid_ch, 1)
+        self.db1 = DenseBlock(mid_ch, growth)
+        self.db2 = DenseBlock(mid_ch, growth)
+        self.db3 = DenseBlock(mid_ch, growth)
+        self.out_conv = nn.Conv2d(mid_ch, in_ch // 2, 1)
+        self.res_scale = float(res_scale)
+        nn.init.zeros_(self.out_conv.weight)
+        nn.init.zeros_(self.out_conv.bias)
+
+    def forward(self, x_cat):
+        src_dtype = x_cat.dtype
+        f = self.in_conv(x_cat.to(self.in_conv.weight.dtype))
+        f = f + self.db1(f) * self.res_scale
+        f = f + self.db2(f) * self.res_scale
+        f = f + self.db3(f) * self.res_scale
+        return self.out_conv(f).to(src_dtype)
+
+
+class SeverityGate(nn.Module):
+    """Tiny latent-statistics gate for adaptive generative strength.
+
+    Features are intentionally cheap and resolution agnostic:
+      channel mean + channel mean absolute deviation + latent gradient energy.
+    For 16 latent channels the MLP has only ~1.6K parameters.
+    """
+    def __init__(self, channels: int = 16, hidden: int = 32,
+                 alpha_min: float = 0.70, alpha_max: float = 1.10,
+                 init_alpha: float = 1.0):
+        super().__init__()
+        assert alpha_min < alpha_max
+        self.alpha_min = float(alpha_min)
+        self.alpha_max = float(alpha_max)
+        self.fc1 = nn.Linear(channels * 3, hidden)
+        self.fc2 = nn.Linear(hidden, 1)
+        self.act = nn.SiLU()
+        nn.init.zeros_(self.fc2.weight)
+        p = (float(init_alpha) - self.alpha_min) / (self.alpha_max - self.alpha_min)
+        p = min(max(p, 1e-4), 1 - 1e-4)
+        nn.init.constant_(self.fc2.bias, math.log(p / (1 - p)))
+
+    def forward(self, z):
+        # Keep the feature path numerically stable during fp16 backbone training.
+        zf = z.float()
+        mu = zf.mean(dim=(2, 3))
+        mad = (zf - mu[:, :, None, None]).abs().mean(dim=(2, 3))
+        gx = (zf[:, :, :, 1:] - zf[:, :, :, :-1]).abs().mean(dim=(2, 3))
+        gy = (zf[:, :, 1:, :] - zf[:, :, :-1, :]).abs().mean(dim=(2, 3))
+        grad = 0.5 * (gx + gy)
+        feat = torch.cat([mu, mad, grad], dim=1).to(self.fc1.weight.dtype)
+        s = torch.sigmoid(self.fc2(self.act(self.fc1(feat))))
+        alpha = self.alpha_min + (self.alpha_max - self.alpha_min) * s
+        return alpha[:, :, None, None].to(z.dtype)
+
+
+class TinySRCore(nn.Module):
+    """0..1 input/output training/evaluation model."""
+    def __init__(self, vae, tr, timesteps, pooled, *, lrrb=None,
+                 alpha_gate=None, fixed_alpha: float = 1.0):
+        super().__init__()
+        self.vae = vae
+        self.tr = tr
+        self.lrrb = lrrb
+        self.alpha_gate = alpha_gate
+        self.register_buffer("ts", timesteps, persistent=False)
+        self.register_buffer("pooled", pooled, persistent=False)
+        self.register_buffer("fixed_alpha", torch.tensor(float(fixed_alpha)), persistent=False)
+
+    def _impl(self, lq01):
+        x = lq01 * 2 - 1
+        sf = self.vae.config.scaling_factor
+        z = self.vae.encode(x).latents * sf
+        pred = self.tr(hidden_states=z, timestep=self.ts,
+                       pooled_projections=self.pooled, return_dict=False)[0]
+        if self.lrrb is not None:
+            pred = pred + self.lrrb(torch.cat([z, pred], dim=1))
+        if self.alpha_gate is None:
+            alpha = self.fixed_alpha.to(dtype=pred.dtype).reshape(1, 1, 1, 1)
+        else:
+            alpha = self.alpha_gate(z).to(dtype=pred.dtype)
+        img = self.vae.decode((z - alpha * pred) / sf, return_dict=False)[0]
+        return (img * 0.5 + 0.5).clamp(0, 1), alpha
+
+    def forward(self, lq01):
+        return self._impl(lq01)[0]
+
+    def forward_train(self, lq01):
+        return self._impl(lq01)
+
+
+class SubmitModel(nn.Module):
+    """-1..1 input/output wrapper used for the official JIT runner."""
+    def __init__(self, core: TinySRCore):
+        super().__init__()
+        self.core = core
+
+    def forward(self, x_m11):
+        # Avoid encode/decode duplication while preserving the runner's value range.
+        y01 = self.core((x_m11 + 1.0) * 0.5)
+        return (y01 * 2.0 - 1.0).clamp(-1, 1)
+
+
+def lora_config() -> LoraConfig:
+    return LoraConfig(r=64, lora_alpha=64, init_lora_weights="gaussian",
+                      target_modules=LORA_TARGETS)
+
+
+def _build_raw(device, dtype, add_adapter: bool):
+    tr = TinySD3Transformer2DModel.from_pretrained(
+        os.path.join(TS, "checkpoint", "tinybackbone", "prune-12-merge-tinysr"),
+        subfolder="transformer", torch_dtype=dtype, low_cpu_mem_usage=False,
+        ignore_mismatched_sizes=True)
+    vae = AutoencoderTiny.from_pretrained(
+        os.path.join(TS, "checkpoint", "vae", "separable"), torch_dtype=dtype)
+    if add_adapter:
+        tr.add_adapter(lora_config())
+        tr.enable_adapters()
+        load_lora_state_dict(StableDiffusion3Pipeline.lora_state_dict(
+            os.path.join(TS, "checkpoint", "tinysr"),
+            weight_name="transformer.safetensors"), tr)
+    vae = vae.to(device, dtype=dtype)
+    tr = tr.to(device, dtype=dtype)
+    ts = torch.tensor([1000.0], device=device, dtype=dtype)
+    pooled = torch.load(os.path.join(TS, "dataset", "default", "pool_embeds.pt"),
+                        map_location=device).to(dtype=dtype)
+    return vae, tr, ts, pooled
+
+
+@torch.no_grad()
+def warmup(vae, tr, ts, pooled, device, dtype):
+    tr.eval()
+    w = torch.rand(1, 3, 512, 512, device=device, dtype=dtype) * 2 - 1
+    z = vae.encode(w).latents * vae.config.scaling_factor
+    _ = tr(hidden_states=z, timestep=ts, pooled_projections=pooled, return_dict=False)
+    if not getattr(tr, "initialized", False):
+        raise RuntimeError("TinySR lazy cache was not initialized")
+
+
+def _copy_matching(module: nn.Module, state: Optional[Dict[str, torch.Tensor]], prefix: str = "") -> int:
+    if not state:
+        return 0
+    cur = module.state_dict()
+    hit = 0
+    for k, v in state.items():
+        kk = k[len(prefix):] if prefix and k.startswith(prefix) else k
+        if kk in cur and tuple(cur[kk].shape) == tuple(v.shape):
+            cur[kk].copy_(v.to(dtype=cur[kk].dtype))
+            hit += 1
+    return hit
+
+
+
+def _require_loaded(label: str, state, hit: int, min_fraction: float = 0.90):
+    if not state:
+        return
+    total = len(state)
+    frac = hit / max(total, 1)
+    if frac < min_fraction:
+        raise RuntimeError(f"{label} checkpoint mismatch: loaded {hit}/{total} ({frac:.1%})")
+
+def read_checkpoint(path: Optional[str]):
+    if not path:
+        return None
+    if not os.path.exists(path):
+        raise FileNotFoundError(path)
+    return torch.load(path, map_location="cpu", weights_only=False)
+
+
+def build_model(ckpt_path: Optional[str] = None, *, device=None, dtype=torch.float16,
+                merge_lora: bool = False, alpha_mode: str = "auto",
+                fixed_alpha: float = 1.0, adaptive_alpha: bool = False,
+                alpha_min: float = 0.70, alpha_max: float = 1.10,
+                alpha_hidden: int = 32, init_alpha: float = 1.0,
+                use_lrrb: bool = False) -> Tuple[TinySRCore, dict]:
+    """Build one canonical model from any v2/legacy TinySR checkpoint.
+
+    alpha_mode:
+      auto     -> use checkpoint gate if present, else caller adaptive_alpha/fixed_alpha
+      fixed    -> ignore any saved gate and use fixed_alpha
+      adaptive -> force a gate (load saved weights when available)
+    """
+    device = device or torch.device("cuda")
+    sd = read_checkpoint(ckpt_path) or {}
+    is_merged = sd.get("merged_tr") is not None
+    vae, tr, ts, pooled = _build_raw(device, dtype, add_adapter=not is_merged)
+    warmup(vae, tr, ts, pooled, device, dtype)
+
+    report = {"checkpoint": ckpt_path, "step": sd.get("step"), "merged": bool(is_merged)}
+    if is_merged:
+        report["merged_tr_hit"] = _copy_matching(tr, sd["merged_tr"])
+        _require_loaded("merged_tr", sd["merged_tr"], report["merged_tr_hit"])
+    else:
+        report["lora_hit"] = _copy_matching(tr, sd.get("lora", {}))
+        report["dense_tr_hit"] = _copy_matching(tr, sd.get("dense_tr", {}))
+        _require_loaded("lora", sd.get("lora"), report["lora_hit"])
+        _require_loaded("dense_tr", sd.get("dense_tr"), report["dense_tr_hit"])
+
+    report["vae_decoder_hit"] = _copy_matching(vae, sd.get("vae_decoder", {}))
+    _require_loaded("vae_decoder", sd.get("vae_decoder"), report["vae_decoder_hit"])
+
+    lrrb = None
+    if use_lrrb or sd.get("lrrb") is not None:
+        lrrb = LRRB(in_ch=2 * int(vae.config.latent_channels)).to(device)
+        if sd.get("lrrb") is not None:
+            report["lrrb_hit"] = _copy_matching(lrrb, sd["lrrb"])
+            _require_loaded("lrrb", sd["lrrb"], report["lrrb_hit"])
+
+    saved_cfg = sd.get("alpha_config") or {}
+    saved_gate = sd.get("alpha_gate")
+    if alpha_mode not in ("auto", "fixed", "adaptive"):
+        raise ValueError(f"bad alpha_mode: {alpha_mode}")
+    want_gate = (alpha_mode == "adaptive") or (
+        alpha_mode == "auto" and (saved_gate is not None or adaptive_alpha))
+    gate = None
+    if want_gate:
+        gate = SeverityGate(
+            channels=int(vae.config.latent_channels),
+            hidden=int(saved_cfg.get("hidden", alpha_hidden)),
+            alpha_min=float(saved_cfg.get("min", alpha_min)),
+            alpha_max=float(saved_cfg.get("max", alpha_max)),
+            init_alpha=float(saved_cfg.get("init", init_alpha)),
+        ).to(device)
+        if saved_gate is not None:
+            report["alpha_gate_hit"] = _copy_matching(gate, saved_gate)
+            _require_loaded("alpha_gate", saved_gate, report["alpha_gate_hit"])
+        report["alpha_mode"] = "adaptive"
+    else:
+        report["alpha_mode"] = "fixed"
+        report["fixed_alpha"] = float(fixed_alpha)
+
+    if merge_lora and not is_merged:
+        tr = tr.merge_and_unload()
+        report["lora_merged"] = True
+
+    core = TinySRCore(vae, tr, ts, pooled, lrrb=lrrb,
+                      alpha_gate=gate, fixed_alpha=fixed_alpha).to(device)
+    # Preserve provenance needed for *continued* fine-tuning. Without this,
+    # saving a run initialized from a dense/decoder/merged checkpoint could
+    # silently drop adaptations that were loaded but not re-unfrozen this run.
+    core._source_merged = bool(is_merged or merge_lora)
+    core._loaded_dense_names = set((sd.get("dense_tr") or {}).keys())
+    core._loaded_vae_decoder = bool(sd.get("vae_decoder"))
+    return core, report
+
+
+def checkpoint_payload(model: TinySRCore, step: int, *, train_vae_decoder=False,
+                       dense_names=None, args_dict=None):
+    dense_names = set(dense_names or []) | set(getattr(model, "_loaded_dense_names", set()))
+    tr_sd = model.tr.state_dict()
+    source_merged = bool(getattr(model, "_source_merged", False))
+    dense = {k: v.detach().cpu() for k, v in tr_sd.items() if k in dense_names}
+    save_decoder = bool(train_vae_decoder or getattr(model, "_loaded_vae_decoder", False))
+    payload = {
+        "format_version": 3,
+        "step": int(step),
+        # A merged source has no recoverable LoRA factorization; preserve the
+        # exact dense Transformer instead of accidentally falling back to base.
+        "merged_tr": ({k: v.detach().cpu() for k, v in tr_sd.items()}
+                      if source_merged else None),
+        "lora": (None if source_merged else
+                 {k: v.detach().cpu() for k, v in tr_sd.items() if "lora_" in k}),
+        "dense_tr": (None if source_merged else (dense or None)),
+        "vae_decoder": ({k: v.detach().cpu() for k, v in model.vae.state_dict().items()
+                         if k.startswith("decoder")} if save_decoder else None),
+        "lrrb": (model.lrrb.state_dict() if model.lrrb is not None else None),
+        "alpha_gate": (model.alpha_gate.state_dict() if model.alpha_gate is not None else None),
+        "alpha_config": ({"min": model.alpha_gate.alpha_min,
+                          "max": model.alpha_gate.alpha_max,
+                          "hidden": model.alpha_gate.fc1.out_features,
+                          "init": float(model.fixed_alpha.item())}
+                         if model.alpha_gate is not None else None),
+        "train_args": args_dict or {},
+    }
+    return payload

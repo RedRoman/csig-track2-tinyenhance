@@ -1,0 +1,14 @@
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.
+  deprecate("Transformer2DModelOutput", "1.0.0", deprecation_message)
+=== 不同 timestep 与 lambda 下 UNet 输出的差异 ===
+   lam    ts       |m|   |z-out|      与LQ相对差
+   0.0     1    0.2402    0.0096     101.42%
+   0.0   999    0.4062    5.0938     137.18%
+   1.0     1    0.1681    0.0065     101.42%
+   1.0   999    0.3298    4.8906     174.79%
+
+合成层数 258
+
+判据：若 lam=0 与 lam=1 的 |m| 几乎相同 -> LoRA 未生效
+     若 |z-out| 极小 -> scheduler.step 在该 timestep 下几乎不改变 latent
+DP_EXIT:0

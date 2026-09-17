@@ -1,0 +1,30 @@
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.
+  deprecate("Transformer2DModelOutput", "1.0.0", deprecation_message)
+配对 crop 数：12
+Loaded combined weights from /cache/zihaohe/csig_isr/NTIRE2026/model_zoo/team11_SamsungAICamera/team11_mobile_samsung/weights.pth
+Samsung TAESD decoder 1.22M | SD2.1 VAE decoder 49.49M
+
+========================================================================================
+目标 A：直接表达 GT 整幅图（当前非残差结构）
+========================================================================================
+  Samsung TAESD (1.22M)  上限 = 34.797 dB
+  SD2.1 VAE     (49.5M)  上限 = 10.705 dB
+
+========================================================================================
+目标 B：只表达残差 GT-LQ（像素域残差结构 out = LQ + decoder(z)）
+========================================================================================
+  Samsung TAESD (1.22M)  残差重建 PSNR = 33.318 dB
+  SD2.1 VAE     (49.5M)  残差重建 PSNR = 29.455 dB
+  (残差重建 PSNR 即最终图像 PSNR，因 out=LQ+rec_res 的误差 = 残差重建误差)
+
+========================================================================================
+汇总（LQ 基线 = 26.93 dB，必须超过）
+========================================================================================
+  结构                                       上限 dB       vs 基线        判定
+  --------------------------------------------------------------------
+  LQ 什么都不做                                26.562       +0.00        基线
+  非残差 + Samsung TAESD 1.22M               34.797       +8.23        可用
+  非残差 + SD2.1 VAE 49.5M                   10.705      -15.86        净亏
+  像素残差 + Samsung TAESD 1.22M              33.318       +6.76        可用
+  像素残差 + SD2.1 VAE 49.5M                  29.455       +2.89        可用
+DC_EXIT:0

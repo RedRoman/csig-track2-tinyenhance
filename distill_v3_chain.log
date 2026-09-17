@@ -1,0 +1,150 @@
+##### 1/3 生成 teacher_v3 蒸馏数据 20000 对 #####
+源图 20000 张，输出 /cache/zihaohe/distill_data/teacher_v3
+DiT 载入：缺失 0 多余 4
+LoRA 目标模块: ['k_linear', 'proj', 'q_linear', 'qkv', 'v_linear', 'w12', 'w3']
+  微调 ckpt 已装载：LoRA 450 个张量（未匹配 0），含 LightDecoder
+  400/20000  74s  预计总计 61.3 分钟
+  800/20000  143s  预计总计 59.6 分钟
+  1200/20000  214s  预计总计 59.4 分钟
+  1600/20000  289s  预计总计 60.3 分钟
+  2000/20000  362s  预计总计 60.4 分钟
+  2400/20000  438s  预计总计 60.8 分钟
+  2800/20000  503s  预计总计 59.8 分钟
+  3200/20000  566s  预计总计 59.0 分钟
+  3600/20000  632s  预计总计 58.6 分钟
+  4000/20000  706s  预计总计 58.8 分钟
+  4400/20000  779s  预计总计 59.0 分钟
+  4800/20000  856s  预计总计 59.4 分钟
+  5200/20000  930s  预计总计 59.6 分钟
+  5600/20000  1004s  预计总计 59.8 分钟
+  6000/20000  1075s  预计总计 59.7 分钟
+  6400/20000  1150s  预计总计 59.9 分钟
+  6800/20000  1224s  预计总计 60.0 分钟
+  7200/20000  1309s  预计总计 60.6 分钟
+  7600/20000  1398s  预计总计 61.3 分钟
+  8000/20000  1497s  预计总计 62.4 分钟
+  8400/20000  1599s  预计总计 63.5 分钟
+  8800/20000  1699s  预计总计 64.4 分钟
+  9200/20000  1794s  预计总计 65.0 分钟
+  9600/20000  1892s  预计总计 65.7 分钟
+  10000/20000  1992s  预计总计 66.4 分钟
+  10400/20000  2089s  预计总计 66.9 分钟
+  10800/20000  2184s  预计总计 67.4 分钟
+  11200/20000  2284s  预计总计 68.0 分钟
+  11600/20000  2377s  预计总计 68.3 分钟
+  12000/20000  2483s  预计总计 69.0 分钟
+  12400/20000  2588s  预计总计 69.6 分钟
+  12800/20000  2691s  预计总计 70.1 分钟
+  13200/20000  2793s  预计总计 70.5 分钟
+  13600/20000  2900s  预计总计 71.1 分钟
+  14000/20000  3002s  预计总计 71.5 分钟
+  14400/20000  3097s  预计总计 71.7 分钟
+  14800/20000  3197s  预计总计 72.0 分钟
+  15200/20000  3294s  预计总计 72.2 分钟
+  15600/20000  3389s  预计总计 72.4 分钟
+  16000/20000  3482s  预计总计 72.5 分钟
+  16400/20000  3578s  预计总计 72.7 分钟
+  16800/20000  3679s  预计总计 73.0 分钟
+  17200/20000  3780s  预计总计 73.3 分钟
+  17600/20000  3875s  预计总计 73.4 分钟
+  18000/20000  3971s  预计总计 73.5 分钟
+  18400/20000  4070s  预计总计 73.7 分钟
+  18800/20000  4171s  预计总计 73.9 分钟
+  19200/20000  4270s  预计总计 74.1 分钟
+  19600/20000  4373s  预计总计 74.4 分钟
+  20000/20000  4474s  预计总计 74.6 分钟
+完成 20000 张，用时 74.6 分钟
+##### 2/3 distill_v3 #####
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['scale', 'transformer_blocks.11.scale_mlp', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.5.shift_mlp', 'transformer_blocks.4.gate_mlp', 'transformer_blocks.10.scale_msa', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.9.scale_msa', 'transformer_blocks.7.shift_msa', 'transformer_blocks.1.scale_mlp', 'transformer_blocks.8.scale_msa', 'transformer_blocks.0.gate_msa', 'transformer_blocks.4.shift_mlp', 'transformer_blocks.10.gate_msa', 'transformer_blocks.1.shift_msa', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.3.shift_mlp', 'transformer_blocks.6.scale_msa', 'transformer_blocks.5.gate_mlp', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.9.gate_msa', 'transformer_blocks.6.shift_msa', 'transformer_blocks.11.shift_msa', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.1.scale_msa', 'transformer_blocks.7.scale_msa', 'transformer_blocks.11.scale_msa', 'shift', 'transformer_blocks.0.shift_msa', 'transformer_blocks.8.gate_mlp', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.8.shift_msa', 'transformer_blocks.3.shift_msa', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.3.gate_msa', 'transformer_blocks.5.scale_msa', 'transformer_blocks.5.scale_mlp', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.9.shift_msa', 'transformer_blocks.5.shift_msa', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.3.gate_mlp', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.0.gate_mlp', 'transformer_blocks.2.shift_msa', 'transformer_blocks.10.scale_mlp', 'transformer_blocks.6.gate_msa', 'transformer_blocks.2.shift_mlp', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.2.scale_msa', 'transformer_blocks.11.gate_msa', 'transformer_blocks.5.gate_msa', 'transformer_blocks.4.shift_msa', 'transformer_blocks.1.gate_msa', 'transformer_blocks.8.gate_msa', 'transformer_blocks.0.scale_msa', 'transformer_blocks.4.scale_msa', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.6.scale_mlp', 'transformer_blocks.10.shift_msa', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.7.gate_msa', 'transformer_blocks.4.gate_msa', 'transformer_blocks.2.gate_msa', 'transformer_blocks.3.scale_msa', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.8.shift_mlp', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.3.scale_mlp', 'transformer_blocks.7.shift_mlp', 'transformer_blocks.1.gate_mlp']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+load report: {'checkpoint': '/cache/zihaohe/csig_isr/train_out/distill_v2b/best.pth', 'step': 2250, 'merged': False, 'lora_hit': 146, 'dense_tr_hit': 0, 'vae_decoder_hit': 0, 'alpha_mode': 'fixed', 'fixed_alpha': 1.0}
+可训练 21.34 M
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+蒸馏样本 20000 对（教师输出已生成的部分）
+[0] score=3.9003 robust=3.8903 PSNR=27.010
+Traceback (most recent call last):
+  File "/cache/zihaohe/train_distill.py", line 231, in <module>
+    main()
+  File "/cache/zihaohe/train_distill.py", line 197, in main
+    r = 3.0 * M["maniqa"](iq).mean()
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/models/inference_model.py", line 82, in forward
+    output = self.net(target.to(device), **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/maniqa_arch.py", line 202, in forward
+    _x = self.vit(x)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/vision_transformer.py", line 1300, in forward
+    x = self.forward_features(x, attn_mask=attn_mask, is_causal=is_causal)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/vision_transformer.py", line 1250, in forward_features
+    x = self.blocks(x)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
+    return inner()
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in inner
+    result = forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/vision_transformer.py", line 213, in forward
+    x = x + self.drop_path2(self.ls2(self.mlp(self.norm2(x))))
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/layers/mlp.py", line 49, in forward
+    x = self.act(x)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 734, in forward
+    return F.gelu(input, approximate=self.approximate)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 184.00 MiB. GPU 0 has a total capacity of 79.33 GiB of which 57.88 MiB is free. Process 1550469 has 850.00 MiB memory in use. Process 1904560 has 35.09 GiB memory in use. Process 2741363 has 24.13 GiB memory in use. Process 2741362 has 19.20 GiB memory in use. Of the allocated memory 18.55 GiB is allocated by PyTorch, and 117.34 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+##### 3/3 全尺度评测 #####
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+VAE=(出厂 separable)  LATENT_SCALE=1.0  测试图 100 张
+  缺 distill_v3 -> /cache/zihaohe/csig_isr/train_out/distill_v3/best.pth
+
+历史锚点：run8 NR 2.4562 -> 榜 71.54 | combo NR 2.6144 -> 榜 72.6047 | 学弟h75 NR 1.5302 -> 榜 25.3359
+现有模型：ref1 2.5986 | run12 2.5250 | run11 2.4903 | run8 2.4535 | LQ 1.1992
+ALLDONE

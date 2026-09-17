@@ -1,0 +1,36 @@
+[nanny] try=1 gpu=1 free=19194MB 启动
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['transformer_blocks.2.shift_mlp', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.9.shift_msa', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.11.shift_msa', 'transformer_blocks.4.shift_mlp', 'transformer_blocks.8.shift_mlp', 'transformer_blocks.2.scale_msa', 'transformer_blocks.1.shift_msa', 'transformer_blocks.11.scale_msa', 'transformer_blocks.7.shift_msa', 'transformer_blocks.6.shift_msa', 'transformer_blocks.7.scale_msa', 'transformer_blocks.2.gate_msa', 'transformer_blocks.1.scale_mlp', 'transformer_blocks.9.gate_msa', 'transformer_blocks.0.scale_msa', 'transformer_blocks.0.shift_msa', 'transformer_blocks.1.gate_msa', 'scale', 'transformer_blocks.6.gate_msa', 'transformer_blocks.3.scale_msa', 'transformer_blocks.4.scale_msa', 'transformer_blocks.4.shift_msa', 'shift', 'transformer_blocks.8.gate_msa', 'transformer_blocks.5.gate_mlp', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.4.gate_mlp', 'transformer_blocks.3.gate_msa', 'transformer_blocks.10.gate_msa', 'transformer_blocks.5.scale_msa', 'transformer_blocks.6.scale_msa', 'transformer_blocks.2.shift_msa', 'transformer_blocks.9.scale_msa', 'transformer_blocks.3.gate_mlp', 'transformer_blocks.10.scale_mlp', 'transformer_blocks.5.shift_mlp', 'transformer_blocks.8.gate_mlp', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.8.scale_msa', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.5.shift_msa', 'transformer_blocks.6.scale_mlp', 'transformer_blocks.0.gate_msa', 'transformer_blocks.10.shift_msa', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.5.scale_mlp', 'transformer_blocks.7.gate_msa', 'transformer_blocks.11.gate_msa', 'transformer_blocks.1.scale_msa', 'transformer_blocks.0.gate_mlp', 'transformer_blocks.3.scale_mlp', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.1.gate_mlp', 'transformer_blocks.4.gate_msa', 'transformer_blocks.3.shift_mlp', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.5.gate_msa', 'transformer_blocks.10.scale_msa', 'transformer_blocks.8.shift_msa', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.11.scale_mlp', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.7.shift_mlp', 'transformer_blocks.3.shift_msa']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+baseline_b     S=4.1611  lpips=0.3507 dists=0.3002 niqe=3.325 musiq=62.82 maniqa=0.6624 clipiqa=0.8538
+hflip_x2       S=4.0046  lpips=0.3404 dists=0.2790 niqe=3.342 musiq=54.73 maniqa=0.5941 clipiqa=0.8167
+dihedral_x4    S=3.6417  lpips=0.3378 dists=0.2673 niqe=3.948 musiq=46.63 maniqa=0.4707 clipiqa=0.7046
+dihedral_x8    S=3.4256  lpips=0.3309 dists=0.2621 niqe=4.136 musiq=43.00 maniqa=0.4071 clipiqa=0.5951
+cas_0.1        S=4.1748  lpips=0.3563 dists=0.3013 niqe=3.347 musiq=63.06 maniqa=0.6808 clipiqa=0.8557
+cas_0.2        S=4.1732  lpips=0.3619 dists=0.3023 niqe=3.370 musiq=63.25 maniqa=0.6853 clipiqa=0.8564
+x2_cas0.1      S=4.0309  lpips=0.3445 dists=0.2800 niqe=3.334 musiq=55.66 maniqa=0.6088 clipiqa=0.8234
+TTA_SWEEP_DONE
+ALLDONE

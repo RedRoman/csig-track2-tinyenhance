@@ -1,0 +1,54 @@
+version: 3
+principles:
+  - "Canonical evaluator: average component metrics first, then compute proxy score."
+  - "Training length and LR schedule horizon are independent variables."
+  - "Do not increase NIQE pressure until metric-variant and HF diagnostics are run."
+  - "GT-aware HF regularization is train-time only and disabled by default."
+
+canonical_validation:
+  crops_per_case: 12
+  total_crops: 36
+  psnr: "Y-channel via pyiqa"
+  robust_beta: 0.15
+  select_by: robust_score
+
+scheduler_ablation:
+  init: train_out/run12_iqa30/best.pth
+  steps: 450
+  lr: 1.0e-5
+  niqe_weight: 2.0
+  cosine_horizons: [450, 900, 1800]
+  include_constant_lr: true
+
+safe_niqe:
+  init: train_out/run12_iqa30/best.pth
+  steps: 600
+  lr: 1.0e-5
+  niqe_weight: 0.5
+  horizons: [900, 1800]
+  include_constant_lr: true
+
+fr_repair:
+  init: train_out/niqe_long/best.pth
+  steps: 300
+  lr: 1.0e-6
+  lr_horizon: 900
+  profiles:
+    mild: {w_iqa: 1.5, w_niqe: 0.5, w_lpips: 1.25, w_dists: 1.75}
+    balanced: {w_iqa: 1.0, w_niqe: 0.25, w_lpips: 1.5, w_dists: 2.0}
+    strong: {w_iqa: 0.5, w_niqe: 0.0, w_lpips: 2.0, w_dists: 2.5}
+
+hf_overshoot:
+  enabled_by_default: false
+  blur_kernel: 5
+  local_kernel: 9
+  margin: 0.35
+  slack: 2.0e-4
+  smooth_quantile: 0.35
+  mask_softness: 0.20
+  calibration: "Run grad_diagnostics.py before choosing w_hf_over."
+
+zero_overhead_ft:
+  decoder_only: true
+  dense_last_n: 2
+  note: "Both change weights but add no inference operators. Re-run after the v2 AMP fix."

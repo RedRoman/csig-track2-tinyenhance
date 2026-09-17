@@ -1,0 +1,36 @@
+{
+  "metrics": {
+    "lpips": 0.3503524089852969,
+    "dists": 0.30502453446388245,
+    "niqe": 6.070777999765955,
+    "musiq": 71.32207976447211,
+    "maniqa": 0.5555530819627974,
+    "clipiqa": 0.8850580950578054,
+    "psnr": 26.408355500962998
+  },
+  "score": 3.891377231239549,
+  "robust_score": 3.8804793029121663,
+  "case": {
+    "case1": 3.9138656129382277,
+    "case2": 3.988857228926468,
+    "case3": 3.8115931787799924
+  },
+  "tier": {
+    "medium": 3.983060236658066,
+    "light": 3.767061356643381,
+    "heavy": 3.9461945206753506
+  },
+  "alpha_mean": 1.2001953125,
+  "alpha_std": 0.0,
+  "metric_names": {
+    "lpips": "lpips",
+    "dists": "dists",
+    "niqe": "niqe",
+    "musiq": "musiq",
+    "maniqa": "maniqa-pipal",
+    "clipiqa": "clipiqa"
+  },
+  "checkpoint": "/cache/zihaohe/csig_isr/train_out/v2_soup/soup_0.00.pth",
+  "alpha_mode": "fixed",
+  "alpha": 1.2
+}

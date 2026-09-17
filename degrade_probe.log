@@ -1,0 +1,11 @@
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+链                         LPIPS    DISTS
+legacy(现行)               0.3904   0.2283
+A: σ2.0/q50/bil120       0.5166   0.2816
+B: σ2.6/q40/bil150       0.5699   0.3098
+C: σ3.2/q30/bil180       0.6067   0.3391
+真实验证域(目标)                0.4262   0.2942
+ALLDONE

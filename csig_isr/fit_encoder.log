@@ -1,0 +1,15 @@
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.
+  deprecate("Transformer2DModelOutput", "1.0.0", deprecation_message)
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+训练样本 400 张
+VAE encoder 基准 4.664 ms
+
+结构                   参数     时延ms      加速      拟合R²      相对误差
+--------------------------------------------------------------
+1x1 conv           3.1K    0.043  108.2x    0.9141    26.72%
+1层 c32            55.9K    0.140   33.4x    0.9451    21.85%
+1层 c64           111.7K    0.103   45.3x    0.9564    19.36%
+2层 c64           148.6K    0.157   29.7x    0.9719    15.62%
+3层 c64           185.6K    0.236   19.8x    0.9717    15.66%
+2层 c128          371.0K    0.195   23.9x    0.9687    16.53%
+FE_EXIT:0

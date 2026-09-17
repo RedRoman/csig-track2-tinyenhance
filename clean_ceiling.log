@@ -1,0 +1,13 @@
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/MANIQA_PIPAL-ae6d356b.pth
+验证集 GT（真值）                 niqe=4.792 musiq=40.67 maniqa=0.5853 clipiqa=0.4618  NR=1.9746
+GT + 非锐化掩模 0.5             niqe=4.532 musiq=42.19 maniqa=0.6070 clipiqa=0.4531  NR=2.0288
+GT + 非锐化掩模 1.0             niqe=4.341 musiq=41.95 maniqa=0.6109 clipiqa=0.4500  NR=2.0463
+GT + 非锐化掩模 2.0             niqe=4.254 musiq=34.43 maniqa=0.6066 clipiqa=0.4566  NR=1.9821
+DIV2K-Val 原图（12张）          niqe=5.082 musiq=51.79 maniqa=0.4340 clipiqa=0.5088  NR=1.9525
+LSDIR 512 原图（24张）          niqe=2.979 musiq=72.13 maniqa=0.6796 clipiqa=0.6960  NR=2.7989
+
+对照：distill_v1 测试集 NR 2.6960 | vosr_cap 2.9524 | teacher2(整片仙人掌) 3.293 | 原始LQ 1.1992
+ALLDONE

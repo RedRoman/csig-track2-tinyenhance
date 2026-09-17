@@ -1,0 +1,22 @@
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/MANIQA_PIPAL-ae6d356b.pth
+裁块 200 张，family=vosr
+DiT 载入：缺失 0 多余 4
+LoRA 目标模块: ['k_linear', 'proj', 'q_linear', 'qkv', 'v_linear', 'w12', 'w3']
+  vosr_cap       均分 4.6755
+DiT 载入：缺失 0 多余 4
+LoRA 目标模块: ['k_linear', 'proj', 'q_linear', 'qkv', 'v_linear', 'w12', 'w3']
+  vosr_cap2      均分 4.6325
+DiT 载入：缺失 0 多余 4
+LoRA 目标模块: ['k_linear', 'proj', 'q_linear', 'qkv', 'v_linear', 'w12', 'w3']
+  vosr_iqa1      均分 4.4080
+已存 /cache/zihaohe/csig_isr/eval_out/envelope_vosr.json
+
+参与模型 3 个：vosr_cap, vosr_cap2, vosr_iqa1
+最强单模型  vosr_cap  4.6755
+逐块 argmax 包络        4.6961
+包络增益                +0.0207
+每个模型当选次数： {'vosr_cap': 140, 'vosr_cap2': 60}
+ALLDONE

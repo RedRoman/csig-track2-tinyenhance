@@ -1,0 +1,82 @@
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.
+  deprecate("Transformer2DModelOutput", "1.0.0", deprecation_message)
+Metric config: {'lpips': 'lpips', 'dists': 'dists', 'niqe': 'niqe', 'musiq': 'musiq', 'maniqa': 'maniqa-pipal', 'clipiqa': 'clipiqa'}
+train images=60493 repeat=1 degradation=legacy
+/cache/zihaohe/csig_isr/TinySR/models/tinysr/tinysd3.py:74: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.register_buffer("pos_embed", torch.load("dataset/cache/pos_embed.pt"))
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized: ['transformer_blocks.5.shift_mlp', 'transformer_blocks.7.gate_msa', 'transformer_blocks.5.gate_mlp', 'transformer_blocks.6.scale_msa', 'transformer_blocks.7.gate_mlp', 'transformer_blocks.3.shift_msa', 'transformer_blocks.8.scale_mlp', 'transformer_blocks.10.scale_msa', 'transformer_blocks.1.shift_msa', 'transformer_blocks.11.gate_mlp', 'transformer_blocks.8.shift_msa', 'transformer_blocks.8.gate_mlp', 'transformer_blocks.0.scale_mlp', 'transformer_blocks.4.gate_msa', 'transformer_blocks.1.scale_mlp', 'transformer_blocks.6.shift_mlp', 'transformer_blocks.5.gate_msa', 'transformer_blocks.4.shift_msa', 'transformer_blocks.3.gate_msa', 'transformer_blocks.2.shift_msa', 'transformer_blocks.6.scale_mlp', 'transformer_blocks.7.scale_mlp', 'transformer_blocks.2.scale_mlp', 'transformer_blocks.3.scale_msa', 'scale', 'transformer_blocks.0.shift_mlp', 'transformer_blocks.0.shift_msa', 'transformer_blocks.9.scale_mlp', 'transformer_blocks.10.shift_msa', 'transformer_blocks.7.shift_mlp', 'transformer_blocks.0.gate_mlp', 'transformer_blocks.5.scale_msa', 'transformer_blocks.11.scale_msa', 'transformer_blocks.1.shift_mlp', 'transformer_blocks.4.scale_mlp', 'transformer_blocks.6.gate_msa', 'transformer_blocks.11.shift_msa', 'transformer_blocks.2.shift_mlp', 'transformer_blocks.10.shift_mlp', 'transformer_blocks.6.shift_msa', 'transformer_blocks.10.gate_msa', 'transformer_blocks.4.scale_msa', 'transformer_blocks.4.gate_mlp', 'shift', 'transformer_blocks.9.gate_mlp', 'transformer_blocks.11.gate_msa', 'transformer_blocks.1.gate_mlp', 'transformer_blocks.11.scale_mlp', 'transformer_blocks.3.shift_mlp', 'transformer_blocks.0.gate_msa', 'transformer_blocks.9.scale_msa', 'transformer_blocks.7.shift_msa', 'transformer_blocks.10.gate_mlp', 'transformer_blocks.8.gate_msa', 'transformer_blocks.7.scale_msa', 'transformer_blocks.5.shift_msa', 'transformer_blocks.4.shift_mlp', 'transformer_blocks.5.scale_mlp', 'transformer_blocks.9.gate_msa', 'transformer_blocks.11.shift_mlp', 'transformer_blocks.9.shift_mlp', 'transformer_blocks.9.shift_msa', 'transformer_blocks.2.gate_msa', 'transformer_blocks.0.scale_msa', 'transformer_blocks.6.gate_mlp', 'transformer_blocks.3.gate_mlp', 'transformer_blocks.2.gate_mlp', 'transformer_blocks.10.scale_mlp', 'transformer_blocks.1.gate_msa', 'transformer_blocks.8.scale_msa', 'transformer_blocks.1.scale_msa', 'transformer_blocks.2.scale_msa', 'transformer_blocks.8.shift_mlp', 'transformer_blocks.3.scale_mlp']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of TinySD3Transformer2DModel were not initialized from the model checkpoint at /cache/zihaohe/csig_isr/TinySR/checkpoint/tinybackbone/prune-12-merge-tinysr and are newly initialized because the shapes did not match:
+- pos_embed.pos_embed: found shape torch.Size([1, 36864, 1536]) in the checkpoint and torch.Size([1, 1024, 1536]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The config attributes {'block_out_channels': [64, 64, 64, 64]} were passed to AutoencoderTiny, but are not expected and will be ignored. Please verify your config.json configuration file.
+/cache/zihaohe/csig_isr/v3/code/tinysr_runtime.py:223: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  pooled = torch.load(os.path.join(TS, "dataset", "default", "pool_embeds.pt"),
+loading pos_embed
+del self.time_text_embed
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm1
+del self.norm_out
+del self.temb
+load report: {'checkpoint': '/cache/zihaohe/csig_isr/train_out/run12_iqa30/best.pth', 'step': 1200, 'merged': False, 'lora_hit': 146, 'dense_tr_hit': 0, 'vae_decoder_hit': 0, 'alpha_mode': 'fixed', 'fixed_alpha': 1.0}
+trainable main=21.34M dense=0.00M schedule=cosine horizon=1500 floor=0.05
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/clip/clip.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/cache/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/arch_util.py:118: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location=torch.device("cpu"))
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/MANIQA_PIPAL-ae6d356b.pth
+validation crops=36 selection=score beta=0.15
+[0] score=3.8658 robust=3.8501 PSNR=26.508 alpha=1.000±0.000 case={'case1': 3.778034825694567, 'case2': 4.013535906572128, 'case3': 3.8059631981759208} tier={'medium': 3.9392984269624955, 'light': 3.7233858010914, 'heavy': 3.9168569835661273}
+[50/1500] loss=0.4376 l1=0.0492 lp=0.2115 dists=0.1275 fid=0.0068 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.995e-05 0.30s/it
+[100/1500] loss=0.5056 l1=0.0593 lp=0.2533 dists=0.1417 fid=0.0067 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.979e-05 0.27s/it
+[150/1500] loss=0.4705 l1=0.0787 lp=0.1987 dists=0.1475 fid=0.0074 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.954e-05 0.28s/it
+[200/1500] loss=0.4035 l1=0.0447 lp=0.1655 dists=0.1372 fid=0.0065 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.918e-05 0.27s/it
+[250/1500] loss=0.3869 l1=0.0392 lp=0.1634 dists=0.1289 fid=0.0070 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.873e-05 0.27s/it
+[val 250] score=3.4533 robust=3.4170 PSNR=27.948 alpha=1.000±0.000 case={'case1': 3.3667545653828697, 'case2': 3.7836024423152352, 'case3': 3.2096242106278208} tier={'medium': 3.4974943411623, 'light': 3.394978652334526, 'heavy': 3.4589652507601185}
+[300/1500] loss=0.4563 l1=0.0729 lp=0.2268 dists=0.1221 fid=0.0066 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.819e-05 0.42s/it
+[350/1500] loss=0.4365 l1=0.0651 lp=0.2070 dists=0.1243 fid=0.0070 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.756e-05 0.40s/it
+[400/1500] loss=0.4158 l1=0.0693 lp=0.1856 dists=0.1223 fid=0.0081 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.686e-05 0.38s/it
+[450/1500] loss=0.3894 l1=0.0508 lp=0.1663 dists=0.1245 fid=0.0073 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.608e-05 0.37s/it
+[500/1500] loss=0.3776 l1=0.0470 lp=0.1610 dists=0.1226 fid=0.0062 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.525e-05 0.36s/it
+[val 500] score=3.4077 robust=3.3648 PSNR=28.041 alpha=1.000±0.000 case={'case1': 3.2683244991773415, 'case2': 3.805868132502605, 'case3': 3.1489334039883947} tier={'medium': 3.4776061593838863, 'light': 3.3699217479421097, 'heavy': 3.366624427388865}
+[550/1500] loss=0.4038 l1=0.0604 lp=0.1702 dists=0.1282 fid=0.0074 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.436e-05 0.43s/it
+[600/1500] loss=0.3898 l1=0.0666 lp=0.1563 dists=0.1257 fid=0.0077 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.344e-05 0.41s/it
+[650/1500] loss=0.4520 l1=0.0609 lp=0.2083 dists=0.1349 fid=0.0072 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.248e-05 0.40s/it
+[700/1500] loss=0.3862 l1=0.0631 lp=0.1741 dists=0.1131 fid=0.0073 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.149e-05 0.39s/it
+[750/1500] loss=0.4159 l1=0.0539 lp=0.1719 dists=0.1381 fid=0.0066 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.050e-05 0.38s/it
+[val 750] score=3.2778 robust=3.2294 PSNR=28.068 alpha=1.000±0.000 case={'case1': 3.1204540145044946, 'case2': 3.727767358083626, 'case3': 2.9853171746219767} tier={'medium': 3.3637738270582602, 'light': 3.273383003771305, 'heavy': 3.246797757204791}
+[800/1500] loss=0.3694 l1=0.0371 lp=0.1649 dists=0.1171 fid=0.0069 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=9.507e-06 0.43s/it
+[850/1500] loss=0.5339 l1=0.0585 lp=0.2839 dists=0.1413 fid=0.0059 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=8.525e-06 0.42s/it
+[900/1500] loss=0.3905 l1=0.0528 lp=0.1835 dists=0.1143 fid=0.0061 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=7.564e-06 0.41s/it
+[950/1500] loss=0.3589 l1=0.0414 lp=0.1543 dists=0.1166 fid=0.0060 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=6.636e-06 0.40s/it
+[1000/1500] loss=0.3665 l1=0.0283 lp=0.1306 dists=0.1411 fid=0.0068 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=5.750e-06 0.39s/it
+[val 1000] score=3.2336 robust=3.1842 PSNR=28.180 alpha=1.000±0.000 case={'case1': 3.1103364438623324, 'case2': 3.6848238178891113, 'case3': 2.9057102876550815} tier={'medium': 3.311362814802054, 'light': 3.2227053204043346, 'heavy': 3.1610535701704277}
+[1050/1500] loss=0.3607 l1=0.0561 lp=0.1570 dists=0.1094 fid=0.0077 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=4.916e-06 0.43s/it
+[1100/1500] loss=0.3713 l1=0.0567 lp=0.1594 dists=0.1169 fid=0.0054 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=4.143e-06 0.42s/it
+[1150/1500] loss=0.3626 l1=0.0447 lp=0.1564 dists=0.1165 fid=0.0061 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=3.440e-06 0.42s/it
+[1200/1500] loss=0.3801 l1=0.0414 lp=0.1713 dists=0.1166 fid=0.0088 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=2.814e-06 0.41s/it
+[1250/1500] loss=0.3496 l1=0.0475 lp=0.1453 dists=0.1136 fid=0.0069 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=2.273e-06 0.40s/it
+[val 1250] score=3.1889 robust=3.1358 PSNR=28.133 alpha=1.000±0.000 case={'case1': 3.0463839742969845, 'case2': 3.675429908131494, 'case3': 2.8447494023686017} tier={'medium': 3.266134441781324, 'light': 3.2092983470857144, 'heavy': 3.1115861829562506}
+[1300/1500] loss=0.4365 l1=0.0344 lp=0.1864 dists=0.1502 fid=0.0051 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.821e-06 0.43s/it
+[1350/1500] loss=0.4534 l1=0.0581 lp=0.2079 dists=0.1377 fid=0.0067 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.465e-06 0.43s/it
+[1400/1500] loss=0.4203 l1=0.0630 lp=0.1895 dists=0.1261 fid=0.0068 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.208e-06 0.42s/it
+[1450/1500] loss=0.3648 l1=0.0347 lp=0.1527 dists=0.1242 fid=0.0057 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.052e-06 0.42s/it
+[1500/1500] loss=0.3876 l1=0.0597 lp=0.1691 dists=0.1184 fid=0.0073 IQA=0.0000 clip=nan maniqa=nan musiq=nan niqe=nan hf=0.000000 hfR=nan alpha=1.000 prior=0.0000 lr=1.000e-06 0.41s/it
+[val 1500] score=3.2125 robust=3.1599 PSNR=28.124 alpha=1.000±0.000 case={'case1': 3.075056488710392, 'case2': 3.6937932723034197, 'case3': 2.868546744585595} tier={'medium': 3.2906701464589596, 'light': 3.2228670176457275, 'heavy': 3.141553902096776}
+done. best score=3.8658
+ALLDONE
