@@ -1,0 +1,19 @@
+Loading pretrained model LPIPS from /root/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /root/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /root/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /root/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+  20/100
+  40/100
+  60/100
+  80/100
+  100/100
+pp                FR     dFR  testNR     dNR      dS  niqe musiq maniqa clipiqa
+none          1.3222 +0.0000  2.7675 +0.0000 +0.0000  3.700 45.19 0.7702 0.9154
+us_r4_s05     1.3180 -0.0042  2.7680 +0.0005 -0.0037  3.664 44.89 0.7676 0.9180
+us_r4_s10     1.3139 -0.0083  2.7726 +0.0051 -0.0032  3.635 44.57 0.7705 0.9199
+us_r4_s15     1.3097 -0.0124  2.7792 +0.0117 -0.0007  3.610 44.24 0.7767 0.9212
+us_r2_s10     1.3158 -0.0063  2.7656 -0.0019 -0.0082  3.668 44.46 0.7686 0.9191
+sat108        1.3211 -0.0010  2.7640 -0.0035 -0.0046  3.709 45.04 0.7676 0.9168
+cas12         1.3143 -0.0079  2.7612 -0.0063 -0.0142  3.696 44.20 0.7699 0.9188
+us10_sat105   1.3134 -0.0087  2.7715 +0.0040 -0.0047  3.640 44.51 0.7700 0.9204
+PP_SWEEP_DONE

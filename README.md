@@ -39,3 +39,22 @@
 - `csig_isr/v3/` — 早期版本代码与配置
 - `viz_*/`、`diag_*.png`、`montage_*.png` — 视觉对比证据图
 - `v2b_finetune_bundle/` — 给学弟的微调交接（不含权重，仅代码+说明）
+
+## 2026-09-18 ~ 09-20 冲刺增量(第二次提交)
+
+榜分 138.41 (L2c) → **152.95 (G4, 09-19 实得)**;终局候选 G5c / G5i 包预测约 154。
+
+**新增自研代码**(仓库根目录):
+- `pix_model.py`:PixUNet2(逐层块数 `nbs`、`norm∈{gn,none}`、非对称解码器 `nbs_dec`)+ `fold_inference()`(固定时间步的 AdaGN 调制常量折进权重,推理期零 temb 开销)
+- `runner_fold.py` / `runner_graph.py`:提交用 runner,链 = 手工 CUDA graph 回放 Inductor(max-autotune-no-cudagraphs)编译体 → max-autotune → reduce-overhead → default → jit → eager,每级带速度与数值自检
+- `train_pix.py`:加 `--nbs/--norm/--nbs_dec/--init_partial`(net2net 生长热启动),`--init_ckpt` 支持 arch_ver 2
+- `build_fold.sh`:一键打包(渲染 output_dir → zip → 解包冒烟)
+- 探针:`speed_probe.py`(kernel 归因)、`arch_probe.py`、`wall_probe.py`(墙钟 vs event)、`time_one.py`+`time_loop.sh`(独占卡按序计时,首尾校漂移)、`prune_probe.py`、`width_probe.py`、`pp_sweep.py`(后处理扫描)、`soup.py`、`viz_cands.py`(肉眼幻觉对比条)、`predict.py`(榜分预测)
+- 启动/运维:`launch_N*.sh`、`watchdog_30674.sh`(定时清场让机)
+
+**结果与日志**:`pix_runs/`(30674 训练/评测日志)、`autodl_pix_out/`(AutoDL 训练日志 + 每条 log.json)、`csig_isr/eval_out/*.json`、`viz_h1..h6/`(各站肉眼对比条)。
+
+**提交件 model_dir**(含权重,均 <16MB):`csig_isr/submit_pixL2d_g`(保底)、`submit_pixG4_g`(已交,152.95)、`submit_pixG5c_g`、`submit_pixG5i_g`(终局两张彩票)。
+
+**结论**(详见 `docs/memory/project_csig_track2.md` 与 `docs/CSIG_SUBMISSION_LEDGER.md`):
+去 GroupNorm、瓶颈加深到 5 块、折叠 + channels_last + CUDA graph 三步把 138 推到 153;剪解码器(−0.24 NR)、IQA 加权(1:1 换 FR)、加宽(+38-59% 时延)、权重汤、更深/更久续训五条路均在同一前沿上滑动不越线;v8 教师 + 本配方下前沿 S≈4.11 @0.48ms ≈ 154。

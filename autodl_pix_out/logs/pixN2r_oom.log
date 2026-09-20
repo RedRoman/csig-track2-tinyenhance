@@ -1,0 +1,63 @@
+init from /root/pix_out/pixN2/last.pth step 30000
+PixUNet2 cfg={'chs': (32, 64, 128), 'nbs': (1, 2, 2), 'norm': 'gn', 'tdim': 128, 'ps': 2, 't_fixed': 999.0, 'arch_ver': 2} 参数 2.0M
+Loading pretrained model LPIPS from /root/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /root/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /root/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /root/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+蒸馏样本 20000 对
+Traceback (most recent call last):
+  File "/cache/zihaohe/train_pix.py", line 228, in <module>
+    main()
+  File "/cache/zihaohe/train_pix.py", line 189, in main
+    elif which == 1: r = 3.0 * args.w_maniqa * _sc("maniqa", iq)
+  File "/cache/zihaohe/train_pix.py", line 186, in _sc
+    v = torch.stack([M[name](vw).mean() for vw in iq_views]).mean()
+  File "/cache/zihaohe/train_pix.py", line 186, in <listcomp>
+    v = torch.stack([M[name](vw).mean() for vw in iq_views]).mean()
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/models/inference_model.py", line 82, in forward
+    output = self.net(target.to(device), **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/maniqa_arch.py", line 202, in forward
+    _x = self.vit(x)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/vision_transformer.py", line 1300, in forward
+    x = self.forward_features(x, attn_mask=attn_mask, is_causal=is_causal)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/vision_transformer.py", line 1250, in forward_features
+    x = self.blocks(x)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
+    return inner()
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in inner
+    result = forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/models/vision_transformer.py", line 212, in forward
+    x = x + self.drop_path1(self.ls1(self.attn(self.norm1(x), attn_mask=attn_mask, is_causal=is_causal)))
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/timm/layers/attention.py", line 119, in forward
+    qkv = self.qkv(x).reshape(B, N, 3, self.num_heads, self.head_dim).permute(2, 0, 3, 1, 4)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 690.00 MiB. GPU 0 has a total capacity of 47.37 GiB of which 207.88 MiB is free. Including non-PyTorch memory, this process has 47.16 GiB memory in use. Of the allocated memory 46.37 GiB is allocated by PyTorch, and 340.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

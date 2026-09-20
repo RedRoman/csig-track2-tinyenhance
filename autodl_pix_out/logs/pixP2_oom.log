@@ -1,0 +1,35 @@
+partial init from /root/pix_out/pixG5c/last.pth: 94/94 tensors matched; missing=[]
+PixUNet2 cfg={'chs': (32, 64, 128), 'nbs': (0, 2, 5), 'norm': 'none', 'tdim': 128, 'ps': 2, 't_fixed': 999.0, 'arch_ver': 2, 'nbs_dec': (0, 1)} 参数 3.7M
+Loading pretrained model LPIPS from /root/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /root/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /root/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /root/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+蒸馏样本 20000 对
+Traceback (most recent call last):
+  File "/cache/zihaohe/train_pix.py", line 229, in <module>
+    main()
+  File "/cache/zihaohe/train_pix.py", line 190, in main
+    elif which == 1: r = 3.0 * args.w_maniqa * _sc("maniqa", iq)
+  File "/cache/zihaohe/train_pix.py", line 187, in _sc
+    v = torch.stack([M[name](vw).mean() for vw in iq_views]).mean()
+  File "/cache/zihaohe/train_pix.py", line 187, in <listcomp>
+    v = torch.stack([M[name](vw).mean() for vw in iq_views]).mean()
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/models/inference_model.py", line 82, in forward
+    output = self.net(target.to(device), **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/maniqa_arch.py", line 209, in forward
+    x = tab(x)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/pyiqa/archs/maniqa_arch.py", line 49, in forward
+    attn = q @ k.transpose(-2, -1) * self.norm_fact
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 720.00 MiB. GPU 0 has a total capacity of 47.37 GiB of which 350.56 MiB is free. Process 266671 has 21.69 GiB memory in use. Including non-PyTorch memory, this process has 25.33 GiB memory in use. Of the allocated memory 24.40 GiB is allocated by PyTorch, and 481.59 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

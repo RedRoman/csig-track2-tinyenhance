@@ -1,0 +1,19 @@
+built L2d        2.08M  graph vs eager max|d|=0.0044
+built N3         2.54M  graph vs eager max|d|=0.0068
+built N3b        2.54M  graph vs eager max|d|=0.0039
+built N4         1.92M  graph vs eager max|d|=0.0073
+built N5         1.75M  graph vs eager max|d|=0.0055
+built N1         1.96M  graph vs eager max|d|=0.0063
+built N2         2.03M  graph vs eager max|d|=0.0046
+Traceback (most recent call last):
+  File "/cache/zihaohe/time_pair.py", line 43, in <module>
+    for k in fns: evt(fns[k], 30)
+  File "/cache/zihaohe/time_pair.py", line 34, in evt
+    a = torch.cuda.Event(True); b = torch.cuda.Event(True); a.record(); f(x); b.record(); torch.cuda.synchronize(); ts.append(a.elapsed_time(b))
+  File "/root/autodl-tmp/zihaohe/csig_isr/venv/lib/python3.10/site-packages/torch/cuda/__init__.py", line 954, in synchronize
+    return torch._C._cuda_synchronize()
+RuntimeError: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

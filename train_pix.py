@@ -8,7 +8,7 @@ from settings import ROOT
 from metrics_utils import create_metrics
 from eval_utils import collect_crops, evaluate_model
 from train_distill import DistillDataset, PatchD
-from pix_model import PixUNet
+from pix_model import PixUNet, PixUNet2
 
 DEV, DT = torch.device("cuda"), torch.float16
 
@@ -20,6 +20,10 @@ def main():
     ap.add_argument("--arch", default="128,256,512"); ap.add_argument("--nb", type=int, default=3)
     ap.add_argument("--ps", type=int, default=4); ap.add_argument("--tdim", type=int, default=128)
     ap.add_argument("--init_ckpt", default="")
+    ap.add_argument("--nbs", default="", help="v2:逐层块数,如 1,2,2(给出即用 PixUNet2)")
+    ap.add_argument("--norm", default="gn", choices=["gn", "none"], help="v2 块归一化:gn=AdaGN,none=无归一化(Blk2)")
+    ap.add_argument("--nbs_dec", default="", help="v2:解码侧每层块数(level0..L-2),空=镜像 enc;如 0,1")
+    ap.add_argument("--init_partial", default="", help="按名字+形状匹配的部分初始化(用于改块数后的热启动)")
     ap.add_argument("--steps", type=int, default=30000); ap.add_argument("--bs", type=int, default=8)
     ap.add_argument("--lr", type=float, default=2e-4); ap.add_argument("--min_lr", type=float, default=2e-5)
     ap.add_argument("--warmup", type=int, default=500); ap.add_argument("--workers", type=int, default=8)
@@ -52,13 +56,22 @@ def main():
     chs = tuple(int(c) for c in args.arch.split(","))
     if args.init_ckpt:
         sd = torch.load(args.init_ckpt, map_location="cpu", weights_only=False)
-        model = PixUNet(**sd["cfg"]); model.load_state_dict(sd["state"]); print("init from", args.init_ckpt, flush=True)
+        _cfg = dict(sd["cfg"]); _ver = _cfg.pop("arch_ver", 1)
+        model = PixUNet2(**_cfg) if _ver == 2 else PixUNet(**_cfg)
+        model.load_state_dict(sd["state"]); print("init from", args.init_ckpt, "step", sd.get("step"), flush=True)
+    elif args.nbs:
+        model = PixUNet2(chs=chs, nbs=tuple(int(v) for v in args.nbs.split(",")), norm=args.norm, tdim=args.tdim, ps=args.ps, nbs_dec=(tuple(int(v) for v in args.nbs_dec.split(",")) if args.nbs_dec else None))
     else:
         model = PixUNet(chs=chs, nb=args.nb, tdim=args.tdim, ps=args.ps)
+    if args.init_partial:
+        psd = torch.load(args.init_partial, map_location="cpu", weights_only=False)["state"]; own = model.state_dict()
+        ok = {k: v for k, v in psd.items() if k in own and own[k].shape == v.shape}
+        model.load_state_dict(ok, strict=False)
+        print(f"partial init from {args.init_partial}: {len(ok)}/{len(own)} tensors matched; missing={sorted(set(own)-set(ok))[:6]}", flush=True)
     model = model.to(DEV).float().train()
     params = [p for p in model.parameters()]
     proj = None  # 占位,特征蒸馏时在数据集构建后赋值并并入优化器
-    print(f"PixUNet chs={chs} nb={args.nb} ps={args.ps} 参数 {sum(p.numel() for p in params)/1e6:.1f}M", flush=True)
+    print(f"{type(model).__name__} cfg={model.cfg} 参数 {sum(p.numel() for p in params)/1e6:.1f}M", flush=True)
     opt = None  # 延后到 proj 确定后创建
     disc, d_opt = None, None
     if args.w_gan > 0:

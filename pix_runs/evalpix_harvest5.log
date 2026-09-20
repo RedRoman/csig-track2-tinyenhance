@@ -1,0 +1,17 @@
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+  P2           [验证集全尺度] lpips=0.3666 dists=0.2983 niqe=4.466 musiq=56.54 maniqa=0.6817 clipiqa=0.9240 psnr=23.39 Score=4.0595
+      P2 测试集 25/100
+      P2 测试集 50/100
+      P2 测试集 75/100
+      P2 测试集 100/100
+  P2           [测试集NR] nr=2.5758 niqe=4.698 musiq=42.00 maniqa=0.7201 clipiqa=0.9056
+  G5i          [验证集全尺度] lpips=0.3965 dists=0.3236 niqe=3.742 musiq=61.47 maniqa=0.7922 clipiqa=0.9423 psnr=22.64 Score=4.2548
+      G5i 测试集 25/100
+      G5i 测试集 50/100
+      G5i 测试集 75/100
+      G5i 测试集 100/100
+  G5i          [测试集NR] nr=2.8330 niqe=3.748 musiq=44.72 maniqa=0.8303 clipiqa=0.9302
+EVAL_PIX_DONE

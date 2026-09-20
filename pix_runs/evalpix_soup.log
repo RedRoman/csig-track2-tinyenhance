@@ -1,0 +1,23 @@
+Loading pretrained model LPIPS from /home/ma-user/.cache/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /home/ma-user/.cache/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /home/ma-user/.cache/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/ma-user/.cache/torch/hub/checkpoints/ckpt_koniq10k.pt
+  soupA        [验证集全尺度] lpips=0.3845 dists=0.3190 niqe=3.712 musiq=62.62 maniqa=0.7723 clipiqa=0.9350 psnr=22.67 Score=4.2588
+      soupA 测试集 25/100
+      soupA 测试集 50/100
+      soupA 测试集 75/100
+      soupA 测试集 100/100
+  soupA        [测试集NR] nr=2.8137 niqe=3.750 musiq=45.09 maniqa=0.8162 clipiqa=0.9216
+  soupB        [验证集全尺度] lpips=0.3861 dists=0.3198 niqe=3.681 musiq=62.45 maniqa=0.7813 clipiqa=0.9346 psnr=22.67 Score=4.2664
+      soupB 测试集 25/100
+      soupB 测试集 50/100
+      soupB 测试集 75/100
+      soupB 测试集 100/100
+  soupB        [测试集NR] nr=2.8203 niqe=3.742 musiq=44.86 maniqa=0.8228 clipiqa=0.9231
+  soupC        [验证集全尺度] lpips=0.3833 dists=0.3172 niqe=3.700 musiq=62.75 maniqa=0.7909 clipiqa=0.9348 psnr=22.68 Score=4.2826
+      soupC 测试集 25/100
+      soupC 测试集 50/100
+      soupC 测试集 75/100
+      soupC 测试集 100/100
+  soupC        [测试集NR] nr=2.8150 niqe=3.725 musiq=45.13 maniqa=0.8145 clipiqa=0.9217
+EVAL_PIX_DONE
