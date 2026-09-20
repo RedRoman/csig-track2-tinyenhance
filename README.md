@@ -58,3 +58,5 @@
 
 **结论**(详见 `docs/memory/project_csig_track2.md` 与 `docs/CSIG_SUBMISSION_LEDGER.md`):
 去 GroupNorm、瓶颈加深到 5 块、折叠 + channels_last + CUDA graph 三步把 138 推到 153;剪解码器(−0.24 NR)、IQA 加权(1:1 换 FR)、加宽(+38-59% 时延)、权重汤、更深/更久续训五条路均在同一前沿上滑动不越线;v8 教师 + 本配方下前沿 S≈4.11 @0.48ms ≈ 154。
+
+**补遗(09-20 第三次提交)**:`autodl_scripts/` = AutoDL(seetacloud)侧仅存的 20 个脚本(环境激活 `_env_autodl.sh`、软链恢复 `_relink.sh`、各版 build_pix*.sh、pix_aoti/pix_cg/pix_cudnn 等时延探针、pix_viz)+ 官方 `runner_official.py` 模板;`docs/AUTODL_MIGRATION_README.md` = AutoDL 迁移交接文档。
