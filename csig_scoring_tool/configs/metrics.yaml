@@ -1,0 +1,15 @@
+# 本地代理评分的指标名(pyiqa)与公式。与 csig_metrics.py 一致,此文件仅作记录。
+metrics:
+  lpips: lpips
+  dists: dists
+  niqe: niqe
+  musiq: musiq          # koniq 训练版
+  maniqa: maniqa        # koniq 训练版(scale 0.8)。官方 eval.py 用 create_metric("maniqa");曾误用 maniqa-pipal 六周
+  clipiqa: clipiqa      # CLIP RN50 固定 prompt 版(非 clipiqa+)
+score:
+  expression: "(1-lpips)+(1-dists)+clipiqa+maniqa+musiq/100+max(0,(10-niqe)/10)"
+aggregation:
+  canonical: "score(mean(component_metrics_across_images))"
+  forbidden_for_model_selection: "mean(score(per_image_metrics))"
+maniqa_test_sample: 100   # CSIG_MANIQA_SAMPLES
+seed: 1234

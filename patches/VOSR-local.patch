@@ -1,0 +1,17 @@
+diff --git a/inference_vosr_onestep.py b/inference_vosr_onestep.py
+index 13e6e6f..3a7a658 100644
+--- a/inference_vosr_onestep.py
++++ b/inference_vosr_onestep.py
+@@ -139,7 +139,11 @@ def load_dinov2(args, device):
+     if args.enc_type == 'dinov2b':
+         encoder = torch.hub.load('facebookresearch/dinov2', 'dinov2_vitb14')
+     elif args.enc_type == 'dinov2l':
+-        encoder = torch.hub.load('facebookresearch/dinov2', 'dinov2_vitl14')
++        _local_hub = 'preset/ckpts/torch_cache/facebookresearch_dinov2_main'
++        if os.path.isdir(_local_hub):
++            encoder = torch.hub.load(_local_hub, 'dinov2_vitl14', source='local')
++        else:
++            encoder = torch.hub.load('facebookresearch/dinov2', 'dinov2_vitl14')
+     elif args.enc_type == 'dinov2g':
+         encoder = torch.hub.load('facebookresearch/dinov2', 'dinov2_vitg14')
+     del encoder.head
