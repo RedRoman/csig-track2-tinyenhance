@@ -1,0 +1,18 @@
+{
+  "schema": "push6_hypir_sameweight_isolation_v1",
+  "label": "push6_a7750_wavelet_only",
+  "CPU_only_preparation": true,
+  "GPU_started_by_preparation_agent": false,
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push6_a7750_wavelet_only/model_dir",
+  "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "reference_runner_sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae",
+  "runner_sha256": "0b11943b2ec79a34d16d24a6e58428dc8984d1b4ed25dec4690e3f0e108418e8",
+  "config_sha256": "f0fa7f66334166190d2d1534a0d64b3cc6119b0c1c33a2f7ba9a0269038b4e8c",
+  "channels_last_conversion": false,
+  "compile_choice": "UNet.forward,VAE.encode,VAE.decode original default dynamicFalse; only complete wavelet reduce-overhead dynamicFalse; all tile loops/sampling/scheduler original",
+  "cudagraph_step_marker": "Once per infer for output lifetime; no hidden forwards/RNG reset",
+  "Gaussian_tile_weighting_posterior_DDPM_and_native_interface": "Original unchanged operations, dtype, order and RNG calls",
+  "quality_reuse_claim": false,
+  "validation": "First new3-input512 smoke, then saved-native PNG/float/fourRNG/ownership; actualfull needed if any output changes"
+}

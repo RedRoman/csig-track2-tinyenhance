@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "components": {
+    "musiq": {
+      "value": 0.6803003549575806,
+      "input_gradient_norm": 0.3637844920158386,
+      "input_gradient_finite": true
+    },
+    "maniqa": {
+      "value": 0.6023781895637512,
+      "input_gradient_norm": 0.16090191900730133,
+      "input_gradient_finite": true
+    },
+    "clipiqa": {
+      "value": 0.7145025730133057,
+      "input_gradient_norm": 1.9956177473068237,
+      "input_gradient_finite": true
+    }
+  },
+  "row": {
+    "local_step": 1,
+    "global_step": 6001,
+    "case": 79,
+    "crop_xy": [
+      1872,
+      792
+    ],
+    "loss": -0.10155966877937317,
+    "fidelity": 2.628457781289617e-12,
+    "reward": 1.3541288375854492,
+    "scores": {
+      "musiq": 0.6803003549575806,
+      "maniqa": 0.6023781895637512,
+      "clipiqa": 0.7145025730133057
+    },
+    "gradient_norm": 0.23462940752506256,
+    "nonzero_lora_gradients": 514,
+    "step_seconds": 1.9568586349487305,
+    "elapsed_seconds": 1.9569051265716553,
+    "gpu_peak_allocated_bytes": 27824801792
+  },
+  "no_optimizer_update_yet": true,
+  "frozen_metrics": true,
+  "frozen_same_latent_anchor": true
+}

@@ -1,0 +1,13 @@
+{
+  "root": "/cache/independent_sr_cuda_20261013",
+  "run": "pixg5i_hypir_structure_v2",
+  "stop_at": 300,
+  "stage_steps": 1200,
+  "lr": 2e-05,
+  "final_lr": 2e-06,
+  "lpips_weight": 0.05,
+  "gradient_weight": 0.3,
+  "multiscale_l1_weight": 0.5,
+  "multiscale_gradient_weight": 0.3,
+  "seed": 20261016
+}

@@ -1,0 +1,200 @@
+{
+  "audit_bjt": "2026-10-14T00:04:04.467172+08:00",
+  "scope": "fixed numeric 20 test + 3 validation pilot; S_subset only",
+  "results": [
+    {
+      "label": "s6000_ct175_compiled_control_pilot",
+      "image_rows": 23,
+      "scalar_metrics": 98,
+      "NR": 2.250855999607922,
+      "FR": 1.4638817111651101,
+      "S_subset": 3.714737710773032,
+      "checkpoint_sha256": "2c82a71a94aa754bd4a26a2a474c2bbe4989bde1d38d2e15d9e58eb0c3e408bc",
+      "delta_vs_matched_control": {
+        "NR": 0.0,
+        "FR": 0.0,
+        "S_subset": 0.0
+      },
+      "NR_component_delta_vs_control": {
+        "CLIPIQA": 0.0,
+        "MANIQA": 0.0,
+        "MUSIQ_div100": 0.0,
+        "NIQE_term": 0.0
+      },
+      "FR_component_delta_vs_control": {
+        "one_minus_LPIPS": 0.0,
+        "one_minus_DISTS": 0.0
+      }
+    },
+    {
+      "label": "nr_conservative_s6100_compiled_pilot",
+      "image_rows": 23,
+      "scalar_metrics": 98,
+      "NR": 2.2599103960203246,
+      "FR": 1.4647649923960369,
+      "S_subset": 3.7246753884163617,
+      "checkpoint_sha256": "04468a0134579c3e5f63aea93eea2aa1ca956b102f7ed32bb3dc03c918e08ff4",
+      "delta_vs_matched_control": {
+        "NR": 0.009054396412402799,
+        "FR": 0.0008832812309267357,
+        "S_subset": 0.009937677643329756
+      },
+      "NR_component_delta_vs_control": {
+        "CLIPIQA": 0.005182257294654935,
+        "MANIQA": 0.007927896082401242,
+        "MUSIQ_div100": -0.001824977874755831,
+        "NIQE_term": -0.002230779089897661
+      },
+      "FR_component_delta_vs_control": {
+        "one_minus_LPIPS": 0.0009358723958333703,
+        "one_minus_DISTS": -5.259116490682891e-05
+      }
+    },
+    {
+      "label": "nr_aligned_s6100_compiled_pilot",
+      "image_rows": 23,
+      "scalar_metrics": 98,
+      "NR": 2.2552833844484237,
+      "FR": 1.4643454750378926,
+      "S_subset": 3.719628859486316,
+      "checkpoint_sha256": "5ff99a06f0a0e723f534b159c62206250bdd91c58caa6a70a1db5944ee6095b5",
+      "delta_vs_matched_control": {
+        "NR": 0.004427384840501869,
+        "FR": 0.00046376387278246334,
+        "S_subset": 0.00489114871328411
+      },
+      "NR_component_delta_vs_control": {
+        "CLIPIQA": 0.0026386529207229614,
+        "MANIQA": 0.0033492714166641346,
+        "MUSIQ_div100": -0.0005849752426147603,
+        "NIQE_term": -0.0009755642542703669
+      },
+      "FR_component_delta_vs_control": {
+        "one_minus_LPIPS": 0.0006103515625,
+        "one_minus_DISTS": -0.00014658768971761993
+      }
+    }
+  ],
+  "checks": {
+    "rows_and_scalars": "PASS 3x23 / 3x98",
+    "mean_then_formula": "PASS exact zero difference",
+    "actual_output_png_sha": "PASS 69",
+    "actual_source_input_sha": "PASS 69",
+    "actual_val_GT_sha": "PASS 9",
+    "recorded_shared_runner_metric_protocol": "PASS",
+    "all_final_render_4_rng_states_equal": true,
+    "all_final_score_4_rng_states_equal": true,
+    "metric_weights_match_original_tool_archive": "PASS8",
+    "CPU_only_no_CUDA_initialization": true
+  },
+  "pilot_order_test_cases": [
+    1,
+    6,
+    7,
+    11,
+    16,
+    18,
+    21,
+    23,
+    25,
+    28,
+    31,
+    36,
+    41,
+    46,
+    51,
+    61,
+    71,
+    81,
+    91,
+    100
+  ],
+  "prefix_reproducibility": {
+    "records": [
+      {
+        "case": 1,
+        "old_png_sha256": "6aa9f10632c90407a01d4e276e89212d1818ff40b9c7a1c24d687fa9d2a62b72",
+        "control_png_sha256": "ca33d12d9120fc66c7ae78a53827228ddce66420d81159eec77c169714e5da5f",
+        "byteequal": false,
+        "channel_elements": 37748736,
+        "changed_channel_elements": 3225248,
+        "changed_pixel_fraction": 0.2071247100830078,
+        "uint8_max_abs": 15,
+        "uint8_mean_abs": 0.08809638023376465,
+        "metric_delta": {
+          "lpips": 0.0,
+          "dists": 3.4928321838378906e-05,
+          "niqe": -0.002974799684900109,
+          "musiq": -0.012332916259765625,
+          "maniqa": -0.00012880563735961914,
+          "clipiqa": -0.0008353590965270996
+        }
+      },
+      {
+        "case": 2,
+        "old_png_sha256": "5337d3b257de60794c807780370b187cf25046ff3b51607ededf02f6e7fa5d25",
+        "control_png_sha256": "0b47273da20a83dcb16c51df4e36f94570e0b3c772756f98240cfb1ddc750d9d",
+        "byteequal": false,
+        "channel_elements": 37748736,
+        "changed_channel_elements": 2177385,
+        "changed_pixel_fraction": 0.15817689895629883,
+        "uint8_max_abs": 6,
+        "uint8_mean_abs": 0.05780794885423449,
+        "metric_delta": {
+          "lpips": 0.0,
+          "dists": 0.0001068115234375,
+          "niqe": 0.002614265124868176,
+          "musiq": 0.022418975830078125,
+          "maniqa": 4.112720489501953e-05,
+          "clipiqa": -2.5093555450439453e-05
+        }
+      },
+      {
+        "case": 3,
+        "old_png_sha256": "17c782bf247758f188f4c2acf878cb7d36af9e633cdafafce82af7982a65f4f6",
+        "control_png_sha256": "17c782bf247758f188f4c2acf878cb7d36af9e633cdafafce82af7982a65f4f6",
+        "byteequal": true,
+        "channel_elements": 37748736,
+        "changed_channel_elements": 0,
+        "changed_pixel_fraction": 0.0,
+        "uint8_max_abs": 0,
+        "uint8_mean_abs": 0.0,
+        "metric_delta": {
+          "lpips": 0.0,
+          "dists": 0.0,
+          "niqe": 0.0,
+          "musiq": 0.0,
+          "maniqa": 0.0,
+          "clipiqa": 0.0
+        }
+      }
+    ],
+    "recorded_runner_renderer_config_flags_versions_equal": true,
+    "recorded_metric_protocol_equal": true,
+    "source_and_input_path_recipe_changes_found": false,
+    "verdict": "Val1/2 PNG pixels differ while val3 is byteexact. FR delta entirely DISTS; LPIPS unchanged. No recorded input/algorithm/weight/source/flag change. Small compiled-CUDA floating/kernel/cache drift is consistent with evidence, exact cause unproven; no GPU rerun."
+  },
+  "visual_review": {
+    "report": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/visual_review.json",
+    "roi_manifest": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/roi_manifest.json",
+    "cases": [
+      7,
+      16,
+      23
+    ],
+    "observation": "所检ROI未见conservative较control整片规则微纹明确增强；7细竖纹略弱/相近，16细横纹略平，23既有蜂窝点结构保留、分布相近。不能据此证明纹理真实性、全图安全或整体视觉优势。",
+    "original_sha_preserved": true,
+    "all_45_native_ROIs_pixel_equal_to_crops": true
+  },
+  "limits": [
+    "Pilot is not full100 NR; compare the three matched pilots only.",
+    "No extra seeds or rerender were run. One deterministic matched sample does not establish statistical significance.",
+    "Old full vs control prefix is not pixel bitexact on val1/2. Exact cause unproven; recorded configs/sources/flags match; compiled CUDA backend/cache drift is consistent but not confirmed.",
+    "Recorded RNG protocols and final byte states agree; this is not an instrumented trace of every intermediate random call."
+  ],
+  "evidence": {
+    "audit": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot/matchedpilot_audit.json",
+    "rng_and_weights": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot/matchedpilot_rng_weights_audit.json",
+    "read_only_auditor": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot/audit_matched_cpu.py"
+  }
+}

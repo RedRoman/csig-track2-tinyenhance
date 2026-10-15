@@ -1,0 +1,701 @@
+{
+  "schema": "nr_cuda_small_download_manifest_v1",
+  "status": "PASS",
+  "audited_bjt": "2026-10-14T00:23:37.336642+08:00",
+  "remote_host": "huawei-modelarts-31514:30416",
+  "remote_root": "/cache/independent_sr_cuda_20261013",
+  "cpu_only": true,
+  "torch_imported": false,
+  "CUDA_VISIBLE_DEVICES": "",
+  "remote_access": "Read raw bytes for explicitly listed small metadata files and six pilot validation PNGs; no model execution, no checkpoint/weight reads/downloads, no remote writes.",
+  "required_small_file_count": 31,
+  "required_small_files_match_count": 31,
+  "group_counts": {
+    "cuda_training_step6250": 10,
+    "nr_conservative_s6100_compiled_all": 7,
+    "nr_conservative_s6250_compiled_all": 7,
+    "nr_conservative_s6250_compiled_pilot": 7
+  },
+  "required_small_files": [
+    {
+      "group": "nr_conservative_s6100_compiled_all",
+      "relative_file": "render_protocol.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6100_compiled_all/render_protocol.json",
+        "bytes": 35255,
+        "sha256": "fe7f8bbdb47d9d1a768ebd52db538eed4cec6282bc2f24fa6c9719505ef7ee40"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6100_compiled_all/render_protocol.json",
+        "bytes": 35255,
+        "sha256": "fe7f8bbdb47d9d1a768ebd52db538eed4cec6282bc2f24fa6c9719505ef7ee40"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6100_compiled_all",
+      "relative_file": "render_manifest.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6100_compiled_all/render_manifest.json",
+        "bytes": 65197,
+        "sha256": "462184b01c19be71a5f537e9c82eaa3f3f8bcf5bf81cf875577b43922ea63f6c"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6100_compiled_all/render_manifest.json",
+        "bytes": 65197,
+        "sha256": "462184b01c19be71a5f537e9c82eaa3f3f8bcf5bf81cf875577b43922ea63f6c"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6100_compiled_all",
+      "relative_file": "render_status.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6100_compiled_all/render_status.json",
+        "bytes": 92,
+        "sha256": "daf90e842d06308cc6c29ce2535814aadb56948a7a0f9b678e3b4b32975f4234"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6100_compiled_all/render_status.json",
+        "bytes": 92,
+        "sha256": "daf90e842d06308cc6c29ce2535814aadb56948a7a0f9b678e3b4b32975f4234"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6100_compiled_all",
+      "relative_file": "scores/protocol.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6100_compiled_all/scores/protocol.json",
+        "bytes": 147126,
+        "sha256": "a1dddbaa2fe20d920bedfea189047ab0fbfc7a4c65c80233729b079bca36a8c3"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6100_compiled_all/scores/protocol.json",
+        "bytes": 147126,
+        "sha256": "a1dddbaa2fe20d920bedfea189047ab0fbfc7a4c65c80233729b079bca36a8c3"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6100_compiled_all",
+      "relative_file": "scores/measurements.jsonl",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6100_compiled_all/scores/measurements.jsonl",
+        "bytes": 59321,
+        "sha256": "fc1af4a07b519b50d860360d838bb7044105ef15b57e2d421e4b3492dfb9ab5c"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6100_compiled_all/scores/measurements.jsonl",
+        "bytes": 59321,
+        "sha256": "fc1af4a07b519b50d860360d838bb7044105ef15b57e2d421e4b3492dfb9ab5c"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6100_compiled_all",
+      "relative_file": "scores/result.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6100_compiled_all/scores/result.json",
+        "bytes": 748,
+        "sha256": "10c211973b293cd219648c30775c787bc4eea6785640349a8e1a286499b58808"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6100_compiled_all/scores/result.json",
+        "bytes": 748,
+        "sha256": "10c211973b293cd219648c30775c787bc4eea6785640349a8e1a286499b58808"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6100_compiled_all",
+      "relative_file": "scores/status.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6100_compiled_all/scores/status.json",
+        "bytes": 110,
+        "sha256": "e5a778543158aac55814d017255461a6fd85fc79e628fe84eb11958e03b51bf9"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6100_compiled_all/scores/status.json",
+        "bytes": 110,
+        "sha256": "e5a778543158aac55814d017255461a6fd85fc79e628fe84eb11958e03b51bf9"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6250_compiled_all",
+      "relative_file": "render_protocol.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_all/render_protocol.json",
+        "bytes": 35255,
+        "sha256": "425d2683802959b86ebd3cd3041fa67eea9f7a6967eeb6a47dad57697e599544"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6250_compiled_all/render_protocol.json",
+        "bytes": 35255,
+        "sha256": "425d2683802959b86ebd3cd3041fa67eea9f7a6967eeb6a47dad57697e599544"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6250_compiled_all",
+      "relative_file": "render_manifest.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_all/render_manifest.json",
+        "bytes": 65202,
+        "sha256": "31827c3bcf70beaf3cd0d68448e8040550749214fd24bfe963eb53cc95e74218"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6250_compiled_all/render_manifest.json",
+        "bytes": 65202,
+        "sha256": "31827c3bcf70beaf3cd0d68448e8040550749214fd24bfe963eb53cc95e74218"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6250_compiled_all",
+      "relative_file": "render_status.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_all/render_status.json",
+        "bytes": 92,
+        "sha256": "ddc7d2ea054b7fd9231ae304b16cca750877bbce5e14808658b33e1c15e099e0"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6250_compiled_all/render_status.json",
+        "bytes": 92,
+        "sha256": "ddc7d2ea054b7fd9231ae304b16cca750877bbce5e14808658b33e1c15e099e0"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6250_compiled_all",
+      "relative_file": "scores/protocol.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_all/scores/protocol.json",
+        "bytes": 147126,
+        "sha256": "c87bdd3c9d5bd88004bcc21470b2513ac174a8360228feb3d487ef96fa8f907d"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6250_compiled_all/scores/protocol.json",
+        "bytes": 147126,
+        "sha256": "c87bdd3c9d5bd88004bcc21470b2513ac174a8360228feb3d487ef96fa8f907d"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6250_compiled_all",
+      "relative_file": "scores/measurements.jsonl",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_all/scores/measurements.jsonl",
+        "bytes": 59277,
+        "sha256": "1959dca785c25ba9d73921f72429a56656a418b73686e7ab24c6c77d2555f61b"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6250_compiled_all/scores/measurements.jsonl",
+        "bytes": 59277,
+        "sha256": "1959dca785c25ba9d73921f72429a56656a418b73686e7ab24c6c77d2555f61b"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6250_compiled_all",
+      "relative_file": "scores/result.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_all/scores/result.json",
+        "bytes": 747,
+        "sha256": "b7507d4747e689f74204f10ee3274e69fb0d7c81e0e9051b84465ffeea97da88"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6250_compiled_all/scores/result.json",
+        "bytes": 747,
+        "sha256": "b7507d4747e689f74204f10ee3274e69fb0d7c81e0e9051b84465ffeea97da88"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6250_compiled_all",
+      "relative_file": "scores/status.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_all/scores/status.json",
+        "bytes": 110,
+        "sha256": "e5a778543158aac55814d017255461a6fd85fc79e628fe84eb11958e03b51bf9"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6250_compiled_all/scores/status.json",
+        "bytes": 110,
+        "sha256": "e5a778543158aac55814d017255461a6fd85fc79e628fe84eb11958e03b51bf9"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6250_compiled_pilot",
+      "relative_file": "render_protocol.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_pilot/render_protocol.json",
+        "bytes": 10629,
+        "sha256": "28382c76c254a2281ce2598773a2e316655e157e7df15f8ad6872d81ac1869c1"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6250_compiled_pilot/render_protocol.json",
+        "bytes": 10629,
+        "sha256": "28382c76c254a2281ce2598773a2e316655e157e7df15f8ad6872d81ac1869c1"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6250_compiled_pilot",
+      "relative_file": "render_manifest.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_pilot/render_manifest.json",
+        "bytes": 17320,
+        "sha256": "4c64ca41873e2a9f8477f44bd62e326c0d6a7da097405b18a40f84125002919b"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6250_compiled_pilot/render_manifest.json",
+        "bytes": 17320,
+        "sha256": "4c64ca41873e2a9f8477f44bd62e326c0d6a7da097405b18a40f84125002919b"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6250_compiled_pilot",
+      "relative_file": "render_status.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_pilot/render_status.json",
+        "bytes": 89,
+        "sha256": "8c6945fa15d91a2915d7425b1eee03cb95656ce25b7e65e5537a49072126c6f0"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6250_compiled_pilot/render_status.json",
+        "bytes": 89,
+        "sha256": "8c6945fa15d91a2915d7425b1eee03cb95656ce25b7e65e5537a49072126c6f0"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6250_compiled_pilot",
+      "relative_file": "scores/protocol.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_pilot/scores/protocol.json",
+        "bytes": 144257,
+        "sha256": "b872a0b75970406e69b7e1d08785717b637b0b4b52921c0c277c5ada2911481d"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6250_compiled_pilot/scores/protocol.json",
+        "bytes": 144257,
+        "sha256": "b872a0b75970406e69b7e1d08785717b637b0b4b52921c0c277c5ada2911481d"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6250_compiled_pilot",
+      "relative_file": "scores/measurements.jsonl",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_pilot/scores/measurements.jsonl",
+        "bytes": 13619,
+        "sha256": "631866cba8aaaff5ebdf1e9b1e2de3485b8aa6ba26df8f94bb73f0dcc0b8647d"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6250_compiled_pilot/scores/measurements.jsonl",
+        "bytes": 13619,
+        "sha256": "631866cba8aaaff5ebdf1e9b1e2de3485b8aa6ba26df8f94bb73f0dcc0b8647d"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6250_compiled_pilot",
+      "relative_file": "scores/result.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_pilot/scores/result.json",
+        "bytes": 745,
+        "sha256": "5e06f7158cb1dbef1b39d39c1954b04c5f252f4495239dfef43b049769b0027e"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6250_compiled_pilot/scores/result.json",
+        "bytes": 745,
+        "sha256": "5e06f7158cb1dbef1b39d39c1954b04c5f252f4495239dfef43b049769b0027e"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "nr_conservative_s6250_compiled_pilot",
+      "relative_file": "scores/status.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_pilot/scores/status.json",
+        "bytes": 108,
+        "sha256": "c584e3e3312dca0f6896ba7eef821a3384406e47de0dc6faedd7ca321992e538"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6250_compiled_pilot/scores/status.json",
+        "bytes": 108,
+        "sha256": "c584e3e3312dca0f6896ba7eef821a3384406e47de0dc6faedd7ca321992e538"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "cuda_training_step6250",
+      "relative_file": "config.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/results/cuda_nr_s6000_ct175_conservative_step6250/config.json",
+        "bytes": 30144,
+        "sha256": "2a459e95e248d1b502b651753b9598ce7adfb92c24e48863458265458ea1ca5a"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/config.json",
+        "bytes": 30144,
+        "sha256": "2a459e95e248d1b502b651753b9598ce7adfb92c24e48863458265458ea1ca5a"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "cuda_training_step6250",
+      "relative_file": "config_step6100.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/results/cuda_nr_s6000_ct175_conservative_step6250/config_step6100.json",
+        "bytes": 30144,
+        "sha256": "4d62ff5e8a1ea0202c0fbc88b5acd60775ed92e1d746e2b4a3540755fd2f0b59"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/config_step6100.json",
+        "bytes": 30144,
+        "sha256": "4d62ff5e8a1ea0202c0fbc88b5acd60775ed92e1d746e2b4a3540755fd2f0b59"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "cuda_training_step6250",
+      "relative_file": "gradient_preflight.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/results/cuda_nr_s6000_ct175_conservative_step6250/gradient_preflight.json",
+        "bytes": 1137,
+        "sha256": "f9ce589530f98032f6ff8814cfa14bd0e593ee0f8bdffb8d96739dca98adeb54"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/gradient_preflight.json",
+        "bytes": 1137,
+        "sha256": "f9ce589530f98032f6ff8814cfa14bd0e593ee0f8bdffb8d96739dca98adeb54"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "cuda_training_step6250",
+      "relative_file": "gradient_preflight_step6100.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/results/cuda_nr_s6000_ct175_conservative_step6250/gradient_preflight_step6100.json",
+        "bytes": 1139,
+        "sha256": "81dacecf2d22d38f20417de1dbb2c197815ee329a4ae6ac2d1cf57e2dc182fd4"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/gradient_preflight_step6100.json",
+        "bytes": 1139,
+        "sha256": "81dacecf2d22d38f20417de1dbb2c197815ee329a4ae6ac2d1cf57e2dc182fd4"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "cuda_training_step6250",
+      "relative_file": "maniqa_initial_state_proof.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/results/cuda_nr_s6000_ct175_conservative_step6250/maniqa_initial_state_proof.json",
+        "bytes": 130418,
+        "sha256": "df130e7a4ce0bf271f2a0673ce0dbcc639d9491981f94ba7255e843559a9cb36"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/maniqa_initial_state_proof.json",
+        "bytes": 130418,
+        "sha256": "df130e7a4ce0bf271f2a0673ce0dbcc639d9491981f94ba7255e843559a9cb36"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "cuda_training_step6250",
+      "relative_file": "status.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/results/cuda_nr_s6000_ct175_conservative_step6250/status.json",
+        "bytes": 131,
+        "sha256": "80abe46d11321c35f4e8e341a9cc7730d75a76a23f9e91e71dda2d17a8e07a6c"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/status.json",
+        "bytes": 131,
+        "sha256": "80abe46d11321c35f4e8e341a9cc7730d75a76a23f9e91e71dda2d17a8e07a6c"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "cuda_training_step6250",
+      "relative_file": "status_step6100.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/results/cuda_nr_s6000_ct175_conservative_step6250/status_step6100.json",
+        "bytes": 131,
+        "sha256": "51a322afc2e54510d29ccdfa58af397c29c80d64249042c3c44e3bae78ef6b10"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/status_step6100.json",
+        "bytes": 131,
+        "sha256": "51a322afc2e54510d29ccdfa58af397c29c80d64249042c3c44e3bae78ef6b10"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "cuda_training_step6250",
+      "relative_file": "train.jsonl",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/results/cuda_nr_s6000_ct175_conservative_step6250/train.jsonl",
+        "bytes": 114113,
+        "sha256": "422556a5312db53ab9088aca8bc9df5deb200f13287218cd7905eb3557635945"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/train.jsonl",
+        "bytes": 114113,
+        "sha256": "422556a5312db53ab9088aca8bc9df5deb200f13287218cd7905eb3557635945"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "cuda_training_step6250",
+      "relative_file": "training_complete_step6100",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/results/cuda_nr_s6000_ct175_conservative_step6250/training_complete_step6100",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/training_complete_step6100",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    },
+    {
+      "group": "cuda_training_step6250",
+      "relative_file": "training_complete_step6250",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/results/cuda_nr_s6000_ct175_conservative_step6250/training_complete_step6250",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/training_complete_step6250",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    }
+  ],
+  "reference_small_files": [
+    {
+      "group": "pilot6100_reference_manifest",
+      "relative_file": "render_manifest.json",
+      "local": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot/nr_conservative_s6100_compiled_pilot/render_manifest.json",
+        "bytes": 17323,
+        "sha256": "fd10dea711c605a0cc4486839937938029e087648aa62d58982c002cf020cf1d"
+      },
+      "remote": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6100_compiled_pilot/render_manifest.json",
+        "bytes": 17323,
+        "sha256": "fd10dea711c605a0cc4486839937938029e087648aa62d58982c002cf020cf1d"
+      },
+      "size_equal": true,
+      "sha256_equal": true,
+      "byte_identical_by_size_and_raw_file_sha256": true
+    }
+  ],
+  "prefix_validation3_checks": {
+    "6100": {
+      "full_manifest_path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6100_compiled_all/render_manifest.json",
+      "pilot_manifest_path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6100_compiled_pilot/render_manifest.json",
+      "scope": "first validation3 only; test subsequences not compared",
+      "rows": [
+        {
+          "case": 1,
+          "split": "val",
+          "full_manifest_sha256": "6267a795012f39ce36093c3c5d861961a9c5ec0d032eb3c303ff11d57b7c98ec",
+          "pilot_manifest_sha256": "6267a795012f39ce36093c3c5d861961a9c5ec0d032eb3c303ff11d57b7c98ec",
+          "pilot_actual_png": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6100_compiled_pilot/render/val/case1.png",
+            "bytes": 20855890,
+            "sha256": "6267a795012f39ce36093c3c5d861961a9c5ec0d032eb3c303ff11d57b7c98ec"
+          },
+          "same_manifest_sha256": true,
+          "pilot_actual_matches_pilot_manifest": true,
+          "pilot_actual_matches_full_manifest": true,
+          "source_native_dimensions_equal": true,
+          "full_actual_png_sha256_from_independent_PASS103_audit": "6267a795012f39ce36093c3c5d861961a9c5ec0d032eb3c303ff11d57b7c98ec",
+          "actual_full_and_pilot_byte_identical_by_sha256": true
+        },
+        {
+          "case": 2,
+          "split": "val",
+          "full_manifest_sha256": "00d158daee8341228b9046743b9c0bb956022464c16c3317851a44d501a16d6f",
+          "pilot_manifest_sha256": "00d158daee8341228b9046743b9c0bb956022464c16c3317851a44d501a16d6f",
+          "pilot_actual_png": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6100_compiled_pilot/render/val/case2.png",
+            "bytes": 17122731,
+            "sha256": "00d158daee8341228b9046743b9c0bb956022464c16c3317851a44d501a16d6f"
+          },
+          "same_manifest_sha256": true,
+          "pilot_actual_matches_pilot_manifest": true,
+          "pilot_actual_matches_full_manifest": true,
+          "source_native_dimensions_equal": true,
+          "full_actual_png_sha256_from_independent_PASS103_audit": "00d158daee8341228b9046743b9c0bb956022464c16c3317851a44d501a16d6f",
+          "actual_full_and_pilot_byte_identical_by_sha256": true
+        },
+        {
+          "case": 3,
+          "split": "val",
+          "full_manifest_sha256": "9f7636b1ffd053fedfae3c399053e8d4cc24ea325bb0d5c3b5d52e2dc460b769",
+          "pilot_manifest_sha256": "9f7636b1ffd053fedfae3c399053e8d4cc24ea325bb0d5c3b5d52e2dc460b769",
+          "pilot_actual_png": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6100_compiled_pilot/render/val/case3.png",
+            "bytes": 17615744,
+            "sha256": "9f7636b1ffd053fedfae3c399053e8d4cc24ea325bb0d5c3b5d52e2dc460b769"
+          },
+          "same_manifest_sha256": true,
+          "pilot_actual_matches_pilot_manifest": true,
+          "pilot_actual_matches_full_manifest": true,
+          "source_native_dimensions_equal": true,
+          "full_actual_png_sha256_from_independent_PASS103_audit": "9f7636b1ffd053fedfae3c399053e8d4cc24ea325bb0d5c3b5d52e2dc460b769",
+          "actual_full_and_pilot_byte_identical_by_sha256": true
+        }
+      ],
+      "all3_manifest_and_actual_pilot_sha_equal": true,
+      "full_actual_png_independent_audit_reference": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/audits/nr_cuda_full_s6100_audit.json",
+        "bytes": 31811,
+        "sha256": "6baf41b49a60698ebdf2e558c275b30e2d3b4e2fb828d5aeacb6cd6ea2ef7693"
+      },
+      "all3_actual_full_and_pilot_byte_identical_by_sha256": true
+    },
+    "6250": {
+      "full_manifest_path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6250_compiled_all/render_manifest.json",
+      "pilot_manifest_path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6250_compiled_pilot/render_manifest.json",
+      "scope": "first validation3 only; test subsequences not compared",
+      "rows": [
+        {
+          "case": 1,
+          "split": "val",
+          "full_manifest_sha256": "ff5ee8119978ed78621c971265fe0e0272629891061c102263a1b49e53b1ed42",
+          "pilot_manifest_sha256": "ff5ee8119978ed78621c971265fe0e0272629891061c102263a1b49e53b1ed42",
+          "pilot_actual_png": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6250_compiled_pilot/render/val/case1.png",
+            "bytes": 20855729,
+            "sha256": "ff5ee8119978ed78621c971265fe0e0272629891061c102263a1b49e53b1ed42"
+          },
+          "same_manifest_sha256": true,
+          "pilot_actual_matches_pilot_manifest": true,
+          "pilot_actual_matches_full_manifest": true,
+          "source_native_dimensions_equal": true,
+          "full_actual_png_sha256_from_independent_PASS103_audit": "ff5ee8119978ed78621c971265fe0e0272629891061c102263a1b49e53b1ed42",
+          "actual_full_and_pilot_byte_identical_by_sha256": true
+        },
+        {
+          "case": 2,
+          "split": "val",
+          "full_manifest_sha256": "3a78debf2ec56b576a5cfd0f649d21ed759b984733e73cd11b4790025c142b1a",
+          "pilot_manifest_sha256": "3a78debf2ec56b576a5cfd0f649d21ed759b984733e73cd11b4790025c142b1a",
+          "pilot_actual_png": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6250_compiled_pilot/render/val/case2.png",
+            "bytes": 17068285,
+            "sha256": "3a78debf2ec56b576a5cfd0f649d21ed759b984733e73cd11b4790025c142b1a"
+          },
+          "same_manifest_sha256": true,
+          "pilot_actual_matches_pilot_manifest": true,
+          "pilot_actual_matches_full_manifest": true,
+          "source_native_dimensions_equal": true,
+          "full_actual_png_sha256_from_independent_PASS103_audit": "3a78debf2ec56b576a5cfd0f649d21ed759b984733e73cd11b4790025c142b1a",
+          "actual_full_and_pilot_byte_identical_by_sha256": true
+        },
+        {
+          "case": 3,
+          "split": "val",
+          "full_manifest_sha256": "e570c6628d76de834646c15849e224aa3bbba973cc4e892f047881a4c806a53c",
+          "pilot_manifest_sha256": "e570c6628d76de834646c15849e224aa3bbba973cc4e892f047881a4c806a53c",
+          "pilot_actual_png": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_pilot_evaluations/nr_conservative_s6250_compiled_pilot/render/val/case3.png",
+            "bytes": 17607284,
+            "sha256": "e570c6628d76de834646c15849e224aa3bbba973cc4e892f047881a4c806a53c"
+          },
+          "same_manifest_sha256": true,
+          "pilot_actual_matches_pilot_manifest": true,
+          "pilot_actual_matches_full_manifest": true,
+          "source_native_dimensions_equal": true,
+          "full_actual_png_sha256_from_independent_PASS103_audit": "e570c6628d76de834646c15849e224aa3bbba973cc4e892f047881a4c806a53c",
+          "actual_full_and_pilot_byte_identical_by_sha256": true
+        }
+      ],
+      "all3_manifest_and_actual_pilot_sha_equal": true,
+      "full_actual_png_independent_audit_reference": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/audits/nr_cuda_full_s6250_audit.json",
+        "bytes": 31828,
+        "sha256": "9ed317059baee61e884e362151cc234be41ea7819dca6d7dc79e9400dc21eec5"
+      },
+      "all3_actual_full_and_pilot_byte_identical_by_sha256": true
+    }
+  },
+  "full_png_read_policy": "Full actual image SHA evidence reused from separately completed PASS103 audits; this task freshly read and hashed all six pilot validation PNGs.",
+  "remote_files_changed_during_hashing": false
+}

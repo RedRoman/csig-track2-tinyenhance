@@ -1,0 +1,218 @@
+{
+  "schema": "push7_root_serial_idle_gpu0_v1",
+  "start_utc": "2026-10-15T06:04:36.049520+00:00",
+  "CUDA_VISIBLE_DEVICES": "0",
+  "benchmark_sha256": "3e85026bd91ad8fb7fb91c5d3c74211cc33a9cff0f8316f7e56cde864ae41995",
+  "launcher_sha256": "3661c6cf04b53b47fc4d4403e91458a98b5b9223651dcf19c8d6d793baee7d80",
+  "n": 200,
+  "warm": 30,
+  "seed": 231,
+  "device": 0,
+  "jobs": [
+    {
+      "label": "g4",
+      "command": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+        "--model-dir",
+        "/cache/independent_sr_cuda_20261013/calibration/g4/model_dir",
+        "--out",
+        "/cache/independent_sr_cuda_20261013/calibration/push7_teacher_formal_20261015T0604/g4_latency.json",
+        "--n",
+        "200",
+        "--warm",
+        "30",
+        "--seed",
+        "231",
+        "--device",
+        "0"
+      ],
+      "CUDA_VISIBLE_DEVICES": "0",
+      "before": {
+        "utc": "2026-10-15T06:04:36.179267+00:00",
+        "gpus": "0, GPU-2018f8c4-5c1f-600d-186a-eba0459e1b10, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n1, GPU-76e0e4b4-48c7-dd9a-0a59-31529feb5834, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n2, GPU-b0899382-c0be-e59b-4400-0e21e966840c, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n3, GPU-ae04a630-3180-4a36-b8fd-f10a01590e2c, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n",
+        "processes": ""
+      },
+      "start_utc": "2026-10-15T06:04:36.297163+00:00",
+      "exit_code": 0,
+      "end_utc": "2026-10-15T06:05:02.011844+00:00",
+      "elapsed_seconds": 25.714699116069824,
+      "after": {
+        "utc": "2026-10-15T06:05:02.011882+00:00",
+        "gpus": "0, GPU-2018f8c4-5c1f-600d-186a-eba0459e1b10, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n1, GPU-76e0e4b4-48c7-dd9a-0a59-31529feb5834, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n2, GPU-b0899382-c0be-e59b-4400-0e21e966840c, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n3, GPU-ae04a630-3180-4a36-b8fd-f10a01590e2c, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n",
+        "processes": ""
+      },
+      "latency_512": {
+        "event_med": 0.7854080200195312,
+        "event_p10": 0.7833600044250488,
+        "event_min": 0.7813119888305664,
+        "wall_med": 0.8051855256780982,
+        "wall_min": 0.8020198438316584,
+        "wall_p10": 0.8033059304580092,
+        "n": 200,
+        "warm": 30
+      }
+    },
+    {
+      "label": "push6",
+      "command": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+        "--model-dir",
+        "/cache/independent_sr_cuda_20261013/submissions/hypir_push6_a7750_ro_wavelet/model_dir",
+        "--out",
+        "/cache/independent_sr_cuda_20261013/calibration/push7_teacher_formal_20261015T0604/push6_latency.json",
+        "--n",
+        "200",
+        "--warm",
+        "30",
+        "--seed",
+        "231",
+        "--device",
+        "0",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth"
+      ],
+      "CUDA_VISIBLE_DEVICES": "0",
+      "before": {
+        "utc": "2026-10-15T06:05:02.137223+00:00",
+        "gpus": "0, GPU-2018f8c4-5c1f-600d-186a-eba0459e1b10, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 8 %, 0 MiB\n1, GPU-76e0e4b4-48c7-dd9a-0a59-31529feb5834, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n2, GPU-b0899382-c0be-e59b-4400-0e21e966840c, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n3, GPU-ae04a630-3180-4a36-b8fd-f10a01590e2c, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n",
+        "processes": ""
+      },
+      "start_utc": "2026-10-15T06:05:02.257424+00:00",
+      "exit_code": 0,
+      "end_utc": "2026-10-15T06:05:37.049911+00:00",
+      "elapsed_seconds": 34.7924953319598,
+      "after": {
+        "utc": "2026-10-15T06:05:37.049933+00:00",
+        "gpus": "0, GPU-2018f8c4-5c1f-600d-186a-eba0459e1b10, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n1, GPU-76e0e4b4-48c7-dd9a-0a59-31529feb5834, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n2, GPU-b0899382-c0be-e59b-4400-0e21e966840c, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n3, GPU-ae04a630-3180-4a36-b8fd-f10a01590e2c, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n",
+        "processes": ""
+      },
+      "latency_512": {
+        "event_med": 41.592830657958984,
+        "event_p10": 41.42765998840332,
+        "event_min": 41.30713653564453,
+        "wall_med": 41.62880196236074,
+        "wall_min": 41.33435897529125,
+        "wall_p10": 41.455534123815596,
+        "n": 200,
+        "warm": 30
+      }
+    },
+    {
+      "label": "trtvae",
+      "command": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+        "--model-dir",
+        "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/model_dir",
+        "--out",
+        "/cache/independent_sr_cuda_20261013/calibration/push7_teacher_formal_20261015T0604/trtvae_latency.json",
+        "--n",
+        "200",
+        "--warm",
+        "30",
+        "--seed",
+        "231",
+        "--device",
+        "0",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine"
+      ],
+      "CUDA_VISIBLE_DEVICES": "0",
+      "before": {
+        "utc": "2026-10-15T06:05:37.184394+00:00",
+        "gpus": "0, GPU-2018f8c4-5c1f-600d-186a-eba0459e1b10, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 62 %, 0 MiB\n1, GPU-76e0e4b4-48c7-dd9a-0a59-31529feb5834, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n2, GPU-b0899382-c0be-e59b-4400-0e21e966840c, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n3, GPU-ae04a630-3180-4a36-b8fd-f10a01590e2c, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n",
+        "processes": ""
+      },
+      "start_utc": "2026-10-15T06:05:37.306901+00:00",
+      "exit_code": 0,
+      "end_utc": "2026-10-15T06:06:11.518221+00:00",
+      "elapsed_seconds": 34.21132849995047,
+      "after": {
+        "utc": "2026-10-15T06:06:11.518242+00:00",
+        "gpus": "0, GPU-2018f8c4-5c1f-600d-186a-eba0459e1b10, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n1, GPU-76e0e4b4-48c7-dd9a-0a59-31529feb5834, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n2, GPU-b0899382-c0be-e59b-4400-0e21e966840c, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n3, GPU-ae04a630-3180-4a36-b8fd-f10a01590e2c, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n",
+        "processes": ""
+      },
+      "latency_512": {
+        "event_med": 34.39974403381348,
+        "event_p10": 34.25361785888672,
+        "event_min": 34.20979309082031,
+        "wall_med": 34.424628131091595,
+        "wall_min": 34.23532098531723,
+        "wall_p10": 34.279206790961325,
+        "n": 200,
+        "warm": 30
+      }
+    },
+    {
+      "label": "trtunetvae",
+      "command": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+        "--model-dir",
+        "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir",
+        "--out",
+        "/cache/independent_sr_cuda_20261013/calibration/push7_teacher_formal_20261015T0604/trtunetvae_latency.json",
+        "--n",
+        "200",
+        "--warm",
+        "30",
+        "--seed",
+        "231",
+        "--device",
+        "0",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/unet_fp16_A7750/component.engine"
+      ],
+      "CUDA_VISIBLE_DEVICES": "0",
+      "before": {
+        "utc": "2026-10-15T06:06:11.641116+00:00",
+        "gpus": "0, GPU-2018f8c4-5c1f-600d-186a-eba0459e1b10, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 56 %, 0 MiB\n1, GPU-76e0e4b4-48c7-dd9a-0a59-31529feb5834, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n2, GPU-b0899382-c0be-e59b-4400-0e21e966840c, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n3, GPU-ae04a630-3180-4a36-b8fd-f10a01590e2c, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n",
+        "processes": ""
+      },
+      "start_utc": "2026-10-15T06:06:11.758842+00:00",
+      "exit_code": 0,
+      "end_utc": "2026-10-15T06:06:46.927707+00:00",
+      "elapsed_seconds": 35.168873933842406,
+      "after": {
+        "utc": "2026-10-15T06:06:46.927728+00:00",
+        "gpus": "0, GPU-2018f8c4-5c1f-600d-186a-eba0459e1b10, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n1, GPU-76e0e4b4-48c7-dd9a-0a59-31529feb5834, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n2, GPU-b0899382-c0be-e59b-4400-0e21e966840c, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n3, GPU-ae04a630-3180-4a36-b8fd-f10a01590e2c, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n",
+        "processes": ""
+      },
+      "latency_512": {
+        "event_med": 32.68608093261719,
+        "event_p10": 32.56105079650879,
+        "event_min": 32.476158142089844,
+        "wall_med": 32.71404595579952,
+        "wall_min": 32.50107914209366,
+        "wall_p10": 32.586872251704335,
+        "n": 200,
+        "warm": 30
+      }
+    }
+  ],
+  "quality_reuse_claim": false,
+  "initial_snapshot": {
+    "utc": "2026-10-15T06:04:36.049557+00:00",
+    "gpus": "0, GPU-2018f8c4-5c1f-600d-186a-eba0459e1b10, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n1, GPU-76e0e4b4-48c7-dd9a-0a59-31529feb5834, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n2, GPU-b0899382-c0be-e59b-4400-0e21e966840c, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n3, GPU-ae04a630-3180-4a36-b8fd-f10a01590e2c, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n",
+    "processes": ""
+  },
+  "status": "COMPLETE_FOUR_FRESH_PROCESSES",
+  "end_utc": "2026-10-15T06:06:47.065090+00:00",
+  "final_snapshot": {
+    "utc": "2026-10-15T06:06:47.065103+00:00",
+    "gpus": "0, GPU-2018f8c4-5c1f-600d-186a-eba0459e1b10, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 54 %, 0 MiB\n1, GPU-76e0e4b4-48c7-dd9a-0a59-31529feb5834, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n2, GPU-b0899382-c0be-e59b-4400-0e21e966840c, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n3, GPU-ae04a630-3180-4a36-b8fd-f10a01590e2c, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB\n",
+    "processes": ""
+  }
+}

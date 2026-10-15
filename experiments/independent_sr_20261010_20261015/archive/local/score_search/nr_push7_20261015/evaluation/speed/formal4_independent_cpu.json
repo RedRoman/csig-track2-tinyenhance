@@ -1,0 +1,396 @@
+{
+  "status": "PASS_FORMAL4_TIMING_AND_2_QUALITY_PREDICTIONS",
+  "cpu_only": true,
+  "GPU_started": false,
+  "launcher": {
+    "path": "/cache/independent_sr_cuda_20261013/code/push7/launch_formal_push7.py",
+    "sha256": "3661c6cf04b53b47fc4d4403e91458a98b5b9223651dcf19c8d6d793baee7d80"
+  },
+  "evidence": {
+    "path": "/cache/independent_sr_cuda_20261013/calibration/push7_teacher_formal_20261015T0604/root_launch_evidence.json",
+    "sha256": "f6bdde6414d24e33ca4ac1a38220fd1e3ed0d653f3f31d0ac05cbfe3af2a4a20"
+  },
+  "benchmark": {
+    "path": "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+    "sha256": "3e85026bd91ad8fb7fb91c5d3c74211cc33a9cff0f8316f7e56cde864ae41995"
+  },
+  "predictor": {
+    "path": "/cache/independent_sr_cuda_20261013/scoring_tool/predict.py",
+    "sha256": "0af39f578f704e00a0a0a5ce55e58f1668d283ac4602065d8215b6d21cf433e1"
+  },
+  "quality": {
+    "path": "/cache/independent_sr_cuda_20261013/audits/push7/hypir_full/trtvae_fp16_all.json",
+    "sha256": "1e54ac9a0681b67144c2f173e458d9c23c8f1d9d41fec17e7c278cc80470c63b"
+  },
+  "timings": {
+    "g4": {
+      "result": {
+        "path": "/cache/independent_sr_cuda_20261013/calibration/push7_teacher_formal_20261015T0604/g4_latency.json",
+        "sha256": "4e8eb12b722c972c05c823635c6cb11f7e60376d59c92aefcc4f17c2d8da73da"
+      },
+      "actual_200_event_and_wall_recomputed": true,
+      "recomputed": {
+        "event_med": 0.7854080200195312,
+        "event_p10": 0.7833600044250488,
+        "event_min": 0.7813119888305664,
+        "wall_med": 0.8051855256780982,
+        "wall_p10": 0.8033059304580092,
+        "wall_min": 0.8020198438316584
+      },
+      "output": {
+        "device": "cuda:0",
+        "dtype": "torch.float16",
+        "shape": [
+          1,
+          3,
+          512,
+          512
+        ],
+        "all_finite": true,
+        "min": -1.0,
+        "max": 1.0,
+        "within_minus1_plus1": true,
+        "clamping_applied_by_benchmark": false
+      },
+      "cuda": {
+        "logical_device": 0,
+        "name": "NVIDIA A100-SXM4-80GB",
+        "compute_capability": [
+          8,
+          0
+        ],
+        "total_memory_bytes": 85293072384,
+        "torch_version": "2.8.0+cu128",
+        "torch_cuda_build": "12.8",
+        "cudnn_version": 91002
+      },
+      "artifacts": {
+        "files": [
+          {
+            "path": "config.yaml",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/calibration/g4/model_dir/config.yaml",
+            "bytes": 35,
+            "sha256": "e13bab32185ac95f07ac36133eff89133a33ed90cc5ca534b7d8496bc457250d"
+          },
+          {
+            "path": "model.pth",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/calibration/g4/model_dir/model.pth",
+            "bytes": 12677682,
+            "sha256": "283cb7d051a4686e558057b8fb0dcd927b47a8cb7474101fab4162c457c2bb83"
+          },
+          {
+            "path": "pix_model.py",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/calibration/g4/model_dir/pix_model.py",
+            "bytes": 8876,
+            "sha256": "5b1ba75929d25c2663ec5aba5f7cd4d4a56b79f214dd8e7a49e48c34eca50f5f"
+          },
+          {
+            "path": "runner.py",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/calibration/g4/model_dir/runner.py",
+            "bytes": 8830,
+            "sha256": "6222ead92dc6fb24b88c0350e41191fc27a5adc2f6ba38bd383a4badb9bd8c1e"
+          }
+        ],
+        "extra_files": [],
+        "untraversed_symlink_directories": [],
+        "coverage": "Model directory Python/config/weight files; symlinked directories are not traversed. Use --hash-file for weights/configs outside this directory."
+      }
+    },
+    "push6": {
+      "result": {
+        "path": "/cache/independent_sr_cuda_20261013/calibration/push7_teacher_formal_20261015T0604/push6_latency.json",
+        "sha256": "b5b27fb07ac5ee20935c756aebf0f1da597d3386b77670d443753dbf7de0befb"
+      },
+      "actual_200_event_and_wall_recomputed": true,
+      "recomputed": {
+        "event_med": 41.592830657958984,
+        "event_p10": 41.42765998840332,
+        "event_min": 41.30713653564453,
+        "wall_med": 41.62880196236074,
+        "wall_p10": 41.455534123815596,
+        "wall_min": 41.33435897529125
+      },
+      "output": {
+        "device": "cuda:0",
+        "dtype": "torch.float32",
+        "shape": [
+          1,
+          3,
+          512,
+          512
+        ],
+        "all_finite": true,
+        "min": -1.0,
+        "max": 1.0,
+        "within_minus1_plus1": true,
+        "clamping_applied_by_benchmark": false
+      },
+      "cuda": {
+        "logical_device": 0,
+        "name": "NVIDIA A100-SXM4-80GB",
+        "compute_capability": [
+          8,
+          0
+        ],
+        "total_memory_bytes": 85293072384,
+        "torch_version": "2.8.0+cu128",
+        "torch_cuda_build": "12.8",
+        "cudnn_version": 91002
+      },
+      "artifacts": {
+        "files": [
+          {
+            "path": "config.json",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push6_a7750_ro_wavelet/model_dir/config.json",
+            "bytes": 577,
+            "sha256": "8ea2367f3395cb87e98e663fb47c172de97632913776e9514a8ac44247b31cd8"
+          },
+          {
+            "path": "runner.py",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push6_a7750_ro_wavelet/model_dir/runner.py",
+            "bytes": 9504,
+            "sha256": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b"
+          }
+        ],
+        "extra_files": [
+          {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+            "bytes": 1038079419,
+            "sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d"
+          }
+        ],
+        "untraversed_symlink_directories": [],
+        "coverage": "Model directory Python/config/weight files; symlinked directories are not traversed. Use --hash-file for weights/configs outside this directory."
+      }
+    },
+    "trtvae": {
+      "result": {
+        "path": "/cache/independent_sr_cuda_20261013/calibration/push7_teacher_formal_20261015T0604/trtvae_latency.json",
+        "sha256": "91fe483dd99c4ea7e6a526e0f18d6e4425cfbcfc9b6bdba5b55835f9b4616355"
+      },
+      "actual_200_event_and_wall_recomputed": true,
+      "recomputed": {
+        "event_med": 34.39974403381348,
+        "event_p10": 34.25361785888672,
+        "event_min": 34.20979309082031,
+        "wall_med": 34.424628131091595,
+        "wall_p10": 34.279206790961325,
+        "wall_min": 34.23532098531723
+      },
+      "output": {
+        "device": "cuda:0",
+        "dtype": "torch.float32",
+        "shape": [
+          1,
+          3,
+          512,
+          512
+        ],
+        "all_finite": true,
+        "min": -1.0,
+        "max": 1.0,
+        "within_minus1_plus1": true,
+        "clamping_applied_by_benchmark": false
+      },
+      "cuda": {
+        "logical_device": 0,
+        "name": "NVIDIA A100-SXM4-80GB",
+        "compute_capability": [
+          8,
+          0
+        ],
+        "total_memory_bytes": 85293072384,
+        "torch_version": "2.8.0+cu128",
+        "torch_cuda_build": "12.8",
+        "cudnn_version": 91002
+      },
+      "artifacts": {
+        "files": [
+          {
+            "path": "config.json",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/model_dir/config.json",
+            "bytes": 1752,
+            "sha256": "661bf9bd6a7ecb2ae5b475dda9dcd855700bb52be87ab0f2b6d97740f32308f4"
+          },
+          {
+            "path": "reference_runner.py",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/model_dir/reference_runner.py",
+            "bytes": 9504,
+            "sha256": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b"
+          },
+          {
+            "path": "runner.py",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/model_dir/runner.py",
+            "bytes": 9006,
+            "sha256": "2bc74f65029c5c95c9a8c285bf7db1c63b03a15fb9fa06cd56d93cf6b1fe2fc9"
+          },
+          {
+            "path": "trt_vae_runtime_v2.py",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/model_dir/trt_vae_runtime_v2.py",
+            "bytes": 4634,
+            "sha256": "dc2597edfe8a7d71526535bd4e7540bd9c7623de00b6639c61139e08837aa9a4"
+          }
+        ],
+        "extra_files": [
+          {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+            "bytes": 1038079419,
+            "sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d"
+          },
+          {
+            "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine",
+            "bytes": 71304884,
+            "sha256": "14c206896a7caa6b6491dae33133d149283025cfb8e15b6cf129d8854176ba55"
+          },
+          {
+            "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine",
+            "bytes": 102396372,
+            "sha256": "fe81087086d76aa8d0111cb80070b65b897e0438ebb2a8a020ef0ced8bc6bf30"
+          }
+        ],
+        "untraversed_symlink_directories": [],
+        "coverage": "Model directory Python/config/weight files; symlinked directories are not traversed. Use --hash-file for weights/configs outside this directory."
+      }
+    },
+    "trtunetvae": {
+      "result": {
+        "path": "/cache/independent_sr_cuda_20261013/calibration/push7_teacher_formal_20261015T0604/trtunetvae_latency.json",
+        "sha256": "1831b15b34e04246012dbd25ffc09209ef49984cce215c98965ba3ff6044d879"
+      },
+      "actual_200_event_and_wall_recomputed": true,
+      "recomputed": {
+        "event_med": 32.68608093261719,
+        "event_p10": 32.56105079650879,
+        "event_min": 32.476158142089844,
+        "wall_med": 32.71404595579952,
+        "wall_p10": 32.586872251704335,
+        "wall_min": 32.50107914209366
+      },
+      "output": {
+        "device": "cuda:0",
+        "dtype": "torch.float32",
+        "shape": [
+          1,
+          3,
+          512,
+          512
+        ],
+        "all_finite": true,
+        "min": -1.0,
+        "max": 1.0,
+        "within_minus1_plus1": true,
+        "clamping_applied_by_benchmark": false
+      },
+      "cuda": {
+        "logical_device": 0,
+        "name": "NVIDIA A100-SXM4-80GB",
+        "compute_capability": [
+          8,
+          0
+        ],
+        "total_memory_bytes": 85293072384,
+        "torch_version": "2.8.0+cu128",
+        "torch_cuda_build": "12.8",
+        "cudnn_version": 91002
+      },
+      "artifacts": {
+        "files": [
+          {
+            "path": "config.json",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/config.json",
+            "bytes": 2234,
+            "sha256": "63e227319f2c2fb327257a810f6709b4f1d738732571f6c100e22b75174694e5"
+          },
+          {
+            "path": "reference_runner.py",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/reference_runner.py",
+            "bytes": 9504,
+            "sha256": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b"
+          },
+          {
+            "path": "runner.py",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/runner.py",
+            "bytes": 7731,
+            "sha256": "270d2434179d17658e9f1df228c8ef99124a2695141c92f0b5fecfa73d8d3080"
+          },
+          {
+            "path": "trt_vae_runtime_v2.py",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/trt_vae_runtime_v2.py",
+            "bytes": 4634,
+            "sha256": "dc2597edfe8a7d71526535bd4e7540bd9c7623de00b6639c61139e08837aa9a4"
+          },
+          {
+            "path": "vae_hybrid_runner.py",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/vae_hybrid_runner.py",
+            "bytes": 9006,
+            "sha256": "2bc74f65029c5c95c9a8c285bf7db1c63b03a15fb9fa06cd56d93cf6b1fe2fc9"
+          }
+        ],
+        "extra_files": [
+          {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+            "bytes": 1038079419,
+            "sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d"
+          },
+          {
+            "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine",
+            "bytes": 71304884,
+            "sha256": "14c206896a7caa6b6491dae33133d149283025cfb8e15b6cf129d8854176ba55"
+          },
+          {
+            "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine",
+            "bytes": 102396372,
+            "sha256": "fe81087086d76aa8d0111cb80070b65b897e0438ebb2a8a020ef0ced8bc6bf30"
+          },
+          {
+            "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/unet_fp16_A7750/component.engine",
+            "resolved_path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/unet_fp16_A7750/component.engine",
+            "bytes": 1656387116,
+            "sha256": "08fca16f286c604614e9322ded93f848b0c1d3dd40de7ca793f10b98f286aec8"
+          }
+        ],
+        "untraversed_symlink_directories": [],
+        "coverage": "Model directory Python/config/weight files; symlinked directories are not traversed. Use --hash-file for weights/configs outside this directory."
+      }
+    }
+  },
+  "predictions": {
+    "push6": {
+      "NR": 2.3197332792186334,
+      "FR": 1.4417232871055603,
+      "S_proxy": 3.7614565663241937,
+      "event_p10_ms": 41.42765998840332,
+      "normalized_g_ms": 22.793251320134527,
+      "original_tool_prediction": 60.04738558516993,
+      "reaches65": false
+    },
+    "trtvae": {
+      "NR": 2.3193312111166215,
+      "FR": 1.4416551788647969,
+      "S_proxy": 3.7609863899814187,
+      "event_p10_ms": 34.25361785888672,
+      "normalized_g_ms": 18.846136149133354,
+      "original_tool_prediction": 62.32913337707007,
+      "reaches65": false
+    }
+  },
+  "unetvae_prediction_available": false,
+  "unetvae_reason": "No fresh full103/418 quality audit yet; timing only",
+  "normalization": {
+    "formula": "event_p10_ms*0.431/new_same_batch_G4_event_p10_ms",
+    "G4_event_p10_ms": 0.7833600044250488
+  },
+  "actual_event_samples": 800,
+  "actual_wall_samples": 800,
+  "physical_GPU0_UUID": "GPU-2018f8c4-5c1f-600d-186a-eba0459e1b10",
+  "physical_continuity_scope": "All actual before/after boundary snapshots plus fixed launcher CUDA_VISIBLE_DEVICES0/logical0 commands; no in-process UUID telemetry claimed",
+  "no_official_score_claim": true,
+  "no_current_model_pointer_changed": true
+}

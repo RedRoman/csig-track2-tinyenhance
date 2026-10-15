@@ -1,0 +1,116 @@
+{
+  "schema": "nr_push3_candidate_registration_v1",
+  "created_bjt": "2026-10-14T19:09:22.698429+08:00",
+  "label": "push3_b7250_compiled",
+  "cpu_only": true,
+  "reference_model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_cuda_nr_stage3_anchor6250_m15_s6500_compiled/model_dir",
+  "reference_checkpoint_sha256": "cfcc3013fa87aa721f346d6cc285e70b6d6ff2c88315ce9f1465b07ffe020e68",
+  "reference_runner_sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae",
+  "checkpoint": {
+    "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_cont750/step7250.pth",
+    "bytes": 1038079419,
+    "sha256": "b326a96d0fdfd9d18e39ec7880aa09405b981f06fe8d5af4b08c18965ede5bb1"
+  },
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push3_b7250_compiled/model_dir",
+  "config": {
+    "label": "push3_b7250_compiled",
+    "repo_path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda",
+    "base_model_path": "/temp/zihaohe_stage/baselines/sd21b",
+    "weight_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_cont750/step7250.pth",
+    "device_index": 0,
+    "seed": 231,
+    "lora_rank": 256,
+    "model_t": 200,
+    "coeff_t": 175,
+    "internal_precision": "bfloat16",
+    "patch_size": 512,
+    "stride": 256,
+    "upscale": 1,
+    "caption": "",
+    "fuse_lora": true,
+    "cache_empty_caption": true,
+    "compile_tiles": true
+  },
+  "config_differences": {
+    "weight_path": {
+      "reference": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m15_250/step6500.pth",
+      "candidate": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_cont750/step7250.pth"
+    },
+    "label": {
+      "reference": "cuda_nr_stage3_anchor6250_m15_s6500_compiled",
+      "candidate": "push3_b7250_compiled"
+    }
+  },
+  "sources": [
+    {
+      "path": "/cache/independent_sr_cuda_20261013/code/render_cuda_submission.py",
+      "bytes": 7979,
+      "sha256": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5"
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/code/score_cuda_stream.py",
+      "bytes": 11085,
+      "sha256": "20125b94596c669f33dc99b592424a8c1e6a44ec1247d304853823cc5e399074"
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/scoring_tool/deployment_manifest.json",
+      "bytes": 32728,
+      "sha256": "b54b7989a90faa1f5e4243617874c09625f06b659feb43201054dc548a81c2f2"
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/calibration/environment_protocol.json",
+      "bytes": 5771,
+      "sha256": "d9531da670cfbf17be959911c222f7ec7b39a225c99f8ba3008a84f88ffa6e6c"
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/calibration/base_model_provenance_shared.json",
+      "bytes": 4062,
+      "sha256": "d5649855aa557de93d27d1a7226a5951cc79120d93ebf47f6eec365206d3061b"
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py",
+      "bytes": 5937,
+      "sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161"
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py",
+      "bytes": 2725,
+      "sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd"
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py",
+      "bytes": 9323,
+      "sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+    }
+  ],
+  "registration_script_sha256": "c6d40bc393fbcf53fcf5282e8c4b560bc2f4475ae7f78270385a51b24f4cdbef",
+  "mode": "execute",
+  "commands": {
+    "pilot": {
+      "render": "/cache/independent_sr_cuda_20261013/env/bin/python /cache/independent_sr_cuda_20261013/code/render_cuda_submission.py --model-dir /cache/independent_sr_cuda_20261013/submissions/hypir_push3_b7250_compiled/model_dir --test-dir /cache/independent_sr_cuda_20261013/source_payload/assets/input --val-dir '/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/验证集' --out-dir /cache/independent_sr_cuda_20261013/nr_push3_pilot_evaluations/push3_b7250_compiled_pilot --cases pilot",
+      "score": "/cache/independent_sr_cuda_20261013/env/bin/python /cache/independent_sr_cuda_20261013/code/score_cuda_stream.py --tool-dir /cache/independent_sr_cuda_20261013/scoring_tool --evaluation push3_b7250_compiled_pilot=/cache/independent_sr_cuda_20261013/nr_push3_pilot_evaluations/push3_b7250_compiled_pilot/render --out-root /cache/independent_sr_cuda_20261013/nr_push3_pilot_evaluations --test-cases 1,6,7,11,16,18,21,23,25,28,31,36,41,46,51,61,71,81,91,100",
+      "label": "push3_b7250_compiled_pilot",
+      "scope": "S_subset only (23 images / 98 scalars)",
+      "gpu_scheduling": "Root assigns CUDA_VISIBLE_DEVICES separately; no GPU launched by this registration."
+    },
+    "full": {
+      "render": "/cache/independent_sr_cuda_20261013/env/bin/python /cache/independent_sr_cuda_20261013/code/render_cuda_submission.py --model-dir /cache/independent_sr_cuda_20261013/submissions/hypir_push3_b7250_compiled/model_dir --test-dir /cache/independent_sr_cuda_20261013/source_payload/assets/input --val-dir '/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/验证集' --out-dir /cache/independent_sr_cuda_20261013/nr_push3_full_evaluations/push3_b7250_compiled_all --cases all",
+      "score": "/cache/independent_sr_cuda_20261013/env/bin/python /cache/independent_sr_cuda_20261013/code/score_cuda_stream.py --tool-dir /cache/independent_sr_cuda_20261013/scoring_tool --evaluation push3_b7250_compiled_all=/cache/independent_sr_cuda_20261013/nr_push3_full_evaluations/push3_b7250_compiled_all/render --out-root /cache/independent_sr_cuda_20261013/nr_push3_full_evaluations",
+      "label": "push3_b7250_compiled_all",
+      "scope": "S_proxy test100 NR + val3 FR (103 images / 418 scalars)",
+      "gpu_scheduling": "Root assigns CUDA_VISIBLE_DEVICES separately; no GPU launched by this registration."
+    }
+  },
+  "registered_files": [
+    {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push3_b7250_compiled/model_dir/runner.py",
+      "bytes": 9130,
+      "sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae"
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push3_b7250_compiled/model_dir/config.json",
+      "bytes": 571,
+      "sha256": "fde2223a686623a59ca8699813ef19c60213e75255351a11fece0e91d2d46356"
+    }
+  ]
+}

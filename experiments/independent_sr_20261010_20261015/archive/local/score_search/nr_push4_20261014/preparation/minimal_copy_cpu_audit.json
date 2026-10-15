@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "CPU_only": true,
+  "old_frozen_auditor_sha256": "01de80dfed6a973809e1b0e3f1bc896854040f88aba46dc039a42a6258e0c6a8",
+  "new_auditor_sha256": "afdd1aae490f07eebd387e97f580d9134352e7b5a7f43e36af64bca7b3c72162",
+  "audit_and_compare_function_bodies_exact_unchanged": true,
+  "shared_body_sha256": "65d7b6ee34cd0befa5994a06ee94c62438d252920b006d1668a3ae9631b5e4ab",
+  "driver_changes": [
+    "docstring/reference help",
+    "default completed parent7250 pilot/full paths",
+    "sealed parent7250 raw SHA guard"
+  ],
+  "parent7250_reference_actual_CPU_audits": {
+    "pilot": {
+      "proof_file": "parent7250_pilot_cpu_audit.json",
+      "proof_sha256": "dba683b8cc0efba63902167adf04d8e7082ae88fe52c354a969c5e2c7de90a7f",
+      "image_rows": 23,
+      "scalar_metrics": 98,
+      "NR": 2.3058536098858196,
+      "FR": 1.4465690056482952,
+      "S_subset": 3.7524226155341145
+    },
+    "full": {
+      "proof_file": "parent7250_full_cpu_audit.json",
+      "proof_sha256": "15d1e3765e0cfbb6a6de0f78018fa6bd0845167576598c902de52d1e301ec4d3",
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "NR": 2.313125129005856,
+      "FR": 1.4465690056482952,
+      "S_proxy": 3.7596941346541515
+    }
+  },
+  "candidate_registration_executed": false,
+  "GPU_job_started": false,
+  "watcher_started": false,
+  "training_v5_source_config_proof": "pending root source/config protocol details and actual completed marker"
+}

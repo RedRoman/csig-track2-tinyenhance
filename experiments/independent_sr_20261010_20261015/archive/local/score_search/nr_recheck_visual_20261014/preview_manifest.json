@@ -1,0 +1,943 @@
+{
+  "schema": "scientific_visual_inspection_v1",
+  "created_local_date": "2026-10-14",
+  "cases": [
+    7,
+    16,
+    23,
+    41,
+    83
+  ],
+  "purpose": "Local visual inspection of exact full-render PNGs; originals unmodified.",
+  "limitations": "No test GT available here. Visible sharpening, generated texture or NR gains do not prove faithful detail recovery.",
+  "source_files": [
+    {
+      "id": "7/baseline",
+      "case": 7,
+      "variant": "baseline",
+      "label": "Baseline s6000",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_outputs/s6000_mt200_ct175_compiled_cuda_all/render/test/case7.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/evaluations/s6000_mt200_ct175_compiled_cuda_all/render/test/case7.png",
+      "sha256": "2bbefc4e5a0cf1011504c505a007d9714879c6f57430e2131057ecefa370e4ff",
+      "manifest_sha256": "2bbefc4e5a0cf1011504c505a007d9714879c6f57430e2131057ecefa370e4ff",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/baseline_s6000_render_manifest.json",
+      "manifest_file_sha256": "a61080b4cb0f9f574933ccda1916a78b0a18fbe5cfccd0ea1bebc397dafa1689",
+      "protocol_id": "68e3889b1c1ba2e76a5b131818383e6ed36e13cc021aae7bcc7c14052e139aec",
+      "metric_jsonl": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/results/s6000_mt200_ct175_compiled_cuda_all/scores/measurements.jsonl",
+      "verification": "SHA-256, size, metric sr_sha256 all match"
+    },
+    {
+      "id": "16/baseline",
+      "case": 16,
+      "variant": "baseline",
+      "label": "Baseline s6000",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_outputs/s6000_mt200_ct175_compiled_cuda_all/render/test/case16.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/evaluations/s6000_mt200_ct175_compiled_cuda_all/render/test/case16.png",
+      "sha256": "7da7935ffc5cb6a2e6863b5c3aaea864fc25cc8c7b370a7c677e2de7180cbe40",
+      "manifest_sha256": "7da7935ffc5cb6a2e6863b5c3aaea864fc25cc8c7b370a7c677e2de7180cbe40",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/baseline_s6000_render_manifest.json",
+      "manifest_file_sha256": "a61080b4cb0f9f574933ccda1916a78b0a18fbe5cfccd0ea1bebc397dafa1689",
+      "protocol_id": "68e3889b1c1ba2e76a5b131818383e6ed36e13cc021aae7bcc7c14052e139aec",
+      "metric_jsonl": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/results/s6000_mt200_ct175_compiled_cuda_all/scores/measurements.jsonl",
+      "verification": "SHA-256, size, metric sr_sha256 all match"
+    },
+    {
+      "id": "23/baseline",
+      "case": 23,
+      "variant": "baseline",
+      "label": "Baseline s6000",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_outputs/s6000_mt200_ct175_compiled_cuda_all/render/test/case23.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/evaluations/s6000_mt200_ct175_compiled_cuda_all/render/test/case23.png",
+      "sha256": "c869caa0381277d90db434da2a70b47813d7566995dbdbdf1f42a98f97141fde",
+      "manifest_sha256": "c869caa0381277d90db434da2a70b47813d7566995dbdbdf1f42a98f97141fde",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/baseline_s6000_render_manifest.json",
+      "manifest_file_sha256": "a61080b4cb0f9f574933ccda1916a78b0a18fbe5cfccd0ea1bebc397dafa1689",
+      "protocol_id": "68e3889b1c1ba2e76a5b131818383e6ed36e13cc021aae7bcc7c14052e139aec",
+      "metric_jsonl": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/results/s6000_mt200_ct175_compiled_cuda_all/scores/measurements.jsonl",
+      "verification": "SHA-256, size, metric sr_sha256 all match"
+    },
+    {
+      "id": "41/baseline",
+      "case": 41,
+      "variant": "baseline",
+      "label": "Baseline s6000",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_outputs/s6000_mt200_ct175_compiled_cuda_all/render/test/case41.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/evaluations/s6000_mt200_ct175_compiled_cuda_all/render/test/case41.png",
+      "sha256": "116b5ec1fb82c89a6401786beecb3782f5090d2633300bb0631ec49bff1d60aa",
+      "manifest_sha256": "116b5ec1fb82c89a6401786beecb3782f5090d2633300bb0631ec49bff1d60aa",
+      "size_wh": [
+        3072,
+        4096
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/baseline_s6000_render_manifest.json",
+      "manifest_file_sha256": "a61080b4cb0f9f574933ccda1916a78b0a18fbe5cfccd0ea1bebc397dafa1689",
+      "protocol_id": "68e3889b1c1ba2e76a5b131818383e6ed36e13cc021aae7bcc7c14052e139aec",
+      "metric_jsonl": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/results/s6000_mt200_ct175_compiled_cuda_all/scores/measurements.jsonl",
+      "verification": "SHA-256, size, metric sr_sha256 all match"
+    },
+    {
+      "id": "83/baseline",
+      "case": 83,
+      "variant": "baseline",
+      "label": "Baseline s6000",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_outputs/s6000_mt200_ct175_compiled_cuda_all/render/test/case83.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/evaluations/s6000_mt200_ct175_compiled_cuda_all/render/test/case83.png",
+      "sha256": "bbf1e032ac080319397a8a779fc4c159a0509f90963f85d0ce19fa6de57dc1e8",
+      "manifest_sha256": "bbf1e032ac080319397a8a779fc4c159a0509f90963f85d0ce19fa6de57dc1e8",
+      "size_wh": [
+        3072,
+        4096
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/baseline_s6000_render_manifest.json",
+      "manifest_file_sha256": "a61080b4cb0f9f574933ccda1916a78b0a18fbe5cfccd0ea1bebc397dafa1689",
+      "protocol_id": "68e3889b1c1ba2e76a5b131818383e6ed36e13cc021aae7bcc7c14052e139aec",
+      "metric_jsonl": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/results/s6000_mt200_ct175_compiled_cuda_all/scores/measurements.jsonl",
+      "verification": "SHA-256, size, metric sr_sha256 all match"
+    },
+    {
+      "id": "7/latest",
+      "case": 7,
+      "variant": "latest",
+      "label": "NR conservative s6250",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_outputs/nr_conservative_s6250_compiled_all/render/test/case7.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6250_compiled_all/render/test/case7.png",
+      "sha256": "c5db13d01f1649e82ac7b0ceaa48d2acb42050e62351c26086fefdc10f95e9b0",
+      "manifest_sha256": "c5db13d01f1649e82ac7b0ceaa48d2acb42050e62351c26086fefdc10f95e9b0",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/nr_s6250_render_manifest.json",
+      "manifest_file_sha256": "31827c3bcf70beaf3cd0d68448e8040550749214fd24bfe963eb53cc95e74218",
+      "protocol_id": "38bffb0fa8159651803a3c4d2c001e38c2b4e8b35507a51b0f22df6adaff1a8b",
+      "metric_jsonl": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_all/scores/measurements.jsonl",
+      "verification": "SHA-256, size, metric sr_sha256 all match"
+    },
+    {
+      "id": "7/input",
+      "case": 7,
+      "variant": "input",
+      "label": "Input LQ",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/visual_checks/input/case7.jpg",
+      "remote_path": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case7.jpg",
+      "sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+      "manifest_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/nr_s6250_render_manifest.json",
+      "verification": "SHA-256 and size match manifest input task"
+    },
+    {
+      "id": "16/latest",
+      "case": 16,
+      "variant": "latest",
+      "label": "NR conservative s6250",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_outputs/nr_conservative_s6250_compiled_all/render/test/case16.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6250_compiled_all/render/test/case16.png",
+      "sha256": "1a988ef3a6a22368da26afa3362dab83468e4ff6558d57f9eb018c3312936e3f",
+      "manifest_sha256": "1a988ef3a6a22368da26afa3362dab83468e4ff6558d57f9eb018c3312936e3f",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/nr_s6250_render_manifest.json",
+      "manifest_file_sha256": "31827c3bcf70beaf3cd0d68448e8040550749214fd24bfe963eb53cc95e74218",
+      "protocol_id": "38bffb0fa8159651803a3c4d2c001e38c2b4e8b35507a51b0f22df6adaff1a8b",
+      "metric_jsonl": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_all/scores/measurements.jsonl",
+      "verification": "SHA-256, size, metric sr_sha256 all match"
+    },
+    {
+      "id": "16/input",
+      "case": 16,
+      "variant": "input",
+      "label": "Input LQ",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/visual_checks/input/case16.jpg",
+      "remote_path": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case16.jpg",
+      "sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+      "manifest_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/nr_s6250_render_manifest.json",
+      "verification": "SHA-256 and size match manifest input task"
+    },
+    {
+      "id": "23/latest",
+      "case": 23,
+      "variant": "latest",
+      "label": "NR conservative s6250",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_outputs/nr_conservative_s6250_compiled_all/render/test/case23.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6250_compiled_all/render/test/case23.png",
+      "sha256": "45f3b8b3de9c39a89e2bbae59a5d3847d8319bf58df7d65da499c3f3910600eb",
+      "manifest_sha256": "45f3b8b3de9c39a89e2bbae59a5d3847d8319bf58df7d65da499c3f3910600eb",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/nr_s6250_render_manifest.json",
+      "manifest_file_sha256": "31827c3bcf70beaf3cd0d68448e8040550749214fd24bfe963eb53cc95e74218",
+      "protocol_id": "38bffb0fa8159651803a3c4d2c001e38c2b4e8b35507a51b0f22df6adaff1a8b",
+      "metric_jsonl": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_all/scores/measurements.jsonl",
+      "verification": "SHA-256, size, metric sr_sha256 all match"
+    },
+    {
+      "id": "23/input",
+      "case": 23,
+      "variant": "input",
+      "label": "Input LQ",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/visual_checks/input/case23.jpg",
+      "remote_path": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case23.jpg",
+      "sha256": "844f653f251b95efcd99dc9b69d8cbe260fc837e42a42f6dba1767ddf43026d2",
+      "manifest_sha256": "844f653f251b95efcd99dc9b69d8cbe260fc837e42a42f6dba1767ddf43026d2",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/nr_s6250_render_manifest.json",
+      "verification": "SHA-256 and size match manifest input task"
+    },
+    {
+      "id": "41/latest",
+      "case": 41,
+      "variant": "latest",
+      "label": "NR conservative s6250",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_outputs/nr_conservative_s6250_compiled_all/render/test/case41.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6250_compiled_all/render/test/case41.png",
+      "sha256": "e2be05ecd525b18b2668078251faa7a2aa7e3a455879bf2f3006a3f76061c7bc",
+      "manifest_sha256": "e2be05ecd525b18b2668078251faa7a2aa7e3a455879bf2f3006a3f76061c7bc",
+      "size_wh": [
+        3072,
+        4096
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/nr_s6250_render_manifest.json",
+      "manifest_file_sha256": "31827c3bcf70beaf3cd0d68448e8040550749214fd24bfe963eb53cc95e74218",
+      "protocol_id": "38bffb0fa8159651803a3c4d2c001e38c2b4e8b35507a51b0f22df6adaff1a8b",
+      "metric_jsonl": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_all/scores/measurements.jsonl",
+      "verification": "SHA-256, size, metric sr_sha256 all match"
+    },
+    {
+      "id": "41/input",
+      "case": 41,
+      "variant": "input",
+      "label": "Input LQ",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/visual_checks/input/case41.jpg",
+      "remote_path": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case41.jpg",
+      "sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+      "manifest_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+      "size_wh": [
+        3072,
+        4096
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/nr_s6250_render_manifest.json",
+      "verification": "SHA-256 and size match manifest input task"
+    },
+    {
+      "id": "83/latest",
+      "case": 83,
+      "variant": "latest",
+      "label": "NR conservative s6250",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_outputs/nr_conservative_s6250_compiled_all/render/test/case83.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_full_evaluations/nr_conservative_s6250_compiled_all/render/test/case83.png",
+      "sha256": "a0e1d8de97db900f5228a8e1d428c45bb06096cdfe014496fcad2cc77eb3dbca",
+      "manifest_sha256": "a0e1d8de97db900f5228a8e1d428c45bb06096cdfe014496fcad2cc77eb3dbca",
+      "size_wh": [
+        3072,
+        4096
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/nr_s6250_render_manifest.json",
+      "manifest_file_sha256": "31827c3bcf70beaf3cd0d68448e8040550749214fd24bfe963eb53cc95e74218",
+      "protocol_id": "38bffb0fa8159651803a3c4d2c001e38c2b4e8b35507a51b0f22df6adaff1a8b",
+      "metric_jsonl": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_cuda_evaluations/nr_conservative_s6250_compiled_all/scores/measurements.jsonl",
+      "verification": "SHA-256, size, metric sr_sha256 all match"
+    },
+    {
+      "id": "83/input",
+      "case": 83,
+      "variant": "input",
+      "label": "Input LQ",
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/visual_checks/input/case83.jpg",
+      "remote_path": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case83.jpg",
+      "sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+      "manifest_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+      "size_wh": [
+        3072,
+        4096
+      ],
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/provenance/nr_s6250_render_manifest.json",
+      "verification": "SHA-256 and size match manifest input task"
+    }
+  ],
+  "overview": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+    "scale_xy": [
+      0.125,
+      0.125
+    ],
+    "resampling": "Pillow Lanczos",
+    "padding": "neutral light background"
+  },
+  "roi_coordinate_convention": "integer [left, top, right, bottom); origin top-left; source pixel coordinates; no resampling",
+  "previews": [
+    {
+      "type": "overview_thumbnail",
+      "case": 7,
+      "variant": "input",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "7/input",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "overview_paste_xy": [
+        16,
+        212
+      ]
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 7,
+      "variant": "baseline",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "7/baseline",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "overview_paste_xy": [
+        544,
+        212
+      ]
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 7,
+      "variant": "latest",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "7/latest",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "overview_paste_xy": [
+        1072,
+        212
+      ]
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 16,
+      "variant": "input",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "16/input",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "overview_paste_xy": [
+        16,
+        782
+      ]
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 16,
+      "variant": "baseline",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "16/baseline",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "overview_paste_xy": [
+        544,
+        782
+      ]
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 16,
+      "variant": "latest",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "16/latest",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "overview_paste_xy": [
+        1072,
+        782
+      ]
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 23,
+      "variant": "input",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "23/input",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "overview_paste_xy": [
+        16,
+        1352
+      ]
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 23,
+      "variant": "baseline",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "23/baseline",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "overview_paste_xy": [
+        544,
+        1352
+      ]
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 23,
+      "variant": "latest",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "23/latest",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "overview_paste_xy": [
+        1072,
+        1352
+      ]
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 41,
+      "variant": "input",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "41/input",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        384,
+        512
+      ],
+      "overview_paste_xy": [
+        80,
+        1858
+      ]
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 41,
+      "variant": "baseline",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "41/baseline",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        384,
+        512
+      ],
+      "overview_paste_xy": [
+        608,
+        1858
+      ]
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 41,
+      "variant": "latest",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "41/latest",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        384,
+        512
+      ],
+      "overview_paste_xy": [
+        1136,
+        1858
+      ]
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 83,
+      "variant": "input",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "83/input",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        384,
+        512
+      ],
+      "overview_paste_xy": [
+        80,
+        2428
+      ]
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 83,
+      "variant": "baseline",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "83/baseline",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        384,
+        512
+      ],
+      "overview_paste_xy": [
+        608,
+        2428
+      ]
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 83,
+      "variant": "latest",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "source": "83/latest",
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos",
+      "output_size_wh": [
+        384,
+        512
+      ],
+      "overview_paste_xy": [
+        1136,
+        2428
+      ]
+    },
+    {
+      "type": "native_roi",
+      "case": 7,
+      "variant": "input",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case7_native_1to1.png",
+      "source": "7/input",
+      "box_xyxy_exclusive": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null,
+      "operations": [
+        "integer crop",
+        "paste unchanged RGB samples",
+        "labels outside image"
+      ],
+      "roi_paste_xy": [
+        16,
+        104
+      ]
+    },
+    {
+      "type": "native_roi",
+      "case": 7,
+      "variant": "baseline",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case7_native_1to1.png",
+      "source": "7/baseline",
+      "box_xyxy_exclusive": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null,
+      "operations": [
+        "integer crop",
+        "paste unchanged RGB samples",
+        "labels outside image"
+      ],
+      "roi_paste_xy": [
+        672,
+        104
+      ]
+    },
+    {
+      "type": "native_roi",
+      "case": 7,
+      "variant": "latest",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case7_native_1to1.png",
+      "source": "7/latest",
+      "box_xyxy_exclusive": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null,
+      "operations": [
+        "integer crop",
+        "paste unchanged RGB samples",
+        "labels outside image"
+      ],
+      "roi_paste_xy": [
+        1328,
+        104
+      ]
+    },
+    {
+      "type": "native_roi",
+      "case": 16,
+      "variant": "input",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case16_native_1to1.png",
+      "source": "16/input",
+      "box_xyxy_exclusive": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null,
+      "operations": [
+        "integer crop",
+        "paste unchanged RGB samples",
+        "labels outside image"
+      ],
+      "roi_paste_xy": [
+        16,
+        104
+      ]
+    },
+    {
+      "type": "native_roi",
+      "case": 16,
+      "variant": "baseline",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case16_native_1to1.png",
+      "source": "16/baseline",
+      "box_xyxy_exclusive": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null,
+      "operations": [
+        "integer crop",
+        "paste unchanged RGB samples",
+        "labels outside image"
+      ],
+      "roi_paste_xy": [
+        672,
+        104
+      ]
+    },
+    {
+      "type": "native_roi",
+      "case": 16,
+      "variant": "latest",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case16_native_1to1.png",
+      "source": "16/latest",
+      "box_xyxy_exclusive": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null,
+      "operations": [
+        "integer crop",
+        "paste unchanged RGB samples",
+        "labels outside image"
+      ],
+      "roi_paste_xy": [
+        1328,
+        104
+      ]
+    },
+    {
+      "type": "native_roi",
+      "case": 41,
+      "variant": "input",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case41_native_1to1.png",
+      "source": "41/input",
+      "box_xyxy_exclusive": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null,
+      "operations": [
+        "integer crop",
+        "paste unchanged RGB samples",
+        "labels outside image"
+      ],
+      "roi_paste_xy": [
+        16,
+        104
+      ]
+    },
+    {
+      "type": "native_roi",
+      "case": 41,
+      "variant": "baseline",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case41_native_1to1.png",
+      "source": "41/baseline",
+      "box_xyxy_exclusive": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null,
+      "operations": [
+        "integer crop",
+        "paste unchanged RGB samples",
+        "labels outside image"
+      ],
+      "roi_paste_xy": [
+        672,
+        104
+      ]
+    },
+    {
+      "type": "native_roi",
+      "case": 41,
+      "variant": "latest",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case41_native_1to1.png",
+      "source": "41/latest",
+      "box_xyxy_exclusive": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null,
+      "operations": [
+        "integer crop",
+        "paste unchanged RGB samples",
+        "labels outside image"
+      ],
+      "roi_paste_xy": [
+        1328,
+        104
+      ]
+    },
+    {
+      "type": "native_roi",
+      "case": 83,
+      "variant": "input",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case83_native_1to1.png",
+      "source": "83/input",
+      "box_xyxy_exclusive": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null,
+      "operations": [
+        "integer crop",
+        "paste unchanged RGB samples",
+        "labels outside image"
+      ],
+      "roi_paste_xy": [
+        16,
+        104
+      ]
+    },
+    {
+      "type": "native_roi",
+      "case": 83,
+      "variant": "baseline",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case83_native_1to1.png",
+      "source": "83/baseline",
+      "box_xyxy_exclusive": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null,
+      "operations": [
+        "integer crop",
+        "paste unchanged RGB samples",
+        "labels outside image"
+      ],
+      "roi_paste_xy": [
+        672,
+        104
+      ]
+    },
+    {
+      "type": "native_roi",
+      "case": 83,
+      "variant": "latest",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case83_native_1to1.png",
+      "source": "83/latest",
+      "box_xyxy_exclusive": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null,
+      "operations": [
+        "integer crop",
+        "paste unchanged RGB samples",
+        "labels outside image"
+      ],
+      "roi_paste_xy": [
+        1328,
+        104
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/overview_5cases_input_baseline_s6000_latest_s6250.png",
+      "sha256": "fc392338607af2ae37830fc81482f7d58ad8b7b5689c3aa0d26154cfb21cf0b4"
+    },
+    {
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case7_native_1to1.png",
+      "sha256": "0c7c6e9ca0ebe2f1c45f3fac73ead1b4a1693977a954de3a8390e30ad3b57fee"
+    },
+    {
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case16_native_1to1.png",
+      "sha256": "50ebad182de15199ed7e50c7558be019ab805805be9b8c458f219c1a14968edf"
+    },
+    {
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case41_native_1to1.png",
+      "sha256": "2a4410c50c561d3321ce8cf73f90115d8e5046b63a7175715d7282e4002420e3"
+    },
+    {
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_recheck_visual_20261014/roi_case83_native_1to1.png",
+      "sha256": "eb312b36a7ab384f8f0ece2c1210b680fb6ba14bb9b8488a88598130aac0e56f"
+    }
+  ]
+}

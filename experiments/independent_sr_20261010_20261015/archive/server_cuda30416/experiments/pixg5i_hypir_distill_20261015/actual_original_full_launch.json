@@ -1,0 +1,44 @@
+[
+  {
+    "name": "pixg5i_original_full_render",
+    "pid": 50974,
+    "physical_GPU": 0,
+    "args": [
+      "/cache/independent_sr_cuda_20261013/env/bin/python",
+      "-u",
+      "/cache/independent_sr_cuda_20261013/code/render_cuda_submission.py",
+      "--model-dir",
+      "/cache/independent_sr_cuda_20261013/submissions/pixg5i_original_20261015/model_dir",
+      "--test-dir",
+      "/cache/independent_sr_cuda_20261013/source_payload/assets/input",
+      "--val-dir",
+      "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/\u9a8c\u8bc1\u96c6",
+      "--out-dir",
+      "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_original_20261015_all",
+      "--cases",
+      "all"
+    ],
+    "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_original_full_render_20261015.log",
+    "launch_utc": "2026-10-15T08:57:29.238859+00:00",
+    "candidate_manifest_sha256": "f47a1b5318be533c221d612a2baf99d90ee49267d4728e50bfb8e42b395bfbff"
+  },
+  {
+    "name": "pixg5i_original_full_score",
+    "pid": 50975,
+    "physical_GPU": 1,
+    "args": [
+      "/cache/independent_sr_cuda_20261013/env/bin/python",
+      "-u",
+      "/cache/independent_sr_cuda_20261013/code/score_cuda_stream.py",
+      "--tool-dir",
+      "/cache/independent_sr_cuda_20261013/scoring_tool",
+      "--evaluation",
+      "pixg5i_original_20261015_all=/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_original_20261015_all/render",
+      "--out-root",
+      "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations"
+    ],
+    "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_original_full_score_20261015.log",
+    "launch_utc": "2026-10-15T08:57:29.239563+00:00",
+    "candidate_manifest_sha256": "f47a1b5318be533c221d612a2baf99d90ee49267d4728e50bfb8e42b395bfbff"
+  }
+]

@@ -1,0 +1,31 @@
+/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Loading pretrained model LPIPS from /cache/independent_sr_cuda_20261013/scoring_tool/weights/torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth
+Loading pretrained model DISTS from /cache/independent_sr_cuda_20261013/scoring_tool/weights/torch/hub/checkpoints/DISTS_weights-f5e65c96.pth
+Loading pretrained model MUSIQ from /cache/independent_sr_cuda_20261013/scoring_tool/weights/torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /cache/independent_sr_cuda_20261013/scoring_tool/weights/torch/hub/checkpoints/ckpt_koniq10k.pt
+{"status": "initialized", "labels": ["push7_a7750_lastconv_nr_s7850"], "GPU": {"physical_visible_devices": "1", "logical_device": 0, "name": "NVIDIA A100-SXM4-80GB", "torch_version": "2.8.0+cu128"}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "validation", "case": 1, "completed": 1, "metrics": {"lpips": 0.51123046875, "dists": 0.22320157289505005, "niqe": 2.77049322059314, "musiq": 53.015159606933594, "maniqa": 0.5414413809776306, "clipiqa": 0.7805518507957458}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "validation", "case": 2, "completed": 2, "metrics": {"lpips": 0.1513671875, "dists": 0.15148049592971802, "niqe": 5.176707935002321, "musiq": 34.01213836669922, "maniqa": 0.6229922771453857, "clipiqa": 0.7418265342712402}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "validation", "case": 3, "completed": 3, "metrics": {"lpips": 0.37353515625, "dists": 0.26337355375289917, "niqe": 5.157759016893097, "musiq": 24.150665283203125, "maniqa": 0.5683229565620422, "clipiqa": 0.7867956161499023}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 1, "completed": 4, "metrics": {"niqe": 5.1960267191939264, "musiq": 24.54852294921875, "maniqa": 0.5647460222244263, "clipiqa": 0.7460547685623169}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 6, "completed": 5, "metrics": {"niqe": 5.2060983917319215, "musiq": 23.7301025390625, "maniqa": 0.7110294699668884, "clipiqa": 0.6804947853088379}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 7, "completed": 6, "metrics": {"niqe": 4.611309484816622, "musiq": 38.57860565185547, "maniqa": 0.6370548605918884, "clipiqa": 0.748613715171814}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 11, "completed": 7, "metrics": {"niqe": 6.928895333331172, "musiq": 55.69539260864258, "maniqa": 0.5473239421844482, "clipiqa": 0.7950450778007507}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 16, "completed": 8, "metrics": {"niqe": 4.795869822661562, "musiq": 36.69071960449219, "maniqa": 0.5096935629844666, "clipiqa": 0.6694064140319824}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 18, "completed": 9, "metrics": {"niqe": 6.3692443226034, "musiq": 44.440948486328125, "maniqa": 0.4796123206615448, "clipiqa": 0.8023127913475037}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 21, "completed": 10, "metrics": {"niqe": 4.436054238983267, "musiq": 60.73246383666992, "maniqa": 0.5286281108856201, "clipiqa": 0.7715550065040588}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 23, "completed": 11, "metrics": {"niqe": 4.733464457377243, "musiq": 53.10112762451172, "maniqa": 0.5417080521583557, "clipiqa": 0.8290602564811707}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 25, "completed": 12, "metrics": {"niqe": 4.8550677353411995, "musiq": 40.898956298828125, "maniqa": 0.47456252574920654, "clipiqa": 0.7634832262992859}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 28, "completed": 13, "metrics": {"niqe": 3.2857942503800484, "musiq": 53.40892791748047, "maniqa": 0.49784010648727417, "clipiqa": 0.7899112105369568}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 31, "completed": 14, "metrics": {"niqe": 5.700494235702051, "musiq": 41.518436431884766, "maniqa": 0.5814006328582764, "clipiqa": 0.7603104114532471}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 36, "completed": 15, "metrics": {"niqe": 4.1120131063070025, "musiq": 24.48101043701172, "maniqa": 0.698490560054779, "clipiqa": 0.7797388434410095}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 41, "completed": 16, "metrics": {"niqe": 4.529094111146867, "musiq": 50.64457702636719, "maniqa": 0.696374773979187, "clipiqa": 0.8967270255088806}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 46, "completed": 17, "metrics": {"niqe": 5.072695796304846, "musiq": 31.550094604492188, "maniqa": 0.5901288390159607, "clipiqa": 0.7605929374694824}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 51, "completed": 18, "metrics": {"niqe": 6.328168327805933, "musiq": 53.78636932373047, "maniqa": 0.5811751484870911, "clipiqa": 0.899143636226654}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 61, "completed": 19, "metrics": {"niqe": 2.6255521265356547, "musiq": 58.462181091308594, "maniqa": 0.5734362006187439, "clipiqa": 0.7325889468193054}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 71, "completed": 20, "metrics": {"niqe": 5.040143390946416, "musiq": 26.129037857055664, "maniqa": 0.4811226725578308, "clipiqa": 0.8594204187393188}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 81, "completed": 21, "metrics": {"niqe": 4.403108119870458, "musiq": 54.18271255493164, "maniqa": 0.5983611941337585, "clipiqa": 0.7776244878768921}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 91, "completed": 22, "metrics": {"niqe": 2.9998810358315637, "musiq": 64.54007720947266, "maniqa": 0.6117309331893921, "clipiqa": 0.7740016579627991}}
+{"label": "push7_a7750_lastconv_nr_s7850", "split": "test", "case": 100, "completed": 23, "metrics": {"niqe": 4.649191836117671, "musiq": 24.762767791748047, "maniqa": 0.5780950784683228, "clipiqa": 0.8977916836738586}}
+All requested evaluations completed

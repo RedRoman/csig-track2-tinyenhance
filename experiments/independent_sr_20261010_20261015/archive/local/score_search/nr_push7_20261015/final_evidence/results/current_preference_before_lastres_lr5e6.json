@@ -1,0 +1,48 @@
+{
+  "schema": "current_model_visual_preference_v2",
+  "resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/resume_step7750.pt",
+  "resume_sha256": "e240f3e810654e9503ed620a1007649d2dd056c290960b442e220e0a1451a83b",
+  "score_target_subject_to_visual_quality": true,
+  "user_feedback": "感觉有点推过了，出现伪影了，previous model output目前看是比较好的",
+  "scope_correction": "先别做轻量保真网络，这个是用于教师的hypir，不要蒸馏",
+  "future_priority": [
+    "Preserve the visual quality of HYPIR A7750",
+    "Reject newly visible text deformation, bent straight lines, smearing or dense artificial texture",
+    "Seek tool-score improvement only within the visual-quality constraint"
+  ],
+  "fixed_visual_cases": [
+    7,
+    16,
+    41,
+    83
+  ],
+  "status": "BEST_VALIDATED_HYPIR_TEACHER_NR_SEARCH_ACTIVE",
+  "preferred_label": "push7_a7750_trt_unet_vae_fp16_all",
+  "preferred_name": "HYPIR A7750 / TensorRT UNet与VAE保画质加速版",
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir",
+  "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "NR": 2.319338811831183,
+  "FR": 1.4415876865386963,
+  "S_proxy": 3.760926498369879,
+  "tool_prediction": 62.95369508917984,
+  "event_p10_ms": 32.56105079650879,
+  "quality_dir": "/cache/independent_sr_cuda_20261013/nr_push7_hypir_full_evaluations/push7_a7750_trt_unet_vae_fp16_all",
+  "render_dir": "/cache/independent_sr_cuda_20261013/nr_push7_hypir_full_evaluations/push7_a7750_trt_unet_vae_fp16_all",
+  "quality_reused": false,
+  "PNG_exact": false,
+  "distillation": false,
+  "lightweight_model": false,
+  "model_family": "HYPIR teacher",
+  "teacher_weights_changed": false,
+  "source_selection": "/cache/independent_sr_cuda_20261013/results/nr_push7_unetvae_selection.json",
+  "source_selection_local": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/results/nr_push7_unetvae_selection.json",
+  "source_selection_sha256": "6c493fd9b1abdc4dd47db5f09f8bba9c4365a8631270aaa16525e6430eb27172",
+  "score_target": 65,
+  "score_target_achieved": false,
+  "previous_preference": {
+    "local": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/results/current_preference_before_unetvae.json",
+    "sha256": "0c7b889deb489c01998be7ca28ae450acba42de102276eb3bfa71e0d95fcfd98"
+  },
+  "updated_utc": "2026-10-15T06:43:37.810189+00:00"
+}

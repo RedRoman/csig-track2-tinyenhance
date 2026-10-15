@@ -1,0 +1,46 @@
+{
+  "schema": "hypir_teacher_progress_v4",
+  "updated_utc": "2026-10-15T07:03:53.687189+00:00",
+  "scope": {
+    "teacher": "HYPIR",
+    "distillation": false,
+    "student_training": false,
+    "validation_GT_training": false
+  },
+  "preserved_best": {
+    "label": "push7_a7750_trt_unet_vae_fp16_all",
+    "tool_estimate": 62.95369508917984,
+    "NR": 2.319338811831183,
+    "FR": 1.4415876865386963,
+    "S": 3.760926498369879,
+    "score_scope": "previous_verified_instance_fresh103_and_formal4; not remeasured on restarted instance",
+    "backup": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/backup_trtunetvae_verified",
+    "target65_reached": false
+  },
+  "current_environment": {
+    "ssh_port": 30416,
+    "hostname": "os-node-created-fg9f4",
+    "cache_reset_detected_utc": "2026-10-15T06:46:00Z",
+    "state": "restoring_original_sources_weights_data_and_isolated_environment",
+    "GPU": "4x NVIDIA A100-SXM4-80GB",
+    "new_physical_GPU0_UUID": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f"
+  },
+  "next_training": {
+    "run": "hypir_push7_A7750_lastconv_nr100",
+    "status": "prepared_not_started",
+    "stage_steps": 100,
+    "milestones": [
+      50,
+      100
+    ],
+    "initialization": "exact original A7750",
+    "optimizer_tensor_count": 2,
+    "autograd_tensor_count": 514,
+    "other512": "must remain torch.equal A7750 at checkpoints",
+    "learning_rate": 2e-07,
+    "NIQE_weight": 0.5,
+    "trainer_sha256": "24dd2608888bd240b310d3a7fde678e376483229fe35c0cd7e71ab61e87f1082",
+    "config_sha256": "547a4ccb4d064ba37a67456293bbd29d94f58441f5cf70b627cd27c33dd6d82e"
+  },
+  "selection_rule": "No promotion until actual metric and structural visual checks; pilot scores are not tool-estimate results."
+}

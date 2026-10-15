@@ -1,0 +1,137 @@
+{
+  "status": "PASS_PIXG5I_HEADRESET_FP32_TWO_ADAM_SCALER_RNG",
+  "auditor_source_sha256": "07bebafbc82e7bcd865daa57ab7124fefcd27181950451091af4f05caa5dfc39",
+  "initial_package_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+  "teacher_raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+  "steps": [
+    0,
+    600
+  ],
+  "models": [
+    {
+      "run": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3",
+      "variant": "headreset_v3",
+      "protocol_id": "377cb7f6298be78f5605a731ce5377b84207c7dd52e6ab69b5c98cb1b4053532",
+      "initial_package_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+      "teacher_raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+      "config_sha256": "bd4d8f0d2488604f9b4e78b268d39b953d5298bd6fed4ccdcf08033eaccfced8",
+      "milestones": {
+        "0": {
+          "local_step": 0,
+          "optimizer_step": 0,
+          "raw_sha256": "8661c0ae40b6dd7c5201e5a0d79cb92a5b7a7a2349934214694588597ccd3323",
+          "resume_sha256": "a4e9bccb10066bd6c648374826f00be58a0f738badebbc11b5a56f9a15aa41bd",
+          "marker_sha256": "fabe0a03da9bccd8fe7863acec2d9d7ac0c73c5096669ecd3c24d2e7969acd82",
+          "state_tensors": 112,
+          "parameter_elements": 3786764,
+          "raw_resume_FP32_exact": true,
+          "changed_FP32_tensors": 0,
+          "body_changed_vs_parent": 0,
+          "reset_head_names": [
+            "outc.weight",
+            "outc.bias"
+          ],
+          "reset_head_elements": 3468,
+          "Adam_groups": [
+            {
+              "name": "body",
+              "parameters": 110,
+              "lr": 1e-05
+            },
+            {
+              "name": "head",
+              "parameters": 2,
+              "lr": 5e-05
+            }
+          ],
+          "Adam_state_entries": 0,
+          "Adam_all_finite_FP32": true,
+          "Adam_steps": [],
+          "four_RNG_valid": true,
+          "grad_scaler": {
+            "scale": 1024.0,
+            "growth_factor": 2.0,
+            "backoff_factor": 0.5,
+            "growth_interval": 2000,
+            "_growth_tracker": 0
+          }
+        },
+        "600": {
+          "local_step": 600,
+          "optimizer_step": 600,
+          "raw_sha256": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa",
+          "resume_sha256": "d37cbcfbd1254fd2838d36140c7cd51ef61abe0a5fedd85fc0115e1afdce9fdf",
+          "marker_sha256": "72a3c7ca6d4beac6234b3f933fb0ad871b483a66863e884c17b389bacdc7cd76",
+          "state_tensors": 112,
+          "parameter_elements": 3786764,
+          "raw_resume_FP32_exact": true,
+          "changed_FP32_tensors": 112,
+          "body_changed_vs_parent": 110,
+          "reset_head_names": [
+            "outc.weight",
+            "outc.bias"
+          ],
+          "reset_head_elements": 3468,
+          "Adam_groups": [
+            {
+              "name": "body",
+              "parameters": 110,
+              "lr": 2e-06
+            },
+            {
+              "name": "head",
+              "parameters": 2,
+              "lr": 1e-05
+            }
+          ],
+          "Adam_state_entries": 112,
+          "Adam_all_finite_FP32": true,
+          "Adam_steps": [
+            600
+          ],
+          "four_RNG_valid": true,
+          "grad_scaler": {
+            "scale": 1024.0,
+            "growth_factor": 2.0,
+            "backoff_factor": 0.5,
+            "growth_interval": 2000,
+            "_growth_tracker": 600
+          }
+        }
+      },
+      "logged_prefix_steps": 600,
+      "log_prefix_sha256": "c76278434277b9ac8893825811639f409402a0fe13646665bb79a033b9ed0e6a",
+      "all_prefix_losses_gradients_updates_finite": true,
+      "all_prefix_cases_crops_replayed": true,
+      "initial_deployment_relation": {
+        "FP32_unfolded_vs_folded_max_abs": 0.0,
+        "FP32_unfolded_vs_folded_mean_abs": 0.0,
+        "initial_identity_FP32_exact": true,
+        "AMP_unfolded_vs_initial_fold_FP16_max_abs": 0.0,
+        "AMP_unfolded_vs_initial_fold_FP16_mean_abs": 0.0,
+        "comparison_scope": "same parent body with zero head initial weights/same FP16-quantized1024 input, no optimizer update; finite arithmetic difference recorded, no exact claim"
+      },
+      "weighted_RGB_gradient_norms": {
+        "L1": 0.0011274422286078334,
+        "LPIPS": 0.0005332193686626852,
+        "gradient": 0.00036518857814371586,
+        "MS_L1": 0.0005180081934668124,
+        "MS_gradient": 0.00029848283156752586
+      },
+      "parent_checkpoint_sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+      "RNG_endpoint_digests": {
+        "0": "a9b4e3bcc61ddd83fb09a4890d9d6116b9c327fdbb1020b35378389bf11e7a34",
+        "600": "0c3b7f5b675c6a79c1aa0ba8b15a4396f116dcf1646c21ac92a14a1cb8d4dab7"
+      },
+      "teacher_PNG_bytes_rehashed_here": false
+    }
+  ],
+  "single_run_all_case_crop_replay_and_valid_RNG_endpoints": true,
+  "parent_global1200_checkpoint_sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+  "CPU_only": true,
+  "CUDA_initialized": false,
+  "quality_conclusion": false,
+  "mutable_status_not_locked": true,
+  "mutable_logs_checked_as_immutable_prefix_only": true,
+  "teacher_byte_scope": "Frozen trainer verified all100 actual PNG SHA at initialization; this audit checks catalog/manifest/log identity, not full PNG reread"
+}

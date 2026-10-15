@@ -1,0 +1,969 @@
+{
+  "scope": "All Markdown tables in the explicitly read HYPIR reports and README; includes metric/config/hash tables; not a fresh experiment",
+  "tables": [
+    {
+      "table_id": "README.md:L53",
+      "source": "README.md",
+      "source_sha256": "5714341a5a4485a98c7aec3d477f2c7ce382aaf67728be2ec54ebbce24ba4402",
+      "line_number": 53,
+      "headers": [
+        "权重/coeff_t",
+        "测试 NR",
+        "验证 FR",
+        "S_proxy"
+      ],
+      "rows": [
+        [
+          "s6000_mt200_ct175_all",
+          "2.25263586",
+          "1.46441658",
+          "3.71705244"
+        ],
+        [
+          "s6000_mt200_ct200_all",
+          "2.24325909",
+          "1.44533869",
+          "3.68859777"
+        ],
+        [
+          "s8000_mt200_ct200_all",
+          "2.21031602",
+          "1.45006194",
+          "3.66037796"
+        ],
+        [
+          "s10000_mt200_ct200_all",
+          "2.21015056",
+          "1.45020688",
+          "3.66035744"
+        ]
+      ],
+      "preceding_context": "\n在30207的Ascend910B3上完成4组完整评分；每组100测试图、3验证图，418项逐图指标。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "README.md:L74",
+      "source": "README.md",
+      "source_sha256": "5714341a5a4485a98c7aec3d477f2c7ce382aaf67728be2ec54ebbce24ba4402",
+      "line_number": 74,
+      "headers": [
+        "配置",
+        "完整代理S",
+        "512×512 event p10 (ms)",
+        "同机G4标定后的工具预测分"
+      ],
+      "rows": [
+        [
+          "s8000_mt200_ct200_cuda_all / original",
+          "3.65848450",
+          "113.29321",
+          "44.10945"
+        ],
+        [
+          "s6000_mt200_ct175_cuda_all / original",
+          "3.71777519",
+          "113.69799",
+          "45.92732"
+        ],
+        [
+          "s6000_mt200_ct175_cuda_all / cached_empty_caption",
+          "3.71777519",
+          "105.32751",
+          "46.63292"
+        ],
+        [
+          "s6000_mt200_ct175_compiled_cuda_all / cached_fused_compiled_tiles",
+          "3.71710004",
+          "46.43932",
+          "54.86132"
+        ]
+      ],
+      "preceding_context": "\n三组实际CUDA输出均已生成、完整评分和保存：每组100测试图+3验证图，418项逐图标量。全部309张原尺寸PNG已逐张SHA验证并保存到30416共享目录 `/temp/independent_sr_cuda_20261013_artifacts`。NPU质量与CUDA质量分开统计；下表全部使用CUDA工具提交口径的FP16输入/round PNG。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_FINETUNE_REPORT_20261014.md:L7",
+      "source": "NR_FINETUNE_REPORT_20261014.md",
+      "source_sha256": "cd9ef76daf4ee479a6e8d0ccc70501e30552f40ac0b7fd03af5ccbf15983af3a",
+      "line_number": 7,
+      "headers": [
+        "完整版本",
+        "NR：test100",
+        "FR：val3",
+        "S_proxy",
+        "相对compiled6000",
+        "512 event p10(ms)",
+        "工具预测total"
+      ],
+      "rows": [
+        [
+          "compiled6000",
+          "2.253171081",
+          "1.463928958",
+          "3.717100039",
+          "+0.000000000",
+          "46.439320374",
+          "54.86131655"
+        ],
+        [
+          "conservative6100",
+          "2.260917031",
+          "1.464764992",
+          "3.725682023",
+          "+0.008581984",
+          "46.625793457",
+          "55.14474260"
+        ],
+        [
+          "conservative6250",
+          "2.266385043",
+          "1.463716487",
+          "3.730101530",
+          "+0.013001492",
+          "45.780478668",
+          "55.51522025"
+        ]
+      ],
+      "preceding_context": "\n本表三版均采用同一 CUDA cache+LoRA fuse+torch.compile 推理实现，model_t200、coeff_t175、rank256、BF16内部计算、empty caption、x1、patch512/stride256。训练保存的是 raw unfused LoRA，推理的融合/编译版本独立评测；不能把旧 NPU FP32/floor结果当作这些 CUDA round-PNG 的成绩。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_FINETUNE_REPORT_20261014.md:L15",
+      "source": "NR_FINETUNE_REPORT_20261014.md",
+      "source_sha256": "cd9ef76daf4ee479a6e8d0ccc70501e30552f40ac0b7fd03af5ccbf15983af3a",
+      "line_number": 15,
+      "headers": [
+        "完整版本",
+        "NIQE ↓",
+        "MUSIQ ↑",
+        "MANIQA ↑",
+        "CLIPIQA ↑"
+      ],
+      "rows": [
+        [
+          "compiled6000",
+          "4.008259636",
+          "43.187275162",
+          "0.499498821",
+          "0.722625471"
+        ],
+        [
+          "conservative6100",
+          "4.021619041",
+          "42.693643131",
+          "0.507724795",
+          "0.728417708"
+        ],
+        [
+          "conservative6250",
+          "4.024103260",
+          "42.354991055",
+          "0.512805884",
+          "0.732439575"
+        ]
+      ],
+      "preceding_context": "\n完整评分逐项均值后再代入：`NR = CLIPIQA + MANIQA + MUSIQ/100 + max(0,(10-NIQE)/10)`；`FR = 2 - LPIPS - DISTS`；`S_proxy = NR(test100) + FR(val3)`。NR按原工具FP32，FR按原工具FP16 autocast，MANIQA正式评分100个随机crop；native输出尺寸保留。每个split只seed1234一次，逐图遵循原工具metric顺序，断点恢复四套RNG。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_FINETUNE_REPORT_20261014.md:L27",
+      "source": "NR_FINETUNE_REPORT_20261014.md",
+      "source_sha256": "cd9ef76daf4ee479a6e8d0ccc70501e30552f40ac0b7fd03af5ccbf15983af3a",
+      "line_number": 27,
+      "headers": [
+        "matched pilot版本",
+        "NR：test20",
+        "FR：val3",
+        "S_subset"
+      ],
+      "rows": [
+        [
+          "compiled6000 control",
+          "2.250856000",
+          "1.463881711",
+          "3.714737711"
+        ],
+        [
+          "conservative6100",
+          "2.259910396",
+          "1.464764992",
+          "3.724675388"
+        ],
+        [
+          "aligned6100",
+          "2.255283384",
+          "1.464345475",
+          "3.719628859"
+        ],
+        [
+          "conservative6250",
+          "2.266482978",
+          "1.463716487",
+          "3.730199465"
+        ]
+      ],
+      "preceding_context": "\n固定pilot只含20个test病例和3个验证病例，独立输出 S_subset。test顺序为 `[1,6,7,11,16,18,21,23,25,28,31,36,41,46,51,61,71,81,91,100]`，不与test100的NR混比；pilot与完整运行有独立顺序/RNG协议。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_FINETUNE_REPORT_20261014.md:L44",
+      "source": "NR_FINETUNE_REPORT_20261014.md",
+      "source_sha256": "cd9ef76daf4ee479a6e8d0ccc70501e30552f40ac0b7fd03af5ccbf15983af3a",
+      "line_number": 44,
+      "headers": [
+        "权重/状态",
+        "SHA256"
+      ],
+      "rows": [
+        [
+          "raw6000起点/anchor",
+          "`2c82a71a94aa754bd4a26a2a474c2bbe4989bde1d38d2e15d9e58eb0c3e408bc`"
+        ],
+        [
+          "conservative step6100.pth",
+          "`04468a0134579c3e5f63aea93eea2aa1ca956b102f7ed32bb3dc03c918e08ff4`"
+        ],
+        [
+          "conservative step6250.pth",
+          "`7b57349706372122ea67173fbb944e7e806d86e12379e3fd66ea2ebf1f96ecc3`"
+        ],
+        [
+          "conservative resume_latest.pt（250）",
+          "`3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f`"
+        ],
+        [
+          "aligned step6100.pth",
+          "`5ff99a06f0a0e723f534b159c62206250bdd91c58caa6a70a1db5944ee6095b5`"
+        ]
+      ],
+      "preceding_context": "\nCPU恢复审计确认：step6250相对step6100有514/514个tensor、259461000/259474432个FP32元素变化，最大绝对差1.915823668e-5、L2 0.039516588、平均绝对差1.910618882e-6。`resume_latest.pt`全部514个LoRA逐值等于step6250；514份Adam状态全部step250，FP32 moments有限且形状/参数ID齐全，所有必要RNG/step/protocol字段可读。最新完成标记、250行日志与目标6250一致；算法protocol ID保持 `fa5ea19179561aac206b26f7dd3596406f1ad376dccd38f49821146623b98d52`，100步配置已另存config_step6100.json。本报告未更改训练源码或身份。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH2_REPORT_20261014.md:L16",
+      "source": "NR_PUSH2_REPORT_20261014.md",
+      "source_sha256": "d1d5f818630358658801ac9b59e0779c8a2ee5d31b675aa075cc6a211f9e1a7f",
+      "line_number": 16,
+      "headers": [
+        "fixed20+val3 pilot",
+        "test20 NR",
+        "val3 FR",
+        "S_subset"
+      ],
+      "rows": [
+        [
+          "fresh6250 control",
+          "2.266482978",
+          "1.463716487",
+          "3.730199465"
+        ],
+        [
+          "6250 coeff160",
+          "2.247007562",
+          "1.470993261",
+          "3.718000823"
+        ],
+        [
+          "6250 coeff185",
+          "2.270527323",
+          "1.456893822",
+          "3.727421144"
+        ],
+        [
+          "continuous6350",
+          "2.267105437",
+          "1.462449471",
+          "3.729554909"
+        ],
+        [
+          "continuous6500",
+          "2.268350612",
+          "1.462408304",
+          "3.730758916"
+        ],
+        [
+          "PNG-STE6500",
+          "2.268326264",
+          "1.462232073",
+          "3.730558337"
+        ],
+        [
+          "parent-anchor M1 6500",
+          "2.274525302",
+          "1.462559005",
+          "3.737084306"
+        ],
+        [
+          "parent-anchor M1.5 6500",
+          "2.276315593",
+          "1.461440682",
+          "3.737756275"
+        ]
+      ],
+      "preceding_context": "\n训练初始FP32恢复、514 LoRA、Adam步数/状态、全部case/crop与最终四RNG均有CPU审核；两个stage3 teacher也精确恢复6250 FP32并冻结，首步fidelity为1.139e-14。旧源码、父config/resume SHA未变。训练入口为新v2/v3文件，旧run和原始代码保留。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH2_REPORT_20261014.md:L29",
+      "source": "NR_PUSH2_REPORT_20261014.md",
+      "source_sha256": "d1d5f818630358658801ac9b59e0779c8a2ee5d31b675aa075cc6a211f9e1a7f",
+      "line_number": 29,
+      "headers": [
+        "完整100测试+3验证",
+        "NR",
+        "FR",
+        "S_proxy"
+      ],
+      "rows": [
+        [
+          "父6250",
+          "2.266385043359",
+          "1.463716487090",
+          "3.730101530449"
+        ],
+        [
+          "continuous6500",
+          "2.268540837285",
+          "1.462408304214",
+          "3.730949141500"
+        ],
+        [
+          "parent-anchor M1 6500",
+          "2.276198114365",
+          "1.462559004625",
+          "3.738757118990"
+        ],
+        [
+          "**parent-anchor M1.5 6500**",
+          "**2.278310360288**",
+          "**1.461440682411**",
+          "**3.739751042699**"
+        ]
+      ],
+      "preceding_context": "\n八组pilot已全部完成并通过CPU逐文件/逐值审核。小样本仅为S_subset，不能冒充完整S。fresh6250对照的23PNG字节/像素、4组推理RNG和98项指标与旧6250 pilot全部精确一致。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH2_REPORT_20261014.md:L40",
+      "source": "NR_PUSH2_REPORT_20261014.md",
+      "source_sha256": "d1d5f818630358658801ac9b59e0779c8a2ee5d31b675aa075cc6a211f9e1a7f",
+      "line_number": 40,
+      "headers": [
+        "模型",
+        "p10/ms",
+        "同卡校准工具预测",
+        "固定父6250延迟，仅质量变化的预测"
+      ],
+      "rows": [
+        [
+          "父6250",
+          "46.650162888",
+          "55.325474713",
+          "55.325474713"
+        ],
+        [
+          "M1 6500",
+          "46.588621140",
+          "55.672992927",
+          "55.658402973"
+        ],
+        [
+          "**M1.5 6500**",
+          "**46.350848389**",
+          "**55.767986476**",
+          "**55.696761230**"
+        ]
+      ],
+      "preceding_context": "\n同次单卡A100测速（512×512、FP16输入、warm30+n200、CUDA event p10，G4参考0.65126401186ms）与未修改的原`predict.py`联合结果：\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH2_REPORT_20261014.md:L50",
+      "source": "NR_PUSH2_REPORT_20261014.md",
+      "source_sha256": "d1d5f818630358658801ac9b59e0779c8a2ee5d31b675aa075cc6a211f9e1a7f",
+      "line_number": 50,
+      "headers": [
+        "测试100图均值",
+        "父6250",
+        "最佳M1.5 6500",
+        "对NR增量贡献"
+      ],
+      "rows": [
+        [
+          "CLIPIQA（高为好）",
+          "0.732439575",
+          "0.741702479",
+          "+0.009262903"
+        ],
+        [
+          "MANIQA（高为好）",
+          "0.512805884",
+          "0.526159148",
+          "+0.013353264"
+        ],
+        [
+          "MUSIQ（高为好）",
+          "42.354991055",
+          "41.609279842",
+          "−0.007457112"
+        ],
+        [
+          "NIQE（低为好）",
+          "4.024103260",
+          "4.056440646",
+          "−0.003233739"
+        ]
+      ],
+      "preceding_context": "\n完整分项的实际变化如下；提高训练MUSIQ系数没有使正式MUSIQ同步上升：\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH2_REPORT_20261014.md:L69",
+      "source": "NR_PUSH2_REPORT_20261014.md",
+      "source_sha256": "d1d5f818630358658801ac9b59e0779c8a2ee5d31b675aa075cc6a211f9e1a7f",
+      "line_number": 69,
+      "headers": [
+        "`adaptation/runs/`下目录",
+        "`step6500.pth` SHA256"
+      ],
+      "rows": [
+        [
+          "`cuda_nr_stage2_s6250_cont250`",
+          "`dc7bbf712e3039302a52951075409a23771b8d832024d1800bbe3398c41d4afa`"
+        ],
+        [
+          "`cuda_nr_stage2_s6250_roundste250`",
+          "`095f93f17d998d708639f2a3b3641052c576b3036efcbc881eb2e88360e18070`"
+        ],
+        [
+          "`cuda_nr_stage3_s6250_anchor6250_m1_250`",
+          "`b05e784a08b7082a4ecae63a814d71834068ceb5e9baf26eded3836b29bcc0b8`"
+        ],
+        [
+          "`cuda_nr_stage3_s6250_anchor6250_m15_250`",
+          "`cfcc3013fa87aa721f346d6cc285e70b6d6ff2c88315ce9f1465b07ffe020e68`"
+        ]
+      ],
+      "preceding_context": "\n服务器根目录为`/cache/independent_sr_cuda_20261013`。训练代码位于`code/cuda_training/train_cuda_nr_stage_v2.py`与`train_cuda_nr_stage_v3.py`；每个`adaptation/runs/cuda_nr_stage*/`包含`config.json`、`train.jsonl`、`step6500.pth`、`resume_latest.pt`及初始化/梯度证明。权重用于推理，续训必须用对应的`resume_latest.pt`恢复FP32 LoRA、Adam500和四套RNG，并为新阶段建立新配置/目录，不能仅加载推理权重或覆盖冻结旧run。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH3_REPORT_20261014.md:L7",
+      "source": "NR_PUSH3_REPORT_20261014.md",
+      "source_sha256": "f6e3e82b6d25bc5c2f7b686e3f4650ff5dda541fe3e40cdf7b0ce7375903f6c8",
+      "line_number": 7,
+      "headers": [
+        "分支",
+        "冻结保真teacher",
+        "NR reward总系数",
+        "训练CLIPIQA系数",
+        "MUSIQ系数",
+        "学习率"
+      ],
+      "rows": [
+        [
+          "A：延续旧目标",
+          "exact FP32 6250",
+          "0.075",
+          "0.1",
+          "1.5",
+          "2e-7"
+        ],
+        [
+          "B：重锚当前最佳",
+          "exact FP32 6500",
+          "0.075",
+          "0.1",
+          "1.5",
+          "2e-7"
+        ],
+        [
+          "C：加强NR",
+          "exact FP32 6500",
+          "0.15",
+          "0.5",
+          "1.5",
+          "2e-7"
+        ]
+      ],
+      "preceding_context": "\n服务器为30416端口，实验根目录`/cache/independent_sr_cuda_20261013`。三条分支各使用一张A100（GPU0/1/2），均从同一sealed6500 FP32 LoRA、Adam500和四组RNG起步，各增加750步，目标global7250/Adam1250。每250步保存6750、7000、7250的推理权重和精确Adam/RNG续训状态，避免最终选中中间权重后无法精确续训。三分支不能相加称为同一模型新增2250步。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH3_REPORT_20261014.md:L41",
+      "source": "NR_PUSH3_REPORT_20261014.md",
+      "source_sha256": "f6e3e82b6d25bc5c2f7b686e3f4650ff5dda541fe3e40cdf7b0ce7375903f6c8",
+      "line_number": 41,
+      "headers": [
+        "版本",
+        "NR",
+        "FR",
+        "S_proxy",
+        "相对6500变化"
+      ],
+      "rows": [
+        [
+          "push3_c7250_compiled_all",
+          "2.31312513",
+          "1.44656901",
+          "3.75969413",
+          "+0.01994309"
+        ],
+        [
+          "push3_c7000_compiled_all",
+          "2.30915348",
+          "1.44964067",
+          "3.75879415",
+          "+0.01904311"
+        ],
+        [
+          "push3_c6750_compiled_all",
+          "2.30120160",
+          "1.45518788",
+          "3.75638947",
+          "+0.01663843"
+        ],
+        [
+          "nr_stage3_anchor6250_m15_s6500_compiled_all",
+          "2.27831036",
+          "1.46144068",
+          "3.73975104",
+          "+0.00000000"
+        ]
+      ],
+      "preceding_context": "\n下面每行均为实际103张原PNG、418个标量的完整100测试+3验证，均通过独立CPU审计；S_proxy=NR(test100)+FR(val3)。使用相同原图、GT、原评分网络、源文件及随机状态协议。全部三候选完成后按最高S_proxy选中C7250，C7250相对C7000仅增加0.00089998，没有重复随机试验，不宣称统计显著性。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH3_REPORT_20261014.md:L51",
+      "source": "NR_PUSH3_REPORT_20261014.md",
+      "source_sha256": "f6e3e82b6d25bc5c2f7b686e3f4650ff5dda541fe3e40cdf7b0ce7375903f6c8",
+      "line_number": 51,
+      "headers": [
+        "版本",
+        "NR",
+        "FR",
+        "S_subset",
+        "相对6500变化"
+      ],
+      "rows": [
+        [
+          "push3_c7250_compiled_pilot",
+          "2.30585361",
+          "1.44656901",
+          "3.75242262",
+          "+0.01466634"
+        ],
+        [
+          "push3_c7000_compiled_pilot",
+          "2.30247818",
+          "1.44964067",
+          "3.75211886",
+          "+0.01436258"
+        ],
+        [
+          "push3_c6750_compiled_pilot",
+          "2.29515577",
+          "1.45518788",
+          "3.75034365",
+          "+0.01258738"
+        ],
+        [
+          "push3_b7250_compiled_pilot",
+          "2.29034084",
+          "1.45702660",
+          "3.74736744",
+          "+0.00961116"
+        ],
+        [
+          "push3_b7000_compiled_pilot",
+          "2.28710611",
+          "1.45708134",
+          "3.74418745",
+          "+0.00643118"
+        ],
+        [
+          "push3_a7250_compiled_pilot",
+          "2.28333058",
+          "1.45898048",
+          "3.74231106",
+          "+0.00455478"
+        ],
+        [
+          "push3_b6750_compiled_pilot",
+          "2.28365341",
+          "1.45842093",
+          "3.74207434",
+          "+0.00431806"
+        ],
+        [
+          "push3_a7000_compiled_pilot",
+          "2.28235278",
+          "1.45952882",
+          "3.74188160",
+          "+0.00412533"
+        ],
+        [
+          "push3_a6750_compiled_pilot",
+          "2.27952806",
+          "1.46111391",
+          "3.74064197",
+          "+0.00288569"
+        ],
+        [
+          "nr_stage3_anchor6250_m15_s6500_compiled_pilot",
+          "2.27631559",
+          "1.46144068",
+          "3.73775627",
+          "+0.00000000"
+        ]
+      ],
+      "preceding_context": "\n小样本只用于先筛选分支，固定test20+val3，23图/98标量，以下只称S_subset。A/B未做完整103张评测；不能把pilot数值当作完整分数。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH3_REPORT_20261014.md:L73",
+      "source": "NR_PUSH3_REPORT_20261014.md",
+      "source_sha256": "f6e3e82b6d25bc5c2f7b686e3f4650ff5dda541fe3e40cdf7b0ce7375903f6c8",
+      "line_number": 73,
+      "headers": [
+        "项目",
+        "本次实际值"
+      ],
+      "rows": [
+        [
+          "G4参考p10",
+          "0.650240004ms"
+        ],
+        [
+          "父6500 p10",
+          "47.177521896ms"
+        ],
+        [
+          "C7250 p10",
+          "46.824345398ms"
+        ],
+        [
+          "父6500本次工具预测",
+          "55.555223783"
+        ],
+        [
+          "C7250本次工具预测",
+          "56.412631062"
+        ],
+        [
+          "固定本次父速度，仅质量变化",
+          "56.328523847"
+        ]
+      ],
+      "preceding_context": "\nG4、父6500、新C7250分别在同一物理A100 GPU0顺序启动独立进程，各warm30/n200、seed231、512×512 CUDA FP16。UUID `GPU-2018f8c4-5c1f-600d-186a-eba0459e1b10`，PCI `00000000:9D:00.0`，每次开始前该卡无其他计算进程，200份event/wall原始样本已保存。编译/加载/warmup/hash不计入推理时间。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH4_REPORT_20261014.md:L11",
+      "source": "NR_PUSH4_REPORT_20261014.md",
+      "source_sha256": "a7391d284be919218a5374bcbb4e9913c218802a4bdfac84ae45c51f86bf5d87",
+      "line_number": 11,
+      "headers": [
+        "分支",
+        "MUSIQ训练系数",
+        "总NR奖励系数",
+        "其他参数"
+      ],
+      "rows": [
+        [
+          "A：原目标延续",
+          "1.5",
+          "0.15",
+          "共同参数见下"
+        ],
+        [
+          "B：提高MUSIQ",
+          "2.5",
+          "0.15",
+          "共同参数见下"
+        ],
+        [
+          "C：降低总奖励",
+          "2.5",
+          "0.10",
+          "共同参数见下"
+        ],
+        [
+          "D：进一步降低奖励，250步",
+          "2.5",
+          "0.075",
+          "共同参数见下"
+        ]
+      ],
+      "preceding_context": "\n端口30416，实验根目录 `/cache/independent_sr_cuda_20261013`。A/B/C三路从同一sealed C7250 FP32 LoRA、Adam1250和Python/NumPy/Torch CPU/CUDA四组随机状态起步，各训练500次，保存global7500/Adam1500和global7750/Adam1750；额外D从同一起点训练250次，保存global7500/Adam1500。四路是独立分叉，不是同一模型累计1750步。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH4_REPORT_20261014.md:L34",
+      "source": "NR_PUSH4_REPORT_20261014.md",
+      "source_sha256": "a7391d284be919218a5374bcbb4e9913c218802a4bdfac84ae45c51f86bf5d87",
+      "line_number": 34,
+      "headers": [
+        "版本",
+        "NR",
+        "FR",
+        "S_proxy",
+        "相对7250变化"
+      ],
+      "rows": [
+        [
+          "push4_a7750_compiled_all",
+          "2.31973328",
+          "1.44172329",
+          "3.76145657",
+          "+0.00176243"
+        ],
+        [
+          "push4_c7750_compiled_all",
+          "2.31701313",
+          "1.44383905",
+          "3.76085218",
+          "+0.00115805"
+        ],
+        [
+          "push3_c7250_compiled_all",
+          "2.31312513",
+          "1.44656901",
+          "3.75969413",
+          "+0.00000000"
+        ],
+        [
+          "push4_d7500_compiled_all",
+          "2.31108248",
+          "1.44778933",
+          "3.75887181",
+          "-0.00082232"
+        ]
+      ],
+      "preceding_context": "\n下表均为完整103张/418标量独立审核PASS；在三组完整结果齐备后按最高S选型，并与父7250比较：\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH4_REPORT_20261014.md:L44",
+      "source": "NR_PUSH4_REPORT_20261014.md",
+      "source_sha256": "a7391d284be919218a5374bcbb4e9913c218802a4bdfac84ae45c51f86bf5d87",
+      "line_number": 44,
+      "headers": [
+        "版本",
+        "NR",
+        "FR",
+        "S_subset",
+        "相对7250变化"
+      ],
+      "rows": [
+        [
+          "push4_c7750_compiled_pilot",
+          "2.31203450",
+          "1.44383905",
+          "3.75587355",
+          "+0.00345093"
+        ],
+        [
+          "push4_a7750_compiled_pilot",
+          "2.31225586",
+          "1.44172329",
+          "3.75397915",
+          "+0.00155653"
+        ],
+        [
+          "push4_c7500_compiled_pilot",
+          "2.30835208",
+          "1.44473563",
+          "3.75308771",
+          "+0.00066509"
+        ],
+        [
+          "push4_a7500_compiled_pilot",
+          "2.30862629",
+          "1.44379685",
+          "3.75242314",
+          "+0.00000053"
+        ],
+        [
+          "push3_c7250_compiled_pilot",
+          "2.30585361",
+          "1.44656901",
+          "3.75242262",
+          "+0.00000000"
+        ],
+        [
+          "push4_b7750_compiled_pilot",
+          "2.31513666",
+          "1.43548314",
+          "3.75061980",
+          "-0.00180282"
+        ],
+        [
+          "push4_b7500_compiled_pilot",
+          "2.30989198",
+          "1.43959302",
+          "3.74948500",
+          "-0.00293762"
+        ]
+      ],
+      "preceding_context": "\n以下是固定test20+val3、23图/98标量小样本，只称S_subset；用于筛选，不作为完整S或工具榜分：\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH4_REPORT_20261014.md:L57",
+      "source": "NR_PUSH4_REPORT_20261014.md",
+      "source_sha256": "a7391d284be919218a5374bcbb4e9913c218802a4bdfac84ae45c51f86bf5d87",
+      "line_number": 57,
+      "headers": [
+        "指标",
+        "父7250",
+        "本轮选中"
+      ],
+      "rows": [
+        [
+          "clipiqa",
+          "0.771804400",
+          "0.776279178"
+        ],
+        [
+          "maniqa",
+          "0.570102143",
+          "0.575256151"
+        ],
+        [
+          "musiq",
+          "39.666658401",
+          "39.583499126"
+        ],
+        [
+          "niqe",
+          "4.254479984",
+          "4.276370416"
+        ]
+      ],
+      "preceding_context": "\n完整100张测试分项均值：\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH4_REPORT_20261014.md:L70",
+      "source": "NR_PUSH4_REPORT_20261014.md",
+      "source_sha256": "a7391d284be919218a5374bcbb4e9913c218802a4bdfac84ae45c51f86bf5d87",
+      "line_number": 70,
+      "headers": [
+        "项目",
+        "本次实测/原工具计算"
+      ],
+      "rows": [
+        [
+          "G4 event p10",
+          "0.781311989ms"
+        ],
+        [
+          "父7250 event p10",
+          "47.014706802ms"
+        ],
+        [
+          "新模型event p10",
+          "46.341939163ms"
+        ],
+        [
+          "父7250本次预估",
+          "58.458920267"
+        ],
+        [
+          "新模型本次预估",
+          "58.697872019"
+        ],
+        [
+          "固定父速度、仅质量变化",
+          "58.530378758"
+        ]
+      ],
+      "preceding_context": "\nG4、父7250、新选中模型分别用独立新进程，在同一物理GPU0顺序warm30/n200、seed231、512×512 FP16；每次开始前无其他计算进程。编译、加载、warmup和hash不计推理时间。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH5_REPORT_20261014.md:L11",
+      "source": "NR_PUSH5_REPORT_20261014.md",
+      "source_sha256": "e6b73dd38d2f2090b41e1e86de0bffab96c16165817f44eb308f6df7eca9f426",
+      "line_number": 11,
+      "headers": [
+        "模型与来源",
+        "test NR ↑",
+        "val FR ↑",
+        "S_proxy ↑",
+        "512 p10/ms",
+        "本次原工具预估"
+      ],
+      "rows": [
+        [
+          "HYPIR A7750，旧模型/伪标签教师",
+          "2.31973328",
+          "1.44172329",
+          "3.76145657",
+          "46.41955795",
+          "58.15040"
+        ],
+        [
+          "随包G4，仅参考复现",
+          "2.75971734",
+          "1.32165337",
+          "4.08137071",
+          "0.74649602",
+          "152.66092"
+        ],
+        [
+          "本轮新学生，实际训练250步",
+          "2.47546636",
+          "1.36650445",
+          "3.84197081",
+          "0.78643203",
+          "128.42938"
+        ]
+      ],
+      "preceding_context": "\n三组均为相同100张测试输入和3张验证图、相同原始指标/权重/种子策略、原生尺寸round-PNG。下表速度均为本次同一物理A100的512×512 FP16、warm30+n200、CUDA event p10。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    },
+    {
+      "table_id": "NR_PUSH6_REPORT_20261015.md:L5",
+      "source": "NR_PUSH6_REPORT_20261015.md",
+      "source_sha256": "656435dffc7e4bc3037cfeb8d62a94bf26c6a58320d8a5c09b7df3377bd708c0",
+      "line_number": 5,
+      "headers": [
+        "同轮、同卡比较",
+        "原A7750",
+        "保画质加速版"
+      ],
+      "rows": [
+        [
+          "NR",
+          "2.31973328",
+          "2.31973328"
+        ],
+        [
+          "FR",
+          "1.44172329",
+          "1.44172329"
+        ],
+        [
+          "S",
+          "3.76145657",
+          "3.76145657"
+        ],
+        [
+          "512输入 event p10",
+          "46.9421ms",
+          "41.4382ms"
+        ],
+        [
+          "原工具估分",
+          "56.4358",
+          "57.8501"
+        ]
+      ],
+      "preceding_context": "\n当前采用 `push6_a7750_ro_wavelet_all`。训练权重仍是用户认可的 HYPIR A7750，没有新增训练；本轮只改变编译执行方式。正式103张新生成PNG与原A7750逐一字节相同，最终Python、NumPy、Torch CPU/CUDA四项随机状态也相同，因此继承原已独立审计的103图/418项指标，没有伪造一次新评分运行。\n",
+      "evidence_level": "verbatim_report_table_not_new_execution"
+    }
+  ]
+}

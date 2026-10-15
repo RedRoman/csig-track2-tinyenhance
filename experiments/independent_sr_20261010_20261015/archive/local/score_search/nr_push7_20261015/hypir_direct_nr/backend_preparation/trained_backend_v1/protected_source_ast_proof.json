@@ -1,0 +1,23 @@
+{
+  "status": "PASS_PROTECTED_CORE_SOURCE_AND_RUNNER_AST",
+  "sources": {
+    "trt_vae_runtime_v2.py": "dc2597edfe8a7d71526535bd4e7540bd9c7623de00b6639c61139e08837aa9a4",
+    "registration_plan.py": "97a08c5e3291d8ae9182f0bf31f23a9ec976fa4a79c77df7bfc36afb34325335",
+    "finetuned_trtvae_runner.py": "4b225fbe82c556abf4b409927d16709e771a69fb811d7c6803f7281792875862",
+    "trained_native_binding.py": "db2052014f941f517dee730dcb44e4d8e3d9939e0de15991f663bb098e6c451d",
+    "finetuned_unet_vae_runner.py": "c98c406884cf07bc5541e315393b98e11351165b35c94d33f926d5443f9563c3",
+    "build_finetuned_unet_trt.py": "b7dcc1f4fa986506eda23651b94c3f65b463fb46a9fe45e464833e6017fda34d"
+  },
+  "protected_builder_core_sha256": "f290f441bbe318d4e617755b86f73d47e1d70d7f4f242150ecc4eff53c594f21",
+  "protected_runner_functions": [
+    "forward",
+    "infer",
+    "capture",
+    "restore",
+    "same",
+    "conditioning_digest"
+  ],
+  "protected_RNG_flags_and_forward_constructor_block_byte_exact": true,
+  "GPU_used": false,
+  "engine_built": false
+}

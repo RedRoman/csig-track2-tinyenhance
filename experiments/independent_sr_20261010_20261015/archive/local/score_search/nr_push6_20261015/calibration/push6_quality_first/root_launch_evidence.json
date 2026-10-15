@@ -1,0 +1,44 @@
+{
+  "schema": "push6_root_launch_evidence_v1",
+  "created_utc": "2026-10-14 17:34:05 UTC",
+  "host_alias": "huawei-modelarts-31514",
+  "ssh_port": 30416,
+  "working_root": "/cache/independent_sr_cuda_20261013",
+  "scope": "Root tool launch records, not a hardware snapshot retroactively taken before G4",
+  "physical_selection": "CUDA_VISIBLE_DEVICES=0 for all three; --device 0 within each fresh process",
+  "order": [
+    "g4",
+    "parent",
+    "candidate"
+  ],
+  "serial": true,
+  "other_root_gpu_jobs_active_during_pair": false,
+  "commands": [
+    {
+      "label": "g4",
+      "session_id": 74022,
+      "order": 1,
+      "command": "CUDA_VISIBLE_DEVICES=0 /cache/independent_sr_cuda_20261013/env/bin/python /cache/independent_sr_cuda_20261013/code/benchmark_cuda.py --model-dir /cache/independent_sr_cuda_20261013/calibration/g4/model_dir --out /cache/independent_sr_cuda_20261013/calibration/push6_quality_first/g4_latency.json --n 200 --warm 30 --seed 231 --device 0",
+      "separate_fresh_process": true,
+      "exit_code": 0
+    },
+    {
+      "label": "parent",
+      "session_id": 74022,
+      "order": 2,
+      "command": "CUDA_VISIBLE_DEVICES=0 /cache/independent_sr_cuda_20261013/env/bin/python /cache/independent_sr_cuda_20261013/code/benchmark_cuda.py --model-dir /cache/independent_sr_cuda_20261013/submissions/hypir_push4_a7750_compiled/model_dir --out /cache/independent_sr_cuda_20261013/calibration/push6_quality_first/a7750_parent_latency.json --n 200 --warm 30 --seed 231 --device 0 --hash-file /cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+      "separate_fresh_process": true,
+      "exit_code": 0
+    },
+    {
+      "label": "candidate",
+      "session_id": 22635,
+      "order": 3,
+      "command": "CUDA_VISIBLE_DEVICES=0 /cache/independent_sr_cuda_20261013/env/bin/python /cache/independent_sr_cuda_20261013/code/benchmark_cuda.py --model-dir /cache/independent_sr_cuda_20261013/submissions/hypir_push6_a7750_ro_wavelet/model_dir --out /cache/independent_sr_cuda_20261013/calibration/push6_quality_first/a7750_ro_wavelet_latency.json --n 200 --warm 30 --seed 231 --device 0 --hash-file /cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+      "separate_fresh_process": true,
+      "exit_code": 0
+    }
+  ],
+  "actual_physical_card_evidence": "gpu_before_candidate.csv and gpu_after_candidate.csv, same slot/UUID/PCI; no before-G4 hardware snapshot captured",
+  "isolation_evidence": "Root closed all smoke/native/profile sessions before starting74022; waited74022 exit0 before starting22635; started full103/combined diagnostics only after22635 exit0"
+}

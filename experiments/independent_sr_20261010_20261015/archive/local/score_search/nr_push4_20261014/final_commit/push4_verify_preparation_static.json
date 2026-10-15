@@ -1,0 +1,18 @@
+{
+  "schema": "push4_postcommit_verifier_preparation_static_v1",
+  "status": "PASS_static_only_not_executed",
+  "prepared_utc": "2026-10-14T13:56:50.940142+00:00",
+  "CPU_only": true,
+  "GPU_used": false,
+  "SFS_mutations": false,
+  "script_remote_path": "/cache/push4_verify_final_20261014.py",
+  "script_sha256": "ceefb0b6e56a963c303dc0c72a09fc4e5f1440bb2f2533ef6d35331be168d592",
+  "script_bytes": 26511,
+  "scope": "resume_plus_exact_raw_recipe",
+  "requires_dispatch_after_DONE_and_root_exit0": true,
+  "no_wait_loop": true,
+  "receipt_output": "/cache/independent_sr_cuda_20261013/results/nr_push4_backup_receipt_20261014.json",
+  "write_scope": "New exclusive postcommit /cache receipt only; no SFS writes or archive/report/status mutations.",
+  "actual_prefix_inventory_exact_manifest_plus_heads_guard": true,
+  "static_peer_review": "Trainer reviewed main chain and suggested actual-prefix inventory guard; incorporated before/after full-byte read."
+}

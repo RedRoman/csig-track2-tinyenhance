@@ -1,0 +1,163 @@
+{
+  "status": "PASS_PIXG5I_FP32_ADAM_SCALER_RNG",
+  "auditor_source_sha256": "3db06dc98145df2a9484037b929190d5eac2ae682f51524c803869d58f720129",
+  "initial_package_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+  "teacher_raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+  "steps": [
+    0,
+    300
+  ],
+  "models": [
+    {
+      "run": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild",
+      "variant": "mild",
+      "protocol_id": "50c3abbc9cc3075339df53fceac7055434a3ef3c4b59e34d4f2f9b68a037c009",
+      "initial_package_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+      "teacher_raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+      "config_sha256": "2ae1fd2e9ce0f1a89eb96a4a04054aa0ee3158756d5ae633d46819d7bdf21e97",
+      "milestones": {
+        "0": {
+          "local_step": 0,
+          "optimizer_step": 0,
+          "raw_sha256": "c52a17629608f8534378280be23ebe64b91686674412383342d90b95f910f7c5",
+          "resume_sha256": "cb60ace4d5813fa7786ea10c39b9184acb72f5d5f48f1a15e66b366d4aa2b87c",
+          "marker_sha256": "70adb3bf6c15c21d64fad7ada4309c4cf071bbdf52cb8c80bf87971b0f656826",
+          "state_tensors": 112,
+          "parameter_elements": 3786764,
+          "raw_resume_FP32_exact": true,
+          "changed_FP32_tensors": 0,
+          "Adam_state_entries": 0,
+          "Adam_all_finite_FP32": true,
+          "Adam_steps": [],
+          "four_RNG_valid": true,
+          "grad_scaler": {
+            "scale": 1024.0,
+            "growth_factor": 2.0,
+            "backoff_factor": 0.5,
+            "growth_interval": 2000,
+            "_growth_tracker": 0
+          }
+        },
+        "300": {
+          "local_step": 300,
+          "optimizer_step": 300,
+          "raw_sha256": "594c116d72b755625545ba8e00f4ee45ef2f83184ac62562501a53ccc7217a46",
+          "resume_sha256": "67b34c81fb140252f1b3b525ead033a6afa286d959181b76531d553bb779b0aa",
+          "marker_sha256": "51e1000c633e189c72eb97a3f0c5f4c7df1909cce49f3af5315df17576e1db3e",
+          "state_tensors": 112,
+          "parameter_elements": 3786764,
+          "raw_resume_FP32_exact": true,
+          "changed_FP32_tensors": 112,
+          "Adam_state_entries": 112,
+          "Adam_all_finite_FP32": true,
+          "Adam_steps": [
+            300
+          ],
+          "four_RNG_valid": true,
+          "grad_scaler": {
+            "scale": 1024.0,
+            "growth_factor": 2.0,
+            "backoff_factor": 0.5,
+            "growth_interval": 2000,
+            "_growth_tracker": 300
+          }
+        }
+      },
+      "logged_prefix_steps": 300,
+      "log_prefix_sha256": "7777b3003fbb7e431c389ad17bfc8598c44df3374005ced72829bfc79e5c8ada",
+      "all_prefix_losses_gradients_updates_finite": true,
+      "all_prefix_cases_crops_replayed": true,
+      "initial_deployment_relation": {
+        "FP32_unfolded_vs_folded_max_abs": 4.470348358154297e-07,
+        "FP32_unfolded_vs_folded_mean_abs": 1.6901342547726017e-08,
+        "AMP_unfolded_vs_original_fold_FP16_max_abs": 0.000946044921875,
+        "AMP_unfolded_vs_original_fold_FP16_mean_abs": 7.146531424950808e-05,
+        "comparison_scope": "same initial weights/same FP16-quantized1024 input, no optimizer update; finite arithmetic difference recorded, no exact claim"
+      },
+      "RNG_endpoint_digests": {
+        "0": "f03b9b25afc2d2a5965a51d552066760e1e8cff6713e737d5b05e6582e4e909c",
+        "300": "e72dcd774aa0a919216e8d3c2c3ea6218c2ea2ee83c5803cf6c911a5fa74390c"
+      },
+      "teacher_PNG_bytes_rehashed_here": false
+    },
+    {
+      "run": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium",
+      "variant": "medium",
+      "protocol_id": "f23c18ad89951a7a794e6bec2032f53d31e47d5c34659898d92a913bc453be05",
+      "initial_package_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+      "teacher_raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+      "config_sha256": "fc858e493f4b12ad10dd7005eff4b30401d63dc9a7ef120654c763973d926d71",
+      "milestones": {
+        "0": {
+          "local_step": 0,
+          "optimizer_step": 0,
+          "raw_sha256": "7af432c53bb3af865ab5aa94df8a8d56c5f14d12bcdcd8b386586578ffd8633c",
+          "resume_sha256": "1692676066b6c05eb1287af6a18e9e7a2ea6d6923185d285582f79655ee668ae",
+          "marker_sha256": "220479210fab9c9dc3c505d507778aa7e3e86e9ba3456ce9bddc300f56657a23",
+          "state_tensors": 112,
+          "parameter_elements": 3786764,
+          "raw_resume_FP32_exact": true,
+          "changed_FP32_tensors": 0,
+          "Adam_state_entries": 0,
+          "Adam_all_finite_FP32": true,
+          "Adam_steps": [],
+          "four_RNG_valid": true,
+          "grad_scaler": {
+            "scale": 1024.0,
+            "growth_factor": 2.0,
+            "backoff_factor": 0.5,
+            "growth_interval": 2000,
+            "_growth_tracker": 0
+          }
+        },
+        "300": {
+          "local_step": 300,
+          "optimizer_step": 300,
+          "raw_sha256": "005d13cb5b003d54e576678c52908181016cb9fa1746a9455465f5f2f619c458",
+          "resume_sha256": "bdde4b8e4783723f0eee3ed7e09f693e829dd5d444c5ba6ab716dc73a799580f",
+          "marker_sha256": "c4c5024358b06abbf5b71871eb72ef4388514143f3f7682f3a06735b342f9831",
+          "state_tensors": 112,
+          "parameter_elements": 3786764,
+          "raw_resume_FP32_exact": true,
+          "changed_FP32_tensors": 112,
+          "Adam_state_entries": 112,
+          "Adam_all_finite_FP32": true,
+          "Adam_steps": [
+            300
+          ],
+          "four_RNG_valid": true,
+          "grad_scaler": {
+            "scale": 1024.0,
+            "growth_factor": 2.0,
+            "backoff_factor": 0.5,
+            "growth_interval": 2000,
+            "_growth_tracker": 300
+          }
+        }
+      },
+      "logged_prefix_steps": 300,
+      "log_prefix_sha256": "4acf79b962e0c18043da4c77bc8a5cfca849e3c330ace3cb2b832c6ac19e1fe8",
+      "all_prefix_losses_gradients_updates_finite": true,
+      "all_prefix_cases_crops_replayed": true,
+      "initial_deployment_relation": {
+        "FP32_unfolded_vs_folded_max_abs": 4.470348358154297e-07,
+        "FP32_unfolded_vs_folded_mean_abs": 1.6901342547726017e-08,
+        "AMP_unfolded_vs_original_fold_FP16_max_abs": 0.000946044921875,
+        "AMP_unfolded_vs_original_fold_FP16_mean_abs": 7.146531424950808e-05,
+        "comparison_scope": "same initial weights/same FP16-quantized1024 input, no optimizer update; finite arithmetic difference recorded, no exact claim"
+      },
+      "RNG_endpoint_digests": {
+        "0": "f03b9b25afc2d2a5965a51d552066760e1e8cff6713e737d5b05e6582e4e909c",
+        "300": "e72dcd774aa0a919216e8d3c2c3ea6218c2ea2ee83c5803cf6c911a5fa74390c"
+      },
+      "teacher_PNG_bytes_rehashed_here": false
+    }
+  ],
+  "matched_case_crop_teacher_and_RNG_endpoints": true,
+  "CPU_only": true,
+  "CUDA_initialized": false,
+  "quality_conclusion": false,
+  "mutable_status_not_locked": true,
+  "mutable_logs_checked_as_immutable_prefix_only": true,
+  "teacher_byte_scope": "Frozen trainer verified all100 actual PNG SHA at initialization; this audit checks catalog/manifest/log identity, not full PNG reread"
+}

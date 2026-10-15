@@ -1,0 +1,105 @@
+{
+  "schema": "nafnet32_identity_cpu_proof_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "CUDA_context_initialized": false,
+  "source_sha256": {
+    "naf_model.py": "407d38251f8f71edc68ab7bc8cd4b53b052f90937b4f9f4442097e779c356343",
+    "runner.py": "c7c2bfc46b53e34705ccb91b298727ef127ca07507361aec7493a62edaa2834c",
+    "prepare_identity_cpu.py": "950817be06cf7bc625c7041c53e1c82ecdb59ee90730e4f86dd67a38244970f4",
+    "ORIGINAL_NAFNet_arch.py": "01b22270cc93f1bb90c0e3e4490e98b023fcf73f8552860b4a9ee880ce5c6967"
+  },
+  "LayerNorm_forward_gradient": [
+    {
+      "dtype": "torch.float64",
+      "forward_gradient_max_abs_error": 2.6645352591003757e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "dtype": "torch.float32",
+      "forward_gradient_max_abs_error": 2.86102294921875e-06,
+      "tolerance": 3e-05
+    }
+  ],
+  "parameter_tensors": 664,
+  "parameter_elements": 17111907,
+  "all_parameters_FP32_finite": true,
+  "actual_model_FP32_zero_ending_exact_identity": true,
+  "beta_gamma_initial_zero": true,
+  "first_step_all_parameters_nonzero_not_required": true,
+  "native_tiler": [
+    {
+      "shape": [
+        33,
+        47
+      ],
+      "NN_dtype": "torch.float32",
+      "exact_native_identity": true,
+      "fresh_output": true
+    },
+    {
+      "shape": [
+        33,
+        47
+      ],
+      "NN_dtype": "torch.float16",
+      "exact_native_identity": true,
+      "fresh_output": true
+    },
+    {
+      "shape": [
+        512,
+        512
+      ],
+      "NN_dtype": "torch.float32",
+      "exact_native_identity": true,
+      "fresh_output": true
+    },
+    {
+      "shape": [
+        512,
+        512
+      ],
+      "NN_dtype": "torch.float16",
+      "exact_native_identity": true,
+      "fresh_output": true
+    },
+    {
+      "shape": [
+        513,
+        777
+      ],
+      "NN_dtype": "torch.float32",
+      "exact_native_identity": true,
+      "fresh_output": true
+    },
+    {
+      "shape": [
+        513,
+        777
+      ],
+      "NN_dtype": "torch.float16",
+      "exact_native_identity": true,
+      "fresh_output": true
+    }
+  ],
+  "no_resize": true,
+  "core": 512,
+  "halo": 64,
+  "NN_context": 640,
+  "stride": 256,
+  "benchmark_same_640_context": true,
+  "teacher_actual_test_PNGs_checked": 100,
+  "validation_data_used": false,
+  "teacher_catalog_sha256": "965f1f0481bbb350c09762bcd83e3c49eaba80535e75a46476723cf78fc2af21",
+  "raw": "/cache/independent_sr_cuda_20261013/adaptation/runs/naf_push7_A7750_fidelity/step0.pth",
+  "raw_sha256": "2081d0eed44f27c6183a5b4e420ff8d0fc10969504e28fc1423bef87c13c8830",
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/naf_push7_identity_probe/model_dir",
+  "config_sha256": "e07e2932cfb4381a06247bce4c6e4d332b1b597b971ea456da73f32aafe8512f",
+  "origin": {
+    "initialization": "fresh random NAFNet32 parameters; zero ending identity; no pretrained model",
+    "G4_used": false,
+    "purpose": "untrained speed gate only; no claimed teacher fit",
+    "teacher_checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d"
+  }
+}

@@ -1,0 +1,27 @@
+{"independent_verify_started_utc": "2026-10-14T11:49:21.241479+00:00"}
+{"verified_SFS_full_byte_files": 50, "expected_files": 400, "verified_bytes": 4153553532}
+{"verified_SFS_full_byte_files": 100, "expected_files": 400, "verified_bytes": 4154513748}
+{"verified_SFS_full_byte_files": 150, "expected_files": 400, "verified_bytes": 4155858463}
+{"verified_SFS_full_byte_files": 200, "expected_files": 400, "verified_bytes": 4156658340}
+{"verified_SFS_full_byte_files": 250, "expected_files": 400, "verified_bytes": 4158037578}
+{"verified_SFS_full_byte_files": 300, "expected_files": 400, "verified_bytes": 4476392966}
+{"verified_SFS_full_byte_files": 350, "expected_files": 400, "verified_bytes": 5535108834}
+{"verified_SFS_full_byte_files": 400, "expected_files": 400, "verified_bytes": 6294606619}
+{
+  "status": "verified_complete",
+  "receipt": "/cache/independent_sr_cuda_20261013/results/nr_push3_backup_receipt_20261014.json",
+  "receipt_sha256": "4a1dd3cc935aeb83b04fc7ddcd0a92caa3774e07869eb753b01d88e88d40908a",
+  "manifest_sha256": "6c4cc6db3d963762cb1868d83d89969083326cc0e3932d64743a23b598c48eaa",
+  "DONE_sha256": "15846dd6f53e3327bf7331d00a27d4928b2078edca4244ee29186623cf85655d",
+  "files": 400,
+  "bytes": 6294606619,
+  "SFS_free_bytes": 3898605568,
+  "report_sha256": "f6e3e82b6d25bc5c2f7b686e3f4650ff5dda541fe3e40cdf7b0ce7375903f6c8",
+  "GPU_process_evidence": {
+    "NVML_visible_compute_processes": [],
+    "all_GPUs_have_no_visible_compute_processes": true,
+    "this_round_GPU_command_lines": [],
+    "this_round_GPU_processes_absent": true,
+    "method": "read-only NVML process query plus ps command inspection; no CUDA context/model imported"
+  }
+}

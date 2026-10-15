@@ -1,0 +1,165 @@
+{
+  "protocol_id": "9661681e7a271806571350e999ce1c13b323694f0443d7a0e477191ef51b6458",
+  "protocol": {
+    "schema": "pixg5i_native4_diagnostic_v1",
+    "scope": "DIAGNOSTIC_NATIVE4_ONLY_NOT_FORMAL_OR_SCORE",
+    "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir",
+    "candidate_manifest": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/candidate_manifest.json",
+      "sha256": "d897b171ebd1e94cfa730dd4c344045e58460813e3bd831f6929a00941660ebe",
+      "bytes": 15291
+    },
+    "binding": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir/pixg5i_binding.json",
+      "sha256": "47853e5b6da683b1346adc0f58b39b3d20d1f728e52a0b929652fb060777262d",
+      "bytes": 5676
+    },
+    "checkpoint_sha256": "503074449893247332df973a85f9be1f348d9f130f31a28455b62790fb50c929",
+    "tasks": [
+      {
+        "split": "test",
+        "case": 7,
+        "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case7.jpg",
+        "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+        "size": [
+          4096,
+          3072
+        ]
+      },
+      {
+        "split": "test",
+        "case": 16,
+        "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case16.jpg",
+        "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+        "size": [
+          4096,
+          3072
+        ]
+      },
+      {
+        "split": "test",
+        "case": 41,
+        "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case41.jpg",
+        "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+        "size": [
+          3072,
+          4096
+        ]
+      },
+      {
+        "split": "test",
+        "case": 83,
+        "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case83.jpg",
+        "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+        "size": [
+          3072,
+          4096
+        ]
+      }
+    ],
+    "source": {
+      "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/render_pixg5i_diagnostic4.py",
+      "sha256": "cee4ceb8df95cfc5a7ebbc2a00b1ce0566f1866cbf5cb8e4ee7726fb306fdca9",
+      "bytes": 9140
+    },
+    "original_formal_renderer_sha256": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5",
+    "input_encoding": "original float32 RGB/255 -> half()*2-1; full native image",
+    "output_encoding": "original float().clamp(-1,1); ((*0.5+0.5)*255).round().astype(uint8); PNG compress1",
+    "cases": [
+      7,
+      16,
+      41,
+      83
+    ],
+    "seed": 231,
+    "RNG_scope": "Seed231 before model initialization, then continuous diagnostic order7/16/41/83; not full-val3/test100 sequence",
+    "extra_warmup": false,
+    "quality_or_speed_claim": false,
+    "no_val_or_GT": true,
+    "runner": {
+      "schema": "pixg5i_original_inference_metadata_adapter_v1",
+      "model_type": "supplied_pixG5i_pixel_UNet",
+      "label": "pixg5i_hypir_coverage_v4_s200",
+      "stage": "distilled_checkpoint",
+      "runner_path": "cudagraph:max-autotune",
+      "runner_sha256": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a",
+      "checkpoint_sha256": "503074449893247332df973a85f9be1f348d9f130f31a28455b62790fb50c929",
+      "weight_path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir/model.pth",
+      "repo_path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir",
+      "source_sha256": {
+        "reference_runner.py": "6222ead92dc6fb24b88c0350e41191fc27a5adc2f6ba38bd383a4badb9bd8c1e",
+        "pix_model.py": "2f1cd3cd8311381e432138f489b01b982e08ebd5b09ecbc05ac87f7bfb577923",
+        "pixg5i_binding.json": "47853e5b6da683b1346adc0f58b39b3d20d1f728e52a0b929652fb060777262d"
+      },
+      "initial_package_checkpoint_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+      "archive_sha256": "f8e154da5ea9cb2fe165a316f824003459661945e6bbe22efd025d8592d573d6",
+      "training_provenance": {
+        "config": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/config.json",
+          "sha256": "fadf6a9577c2b9f2747382b3ba3ebcbe64464add1c2544154d31fc499aa127bf",
+          "bytes": 80311
+        },
+        "marker": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/checkpoint_step200.json",
+          "sha256": "1334a9adb60211d28fe91762591c9b1d38d7050973a65290db4f6187f584193a",
+          "bytes": 5968
+        },
+        "input_catalog": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/input_catalog.json",
+          "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+          "bytes": 23987
+        },
+        "teacher_catalog": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/teacher_catalog.json",
+          "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+          "bytes": 39787
+        },
+        "resume": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/resume_step200.pt",
+          "sha256": "e2d47be279fd3c688df232ec9ebb895f23587580ab4e40871cfb6fd79bc766ec",
+          "bytes": 45582907
+        },
+        "training_source": {
+          "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_coverage_v4.py",
+          "sha256": "25624067758d5717e110ac7025c4e9eb8ee2ad8b2cfc292273581d6b5510fa08",
+          "bytes": 33020
+        },
+        "training_plan": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/training_plan.json",
+          "sha256": "5466f898c854b8337d16879a867b04b14b631959df18c6baca817c9eaafe0d28",
+          "bytes": 276974
+        }
+      },
+      "teacher": {
+        "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+        "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+        "applied_to_this_checkpoint": true,
+        "render_manifest": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+          "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+          "bytes": 81396
+        }
+      },
+      "used_as_G4_reference": false,
+      "quality_reuse_claim": false,
+      "input": "original FP16 native [1,3,H,W] [-1,1]",
+      "output": "original FP16 native [1,3,H,W] [-1,1]",
+      "inference": "Unchanged original fold/FP16/channels_last;512 original compile/graph;native original eager with original OOM tile1024 overlap128 fallback",
+      "adapter": "Only initialization seed and identity metadata; infer delegates unchanged original supplied Runner",
+      "seed": "231 before initialization; continuous inference RNG",
+      "inference_RNG_matches_HYPIR_required": false
+    },
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "torch": "2.8.0+cu128",
+    "model_dir_sha256": {
+      "config.yaml": "e13bab32185ac95f07ac36133eff89133a33ed90cc5ca534b7d8496bc457250d",
+      "model.pth": "503074449893247332df973a85f9be1f348d9f130f31a28455b62790fb50c929",
+      "pix_model.py": "2f1cd3cd8311381e432138f489b01b982e08ebd5b09ecbc05ac87f7bfb577923",
+      "pixg5i_binding.json": "47853e5b6da683b1346adc0f58b39b3d20d1f728e52a0b929652fb060777262d",
+      "reference_runner.py": "6222ead92dc6fb24b88c0350e41191fc27a5adc2f6ba38bd383a4badb9bd8c1e",
+      "runner.py": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a"
+    },
+    "constructor_before_fourRNG_sha256": "df63e50ba172371bb04b12c3287db3bc4407e16a450cf6982b5af77d62c5cbc0",
+    "constructor_after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55"
+  }
+}

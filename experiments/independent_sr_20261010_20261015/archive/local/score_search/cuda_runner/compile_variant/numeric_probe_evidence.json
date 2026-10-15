@@ -1,0 +1,170 @@
+{
+  "read_bjt": "2026-10-13T22:18:48.776274+08:00",
+  "inductor_config_file": "/home/ma-user/miniconda3/lib/python3.13/site-packages/torch/_inductor/config.py",
+  "inductor_config_sha256": "9c9f68771e08689e8f75a7972c98578403cdbd41065a74ebe8e9f1b0c62333cd",
+  "config_evidence": [
+    {
+      "line": 677,
+      "source": "# (fp16, bf16).  PyTorch eager computes bf16/fp16 by upcasting inputs to fp32\n# and downcasting after.  When two low precision operators are fused together,\n# Inductor will elide the downcast-upcast pairs (effectively a precision\n# truncation) that would occur between these two operators.  Typically,\n# Inductor's behavior should be closer to fp64 ref numerics.  However, with\n# this knob you can ensure the downcast-upcast are preserved so that you can\n# emulate the eager numerics.\nemulate_precision_casts = (\n    os.environ.get(\"TORCHINDUCTOR_EMULATE_PRECISION_CASTS\", \"0\") == \"1\""
+    },
+    {
+      "line": 1096,
+      "source": "    # Use a small dequant buffer for wgt of woq int4 size as: [q_group_size, Nr]\n    use_small_dequant_buffer = False\n\n\n# config specific to codegen/triton.py\nclass triton:\n    # Use cudagraphs on output code\n    cudagraphs = os.environ.get(\"TORCHINDUCTOR_CUDAGRAPHS\") == \"1\"\n"
+    }
+  ],
+  "generated_sources": [
+    {
+      "path": "/cache/independent_sr_cuda_20261013/compile_cache/hypir_tiles/k2/ck2yekcd6ggtl6wismv6i3laccex2triiblnv4rrlk57jfxg3z2j.py",
+      "sha256": "5fb8631af9be0e0d142749b6b6fea805a5cfba10c8e6ec154ba171db05d0a23b",
+      "allocates_inside_call": true,
+      "cudagraphify_impl_present": false,
+      "static_output_present": false,
+      "fp32_intermediate_conversions": 709,
+      "explicit_bf16_intermediate_conversions": 0,
+      "fused_kernel_headers": [
+        {
+          "line": 59,
+          "text": "def triton_poi_fused_convolution_0(in_ptr0, out_ptr0, ynumel, xnumel, YBLOCK : tl.constexpr, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 100,
+          "text": "def triton_poi_fused_convolution_1(in_ptr0, out_ptr0, ynumel, xnumel, YBLOCK : tl.constexpr, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 143,
+          "text": "def triton_poi_fused_convolution_silu_2(in_ptr0, out_ptr0, ynumel, xnumel, YBLOCK : tl.constexpr, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 184,
+          "text": "def triton_poi_fused_cat_3(in_ptr0, out_ptr0, xnumel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 262,
+          "text": "def triton_poi_fused__to_copy_cat_4(in_ptr0, out_ptr0, xnumel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 312,
+          "text": "def triton_poi_fused_addmm_silu_5(in_out_ptr0, in_ptr0, xnumel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 362,
+          "text": "def triton_poi_fused_addmm_silu_6(in_ptr0, in_ptr1, out_ptr0, out_ptr1, xnumel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 403,
+          "text": "def triton_per_fused_native_group_norm_7(in_ptr0, in_ptr1, out_ptr0, out_ptr1, out_ptr2, xnumel, r0_numel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 467,
+          "text": "def triton_per_fused_native_group_norm_8(in_ptr0, in_ptr1, in_ptr2, out_ptr0, out_ptr1, out_ptr2, xnumel, r0_numel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 525,
+          "text": "def triton_per_fused_native_group_norm_9(in_ptr0, in_ptr1, in_ptr2, out_ptr0, out_ptr1, xnumel, r0_numel, XBLOCK : tl.constexpr):"
+        }
+      ]
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/compile_cache/hypir_tiles/7p/c7pjoqaplsmthpnshe7n3eviyhundsd43p4v2fzev6z6qlyezkhd.py",
+      "sha256": "7a6d885d9f08d46249e7ff5fa1276eec51ddeb739033d3a5893f2ce039190379",
+      "allocates_inside_call": true,
+      "cudagraphify_impl_present": false,
+      "static_output_present": false,
+      "fp32_intermediate_conversions": 264,
+      "explicit_bf16_intermediate_conversions": 0,
+      "fused_kernel_headers": [
+        {
+          "line": 59,
+          "text": "def triton_poi_fused_convolution_0(in_ptr0, out_ptr0, ynumel, xnumel, YBLOCK : tl.constexpr, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 98,
+          "text": "def triton_poi_fused_convolution_1(in_out_ptr0, in_ptr0, xnumel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 137,
+          "text": "def triton_poi_fused_convolution_2(in_ptr0, out_ptr0, ynumel, xnumel, YBLOCK : tl.constexpr, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 178,
+          "text": "def triton_per_fused_native_group_norm_3(in_ptr0, in_ptr1, out_ptr0, out_ptr1, out_ptr2, xnumel, r0_numel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 239,
+          "text": "def triton_per_fused_native_group_norm_4(in_ptr0, in_ptr1, in_ptr2, out_ptr0, out_ptr1, out_ptr2, xnumel, r0_numel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 297,
+          "text": "def triton_per_fused_native_group_norm_5(in_ptr0, in_ptr1, in_ptr2, out_ptr0, out_ptr1, xnumel, r0_numel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 359,
+          "text": "def triton_poi_fused_native_group_norm_silu_6(in_ptr0, in_ptr1, in_ptr2, in_ptr3, in_ptr4, in_ptr5, out_ptr1, xnumel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 419,
+          "text": "def triton_poi_fused_convolution_silu_7(in_ptr0, out_ptr0, ynumel, xnumel, YBLOCK : tl.constexpr, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 460,
+          "text": "def triton_per_fused_native_group_norm_8(in_ptr0, in_ptr1, in_ptr2, in_ptr3, out_ptr0, out_ptr1, out_ptr2, xnumel, r0_numel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 529,
+          "text": "def triton_poi_fused_native_group_norm_9(in_ptr0, in_ptr1, in_ptr2, in_ptr3, in_ptr4, in_ptr5, in_ptr6, in_ptr7, out_ptr0, ynumel, xnumel, YBLOCK : tl.constexpr, XBLOCK : tl.constexpr):"
+        }
+      ]
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/compile_cache/hypir_tiles/nd/cndk3pf4u2duscd4nnkwzno222j4oki4dnfwz4bqnh37l54amw3q.py",
+      "sha256": "f9bd590c014d2a4df221656892571e35f159b595104322dee275e24d39e2422f",
+      "allocates_inside_call": true,
+      "cudagraphify_impl_present": false,
+      "static_output_present": false,
+      "fp32_intermediate_conversions": 213,
+      "explicit_bf16_intermediate_conversions": 0,
+      "fused_kernel_headers": [
+        {
+          "line": 59,
+          "text": "def triton_poi_fused_convolution_0(in_ptr0, out_ptr0, ynumel, xnumel, YBLOCK : tl.constexpr, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 98,
+          "text": "def triton_poi_fused_convolution_1(in_ptr0, out_ptr0, ynumel, xnumel, YBLOCK : tl.constexpr, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 139,
+          "text": "def triton_per_fused_native_group_norm_2(in_ptr0, in_ptr1, out_ptr0, out_ptr1, out_ptr2, xnumel, r0_numel):"
+        },
+        {
+          "line": 223,
+          "text": "def triton_per_fused_native_group_norm_3(in_ptr0, in_ptr1, in_ptr2, out_ptr0, out_ptr1, out_ptr2, xnumel, r0_numel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 283,
+          "text": "def triton_per_fused_native_group_norm_4(in_ptr0, in_ptr1, in_ptr2, out_ptr0, out_ptr1, out_ptr2, xnumel, r0_numel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 343,
+          "text": "def triton_per_fused_native_group_norm_5(in_ptr0, in_ptr1, in_ptr2, out_ptr0, out_ptr1, xnumel, r0_numel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 405,
+          "text": "def triton_poi_fused_native_group_norm_silu_6(in_ptr0, in_ptr1, in_ptr2, in_ptr3, in_ptr4, in_ptr5, out_ptr1, xnumel, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 465,
+          "text": "def triton_poi_fused_convolution_silu_7(in_ptr0, out_ptr0, ynumel, xnumel, YBLOCK : tl.constexpr, XBLOCK : tl.constexpr):"
+        },
+        {
+          "line": 506,
+          "text": "def triton_per_fused_native_group_norm_8(in_ptr0, in_ptr1, in_ptr2, in_ptr3, out_ptr0, out_ptr1, out_ptr2, xnumel, r0_numel):"
+        },
+        {
+          "line": 600,
+          "text": "def triton_poi_fused_native_group_norm_silu_9(in_ptr0, in_ptr1, in_ptr2, in_ptr3, in_ptr4, in_ptr5, in_ptr6, in_ptr7, out_ptr1, xnumel, XBLOCK : tl.constexpr):"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "audited_bjt": "2026-10-13T21:07:16.494275+08:00",
+  "scope": "pilot subset; not full test100 or official score",
+  "server": "/cache/independent_sr_score_search_20261013",
+  "checks": [
+    {
+      "label": "s10000_mt200_ct175_pilot",
+      "image_rows": 23,
+      "scalar_count": 98,
+      "test_NR": 2.201187090992928,
+      "val_FR": 1.4671489199002585,
+      "score_key": "S_subset",
+      "score": 3.6683360108931864,
+      "max_formula_delta": 0.0,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent read 2026-10-13 20:45:22 +08:00)",
+      "metric_weight8_actual_sha": "PASS (independent server read, matches reference8000 and migration)",
+      "component_means": {
+        "test": {
+          "niqe": 4.482640707492829,
+          "musiq": 46.70053644180298,
+          "maniqa": 0.47378069162368774,
+          "clipiqa": 0.7086651057004929
+        },
+        "validation": {
+          "lpips": 0.3339436848958333,
+          "dists": 0.1989073952039083,
+          "niqe": 3.8208014170328775,
+          "musiq": 48.61770884195963,
+          "maniqa": 0.46113964915275574,
+          "clipiqa": 0.6781324545542399
+        }
+      }
+    },
+    {
+      "label": "s10000_mt200_ct200_pilot",
+      "image_rows": 23,
+      "scalar_count": 98,
+      "test_NR": 2.2074466444849965,
+      "val_FR": 1.4502068758010864,
+      "score_key": "S_subset",
+      "score": 3.657653520286083,
+      "max_formula_delta": 0.0,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent read 2026-10-13 20:45:22 +08:00)",
+      "metric_weight8_actual_sha": "PASS (independent server read, matches reference8000 and migration)",
+      "component_means": {
+        "test": {
+          "niqe": 4.264593398571014,
+          "musiq": 45.87460069656372,
+          "maniqa": 0.4737949773669243,
+          "clipiqa": 0.7013650000095367
+        },
+        "validation": {
+          "lpips": 0.3484293619791667,
+          "dists": 0.20136376221974692,
+          "niqe": 3.636879285176595,
+          "musiq": 47.87830607096354,
+          "maniqa": 0.46351246039072674,
+          "clipiqa": 0.6740088860193888
+        }
+      }
+    },
+    {
+      "label": "s6000_mt200_ct200_pilot",
+      "image_rows": 23,
+      "scalar_count": 98,
+      "test_NR": 2.2456456124782562,
+      "val_FR": 1.4453386863072715,
+      "score_key": "S_subset",
+      "score": 3.6909842987855277,
+      "max_formula_delta": 0.0,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent read 2026-10-13 20:45:22 +08:00)",
+      "metric_weight8_actual_sha": "PASS (independent server read, matches reference8000 and migration)",
+      "component_means": {
+        "test": {
+          "niqe": 4.276525139808655,
+          "musiq": 44.624571800231934,
+          "maniqa": 0.5005340337753296,
+          "clipiqa": 0.7265183746814727
+        },
+        "validation": {
+          "lpips": 0.3507893880208333,
+          "dists": 0.20387192567189535,
+          "niqe": 3.5921977361043296,
+          "musiq": 45.89824930826823,
+          "maniqa": 0.494968185822169,
+          "clipiqa": 0.7040972709655762
+        }
+      }
+    },
+    {
+      "label": "s8000_mt200_ct175_pilot",
+      "image_rows": 23,
+      "scalar_count": 98,
+      "test_NR": 2.198910772740841,
+      "val_FR": 1.4669843117396038,
+      "score_key": "S_subset",
+      "score": 3.6658950844804448,
+      "max_formula_delta": 4.440892098500626e-16,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent read 2026-10-13 20:45:22 +08:00)",
+      "metric_weight8_actual_sha": "PASS (independent server read, matches reference8000 and migration)",
+      "component_means": {
+        "test": {
+          "niqe": 4.502777838706971,
+          "musiq": 46.61260166168213,
+          "maniqa": 0.47328954190015793,
+          "clipiqa": 0.7097729980945587
+        },
+        "validation": {
+          "lpips": 0.333740234375,
+          "dists": 0.19927545388539633,
+          "niqe": 3.850791613260905,
+          "musiq": 48.521104176839195,
+          "maniqa": 0.4609217743078868,
+          "clipiqa": 0.6779849330584208
+        }
+      }
+    },
+    {
+      "label": "s8000_mt200_ct200_pilot",
+      "image_rows": 23,
+      "scalar_count": 98,
+      "test_NR": 2.2063060841560365,
+      "val_FR": 1.4500619371732077,
+      "score_key": "S_subset",
+      "score": 3.656368021329244,
+      "max_formula_delta": 0.0,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent read 2026-10-13 20:45:22 +08:00)",
+      "metric_weight8_actual_sha": "PASS (independent server read, matches reference8000 and migration)",
+      "component_means": {
+        "test": {
+          "niqe": 4.278892731666565,
+          "musiq": 45.740058994293214,
+          "maniqa": 0.47350065112113954,
+          "clipiqa": 0.7032941162586213
+        },
+        "validation": {
+          "lpips": 0.3483479817708333,
+          "dists": 0.20159008105595908,
+          "niqe": 3.641164461771647,
+          "musiq": 47.79887771606445,
+          "maniqa": 0.4635605414708455,
+          "clipiqa": 0.6754907170931498
+        }
+      }
+    },
+    {
+      "label": "s8000_mt200_ct225_pilot",
+      "image_rows": 23,
+      "scalar_count": 98,
+      "test_NR": 2.1781953147053716,
+      "val_FR": 1.4268421133359275,
+      "score_key": "S_subset",
+      "score": 3.605037428041299,
+      "max_formula_delta": 0.0,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent read 2026-10-13 20:45:22 +08:00)",
+      "metric_weight8_actual_sha": "PASS (independent server read, matches reference8000 and migration)",
+      "component_means": {
+        "test": {
+          "niqe": 4.204371774196625,
+          "musiq": 44.20500993728638,
+          "maniqa": 0.46764817386865615,
+          "clipiqa": 0.6889342188835144
+        },
+        "validation": {
+          "lpips": 0.3669026692708333,
+          "dists": 0.20625521739323935,
+          "niqe": 3.7211761474609375,
+          "musiq": 46.028910319010414,
+          "maniqa": 0.45819565653800964,
+          "clipiqa": 0.6605092684427897
+        }
+      }
+    },
+    {
+      "label": "s6000_mt200_ct175_pilot",
+      "image_rows": 23,
+      "scalar_count": 98,
+      "test_NR": 2.2435571833252905,
+      "val_FR": 1.4644165833791098,
+      "score_key": "S_subset",
+      "score": 3.7079737667044004,
+      "max_formula_delta": 0.0,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent read 2026-10-13T21:07:16.494275+08:00)",
+      "metric_weight8_actual_sha": "PASS (protocol equals 8 independently verified actual/reference/migration hashes on 20:45:22)",
+      "component_means": {
+        "test": {
+          "niqe": 4.533397507667542,
+          "musiq": 46.30305986404419,
+          "maniqa": 0.5004333212971688,
+          "clipiqa": 0.7334330141544342
+        },
+        "validation": {
+          "lpips": 0.3349202473958333,
+          "dists": 0.20066316922505698,
+          "niqe": 3.8632283210754395,
+          "musiq": 48.864541371663414,
+          "maniqa": 0.49203600486119586,
+          "clipiqa": 0.7088867624600729
+        }
+      },
+      "render_candidate": {
+        "checkpoint_sha256": "2c82a71a94aa754bd4a26a2a474c2bbe4989bde1d38d2e15d9e58eb0c3e408bc",
+        "model_t": 200,
+        "coeff_t": 175,
+        "latent": null,
+        "patch": 512,
+        "stride": 256
+      }
+    },
+    {
+      "label": "s8000_mt200_ct200_mode_p512_pilot",
+      "image_rows": 23,
+      "scalar_count": 98,
+      "test_NR": 2.2062912806272506,
+      "val_FR": 1.4499650398890178,
+      "score_key": "S_subset",
+      "score": 3.6562563205162686,
+      "max_formula_delta": 0.0,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent read 2026-10-13T21:07:16.494275+08:00)",
+      "metric_weight8_actual_sha": "PASS (protocol equals 8 independently verified actual/reference/migration hashes on 20:45:22)",
+      "component_means": {
+        "test": {
+          "niqe": 4.275427114963532,
+          "musiq": 45.70988025665283,
+          "maniqa": 0.47367357909679414,
+          "clipiqa": 0.7030616104602814
+        },
+        "validation": {
+          "lpips": 0.3483479817708333,
+          "dists": 0.20168697834014893,
+          "niqe": 3.642249266306559,
+          "musiq": 47.84327189127604,
+          "maniqa": 0.46347569425900775,
+          "clipiqa": 0.675458828608195
+        }
+      },
+      "render_candidate": {
+        "checkpoint_sha256": "1446f3bc67f2d5743a9f00eb52c92d1c610124779a37a98646d2c1f7f3775225",
+        "model_t": 200,
+        "coeff_t": 200,
+        "latent": "mode",
+        "patch": 512,
+        "stride": 256
+      }
+    },
+    {
+      "label": "s8000_mt200_ct200_sample_p768_pilot",
+      "image_rows": 23,
+      "scalar_count": 98,
+      "test_NR": 2.1541411848664285,
+      "val_FR": 1.465738832950592,
+      "score_key": "S_subset",
+      "score": 3.6198800178170205,
+      "max_formula_delta": 0.0,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent read 2026-10-13T21:07:16.494275+08:00)",
+      "metric_weight8_actual_sha": "PASS (protocol equals 8 independently verified actual/reference/migration hashes on 20:45:22)",
+      "component_means": {
+        "test": {
+          "niqe": 4.655202496051788,
+          "musiq": 46.04420070648193,
+          "maniqa": 0.4659952834248543,
+          "clipiqa": 0.6932241439819335
+        },
+        "validation": {
+          "lpips": 0.3336181640625,
+          "dists": 0.20064300298690796,
+          "niqe": 3.7190454800923667,
+          "musiq": 40.51998392740885,
+          "maniqa": 0.46598324179649353,
+          "clipiqa": 0.6616939703623453
+        }
+      },
+      "render_candidate": {
+        "checkpoint_sha256": "1446f3bc67f2d5743a9f00eb52c92d1c610124779a37a98646d2c1f7f3775225",
+        "model_t": 200,
+        "coeff_t": 200,
+        "latent": "sample",
+        "patch": 768,
+        "stride": 384
+      }
+    }
+  ],
+  "pending": []
+}

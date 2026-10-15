@@ -1,0 +1,163 @@
+{
+  "audited_bjt": "2026-10-14T00:04:04.467172+08:00",
+  "scope": "matched fixed20test+3validation pilot; S_subset only, not full100 proxy or official score",
+  "cpu_only": true,
+  "no_GPU_or_rerender": true,
+  "results": [
+    {
+      "label": "s6000_ct175_compiled_control_pilot",
+      "image_rows": 23,
+      "scalar_metrics": 98,
+      "NR": 2.250855999607922,
+      "FR": 1.4638817111651101,
+      "S_subset": 3.714737710773032,
+      "max_formula_delta": 0.0,
+      "actual_png_hash": "PASS23",
+      "actual_input_hash": "PASS23",
+      "actual_validation_GT_hash": "PASS3",
+      "component_means": {
+        "test": {
+          "niqe": 4.468102898408164,
+          "musiq": 46.38330211639404,
+          "maniqa": 0.4999812126159668,
+          "clipiqa": 0.7338520556688308
+        },
+        "validation": {
+          "lpips": 0.3352457682291667,
+          "dists": 0.20087252060572305,
+          "niqe": 3.920043926315552,
+          "musiq": 48.747458140055336,
+          "maniqa": 0.4916665454705556,
+          "clipiqa": 0.7084821065266927
+        }
+      },
+      "checkpoint_sha256": "2c82a71a94aa754bd4a26a2a474c2bbe4989bde1d38d2e15d9e58eb0c3e408bc"
+    },
+    {
+      "label": "nr_conservative_s6100_compiled_pilot",
+      "image_rows": 23,
+      "scalar_metrics": 98,
+      "NR": 2.2599103960203246,
+      "FR": 1.4647649923960369,
+      "S_subset": 3.7246753884163617,
+      "max_formula_delta": 0.0,
+      "actual_png_hash": "PASS23",
+      "actual_input_hash": "PASS23",
+      "actual_validation_GT_hash": "PASS3",
+      "component_means": {
+        "test": {
+          "niqe": 4.49041068930714,
+          "musiq": 46.20080432891846,
+          "maniqa": 0.507909108698368,
+          "clipiqa": 0.7390343129634858
+        },
+        "validation": {
+          "lpips": 0.3343098958333333,
+          "dists": 0.20092511177062988,
+          "niqe": 3.9421693702504608,
+          "musiq": 48.478406270345054,
+          "maniqa": 0.5009271105130514,
+          "clipiqa": 0.7156122525533041
+        }
+      },
+      "checkpoint_sha256": "04468a0134579c3e5f63aea93eea2aa1ca956b102f7ed32bb3dc03c918e08ff4"
+    },
+    {
+      "label": "nr_aligned_s6100_compiled_pilot",
+      "image_rows": 23,
+      "scalar_metrics": 98,
+      "NR": 2.2552833844484237,
+      "FR": 1.4643454750378926,
+      "S_subset": 3.719628859486316,
+      "max_formula_delta": 0.0,
+      "actual_png_hash": "PASS23",
+      "actual_input_hash": "PASS23",
+      "actual_validation_GT_hash": "PASS3",
+      "component_means": {
+        "test": {
+          "niqe": 4.4778585409508675,
+          "musiq": 46.324804592132566,
+          "maniqa": 0.5033304840326309,
+          "clipiqa": 0.7364907085895538
+        },
+        "validation": {
+          "lpips": 0.3346354166666667,
+          "dists": 0.20101910829544067,
+          "niqe": 3.9286062851132653,
+          "musiq": 48.711630503336586,
+          "maniqa": 0.4955454667409261,
+          "clipiqa": 0.7129254738489786
+        }
+      },
+      "checkpoint_sha256": "5ff99a06f0a0e723f534b159c62206250bdd91c58caa6a70a1db5944ee6095b5"
+    }
+  ],
+  "matched23_input_GT_seed_metric_and_renderer_protocol": "PASS",
+  "scorefile_schema_note": "Raw S_proxy field is explicitly partial_or_preflight_only/official_full_countFalse; canonical comparison labels it S_subset.",
+  "control_vs_old_full_validation_prefix": {
+    "records": [
+      {
+        "case": 1,
+        "old_png_sha256": "6aa9f10632c90407a01d4e276e89212d1818ff40b9c7a1c24d687fa9d2a62b72",
+        "control_png_sha256": "ca33d12d9120fc66c7ae78a53827228ddce66420d81159eec77c169714e5da5f",
+        "byteequal": false,
+        "channel_elements": 37748736,
+        "changed_channel_elements": 3225248,
+        "changed_pixel_fraction": 0.2071247100830078,
+        "uint8_max_abs": 15,
+        "uint8_mean_abs": 0.08809638023376465,
+        "metric_delta": {
+          "lpips": 0.0,
+          "dists": 3.4928321838378906e-05,
+          "niqe": -0.002974799684900109,
+          "musiq": -0.012332916259765625,
+          "maniqa": -0.00012880563735961914,
+          "clipiqa": -0.0008353590965270996
+        }
+      },
+      {
+        "case": 2,
+        "old_png_sha256": "5337d3b257de60794c807780370b187cf25046ff3b51607ededf02f6e7fa5d25",
+        "control_png_sha256": "0b47273da20a83dcb16c51df4e36f94570e0b3c772756f98240cfb1ddc750d9d",
+        "byteequal": false,
+        "channel_elements": 37748736,
+        "changed_channel_elements": 2177385,
+        "changed_pixel_fraction": 0.15817689895629883,
+        "uint8_max_abs": 6,
+        "uint8_mean_abs": 0.05780794885423449,
+        "metric_delta": {
+          "lpips": 0.0,
+          "dists": 0.0001068115234375,
+          "niqe": 0.002614265124868176,
+          "musiq": 0.022418975830078125,
+          "maniqa": 4.112720489501953e-05,
+          "clipiqa": -2.5093555450439453e-05
+        }
+      },
+      {
+        "case": 3,
+        "old_png_sha256": "17c782bf247758f188f4c2acf878cb7d36af9e633cdafafce82af7982a65f4f6",
+        "control_png_sha256": "17c782bf247758f188f4c2acf878cb7d36af9e633cdafafce82af7982a65f4f6",
+        "byteequal": true,
+        "channel_elements": 37748736,
+        "changed_channel_elements": 0,
+        "changed_pixel_fraction": 0.0,
+        "uint8_max_abs": 0,
+        "uint8_mean_abs": 0.0,
+        "metric_delta": {
+          "lpips": 0.0,
+          "dists": 0.0,
+          "niqe": 0.0,
+          "musiq": 0.0,
+          "maniqa": 0.0,
+          "clipiqa": 0.0
+        }
+      }
+    ],
+    "recorded_runner_renderer_config_flags_versions_equal": true,
+    "recorded_metric_protocol_equal": true,
+    "source_and_input_path_recipe_changes_found": false,
+    "verdict": "Val1/2 PNG pixels differ while val3 is byteexact. FR delta entirely DISTS; LPIPS unchanged. No recorded input/algorithm/weight/source/flag change. Small compiled-CUDA floating/kernel/cache drift is consistent with evidence, exact cause unproven; no GPU rerun."
+  },
+  "independent_mean_formula": "means first; NR=C+M+U/100+max(0,(10-N)/10); FR=2-L-D; S_subset=NR_test20+FR_val3"
+}

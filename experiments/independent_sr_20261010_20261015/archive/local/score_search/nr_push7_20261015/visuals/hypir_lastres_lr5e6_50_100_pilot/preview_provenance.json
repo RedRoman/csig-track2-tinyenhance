@@ -1,0 +1,1665 @@
+{
+  "status": "PASS",
+  "CPU_only": true,
+  "GPU_used": false,
+  "scope": "Actual matched pilot23 ROI7/16/41 only; no full quality/score claim",
+  "same_inputs_and_task_order": true,
+  "same_native512_runner_and_seed_policy": true,
+  "post_fourRNG_equality_not_claimed": true,
+  "no_teacher_output_distillation": true,
+  "source_SHA_verified": true,
+  "all69_actual_committed_PNG_SHA_verified": true,
+  "all_final_manifests": true,
+  "all_ROI_pixels_exact": true,
+  "snapshots": [
+    {
+      "directory": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot",
+      "label": "push7_recovered_a7750_native_pilot",
+      "display": "A7750",
+      "protocol": {
+        "schema": "cuda_submission_quality_v1",
+        "runner": {
+          "schema": "hypir_cuda_runner_v1",
+          "label": "push6_a7750_ro_wavelet",
+          "runner_path": "HYPIR_sd2_rank256_mt200_ct175_bf16_fused_gpu_cachedempty_ro_wavelet",
+          "weight_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+          "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+          "base_model_path": "/temp/zihaohe_stage/baselines/sd21b",
+          "repo_path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda",
+          "versions": {
+            "torch": "2.8.0+cu128",
+            "torchvision": "0.23.0+cu128",
+            "diffusers": "0.33.1",
+            "transformers": "4.56.2",
+            "peft": "0.17.1",
+            "accelerate": "1.10.1",
+            "numpy": "2.3.3",
+            "Pillow": "11.3.0"
+          },
+          "input": "CUDA FP16 [-1,1] -> CUDA FP32 [0,1]; native shape",
+          "output": "CUDA FP32 [-1,1]; upstream clamp[0,1]; native shape; no CPU image copy",
+          "internal_precision": "BF16",
+          "seed": "231 before initialization; continuous inference RNG",
+          "model_t": 200,
+          "coeff_t": 175,
+          "lora_rank": 256,
+          "patch": 512,
+          "stride": 256,
+          "scale": 1,
+          "caption": "",
+          "latent": "upstream posterior.sample",
+          "fusion": "UNet fuse_lora(scale1,safe_fusing=True)+unload_lora",
+          "fused_requires_separate_quality_score": true,
+          "source_sha256": {
+            "HYPIR/enhancer/base.py": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161",
+            "HYPIR/enhancer/sd2.py": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd",
+            "HYPIR/utils/common.py": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+          },
+          "runner_sha256": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b",
+          "numerical_flags": {
+            "matmul_allow_tf32": true,
+            "cudnn_allow_tf32": true,
+            "cudnn_benchmark": false
+          },
+          "no_warmup_during_initialization": true,
+          "fixed_empty_caption_cache": "original prepare_inputs(batch1,prompt empty) once; identical tensors reused",
+          "compilation": "UNet.forward,VAE.encode,VAE.decode and complete wavelet reduce-overhead dynamicFalse; original tile loops/sampling/scheduler",
+          "speed_candidate": "push6 same A7750 weights, no channels_last conversion; combine independently native-exact RO tiles and compiled wavelet",
+          "compiled_requires_separate_quality_score": true
+        },
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push6_a7750_ro_wavelet/model_dir",
+        "tasks": [
+          {
+            "split": "val",
+            "case": 1,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/验证集/case1_lq.jpg",
+            "input_sha256": "b5e6acccca137defac4c8683b8dd3d4399ad216b1a4d092e5209c998fb8afc43",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "val",
+            "case": 2,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/验证集/case2_lq.jpg",
+            "input_sha256": "caa9d1f2e3178efa4fff6752dfb615055e5d9dd957b9895f0e6452cfc788d4bf",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "val",
+            "case": 3,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/验证集/case3_lq.jpg",
+            "input_sha256": "cbc1f832ee6513dbbec3666a7e56793de0ab6269615c7efa3dd320354df33b20",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 1,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case1.jpg",
+            "input_sha256": "4f6ac610c8d08dd3d16655ef46211b8b5dcaa5bb303886763aaa4162cc11a464",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 6,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case6.jpg",
+            "input_sha256": "6d3e98d4d3380c40c51225a8f97783dccde8e5c57c4f6c26b9b6a5b2ed4e283c",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 7,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case7.jpg",
+            "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 11,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case11.jpg",
+            "input_sha256": "9ce8442488300b4ad69e3060a28b031718fc802d4a52eaba98ee42a2f47664d9",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 16,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case16.jpg",
+            "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 18,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case18.jpg",
+            "input_sha256": "ee803aa89d2be9630e425f239f7aef11a641a6534fff81014120f2ad56ed37ca",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 21,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case21.jpg",
+            "input_sha256": "f159f5dfbfe9385c2f8466f98880f792adc4b5cb149263134486e9f4f12625e1",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 23,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case23.jpg",
+            "input_sha256": "844f653f251b95efcd99dc9b69d8cbe260fc837e42a42f6dba1767ddf43026d2",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 25,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case25.jpg",
+            "input_sha256": "8c4cc0cfa70657be28bd1f592846d440fb9502a2e52ccbd35a71e607968b695f",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 28,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case28.jpg",
+            "input_sha256": "b64ac96cd767ae485803207ae43778a4251c3b8085dc4c882acc6d5dc32ddb11",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 31,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case31.jpg",
+            "input_sha256": "ec6d5b2fa78fa75ac5afa5131120c867166af02d7c3d57f130566fc5c818ca73",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 36,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case36.jpg",
+            "input_sha256": "48ab6744bd1b0fe7cf16db9bab10e2270405ac54e7c0c252963a4c27ac162b29",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 41,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case41.jpg",
+            "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 46,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case46.jpg",
+            "input_sha256": "227c85c799b47d9b9110533be3cd21cba05d09c29834204c152c4eceba2ca3b4",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 51,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case51.jpg",
+            "input_sha256": "64db996f4638ca01d8e9ea6aaf1753aa580731587e49cf642e086e4d84b194e5",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 61,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case61.jpg",
+            "input_sha256": "3a26b47810b4b523cbd98deebe15a49b3c4c655132f50d9b29af242f34d6e15a",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 71,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case71.jpg",
+            "input_sha256": "e7e356001c36368734e7d5ba9f802e9cdbe1969acb8899ceb8f58aefc49c9a19",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 81,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case81.jpg",
+            "input_sha256": "754aa7814d1b58da34d3afe527211131856ec26458a776f78a2dd8c52326d0c4",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 91,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case91.jpg",
+            "input_sha256": "70873693b472bafcf860f019b854c3d59b96d2c5c6a460b7957f73596e937058",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 100,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case100.jpg",
+            "input_sha256": "8000d7a69ba51ef6bed576d7e3d1395ae8e341eab573a2b7f5f60582365f3f57",
+            "size": [
+              4096,
+              3072
+            ]
+          }
+        ],
+        "cases": "pilot",
+        "input_encoding": "original tool load_img float32[0,1] -> half()*2-1; native size",
+        "output_encoding": "original tool float().clamp(-1,1); ((*0.5+0.5)*255).round().astype(uint8); PNG compress1",
+        "warmup": false,
+        "inference_rng": "seed231 before model initialization; continuous ordered val3 then tests",
+        "source_sha256": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5",
+        "model_dir_sha256": {
+          "__pycache__/runner.cpython-313.pyc": "559d483e5184ab1d7a4260d3ac3d020beb8b2222a1e705654d7f354c8c1e3459",
+          "config.json": "8ea2367f3395cb87e98e663fb47c172de97632913776e9514a8ac44247b31cd8",
+          "runner.py": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b"
+        },
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "torch": "2.8.0+cu128"
+      },
+      "protocol_id": "506e8a19f49e716919afded9efac6fe57e10007548c01f269d056953136f92cf",
+      "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+      "config_sha256": "8ea2367f3395cb87e98e663fb47c172de97632913776e9514a8ac44247b31cd8",
+      "training_binding": null,
+      "all23_actual_images_SHA_verified": [
+        {
+          "split": "val",
+          "case": 1,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/val/case1.png",
+          "sha256": "a8e3eb1e7bc88fc55d5a4a3c50080f595911b5de5467adce6c9af2dd78642d5a",
+          "input_sha256": "b5e6acccca137defac4c8683b8dd3d4399ad216b1a4d092e5209c998fb8afc43"
+        },
+        {
+          "split": "val",
+          "case": 2,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/val/case2.png",
+          "sha256": "712300a98f59543fd43e7b9f661a36b4535f6140cf0be9b7f9efdc56fb69c41b",
+          "input_sha256": "caa9d1f2e3178efa4fff6752dfb615055e5d9dd957b9895f0e6452cfc788d4bf"
+        },
+        {
+          "split": "val",
+          "case": 3,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/val/case3.png",
+          "sha256": "1de6e4e5a1b4682a8f3154c586c66b5a491e911210a6a10aefeb0d77e600139d",
+          "input_sha256": "cbc1f832ee6513dbbec3666a7e56793de0ab6269615c7efa3dd320354df33b20"
+        },
+        {
+          "split": "test",
+          "case": 1,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case1.png",
+          "sha256": "a6db2bfc57aab1e0e4253a8374aecef4d066d75c184907685f84812ab28b8764",
+          "input_sha256": "4f6ac610c8d08dd3d16655ef46211b8b5dcaa5bb303886763aaa4162cc11a464"
+        },
+        {
+          "split": "test",
+          "case": 6,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case6.png",
+          "sha256": "1718b262dc655ddbe3d38aa353042947cde79c7ed53580a15e1085dfc33d71eb",
+          "input_sha256": "6d3e98d4d3380c40c51225a8f97783dccde8e5c57c4f6c26b9b6a5b2ed4e283c"
+        },
+        {
+          "split": "test",
+          "case": 7,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case7.png",
+          "sha256": "78c8526e17fbac4b991db98bac8cb02ef0ae67de8f6768d4acbe208e7fcdc07d",
+          "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4"
+        },
+        {
+          "split": "test",
+          "case": 11,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case11.png",
+          "sha256": "d9a79176a79cfd09f0df2c9d1692c19302bcc4754fe9fa076accbce1113a8e18",
+          "input_sha256": "9ce8442488300b4ad69e3060a28b031718fc802d4a52eaba98ee42a2f47664d9"
+        },
+        {
+          "split": "test",
+          "case": 16,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case16.png",
+          "sha256": "528b8f9273dce5a148ce1a467271cd39c2e400416fae9c948f5aa0e8fcdc95c0",
+          "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307"
+        },
+        {
+          "split": "test",
+          "case": 18,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case18.png",
+          "sha256": "9fe647b71a62bcd1d126aa1b1dd30417d183b3571386424e0662b5118ca9e322",
+          "input_sha256": "ee803aa89d2be9630e425f239f7aef11a641a6534fff81014120f2ad56ed37ca"
+        },
+        {
+          "split": "test",
+          "case": 21,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case21.png",
+          "sha256": "8abbb8d595efa688da747af4961ba887beb0aec1db33e2a9020ce4904124c7e0",
+          "input_sha256": "f159f5dfbfe9385c2f8466f98880f792adc4b5cb149263134486e9f4f12625e1"
+        },
+        {
+          "split": "test",
+          "case": 23,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case23.png",
+          "sha256": "b2103bc82d122e7cdadc2f513c381b91572f0b6a241d3fe9f7f960de5fd6cb44",
+          "input_sha256": "844f653f251b95efcd99dc9b69d8cbe260fc837e42a42f6dba1767ddf43026d2"
+        },
+        {
+          "split": "test",
+          "case": 25,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case25.png",
+          "sha256": "e2223c2543358983ab341ec2b0a5de7a5b9144c24d7fd1f8e89bc181a6357bb2",
+          "input_sha256": "8c4cc0cfa70657be28bd1f592846d440fb9502a2e52ccbd35a71e607968b695f"
+        },
+        {
+          "split": "test",
+          "case": 28,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case28.png",
+          "sha256": "459daddaa6a7845e3347692bc4fbdcfdcaf1ca3c02f534c3cf641624b79f3188",
+          "input_sha256": "b64ac96cd767ae485803207ae43778a4251c3b8085dc4c882acc6d5dc32ddb11"
+        },
+        {
+          "split": "test",
+          "case": 31,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case31.png",
+          "sha256": "9a4f4618918bbd5698ca01333c1ce760ae5b5bff086cb0fcda6556b28322789e",
+          "input_sha256": "ec6d5b2fa78fa75ac5afa5131120c867166af02d7c3d57f130566fc5c818ca73"
+        },
+        {
+          "split": "test",
+          "case": 36,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case36.png",
+          "sha256": "3677f2e428d4f93e9db50ffc66a3185c7f62994b41ebd879a0ff8918270f8f85",
+          "input_sha256": "48ab6744bd1b0fe7cf16db9bab10e2270405ac54e7c0c252963a4c27ac162b29"
+        },
+        {
+          "split": "test",
+          "case": 41,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case41.png",
+          "sha256": "e08e76e7ca178bb59f89c427eb6bebd2e5bc4bca33d3103dbce056db19c95f3c",
+          "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b"
+        },
+        {
+          "split": "test",
+          "case": 46,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case46.png",
+          "sha256": "a8a00e88c4d558bad9d0944672523ab3a1c23669d5fb1f997acaca4f36ceedec",
+          "input_sha256": "227c85c799b47d9b9110533be3cd21cba05d09c29834204c152c4eceba2ca3b4"
+        },
+        {
+          "split": "test",
+          "case": 51,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case51.png",
+          "sha256": "0cef407332a92ad5db65b0b2b7b77d6523f3805a82f2d4cc9f3ca8d2e1655c6a",
+          "input_sha256": "64db996f4638ca01d8e9ea6aaf1753aa580731587e49cf642e086e4d84b194e5"
+        },
+        {
+          "split": "test",
+          "case": 61,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case61.png",
+          "sha256": "32d411923226275d1d0455ae1ae8c6e2ee25749312f6f957d73e5f2286a4741a",
+          "input_sha256": "3a26b47810b4b523cbd98deebe15a49b3c4c655132f50d9b29af242f34d6e15a"
+        },
+        {
+          "split": "test",
+          "case": 71,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case71.png",
+          "sha256": "0fdd1400b819f79ed5a9b836423c63481c8711ce447080e8e54e44f817e067d8",
+          "input_sha256": "e7e356001c36368734e7d5ba9f802e9cdbe1969acb8899ceb8f58aefc49c9a19"
+        },
+        {
+          "split": "test",
+          "case": 81,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case81.png",
+          "sha256": "5d03c0756b5e91d0a0023c0be90d176d5d5a1ae1ea58ddc71ae7d6d9b4a9413f",
+          "input_sha256": "754aa7814d1b58da34d3afe527211131856ec26458a776f78a2dd8c52326d0c4"
+        },
+        {
+          "split": "test",
+          "case": 91,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case91.png",
+          "sha256": "ec11d08215af761a6652f7fa745266e0ade891b02bc964f079527b7c73393b74",
+          "input_sha256": "70873693b472bafcf860f019b854c3d59b96d2c5c6a460b7957f73596e937058"
+        },
+        {
+          "split": "test",
+          "case": 100,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case100.png",
+          "sha256": "f3a00764a55feb058f3187405da78f580fed62c7a739977d98f43f1729ae7a09",
+          "input_sha256": "8000d7a69ba51ef6bed576d7e3d1395ae8e341eab573a2b7f5f60582365f3f57"
+        }
+      ],
+      "snapshot_path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render_manifest.json",
+      "snapshot_sha256": "6b4888a51ba9c61d2d6c4f5c6e16f36a4c9d3d38703d7acfe019dbbeb5ec45ba",
+      "render_complete": true,
+      "committed_images": 23,
+      "selected": {
+        "7": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case7.png",
+          "sha256": "78c8526e17fbac4b991db98bac8cb02ef0ae67de8f6768d4acbe208e7fcdc07d",
+          "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+          "size": [
+            4096,
+            3072
+          ],
+          "task_index": 5
+        },
+        "16": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case16.png",
+          "sha256": "528b8f9273dce5a148ce1a467271cd39c2e400416fae9c948f5aa0e8fcdc95c0",
+          "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+          "size": [
+            4096,
+            3072
+          ],
+          "task_index": 7
+        },
+        "41": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_recovered_a7750_native_pilot/render/test/case41.png",
+          "sha256": "e08e76e7ca178bb59f89c427eb6bebd2e5bc4bca33d3103dbce056db19c95f3c",
+          "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+          "size": [
+            3072,
+            4096
+          ],
+          "task_index": 15
+        }
+      }
+    },
+    {
+      "directory": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800",
+      "label": "push7_a7750_lastres_lr5e6_nr_s7800",
+      "display": "NR50",
+      "protocol": {
+        "schema": "cuda_submission_quality_v1",
+        "runner": {
+          "schema": "hypir_cuda_runner_v1",
+          "label": "push7_a7750_lastres_lr5e6_nr_s7800",
+          "runner_path": "HYPIR_sd2_rank256_mt200_ct175_bf16_fused_gpu_cachedempty_ro_wavelet",
+          "weight_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/step7800.pth",
+          "checkpoint_sha256": "dc184b14f549fc01aeafbdc3bdcf6a7112e6bc3944d6c047c557ed850074d7b7",
+          "base_model_path": "/temp/zihaohe_stage/baselines/sd21b",
+          "repo_path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda",
+          "versions": {
+            "torch": "2.8.0+cu128",
+            "torchvision": "0.23.0+cu128",
+            "diffusers": "0.33.1",
+            "transformers": "4.56.2",
+            "peft": "0.17.1",
+            "accelerate": "1.10.1",
+            "numpy": "2.3.3",
+            "Pillow": "11.3.0"
+          },
+          "input": "CUDA FP16 [-1,1] -> CUDA FP32 [0,1]; native shape",
+          "output": "CUDA FP32 [-1,1]; upstream clamp[0,1]; native shape; no CPU image copy",
+          "internal_precision": "BF16",
+          "seed": "231 before initialization; continuous inference RNG",
+          "model_t": 200,
+          "coeff_t": 175,
+          "lora_rank": 256,
+          "patch": 512,
+          "stride": 256,
+          "scale": 1,
+          "caption": "",
+          "latent": "upstream posterior.sample",
+          "fusion": "UNet fuse_lora(scale1,safe_fusing=True)+unload_lora",
+          "fused_requires_separate_quality_score": true,
+          "source_sha256": {
+            "HYPIR/enhancer/base.py": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161",
+            "HYPIR/enhancer/sd2.py": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd",
+            "HYPIR/utils/common.py": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+          },
+          "runner_sha256": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b",
+          "numerical_flags": {
+            "matmul_allow_tf32": true,
+            "cudnn_allow_tf32": true,
+            "cudnn_benchmark": false
+          },
+          "no_warmup_during_initialization": true,
+          "fixed_empty_caption_cache": "original prepare_inputs(batch1,prompt empty) once; identical tensors reused",
+          "compilation": "UNet.forward,VAE.encode,VAE.decode and complete wavelet reduce-overhead dynamicFalse; original tile loops/sampling/scheduler",
+          "speed_candidate": "push6 same A7750 weights, no channels_last conversion; combine independently native-exact RO tiles and compiled wavelet",
+          "compiled_requires_separate_quality_score": true
+        },
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7800/model_dir",
+        "tasks": [
+          {
+            "split": "val",
+            "case": 1,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/验证集/case1_lq.jpg",
+            "input_sha256": "b5e6acccca137defac4c8683b8dd3d4399ad216b1a4d092e5209c998fb8afc43",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "val",
+            "case": 2,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/验证集/case2_lq.jpg",
+            "input_sha256": "caa9d1f2e3178efa4fff6752dfb615055e5d9dd957b9895f0e6452cfc788d4bf",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "val",
+            "case": 3,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/验证集/case3_lq.jpg",
+            "input_sha256": "cbc1f832ee6513dbbec3666a7e56793de0ab6269615c7efa3dd320354df33b20",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 1,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case1.jpg",
+            "input_sha256": "4f6ac610c8d08dd3d16655ef46211b8b5dcaa5bb303886763aaa4162cc11a464",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 6,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case6.jpg",
+            "input_sha256": "6d3e98d4d3380c40c51225a8f97783dccde8e5c57c4f6c26b9b6a5b2ed4e283c",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 7,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case7.jpg",
+            "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 11,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case11.jpg",
+            "input_sha256": "9ce8442488300b4ad69e3060a28b031718fc802d4a52eaba98ee42a2f47664d9",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 16,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case16.jpg",
+            "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 18,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case18.jpg",
+            "input_sha256": "ee803aa89d2be9630e425f239f7aef11a641a6534fff81014120f2ad56ed37ca",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 21,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case21.jpg",
+            "input_sha256": "f159f5dfbfe9385c2f8466f98880f792adc4b5cb149263134486e9f4f12625e1",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 23,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case23.jpg",
+            "input_sha256": "844f653f251b95efcd99dc9b69d8cbe260fc837e42a42f6dba1767ddf43026d2",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 25,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case25.jpg",
+            "input_sha256": "8c4cc0cfa70657be28bd1f592846d440fb9502a2e52ccbd35a71e607968b695f",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 28,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case28.jpg",
+            "input_sha256": "b64ac96cd767ae485803207ae43778a4251c3b8085dc4c882acc6d5dc32ddb11",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 31,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case31.jpg",
+            "input_sha256": "ec6d5b2fa78fa75ac5afa5131120c867166af02d7c3d57f130566fc5c818ca73",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 36,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case36.jpg",
+            "input_sha256": "48ab6744bd1b0fe7cf16db9bab10e2270405ac54e7c0c252963a4c27ac162b29",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 41,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case41.jpg",
+            "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 46,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case46.jpg",
+            "input_sha256": "227c85c799b47d9b9110533be3cd21cba05d09c29834204c152c4eceba2ca3b4",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 51,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case51.jpg",
+            "input_sha256": "64db996f4638ca01d8e9ea6aaf1753aa580731587e49cf642e086e4d84b194e5",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 61,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case61.jpg",
+            "input_sha256": "3a26b47810b4b523cbd98deebe15a49b3c4c655132f50d9b29af242f34d6e15a",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 71,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case71.jpg",
+            "input_sha256": "e7e356001c36368734e7d5ba9f802e9cdbe1969acb8899ceb8f58aefc49c9a19",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 81,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case81.jpg",
+            "input_sha256": "754aa7814d1b58da34d3afe527211131856ec26458a776f78a2dd8c52326d0c4",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 91,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case91.jpg",
+            "input_sha256": "70873693b472bafcf860f019b854c3d59b96d2c5c6a460b7957f73596e937058",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 100,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case100.jpg",
+            "input_sha256": "8000d7a69ba51ef6bed576d7e3d1395ae8e341eab573a2b7f5f60582365f3f57",
+            "size": [
+              4096,
+              3072
+            ]
+          }
+        ],
+        "cases": "pilot",
+        "input_encoding": "original tool load_img float32[0,1] -> half()*2-1; native size",
+        "output_encoding": "original tool float().clamp(-1,1); ((*0.5+0.5)*255).round().astype(uint8); PNG compress1",
+        "warmup": false,
+        "inference_rng": "seed231 before model initialization; continuous ordered val3 then tests",
+        "source_sha256": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5",
+        "model_dir_sha256": {
+          "__pycache__/runner.cpython-313.pyc": "f1480fe6c98d0d4638440339c019338c6f30dd6e3c0506dc91b051f28c32a8c9",
+          "config.json": "afb307ce190013baa3531358a4d50a8855e2e0269d2876377ff8d80bb843e02c",
+          "runner.py": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b"
+        },
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "torch": "2.8.0+cu128"
+      },
+      "protocol_id": "8889fa2a6c163768764f6e12a3cfba570cae0f593612d08096192bc8322a45bc",
+      "checkpoint_sha256": "dc184b14f549fc01aeafbdc3bdcf6a7112e6bc3944d6c047c557ed850074d7b7",
+      "config_sha256": "afb307ce190013baa3531358a4d50a8855e2e0269d2876377ff8d80bb843e02c",
+      "training_binding": {
+        "candidate_manifest_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7800/candidate_manifest.json",
+        "candidate_manifest_sha256": "ecd95ecfdac32d62658bd77acc7cb13b53758f519d6a108e99c168d177126e26",
+        "source_sha256": "5f99fcebc6cb50ed5c3ae18ae8df0cdf10cb2ab3b62e124c5097b0c81cf5cd9b",
+        "protocol_id": "0f593933151d84f12f6ef03475edebb1eb196dee8d957da9812debab6eebc419",
+        "local_step": 50,
+        "global_step": 7800,
+        "config": {
+          "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/config.json",
+          "sha256": "20e182c71b68bad38f97bcde504d8dcd0664075d3d39be99c183aa55a5c3e822"
+        },
+        "marker": {
+          "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/checkpoint_step7800.json",
+          "sha256": "a21b4463390cd74d59e5636206442e8431980ec909499aa6ed1999f1a3c3b400"
+        },
+        "input_catalog": {
+          "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/input_catalog.json",
+          "sha256": "5c2f945ce000314e802a9c2ddff2ebe91cf20edb65aff491b1d1c9fb4b9071ac"
+        }
+      },
+      "all23_actual_images_SHA_verified": [
+        {
+          "split": "val",
+          "case": 1,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/val/case1.png",
+          "sha256": "605107f53d3364569ba457f6b663ecbc5dbf70a201655b03f1e8f9147884efe9",
+          "input_sha256": "b5e6acccca137defac4c8683b8dd3d4399ad216b1a4d092e5209c998fb8afc43"
+        },
+        {
+          "split": "val",
+          "case": 2,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/val/case2.png",
+          "sha256": "2d81f7b64295753bd7185fbd65db0b3da2d9629b0d425eb92c89faca8f000406",
+          "input_sha256": "caa9d1f2e3178efa4fff6752dfb615055e5d9dd957b9895f0e6452cfc788d4bf"
+        },
+        {
+          "split": "val",
+          "case": 3,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/val/case3.png",
+          "sha256": "7b944c24d56297bcd168d3bf75d6abf401c1405333f403e40fda48616b176eca",
+          "input_sha256": "cbc1f832ee6513dbbec3666a7e56793de0ab6269615c7efa3dd320354df33b20"
+        },
+        {
+          "split": "test",
+          "case": 1,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case1.png",
+          "sha256": "8e7b3d5376cb9fe7c986234fc7fd936c35b948854c5a854d6550994fd3bbaa23",
+          "input_sha256": "4f6ac610c8d08dd3d16655ef46211b8b5dcaa5bb303886763aaa4162cc11a464"
+        },
+        {
+          "split": "test",
+          "case": 6,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case6.png",
+          "sha256": "c62c5382ea6ea7b855fea610dc970d2970af89687c372533032f87574767e891",
+          "input_sha256": "6d3e98d4d3380c40c51225a8f97783dccde8e5c57c4f6c26b9b6a5b2ed4e283c"
+        },
+        {
+          "split": "test",
+          "case": 7,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case7.png",
+          "sha256": "8a88e46a9ba36a0fa7d4c8615bf6a809785ff8a0a0ff0ed5c736b8f102fbb1b5",
+          "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4"
+        },
+        {
+          "split": "test",
+          "case": 11,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case11.png",
+          "sha256": "66a3ec59d6e521a3c30ff2ed369e6848ff4c6ab23c07d87c8244c7534b4c3d8f",
+          "input_sha256": "9ce8442488300b4ad69e3060a28b031718fc802d4a52eaba98ee42a2f47664d9"
+        },
+        {
+          "split": "test",
+          "case": 16,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case16.png",
+          "sha256": "e229bec756e11088f318e904b859cee9b4271de2e9af24150599a5237fd7d30b",
+          "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307"
+        },
+        {
+          "split": "test",
+          "case": 18,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case18.png",
+          "sha256": "8df1a55ca29d951bf2cf401426290f87a7d21630e64af076d32c29a912e61e04",
+          "input_sha256": "ee803aa89d2be9630e425f239f7aef11a641a6534fff81014120f2ad56ed37ca"
+        },
+        {
+          "split": "test",
+          "case": 21,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case21.png",
+          "sha256": "1e38e6633ab40e5467fe17d0aa5a0da4b2f8f77623ae932e8e406f995d49c15e",
+          "input_sha256": "f159f5dfbfe9385c2f8466f98880f792adc4b5cb149263134486e9f4f12625e1"
+        },
+        {
+          "split": "test",
+          "case": 23,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case23.png",
+          "sha256": "0b2f9f8078921b644e273e1432fed792ef4d763bd225505e3498e960159d7cff",
+          "input_sha256": "844f653f251b95efcd99dc9b69d8cbe260fc837e42a42f6dba1767ddf43026d2"
+        },
+        {
+          "split": "test",
+          "case": 25,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case25.png",
+          "sha256": "e22719f03a453634b2bbe9e6d7aaf381ec106ef006652930d7e1cbfbe9ca63f6",
+          "input_sha256": "8c4cc0cfa70657be28bd1f592846d440fb9502a2e52ccbd35a71e607968b695f"
+        },
+        {
+          "split": "test",
+          "case": 28,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case28.png",
+          "sha256": "218657d6812603637daa843249764a7e64c7af2fda8d014f1c53a055aa2ef14c",
+          "input_sha256": "b64ac96cd767ae485803207ae43778a4251c3b8085dc4c882acc6d5dc32ddb11"
+        },
+        {
+          "split": "test",
+          "case": 31,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case31.png",
+          "sha256": "3a52606983d84c4fe97059011d01c3d5429752b29e9566670058c5a7bdce0b43",
+          "input_sha256": "ec6d5b2fa78fa75ac5afa5131120c867166af02d7c3d57f130566fc5c818ca73"
+        },
+        {
+          "split": "test",
+          "case": 36,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case36.png",
+          "sha256": "75bd5827c14ce31847e9600d15fdcad49a13a9bf3d580d4bffa4f6679e7c8b90",
+          "input_sha256": "48ab6744bd1b0fe7cf16db9bab10e2270405ac54e7c0c252963a4c27ac162b29"
+        },
+        {
+          "split": "test",
+          "case": 41,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case41.png",
+          "sha256": "91325162cea7340957b5fb382c2fb05faa2477b83483ef3d62c5746349b4295a",
+          "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b"
+        },
+        {
+          "split": "test",
+          "case": 46,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case46.png",
+          "sha256": "67ba893c888bda5117113a0568a7213f7729f8b951280fad27784c43da1432c4",
+          "input_sha256": "227c85c799b47d9b9110533be3cd21cba05d09c29834204c152c4eceba2ca3b4"
+        },
+        {
+          "split": "test",
+          "case": 51,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case51.png",
+          "sha256": "4e8121e3ef5b0ad55414073d0d0c3c1389cce4ae02b1e73b818b36f49b55c6fe",
+          "input_sha256": "64db996f4638ca01d8e9ea6aaf1753aa580731587e49cf642e086e4d84b194e5"
+        },
+        {
+          "split": "test",
+          "case": 61,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case61.png",
+          "sha256": "9b1785c3f098684a25d735ca9c55dad9165a86a2e926aae7c73e66c8bdf941d4",
+          "input_sha256": "3a26b47810b4b523cbd98deebe15a49b3c4c655132f50d9b29af242f34d6e15a"
+        },
+        {
+          "split": "test",
+          "case": 71,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case71.png",
+          "sha256": "7cf17a868e3777da9cd72b5192409c62cbe020858d830c3d5758ed0e6cd9d6f0",
+          "input_sha256": "e7e356001c36368734e7d5ba9f802e9cdbe1969acb8899ceb8f58aefc49c9a19"
+        },
+        {
+          "split": "test",
+          "case": 81,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case81.png",
+          "sha256": "21a6a58569a59795ac9eaf95181fe205eeef2d2f4eae22de2db72afd8a720d54",
+          "input_sha256": "754aa7814d1b58da34d3afe527211131856ec26458a776f78a2dd8c52326d0c4"
+        },
+        {
+          "split": "test",
+          "case": 91,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case91.png",
+          "sha256": "5ffa0cab8b88a9c0f5f1b4550e154880a7465e3c40461b34fa648acc7371a598",
+          "input_sha256": "70873693b472bafcf860f019b854c3d59b96d2c5c6a460b7957f73596e937058"
+        },
+        {
+          "split": "test",
+          "case": 100,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case100.png",
+          "sha256": "a0920cc18c7c59185eb6cedc0551a05891f9a48e4394093b1652d2764df81849",
+          "input_sha256": "8000d7a69ba51ef6bed576d7e3d1395ae8e341eab573a2b7f5f60582365f3f57"
+        }
+      ],
+      "snapshot_path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render_manifest.json",
+      "snapshot_sha256": "5ff6aad00add3bd69347b6091cb08ad5964eb9fec21d5e9830029520b5e10fac",
+      "render_complete": true,
+      "committed_images": 23,
+      "selected": {
+        "7": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case7.png",
+          "sha256": "8a88e46a9ba36a0fa7d4c8615bf6a809785ff8a0a0ff0ed5c736b8f102fbb1b5",
+          "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+          "size": [
+            4096,
+            3072
+          ],
+          "task_index": 5
+        },
+        "16": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case16.png",
+          "sha256": "e229bec756e11088f318e904b859cee9b4271de2e9af24150599a5237fd7d30b",
+          "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+          "size": [
+            4096,
+            3072
+          ],
+          "task_index": 7
+        },
+        "41": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7800/render/test/case41.png",
+          "sha256": "91325162cea7340957b5fb382c2fb05faa2477b83483ef3d62c5746349b4295a",
+          "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+          "size": [
+            3072,
+            4096
+          ],
+          "task_index": 15
+        }
+      }
+    },
+    {
+      "directory": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850",
+      "label": "push7_a7750_lastres_lr5e6_nr_s7850",
+      "display": "NR100",
+      "protocol": {
+        "schema": "cuda_submission_quality_v1",
+        "runner": {
+          "schema": "hypir_cuda_runner_v1",
+          "label": "push7_a7750_lastres_lr5e6_nr_s7850",
+          "runner_path": "HYPIR_sd2_rank256_mt200_ct175_bf16_fused_gpu_cachedempty_ro_wavelet",
+          "weight_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/step7850.pth",
+          "checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "base_model_path": "/temp/zihaohe_stage/baselines/sd21b",
+          "repo_path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda",
+          "versions": {
+            "torch": "2.8.0+cu128",
+            "torchvision": "0.23.0+cu128",
+            "diffusers": "0.33.1",
+            "transformers": "4.56.2",
+            "peft": "0.17.1",
+            "accelerate": "1.10.1",
+            "numpy": "2.3.3",
+            "Pillow": "11.3.0"
+          },
+          "input": "CUDA FP16 [-1,1] -> CUDA FP32 [0,1]; native shape",
+          "output": "CUDA FP32 [-1,1]; upstream clamp[0,1]; native shape; no CPU image copy",
+          "internal_precision": "BF16",
+          "seed": "231 before initialization; continuous inference RNG",
+          "model_t": 200,
+          "coeff_t": 175,
+          "lora_rank": 256,
+          "patch": 512,
+          "stride": 256,
+          "scale": 1,
+          "caption": "",
+          "latent": "upstream posterior.sample",
+          "fusion": "UNet fuse_lora(scale1,safe_fusing=True)+unload_lora",
+          "fused_requires_separate_quality_score": true,
+          "source_sha256": {
+            "HYPIR/enhancer/base.py": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161",
+            "HYPIR/enhancer/sd2.py": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd",
+            "HYPIR/utils/common.py": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+          },
+          "runner_sha256": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b",
+          "numerical_flags": {
+            "matmul_allow_tf32": true,
+            "cudnn_allow_tf32": true,
+            "cudnn_benchmark": false
+          },
+          "no_warmup_during_initialization": true,
+          "fixed_empty_caption_cache": "original prepare_inputs(batch1,prompt empty) once; identical tensors reused",
+          "compilation": "UNet.forward,VAE.encode,VAE.decode and complete wavelet reduce-overhead dynamicFalse; original tile loops/sampling/scheduler",
+          "speed_candidate": "push6 same A7750 weights, no channels_last conversion; combine independently native-exact RO tiles and compiled wavelet",
+          "compiled_requires_separate_quality_score": true
+        },
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850/model_dir",
+        "tasks": [
+          {
+            "split": "val",
+            "case": 1,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/验证集/case1_lq.jpg",
+            "input_sha256": "b5e6acccca137defac4c8683b8dd3d4399ad216b1a4d092e5209c998fb8afc43",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "val",
+            "case": 2,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/验证集/case2_lq.jpg",
+            "input_sha256": "caa9d1f2e3178efa4fff6752dfb615055e5d9dd957b9895f0e6452cfc788d4bf",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "val",
+            "case": 3,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/验证集/case3_lq.jpg",
+            "input_sha256": "cbc1f832ee6513dbbec3666a7e56793de0ab6269615c7efa3dd320354df33b20",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 1,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case1.jpg",
+            "input_sha256": "4f6ac610c8d08dd3d16655ef46211b8b5dcaa5bb303886763aaa4162cc11a464",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 6,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case6.jpg",
+            "input_sha256": "6d3e98d4d3380c40c51225a8f97783dccde8e5c57c4f6c26b9b6a5b2ed4e283c",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 7,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case7.jpg",
+            "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 11,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case11.jpg",
+            "input_sha256": "9ce8442488300b4ad69e3060a28b031718fc802d4a52eaba98ee42a2f47664d9",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 16,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case16.jpg",
+            "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 18,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case18.jpg",
+            "input_sha256": "ee803aa89d2be9630e425f239f7aef11a641a6534fff81014120f2ad56ed37ca",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 21,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case21.jpg",
+            "input_sha256": "f159f5dfbfe9385c2f8466f98880f792adc4b5cb149263134486e9f4f12625e1",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 23,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case23.jpg",
+            "input_sha256": "844f653f251b95efcd99dc9b69d8cbe260fc837e42a42f6dba1767ddf43026d2",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 25,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case25.jpg",
+            "input_sha256": "8c4cc0cfa70657be28bd1f592846d440fb9502a2e52ccbd35a71e607968b695f",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 28,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case28.jpg",
+            "input_sha256": "b64ac96cd767ae485803207ae43778a4251c3b8085dc4c882acc6d5dc32ddb11",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 31,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case31.jpg",
+            "input_sha256": "ec6d5b2fa78fa75ac5afa5131120c867166af02d7c3d57f130566fc5c818ca73",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 36,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case36.jpg",
+            "input_sha256": "48ab6744bd1b0fe7cf16db9bab10e2270405ac54e7c0c252963a4c27ac162b29",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 41,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case41.jpg",
+            "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 46,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case46.jpg",
+            "input_sha256": "227c85c799b47d9b9110533be3cd21cba05d09c29834204c152c4eceba2ca3b4",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 51,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case51.jpg",
+            "input_sha256": "64db996f4638ca01d8e9ea6aaf1753aa580731587e49cf642e086e4d84b194e5",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 61,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case61.jpg",
+            "input_sha256": "3a26b47810b4b523cbd98deebe15a49b3c4c655132f50d9b29af242f34d6e15a",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 71,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case71.jpg",
+            "input_sha256": "e7e356001c36368734e7d5ba9f802e9cdbe1969acb8899ceb8f58aefc49c9a19",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 81,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case81.jpg",
+            "input_sha256": "754aa7814d1b58da34d3afe527211131856ec26458a776f78a2dd8c52326d0c4",
+            "size": [
+              3072,
+              4096
+            ]
+          },
+          {
+            "split": "test",
+            "case": 91,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case91.jpg",
+            "input_sha256": "70873693b472bafcf860f019b854c3d59b96d2c5c6a460b7957f73596e937058",
+            "size": [
+              4096,
+              3072
+            ]
+          },
+          {
+            "split": "test",
+            "case": 100,
+            "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case100.jpg",
+            "input_sha256": "8000d7a69ba51ef6bed576d7e3d1395ae8e341eab573a2b7f5f60582365f3f57",
+            "size": [
+              4096,
+              3072
+            ]
+          }
+        ],
+        "cases": "pilot",
+        "input_encoding": "original tool load_img float32[0,1] -> half()*2-1; native size",
+        "output_encoding": "original tool float().clamp(-1,1); ((*0.5+0.5)*255).round().astype(uint8); PNG compress1",
+        "warmup": false,
+        "inference_rng": "seed231 before model initialization; continuous ordered val3 then tests",
+        "source_sha256": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5",
+        "model_dir_sha256": {
+          "__pycache__/runner.cpython-313.pyc": "e4e83130371ad1520c20d68fede99aab44c2d2923936b161459693a08e9a7bb8",
+          "config.json": "ffb7eb75750e75a795e84b9448b3d615ea588472354a1560cf93262305516b1b",
+          "runner.py": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b"
+        },
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "torch": "2.8.0+cu128"
+      },
+      "protocol_id": "437423ca09e170be79313a74c7ac09f58059aa8756f62e50f4ae4b231efaa3de",
+      "checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+      "config_sha256": "ffb7eb75750e75a795e84b9448b3d615ea588472354a1560cf93262305516b1b",
+      "training_binding": {
+        "candidate_manifest_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850/candidate_manifest.json",
+        "candidate_manifest_sha256": "0477903b0bc478064ad2f03a5d429eb37459097ac6a0014ec76d92efef7fa4c0",
+        "source_sha256": "5f99fcebc6cb50ed5c3ae18ae8df0cdf10cb2ab3b62e124c5097b0c81cf5cd9b",
+        "protocol_id": "0f593933151d84f12f6ef03475edebb1eb196dee8d957da9812debab6eebc419",
+        "local_step": 100,
+        "global_step": 7850,
+        "config": {
+          "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/config.json",
+          "sha256": "20e182c71b68bad38f97bcde504d8dcd0664075d3d39be99c183aa55a5c3e822"
+        },
+        "marker": {
+          "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/checkpoint_step7850.json",
+          "sha256": "b02411f66d77570b011b622c7975c21930222e6ce0f7d7635b4eb62f6da2eda5"
+        },
+        "input_catalog": {
+          "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/input_catalog.json",
+          "sha256": "5c2f945ce000314e802a9c2ddff2ebe91cf20edb65aff491b1d1c9fb4b9071ac"
+        }
+      },
+      "all23_actual_images_SHA_verified": [
+        {
+          "split": "val",
+          "case": 1,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/val/case1.png",
+          "sha256": "baf64dd9c5b14391ad22c21ff7daae83ee8cfb2d55017b99781ff4af88e242a9",
+          "input_sha256": "b5e6acccca137defac4c8683b8dd3d4399ad216b1a4d092e5209c998fb8afc43"
+        },
+        {
+          "split": "val",
+          "case": 2,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/val/case2.png",
+          "sha256": "064a9e0b4875c0d910ae8f099675348f0389f3e0a721ce08968430e894147577",
+          "input_sha256": "caa9d1f2e3178efa4fff6752dfb615055e5d9dd957b9895f0e6452cfc788d4bf"
+        },
+        {
+          "split": "val",
+          "case": 3,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/val/case3.png",
+          "sha256": "da11c181ebd729583fd7479409c114a8fb4cc7ee7734de584c061ec2d456fed3",
+          "input_sha256": "cbc1f832ee6513dbbec3666a7e56793de0ab6269615c7efa3dd320354df33b20"
+        },
+        {
+          "split": "test",
+          "case": 1,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case1.png",
+          "sha256": "ea05c7ae124e70cc6d6bb3070f658f77c9090c47f071adfc3945b6df944ebd23",
+          "input_sha256": "4f6ac610c8d08dd3d16655ef46211b8b5dcaa5bb303886763aaa4162cc11a464"
+        },
+        {
+          "split": "test",
+          "case": 6,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case6.png",
+          "sha256": "3fe452c4e9e8d0ab0c361ea0c1cf8287223acdb43f16c72ba9c39be48f3b17b3",
+          "input_sha256": "6d3e98d4d3380c40c51225a8f97783dccde8e5c57c4f6c26b9b6a5b2ed4e283c"
+        },
+        {
+          "split": "test",
+          "case": 7,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case7.png",
+          "sha256": "0457eb3233176ae95f217fc0a18d15a9f8708d7e05add68cf2444df55a8be101",
+          "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4"
+        },
+        {
+          "split": "test",
+          "case": 11,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case11.png",
+          "sha256": "3acb1f9f3193d84cefce1ce7140b1ab81372f6954c02546cd39e1bd74d21bd5f",
+          "input_sha256": "9ce8442488300b4ad69e3060a28b031718fc802d4a52eaba98ee42a2f47664d9"
+        },
+        {
+          "split": "test",
+          "case": 16,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case16.png",
+          "sha256": "6533a600474039b237ecce7e7b2046e696c4a2c1e9cc081d60e2ef6e189db692",
+          "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307"
+        },
+        {
+          "split": "test",
+          "case": 18,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case18.png",
+          "sha256": "6f3955ae21a1d9cdc10404be4136983b17e6a935683b72c819ccd2e009423c3c",
+          "input_sha256": "ee803aa89d2be9630e425f239f7aef11a641a6534fff81014120f2ad56ed37ca"
+        },
+        {
+          "split": "test",
+          "case": 21,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case21.png",
+          "sha256": "2c62ec5815005817f8dc96de444bb044dd185e1e5c75215b33afa798dda02e0a",
+          "input_sha256": "f159f5dfbfe9385c2f8466f98880f792adc4b5cb149263134486e9f4f12625e1"
+        },
+        {
+          "split": "test",
+          "case": 23,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case23.png",
+          "sha256": "e0663a3cd6065835f3427f795dd5376fa7a6036d512b75be276cabf54104e8e1",
+          "input_sha256": "844f653f251b95efcd99dc9b69d8cbe260fc837e42a42f6dba1767ddf43026d2"
+        },
+        {
+          "split": "test",
+          "case": 25,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case25.png",
+          "sha256": "1d02e8f99b9c20f1a4ab19c1e0a389bb6ab9721da7fe03a7e169a4c1381aeb6f",
+          "input_sha256": "8c4cc0cfa70657be28bd1f592846d440fb9502a2e52ccbd35a71e607968b695f"
+        },
+        {
+          "split": "test",
+          "case": 28,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case28.png",
+          "sha256": "f99ea02c2a495dd93266d77b48352a925e4f788d40c49f150ea774ffb7b876f3",
+          "input_sha256": "b64ac96cd767ae485803207ae43778a4251c3b8085dc4c882acc6d5dc32ddb11"
+        },
+        {
+          "split": "test",
+          "case": 31,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case31.png",
+          "sha256": "1de3965f0053123290ee0b307c477c7d1cc3a7950a410447b7794653d70a966f",
+          "input_sha256": "ec6d5b2fa78fa75ac5afa5131120c867166af02d7c3d57f130566fc5c818ca73"
+        },
+        {
+          "split": "test",
+          "case": 36,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case36.png",
+          "sha256": "24786932b30579ecaf7dbe8255abf420e2f475aba981becd9d0d9105cbceef03",
+          "input_sha256": "48ab6744bd1b0fe7cf16db9bab10e2270405ac54e7c0c252963a4c27ac162b29"
+        },
+        {
+          "split": "test",
+          "case": 41,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case41.png",
+          "sha256": "a6c20c4047b91c78cd7e2c29c8d4a974eb614cb58edd3ff23a9e228e15826fbd",
+          "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b"
+        },
+        {
+          "split": "test",
+          "case": 46,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case46.png",
+          "sha256": "231d6a0696e63d4b88e6744eb281cb81011e8c8021c2430db45aed2ef081a170",
+          "input_sha256": "227c85c799b47d9b9110533be3cd21cba05d09c29834204c152c4eceba2ca3b4"
+        },
+        {
+          "split": "test",
+          "case": 51,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case51.png",
+          "sha256": "446b1b7f14b67ded54bcfb0072df259d50f45181d629d7ffd239c4f967311c60",
+          "input_sha256": "64db996f4638ca01d8e9ea6aaf1753aa580731587e49cf642e086e4d84b194e5"
+        },
+        {
+          "split": "test",
+          "case": 61,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case61.png",
+          "sha256": "bbdafc4240e35da865b3571eda184be4ebebab187bd19e045d914750635e04e2",
+          "input_sha256": "3a26b47810b4b523cbd98deebe15a49b3c4c655132f50d9b29af242f34d6e15a"
+        },
+        {
+          "split": "test",
+          "case": 71,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case71.png",
+          "sha256": "f261c7c63b3ee9d373662f88182a98c03234bf1e15e2a6815edc4614805b30f4",
+          "input_sha256": "e7e356001c36368734e7d5ba9f802e9cdbe1969acb8899ceb8f58aefc49c9a19"
+        },
+        {
+          "split": "test",
+          "case": 81,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case81.png",
+          "sha256": "f3f28eaef6dae653a59d4103d8b29e788a2deec94a1a911494db21f984ccd63b",
+          "input_sha256": "754aa7814d1b58da34d3afe527211131856ec26458a776f78a2dd8c52326d0c4"
+        },
+        {
+          "split": "test",
+          "case": 91,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case91.png",
+          "sha256": "824f8bfff759efeb631f4359b45ea163ceb461ed3b9ecfee9ab8e3e9598be8d5",
+          "input_sha256": "70873693b472bafcf860f019b854c3d59b96d2c5c6a460b7957f73596e937058"
+        },
+        {
+          "split": "test",
+          "case": 100,
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case100.png",
+          "sha256": "44668fd779faf0fb798516978ce750ada48e94ea42766dd68241f377c9493722",
+          "input_sha256": "8000d7a69ba51ef6bed576d7e3d1395ae8e341eab573a2b7f5f60582365f3f57"
+        }
+      ],
+      "snapshot_path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render_manifest.json",
+      "snapshot_sha256": "629d9ec3461deca0488e71db0a2ae53c3fb1f8bd3ff47d8cfe50b167c0b13433",
+      "render_complete": true,
+      "committed_images": 23,
+      "selected": {
+        "7": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case7.png",
+          "sha256": "0457eb3233176ae95f217fc0a18d15a9f8708d7e05add68cf2444df55a8be101",
+          "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+          "size": [
+            4096,
+            3072
+          ],
+          "task_index": 5
+        },
+        "16": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case16.png",
+          "sha256": "6533a600474039b237ecce7e7b2046e696c4a2c1e9cc081d60e2ef6e189db692",
+          "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+          "size": [
+            4096,
+            3072
+          ],
+          "task_index": 7
+        },
+        "41": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastres_lr5e6_nr_s7850/render/test/case41.png",
+          "sha256": "a6c20c4047b91c78cd7e2c29c8d4a974eb614cb58edd3ff23a9e228e15826fbd",
+          "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+          "size": [
+            3072,
+            4096
+          ],
+          "task_index": 15
+        }
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "name": "case7_hypir_lastres_lr5e6_50_100_pilot_roi_1to1.png",
+      "sha256": "eeb173f6534126612db0bb3857c4b6ca4999d74488354525e07469163e601a1c",
+      "bytes": 1204878,
+      "case": 7,
+      "ROI": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "panel_source_pixels_exact": true
+    },
+    {
+      "name": "case16_hypir_lastres_lr5e6_50_100_pilot_roi_1to1.png",
+      "sha256": "5aab8031233ea356690101317c7bbd11dfc7e8ca936ce6dcefcc3f9a128d9a95",
+      "bytes": 1509730,
+      "case": 16,
+      "ROI": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "panel_source_pixels_exact": true
+    },
+    {
+      "name": "case41_hypir_lastres_lr5e6_50_100_pilot_roi_1to1.png",
+      "sha256": "930effeb0c5fa4d3edbd2ca3b24ce301b3e88424b0ffdf240a2c2d38f39953d8",
+      "bytes": 1621671,
+      "case": 41,
+      "ROI": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "panel_source_pixels_exact": true
+    }
+  ],
+  "ROI_comparisons": [
+    {
+      "case": 7,
+      "candidate": "push7_a7750_lastres_lr5e6_nr_s7800",
+      "ROI_RGB_mean_abs": 0.6470470610119048,
+      "ROI_RGB_max_abs": 35,
+      "ROI_any_channel_changed_pixel_fraction": 0.7464669363839286,
+      "scope": "Descriptive ROI difference only, not quality or full metric"
+    },
+    {
+      "case": 7,
+      "candidate": "push7_a7750_lastres_lr5e6_nr_s7850",
+      "ROI_RGB_mean_abs": 0.9475004650297619,
+      "ROI_RGB_max_abs": 53,
+      "ROI_any_channel_changed_pixel_fraction": 0.8485525948660714,
+      "scope": "Descriptive ROI difference only, not quality or full metric"
+    },
+    {
+      "case": 16,
+      "candidate": "push7_a7750_lastres_lr5e6_nr_s7800",
+      "ROI_RGB_mean_abs": 0.8942586263020833,
+      "ROI_RGB_max_abs": 75,
+      "ROI_any_channel_changed_pixel_fraction": 0.799798583984375,
+      "scope": "Descriptive ROI difference only, not quality or full metric"
+    },
+    {
+      "case": 16,
+      "candidate": "push7_a7750_lastres_lr5e6_nr_s7850",
+      "ROI_RGB_mean_abs": 1.275536092122396,
+      "ROI_RGB_max_abs": 94,
+      "ROI_any_channel_changed_pixel_fraction": 0.864215087890625,
+      "scope": "Descriptive ROI difference only, not quality or full metric"
+    },
+    {
+      "case": 41,
+      "candidate": "push7_a7750_lastres_lr5e6_nr_s7800",
+      "ROI_RGB_mean_abs": 0.6308837890625,
+      "ROI_RGB_max_abs": 36,
+      "ROI_any_channel_changed_pixel_fraction": 0.7979888916015625,
+      "scope": "Descriptive ROI difference only, not quality or full metric"
+    },
+    {
+      "case": 41,
+      "candidate": "push7_a7750_lastres_lr5e6_nr_s7850",
+      "ROI_RGB_mean_abs": 0.8785207112630208,
+      "ROI_RGB_max_abs": 48,
+      "ROI_any_channel_changed_pixel_fraction": 0.8709442138671875,
+      "scope": "Descriptive ROI difference only, not quality or full metric"
+    }
+  ],
+  "HTML_sha256": "78a10a6faa22975ff1472a82cc4066bed91120aa67a1a6fbdbce6652c2fdf2ec",
+  "script_sha256": "d62fac9de00e7a7334cdb8a16cbaa5bdb8839325f65e92dff8822b34e5200ba7"
+}

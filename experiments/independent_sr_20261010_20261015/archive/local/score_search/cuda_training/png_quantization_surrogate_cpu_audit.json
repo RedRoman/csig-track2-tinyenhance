@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "device": "cpu",
+  "cuda_visible_devices": "",
+  "cuda_initialized": false,
+  "torch": "2.8.0+cu128",
+  "numpy": "2.3.3",
+  "helper_sha256": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812",
+  "tests": {
+    "random_0_1": {
+      "pixel_count": 200000,
+      "forward_differing_bits_values": 0,
+      "identity_gradient_bitexact": true,
+      "optional_lut_same": true
+    },
+    "all_255_half_thresholds_and_adjacent": {
+      "pixel_count": 765,
+      "forward_differing_bits_values": 0,
+      "identity_gradient_bitexact": true,
+      "optional_lut_same": true
+    },
+    "bounds_and_out_of_range": {
+      "pixel_count": 14,
+      "forward_differing_bits_values": 0,
+      "identity_gradient_bitexact": true,
+      "optional_lut_same": true
+    }
+  },
+  "scope": "Pure CPU eager FP32; no GPU or model initialization",
+  "note": "Identity gradient is an STE estimator, not the true derivative of round.",
+  "audit_driver_sha256": "69588618b174b9b98d7a66d5c92e3b6e1bda22f562fd0e10602d4846bb4a3fc3",
+  "execution_host_port": 30416
+}

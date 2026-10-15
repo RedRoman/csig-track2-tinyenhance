@@ -1,0 +1,165 @@
+{
+  "schema": "push5_independent_pixel_training_all3_CPU_audit_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "CUDA_context_initialized": false,
+  "frozen_utc": "2026-10-14T14:41:32.526065+00:00",
+  "run": "pix_push5_g4_nr250",
+  "scope": "Real G4-initialized A7750 offline-pseudo-label training. This proof covers0/125/250 actual snapshots and logged controls; student quality requires independent full103/418 and fresh same-card latency.",
+  "new_optimizer_start_step": 0,
+  "original_reference_training_step": 30000,
+  "original_reference_checkpoint_SHA256": "283cb7d051a4686e558057b8fb0dcd927b47a8cb7474101fab4162c457c2bb83",
+  "training_source_SHA256": "3a389e55e898be8a64cdda7637339126b1caf94d0b9e7fb19c9f66abe61e8a16",
+  "CLI_SHA256": "d0b1d8560b9bdf43e628fe6fa0b8191b24a85cadc4c4f27fe9964823a7cd4b1c",
+  "actual100_offline_teacher_PNG_SHA_all3_PASS": true,
+  "all3_raw_exact_equal_immutable_resume_FP32": true,
+  "all3_Adam_counters_and_four_RNG_PASS": true,
+  "first_case": 94,
+  "first_context_crop_xy": [
+    2232,
+    712
+  ],
+  "milestones": [
+    {
+      "schema": "push5_independent_pixel_training_snapshot_CPU_v1",
+      "status": "PASS",
+      "CPU_only": true,
+      "CUDA_context_initialized": false,
+      "run": "pix_push5_g4_nr250",
+      "local_step": 0,
+      "optimizer_step": 0,
+      "reference_training_step": 30000,
+      "state_tensors": 100,
+      "FP32_parameters": 3163404,
+      "all_finite": true,
+      "raw_exact_equal_resume_FP32": true,
+      "changed_state_tensors_vs_G4": 0,
+      "parameter_delta_L2": 0.0,
+      "parameter_delta_max_abs": 0.0,
+      "Adam_state_entries": 0,
+      "Adam_moments_FP32_finite": true,
+      "four_RNG_state_SHA256": {
+        "python_rng": "971817279961eb1818085900756263382f02606525c004a3fc37fa4aac919a19",
+        "numpy_rng": "d0b8b2f648787013dfefcfbd53bdff608c3f69b2df70d7533f1c0c61ffd12567",
+        "torch_rng": "2d0dba7c5aac96cd0f6d8519dd68c4faa15e3433a353c28e3692f2fa52a08052",
+        "cuda_rng": "503a360cc6d094efca71fb8d607b6ada73cf1eaedeb81e960db1e86f5918b61c"
+      },
+      "actual100_offline_teacher_PNG_SHA_PASS": true,
+      "teacher_catalog_sha256": "35355c94cace390b5f5918cfb607d85b0f55c9cd1e1ba0a4f6a4d034abb54e16",
+      "same_case_crop_alignment_and_loss_audited_updates": 0,
+      "first_case": 94,
+      "first_context_crop_xy": [
+        2232,
+        712
+      ],
+      "original_reference_checkpoint_sha256": "283cb7d051a4686e558057b8fb0dcd927b47a8cb7474101fab4162c457c2bb83",
+      "source_sha256": "3a389e55e898be8a64cdda7637339126b1caf94d0b9e7fb19c9f66abe61e8a16",
+      "CLI_sha256": "d0b1d8560b9bdf43e628fe6fa0b8191b24a85cadc4c4f27fe9964823a7cd4b1c",
+      "raw_sha256": "07e9310f8bade40a89f2a338b42c31f95acff38fb1b39b9ee67469c0a1122ba2",
+      "resume_sha256": "e6e3ef6d78a745b18dd42fc9c82b3570dce8038868799eef620670a923ced789",
+      "protocol_id": "59ebaa1fa308b98a76f8f43e6ed1551d4e83e4c69b0aa760efbecd39cea03803",
+      "scope": "Actual saved state and logged training controls only; no full metric quality claim."
+    },
+    {
+      "schema": "push5_independent_pixel_training_snapshot_CPU_v1",
+      "status": "PASS",
+      "CPU_only": true,
+      "CUDA_context_initialized": false,
+      "run": "pix_push5_g4_nr250",
+      "local_step": 125,
+      "optimizer_step": 125,
+      "reference_training_step": 30000,
+      "state_tensors": 100,
+      "FP32_parameters": 3163404,
+      "all_finite": true,
+      "raw_exact_equal_resume_FP32": true,
+      "changed_state_tensors_vs_G4": 100,
+      "parameter_delta_L2": 0.459268856958091,
+      "parameter_delta_max_abs": 0.0010100379586219788,
+      "Adam_state_entries": 100,
+      "Adam_moments_FP32_finite": true,
+      "four_RNG_state_SHA256": {
+        "python_rng": "e7970db2da5d6f7fde5fcb58b13ef164305ce015541710ccb7c1a703a973b257",
+        "numpy_rng": "f8a03d07023e6fcae2a51eba3d885d4d9e93f3f3ba0b793acd5e5015913c80f8",
+        "torch_rng": "2d0dba7c5aac96cd0f6d8519dd68c4faa15e3433a353c28e3692f2fa52a08052",
+        "cuda_rng": "503a360cc6d094efca71fb8d607b6ada73cf1eaedeb81e960db1e86f5918b61c"
+      },
+      "actual100_offline_teacher_PNG_SHA_PASS": true,
+      "teacher_catalog_sha256": "35355c94cace390b5f5918cfb607d85b0f55c9cd1e1ba0a4f6a4d034abb54e16",
+      "same_case_crop_alignment_and_loss_audited_updates": 125,
+      "first_case": 94,
+      "first_context_crop_xy": [
+        2232,
+        712
+      ],
+      "original_reference_checkpoint_sha256": "283cb7d051a4686e558057b8fb0dcd927b47a8cb7474101fab4162c457c2bb83",
+      "source_sha256": "3a389e55e898be8a64cdda7637339126b1caf94d0b9e7fb19c9f66abe61e8a16",
+      "CLI_sha256": "d0b1d8560b9bdf43e628fe6fa0b8191b24a85cadc4c4f27fe9964823a7cd4b1c",
+      "raw_sha256": "554cc71c6405621320dbe12fd7a4a9519a6df67f5b2a9938ad77b82c0f4dfc27",
+      "resume_sha256": "d510d6a0cd7672303ba8d035da6fb9d806a7526fea1e0388f816dad52fc1bb0a",
+      "protocol_id": "59ebaa1fa308b98a76f8f43e6ed1551d4e83e4c69b0aa760efbecd39cea03803",
+      "scope": "Actual saved state and logged training controls only; no full metric quality claim."
+    },
+    {
+      "schema": "push5_independent_pixel_training_snapshot_CPU_v1",
+      "status": "PASS",
+      "CPU_only": true,
+      "CUDA_context_initialized": false,
+      "run": "pix_push5_g4_nr250",
+      "local_step": 250,
+      "optimizer_step": 250,
+      "reference_training_step": 30000,
+      "state_tensors": 100,
+      "FP32_parameters": 3163404,
+      "all_finite": true,
+      "raw_exact_equal_resume_FP32": true,
+      "changed_state_tensors_vs_G4": 100,
+      "parameter_delta_L2": 0.6376388122087947,
+      "parameter_delta_max_abs": 0.001913849264383316,
+      "Adam_state_entries": 100,
+      "Adam_moments_FP32_finite": true,
+      "four_RNG_state_SHA256": {
+        "python_rng": "f9de3638d4516f40af382ce48d285db8344893a22ee8e23ccf9cce4aca2e3917",
+        "numpy_rng": "0ec040fc5e561707fd1808ffcad3a01ec0ad4b6fca5e77ff8be555b00dc06d03",
+        "torch_rng": "2d0dba7c5aac96cd0f6d8519dd68c4faa15e3433a353c28e3692f2fa52a08052",
+        "cuda_rng": "503a360cc6d094efca71fb8d607b6ada73cf1eaedeb81e960db1e86f5918b61c"
+      },
+      "actual100_offline_teacher_PNG_SHA_PASS": true,
+      "teacher_catalog_sha256": "35355c94cace390b5f5918cfb607d85b0f55c9cd1e1ba0a4f6a4d034abb54e16",
+      "same_case_crop_alignment_and_loss_audited_updates": 250,
+      "first_case": 94,
+      "first_context_crop_xy": [
+        2232,
+        712
+      ],
+      "original_reference_checkpoint_sha256": "283cb7d051a4686e558057b8fb0dcd927b47a8cb7474101fab4162c457c2bb83",
+      "source_sha256": "3a389e55e898be8a64cdda7637339126b1caf94d0b9e7fb19c9f66abe61e8a16",
+      "CLI_sha256": "d0b1d8560b9bdf43e628fe6fa0b8191b24a85cadc4c4f27fe9964823a7cd4b1c",
+      "raw_sha256": "8c95e115e12219bca8bea2b2d04e0a01552f072de56619fab878ae61a9643237",
+      "resume_sha256": "38e2d27d200fb85a654da137935b1943f223c484570b84643f03b237f098d9fb",
+      "protocol_id": "59ebaa1fa308b98a76f8f43e6ed1551d4e83e4c69b0aa760efbecd39cea03803",
+      "scope": "Actual saved state and logged training controls only; no full metric quality claim."
+    }
+  ],
+  "selected_student_candidate_step250_raw_sha256": "8c95e115e12219bca8bea2b2d04e0a01552f072de56619fab878ae61a9643237",
+  "selected_student_candidate_step250_resume_sha256": "38e2d27d200fb85a654da137935b1943f223c484570b84643f03b237f098d9fb",
+  "evidence_files": {
+    "audit_pix_training_cpu.py": {
+      "bytes": 9683,
+      "sha256": "e7af41db21f9ffbd23a8f01bb622575860377e13a0ba3a477940030807f573be"
+    },
+    "training_step0_audit.json": {
+      "bytes": 1814,
+      "sha256": "096734a7bfdf14ceb44140ff571ab6564cf6b51c217ca8a4a238bb3d0060ac67"
+    },
+    "training_step125_audit.json": {
+      "bytes": 1856,
+      "sha256": "3450e350c6587601624f45f9db076a96e0e285425361dc67e982f58a3c424eb7"
+    },
+    "training_step250_audit.json": {
+      "bytes": 1856,
+      "sha256": "e3e85daecda2b247f3b9e4c3a51205bb69c69216caabe921082778fb130f31ec"
+    }
+  },
+  "freeze_scope": "This training proof plus referenced CPU snapshot reports/source are now unchanged; later full-quality proof is separate."
+}

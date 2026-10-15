@@ -1,0 +1,40 @@
+{
+  "schema": "push5_independent_pixel_training_snapshot_CPU_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "CUDA_context_initialized": false,
+  "run": "pix_push5_g4_nr250",
+  "local_step": 0,
+  "optimizer_step": 0,
+  "reference_training_step": 30000,
+  "state_tensors": 100,
+  "FP32_parameters": 3163404,
+  "all_finite": true,
+  "raw_exact_equal_resume_FP32": true,
+  "changed_state_tensors_vs_G4": 0,
+  "parameter_delta_L2": 0.0,
+  "parameter_delta_max_abs": 0.0,
+  "Adam_state_entries": 0,
+  "Adam_moments_FP32_finite": true,
+  "four_RNG_state_SHA256": {
+    "python_rng": "971817279961eb1818085900756263382f02606525c004a3fc37fa4aac919a19",
+    "numpy_rng": "d0b8b2f648787013dfefcfbd53bdff608c3f69b2df70d7533f1c0c61ffd12567",
+    "torch_rng": "2d0dba7c5aac96cd0f6d8519dd68c4faa15e3433a353c28e3692f2fa52a08052",
+    "cuda_rng": "503a360cc6d094efca71fb8d607b6ada73cf1eaedeb81e960db1e86f5918b61c"
+  },
+  "actual100_offline_teacher_PNG_SHA_PASS": true,
+  "teacher_catalog_sha256": "35355c94cace390b5f5918cfb607d85b0f55c9cd1e1ba0a4f6a4d034abb54e16",
+  "same_case_crop_alignment_and_loss_audited_updates": 0,
+  "first_case": 94,
+  "first_context_crop_xy": [
+    2232,
+    712
+  ],
+  "original_reference_checkpoint_sha256": "283cb7d051a4686e558057b8fb0dcd927b47a8cb7474101fab4162c457c2bb83",
+  "source_sha256": "3a389e55e898be8a64cdda7637339126b1caf94d0b9e7fb19c9f66abe61e8a16",
+  "CLI_sha256": "d0b1d8560b9bdf43e628fe6fa0b8191b24a85cadc4c4f27fe9964823a7cd4b1c",
+  "raw_sha256": "07e9310f8bade40a89f2a338b42c31f95acff38fb1b39b9ee67469c0a1122ba2",
+  "resume_sha256": "e6e3ef6d78a745b18dd42fc9c82b3570dce8038868799eef620670a923ced789",
+  "protocol_id": "59ebaa1fa308b98a76f8f43e6ed1551d4e83e4c69b0aa760efbecd39cea03803",
+  "scope": "Actual saved state and logged training controls only; no full metric quality claim."
+}

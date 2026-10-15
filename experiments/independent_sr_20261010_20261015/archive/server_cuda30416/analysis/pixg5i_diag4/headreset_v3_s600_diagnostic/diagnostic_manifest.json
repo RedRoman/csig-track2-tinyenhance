@@ -1,0 +1,245 @@
+{
+  "status": "COMPLETE_DIAGNOSTIC4_NOT_FULL_OR_SCORE",
+  "protocol_id": "a485c76ceada342a47d8f059d573eaaa412e22908a7d0f302f25336bec4815ad",
+  "protocol": {
+    "schema": "pixg5i_native4_diagnostic_v1",
+    "scope": "DIAGNOSTIC_NATIVE4_ONLY_NOT_FORMAL_OR_SCORE",
+    "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s600/model_dir",
+    "candidate_manifest": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s600/candidate_manifest.json",
+      "sha256": "398a259dcb8bd6616b6d3043ed414eba73ef63e400bb21eceaf19f1160081a56",
+      "bytes": 13812
+    },
+    "binding": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s600/model_dir/pixg5i_binding.json",
+      "sha256": "8b9e2b1425cdaf162e279c5de641d47b63c45122857f8137959d6e7f868f68ec",
+      "bytes": 5096
+    },
+    "checkpoint_sha256": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa",
+    "tasks": [
+      {
+        "split": "test",
+        "case": 7,
+        "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case7.jpg",
+        "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+        "size": [
+          4096,
+          3072
+        ]
+      },
+      {
+        "split": "test",
+        "case": 16,
+        "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case16.jpg",
+        "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+        "size": [
+          4096,
+          3072
+        ]
+      },
+      {
+        "split": "test",
+        "case": 41,
+        "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case41.jpg",
+        "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+        "size": [
+          3072,
+          4096
+        ]
+      },
+      {
+        "split": "test",
+        "case": 83,
+        "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case83.jpg",
+        "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+        "size": [
+          3072,
+          4096
+        ]
+      }
+    ],
+    "source": {
+      "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/render_pixg5i_diagnostic4.py",
+      "sha256": "cee4ceb8df95cfc5a7ebbc2a00b1ce0566f1866cbf5cb8e4ee7726fb306fdca9",
+      "bytes": 9140
+    },
+    "original_formal_renderer_sha256": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5",
+    "input_encoding": "original float32 RGB/255 -> half()*2-1; full native image",
+    "output_encoding": "original float().clamp(-1,1); ((*0.5+0.5)*255).round().astype(uint8); PNG compress1",
+    "cases": [
+      7,
+      16,
+      41,
+      83
+    ],
+    "seed": 231,
+    "RNG_scope": "Seed231 before model initialization, then continuous diagnostic order7/16/41/83; not full-val3/test100 sequence",
+    "extra_warmup": false,
+    "quality_or_speed_claim": false,
+    "no_val_or_GT": true,
+    "runner": {
+      "schema": "pixg5i_original_inference_metadata_adapter_v1",
+      "model_type": "supplied_pixG5i_pixel_UNet",
+      "label": "pixg5i_hypir_headreset_v3_s600",
+      "stage": "distilled_checkpoint",
+      "runner_path": "cudagraph:max-autotune",
+      "runner_sha256": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a",
+      "checkpoint_sha256": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa",
+      "weight_path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s600/model_dir/model.pth",
+      "repo_path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s600/model_dir",
+      "source_sha256": {
+        "reference_runner.py": "6222ead92dc6fb24b88c0350e41191fc27a5adc2f6ba38bd383a4badb9bd8c1e",
+        "pix_model.py": "2f1cd3cd8311381e432138f489b01b982e08ebd5b09ecbc05ac87f7bfb577923",
+        "pixg5i_binding.json": "8b9e2b1425cdaf162e279c5de641d47b63c45122857f8137959d6e7f868f68ec"
+      },
+      "initial_package_checkpoint_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+      "archive_sha256": "f8e154da5ea9cb2fe165a316f824003459661945e6bbe22efd025d8592d573d6",
+      "training_provenance": {
+        "config": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/config.json",
+          "sha256": "bd4d8f0d2488604f9b4e78b268d39b953d5298bd6fed4ccdcf08033eaccfced8",
+          "bytes": 79316
+        },
+        "marker": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/checkpoint_step600.json",
+          "sha256": "72a3c7ca6d4beac6234b3f933fb0ad871b483a66863e884c17b389bacdc7cd76",
+          "bytes": 5679
+        },
+        "input_catalog": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/input_catalog.json",
+          "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+          "bytes": 23987
+        },
+        "teacher_catalog": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/teacher_catalog.json",
+          "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+          "bytes": 39787
+        },
+        "resume": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/resume_step600.pt",
+          "sha256": "d37cbcfbd1254fd2838d36140c7cd51ef61abe0a5fedd85fc0115e1afdce9fdf",
+          "bytes": 45582779
+        },
+        "training_source": {
+          "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_headreset_v3.py",
+          "sha256": "3e64743ff117de1934ba7da04f3c24e822ba8573d91e842230eeb86a1c6c05cb",
+          "bytes": 31556
+        }
+      },
+      "teacher": {
+        "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+        "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+        "applied_to_this_checkpoint": true,
+        "render_manifest": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+          "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+          "bytes": 81396
+        }
+      },
+      "used_as_G4_reference": false,
+      "quality_reuse_claim": false,
+      "input": "original FP16 native [1,3,H,W] [-1,1]",
+      "output": "original FP16 native [1,3,H,W] [-1,1]",
+      "inference": "Unchanged original fold/FP16/channels_last;512 original compile/graph;native original eager with original OOM tile1024 overlap128 fallback",
+      "adapter": "Only initialization seed and identity metadata; infer delegates unchanged original supplied Runner",
+      "seed": "231 before initialization; continuous inference RNG",
+      "inference_RNG_matches_HYPIR_required": false
+    },
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "torch": "2.8.0+cu128",
+    "model_dir_sha256": {
+      "config.yaml": "e13bab32185ac95f07ac36133eff89133a33ed90cc5ca534b7d8496bc457250d",
+      "model.pth": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa",
+      "pix_model.py": "2f1cd3cd8311381e432138f489b01b982e08ebd5b09ecbc05ac87f7bfb577923",
+      "pixg5i_binding.json": "8b9e2b1425cdaf162e279c5de641d47b63c45122857f8137959d6e7f868f68ec",
+      "reference_runner.py": "6222ead92dc6fb24b88c0350e41191fc27a5adc2f6ba38bd383a4badb9bd8c1e",
+      "runner.py": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a"
+    },
+    "constructor_before_fourRNG_sha256": "df63e50ba172371bb04b12c3287db3bc4407e16a450cf6982b5af77d62c5cbc0",
+    "constructor_after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55"
+  },
+  "records": [
+    {
+      "task_index": 0,
+      "split": "test",
+      "case": 7,
+      "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+      "output": "render/test/case7.png",
+      "PNG": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/headreset_v3_s600_diagnostic/render/test/case7.png",
+        "sha256": "ab3c0b6be82aef48b898c6a2bc9a92938e1761a85d3460ec4128f9183cb479b7",
+        "bytes": 14369741
+      },
+      "size": [
+        4096,
+        3072
+      ],
+      "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "seconds_diagnostic_only": 1.7810378074645996,
+      "not_latency_measurement": true
+    },
+    {
+      "task_index": 1,
+      "split": "test",
+      "case": 16,
+      "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+      "output": "render/test/case16.png",
+      "PNG": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/headreset_v3_s600_diagnostic/render/test/case16.png",
+        "sha256": "35ef608245d14d86ce922cbd490cf26e379977acc4f60606efd04a0b65efd621",
+        "bytes": 9777895
+      },
+      "size": [
+        4096,
+        3072
+      ],
+      "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "seconds_diagnostic_only": 1.52347731590271,
+      "not_latency_measurement": true
+    },
+    {
+      "task_index": 2,
+      "split": "test",
+      "case": 41,
+      "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+      "output": "render/test/case41.png",
+      "PNG": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/headreset_v3_s600_diagnostic/render/test/case41.png",
+        "sha256": "ff9b7f69312d33bf78bf7c017838418478aa32c23a9f8c094c20a22e57e70e1f",
+        "bytes": 14782209
+      },
+      "size": [
+        3072,
+        4096
+      ],
+      "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "seconds_diagnostic_only": 1.789903163909912,
+      "not_latency_measurement": true
+    },
+    {
+      "task_index": 3,
+      "split": "test",
+      "case": 83,
+      "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+      "output": "render/test/case83.png",
+      "PNG": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/headreset_v3_s600_diagnostic/render/test/case83.png",
+        "sha256": "dceec7b9ad5c230e5b050973c3be0341cf639315688f302f793b975e251f9074",
+        "bytes": 16627383
+      },
+      "size": [
+        3072,
+        4096
+      ],
+      "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "seconds_diagnostic_only": 1.8031466007232666,
+      "not_latency_measurement": true
+    }
+  ],
+  "actual_native_count": 4,
+  "quality_or_speed_claim": false
+}

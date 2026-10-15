@@ -1,0 +1,71 @@
+{
+  "schema": "nr_push3_independent_final_backup_receipt_v1",
+  "status": "verified_complete",
+  "verified_utc": "2026-10-14T11:49:28.341199+00:00",
+  "verification_started_utc": "2026-10-14T11:49:21.241479+00:00",
+  "CPU_only": true,
+  "destination": "/temp/independent_sr_cuda_20261013_artifacts/nr_push3_20261014",
+  "manifest_sha256": "6c4cc6db3d963762cb1868d83d89969083326cc0e3932d64743a23b598c48eaa",
+  "DONE_sha256": "15846dd6f53e3327bf7331d00a27d4928b2078edca4244ee29186623cf85655d",
+  "files": 400,
+  "bytes": 6294606619,
+  "scope": "final_selected_only",
+  "all_file_actual_SFS_bytes_full_SHA_and_size_reread": true,
+  "all_file_reread_files": 400,
+  "all_file_reread_bytes": 6294606619,
+  "selected_global_step": 7250,
+  "selected_local_step": 750,
+  "selected_optimizer_step": 1250,
+  "selected_raw_path": "adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step7250.pth",
+  "selected_raw_sha256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+  "selected_immutable_resume_path": "adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/resume_step7250.pt",
+  "selected_immutable_resume_sha256": "b8b709f284ce627113e392ede00e43bcd522c8dc23b63719e9fcbaa573c7256d",
+  "tensor_archive_count": 2,
+  "native_full_PNG_count": 103,
+  "native_full_PNG_bytes": 2131020972,
+  "full_metric_rows": 103,
+  "full_metric_scalars": 418,
+  "archived_exact514_FP32_Adam1250_and_four_RNG_audit_PASS": true,
+  "previous_backup_heads_reverified": [
+    {
+      "directory": "/temp/independent_sr_cuda_20261013_artifacts/nr_push2_20261014",
+      "marker": "DONE",
+      "manifest_sha256": "ef284432a338b0a4574f52be645f4a40571ef94e775e1e39a2c0d1cfc1d13e8d",
+      "DONE_sha256": "0a9cb512123ca402baaf43e21db2204853b2033fbcb61a1739f802306b36703f",
+      "reverified_manifest_and_DONE_byte_SHA": true
+    },
+    {
+      "directory": "/temp/independent_sr_cuda_20261013_artifacts/nr_microtune_20261014",
+      "marker": "DONE.json",
+      "manifest_sha256": "99f461e6e95045cf0af053dc3b24bde74cd3531715225d0ccf95eef2d2dbd0d4",
+      "DONE_sha256": "92cadf2e81aba1864e027e1fded512c008b15585018e1c1eda7d9658b45b8d12",
+      "reverified_manifest_and_DONE_byte_SHA": true
+    }
+  ],
+  "SFS_free_bytes_at_independent_verify": 3898605568,
+  "self_chosen_reserve_bytes": 3221225472,
+  "reserve_is_user_requirement": false,
+  "report_sha256": "f6e3e82b6d25bc5c2f7b686e3f4650ff5dda541fe3e40cdf7b0ce7375903f6c8",
+  "report_source_bytes_match_archive": true,
+  "selection_sha256": "dc41fefc4077b6b157e310065d5017dfc8c0c2fa791e943543abd97a9a91d6af",
+  "selection_source_bytes_match_archive": true,
+  "selected_backup_plan_sha256": "e37fccc293ec55199409cfb3f711482261d6de8b9909b50cd4cbb5a33fb9af43",
+  "reviewed_plan_files_equal_committed_manifest": true,
+  "root_backup_exit": {
+    "session_id": 88655,
+    "exit_code": 0
+  },
+  "root_backup_exit_marker_sha256": "a6b1dc914d20e29c94a85de99ed2345c73831d84d48c6dd4905e069d73ed5ae9",
+  "root_backup_log_sha256": "adea9ae69827ef7f4e622381065ae9980f2ffee154d354821cb4f3ba412e4456",
+  "root_backup_log_commit_matches_DONE": true,
+  "GPU_process_evidence": {
+    "NVML_visible_compute_processes": [],
+    "all_GPUs_have_no_visible_compute_processes": true,
+    "this_round_GPU_command_lines": [],
+    "this_round_GPU_processes_absent": true,
+    "method": "read-only NVML process query plus ps command inspection; no CUDA context/model imported"
+  },
+  "verification_script": "/cache/push3_verify_final_20261014.py",
+  "verification_script_sha256": "437096e5e3c03daa7d7e1647eb7e0371d6c581fce29ccd84751b67ef2ebc1ae7",
+  "verification_scope": "Independent complete reread of all destination files after root exit0, then post-commit receipt only. Archived manifest/DONE/report/status and prior prefixes remain read-only."
+}

@@ -1,0 +1,104 @@
+{
+  "schema": "push4_fresh_paired_latency_plan_v1",
+  "status": "planned_not_launched",
+  "created_utc": "2026-10-14T13:08:34.540013+00:00",
+  "selection_path": "/cache/independent_sr_cuda_20261013/results/nr_push4_selection.json",
+  "selection_sha256": null,
+  "candidate": {
+    "label": "push4_c7500_compiled_pilot",
+    "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push4_c7500_compiled/model_dir",
+    "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_r10_500/step7500.pth",
+    "checkpoint_sha256": "4d6bc029c1c32693e22ec279d651759d96ad1b8bca32a69c7bbf26657ee31f5f"
+  },
+  "parent_selection_sha256": "dc41fefc4077b6b157e310065d5017dfc8c0c2fa791e943543abd97a9a91d6af",
+  "parent7250": {
+    "label": "push3_c7250_compiled_all",
+    "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push3_c7250_compiled/model_dir",
+    "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step7250.pth",
+    "checkpoint_sha256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e"
+  },
+  "benchmark_sha256": "3e85026bd91ad8fb7fb91c5d3c74211cc33a9cff0f8316f7e56cde864ae41995",
+  "launcher_sha256": "41f241e0a6aedc6856779b92ccbe0a97e6884935c8401ddec8885c0100e124ae",
+  "cuda_visible_devices": "0",
+  "same_physical_card_proof": "NVML GPU0 UUID and PCI bus recorded before/after every independent subprocess",
+  "stages": [
+    {
+      "key": "g4",
+      "model_dir": "/cache/independent_sr_cuda_20261013/calibration/g4/model_dir",
+      "checkpoint": null,
+      "out": "/cache/independent_sr_cuda_20261013/calibration/push4_g4_latency.json",
+      "argv": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+        "--model-dir",
+        "/cache/independent_sr_cuda_20261013/calibration/g4/model_dir",
+        "--out",
+        "/cache/independent_sr_cuda_20261013/calibration/push4_g4_latency.json",
+        "--device",
+        "0",
+        "--warm",
+        "30",
+        "--n",
+        "200",
+        "--seed",
+        "231"
+      ],
+      "reviewable_shell_command": "CUDA_VISIBLE_DEVICES=0 /cache/independent_sr_cuda_20261013/env/bin/python /cache/independent_sr_cuda_20261013/code/benchmark_cuda.py --model-dir /cache/independent_sr_cuda_20261013/calibration/g4/model_dir --out /cache/independent_sr_cuda_20261013/calibration/push4_g4_latency.json --device 0 --warm 30 --n 200 --seed 231"
+    },
+    {
+      "key": "parent7250",
+      "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push3_c7250_compiled/model_dir",
+      "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step7250.pth",
+      "out": "/cache/independent_sr_cuda_20261013/calibration/push4_parent7250_latency.json",
+      "argv": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+        "--model-dir",
+        "/cache/independent_sr_cuda_20261013/submissions/hypir_push3_c7250_compiled/model_dir",
+        "--out",
+        "/cache/independent_sr_cuda_20261013/calibration/push4_parent7250_latency.json",
+        "--device",
+        "0",
+        "--warm",
+        "30",
+        "--n",
+        "200",
+        "--seed",
+        "231",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step7250.pth",
+        "--ref-ms",
+        "<FRESH_G4_EVENT_P10>"
+      ],
+      "reviewable_shell_command": "CUDA_VISIBLE_DEVICES=0 /cache/independent_sr_cuda_20261013/env/bin/python /cache/independent_sr_cuda_20261013/code/benchmark_cuda.py --model-dir /cache/independent_sr_cuda_20261013/submissions/hypir_push3_c7250_compiled/model_dir --out /cache/independent_sr_cuda_20261013/calibration/push4_parent7250_latency.json --device 0 --warm 30 --n 200 --seed 231 --hash-file /cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step7250.pth --ref-ms '<FRESH_G4_EVENT_P10>'"
+    },
+    {
+      "key": "selected",
+      "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push4_c7500_compiled/model_dir",
+      "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_r10_500/step7500.pth",
+      "out": "/cache/independent_sr_cuda_20261013/calibration/push4_selected_latency.json",
+      "argv": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+        "--model-dir",
+        "/cache/independent_sr_cuda_20261013/submissions/hypir_push4_c7500_compiled/model_dir",
+        "--out",
+        "/cache/independent_sr_cuda_20261013/calibration/push4_selected_latency.json",
+        "--device",
+        "0",
+        "--warm",
+        "30",
+        "--n",
+        "200",
+        "--seed",
+        "231",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_r10_500/step7500.pth",
+        "--ref-ms",
+        "<FRESH_G4_EVENT_P10>"
+      ],
+      "reviewable_shell_command": "CUDA_VISIBLE_DEVICES=0 /cache/independent_sr_cuda_20261013/env/bin/python /cache/independent_sr_cuda_20261013/code/benchmark_cuda.py --model-dir /cache/independent_sr_cuda_20261013/submissions/hypir_push4_c7500_compiled/model_dir --out /cache/independent_sr_cuda_20261013/calibration/push4_selected_latency.json --device 0 --warm 30 --n 200 --seed 231 --hash-file /cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_r10_500/step7500.pth --ref-ms '<FRESH_G4_EVENT_P10>'"
+    }
+  ],
+  "no_historical_latency_reuse": true
+}

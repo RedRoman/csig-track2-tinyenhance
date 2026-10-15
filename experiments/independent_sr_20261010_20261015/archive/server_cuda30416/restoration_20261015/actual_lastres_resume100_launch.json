@@ -1,0 +1,34 @@
+{
+  "pid": 20855,
+  "args": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "-u",
+    "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_lastres_nr_v3.py",
+    "--config",
+    "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/config_hypir_lastres_nr100_v3.json",
+    "--resume",
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_nr100/resume_step7751.pt",
+    "--stop-at",
+    "100"
+  ],
+  "log": "/cache/independent_sr_cuda_20261013/logs/lastres_resume100_20261015.log",
+  "physical_GPU": 2,
+  "launch_utc": "2026-10-15T07:44:59.942758+00:00",
+  "step1_audit": {
+    "status": "PASS_ACTUAL_STEP1_OPTIMIZER6_AND_508_EXACT_A",
+    "changed_keys": [
+      "up_blocks.3.resnets.2.conv1.lora_A.default.weight",
+      "up_blocks.3.resnets.2.conv1.lora_B.default.weight",
+      "up_blocks.3.resnets.2.conv2.lora_A.default.weight",
+      "up_blocks.3.resnets.2.conv2.lora_B.default.weight",
+      "conv_out.lora_A.default.weight",
+      "conv_out.lora_B.default.weight"
+    ],
+    "raw_tensors": 514,
+    "Adam_state_count": 6,
+    "independent_CPU_torch_check": true,
+    "four_RNG_saved": true,
+    "raw_sha256": "a3b081e55525245efbb8aeeb748c953081c08616c6c31866d61ef600c1ba5353",
+    "resume_sha256": "a7626a7f64b46f7fe94b910ba08b340ea7b9340ac4422efb445699ff20809c37"
+  }
+}

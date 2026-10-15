@@ -1,0 +1,332 @@
+{
+  "status": "PASS_DIAGNOSTIC4_VS_FULL_REFERENCE_NATIVE_ROI",
+  "CPU_only": true,
+  "GPU_used": false,
+  "diagnostic_crop_proof": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/headreset_v3_s100_diagnostic_crop_sources/proof.json",
+    "sha256": "4b491e380b6dab05b2d29692e8210ee2afe41838dca8347703ac9b203bf334ab",
+    "bytes": 13498
+  },
+  "full_reference_gallery_proof": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/medium300_mild600_medium600_teacher/proof.json",
+    "sha256": "8ffdf70a99f8776948883e60dd8276bbb58bddf399b246f7dd474a5039c9002d",
+    "bytes": 413942
+  },
+  "candidate_checkpoint_sha256": "cc9aefbb2a543ea65a53c38595e4c90c8f6b76150b77e862ac4396646921f1b8",
+  "reference_pixels_scope": "Content-addressed crop cache from actual SHA/pixel-verified full103 PNGs",
+  "outputs": [
+    {
+      "case": 7,
+      "ROI": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "diagnostic_source": {
+        "case": 7,
+        "ROI": [
+          1856,
+          1408,
+          2496,
+          1856
+        ],
+        "native_source": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/headreset_v3_s100_diagnostic/render/test/case7.png",
+          "sha256": "70bc96bc1236dcf87e9b94969106074373d784386f905c8ccdbd77f7c5498e1b",
+          "bytes": 13832284
+        },
+        "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+        "size": [
+          4096,
+          3072
+        ],
+        "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "output": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_headreset_v3_s100_diagnostic_ROI4/case7_structure_v2_diagnostic_native_ROI.png",
+          "sha256": "0534e26fcd57c6dfd98833f0389d6b2b3df832472822b15530c803078b7a31bb",
+          "bytes": 335022
+        },
+        "crop_pixels_exact": true
+      },
+      "full_reference_sources": [
+        {
+          "split": "test",
+          "case": 7,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_medium_s600_all/render/test/case7.png",
+            "sha256": "fdb3ad7bef26cd42726c7d1b86bed69d73d3a4edcfdb9cc40adb962953138cb9",
+            "bytes": 19170788
+          },
+          "native_size": [
+            4096,
+            3072
+          ],
+          "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4"
+        },
+        {
+          "split": "test",
+          "case": 7,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case7.png",
+            "sha256": "911723395979a5d2455dd1cba15edeecc2905c29cc65d8a3149427d51e423356",
+            "bytes": 17719353
+          },
+          "native_size": [
+            4096,
+            3072
+          ],
+          "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4"
+        }
+      ],
+      "cached_panel": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/medium300_mild600_medium600_teacher/case7_structure_progress_ROI_1to1.png",
+        "sha256": "dec4ede796178d56d7af752dbeac6a30861e3b49e95a7b763167c0ecd5cecbb8",
+        "bytes": 1799145
+      },
+      "crop_pixels_exact": true,
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/headreset_v3_s100_diagnostic_vs_medium600_teacher/case7_diagnostic_structure_ROI_1to1.png",
+      "sha256": "c63d25edf2624e75abeda9b58bf4fbf08619001973c6aaa6fd37ca2092e6290d",
+      "bytes": 1720141
+    },
+    {
+      "case": 16,
+      "ROI": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "diagnostic_source": {
+        "case": 16,
+        "ROI": [
+          1280,
+          1216,
+          1920,
+          1728
+        ],
+        "native_source": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/headreset_v3_s100_diagnostic/render/test/case16.png",
+          "sha256": "3baf46f067936f925785adf86b605f7530a4cf671eefd1508e4625e7dd9d8c62",
+          "bytes": 9143716
+        },
+        "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+        "size": [
+          4096,
+          3072
+        ],
+        "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "output": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_headreset_v3_s100_diagnostic_ROI4/case16_structure_v2_diagnostic_native_ROI.png",
+          "sha256": "38c75b642483aabb4f2bd79a46dbb7be145bea55cd8a398a5e333dafa87c8992",
+          "bytes": 329726
+        },
+        "crop_pixels_exact": true
+      },
+      "full_reference_sources": [
+        {
+          "split": "test",
+          "case": 16,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_medium_s600_all/render/test/case16.png",
+            "sha256": "17c9712c42dbb610ec995e57967959c748a2b59989ff1a42389a1085062bbff9",
+            "bytes": 15332244
+          },
+          "native_size": [
+            4096,
+            3072
+          ],
+          "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307"
+        },
+        {
+          "split": "test",
+          "case": 16,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case16.png",
+            "sha256": "629b4754054546f859e0ca4bbd79fef937709b1456c1b70683b0a529ba7b1ee2",
+            "bytes": 16887578
+          },
+          "native_size": [
+            4096,
+            3072
+          ],
+          "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307"
+        }
+      ],
+      "cached_panel": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/medium300_mild600_medium600_teacher/case16_structure_progress_ROI_1to1.png",
+        "sha256": "d7a377caa3315af30ed6be8c165bb877a5f7f49943cb82176c411af816a9c8e6",
+        "bytes": 1874368
+      },
+      "crop_pixels_exact": true,
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/headreset_v3_s100_diagnostic_vs_medium600_teacher/case16_diagnostic_structure_ROI_1to1.png",
+      "sha256": "73676a3d777f720005960f3cca17e2f8b00890fbb145b542e2db723a2f5a03be",
+      "bytes": 1851398
+    },
+    {
+      "case": 41,
+      "ROI": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "diagnostic_source": {
+        "case": 41,
+        "ROI": [
+          768,
+          1664,
+          1408,
+          2176
+        ],
+        "native_source": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/headreset_v3_s100_diagnostic/render/test/case41.png",
+          "sha256": "4050733b3e2ba4ddea36c8ed4297e047d1605d90bc1fed0486cb84c064ce0f07",
+          "bytes": 14552739
+        },
+        "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+        "size": [
+          3072,
+          4096
+        ],
+        "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "output": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_headreset_v3_s100_diagnostic_ROI4/case41_structure_v2_diagnostic_native_ROI.png",
+          "sha256": "ecb77debc9a7029edddf64199c73ed2823cdaa29b2986bd0798e3415f757413b",
+          "bytes": 361918
+        },
+        "crop_pixels_exact": true
+      },
+      "full_reference_sources": [
+        {
+          "split": "test",
+          "case": 41,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_medium_s600_all/render/test/case41.png",
+            "sha256": "74f79d5a7417fa4e837948ebbef6d47f0fb09f54ddf0d4e1085351632f493595",
+            "bytes": 18261904
+          },
+          "native_size": [
+            3072,
+            4096
+          ],
+          "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b"
+        },
+        {
+          "split": "test",
+          "case": 41,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case41.png",
+            "sha256": "9dab9aee1bf1ea6668a12dafcbf2c095f7f9c4dca5567b03dec153054a414368",
+            "bytes": 22923560
+          },
+          "native_size": [
+            3072,
+            4096
+          ],
+          "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b"
+        }
+      ],
+      "cached_panel": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/medium300_mild600_medium600_teacher/case41_structure_progress_ROI_1to1.png",
+        "sha256": "9ce8052181a383918a8cde7087db2bbbc4afe629e3d7a16c9bf41e6b3cdd6302",
+        "bytes": 1941448
+      },
+      "crop_pixels_exact": true,
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/headreset_v3_s100_diagnostic_vs_medium600_teacher/case41_diagnostic_structure_ROI_1to1.png",
+      "sha256": "34422db3da6e3f29b6328605c7ebed7749fac2e650d0f66ed8b45c920ef3cff8",
+      "bytes": 1973467
+    },
+    {
+      "case": 83,
+      "ROI": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "diagnostic_source": {
+        "case": 83,
+        "ROI": [
+          1216,
+          1920,
+          1856,
+          2432
+        ],
+        "native_source": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/headreset_v3_s100_diagnostic/render/test/case83.png",
+          "sha256": "1bb0405eb6bd6ac601511a126146f0a31f9d4979974e88a65fd61fbe55633943",
+          "bytes": 16264731
+        },
+        "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+        "size": [
+          3072,
+          4096
+        ],
+        "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "output": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_headreset_v3_s100_diagnostic_ROI4/case83_structure_v2_diagnostic_native_ROI.png",
+          "sha256": "03c63f53e9c6618a8328096b36663b90fe136efb95638032e341cd1fdd76e63b",
+          "bytes": 450723
+        },
+        "crop_pixels_exact": true
+      },
+      "full_reference_sources": [
+        {
+          "split": "test",
+          "case": 83,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_medium_s600_all/render/test/case83.png",
+            "sha256": "ea9221e838968fe4b15189c91729d1e616527dc7adfa620989870f0f7afa1133",
+            "bytes": 21229403
+          },
+          "native_size": [
+            3072,
+            4096
+          ],
+          "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038"
+        },
+        {
+          "split": "test",
+          "case": 83,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case83.png",
+            "sha256": "99c152fd94abede36ea724f754ebd042a78a1452e1c696792b1aae178b216673",
+            "bytes": 21597996
+          },
+          "native_size": [
+            3072,
+            4096
+          ],
+          "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038"
+        }
+      ],
+      "cached_panel": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/medium300_mild600_medium600_teacher/case83_structure_progress_ROI_1to1.png",
+        "sha256": "4ccf68d9e1ffb9454fcc76d81f7faf2532e5bfa105baae6b4dc73cacb056596f",
+        "bytes": 2353122
+      },
+      "crop_pixels_exact": true,
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/headreset_v3_s100_diagnostic_vs_medium600_teacher/case83_diagnostic_structure_ROI_1to1.png",
+      "sha256": "1104cb3d06d490bd05536b8308135edff34276e21345f7f47cd3a63040bf9ce0",
+      "bytes": 2215796
+    }
+  ],
+  "same_input_SHA_and_geometry": true,
+  "matched_full_RNG_or_score_claim": false,
+  "no_resampling_filter_enhancement": true,
+  "HTML": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/headreset_v3_s100_diagnostic_vs_medium600_teacher/index.html",
+    "sha256": "e4db12692d8a4276cd8bbf772599d6b0ed8fc9b22d4c9d63a2f0d5dcc7073a15",
+    "bytes": 1061
+  },
+  "helper": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/preparation/make_diagnostic_structure_comparison.py",
+    "sha256": "f946119a1503cc431467bff6a042a456ad429a94762966ce5c7db822d2deb15b",
+    "bytes": 6311
+  }
+}

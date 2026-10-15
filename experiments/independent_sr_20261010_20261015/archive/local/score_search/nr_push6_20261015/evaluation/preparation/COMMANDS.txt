@@ -1,0 +1,13 @@
+Push6 preparation only; no GPU launched by this agent.
+
+Root-owned formal render: PUSH6_GPU=<physical id> bash render_ro_wavelet_full.sh
+Frozen renderer seed231 before initialization; no warmup; continuous val3 then test1..100.
+Scorer split seed1234 is separate and is not the render seed.
+
+After render_complete and complete103 status, CPU proof:
+CUDA_VISIBLE_DEVICES='' /cache/independent_sr_cuda_20261013/env/bin/python /cache/independent_sr_cuda_20261013/code/push6/compare_formal_png103.py --execute
+Default output: /cache/independent_sr_cuda_20261013/audits/push6/formal_png103/ro_wavelet_exact103.json
+
+PASS_EXACT103 means actual103 canonical PNG files per cohort match byte SHA, all formal inputs/order/provenance and final4RNG agree. It refers explicitly to A7750's existing independently audited103/418 quality; it is not a fresh metric run and not a claim of every native float/per-call RNG equality.
+PNG_CHANGED_REQUIRES_INDEPENDENT103_418 prohibits quality reuse and requires the frozen original scorer + new independent full audit.
+No diagnostic PNG is used. No partial result predicts full quality. Latency and quality remain separate until the final CPU join.

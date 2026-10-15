@@ -1,0 +1,46 @@
+{
+  "launched_at_UTC": "2026-10-15T12:36:53.049324+00:00",
+  "jobs": [
+    {
+      "gpu": 0,
+      "role": "diagnostic",
+      "pid": 113410,
+      "argv": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "-u",
+        "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/render_pixg5i_diagnostic4.py",
+        "--model-dir",
+        "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s600/model_dir",
+        "--candidate-manifest-sha256",
+        "398a259dcb8bd6616b6d3043ed414eba73ef63e400bb21eceaf19f1160081a56",
+        "--checkpoint-sha256",
+        "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa",
+        "--out-dir",
+        "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/headreset_v3_s600_diagnostic",
+        "--execute"
+      ],
+      "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_headreset_v3_s600_diagnostic_20261015.log"
+    },
+    {
+      "gpu": 3,
+      "role": "render",
+      "pid": 113411,
+      "argv": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "-u",
+        "/cache/independent_sr_cuda_20261013/code/render_cuda_submission.py",
+        "--model-dir",
+        "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s600/model_dir",
+        "--test-dir",
+        "/cache/independent_sr_cuda_20261013/source_payload/assets/input",
+        "--val-dir",
+        "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/\u9a8c\u8bc1\u96c6",
+        "--out-dir",
+        "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_headreset_v3_s600_all",
+        "--cases",
+        "all"
+      ],
+      "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_headreset_v3_s600_render_20261015.log"
+    }
+  ]
+}

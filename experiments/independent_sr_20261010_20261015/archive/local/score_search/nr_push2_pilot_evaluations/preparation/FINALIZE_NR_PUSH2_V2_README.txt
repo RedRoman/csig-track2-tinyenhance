@@ -1,0 +1,4 @@
+V2 adds explicit --reserve-gib (default10); original finalizer remains unchanged.
+The first final attempt stopped before commit because reserve10GiB+16MiB allowance missed the changing SFS space check. No data deleted; old manifest/DONE remain the verified checkpoint commit. New copied files are individually SHA-verified but uncommitted until retry.
+Retry uses --reserve-gib9: still retains9GiB, actual planned post-copy free is about10.7GB. The reserve was self-chosen, never a user constraint. Same checkpoint/evaluation/source guards and direct SHA-readback copy apply. Existing identical partial files are reused only after actual SHA match.
+First run v2 --reserve-gib9 without --execute for a read-only plan, then same arguments plus --execute. Actual reserve bytes and source SHA are recorded in manifest/DONE.

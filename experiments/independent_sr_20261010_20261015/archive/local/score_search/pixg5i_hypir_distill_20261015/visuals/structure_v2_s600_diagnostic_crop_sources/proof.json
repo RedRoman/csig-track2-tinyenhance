@@ -1,0 +1,295 @@
+{
+  "status": "PASS_ACTUAL_DIAGNOSTIC4_NATIVE_ROI_ONLY",
+  "CPU_only": true,
+  "GPU_used": false,
+  "diagnostic_manifest": {
+    "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/structure_v2_s600/diagnostic_manifest.json",
+    "sha256": "7fe61911fc385dc968f04afd58104656ba458be3584f1335ba9d5421923fa345",
+    "bytes": 11452
+  },
+  "diagnostic_protocol": {
+    "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/structure_v2_s600/diagnostic_protocol.json",
+    "sha256": "5bf338c7c43687d3b0770e73018cc22a5b3ec3a3c1e348327d3f160180db70c8",
+    "bytes": 8107
+  },
+  "protocol": {
+    "schema": "pixg5i_native4_diagnostic_v1",
+    "scope": "DIAGNOSTIC_NATIVE4_ONLY_NOT_FORMAL_OR_SCORE",
+    "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s600/model_dir",
+    "candidate_manifest": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s600/candidate_manifest.json",
+      "sha256": "812c2b19021a24cbcd4de993fb8da328c85c3f4dfe9502a239a71674a55fb7c0",
+      "bytes": 12374
+    },
+    "binding": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s600/model_dir/pixg5i_binding.json",
+      "sha256": "e3d90128a2227c85e6ac410775ca685fa62ddd8efd1dc32710ff3431d4f67e2f",
+      "bytes": 4447
+    },
+    "checkpoint_sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+    "tasks": [
+      {
+        "split": "test",
+        "case": 7,
+        "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case7.jpg",
+        "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+        "size": [
+          4096,
+          3072
+        ]
+      },
+      {
+        "split": "test",
+        "case": 16,
+        "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case16.jpg",
+        "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+        "size": [
+          4096,
+          3072
+        ]
+      },
+      {
+        "split": "test",
+        "case": 41,
+        "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case41.jpg",
+        "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+        "size": [
+          3072,
+          4096
+        ]
+      },
+      {
+        "split": "test",
+        "case": 83,
+        "input": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case83.jpg",
+        "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+        "size": [
+          3072,
+          4096
+        ]
+      }
+    ],
+    "source": {
+      "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/render_pixg5i_diagnostic4.py",
+      "sha256": "cee4ceb8df95cfc5a7ebbc2a00b1ce0566f1866cbf5cb8e4ee7726fb306fdca9",
+      "bytes": 9140
+    },
+    "original_formal_renderer_sha256": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5",
+    "input_encoding": "original float32 RGB/255 -> half()*2-1; full native image",
+    "output_encoding": "original float().clamp(-1,1); ((*0.5+0.5)*255).round().astype(uint8); PNG compress1",
+    "cases": [
+      7,
+      16,
+      41,
+      83
+    ],
+    "seed": 231,
+    "RNG_scope": "Seed231 before model initialization, then continuous diagnostic order7/16/41/83; not full-val3/test100 sequence",
+    "extra_warmup": false,
+    "quality_or_speed_claim": false,
+    "no_val_or_GT": true,
+    "runner": {
+      "schema": "pixg5i_original_inference_metadata_adapter_v1",
+      "model_type": "supplied_pixG5i_pixel_UNet",
+      "label": "pixg5i_hypir_structure_v2_s600",
+      "stage": "distilled_checkpoint",
+      "runner_path": "cudagraph:max-autotune",
+      "runner_sha256": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a",
+      "checkpoint_sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+      "weight_path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s600/model_dir/model.pth",
+      "repo_path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s600/model_dir",
+      "source_sha256": {
+        "reference_runner.py": "6222ead92dc6fb24b88c0350e41191fc27a5adc2f6ba38bd383a4badb9bd8c1e",
+        "pix_model.py": "2f1cd3cd8311381e432138f489b01b982e08ebd5b09ecbc05ac87f7bfb577923",
+        "pixg5i_binding.json": "e3d90128a2227c85e6ac410775ca685fa62ddd8efd1dc32710ff3431d4f67e2f"
+      },
+      "initial_package_checkpoint_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+      "archive_sha256": "f8e154da5ea9cb2fe165a316f824003459661945e6bbe22efd025d8592d573d6",
+      "training_provenance": {
+        "config": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/config.json",
+          "sha256": "f0991c614f0843bd9e4a053c7d89b53ce6ad0300aa1d7b45204a728917528402",
+          "bytes": 78463
+        },
+        "marker": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/checkpoint_step600.json",
+          "sha256": "2c8a02d4e00859f2d65721f29bbadd6541f902aebfb6a8fccff82b366cc8050f",
+          "bytes": 5040
+        },
+        "input_catalog": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/input_catalog.json",
+          "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+          "bytes": 23987
+        },
+        "teacher_catalog": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/teacher_catalog.json",
+          "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+          "bytes": 39787
+        },
+        "resume": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/resume_step600.pt",
+          "sha256": "0feaebcdd5eff2c759c5e6a7a73f6b761cdd778381a502cecd8eb07a91ab3bd5",
+          "bytes": 45582651
+        },
+        "training_source": {
+          "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_structure_v2.py",
+          "sha256": "3c2e83ce965ce4dbc33fa5306679c8e969f1fe1477d41af27c9ed1fc6834225e",
+          "bytes": 28078
+        }
+      },
+      "teacher": {
+        "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+        "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+        "applied_to_this_checkpoint": true,
+        "render_manifest": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+          "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+          "bytes": 81396
+        }
+      },
+      "used_as_G4_reference": false,
+      "quality_reuse_claim": false,
+      "input": "original FP16 native [1,3,H,W] [-1,1]",
+      "output": "original FP16 native [1,3,H,W] [-1,1]",
+      "inference": "Unchanged original fold/FP16/channels_last;512 original compile/graph;native original eager with original OOM tile1024 overlap128 fallback",
+      "adapter": "Only initialization seed and identity metadata; infer delegates unchanged original supplied Runner",
+      "seed": "231 before initialization; continuous inference RNG",
+      "inference_RNG_matches_HYPIR_required": false
+    },
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "torch": "2.8.0+cu128",
+    "model_dir_sha256": {
+      "config.yaml": "e13bab32185ac95f07ac36133eff89133a33ed90cc5ca534b7d8496bc457250d",
+      "model.pth": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+      "pix_model.py": "2f1cd3cd8311381e432138f489b01b982e08ebd5b09ecbc05ac87f7bfb577923",
+      "pixg5i_binding.json": "e3d90128a2227c85e6ac410775ca685fa62ddd8efd1dc32710ff3431d4f67e2f",
+      "reference_runner.py": "6222ead92dc6fb24b88c0350e41191fc27a5adc2f6ba38bd383a4badb9bd8c1e",
+      "runner.py": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a"
+    },
+    "constructor_before_fourRNG_sha256": "df63e50ba172371bb04b12c3287db3bc4407e16a450cf6982b5af77d62c5cbc0",
+    "constructor_after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55"
+  },
+  "candidate_manifest": {
+    "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s600/candidate_manifest.json",
+    "sha256": "812c2b19021a24cbcd4de993fb8da328c85c3f4dfe9502a239a71674a55fb7c0",
+    "bytes": 12374
+  },
+  "checkpoint_sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+  "outputs": [
+    {
+      "case": 7,
+      "ROI": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "native_source": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/structure_v2_s600/render/test/case7.png",
+        "sha256": "2bb112a9e5df2516f9bae0a766b2f6190ad67d63d1b6104678e9ea6d45be7268",
+        "bytes": 17590787
+      },
+      "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+      "size": [
+        4096,
+        3072
+      ],
+      "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "output": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_structure_v2_s600_diagnostic_ROI4/case7_structure_v2_diagnostic_native_ROI.png",
+        "sha256": "4c57895e6b117bc2847def6710547ebfc800a85e78ae093bb3aaaf4efe7caa0d",
+        "bytes": 406550
+      },
+      "crop_pixels_exact": true
+    },
+    {
+      "case": 16,
+      "ROI": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "native_source": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/structure_v2_s600/render/test/case16.png",
+        "sha256": "0294a3a9798892bc6a7aaec602bda04e6f1af75a784927628a6c595031c29548",
+        "bytes": 14044581
+      },
+      "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+      "size": [
+        4096,
+        3072
+      ],
+      "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "output": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_structure_v2_s600_diagnostic_ROI4/case16_structure_v2_diagnostic_native_ROI.png",
+        "sha256": "954ddda0a9387ae1f6093af597a09d16f7020f3ad90499d752ec6fd0b295f573",
+        "bytes": 422108
+      },
+      "crop_pixels_exact": true
+    },
+    {
+      "case": 41,
+      "ROI": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "native_source": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/structure_v2_s600/render/test/case41.png",
+        "sha256": "e37e789f1e01d688a7a51a1a56be1efb245cf8acf298f9b7c44100fe8bef086c",
+        "bytes": 17117141
+      },
+      "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+      "size": [
+        3072,
+        4096
+      ],
+      "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "output": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_structure_v2_s600_diagnostic_ROI4/case41_structure_v2_diagnostic_native_ROI.png",
+        "sha256": "05df9aa19dcf601623637c30c6685361caa761eae67142dce71c39c251b637b3",
+        "bytes": 434626
+      },
+      "crop_pixels_exact": true
+    },
+    {
+      "case": 83,
+      "ROI": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "native_source": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/structure_v2_s600/render/test/case83.png",
+        "sha256": "1de298ffb691a7c2ae007dd4657d3e1327aaf1732cb9c3a55f1645c3c69c114b",
+        "bytes": 19654681
+      },
+      "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+      "size": [
+        3072,
+        4096
+      ],
+      "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+      "output": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_structure_v2_s600_diagnostic_ROI4/case83_structure_v2_diagnostic_native_ROI.png",
+        "sha256": "a9132ebfb8965ddcd1f3a2c227c5e206756ebdd3e4112dacb75f424adbc28ed6",
+        "bytes": 531484
+      },
+      "crop_pixels_exact": true
+    }
+  ],
+  "no_full_score_or_matched_full_RNG_claim": true,
+  "no_resize_filter_enhancement": true,
+  "helper": {
+    "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_distill_preparation/crop_structure_v2_diagnostic4.py",
+    "sha256": "0463ec18520bf3e894bb3a4402881d9be5ef4c11deddb99b32415d2770044cbe",
+    "bytes": 4541
+  }
+}

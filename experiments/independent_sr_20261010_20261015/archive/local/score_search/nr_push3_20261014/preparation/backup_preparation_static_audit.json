@@ -1,0 +1,52 @@
+{
+  "schema": "nr_push3_backup_preparation_static_audit_v1",
+  "AST_parsed": true,
+  "module_imports_standard_library_only": true,
+  "torch_imported": false,
+  "numpy_imported": false,
+  "unlisted_pickle_global_rejected": true,
+  "destination_traversal_rejected": true,
+  "absolute_destination_rejected": true,
+  "large_copies_started": false,
+  "SFS_mutation_started": false,
+  "source_sha256": "60fbeae585b4fcb6475f728477166f868880d4dd4707d8ce5695702a718156b7",
+  "checkpoint_runtime_readonly_smoke": {
+    "run": "cuda_nr_stage4_s6500_teacher6250_cont750",
+    "local_step": 250,
+    "global_step": 6750,
+    "optimizer_step": 750,
+    "raw_resume_all514_actual_storage_SHA_exact": true,
+    "Adam_all514_FP32_shape_and_actual_step750": true,
+    "all4_RNG_present": true,
+    "torch_imported": false,
+    "numpy_imported": false,
+    "SFS_writes": false
+  },
+  "full_quality_runtime_readonly_smoke": {
+    "label": "nr_stage3_anchor6250_m15_s6500_compiled_all",
+    "native_PNG_actual_SHA_matches_manifest_and_score": 103,
+    "scalar_metrics": 418,
+    "NR": 2.2783103602882613,
+    "FR": 1.4614406824111938,
+    "S_proxy": 3.739751042699455,
+    "frozen_source_and_input_files": 113,
+    "torch_imported": false,
+    "numpy_imported": false,
+    "SFS_writes": false
+  },
+  "previous_backup_helper_sha256": "666d5d29d319d6f514498485178910ac643946c4bb951325e22a18174d91a4a4",
+  "CLI_config_inventory_fix": {
+    "required_actual_directory": "/cache/independent_sr_cuda_20261013/code/cuda_training",
+    "required_files": [
+      "config_stage4_A_continue6250.json",
+      "config_stage4_B_reanchor6500.json",
+      "config_stage4_C_nrstrong.json",
+      "stage4_preparation_static_audit.json",
+      "STAGE_V4_README.md"
+    ],
+    "all_five_remote_files_readonly_existence_checked": true,
+    "scope": "Only explicit small-file inventory amended; checkpoint/score/copy/commit guards unchanged",
+    "large_copies_started": false,
+    "SFS_writes": false
+  }
+}

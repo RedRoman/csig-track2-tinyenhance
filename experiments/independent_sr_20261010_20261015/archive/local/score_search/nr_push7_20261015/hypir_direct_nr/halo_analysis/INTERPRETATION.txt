@@ -1,0 +1,57 @@
+CPU overlap / halo check, 2026-10-15
+
+结论：512 crop 的单 tile 采样与原生大图内部确实存在可推导的分布差异。
+768 crop 增加了4 tile，但没有使中心512完全达到原生内部的噪声混合统计。
+这个因素与 MUSIQ 的全图上下文差异独立，值得作为下一项受控假设；本记录不实现训练。
+
+证据范围
+读取的是现有 common.py SHA76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923
+与 base.py SHA99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161。
+原路径依次 VAE encode posterior.sample -> latent Gaussian blend -> G tile
+-> Gaussian blend -> VAE decode tile -> Gaussian blend -> 5级wavelet。
+tile512/stride256；编码后的权重图为64/32。输出累加BF16、count FP32、除后再cast。
+Gaussian具有窄峰且正尾部，不能将整个重叠区域当作等权平均。
+
+独立采样统计
+固定各tile的均值/标准差，忽略BF16舍入，有
+Var(sum(alpha_i*(mu_i+sigma_i*epsilon_i)) | input)=sum(alpha_i^2*sigma_i^2)。
+仅为了隔离重叠因素，toy设各sigma相同。单tile方差比=1；原生内部32x32相位
+平均为0.846401，交叉点最低约0.259299（标准差约0.509倍）。20,000组独立正态
+CPU采样所得交叉点方差0.257928，与该式一致。不是实际模型posterior方差测量。
+实际不同上下文的mu/sigma也变化，不能据toy宣称真实任一点方差一定比512更低。
+
+输入context / 编码tile数 / 中心512平均方差比（相同sigma的解析toy）
+512 / 1 / 1.000000
+768 / 4 / 0.921601
+1024 / 9 / 0.846401
+1536 / 25 / 0.846401
+2048 / 49 / 0.846401
+2560 / 81 / 0.846401
+
+因此1024 context+中心512已在该简化统计上覆盖原生编码噪声混合；继续增大context
+主要改变三阶段上下文依赖与边界，不会再次降低这项理想化的相位平均方差。
+对整个crop计算loss仍会混入边界。即使crop更大，若loss仍作用于所有像素，也没有
+专门隔离原生内部；固定中心core的实验比只把512改成1024更容易解释。
+
+三阶段支持与wavelet
+VAE/UNet有GN/attention，允许整tile依赖；不能只按卷积半径估算halo64。
+对与全局256网格对齐的512 core，每个阶段可向两侧扩展256像素支持。
+三阶段最坏支持是halo768/context2048，但这是最后wavelet之前。
+5级wavelet的半径为1+2+4+8+16=31像素，先扩展decoder需求，会触及额外tile；
+对齐内部的保守完整闭合上界为halo1024/context2560。
+正系数的整tile均值线性fixture给出一个可复核的构造：1536仍缺core外部支持，
+2048在core闭合、wavelet扩展区域仍未闭合，2560二者闭合。fixture不是HYPIR
+Jacobian，也不能把其中缺失系数质量或L1差当作网络误差预测。
+
+即使支持闭合，也没有自动实现逐像素exact：需要正确的全局tile索引与posterior随机
+抽样对应关系；原scheduler未用于最终输出的DDPM噪声也消耗RNG。原生边缘末tile会
+end-anchor，可能偏离256网格。以上几何结论限对齐的内部区域。
+
+后续如果root另行授权，可先用1536 context/中心512 loss作近似受控实验，原三tiler
+与推理512/256不动。它比盲目增大crop更直接检验内部上下文，但不是strict exact。
+需要原decode checkpoint的输出/梯度对照和真实单步显存预检；本记录没有训练代码。
+中心512 IQA仍是局部critic，不能同时宣称修复全图MUSIQ上下文分布。当前NIQE768
+分支独立按原工具完整pilot/视觉/必要full验收，不因本toy推断它会成功或失败。
+
+本次只运行本机stdlib CPU toy；未import torch、未用GPU、未读模型权重、未改变
+任何现有训练/推理/指标/旧归档。JSON保存全部数值与限制。

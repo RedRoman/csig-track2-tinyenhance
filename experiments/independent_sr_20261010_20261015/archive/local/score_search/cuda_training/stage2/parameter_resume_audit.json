@@ -1,0 +1,657 @@
+{
+  "schema": "cuda_nr_stage2_parameter_CPU_audit_v1",
+  "audited_bjt": "2026-10-14T17:32:16.635275+08:00",
+  "root": "/cache/independent_sr_cuda_20261013",
+  "CPU_only": true,
+  "CUDA_VISIBLE_DEVICES": "",
+  "results": [
+    {
+      "run": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage2_s6250_cont250",
+      "status": "PASS",
+      "nr_round_ste": false,
+      "protocol_id": "e1b74d29699782b6de9d1e52df10d16ba900cd4cb1de0aa600e39e3c0c70d791",
+      "parent_lineage": {
+        "parent_resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+        "parent_resume_sha256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+        "parent_config": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/config.json",
+        "parent_config_sha256": "2a459e95e248d1b502b651753b9598ce7adfb92c24e48863458265458ea1ca5a",
+        "parent_protocol_id": "fa5ea19179561aac206b26f7dd3596406f1ad376dccd38f49821146623b98d52",
+        "parent_local_step": 250,
+        "parent_global_step": 6250,
+        "parent_optimizer_step": 250,
+        "frozen_v1_source": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+        "frozen_v1_source_sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+        "restore_order": "raw6000 BF16 init -> LoRA.float -> exact parent FP32 copy -> parent AdamW -> all4 parent RNG",
+        "objective_relation": "same objective exact state continuation"
+      },
+      "standalone_step6500_structure": {
+        "keys": 514,
+        "elements": 259474432,
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "all_finite": true
+      },
+      "resume_LoRA_exact_equal_to_standalone_step6500": true,
+      "real_FP32_delta_vs_sealed_parent6250_resume": {
+        "elements": 259474432,
+        "changed_elements": 259463697,
+        "changed_fraction": 0.9999586279082788,
+        "tensors_changed": 514,
+        "max_abs": 2.5000888854265213e-05,
+        "l2": 0.04899644177529621,
+        "mean_abs": 2.3903543854736215e-06,
+        "method": "FP32 elementwise subtraction; FP64 sum(abs) and sum(square); every tensor/element checked",
+        "largest10_tensors_by_max_abs": [
+          {
+            "key": "up_blocks.2.attentions.2.transformer_blocks.0.ff.net.2.lora_A.default.weight",
+            "elements": 655360,
+            "changed_elements": 655325,
+            "max_abs": 2.5000888854265213e-05,
+            "l2": 0.0035015950247167266
+          },
+          {
+            "key": "up_blocks.3.attentions.1.transformer_blocks.0.ff.net.0.proj.lora_B.default.weight",
+            "elements": 655360,
+            "changed_elements": 655343,
+            "max_abs": 2.39877263084054e-05,
+            "l2": 0.00388058445910527
+          },
+          {
+            "key": "up_blocks.2.attentions.1.transformer_blocks.0.ff.net.2.lora_A.default.weight",
+            "elements": 655360,
+            "changed_elements": 655310,
+            "max_abs": 2.3730099201202393e-05,
+            "l2": 0.0033717905609759406
+          },
+          {
+            "key": "up_blocks.3.attentions.2.transformer_blocks.0.ff.net.2.lora_A.default.weight",
+            "elements": 327680,
+            "changed_elements": 327663,
+            "max_abs": 2.31228768825531e-05,
+            "l2": 0.0028353237545156273
+          },
+          {
+            "key": "up_blocks.2.resnets.1.conv_shortcut.lora_A.default.weight",
+            "elements": 327680,
+            "changed_elements": 327660,
+            "max_abs": 2.3052096366882324e-05,
+            "l2": 0.002111223792302663
+          },
+          {
+            "key": "up_blocks.2.attentions.2.transformer_blocks.0.attn1.to_out.0.lora_A.default.weight",
+            "elements": 163840,
+            "changed_elements": 163834,
+            "max_abs": 2.292916178703308e-05,
+            "l2": 0.0016773769701276236
+          },
+          {
+            "key": "up_blocks.3.resnets.2.conv1.lora_B.default.weight",
+            "elements": 81920,
+            "changed_elements": 81916,
+            "max_abs": 2.2880034521222115e-05,
+            "l2": 0.0012554058979910823
+          },
+          {
+            "key": "up_blocks.2.resnets.0.conv_shortcut.lora_A.default.weight",
+            "elements": 491520,
+            "changed_elements": 491494,
+            "max_abs": 2.2729975171387196e-05,
+            "l2": 0.002469960556665959
+          },
+          {
+            "key": "up_blocks.3.attentions.1.transformer_blocks.0.ff.net.2.lora_A.default.weight",
+            "elements": 327680,
+            "changed_elements": 327666,
+            "max_abs": 2.236058935523033e-05,
+            "l2": 0.0028115216764216934
+          },
+          {
+            "key": "up_blocks.3.attentions.2.proj_in.lora_A.default.weight",
+            "elements": 81920,
+            "changed_elements": 81916,
+            "max_abs": 2.2260937839746475e-05,
+            "l2": 0.0013193643958747234
+          }
+        ]
+      },
+      "resume_steps": {
+        "stage_local": 250,
+        "global": 6500,
+        "Adam": 500
+      },
+      "Adam": {
+        "state_entries": 514,
+        "parameter_ids_complete_unique": true,
+        "shape_to_parameter_order_checked": true,
+        "all_steps": [
+          500
+        ],
+        "all_moments_FP32_CPU_finite": true,
+        "moment_elements_each": 259474432,
+        "exp_avg_sq_nonnegative": true,
+        "every_exp_avg_tensor_has_nonzero_values": true,
+        "state_field_sets": [
+          [
+            "exp_avg",
+            "exp_avg_sq",
+            "step"
+          ]
+        ],
+        "moment_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_group_options": {
+          "lr": 2e-07,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": false,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": true
+        }
+      },
+      "final_rng": {
+        "state_sha256": {
+          "python": "38702a76fb2acc4bdc8df299281a420da95d6930a60009498a7e44e885886949",
+          "numpy": "595eb41d72b9ec1878981b2a0d9ec8cb2220ba857f6128bbc0820233f6267a79",
+          "cpu": "f99273ba73d059b94d75bef7dca976542b44aeb12e4e337f7d4567ec94801229",
+          "cuda": "2200ccfbf0339a551a97b7b488b00a0f888bad1d1a975d8c2e1d4ee030e686eb"
+        },
+        "python_and_numpy_state_loadable_in_independent_instances": true,
+        "torch_cpu_state_loadable_in_independent_CPU_generator": true,
+        "torch_cpu_rng_bytes": 5056,
+        "cuda_rng_bytes": 16,
+        "cuda_rng_loaded_as_CPU_bytes_only_never_restored": true,
+        "hash_encoding": "Python json.dumps(state); NumPy key raw bytes plus repr of algorithm/position/Gaussian cache; Torch raw uint8 bytes"
+      },
+      "first_case_crop_parent_RNG_replay": {
+        "local_step": 1,
+        "global_step": 6251,
+        "optimizer_step": 251,
+        "case": 13,
+        "crop_xy": [
+          967,
+          2015
+        ],
+        "matches_independent_parent_Python_RNG_replay": true
+      },
+      "checkpoint_and_protocol_records": {
+        "step6500.pth": {
+          "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage2_s6250_cont250/step6500.pth",
+          "bytes": 1038079419,
+          "sha256": "dc7bbf712e3039302a52951075409a23771b8d832024d1800bbe3398c41d4afa",
+          "mtime_bjt": "2026-10-14T17:29:22.150300+08:00"
+        },
+        "resume_latest.pt": {
+          "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage2_s6250_cont250/resume_latest.pt",
+          "bytes": 3114330637,
+          "sha256": "f137748d876d684aadb5d62c54015d72c1fcd28b13f031550609eaa891cc0f36",
+          "mtime_bjt": "2026-10-14T17:29:25.844363+08:00"
+        },
+        "config.json": {
+          "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage2_s6250_cont250/config.json",
+          "bytes": 31862,
+          "sha256": "24bb8e737f7a2a204510a3b6e921531e680ccc40ec7240bdb9545ceb95e30879",
+          "mtime_bjt": "2026-10-14T17:25:10.495012+08:00"
+        },
+        "parent_migration.json": {
+          "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage2_s6250_cont250/parent_migration.json",
+          "bytes": 2896,
+          "sha256": "8710513bcaf2704cd555f88fe33f79c3a568a84def3ebfca61ea5cda5869624a",
+          "mtime_bjt": "2026-10-14T17:25:10.496012+08:00"
+        }
+      },
+      "source_records": {
+        "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py": {
+          "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+          "bytes": 18143,
+          "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+          "mtime_bjt": "2026-10-13T23:33:59.946921+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py": {
+          "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py",
+          "bytes": 2725,
+          "sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd",
+          "mtime_bjt": "2026-10-12T18:23:51+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py": {
+          "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py",
+          "bytes": 5937,
+          "sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161",
+          "mtime_bjt": "2026-10-13T21:41:42.144766+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py": {
+          "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py",
+          "bytes": 9323,
+          "sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923",
+          "mtime_bjt": "2026-10-12T18:23:51+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py": {
+          "path": "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py",
+          "bytes": 1028,
+          "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f",
+          "mtime_bjt": "2026-10-13T21:45:16.132400+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py": {
+          "path": "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py",
+          "bytes": 5324,
+          "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf",
+          "mtime_bjt": "2026-10-13T22:09:58.308600+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py": {
+          "path": "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py",
+          "bytes": 4997,
+          "sha256": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2",
+          "mtime_bjt": "2026-10-13T21:58:25.970839+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py": {
+          "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py",
+          "bytes": 20806,
+          "sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651",
+          "mtime_bjt": "2026-10-14T17:24:25.019243+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py": {
+          "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py",
+          "bytes": 1501,
+          "sha256": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812",
+          "mtime_bjt": "2026-10-14T17:24:25.090244+08:00"
+        }
+      },
+      "completed_file_size_and_mtime_unchanged_during_audit": true
+    },
+    {
+      "run": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage2_s6250_roundste250",
+      "status": "PASS",
+      "nr_round_ste": true,
+      "protocol_id": "93f5f88e1ee91997055aafc2aac6ca2d18f78cde3776b9a83529f805176433f8",
+      "parent_lineage": {
+        "parent_resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+        "parent_resume_sha256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+        "parent_config": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/config.json",
+        "parent_config_sha256": "2a459e95e248d1b502b651753b9598ce7adfb92c24e48863458265458ea1ca5a",
+        "parent_protocol_id": "fa5ea19179561aac206b26f7dd3596406f1ad376dccd38f49821146623b98d52",
+        "parent_local_step": 250,
+        "parent_global_step": 6250,
+        "parent_optimizer_step": 250,
+        "frozen_v1_source": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+        "frozen_v1_source_sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+        "restore_order": "raw6000 BF16 init -> LoRA.float -> exact parent FP32 copy -> parent AdamW -> all4 parent RNG",
+        "objective_relation": "new round-STE objective fork; recorded Adam/RNG warmstart"
+      },
+      "standalone_step6500_structure": {
+        "keys": 514,
+        "elements": 259474432,
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "all_finite": true
+      },
+      "resume_LoRA_exact_equal_to_standalone_step6500": true,
+      "real_FP32_delta_vs_sealed_parent6250_resume": {
+        "elements": 259474432,
+        "changed_elements": 259463713,
+        "changed_fraction": 0.9999586895713871,
+        "tensors_changed": 514,
+        "max_abs": 2.496607521607075e-05,
+        "l2": 0.04840120814972133,
+        "mean_abs": 2.363058760990898e-06,
+        "method": "FP32 elementwise subtraction; FP64 sum(abs) and sum(square); every tensor/element checked",
+        "largest10_tensors_by_max_abs": [
+          {
+            "key": "up_blocks.3.attentions.1.transformer_blocks.0.ff.net.0.proj.lora_B.default.weight",
+            "elements": 655360,
+            "changed_elements": 655352,
+            "max_abs": 2.496607521607075e-05,
+            "l2": 0.0038722387078010544
+          },
+          {
+            "key": "up_blocks.2.attentions.2.transformer_blocks.0.ff.net.2.lora_A.default.weight",
+            "elements": 655360,
+            "changed_elements": 655318,
+            "max_abs": 2.4593668058514595e-05,
+            "l2": 0.003390764984219153
+          },
+          {
+            "key": "up_blocks.3.attentions.1.transformer_blocks.0.ff.net.2.lora_B.default.weight",
+            "elements": 81920,
+            "changed_elements": 81918,
+            "max_abs": 2.29543074965477e-05,
+            "l2": 0.0014027975658944614
+          },
+          {
+            "key": "up_blocks.3.attentions.2.transformer_blocks.0.ff.net.0.proj.lora_A.default.weight",
+            "elements": 81920,
+            "changed_elements": 81918,
+            "max_abs": 2.2755935788154602e-05,
+            "l2": 0.001384418619701024
+          },
+          {
+            "key": "up_blocks.2.attentions.2.transformer_blocks.0.attn1.to_out.0.lora_A.default.weight",
+            "elements": 163840,
+            "changed_elements": 163829,
+            "max_abs": 2.255663275718689e-05,
+            "l2": 0.0016759245922651806
+          },
+          {
+            "key": "up_blocks.3.attentions.2.transformer_blocks.0.ff.net.2.lora_A.default.weight",
+            "elements": 327680,
+            "changed_elements": 327668,
+            "max_abs": 2.2458843886852264e-05,
+            "l2": 0.0028207226230874917
+          },
+          {
+            "key": "up_blocks.3.attentions.2.proj_in.lora_A.default.weight",
+            "elements": 81920,
+            "changed_elements": 81915,
+            "max_abs": 2.2371765226125717e-05,
+            "l2": 0.0013320873954252405
+          },
+          {
+            "key": "up_blocks.3.resnets.2.conv1.lora_B.default.weight",
+            "elements": 81920,
+            "changed_elements": 81917,
+            "max_abs": 2.2158725187182426e-05,
+            "l2": 0.0012390232765169392
+          },
+          {
+            "key": "up_blocks.3.attentions.2.transformer_blocks.0.ff.net.0.proj.lora_B.default.weight",
+            "elements": 655360,
+            "changed_elements": 655341,
+            "max_abs": 2.2147432900965214e-05,
+            "l2": 0.0037448125492569933
+          },
+          {
+            "key": "up_blocks.2.upsamplers.0.conv.lora_A.default.weight",
+            "elements": 1474560,
+            "changed_elements": 1474486,
+            "max_abs": 2.1944520995020866e-05,
+            "l2": 0.004482236192490502
+          }
+        ]
+      },
+      "resume_steps": {
+        "stage_local": 250,
+        "global": 6500,
+        "Adam": 500
+      },
+      "Adam": {
+        "state_entries": 514,
+        "parameter_ids_complete_unique": true,
+        "shape_to_parameter_order_checked": true,
+        "all_steps": [
+          500
+        ],
+        "all_moments_FP32_CPU_finite": true,
+        "moment_elements_each": 259474432,
+        "exp_avg_sq_nonnegative": true,
+        "every_exp_avg_tensor_has_nonzero_values": true,
+        "state_field_sets": [
+          [
+            "exp_avg",
+            "exp_avg_sq",
+            "step"
+          ]
+        ],
+        "moment_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_group_options": {
+          "lr": 2e-07,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": false,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": true
+        }
+      },
+      "final_rng": {
+        "state_sha256": {
+          "python": "38702a76fb2acc4bdc8df299281a420da95d6930a60009498a7e44e885886949",
+          "numpy": "595eb41d72b9ec1878981b2a0d9ec8cb2220ba857f6128bbc0820233f6267a79",
+          "cpu": "f99273ba73d059b94d75bef7dca976542b44aeb12e4e337f7d4567ec94801229",
+          "cuda": "2200ccfbf0339a551a97b7b488b00a0f888bad1d1a975d8c2e1d4ee030e686eb"
+        },
+        "python_and_numpy_state_loadable_in_independent_instances": true,
+        "torch_cpu_state_loadable_in_independent_CPU_generator": true,
+        "torch_cpu_rng_bytes": 5056,
+        "cuda_rng_bytes": 16,
+        "cuda_rng_loaded_as_CPU_bytes_only_never_restored": true,
+        "hash_encoding": "Python json.dumps(state); NumPy key raw bytes plus repr of algorithm/position/Gaussian cache; Torch raw uint8 bytes"
+      },
+      "first_case_crop_parent_RNG_replay": {
+        "local_step": 1,
+        "global_step": 6251,
+        "optimizer_step": 251,
+        "case": 13,
+        "crop_xy": [
+          967,
+          2015
+        ],
+        "matches_independent_parent_Python_RNG_replay": true
+      },
+      "checkpoint_and_protocol_records": {
+        "step6500.pth": {
+          "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage2_s6250_roundste250/step6500.pth",
+          "bytes": 1038079419,
+          "sha256": "095f93f17d998d708639f2a3b3641052c576b3036efcbc881eb2e88360e18070",
+          "mtime_bjt": "2026-10-14T17:29:16.252198+08:00"
+        },
+        "resume_latest.pt": {
+          "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage2_s6250_roundste250/resume_latest.pt",
+          "bytes": 3114330637,
+          "sha256": "64da2f69b3732555ecc6954a6c4a777125235c30173606e40f354a4664969100",
+          "mtime_bjt": "2026-10-14T17:29:19.319251+08:00"
+        },
+        "config.json": {
+          "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage2_s6250_roundste250/config.json",
+          "bytes": 31951,
+          "sha256": "005b10a3e08ae493dd113e62799985675451b9094d929fbda3d11ce45ed28ff5",
+          "mtime_bjt": "2026-10-14T17:25:11.244025+08:00"
+        },
+        "parent_migration.json": {
+          "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage2_s6250_roundste250/parent_migration.json",
+          "bytes": 2914,
+          "sha256": "c8c6f4d5ff373b0bff2b38178188bd1a83637da9ee3cac349ad8f579d356808a",
+          "mtime_bjt": "2026-10-14T17:25:11.244025+08:00"
+        }
+      },
+      "source_records": {
+        "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py": {
+          "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+          "bytes": 18143,
+          "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+          "mtime_bjt": "2026-10-13T23:33:59.946921+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py": {
+          "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py",
+          "bytes": 2725,
+          "sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd",
+          "mtime_bjt": "2026-10-12T18:23:51+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py": {
+          "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py",
+          "bytes": 5937,
+          "sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161",
+          "mtime_bjt": "2026-10-13T21:41:42.144766+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py": {
+          "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py",
+          "bytes": 9323,
+          "sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923",
+          "mtime_bjt": "2026-10-12T18:23:51+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py": {
+          "path": "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py",
+          "bytes": 1028,
+          "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f",
+          "mtime_bjt": "2026-10-13T21:45:16.132400+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py": {
+          "path": "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py",
+          "bytes": 5324,
+          "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf",
+          "mtime_bjt": "2026-10-13T22:09:58.308600+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py": {
+          "path": "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py",
+          "bytes": 4997,
+          "sha256": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2",
+          "mtime_bjt": "2026-10-13T21:58:25.970839+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py": {
+          "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py",
+          "bytes": 20806,
+          "sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651",
+          "mtime_bjt": "2026-10-14T17:24:25.019243+08:00"
+        },
+        "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py": {
+          "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py",
+          "bytes": 1501,
+          "sha256": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812",
+          "mtime_bjt": "2026-10-14T17:24:25.090244+08:00"
+        }
+      },
+      "completed_file_size_and_mtime_unchanged_during_audit": true
+    }
+  ],
+  "scope": "Completed stage2 FP32/Adam/protocol/RNG integrity; not a model quality or full training-log audit.",
+  "completion_gates": {
+    "cuda_nr_stage2_s6250_cont250": {
+      "stage": "complete",
+      "completed_local_steps": 250,
+      "global_step": 6500,
+      "optimizer_step": 500,
+      "requires_independent_quality_evaluation": true
+    },
+    "cuda_nr_stage2_s6250_roundste250": {
+      "stage": "complete",
+      "completed_local_steps": 250,
+      "global_step": 6500,
+      "optimizer_step": 500,
+      "requires_independent_quality_evaluation": true
+    }
+  },
+  "cuda_context_initialized_before": false,
+  "torch_version": "2.8.0+cu128",
+  "sealed_parent_files": {
+    "resume": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+      "bytes": 3114329549,
+      "sha256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+      "mtime_bjt": "2026-10-13T23:53:49.176236+08:00"
+    },
+    "config": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/config.json",
+      "bytes": 30144,
+      "sha256": "2a459e95e248d1b502b651753b9598ce7adfb92c24e48863458265458ea1ca5a",
+      "mtime_bjt": "2026-10-13T23:51:23.513751+08:00"
+    },
+    "v1_source": {
+      "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+      "bytes": 18143,
+      "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+      "mtime_bjt": "2026-10-13T23:33:59.946921+08:00"
+    }
+  },
+  "parent_LoRA": {
+    "keys": 514,
+    "elements": 259474432,
+    "dtype": "torch.float32",
+    "device": "cpu",
+    "all_finite": true
+  },
+  "parent_Adam": {
+    "state_entries": 514,
+    "parameter_ids_complete_unique": true,
+    "shape_to_parameter_order_checked": true,
+    "all_steps": [
+      250
+    ],
+    "all_moments_FP32_CPU_finite": true,
+    "moment_elements_each": 259474432,
+    "exp_avg_sq_nonnegative": true,
+    "every_exp_avg_tensor_has_nonzero_values": true,
+    "state_field_sets": [
+      [
+        "exp_avg",
+        "exp_avg_sq",
+        "step"
+      ]
+    ],
+    "moment_dtypes": [
+      "torch.float32"
+    ],
+    "parameter_group_options": {
+      "lr": 2e-07,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": false,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": true
+    }
+  },
+  "parent_rng": {
+    "state_sha256": {
+      "python": "71a934a19425f55dfb562869769b6213f62054012aed71b7701d434394dbdc63",
+      "numpy": "562c7c1aba45f288ff7bb6ca8f360b789eafd9cca7cdf841b9dc7a73ff70358a",
+      "cpu": "f99273ba73d059b94d75bef7dca976542b44aeb12e4e337f7d4567ec94801229",
+      "cuda": "0f34e12aeb8f226a1f5b348ce7d0fd03a0e0f789ffc25b637785afeb3ee406c4"
+    },
+    "python_and_numpy_state_loadable_in_independent_instances": true,
+    "torch_cpu_state_loadable_in_independent_CPU_generator": true,
+    "torch_cpu_rng_bytes": 5056,
+    "cuda_rng_bytes": 16,
+    "cuda_rng_loaded_as_CPU_bytes_only_never_restored": true,
+    "hash_encoding": "Python json.dumps(state); NumPy key raw bytes plus repr of algorithm/position/Gaussian cache; Torch raw uint8 bytes"
+  },
+  "independent_first_crop_replay": {
+    "case": 13,
+    "crop_xy": [
+      967,
+      2015
+    ],
+    "source_path": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case13.jpg",
+    "source_dimensions_wh": [
+      4096,
+      3072
+    ],
+    "scope": "First stage case/crop before first metrics only; no claim about all250 Python/NumPy draws"
+  },
+  "cross_branch_final4_rng_comparison": {
+    "equal_by_content_hash": {
+      "python": true,
+      "numpy": true,
+      "cpu": true,
+      "cuda": true
+    },
+    "all4_equal": true,
+    "status": "EQUAL",
+    "interpretation": "Content-state comparison only; no CUDA state was restored. A difference is surfaced separately from parameter-integrity PASS."
+  },
+  "cuda_context_initialized_after": false,
+  "parent_files_unchanged_during_audit": true,
+  "load_policy": "torch.load(map_location=cpu,mmap=True); weights_only=True for standalone .pth and False for sealed trusted resume; no model construction/forward.",
+  "status": "PASS"
+}

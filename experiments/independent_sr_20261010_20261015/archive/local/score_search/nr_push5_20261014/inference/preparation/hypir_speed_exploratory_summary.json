@@ -1,0 +1,20 @@
+{
+  "status": "exploratory_latency_only_branch_closed",
+  "candidate_model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push5_a7750_clro_wavelet/model_dir",
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "runner_sha256": "34a70fae57bc412fd3e0394e0573942e63c2764334847dab67eee3c4b696b092",
+  "benchmark_path": "/cache/independent_sr_cuda_20261013/calibration/push5_hypir_clro_wavelet_latency.json",
+  "benchmark_sha256": "7b3851cb7e13828c0cffbf8d214558d5f1c0c05411bcedc3173bad6547660526",
+  "original_benchmark_source_sha256": "3e85026bd91ad8fb7fb91c5d3c74211cc33a9cff0f8316f7e56cde864ae41995",
+  "event_p10_ms": 39.144345092773435,
+  "wall_p10_ms": 39.17286703363061,
+  "warm": 30,
+  "n": 200,
+  "seed": 231,
+  "raw_200_statistics_CPU_recomputed": true,
+  "correctness_or_equivalence_run": false,
+  "full_quality_run": false,
+  "official_prediction_created": false,
+  "quality_reuse_claim": false,
+  "interpretation": "Unscored HYPIR channels_last+reduce-overhead+wavelet candidate. Does not approach conditional fixed-quality70 requirement18.9734ms; stopped without GPU correctness/full. Never combine old parent quality with this timing as a new model score."
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "current_model_visual_preference_v2",
+  "status": "best_validated_HYPIR_teacher_TRT_VAE_selected_65_search_active",
+  "preferred_label": "push7_a7750_trtvae_fp16_all",
+  "preferred_name": "HYPIR A7750 / TensorRT VAE 保画质加速版",
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/model_dir",
+  "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/resume_step7750.pt",
+  "resume_sha256": "e240f3e810654e9503ed620a1007649d2dd056c290960b442e220e0a1451a83b",
+  "NR": 2.3193312111166215,
+  "FR": 1.4416551788647969,
+  "S_proxy": 3.7609863899814187,
+  "tool_prediction": 62.32913337707007,
+  "event_p10_ms": 34.25361785888672,
+  "quality_dir": "/cache/independent_sr_cuda_20261013/nr_push7_hypir_full_evaluations/push7_a7750_trtvae_fp16_all",
+  "render_dir": "/cache/independent_sr_cuda_20261013/nr_push7_hypir_full_evaluations/push7_a7750_trtvae_fp16_all",
+  "quality_reused": false,
+  "PNG_exact": false,
+  "distillation": false,
+  "lightweight_model": false,
+  "model_family": "HYPIR teacher",
+  "teacher_weights_changed": false,
+  "source_selection": "/cache/independent_sr_cuda_20261013/results/nr_push7_selection.json",
+  "source_selection_local": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/results/nr_push7_selection.json",
+  "source_selection_sha256": "6ecc19473fbc5b457da8b420c272e121cc32d932e5c12c072926f5ff54b89db5",
+  "score_target": 65,
+  "score_target_achieved": false,
+  "score_target_subject_to_visual_quality": true,
+  "user_feedback": "感觉有点推过了，出现伪影了，previous model output目前看是比较好的",
+  "scope_correction": "先别做轻量保真网络，这个是用于教师的hypir，不要蒸馏",
+  "future_priority": [
+    "Preserve the visual quality of HYPIR A7750",
+    "Reject newly visible text deformation, bent straight lines, smearing or dense artificial texture",
+    "Seek tool-score improvement only within the visual-quality constraint"
+  ],
+  "fixed_visual_cases": [
+    7,
+    16,
+    41,
+    83
+  ],
+  "selected_candidate_new_training": false,
+  "previous_preference": {
+    "local": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/results/current_preference_before_push7.json",
+    "sha256": "ebe1e217ddaa8b9a1969727ae955b24410c3e29112bb210d6b8ac5540f996d80"
+  },
+  "updated_utc": "2026-10-15T06:11:44.664021+00:00"
+}

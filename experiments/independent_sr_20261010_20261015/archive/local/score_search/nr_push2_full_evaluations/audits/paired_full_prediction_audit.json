@@ -1,0 +1,93 @@
+{
+  "schema": "push2_paired_full_prediction_audit_v1",
+  "status": "passed",
+  "audited_bjt": "2026-10-14T18:15:53.611802+08:00",
+  "selected_candidate_by_full_S": "stage3_m15",
+  "selected_candidate_by_full_NR": "stage3_m15",
+  "full_count": {
+    "test": 100,
+    "validation": 3,
+    "metric_scalars": 418
+  },
+  "selected_checkpoint_sha256": "cfcc3013fa87aa721f346d6cc285e70b6d6ff2c88315ce9f1465b07ffe020e68",
+  "selected_result_sha256": "e913b19eda68c557b452695f58a1b91d95c68357ef1f3b14c9be1d1c792b0716",
+  "parent_current_paired_prediction": 55.32547471341018,
+  "comparisons": {
+    "parent6250": {
+      "status": "complete103",
+      "NR": 2.2663850433592487,
+      "FR": 1.463716487089793,
+      "S": 3.7301015304490415,
+      "measured_event_p10_ms": 46.650162887573245,
+      "normalized_g_ms": 30.872610551785737,
+      "measured_latency_prediction": 55.32547471341018,
+      "parent_latency_fixed_quality_only_prediction": 55.32547471341018,
+      "delta_NR_vs_parent": 0.0,
+      "delta_FR_vs_parent": 0.0,
+      "delta_S_vs_parent": 0.0,
+      "quality_factor_vs_parent": 1.0,
+      "measured_latency_factor_vs_parent_not_proven_speedup": 1.0,
+      "combined_factor_vs_parent": 1.0,
+      "result_sha256": "b7507d4747e689f74204f10ee3274e69fb0d7c81e0e9051b84465ffeea97da88",
+      "latency_json_sha256": "1d1af2db184a47f7a3ba7aad31faa40766485e8563320caa38c5cfc21f7ac099"
+    },
+    "stage3_m1": {
+      "status": "complete103",
+      "NR": 2.2761981143649948,
+      "FR": 1.4625590046246848,
+      "S": 3.7387571189896796,
+      "measured_event_p10_ms": 46.58862113952637,
+      "normalized_g_ms": 30.831882839329374,
+      "measured_latency_prediction": 55.672992927225756,
+      "parent_latency_fixed_quality_only_prediction": 55.65840297308321,
+      "delta_NR_vs_parent": 0.009813071005746021,
+      "delta_FR_vs_parent": -0.0011574824651081617,
+      "delta_S_vs_parent": 0.008655588540638082,
+      "quality_factor_vs_parent": 1.0060176304206627,
+      "measured_latency_factor_vs_parent_not_proven_speedup": 1.0002621338982651,
+      "combined_factor_vs_parent": 1.0062813417438483,
+      "result_sha256": "511e5bb8992d61344e2b7ddfd66299e0daeda83fba410513dea36a52661f64f7",
+      "latency_json_sha256": "1b96b5bed8aa97419863105b580b76bad4dc09b486cf143302ceca2705593585"
+    },
+    "stage3_m15": {
+      "status": "complete103",
+      "NR": 2.2783103602882613,
+      "FR": 1.4614406824111938,
+      "S": 3.739751042699455,
+      "measured_event_p10_ms": 46.35084838867188,
+      "normalized_g_ms": 30.674527214341563,
+      "measured_latency_prediction": 55.76798647586185,
+      "parent_latency_fixed_quality_only_prediction": 55.69676122981548,
+      "delta_NR_vs_parent": 0.011925316929012553,
+      "delta_FR_vs_parent": -0.0022758046785991137,
+      "delta_S_vs_parent": 0.009649512250413661,
+      "quality_factor_vs_parent": 1.0067109503954297,
+      "measured_latency_factor_vs_parent_not_proven_speedup": 1.0012788040897476,
+      "combined_factor_vs_parent": 1.007998336475989,
+      "result_sha256": "e913b19eda68c557b452695f58a1b91d95c68357ef1f3b14c9be1d1c792b0716",
+      "latency_json_sha256": "34309f7bbb5beab78dd89102e6087e5f4b44dc9b6d0b763087d5592f65c4ca74"
+    }
+  },
+  "A_quality_only": {
+    "NR": 2.268540837285129,
+    "FR": 1.4624083042144775,
+    "S": 3.7309491414996065,
+    "delta_NR_vs_parent": 0.0021557939258802783,
+    "delta_FR_vs_parent": -0.0013081828753154223,
+    "delta_S_vs_parent": 0.000847611050565078,
+    "quality_factor_vs_parent": 1.0005876918331265,
+    "hypothetical_prediction_at_parent_latency": 55.3579890430631,
+    "measured_combined_prediction": null,
+    "reason": "No fresh A latency provided; do not reuse a different checkpoint timing."
+  },
+  "scope": "Original unmodified predict.py formula applied only to full103 quality with matching fresh same-card 512 timing; empirical prediction, no leaderboard claim.",
+  "timing_noise": "Single 200-event runs with 30 warmups. Descriptive p10/p50/p90, no statistical speedup claim. Quality-only comparison holds parent latency constant.",
+  "physical_GPU_identity": "Same physical GPU0 by launch provenance. All JSONs match logical0/A10080GB/runtime; physical UUID absent.",
+  "formula": {
+    "NR": "CLIPIQA + MANIQA + MUSIQ/100 + max(0,(10-NIQE)/10)",
+    "FR": "2-LPIPS-DISTS",
+    "S": "NR_test100+FR_val3",
+    "g": "measured_event_p10_ms*0.431/G4_event_p10_ms",
+    "predict": "152.95*2**(S-4.0841)*((0.49+2.17*0.431)/(0.49+2.17*g))**0.2"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS_MISSING_HISTORICAL_SOURCE_EXCLUSIVELY_RESTORED",
+  "source": {
+    "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/trained_backend_v1/trt_vae_runtime_v2.py",
+    "sha256": "dc2597edfe8a7d71526535bd4e7540bd9c7623de00b6639c61139e08837aa9a4",
+    "bytes": 4634
+  },
+  "restored_destination": {
+    "path": "/cache/independent_sr_cuda_20261013/code/push7/trt_unet/trt_vae_runtime_v2.py",
+    "sha256": "dc2597edfe8a7d71526535bd4e7540bd9c7623de00b6639c61139e08837aa9a4",
+    "bytes": 4634
+  },
+  "locked_original_component_manifest": {
+    "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/unet_fp16_A7750/component_manifest.json",
+    "sha256": "627f1e314b1a6d6a467fd1eca2188b9ed840d54ba9bc9b80ec9ae27a84c68db6",
+    "bytes": 152217
+  },
+  "first_CPU_audit_exit_code": 1,
+  "first_CPU_audit_failure": "FileNotFoundError in locked parent UNet manifest source reference before proof publication",
+  "audit_source_sha256": "985bc0ff192244d01e531daea871195c9626c1647122cf66184796c0bb5ed9b4",
+  "new_audit_source_needed": false,
+  "existing_source_overwritten": false,
+  "manifest_or_quality_or_runner_modified": false,
+  "GPU_used": false,
+  "recorded_utc": "2026-10-15T08:38:15.178231+00:00"
+}

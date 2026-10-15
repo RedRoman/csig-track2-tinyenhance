@@ -1,0 +1,59 @@
+{
+  "status": "PASS_FIXED_FORMAL_BATCH_WITH_FRESH_UNET_VAE_FULL",
+  "cpu_only": true,
+  "GPU_started": false,
+  "new_benchmark": false,
+  "formal_timing_audit": {
+    "path": "/cache/independent_sr_cuda_20261013/audits/push7/speed/formal4_independent_cpu.json",
+    "sha256": "e3db1f53c9b316b982a9b8e7fb5e740ef948e4174a2ca7718b659a6696020275"
+  },
+  "fresh_full_quality_audit": {
+    "path": "/cache/independent_sr_cuda_20261013/audits/push7/hypir_full/trt_unet_vae_fp16_all.json",
+    "sha256": "10b40500279b2585f3a7684dbd6407541baccaac90eb8906253b086f33970628"
+  },
+  "auditor": {
+    "path": "/cache/independent_sr_cuda_20261013/code/push7/join_formal_unet_vae_cpu.py",
+    "sha256": "3a54016ef4e28eeb69eddcfe1128af50e2b9a5b86276dac86821deb41a972577"
+  },
+  "predictor": {
+    "path": "/cache/independent_sr_cuda_20261013/scoring_tool/predict.py",
+    "sha256": "0af39f578f704e00a0a0a5ce55e58f1668d283ac4602065d8215b6d21cf433e1"
+  },
+  "predictions": {
+    "push6": {
+      "NR": 2.3197332792186334,
+      "FR": 1.4417232871055603,
+      "S_proxy": 3.7614565663241937,
+      "event_p10_ms": 41.42765998840332,
+      "normalized_g_ms": 22.793251320134527,
+      "original_tool_prediction": 60.04738558516993,
+      "reaches65": false
+    },
+    "trtvae": {
+      "NR": 2.3193312111166215,
+      "FR": 1.4416551788647969,
+      "S_proxy": 3.7609863899814187,
+      "event_p10_ms": 34.25361785888672,
+      "normalized_g_ms": 18.846136149133354,
+      "original_tool_prediction": 62.32913337707007,
+      "reaches65": false
+    },
+    "trtunetvae": {
+      "NR": 2.319338811831183,
+      "FR": 1.4415876865386963,
+      "S_proxy": 3.760926498369879,
+      "event_p10_ms": 32.56105079650879,
+      "normalized_g_ms": 17.914895851231872,
+      "original_tool_prediction": 62.95369508917984,
+      "reaches65": false
+    }
+  },
+  "G4_event_p10_ms": 0.7833600044250488,
+  "normalization": "t*0.431/fixed_same_batch_G4_event_p10",
+  "actual_raw_event_and_wall_samples_recomputed": 800,
+  "quality_reused_for_UNetVAE": false,
+  "big_weight_or_engine_bytes_rehashed_in_this_join": false,
+  "engine_identity_scope": "Equal actual SHA/bytes in fixed timing audit and fresh full quality audit",
+  "no_current_preference_changed": true,
+  "no_official_score_claim": true
+}

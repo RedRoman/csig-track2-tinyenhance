@@ -1,0 +1,172 @@
+{
+  "schema": "pixg5i_registered_candidate_v1",
+  "label": "pixg5i_hypir_medium_s300",
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/model_dir",
+  "stage": "distilled_checkpoint",
+  "variant": "medium",
+  "model_type": "supplied_pixG5i_pixel_UNet",
+  "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/step300.pth",
+  "checkpoint_sha256": "005d13cb5b003d54e576678c52908181016cb9fa1746a9455465f5f2f619c458",
+  "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/model_dir/model.pth",
+  "initial_package_checkpoint_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+  "runner_sha256": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a",
+  "binding": {
+    "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/model_dir/pixg5i_binding.json",
+    "sha256": "82b413c9a709f12b151db1b9212545a96bf443909b81ddf672ff1ad7b84abc48",
+    "bytes": 2754
+  },
+  "files": {
+    "config.yaml": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/model_dir/config.yaml",
+      "sha256": "e13bab32185ac95f07ac36133eff89133a33ed90cc5ca534b7d8496bc457250d",
+      "bytes": 35
+    },
+    "reference_runner.py": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/model_dir/reference_runner.py",
+      "sha256": "6222ead92dc6fb24b88c0350e41191fc27a5adc2f6ba38bd383a4badb9bd8c1e",
+      "bytes": 8830
+    },
+    "model.pth": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/model_dir/model.pth",
+      "sha256": "005d13cb5b003d54e576678c52908181016cb9fa1746a9455465f5f2f619c458",
+      "bytes": 15180447
+    },
+    "pix_model.py": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/model_dir/pix_model.py",
+      "sha256": "2f1cd3cd8311381e432138f489b01b982e08ebd5b09ecbc05ac87f7bfb577923",
+      "bytes": 9180
+    },
+    "runner.py": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/model_dir/runner.py",
+      "sha256": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a",
+      "bytes": 3400
+    },
+    "pixg5i_binding.json": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/model_dir/pixg5i_binding.json",
+      "sha256": "82b413c9a709f12b151db1b9212545a96bf443909b81ddf672ff1ad7b84abc48",
+      "bytes": 2754
+    }
+  },
+  "training_provenance": {
+    "config": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/config.json",
+      "sha256": "fc858e493f4b12ad10dd7005eff4b30401d63dc9a7ef120654c763973d926d71",
+      "bytes": 76282
+    },
+    "marker": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/checkpoint_step300.json",
+      "sha256": "c4c5024358b06abbf5b71871eb72ef4388514143f3f7682f3a06735b342f9831",
+      "bytes": 3244
+    },
+    "input_catalog": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/input_catalog.json",
+      "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+      "bytes": 23987
+    },
+    "teacher_catalog": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/teacher_catalog.json",
+      "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+      "bytes": 39787
+    },
+    "resume": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/resume_step300.pt",
+      "sha256": "bdde4b8e4783723f0eee3ed7e09f693e829dd5d444c5ba6ab716dc73a799580f",
+      "bytes": 45582459
+    },
+    "training_source": {
+      "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir.py",
+      "sha256": "d58e6dd66eac6b3f93a899a3008e48a568a9601a62b52cc3c99d73b9f1612604",
+      "bytes": 22459
+    }
+  },
+  "teacher": {
+    "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+    "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+    "applied_to_this_checkpoint": true,
+    "render_manifest": {
+      "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+      "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+      "bytes": 81396
+    }
+  },
+  "local_step": 300,
+  "optimizer_step": 300,
+  "reference_step": 30000,
+  "registration_CPU_proof": {
+    "status": "CPU_ACTUAL_TRAINED_CHECKPOINT_VALIDATED",
+    "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/model_dir",
+    "binding": {
+      "schema": "pixg5i_hypir_distill_binding_v1",
+      "label": "pixg5i_hypir_medium_s300",
+      "stage": "distilled_checkpoint",
+      "checkpoint_sha256": "005d13cb5b003d54e576678c52908181016cb9fa1746a9455465f5f2f619c458",
+      "initial_package_checkpoint_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+      "archive_sha256": "f8e154da5ea9cb2fe165a316f824003459661945e6bbe22efd025d8592d573d6",
+      "training_provenance": {
+        "config": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/config.json",
+          "sha256": "fc858e493f4b12ad10dd7005eff4b30401d63dc9a7ef120654c763973d926d71",
+          "bytes": 76282
+        },
+        "marker": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/checkpoint_step300.json",
+          "sha256": "c4c5024358b06abbf5b71871eb72ef4388514143f3f7682f3a06735b342f9831",
+          "bytes": 3244
+        },
+        "input_catalog": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/input_catalog.json",
+          "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+          "bytes": 23987
+        },
+        "teacher_catalog": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/teacher_catalog.json",
+          "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+          "bytes": 39787
+        },
+        "resume": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/resume_step300.pt",
+          "sha256": "bdde4b8e4783723f0eee3ed7e09f693e829dd5d444c5ba6ab716dc73a799580f",
+          "bytes": 45582459
+        },
+        "training_source": {
+          "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir.py",
+          "sha256": "d58e6dd66eac6b3f93a899a3008e48a568a9601a62b52cc3c99d73b9f1612604",
+          "bytes": 22459
+        }
+      },
+      "teacher": {
+        "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+        "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+        "applied_to_this_checkpoint": true,
+        "render_manifest": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+          "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+          "bytes": 81396
+        }
+      },
+      "used_as_G4_reference": false,
+      "variant": "medium",
+      "local_step": 300,
+      "optimizer_step": 300,
+      "reference_step": 30000
+    },
+    "actual_changed_FP32_tensors": 112,
+    "actual112_raw_resume_equal_FP32_finite": true,
+    "actual112_Adam_moments_finite_and_counters": true,
+    "all4_RNG_saved": true,
+    "teacher_catalog_bound_to_fixed_manifest": true,
+    "teacher_training_PNG_bytes_rehashed_here": false,
+    "CPU_only": true,
+    "CUDA_initialized": false
+  },
+  "quality_reuse_claim": false,
+  "used_as_G4_reference": false,
+  "registration_source": {
+    "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_distill/register_trained_pixg5i.py",
+    "sha256": "cfe78088cc8111d2077ecbc96134e3f004ca5309cac381aa8e7ef07b9ce2def8",
+    "bytes": 11088
+  },
+  "CPU_only": true,
+  "GPU_used": false,
+  "original_inference_source_unchanged": true
+}

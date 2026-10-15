@@ -1,0 +1,314 @@
+{
+  "schema": "hypir_teacher_progress_v4",
+  "updated_utc": "2026-10-15T08:44:00.460157+00:00",
+  "scope": {
+    "teacher": "HYPIR",
+    "distillation": false,
+    "student_training": false,
+    "validation_GT_training": false
+  },
+  "preserved_best": {
+    "label": "push7_a7750_trt_unet_vae_fp16_all",
+    "tool_estimate": 62.95369508917984,
+    "NR": 2.319338811831183,
+    "FR": 1.4415876865386963,
+    "S": 3.760926498369879,
+    "score_scope": "Historical previous-instance speed/reference; its full quality was reproduced exactly in the fresh current baseline. Historical score is not compared across references.",
+    "backup": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/backup_trtunetvae_verified",
+    "target65_reached": false
+  },
+  "current_environment": {
+    "ssh_port": 30416,
+    "hostname": "os-node-created-fg9f4",
+    "cache_reset_detected_utc": "2026-10-15T06:46:00Z",
+    "state": "restored_original_environment_sources_assets_weights_and_selected_TRT_runtime",
+    "GPU": "4x NVIDIA A100-SXM4-80GB",
+    "new_physical_GPU0_UUID": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f"
+  },
+  "next_training": {
+    "status": "none_planned_this_bounded_iteration",
+    "completed_runs": 4,
+    "steps_per_run": 100
+  },
+  "selection_rule": "No promotion until actual metric and structural visual checks; pilot scores are not tool-estimate results.",
+  "current_iteration": {
+    "run": "hypir_push7_A7750_lastres_lr5e6_nr100",
+    "status": "complete_full103_418_visual4_and_four_fresh_serial_timings",
+    "actual_stage_steps": 100,
+    "lr": 5e-06,
+    "optimizer_tensor_count": 6,
+    "autograd_tensor_count": 514,
+    "unselected_exact_A_count": 508,
+    "teacher_output_loss": false,
+    "distillation": false,
+    "current_raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+    "backend_candidate_manifest_sha256": "d7e03918355aa9cb459c1d37f8ffafcee89856bb8b23cdf0346b5e440b3046cb",
+    "new_UNet_engine_sha256": "6912f4afae77ef4815f8b8d568a9d5eef76ea3c130b554e01987452374ba8a77",
+    "full103_evaluation": "complete",
+    "score_estimate_claim": true
+  },
+  "fresh_native_pilots": {
+    "push7_recovered_a7750_native_pilot": {
+      "completed": 23,
+      "NR": 2.3121376036146897,
+      "FR": 1.4415966272354126,
+      "S_subset": 3.7537342308501023,
+      "official_full_count": false
+    },
+    "push7_a7750_lastconv_nr_s7800": {
+      "completed": 23,
+      "NR": 2.31230324567494,
+      "FR": 1.4417910377184548,
+      "S_subset": 3.754094283393395,
+      "official_full_count": false
+    },
+    "push7_a7750_lastconv_nr_s7850": {
+      "completed": 23,
+      "NR": 2.312370297131282,
+      "FR": 1.441937188307444,
+      "S_subset": 3.754307485438726,
+      "official_full_count": false
+    },
+    "push7_a7750_lastconv_lr1e6_nr_s7800": {
+      "completed": 23,
+      "NR": 2.312540945528463,
+      "FR": 1.4421274065971375,
+      "S_subset": 3.7546683521256004,
+      "official_full_count": false
+    },
+    "push7_a7750_lastconv_lr1e6_nr_s7850": {
+      "completed": 23,
+      "NR": 2.3130796907586397,
+      "FR": 1.442721406618754,
+      "S_subset": 3.7558010973773936,
+      "official_full_count": false
+    },
+    "push7_a7750_lastres_nr_s7800": {
+      "completed": 23,
+      "NR": 2.3153531331729758,
+      "FR": 1.4429486195246377,
+      "S_subset": 3.7583017526976135,
+      "official_full_count": false
+    },
+    "push7_a7750_lastres_nr_s7850": {
+      "completed": 23,
+      "NR": 2.3174654377584276,
+      "FR": 1.4441499511400857,
+      "S_subset": 3.7616153888985133,
+      "official_full_count": false
+    },
+    "push7_a7750_lastres_lr5e6_nr_s7800": {
+      "completed": 23,
+      "NR": 2.32298133309403,
+      "FR": 1.4462136228879292,
+      "S_subset": 3.769194955981959,
+      "official_full_count": false
+    },
+    "push7_a7750_lastres_lr5e6_nr_s7850": {
+      "completed": 23,
+      "NR": 2.3239424910447246,
+      "FR": 1.4492756724357605,
+      "S_subset": 3.773218163480485,
+      "official_full_count": false
+    }
+  },
+  "fresh_full_evaluation": {
+    "push7_recovered_a7750_trtunetvae_all": {
+      "render": {
+        "status": "complete",
+        "completed": 103,
+        "total": 103,
+        "time": 1792052689.465255
+      },
+      "score": {
+        "status": "complete",
+        "completed": 103,
+        "expected": 103,
+        "last_split": "test",
+        "last_case": 100
+      },
+      "result": {
+        "label": "push7_recovered_a7750_trtunetvae_all",
+        "status": "complete",
+        "completed": 103,
+        "expected": 103,
+        "official_full_count": true,
+        "validation": {
+          "clipiqa": 0.7697335879007975,
+          "dists": 0.21315677960713705,
+          "lpips": 0.3452555338541667,
+          "maniqa": 0.5773576100667318,
+          "musiq": 37.03302129109701,
+          "niqe": 4.380311257645194,
+          "n": 3,
+          "fr": 1.4415876865386963,
+          "nr_val": 2.27939028511398,
+          "score": 3.720977971652676
+        },
+        "test": {
+          "clipiqa": 0.7767472994327546,
+          "maniqa": 0.575148051083088,
+          "musiq": 39.548116035461426,
+          "niqe": 4.280376990392735,
+          "n": 100,
+          "nr": 2.319338811831183
+        },
+        "S_proxy": 3.760926498369879,
+        "S_proxy_scope": "full100_test_NR_plus3val_FR"
+      }
+    },
+    "push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all": {
+      "render": {
+        "status": "complete",
+        "completed": 103,
+        "total": 103,
+        "time": 1792053397.6301148
+      },
+      "score": {
+        "status": "complete",
+        "completed": 103,
+        "expected": 103,
+        "last_split": "test",
+        "last_case": 100
+      },
+      "result": {
+        "label": "push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+        "status": "complete",
+        "completed": 103,
+        "expected": 103,
+        "official_full_count": true,
+        "validation": {
+          "clipiqa": 0.7591811617215475,
+          "dists": 0.2108686367670695,
+          "lpips": 0.3400065104166667,
+          "maniqa": 0.5780953764915466,
+          "musiq": 37.02814737955729,
+          "niqe": 4.20697714260584,
+          "n": 3,
+          "fr": 1.4491248528162637,
+          "nr_val": 2.286860297748083,
+          "score": 3.7359851505643467
+        },
+        "test": {
+          "clipiqa": 0.765798093676567,
+          "maniqa": 0.5757938978075982,
+          "musiq": 39.1866637802124,
+          "niqe": 4.067507146218989,
+          "n": 100,
+          "nr": 2.3267079146643903
+        },
+        "S_proxy": 3.775832767480654,
+        "S_proxy_scope": "full100_test_NR_plus3val_FR"
+      }
+    }
+  },
+  "current_selected_candidate": {
+    "schema": "hypir_teacher_lastres_nr_selection_v1",
+    "status": "BEST_VALIDATED_CURRENT_MATCHED_HYPIR_NR_CANDIDATE",
+    "selected_label": "push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+    "selected_name": "HYPIR教师末端LoRA NR微调100步",
+    "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae/model_dir",
+    "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/step7850.pth",
+    "checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+    "resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/resume_step7850.pt",
+    "resume_sha256": "35e339656581c89c772e6d9b00592a73cd397481f00d4d9bfd78c4bab7d05745",
+    "teacher_weights_changed": true,
+    "stage_steps": 100,
+    "lr": 5e-06,
+    "optimizer_tensor_count": 6,
+    "autograd_tensor_count": 514,
+    "unselected_exact_A_count": 508,
+    "distillation": false,
+    "lightweight_model": false,
+    "validation_GT_training": false,
+    "teacher_output_loss": false,
+    "NR": 2.3267079146643903,
+    "FR": 1.4491248528162637,
+    "S_proxy": 3.775832767480654,
+    "event_p10_ms": 32.78950500488281,
+    "tool_prediction": 61.203792053984166,
+    "same_batch_baseline": {
+      "NR": 2.319338811831183,
+      "FR": 1.4415876865386963,
+      "S_full": 3.760926498369879,
+      "event_p10_ms": 32.80384063720703,
+      "normalized_g_ms": 21.777737141362998,
+      "original_tool_prediction": 60.569434638579615,
+      "reaches65": false,
+      "G4_endpoint_predictions": {
+        "g4_pre": 62.28071921837742,
+        "g4_post": 60.569434638579615
+      }
+    },
+    "score_gain": 0.6343574154045513,
+    "quality_only_score_gain": 0.6290620521072938,
+    "score_context": "Fresh recovered instance; both models full103/418, same GPU0 200/30/231; preselected common min of bracketing G4 p10s",
+    "normalization": {
+      "rule": "min(G4_pre.event_p10,G4_post.event_p10); fixed before measurements",
+      "G4_event_p10_ms": {
+        "g4_pre": 0.7474176287651062,
+        "g4_post": 0.6492159962654114
+      },
+      "common_conservative_G4_event_p10_ms": 0.6492159962654114,
+      "formula": "event_p10_ms*0.431/min(G4pre_eventp10,G4post_eventp10)",
+      "preselected_before_measurements": true
+    },
+    "score_target": 65,
+    "score_target_achieved": false,
+    "official_score_claim": false,
+    "old_batch_score_not_directly_comparable": true,
+    "quality_reused": false,
+    "PNG_exact": false,
+    "quality_dir": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+    "render_dir": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render",
+    "candidate_manifest": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae/candidate_manifest.json",
+      "sha256": "d7e03918355aa9cb459c1d37f8ffafcee89856bb8b23cdf0346b5e440b3046cb"
+    },
+    "full_quality_audit": {
+      "path": "/cache/independent_sr_cuda_20261013/audits/push7/hypir_full/lastres_lr5e6_s7850_trtunetvae_recovered_matched.json",
+      "sha256": "4c8afbffd2a47802e52b5d3f25a185bc50bb5d279d9dcc14ec0fc3f5c63467a9"
+    },
+    "formal_quality_timing_join": {
+      "path": "/cache/independent_sr_cuda_20261013/audits/push7/speed/recovered_lastres_formal_cpu.json",
+      "sha256": "484174d65832f41abe719d7f5b697cc07fc661e7319321275201074433b94909"
+    },
+    "visual": {
+      "gallery": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/visuals/hypir_lastres_lr5e6_trt_full_final/index.html",
+      "proof_sha256": "fb090f77e7012034a359aed3cbdf0427fad46fcad390971be97dfd92c81f9105",
+      "root_actually_reviewed_cases": [
+        7,
+        16,
+        41,
+        83
+      ],
+      "independent_reviewer_actually_reviewed_cases": [
+        7,
+        16,
+        41,
+        83
+      ],
+      "finding": "In four fixed native1:1 ROIs, no obvious new large geometric deformation or broad smearing; small texture, edge and colour changes remain. Not an all-image visual guarantee."
+    },
+    "backup": {
+      "local_engine_receipt": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/backup_lastres_lr5e6_trtunetvae_verified/backup_receipt.json",
+      "local_engine_receipt_sha256": "76c33d62660d1bc3b7ff5eaaa8a661792ecbd6b84ec2a39fcc529872080fd7a5",
+      "local_checkpoint_capsule": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/backup_lastres_lr5e6_nr_verified/capsule",
+      "checkpoint_capsule_manifest_sha256": "c58a717884a964f5146044a29aa30e481661f2a9fa2789424106ddb541b522c5",
+      "cache_checkpoint_capsule": "/cache/push7_lastres_lr5e6_nr_capsule_20261015",
+      "capsule_depends_on_persistent_A_resume_sha256": "e240f3e810654e9503ed620a1007649d2dd056c290960b442e220e0a1451a83b",
+      "SFS_new_write": false
+    },
+    "historical_previous_selection": {
+      "path": "/cache/independent_sr_cuda_20261013/results/current_preference_before_lastres_lr5e6.json",
+      "sha256": "a9c0ca6f23694fa2c480c0ee996c4309e13befbffb56abca3d1059604dab0912",
+      "historical_tool_prediction": 62.95369508917984,
+      "score_scope": "Previous instance and previous G4 reference; preserved, not used in this comparison"
+    },
+    "updated_utc": "2026-10-15T08:44:00.460157+00:00"
+  },
+  "active_training": false,
+  "active_GPU_jobs": false,
+  "iteration_status": "COMPLETE_TRAIN_FULL103_VISUAL4_AND_SINGLE_GPU_TIMING",
+  "target65_reached": false
+}

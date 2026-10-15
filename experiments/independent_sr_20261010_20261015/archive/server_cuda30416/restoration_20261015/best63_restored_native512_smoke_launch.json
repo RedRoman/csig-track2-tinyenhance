@@ -1,0 +1,23 @@
+{
+  "pid": 19922,
+  "args": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "-u",
+    "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+    "--model-dir",
+    "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir",
+    "--out",
+    "/cache/independent_sr_cuda_20261013/restoration_20261015/best63_restored_native512_smoke.json",
+    "--n",
+    "1",
+    "--warm",
+    "0",
+    "--device",
+    "0",
+    "--seed",
+    "231"
+  ],
+  "physical_GPU": 0,
+  "purpose": "restoration single native512 FP32 finite output smoke; NOT formal latency or tool prediction",
+  "launch_utc": "2026-10-15T07:40:37.585327+00:00"
+}

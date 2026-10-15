@@ -1,0 +1,78 @@
+{
+  "review_type": "local scientific inspection ROI visual comparison",
+  "created_at": "2026-10-14T00:03:23.068563+08:00",
+  "cases": [
+    7,
+    16,
+    23
+  ],
+  "variants": [
+    "input",
+    "control",
+    "conservative",
+    "aligned"
+  ],
+  "source_dimensions": [
+    4096,
+    3072
+  ],
+  "method": "查看control全图缩略概览、每case中心+两材质ROI四组对照、256x256原像素在2x最近邻的三输出closeup；原像素ROI单独保存，未增强对比/锐化/去噪。",
+  "roi_manifest": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/roi_manifest.json",
+  "preservation_check": {
+    "original_file_hashes_unchanged": true,
+    "original_files_checked": 12,
+    "native_roi_pngs_pixel_equal_to_source_crops": true,
+    "native_roi_pngs_checked": 45
+  },
+  "overall_observation": "所检三例材质ROI未显示conservative相比control的规则微纹整片明显增强；变化细微，部分细纹略弱。已有规则玻璃结构仍清楚可见。",
+  "observations": {
+    "7": {
+      "material": "蓝面板",
+      "conservative_vs_control": "所检蓝面板ROI的竖向亮暗条带位置和走向相近。conservative 的细竖纹与细点颗粒略弱或相近，未见整片规则竖纹明显加强。",
+      "aligned_vs_control": "接近control，细纹差异较轻微。",
+      "center": "招牌字形、白色脚手架和斜条带的主要轮廓三输出很接近。",
+      "pattern_amplification_assessment": "未在所检ROI观察到明确增强",
+      "confidence": "中；细强弱判断较轻微"
+    },
+    "16": {
+      "material": "墙面",
+      "conservative_vs_control": "左墙细横向颗粒/短线较control略平缓；右墙主接缝与深浅块的位置相近。未见conservative出现更强、更密的整片规则墙纹。",
+      "aligned_vs_control": "整体接近control，左墙细颗粒仍相近，局部强弱变化细微。",
+      "center": "中央暗部、梁和窗格主要边界接近，未见这组ROI内明显布局变化。",
+      "pattern_amplification_assessment": "未在所检ROI观察到明确增强",
+      "confidence": "中；暗部和低对比微纹限制判断"
+    },
+    "23": {
+      "material": "玻璃规则点/蜂窝状纹",
+      "conservative_vs_control": "control已存在成片规则dot/honeycomb。conservative仍保留相近分布和方向，部分轮廓/细点略平滑，未见所检玻璃ROI整片明显增强。下方玻璃ROI也保留细密结构。",
+      "aligned_vs_control": "接近control，部分蜂窝边缘和点的局部差异很小。",
+      "center": "招牌笔画与金属框位置三输出很接近。",
+      "pattern_amplification_assessment": "未在所检ROI观察到明确增强；既有规则结构仍在",
+      "confidence": "中；只能描述结构强弱，不能证明材质真实性"
+    }
+  },
+  "limits": [
+    "原LQ可辅助定位与粗结构对照，无法验证输出微纹真假。",
+    "没有GT，不能判断GT正确性、纹理物理真实性或宣称无伪纹。",
+    "结论只覆盖已列坐标ROI，不是全图或全100例安全判断。",
+    "未使用指标增益作为视觉优劣证据，未对版本作整体视觉排名。",
+    "这里只审本地实际像素；matched pilot/prefix与远端来源由父任务独立审计。"
+  ],
+  "artifacts": {
+    "7": {
+      "collage": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_roi_collage.png",
+      "roi_locations": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_roi_locations.png",
+      "closeup": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_closeup_collage.png"
+    },
+    "16": {
+      "collage": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_roi_collage.png",
+      "roi_locations": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_roi_locations.png",
+      "closeup": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_closeup_collage.png"
+    },
+    "23": {
+      "collage": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_roi_collage.png",
+      "roi_locations": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_roi_locations.png",
+      "closeup": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_closeup_collage.png"
+    }
+  }
+}

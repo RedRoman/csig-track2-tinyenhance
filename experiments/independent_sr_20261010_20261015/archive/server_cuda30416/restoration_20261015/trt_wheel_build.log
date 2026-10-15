@@ -1,0 +1,39 @@
+Looking in indexes: http://repo.myhuaweicloud.com/repository/pypi/simple
+Processing /cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt-10.12.0.36.tar.gz
+  File was already downloaded /cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt-10.12.0.36.tar.gz
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Processing /cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt_cu12-10.12.0.36.tar.gz
+  File was already downloaded /cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt_cu12-10.12.0.36.tar.gz
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Processing /cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt_cu12_libs-10.12.0.36.tar.gz
+  File was already downloaded /cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt_cu12_libs-10.12.0.36.tar.gz
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting dllist==2.0.0
+  Downloading http://repo.myhuaweicloud.com/repository/pypi/packages/7b/07/a212ca4cfe56fa35c8315307e37df218e5946c726a792b5c7a795b245c10/dllist-2.0.0-py3-none-any.whl (5.7 kB)
+Saved /cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/dllist-2.0.0-py3-none-any.whl
+Building wheels for collected packages: tensorrt, tensorrt_cu12, tensorrt_cu12_libs
+  DEPRECATION: Building 'tensorrt' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'tensorrt'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+  Building wheel for tensorrt (setup.py): started
+  Building wheel for tensorrt (setup.py): finished with status 'done'
+  Created wheel for tensorrt: filename=tensorrt-10.12.0.36-py2.py3-none-any.whl size=46733 sha256=5266336f901a2c27f2d35d8b623637c26c03c6f39ee542923be7ac9831c9c424
+  Stored in directory: /home/ma-user/.cache/pip/wheels/e0/83/40/bd9b9f7a4c0f2302a7783d4c7be45453454e05422ea1245103
+  DEPRECATION: Building 'tensorrt_cu12' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'tensorrt_cu12'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+  Building wheel for tensorrt_cu12 (setup.py): started
+  Building wheel for tensorrt_cu12 (setup.py): finished with status 'done'
+  Created wheel for tensorrt_cu12: filename=tensorrt_cu12-10.12.0.36-py2.py3-none-any.whl size=17584 sha256=5f8c9a64ae38db389e60e66eb7cfcca38eaa169ea26e7e674496a8719ca85cb0
+  Stored in directory: /home/ma-user/.cache/pip/wheels/d8/b0/f6/7ba74521b926b39f529ecdd7b023b33082e61483da121816e1
+  Building wheel for tensorrt_cu12_libs (pyproject.toml): started
+  Building wheel for tensorrt_cu12_libs (pyproject.toml): finished with status 'done'
+  Created wheel for tensorrt_cu12_libs: filename=tensorrt_cu12_libs-10.12.0.36-py2.py3-none-manylinux_2_28_x86_64.whl size=3095483544 sha256=3910039e1d49de0edfdc8bf273e40ad4b85a9d57c7c383fe0e22f75417df9610
+  Stored in directory: /home/ma-user/.cache/pip/wheels/d5/d4/cc/f08f18290420cce66b757c8158ff57e3b0d6c43dec06bbad44
+Successfully built tensorrt tensorrt_cu12 tensorrt_cu12_libs
+
+[notice] A new release of pip is available: 25.1.1 -> 26.2.1
+[notice] To update, run: /cache/independent_sr_cuda_20261013/env/bin/python -m pip install --upgrade pip

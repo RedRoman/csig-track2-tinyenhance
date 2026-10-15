@@ -1,0 +1,104 @@
+{
+  "changes": [
+    "HYPIR/enhancer/base.py"
+  ],
+  "only_change": "remove .cpu() from BaseEnhancer pt branch; all other copied Python byteidentical",
+  "files": {
+    "HYPIR/dataset/batch_transform.py": {
+      "source_sha256": "d5a1cc0e50b8f480b56ccb7c92fdd1283c116ccf20ab1806ea254749a1c2b58f",
+      "cuda_sha256": "d5a1cc0e50b8f480b56ccb7c92fdd1283c116ccf20ab1806ea254749a1c2b58f"
+    },
+    "HYPIR/dataset/diffjpeg.py": {
+      "source_sha256": "e69c8313c8f097d4bc47c22fe907c9fd749ecbc165306bc15b82d1cacdaf4861",
+      "cuda_sha256": "e69c8313c8f097d4bc47c22fe907c9fd749ecbc165306bc15b82d1cacdaf4861"
+    },
+    "HYPIR/dataset/file_backend.py": {
+      "source_sha256": "d35fc66a11fc80050e0f95c967456a8919769df46341d8fd643a72651f7b4998",
+      "cuda_sha256": "d35fc66a11fc80050e0f95c967456a8919769df46341d8fd643a72651f7b4998"
+    },
+    "HYPIR/dataset/realesrgan.py": {
+      "source_sha256": "aa01d75baaa1ba2137da0db165e01bc8220c538cb4922a3c10c18b52a4b38af4",
+      "cuda_sha256": "aa01d75baaa1ba2137da0db165e01bc8220c538cb4922a3c10c18b52a4b38af4"
+    },
+    "HYPIR/dataset/utils.py": {
+      "source_sha256": "7ab172117e5ffa7483c87aa679b1a5cc0d06c046eeed9011b58e212d7746670d",
+      "cuda_sha256": "7ab172117e5ffa7483c87aa679b1a5cc0d06c046eeed9011b58e212d7746670d"
+    },
+    "HYPIR/enhancer/base.py": {
+      "source_sha256": "70ada37f8a39d8a7d4b6fb320927cccb3e696b3524d4393ce841de661246dd8e",
+      "cuda_sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161"
+    },
+    "HYPIR/enhancer/sd2.py": {
+      "source_sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd",
+      "cuda_sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd"
+    },
+    "HYPIR/model/D.py": {
+      "source_sha256": "5b8d3fb3cd537d3e24cf7d67db5424fda5dd5d095420c3303110359d14926434",
+      "cuda_sha256": "5b8d3fb3cd537d3e24cf7d67db5424fda5dd5d095420c3303110359d14926434"
+    },
+    "HYPIR/model/backbone.py": {
+      "source_sha256": "b7413e9b616e626dcf624f498488f3d264852b74fd6b88fb2ccfc15f5a9156de",
+      "cuda_sha256": "b7413e9b616e626dcf624f498488f3d264852b74fd6b88fb2ccfc15f5a9156de"
+    },
+    "HYPIR/trainer/base.py": {
+      "source_sha256": "abad97b7b8f52c973af7c02c43ca94769b1113e5fbf531ed2c527266f48a6a1a",
+      "cuda_sha256": "abad97b7b8f52c973af7c02c43ca94769b1113e5fbf531ed2c527266f48a6a1a"
+    },
+    "HYPIR/trainer/sd2.py": {
+      "source_sha256": "b2a041522d523dc69a383e71228d59be3f18c2073f9eb36789afaf1c79f07ebb",
+      "cuda_sha256": "b2a041522d523dc69a383e71228d59be3f18c2073f9eb36789afaf1c79f07ebb"
+    },
+    "HYPIR/utils/captioner.py": {
+      "source_sha256": "8bcb84a67f51f876f4baf5e8f3bc050c12db9dc292fc8a8f71e323a2c711a25b",
+      "cuda_sha256": "8bcb84a67f51f876f4baf5e8f3bc050c12db9dc292fc8a8f71e323a2c711a25b"
+    },
+    "HYPIR/utils/common.py": {
+      "source_sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923",
+      "cuda_sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+    },
+    "HYPIR/utils/degradation.py": {
+      "source_sha256": "fbae8e401c4727029880c060785114e7d23e221154f7ceb8ea0c76c943418a9f",
+      "cuda_sha256": "fbae8e401c4727029880c060785114e7d23e221154f7ceb8ea0c76c943418a9f"
+    },
+    "HYPIR/utils/ema.py": {
+      "source_sha256": "19974239785b952648bb2a982fbc1b4ba9f09102bae81c5c1ccd489979a923ce",
+      "cuda_sha256": "19974239785b952648bb2a982fbc1b4ba9f09102bae81c5c1ccd489979a923ce"
+    },
+    "HYPIR/utils/tabulate.py": {
+      "source_sha256": "b6b7195e956cd9c5cd6bd08f72b41ddd3fccc6655ab86d772cbb5585f0a44312",
+      "cuda_sha256": "b6b7195e956cd9c5cd6bd08f72b41ddd3fccc6655ab86d772cbb5585f0a44312"
+    },
+    "HYPIR/utils/tiled_vae/__init__.py": {
+      "source_sha256": "188b110af9c17a13f7febbe98e04fdb09639aa5c58c9698b4f5b6f98ec661f5b",
+      "cuda_sha256": "188b110af9c17a13f7febbe98e04fdb09639aa5c58c9698b4f5b6f98ec661f5b"
+    },
+    "HYPIR/utils/tiled_vae/devices.py": {
+      "source_sha256": "f02caafa10c4e989a912a3a04f587f4dc84e4141f822ccbffa4ed33f7dbfeb8c",
+      "cuda_sha256": "f02caafa10c4e989a912a3a04f587f4dc84e4141f822ccbffa4ed33f7dbfeb8c"
+    },
+    "HYPIR/utils/tiled_vae/vaehook.py": {
+      "source_sha256": "146f4d03573dc8369c963c1665022ebae171c104051344710e4723bf624dbbdc",
+      "cuda_sha256": "146f4d03573dc8369c963c1665022ebae171c104051344710e4723bf624dbbdc"
+    },
+    "app.py": {
+      "source_sha256": "344e0ceaf8ca7fe8fd90bbbf8123eac90de25c2cba669b9c6940e034813b6d02",
+      "cuda_sha256": "344e0ceaf8ca7fe8fd90bbbf8123eac90de25c2cba669b9c6940e034813b6d02"
+    },
+    "app_openxlab.py": {
+      "source_sha256": "3c7e6c03722c506774b417f2ef4b12bf7fbd735e7ef08de29c5933e8476e62cf",
+      "cuda_sha256": "3c7e6c03722c506774b417f2ef4b12bf7fbd735e7ef08de29c5933e8476e62cf"
+    },
+    "predict.py": {
+      "source_sha256": "ad1f2bbcf7b8a446ee5b0322834d272608fa45006a9a5a382eea30bae8842cb8",
+      "cuda_sha256": "ad1f2bbcf7b8a446ee5b0322834d272608fa45006a9a5a382eea30bae8842cb8"
+    },
+    "test.py": {
+      "source_sha256": "fe2717fb98fa3c1aa7d9ad80592e2c0dcfa4bed3692d0ca06f4885ce529c70f7",
+      "cuda_sha256": "fe2717fb98fa3c1aa7d9ad80592e2c0dcfa4bed3692d0ca06f4885ce529c70f7"
+    },
+    "train.py": {
+      "source_sha256": "b996af7d09de2873ab7eef902d328d36279ac65aa1af7b1dee1c3f4a576dadc4",
+      "cuda_sha256": "b996af7d09de2873ab7eef902d328d36279ac65aa1af7b1dee1c3f4a576dadc4"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "status": "verified_complete_CACHE_MAC_ONLY",
+  "directory": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/backup_headreset_v3_s300_verified/artifact",
+  "manifest_sha256": "c51823e904e27ed2d39e16a0e67ba8c9fd2b9b84e299f1aaa7911340c295116f",
+  "DONE_sha256": "a6d7b8e84b85e446fa5ef18c1086b6b9ddadea5ec4246af7137b951c90b1d235",
+  "files": 31,
+  "bytes": 61570235,
+  "tar_sha256": "fe6c90a195ac7a579aa3202426c715deb560702c34323d260e566fc98a9a4b01",
+  "actual_all_file_complete_SHA_size_PASS": true,
+  "training_audit_sha256": "8ee6ffa0d61562f12ba03da5cc8b497b242d5258114788785c0128f806571332",
+  "milestones": [
+    {
+      "variant": "headreset_v3",
+      "raw_sha256": "a40462e6481d188ed120a5fca1adbbf425f2ed3de5bd1f81f4f8628d788ff167",
+      "resume_sha256": "d522c6a05ff9124fb465cce867941c19300cdbc43ed505d89a3d0792aacbd7d3",
+      "local_step": 300,
+      "optimizer_step": 300,
+      "state_tensors": 112
+    }
+  ],
+  "frozen_log_prefix_steps": 300,
+  "total_distillation_steps": 1500,
+  "phase_parent_checkpoint_sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+  "phase_parent_recovery": "../backup_structure_v2_s600_verified/artifact/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/step600.pth",
+  "initial_reset_head_names": [
+    "outc.weight",
+    "outc.bias"
+  ],
+  "initial_reset_head_elements": 3468,
+  "phase_parent_weights_not_duplicated": true,
+  "future_log_append_allowed": true,
+  "original_weights_not_duplicated": true,
+  "teacher_images_external": true,
+  "SFS_written": false,
+  "GPU_started": false,
+  "quality_conclusion": false
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "push3_paired_latency_preparation_static_audit_v1",
+  "sources_sha256": {
+    "paired_latency_push3.py": "516bab7cb88907f04f500f8ff233e7570c0282dc49edaff775f9c240538b8ead",
+    "join_paired_prediction_push3.py": "63b689536bd14bab5351efe8392115a60877d2f921778f165762129e7e3d3180"
+  },
+  "AST_parsed": true,
+  "imported_torch": false,
+  "imported_numpy": false,
+  "benchmark_started": false,
+  "original_benchmark_SHA": "3e85026bd91ad8fb7fb91c5d3c74211cc33a9cff0f8316f7e56cde864ae41995",
+  "original_predict_SHA": "0af39f578f704e00a0a0a5ce55e58f1668d283ac4602065d8215b6d21cf433e1",
+  "linear_percentile_smoke": true,
+  "actual_CPU_plan_trial": {
+    "label": "push3_c6750_compiled_all",
+    "root": "/cache/independent_sr_cuda_20261013",
+    "benchmark_started": false,
+    "plan_out": "calibration/push3_paired_latency_plan.json"
+  },
+  "CPU_readonly_component_smoke": {
+    "status": "PASS",
+    "scope": "Existing completed Push2 evidence used only to validate helper; never a Push3 fresh prediction",
+    "parent6500_full_image_rows": 103,
+    "scalar_metrics": 418,
+    "all_actual_PNG_inputs_original_sources_metric_weights_verified": true,
+    "old_G4_and_parent_raw_200_timing_statistic_and_artifact_binding": "PASS",
+    "checked_actual_files": 241,
+    "torch_imported": false,
+    "numpy_imported": false,
+    "benchmark_started": false
+  }
+}

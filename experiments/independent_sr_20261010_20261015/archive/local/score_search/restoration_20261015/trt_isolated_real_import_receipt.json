@@ -1,0 +1,138 @@
+{
+  "status": "PASS_ISOLATED_TRT_UNMODIFIED_GPU_IMPORT",
+  "site": "/cache/independent_sr_cuda_20261013/backends/push7_trt/site",
+  "versions": {
+    "tensorrt-cu12": "10.12.0.36",
+    "tensorrt-cu12-bindings": "10.12.0.36",
+    "tensorrt": "10.12.0.36",
+    "tensorrt-cu12-libs": "10.12.0.36",
+    "torch-tensorrt": "2.8.0",
+    "dllist": "2.0.0"
+  },
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:09:02) [GCC 11.2.0]",
+  "source_wheels_from_actual_pip_install_report": [
+    {
+      "name": "dllist",
+      "version": "2.0.0",
+      "wheel_url": "file:///cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/dllist-2.0.0-py3-none-any.whl",
+      "wheel_hashes": {
+        "sha256": "cd307b1a91bc46fae084f8c817d79be7e34951b149a2fd69004772e03573bfb3"
+      }
+    },
+    {
+      "name": "tensorrt",
+      "version": "10.12.0.36",
+      "wheel_url": "file:///cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt-10.12.0.36-py2.py3-none-any.whl",
+      "wheel_hashes": {
+        "sha256": "5266336f901a2c27f2d35d8b623637c26c03c6f39ee542923be7ac9831c9c424"
+      }
+    },
+    {
+      "name": "tensorrt_cu12",
+      "version": "10.12.0.36",
+      "wheel_url": "file:///cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt_cu12-10.12.0.36-py2.py3-none-any.whl",
+      "wheel_hashes": {
+        "sha256": "5f8c9a64ae38db389e60e66eb7cfcca38eaa169ea26e7e674496a8719ca85cb0"
+      }
+    },
+    {
+      "name": "tensorrt_cu12_bindings",
+      "version": "10.12.0.36",
+      "wheel_url": "file:///cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt_cu12_bindings-10.12.0.36-cp313-none-manylinux_2_28_x86_64.whl",
+      "wheel_hashes": {
+        "sha256": "0eb8d3e41279b1d0d329b85372d5d720c8d2ff1228f6273142d717b44d75935b"
+      }
+    },
+    {
+      "name": "tensorrt_cu12_libs",
+      "version": "10.12.0.36",
+      "wheel_url": "file:///cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt_cu12_libs-10.12.0.36-py2.py3-none-manylinux_2_28_x86_64.whl",
+      "wheel_hashes": {
+        "sha256": "3910039e1d49de0edfdc8bf273e40ad4b85a9d57c7c383fe0e22f75417df9610"
+      }
+    },
+    {
+      "name": "torch_tensorrt",
+      "version": "2.8.0",
+      "wheel_url": "file:///cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/torch_tensorrt-2.8.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_34_x86_64.whl",
+      "wheel_hashes": {
+        "sha256": "0df341e72bec335bdf236506cee22530146a3c2a2bcf224e82a8a83e8d2d14f8"
+      }
+    }
+  ],
+  "installed_metadata": [
+    {
+      "name": "tensorrt_cu12",
+      "version": "10.12.0.36",
+      "metadata_path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/tensorrt_cu12-10.12.0.36.dist-info",
+      "METADATA_sha256": "9d471c3ffb85c9fd1eb2c2f5179bd8ef33f000fb28a94f8e779c64f172ff05b7",
+      "RECORD_sha256": "fe95e4bab95fdb0a5057e7fcb8478e32f1bd971ae060d80e7f0529b42c80305e"
+    },
+    {
+      "name": "tensorrt_cu12_bindings",
+      "version": "10.12.0.36",
+      "metadata_path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/tensorrt_cu12_bindings-10.12.0.36.dist-info",
+      "METADATA_sha256": "6137f0ce8be8c81356048280e500e5295c3d704503334317c2343307b0dee298",
+      "RECORD_sha256": "ff91439f7de8ac5d8866e1147d27575a39953b3699d0b3328536528c8c894a12"
+    },
+    {
+      "name": "tensorrt",
+      "version": "10.12.0.36",
+      "metadata_path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/tensorrt-10.12.0.36.dist-info",
+      "METADATA_sha256": "18ed3d4efd43f4c61de5326a13ed0ca88f3fea144b5dfdb694fbd7715c9ceb47",
+      "RECORD_sha256": "4e0f0b6f7430f8eb844bd8e9698e749391fc31002d2524157f89dffd525c5932"
+    },
+    {
+      "name": "tensorrt_cu12_libs",
+      "version": "10.12.0.36",
+      "metadata_path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/tensorrt_cu12_libs-10.12.0.36.dist-info",
+      "METADATA_sha256": "8ea88199a667535f3a4661fa754829b5b765035840613840e911ebd6d586df54",
+      "RECORD_sha256": "db2a529fe0a5b378c6a40092e75fc9f763a4278e7b9f88f615b8432bd154d853"
+    },
+    {
+      "name": "torch_tensorrt",
+      "version": "2.8.0",
+      "metadata_path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt-2.8.0.dist-info",
+      "METADATA_sha256": "3392ae3c97d8701669b3e19644e4ebd1ce206c06dc8d14156ae5fb971271b7d9",
+      "RECORD_sha256": "428cbc32d73e8012f2fe6dbcb5a328a2ca0ebb56580ff1d563e183b032ac2e21"
+    },
+    {
+      "name": "dllist",
+      "version": "2.0.0",
+      "metadata_path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/dllist-2.0.0.dist-info",
+      "METADATA_sha256": "deb9d35f0c27c7a938f9b944bb84a69043179c72f2c6cea25066adceff4cad81",
+      "RECORD_sha256": "02123093484962c88f079dad74916761d7683185cdbad3fcd400165e5162aefa"
+    }
+  ],
+  "imported_modules": {
+    "torch": {
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/torch/__init__.py",
+      "sha256": "2f0deb66d5dff6b9c02a62832c3bf3824c2ee031c462a3afeb9ca170466da5bf"
+    },
+    "tensorrt": {
+      "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/tensorrt/__init__.py",
+      "sha256": "bf7d51700fccce35de62f3e60b05b60519d5039b4e94a7eeb9dc592da322d4c5"
+    },
+    "torch_tensorrt": {
+      "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/__init__.py",
+      "sha256": "a7e8f39496b6749df3cec6f9afe3a9b94f54c88ac150f1cdff100e3174f9f587"
+    }
+  },
+  "main_environment_before_sha256": "0d82f4797ab18eb38bd39b6435be6e5a6c14e79fcf543e6742c185669d8522d9",
+  "main_environment_distribution_paths_and_versions_unchanged": true,
+  "main_Torch_unchanged": true,
+  "torch_version": "2.8.0+cu128",
+  "CUDA_VISIBLE_DEVICES": "1",
+  "torch_CUDA_initialized_after_upstream_import": true,
+  "default_device_functions_monkeypatched": false,
+  "scope": "Explicitly authorized short physicalGPU1/logicalGPU0 package import only; process release on exit",
+  "model_build": false,
+  "engines_deserialized": false,
+  "inference": false,
+  "scoring": false,
+  "independent_full_shared_library_rehash": false,
+  "persistent_temp_written": false,
+  "prior_strict_CPU_import_log": "/cache/independent_sr_cuda_20261013/restoration_20261015/trt_cpu_import.log",
+  "prior_CPU_stub_diagnostic_not_used_for_acceptance": true,
+  "script_sha256": "6294848cb62c3b25b2c454bc8aa99b935f908bf09c0fb1e130cdb1e4095e147d"
+}

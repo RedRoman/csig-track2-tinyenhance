@@ -1,0 +1,169 @@
+{
+  "schema": "cuda_nr_stage4_initial_CPU_audit_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "parent_resume_sha256": "1f8d6991b490ebe9438b7e7b62c8ad958bac98979516d405f97a829c3c46461f",
+  "parent_config_sha256": "c6beaad0a6427a3eaaf3e829c04a25982c7ddbcb2df5c157f0aa37df686e0c5a",
+  "plan_sha256": "ff5a763f17a17d5658d21ef6279d7f98d94f41412b1fe96e69fd26e2891401eb",
+  "expected_first_case_crop": {
+    "case": 9,
+    "crop_xy": [
+      3135,
+      193
+    ]
+  },
+  "branches": [
+    {
+      "run": "cuda_nr_stage4_s6500_teacher6250_cont750",
+      "protocol_id": "043f1fabcb4900abcc67ed18999c3cdc9e7640c50f3418ce0e2697d7b9a73cd4",
+      "first_row": {
+        "local_step": 1,
+        "global_step": 6501,
+        "optimizer_step": 501,
+        "case": 9,
+        "crop_xy": [
+          3135,
+          193
+        ],
+        "loss": -0.12314911186695099,
+        "fidelity": 0.008083939552307129,
+        "reward": 1.7497739791870117,
+        "scores": {
+          "musiq": 0.7052178978919983,
+          "maniqa": 0.6215637922286987,
+          "clipiqa": 0.7038328051567078
+        },
+        "gradient_norm": 5.242475509643555,
+        "nonzero_lora_gradients": 514,
+        "finite_lora_gradients": 514,
+        "lr": 2e-07,
+        "teacher": "parent6250",
+        "step_seconds": 1.7960379123687744,
+        "elapsed_seconds": 1.7962660789489746,
+        "gpu_peak_allocated_bytes": 29947318784
+      },
+      "teacher": "parent6250",
+      "exact_FP32_LoRA_and_Adam_migration_proof": true,
+      "all_source_SHA_actual_checked": true,
+      "gradient_preflight_components": {
+        "musiq": {
+          "value": 0.7052178978919983,
+          "input_gradient_norm": 0.22363610565662384,
+          "input_gradient_finite": true
+        },
+        "maniqa": {
+          "value": 0.6215637922286987,
+          "input_gradient_norm": 0.13127386569976807,
+          "input_gradient_finite": true
+        },
+        "clipiqa": {
+          "value": 0.7038328051567078,
+          "input_gradient_norm": 3.2410497665405273,
+          "input_gradient_finite": true
+        }
+      }
+    },
+    {
+      "run": "cuda_nr_stage4_s6500_teacher6500_cont750",
+      "protocol_id": "c18efd0c8869bf580946ef2ccaccfc4f622d969d0ec058f752f0c03f53a5e4ac",
+      "first_row": {
+        "local_step": 1,
+        "global_step": 6501,
+        "optimizer_step": 501,
+        "case": 9,
+        "crop_xy": [
+          3135,
+          193
+        ],
+        "loss": -0.13123305141925812,
+        "fidelity": 2.2525568649928163e-12,
+        "reward": 1.7497739791870117,
+        "scores": {
+          "musiq": 0.7052178978919983,
+          "maniqa": 0.6215637922286987,
+          "clipiqa": 0.7038328051567078
+        },
+        "gradient_norm": 0.7549801468849182,
+        "nonzero_lora_gradients": 514,
+        "finite_lora_gradients": 514,
+        "lr": 2e-07,
+        "teacher": "parent6500",
+        "step_seconds": 2.0561914443969727,
+        "elapsed_seconds": 2.0563902854919434,
+        "gpu_peak_allocated_bytes": 29947318784
+      },
+      "teacher": "parent6500",
+      "exact_FP32_LoRA_and_Adam_migration_proof": true,
+      "all_source_SHA_actual_checked": true,
+      "gradient_preflight_components": {
+        "musiq": {
+          "value": 0.7052178978919983,
+          "input_gradient_norm": 0.22363610565662384,
+          "input_gradient_finite": true
+        },
+        "maniqa": {
+          "value": 0.6215637922286987,
+          "input_gradient_norm": 0.13127069175243378,
+          "input_gradient_finite": true
+        },
+        "clipiqa": {
+          "value": 0.7038328051567078,
+          "input_gradient_norm": 3.2410497665405273,
+          "input_gradient_finite": true
+        }
+      }
+    },
+    {
+      "run": "cuda_nr_stage4_s6500_teacher6500_nrstrong750",
+      "protocol_id": "4d12b7aae1486eb1425e3d1dedca737f152033e91c62a290c569e721899f5f71",
+      "first_row": {
+        "local_step": 1,
+        "global_step": 6501,
+        "optimizer_step": 501,
+        "case": 9,
+        "crop_xy": [
+          3135,
+          193
+        ],
+        "loss": -0.30469605326652527,
+        "fidelity": 2.2525568649928163e-12,
+        "reward": 2.0313069820404053,
+        "scores": {
+          "musiq": 0.7052178978919983,
+          "maniqa": 0.6215637922286987,
+          "clipiqa": 0.7038328051567078
+        },
+        "gradient_norm": 1.676361322402954,
+        "nonzero_lora_gradients": 514,
+        "finite_lora_gradients": 514,
+        "lr": 2e-07,
+        "teacher": "parent6500",
+        "step_seconds": 1.882803201675415,
+        "elapsed_seconds": 1.8828811645507812,
+        "gpu_peak_allocated_bytes": 29947318784
+      },
+      "teacher": "parent6500",
+      "exact_FP32_LoRA_and_Adam_migration_proof": true,
+      "all_source_SHA_actual_checked": true,
+      "gradient_preflight_components": {
+        "musiq": {
+          "value": 0.7052178978919983,
+          "input_gradient_norm": 0.22363610565662384,
+          "input_gradient_finite": true
+        },
+        "maniqa": {
+          "value": 0.6215637922286987,
+          "input_gradient_norm": 0.13127197325229645,
+          "input_gradient_finite": true
+        },
+        "clipiqa": {
+          "value": 0.7038328051567078,
+          "input_gradient_norm": 3.2410497665405273,
+          "input_gradient_finite": true
+        }
+      }
+    }
+  ],
+  "initial_pre_update_metric_scores_equal_across_three_branches": true,
+  "CUDA_context_initialized": false
+}

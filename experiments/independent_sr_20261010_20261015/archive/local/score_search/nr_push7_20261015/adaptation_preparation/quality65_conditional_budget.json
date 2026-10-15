@@ -1,0 +1,61 @@
+{
+  "schema": "push7_scale_adaptation_conditional_quality_budget_v1",
+  "CPU_only": true,
+  "target": 65,
+  "reference_G4_p10_ms": 0.6492159962654114,
+  "reference_source": "push6_quality_first/g4_latency.json, conditional table only; fresh final triplet required",
+  "A7750_S": 3.7614565663241937,
+  "original_predict_sha256": "0af39f578f704e00a0a0a5ce55e58f1668d283ac4602065d8215b6d21cf433e1",
+  "rows": [
+    {
+      "event_p10_ms": 10,
+      "S_required_for65": 3.5266778969896286,
+      "max_S_drop_vs_A7750": 0.23477866933456504,
+      "prediction_if_A_quality_unchanged": 76.48720275576129
+    },
+    {
+      "event_p10_ms": 12,
+      "S_required_for65": 3.577698538948794,
+      "max_S_drop_vs_A7750": 0.1837580273753998,
+      "prediction_if_A_quality_unchanged": 73.82951829072844
+    },
+    {
+      "event_p10_ms": 15,
+      "S_required_for65": 3.640489150163346,
+      "max_S_drop_vs_A7750": 0.12096741616084783,
+      "prediction_if_A_quality_unchanged": 70.68514893544202
+    },
+    {
+      "event_p10_ms": 18,
+      "S_required_for65": 3.692027773329313,
+      "max_S_drop_vs_A7750": 0.0694287929948807,
+      "prediction_if_A_quality_unchanged": 68.20457481576373
+    },
+    {
+      "event_p10_ms": 20,
+      "S_required_for65": 3.721892776218533,
+      "max_S_drop_vs_A7750": 0.03956379010566069,
+      "prediction_if_A_quality_unchanged": 66.80719601122468
+    },
+    {
+      "event_p10_ms": 22,
+      "S_required_for65": 3.7489545091150123,
+      "max_S_drop_vs_A7750": 0.012502057209181405,
+      "prediction_if_A_quality_unchanged": 65.56572243966883
+    },
+    {
+      "event_p10_ms": 22.98924850305911,
+      "S_required_for65": 3.7614565663241937,
+      "max_S_drop_vs_A7750": 0.0,
+      "prediction_if_A_quality_unchanged": 65.0
+    },
+    {
+      "event_p10_ms": 25,
+      "S_required_for65": 3.7853117740539917,
+      "max_S_drop_vs_A7750": -0.02385520772979799,
+      "prediction_if_A_quality_unchanged": 63.93405106158196
+    }
+  ],
+  "not_a_scale_measurement": true,
+  "not_pilot_or_full_scores": true
+}

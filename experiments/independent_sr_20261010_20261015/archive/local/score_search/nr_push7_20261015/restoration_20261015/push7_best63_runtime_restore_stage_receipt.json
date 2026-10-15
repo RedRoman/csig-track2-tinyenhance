@@ -1,0 +1,129 @@
+{
+  "status": "PASS_SMALL_RUNTIME_AND_2VAE_ENGINES_UNET_UPLOAD_PENDING",
+  "targets": [
+    {
+      "target": "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component_manifest.json",
+      "bytes": 8483,
+      "sha256": "1a3a349641e65ca5ad5d92301b25b3b1eae214e760645b5a7c294460f0ac08fd",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component_manifest.json",
+      "bytes": 8300,
+      "sha256": "21d3781a5cc092062d4ef87844e74ce916c461ea5b9939658917333d74a2f0ae",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/backends/push7_trt/unet_fp16_A7750/component_manifest.json",
+      "bytes": 152217,
+      "sha256": "627f1e314b1a6d6a467fd1eca2188b9ed840d54ba9bc9b80ec9ae27a84c68db6",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+      "bytes": 11216,
+      "sha256": "3e85026bd91ad8fb7fb91c5d3c74211cc33a9cff0f8316f7e56cde864ae41995",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/code/push7/audit_formal4_cpu.py",
+      "bytes": 11872,
+      "sha256": "23d625ffd17c7da4e553b53a410dce9d27cfe78dbeeb3b087edcbd696332e7c9",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/code/push7/audit_full_trt_unet_vae.py",
+      "bytes": 17189,
+      "sha256": "cfdaf826ea9fe36662141bf248af2df6e000d8b1eca61fcb3521cb8a04715b0d",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/code/push7/join_formal_unet_vae_cpu.py",
+      "bytes": 6628,
+      "sha256": "3a54016ef4e28eeb69eddcfe1128af50e2b9a5b86276dac86821deb41a972577",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/code/push7/launch_formal_push7.py",
+      "bytes": 3220,
+      "sha256": "3661c6cf04b53b47fc4d4403e91458a98b5b9223651dcf19c8d6d793baee7d80",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/code/push7/trt_unet/build_hypir_unet_trt.py",
+      "bytes": 13933,
+      "sha256": "4281d9be015142919b51b84d946ad8d23b8bd49451ad54adb9ada8f1d42cdcca",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/code/render_cuda_submission.py",
+      "bytes": 7979,
+      "sha256": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/code/score_cuda_stream.py",
+      "bytes": 11085,
+      "sha256": "20125b94596c669f33dc99b592424a8c1e6a44ec1247d304853823cc5e399074",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/candidate_manifest.json",
+      "bytes": 3737,
+      "sha256": "3e422d0e8474532a7fc20838504c743c32e19b03770e440eaada6eee003d38f3",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/config.json",
+      "bytes": 2234,
+      "sha256": "63e227319f2c2fb327257a810f6709b4f1d738732571f6c100e22b75174694e5",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/reference_runner.py",
+      "bytes": 9504,
+      "sha256": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/runner.py",
+      "bytes": 7731,
+      "sha256": "270d2434179d17658e9f1df228c8ef99124a2695141c92f0b5fecfa73d8d3080",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/trt_vae_runtime_v2.py",
+      "bytes": 4634,
+      "sha256": "dc2597edfe8a7d71526535bd4e7540bd9c7623de00b6639c61139e08837aa9a4",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/vae_hybrid_runner.py",
+      "bytes": 9006,
+      "sha256": "2bc74f65029c5c95c9a8c285bf7db1c63b03a15fb9fa06cd56d93cf6b1fe2fc9",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine",
+      "bytes": 71304884,
+      "sha256": "14c206896a7caa6b6491dae33133d149283025cfb8e15b6cf129d8854176ba55",
+      "actual_target_full_SHA_verified": true
+    },
+    {
+      "target": "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine",
+      "bytes": 102396372,
+      "sha256": "fe81087086d76aa8d0111cb80070b65b897e0438ebb2a8a020ef0ced8bc6bf30",
+      "actual_target_full_SHA_verified": true
+    }
+  ],
+  "count": 19,
+  "bytes": 173990224,
+  "engine_count": 2,
+  "original_absolute_config_and_checkpoint_path_preserved": true,
+  "selection_or_historical_scores_changed": false,
+  "SFS_written": false,
+  "GPU_started": false,
+  "TRT_site_not_installed_by_this_helper": true,
+  "original_quality_and_timing_metadata_restored": false,
+  "created_utc": "2026-10-15T07:08:16.140516+00:00"
+}

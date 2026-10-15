@@ -1,0 +1,114 @@
+{
+  "status": "complete",
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir",
+  "init_s": 21.59912101086229,
+  "runner_path": "HYPIR_A7750_native512_FP16_TRT_UNet_and_VAE_original_BF16_sampler",
+  "seed": 231,
+  "artifacts": {
+    "files": [
+      {
+        "path": "config.json",
+        "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/config.json",
+        "bytes": 2234,
+        "sha256": "63e227319f2c2fb327257a810f6709b4f1d738732571f6c100e22b75174694e5"
+      },
+      {
+        "path": "reference_runner.py",
+        "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/reference_runner.py",
+        "bytes": 9504,
+        "sha256": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b"
+      },
+      {
+        "path": "runner.py",
+        "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/runner.py",
+        "bytes": 7731,
+        "sha256": "270d2434179d17658e9f1df228c8ef99124a2695141c92f0b5fecfa73d8d3080"
+      },
+      {
+        "path": "trt_vae_runtime_v2.py",
+        "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/trt_vae_runtime_v2.py",
+        "bytes": 4634,
+        "sha256": "dc2597edfe8a7d71526535bd4e7540bd9c7623de00b6639c61139e08837aa9a4"
+      },
+      {
+        "path": "vae_hybrid_runner.py",
+        "resolved_path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir/vae_hybrid_runner.py",
+        "bytes": 9006,
+        "sha256": "2bc74f65029c5c95c9a8c285bf7db1c63b03a15fb9fa06cd56d93cf6b1fe2fc9"
+      }
+    ],
+    "extra_files": [],
+    "untraversed_symlink_directories": [],
+    "coverage": "Model directory Python/config/weight files; symlinked directories are not traversed. Use --hash-file for weights/configs outside this directory."
+  },
+  "benchmark_script": {
+    "path": "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+    "resolved_path": "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+    "bytes": 11216,
+    "sha256": "3e85026bd91ad8fb7fb91c5d3c74211cc33a9cff0f8316f7e56cde864ae41995"
+  },
+  "cuda": {
+    "logical_device": 0,
+    "name": "NVIDIA A100-SXM4-80GB",
+    "compute_capability": [
+      8,
+      0
+    ],
+    "total_memory_bytes": 85293072384,
+    "torch_version": "2.8.0+cu128",
+    "torch_cuda_build": "12.8",
+    "cudnn_version": 91002
+  },
+  "input": {
+    "device": "cuda:0",
+    "shape": [
+      1,
+      3,
+      512,
+      512
+    ],
+    "dtype": "torch.float16",
+    "distribution": "uniform [-1,1)",
+    "allocation_excluded_from_timing": true
+  },
+  "output": {
+    "device": "cuda:0",
+    "dtype": "torch.float32",
+    "shape": [
+      1,
+      3,
+      512,
+      512
+    ],
+    "all_finite": true,
+    "min": -1.0,
+    "max": 1.0,
+    "within_minus1_plus1": true,
+    "clamping_applied_by_benchmark": false
+  },
+  "latency_512": {
+    "event_med": 3909.150634765625,
+    "event_p10": 3909.150634765625,
+    "event_min": 3909.150634765625,
+    "wall_med": 3909.2163839377463,
+    "wall_min": 3909.2163839377463,
+    "wall_p10": 3909.2163839377463,
+    "n": 1,
+    "warm": 0
+  },
+  "raw_samples": {
+    "event_ms": [
+      3909.150634765625
+    ],
+    "wall_ms": [
+      3909.2163839377463
+    ]
+  },
+  "timing_scope": {
+    "event": "CUDA events on the current selected-device stream surround the complete original Runner.infer(x) call.",
+    "wall": "perf_counter starts before start.record and ends after finish.record plus torch.cuda.synchronize(selected_device).",
+    "included": "Original Runner input/output copies, dtype changes, clamping, CPU work and CPU-return/GPU-return behavior remain untouched. CUDA-event coverage of host work and other streams depends on Runner synchronization; wall time includes selected-device completion.",
+    "excluded": "Runner construction, compilation during construction, input allocation, warmup, file hashing, output validation and output numeric-range checks.",
+    "isolation": "Exactly one Runner is loaded in this process. Run G4 and each candidate in separate processes on the same idle NVIDIA GPU."
+  }
+}

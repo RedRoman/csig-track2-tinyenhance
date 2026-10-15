@@ -1,0 +1,104 @@
+{
+  "schema": "pixg5i_hypir_distill_binding_v1",
+  "label": "pixg5i_hypir_headreset_v3_s300",
+  "stage": "distilled_checkpoint",
+  "checkpoint_sha256": "a40462e6481d188ed120a5fca1adbbf425f2ed3de5bd1f81f4f8628d788ff167",
+  "initial_package_checkpoint_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+  "archive_sha256": "f8e154da5ea9cb2fe165a316f824003459661945e6bbe22efd025d8592d573d6",
+  "training_provenance": {
+    "config": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/config.json",
+      "sha256": "bd4d8f0d2488604f9b4e78b268d39b953d5298bd6fed4ccdcf08033eaccfced8",
+      "bytes": 79316
+    },
+    "marker": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/checkpoint_step300.json",
+      "sha256": "c1d061b2d939c2add40526fa57dbb94c124edc0e2facfcb5ebde0ad2c8dfd89a",
+      "bytes": 5679
+    },
+    "input_catalog": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/input_catalog.json",
+      "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+      "bytes": 23987
+    },
+    "teacher_catalog": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/teacher_catalog.json",
+      "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+      "bytes": 39787
+    },
+    "resume": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/resume_step300.pt",
+      "sha256": "d522c6a05ff9124fb465cce867941c19300cdbc43ed505d89a3d0792aacbd7d3",
+      "bytes": 45582843
+    },
+    "training_source": {
+      "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_headreset_v3.py",
+      "sha256": "3e64743ff117de1934ba7da04f3c24e822ba8573d91e842230eeb86a1c6c05cb",
+      "bytes": 31556
+    }
+  },
+  "teacher": {
+    "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+    "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+    "applied_to_this_checkpoint": true,
+    "render_manifest": {
+      "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+      "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+      "bytes": 81396
+    }
+  },
+  "used_as_G4_reference": false,
+  "variant": "headreset_v3",
+  "local_step": 300,
+  "optimizer_step": 300,
+  "reference_step": 30000,
+  "training_phase": "headreset_v3",
+  "global_step": 1500,
+  "parent_distillation_steps": 1200,
+  "total_distillation_steps": 1500,
+  "phase_initial_checkpoint_sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+  "phase_parent": {
+    "candidate_manifest": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s600/candidate_manifest.json",
+      "sha256": "812c2b19021a24cbcd4de993fb8da328c85c3f4dfe9502a239a71674a55fb7c0"
+    },
+    "parent_global_distillation_step": 1200,
+    "marker": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/checkpoint_step600.json",
+      "sha256": "2c8a02d4e00859f2d65721f29bbadd6541f902aebfb6a8fccff82b366cc8050f"
+    },
+    "config": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/config.json",
+      "sha256": "f0991c614f0843bd9e4a053c7d89b53ce6ad0300aa1d7b45204a728917528402"
+    },
+    "raw": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/step600.pth",
+      "sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90"
+    },
+    "resume": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/resume_step600.pt",
+      "sha256": "0feaebcdd5eff2c759c5e6a7a73f6b761cdd778381a502cecd8eb07a91ab3bd5"
+    },
+    "parent_local_step": 600,
+    "parent_optimizer_step": 600,
+    "raw_resume_FP32_exact": true,
+    "optimizer_inherited": false,
+    "RNG_inherited": false
+  },
+  "parent_candidate_manifest": {
+    "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s600/candidate_manifest.json",
+    "sha256": "812c2b19021a24cbcd4de993fb8da328c85c3f4dfe9502a239a71674a55fb7c0",
+    "bytes": 12374
+  },
+  "reset_head": {
+    "names": [
+      "outc.weight",
+      "outc.bias"
+    ],
+    "elements": 3468,
+    "initial_outc_zero": true,
+    "body110_exact_parent": true,
+    "first_step_body_gradient_zero_expected": true
+  },
+  "phase_initial_state_fingerprint_sha256": "bd258323c201ac7bd928fe50a66b95999e483d18da9200e46364a9aa1856753c"
+}

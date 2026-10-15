@@ -1,0 +1,21 @@
+{
+  "pid": 19036,
+  "args": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "-u",
+    "/cache/independent_sr_cuda_20261013/code/render_cuda_submission.py",
+    "--model-dir",
+    "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastconv_lr1e6_nr_s7850/model_dir",
+    "--test-dir",
+    "/cache/independent_sr_cuda_20261013/source_payload/assets/input",
+    "--val-dir",
+    "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/\u9a8c\u8bc1\u96c6",
+    "--out-dir",
+    "/cache/independent_sr_cuda_20261013/nr_push7_lastconv_pilot_evaluations/push7_a7750_lastconv_lr1e6_nr_s7850",
+    "--cases",
+    "pilot"
+  ],
+  "log": "/cache/independent_sr_cuda_20261013/logs/lastconv_lr1e6_100_render_20261015.log",
+  "physical_GPU": 3,
+  "launch_utc": "2026-10-15T07:29:51.427061+00:00"
+}

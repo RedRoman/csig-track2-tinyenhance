@@ -1,0 +1,54 @@
+{
+  "schema": "current_model_visual_preference_v1",
+  "updated_local_date": "2026-10-15",
+  "status": "quality_first_A7750_exact103_faster_inference_selected",
+  "preferred_label": "push6_a7750_ro_wavelet_all",
+  "preferred_name": "HYPIR A7750 / 保画质加速推理版",
+  "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/resume_step7750.pt",
+  "resume_sha256": "e240f3e810654e9503ed620a1007649d2dd056c290960b442e220e0a1451a83b",
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push6_a7750_ro_wavelet/model_dir",
+  "quality_dir": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all",
+  "NR": 2.3197332792186334,
+  "FR": 1.4417232871055603,
+  "S_proxy": 3.7614565663241937,
+  "source_selection": "/cache/independent_sr_cuda_20261013/results/nr_push6_selection.json",
+  "source_selection_sha256": "55b4c2fa4976c35f92e8e637af54ceb14a86da2ecad0b78792e0326c976714f5",
+  "comparison_only_candidate": {
+    "label": "push5_pix_g4_distill250_full",
+    "checkpoint_sha256": "8c95e115e12219bca8bea2b2d04e0a01552f072de56619fab878ae61a9643237",
+    "role": "score_and_latency_comparison_only_not_current_visual_preference"
+  },
+  "user_feedback": "感觉有点推过了，出现伪影了，previous model output目前看是比较好的",
+  "future_priority": [
+    "Preserve the visual quality of HYPIR A7750",
+    "Reject newly visible text deformation, bent straight lines, smearing or dense artificial texture",
+    "Seek tool-score improvement only within the visual-quality constraint"
+  ],
+  "score_target": 70,
+  "score_target_subject_to_visual_quality": true,
+  "fixed_visual_cases": [
+    7,
+    16,
+    41,
+    83
+  ],
+  "new_training_started": false,
+  "historical_evidence_unchanged": {
+    "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/results/nr_push4_selection.json": "b3148b21f466854f9fe8f81c7eca1348da5bf793141799573ff3be8b20e25c3f",
+    "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/results/nr_push5_selection.json": "aedfa48c0bc557efc97545a0d3259372598e6c3ec1e39a5c4db5371994e9c99a",
+    "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/NR_PUSH4_REPORT_20261014.md": "a7391d284be919218a5374bcbb4e9913c218802a4bdfac84ae45c51f86bf5d87",
+    "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/NR_PUSH5_REPORT_20261014.md": "e6b73dd38d2f2090b41e1e86de0bffab96c16165817f44eb308f6df7eca9f426"
+  },
+  "source_selection_local": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/results/nr_push6_selection.json",
+  "updated_utc": "2026-10-14T19:41:00.461576+00:00",
+  "render_dir": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all",
+  "quality_reused_from": "push4_a7750_compiled_all",
+  "formal_equivalence_proof": "/cache/independent_sr_cuda_20261013/audits/push6/formal_png103/ro_wavelet_exact103_v2.json",
+  "formal_equivalence_proof_sha256": "bc5dff12c258069bb77e5f3e0b6982737a9d74ea705782bb230ef244b1850e16",
+  "source_visual_baseline": "push4_a7750_compiled_all",
+  "tool_prediction": 57.85005281670066,
+  "score_target_achieved": false,
+  "paired_prediction": "/cache/independent_sr_cuda_20261013/calibration/push6_quality_first/paired_prediction.json"
+}

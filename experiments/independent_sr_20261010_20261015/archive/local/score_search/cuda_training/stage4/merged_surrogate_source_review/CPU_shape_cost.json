@@ -1,0 +1,52 @@
+{
+  "CPU_only": true,
+  "CUDA_initialized": false,
+  "adapter_module_counts": {
+    "linear": 192,
+    "conv1x1": 14,
+    "conv_other": 51
+  },
+  "merged_weight_elements": 837602560,
+  "merged_weight_BF16_bytes": 1675205120,
+  "master_LoRA_FP32_bytes": 1037897728,
+  "examples": [
+    {
+      "key": "down_blocks.0.attentions.0.proj_in.lora_A.default.weight",
+      "A": [
+        256,
+        320
+      ],
+      "B": [
+        320,
+        256
+      ],
+      "merged": [
+        320,
+        320
+      ],
+      "elements": 102400
+    },
+    {
+      "key": "down_blocks.0.resnets.0.conv1.lora_A.default.weight",
+      "A": [
+        256,
+        320,
+        3,
+        3
+      ],
+      "B": [
+        320,
+        256,
+        1,
+        1
+      ],
+      "merged": [
+        320,
+        320,
+        3,
+        3
+      ],
+      "elements": 921600
+    }
+  ]
+}

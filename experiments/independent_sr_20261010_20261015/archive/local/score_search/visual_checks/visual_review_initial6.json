@@ -1,0 +1,44 @@
+{
+  "status": "initial_six_pilots_reviewed; awaiting additional6k175_and_ablations",
+  "cases": [
+    7,
+    16,
+    23,
+    28,
+    41
+  ],
+  "review_basis": "Original server bytes downloaded and remote SHA256 checked. Full baseline/input views and exact pixel ROI crops reviewed with view_image. No GT is available for these cases.",
+  "preview_manifest": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/visual_checks/derived_previews/preview_manifest.json",
+  "candidate_manifest": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/visual_checks/original_download_manifest.json",
+  "baseline_manifest": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/visual_checks/baseline_download_manifest.json",
+  "findings": [
+    {
+      "case": 7,
+      "area": "Chinese banner / glazing",
+      "observation": "The initial6 pilots have broadly similar main glyph shapes. coeff_t175 visibly weakens regular glazing dot patterns and dark letter outlines;225 intensifies them. No visually demonstrable breakthrough in glyph correctness."
+    },
+    {
+      "case": 16,
+      "area": "Upper wall / window grid",
+      "observation": "All retain newly visible regular honeycomb/pit-like wall patterns relative to the blurred input.175 weakens their contrast;225 makes them strongest. The fine window grid is clearer than input but no large step-specific structural improvement was evident."
+    },
+    {
+      "case": 23,
+      "area": "Restaurant sign / glazing",
+      "observation": "Main sign glyph silhouettes and foreground branch occlusion remain broadly stable. Fine honeycomb patterns on glazing are much stronger than in the input.175 reduces contrast but does not remove the pattern;225 strengthens it. Thin dark/greenish letter edge contours and granular red background remain."
+    },
+    {
+      "case": 28,
+      "area": "Leaves / background foliage",
+      "observation": "New thin leaves and branch contours coexist with high-frequency or wavy background masses.175 softens background texture;225 intensifies dense bright microtexture. New details cannot be judged as authentic without GT."
+    },
+    {
+      "case": 41,
+      "area": "Flower / leaves",
+      "observation": "Main flower silhouette is broadly stable across initial6 pilots; no new large petal deformation was seen. Smooth large petal color areas with hard contours remain.175 softens fine petal and leaf texture;225 amplifies microtexture and leaf highlights. Reduced texture does not establish that wax-like appearance is solved."
+    }
+  ],
+  "initial_conclusion": "6000/8000/10000 steps at coeff_t200 look broadly similar in selected regions. coeff_t175 gives visible texture suppression with a softness tradeoff; no candidate has demonstrably solved the recurrent grid/pit or petal appearance problems. Proxy NR/S must not be interpreted as GT fidelity.",
+  "screening_baseline": "s8000_mt200_ct200_pilot from the same batch; initial old full8000 shown only as historical visual context",
+  "old_full_vs_new_pilot_agreement": "Byte differences after skipped test cases are expected from continuous VAE.sample RNG draws; not attributed to backend differences. Root verified identical SHA256 for shared-prefix val1 and test1 only."
+}

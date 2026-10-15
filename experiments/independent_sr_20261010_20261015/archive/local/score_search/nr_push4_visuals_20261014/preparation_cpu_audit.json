@@ -1,0 +1,62 @@
+{
+  "schema": "push4_visual_preparation_CPU_audit_v1",
+  "status": "PASS",
+  "gallery_source_SHA256": "39b735c379342ae9e9540ef3be9b9f2ce750eb969e743c5e903fbef47ad24fe0",
+  "frozen_previous_gallery_source_SHA256": "413ba72cf0c03340e728e5afcbbbed0cdaa163d08b83e879c09be0678b42379f",
+  "parent_label": "push3_c7250_compiled_all",
+  "parent_checkpoint_SHA256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+  "parent_full_quality": {
+    "NR": 2.313125129005856,
+    "FR": 1.4465690056482952,
+    "S_proxy": 3.7596941346541515,
+    "component_means": {
+      "validation": {
+        "lpips": 0.3428955078125,
+        "dists": 0.21053548653920492,
+        "niqe": 4.322122831383642,
+        "musiq": 38.676076889038086,
+        "maniqa": 0.5724314451217651,
+        "clipiqa": 0.7652938961982727
+      },
+      "test": {
+        "niqe": 4.254479983830981,
+        "musiq": 39.66665840148926,
+        "maniqa": 0.5701021432876587,
+        "clipiqa": 0.7718044000864029
+      }
+    },
+    "scope": "Original full100 test NR + validation3 FR; never inferred from four selected cases"
+  },
+  "parent_native_originals": [
+    {
+      "case": 7,
+      "SHA256": "a39844241f369414e9eaffad2af5f1b4629ea79e55ae8656771470713ceccfad",
+      "hardlink_same_inode": true,
+      "new_bytes_allocated_for_original": 0
+    },
+    {
+      "case": 16,
+      "SHA256": "4e5831dbf71ec92b4ef1026ebdf6f6392599bbfb39163287c40907821f9478de",
+      "hardlink_same_inode": true,
+      "new_bytes_allocated_for_original": 0
+    },
+    {
+      "case": 41,
+      "SHA256": "c6370cc823eb4e5b6126a3f8916d6130f9c40df68b92e1a6940c9fee64e2bbf4",
+      "hardlink_same_inode": true,
+      "new_bytes_allocated_for_original": 0
+    },
+    {
+      "case": 83,
+      "SHA256": "3fd683ec207771e6e220213a628ab20be729c171ac993337b63c3ebaa8ae2e8c",
+      "hardlink_same_inode": true,
+      "new_bytes_allocated_for_original": 0
+    }
+  ],
+  "candidate_full_labels_pending_root_notification": true,
+  "candidate_images_downloaded": 0,
+  "pilot_images_downloaded": 0,
+  "old_files_modified": false,
+  "GPU_used": false,
+  "selected_label_can_retain_parent_if_no_new_gain": true
+}

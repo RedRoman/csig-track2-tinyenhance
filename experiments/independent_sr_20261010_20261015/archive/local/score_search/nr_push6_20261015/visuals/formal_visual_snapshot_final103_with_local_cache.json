@@ -1,0 +1,187 @@
+{
+  "schema": "push6_formal_visual_committed_snapshot_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "GPU_used": false,
+  "candidate_formal_complete103": true,
+  "committed_images": 103,
+  "formal_candidate_dir": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all",
+  "formal_parent_dir": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all",
+  "scope": "Same A7750 weights, accelerated inference; no new fine-tuning. Progress is never a full-quality result.",
+  "candidate_runner_sha256": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b",
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "candidate_protocol_id": "04de57a6e07822e7301b9c98c508f473dfb3a66aba55ac0ff6a28bde24d4fe77",
+  "candidate_protocol_file_sha256": "b82d446a476a8a9947fd484fb50162b034f58dc629f017e0992665324f474183",
+  "committed_state_or_final_manifest_sha256": "b793e6c9d641f329299725c8e07518122e764d927d64f8774154c26f074c3eb4",
+  "parent_selection_sha256": "b3148b21f466854f9fe8f81c7eca1348da5bf793141799573ff3be8b20e25c3f",
+  "parent_full_audit_sha256": "ae5b2234f5e110240507fbec515139d1b2a23bf8f664e7477e34c377e09c507b",
+  "parent_manifest_sha256": "35355c94cace390b5f5918cfb607d85b0f55c9cd1e1ba0a4f6a4d034abb54e16",
+  "parent_records": {
+    "7": {
+      "task_index": 9,
+      "split": "test",
+      "case": 7,
+      "output": "render/test/case7.png",
+      "sha256": "bfa61a3bec30ee7f27ddb12bb010a6737387e1f99345a658956a844cef4f45fc",
+      "size": [
+        4096,
+        3072
+      ],
+      "seconds": 9.322998285293579,
+      "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case7.png",
+      "bytes": 18446665,
+      "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4"
+    },
+    "16": {
+      "task_index": 18,
+      "split": "test",
+      "case": 16,
+      "output": "render/test/case16.png",
+      "sha256": "8a2c923b1a1cfb47b0b95752ce3e5027054ddc97f67fa88cb22212b9d2d25c54",
+      "size": [
+        4096,
+        3072
+      ],
+      "seconds": 9.24218463897705,
+      "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case16.png",
+      "bytes": 17787503,
+      "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307"
+    },
+    "41": {
+      "task_index": 43,
+      "split": "test",
+      "case": 41,
+      "output": "render/test/case41.png",
+      "sha256": "2466b79f587436a82d0722dacbb8d4f62ae4a19d45b0494b69ac25cb46409403",
+      "size": [
+        3072,
+        4096
+      ],
+      "seconds": 9.62812852859497,
+      "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case41.png",
+      "bytes": 23288942,
+      "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b"
+    },
+    "83": {
+      "task_index": 85,
+      "split": "test",
+      "case": 83,
+      "output": "render/test/case83.png",
+      "sha256": "c5ad4a4137d9be64166bc8e01f6953c5e7b4a0fa20b3538c1a6c3ad3ce3ebc03",
+      "size": [
+        3072,
+        4096
+      ],
+      "seconds": 9.40263843536377,
+      "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case83.png",
+      "bytes": 22027167,
+      "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038"
+    }
+  },
+  "candidate_records": {
+    "7": {
+      "task_index": 9,
+      "split": "test",
+      "case": 7,
+      "output": "render/test/case7.png",
+      "sha256": "bfa61a3bec30ee7f27ddb12bb010a6737387e1f99345a658956a844cef4f45fc",
+      "size": [
+        4096,
+        3072
+      ],
+      "seconds": 10.82169222831726,
+      "path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case7.png",
+      "bytes": 18446665,
+      "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4"
+    },
+    "16": {
+      "task_index": 18,
+      "split": "test",
+      "case": 16,
+      "output": "render/test/case16.png",
+      "sha256": "8a2c923b1a1cfb47b0b95752ce3e5027054ddc97f67fa88cb22212b9d2d25c54",
+      "size": [
+        4096,
+        3072
+      ],
+      "seconds": 8.65532922744751,
+      "path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case16.png",
+      "bytes": 17787503,
+      "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307"
+    },
+    "41": {
+      "task_index": 43,
+      "split": "test",
+      "case": 41,
+      "output": "render/test/case41.png",
+      "sha256": "2466b79f587436a82d0722dacbb8d4f62ae4a19d45b0494b69ac25cb46409403",
+      "size": [
+        3072,
+        4096
+      ],
+      "seconds": 8.932486772537231,
+      "path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case41.png",
+      "bytes": 23288942,
+      "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b"
+    },
+    "83": {
+      "task_index": 85,
+      "split": "test",
+      "case": 83,
+      "output": "render/test/case83.png",
+      "sha256": "c5ad4a4137d9be64166bc8e01f6953c5e7b4a0fa20b3538c1a6c3ad3ce3ebc03",
+      "size": [
+        3072,
+        4096
+      ],
+      "seconds": 8.852199077606201,
+      "path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case83.png",
+      "bytes": 22027167,
+      "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038"
+    }
+  },
+  "script_sha256": "7d110fdb66294ad4fd12eb2f4edcd77981a0d5791ce448b47f015c9b9bd65745",
+  "candidate_local_cache_provenance": {
+    "method": "Root-authorized reuse of local byte-identical cache after actual new remote full103 generation and exact103 audit",
+    "original_formal_snapshot_sha256": "759c04098f1b94183932d414aaa5cc2687e65e623aa6eb7823a5670b1f98230e",
+    "incomplete_downloads_under_formal_sources_ro_wavelet_not_used": true,
+    "records": [
+      {
+        "case": 7,
+        "method": "content-addressed local cache of byte-identical actual new formal render; no regeneration substitution",
+        "new_remote_path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case7.png",
+        "new_remote_committed_actual_sha256": "bfa61a3bec30ee7f27ddb12bb010a6737387e1f99345a658956a844cef4f45fc",
+        "local_cached_source": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_a7750_compiled_all/render/test/case7.png",
+        "local_cache": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push6_20261015/visuals/formal_sources/content_addressed_new_render/case7.png",
+        "actual_local_sha256": "bfa61a3bec30ee7f27ddb12bb010a6737387e1f99345a658956a844cef4f45fc"
+      },
+      {
+        "case": 16,
+        "method": "content-addressed local cache of byte-identical actual new formal render; no regeneration substitution",
+        "new_remote_path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case16.png",
+        "new_remote_committed_actual_sha256": "8a2c923b1a1cfb47b0b95752ce3e5027054ddc97f67fa88cb22212b9d2d25c54",
+        "local_cached_source": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_a7750_compiled_all/render/test/case16.png",
+        "local_cache": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push6_20261015/visuals/formal_sources/content_addressed_new_render/case16.png",
+        "actual_local_sha256": "8a2c923b1a1cfb47b0b95752ce3e5027054ddc97f67fa88cb22212b9d2d25c54"
+      },
+      {
+        "case": 41,
+        "method": "content-addressed local cache of byte-identical actual new formal render; no regeneration substitution",
+        "new_remote_path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case41.png",
+        "new_remote_committed_actual_sha256": "2466b79f587436a82d0722dacbb8d4f62ae4a19d45b0494b69ac25cb46409403",
+        "local_cached_source": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_a7750_compiled_all/render/test/case41.png",
+        "local_cache": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push6_20261015/visuals/formal_sources/content_addressed_new_render/case41.png",
+        "actual_local_sha256": "2466b79f587436a82d0722dacbb8d4f62ae4a19d45b0494b69ac25cb46409403"
+      },
+      {
+        "case": 83,
+        "method": "content-addressed local cache of byte-identical actual new formal render; no regeneration substitution",
+        "new_remote_path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case83.png",
+        "new_remote_committed_actual_sha256": "c5ad4a4137d9be64166bc8e01f6953c5e7b4a0fa20b3538c1a6c3ad3ce3ebc03",
+        "local_cached_source": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_a7750_compiled_all/render/test/case83.png",
+        "local_cache": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push6_20261015/visuals/formal_sources/content_addressed_new_render/case83.png",
+        "actual_local_sha256": "c5ad4a4137d9be64166bc8e01f6953c5e7b4a0fa20b3538c1a6c3ad3ce3ebc03"
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "recovered_best63_full_render",
+    "pid": 25070,
+    "args": [
+      "/cache/independent_sr_cuda_20261013/env/bin/python",
+      "-u",
+      "/cache/independent_sr_cuda_20261013/code/render_cuda_submission.py",
+      "--model-dir",
+      "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir",
+      "--test-dir",
+      "/cache/independent_sr_cuda_20261013/source_payload/assets/input",
+      "--val-dir",
+      "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/\u9a8c\u8bc1\u96c6",
+      "--out-dir",
+      "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_recovered_a7750_trtunetvae_all",
+      "--cases",
+      "all"
+    ],
+    "log": "/cache/independent_sr_cuda_20261013/logs/recovered_best63_full_render_20261015.log",
+    "physical_GPU": 2,
+    "launch_utc": "2026-10-15T08:06:33.389243+00:00"
+  },
+  {
+    "name": "recovered_best63_full_score",
+    "pid": 25071,
+    "args": [
+      "/cache/independent_sr_cuda_20261013/env/bin/python",
+      "-u",
+      "/cache/independent_sr_cuda_20261013/code/score_cuda_stream.py",
+      "--tool-dir",
+      "/cache/independent_sr_cuda_20261013/scoring_tool",
+      "--evaluation",
+      "push7_recovered_a7750_trtunetvae_all=/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_recovered_a7750_trtunetvae_all/render",
+      "--out-root",
+      "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations"
+    ],
+    "log": "/cache/independent_sr_cuda_20261013/logs/recovered_best63_full_score_20261015.log",
+    "physical_GPU": 2,
+    "launch_utc": "2026-10-15T08:06:33.389904+00:00"
+  }
+]

@@ -1,0 +1,104 @@
+{
+  "root": "/cache/independent_sr_score_search_20261013",
+  "source_root": "/cache/independent_sr_ascend_20261012",
+  "baseline": {
+    "step": 8000,
+    "S_proxy": 3.6603779575546587,
+    "test_NR": 2.210316020381451,
+    "val_FR": 1.4500619371732077,
+    "test_n": 100,
+    "val_n": 3,
+    "checkpoint_sha256": "1446f3bc67f2d5743a9f00eb52c92d1c610124779a37a98646d2c1f7f3775225"
+  },
+  "pilot_cases": [
+    1,
+    6,
+    7,
+    11,
+    16,
+    18,
+    21,
+    23,
+    25,
+    28,
+    31,
+    36,
+    41,
+    46,
+    51,
+    61,
+    71,
+    81,
+    91,
+    100
+  ],
+  "inference": {
+    "model_t": 200,
+    "patch": 512,
+    "stride": 256,
+    "rank": 256,
+    "caption": "",
+    "upscale": 1,
+    "weight_dtype": "BF16",
+    "seed_before_initialization": 231,
+    "encoding": "upstream PIL floor uint8, lossless PNG"
+  },
+  "scoring": {
+    "split_seed": 1234,
+    "maniqa_crops": 100,
+    "backend": "Ascend NPU; CUDA parity not established",
+    "metric_weights": "same 8 original archive files",
+    "predicted_leaderboard_score": null
+  },
+  "jobs": [
+    {
+      "physical_npu": 0,
+      "step": 6000,
+      "coeff_t": 200,
+      "test_cases": "pilot"
+    },
+    {
+      "physical_npu": 1,
+      "step": 8000,
+      "coeff_t": 200,
+      "test_cases": "pilot"
+    },
+    {
+      "physical_npu": 2,
+      "step": 10000,
+      "coeff_t": 200,
+      "test_cases": "pilot"
+    },
+    {
+      "physical_npu": 3,
+      "step": 8000,
+      "coeff_t": 175,
+      "test_cases": "pilot"
+    },
+    {
+      "physical_npu": 4,
+      "step": 8000,
+      "coeff_t": 225,
+      "test_cases": "pilot"
+    },
+    {
+      "physical_npu": 5,
+      "step": 10000,
+      "coeff_t": 175,
+      "test_cases": "pilot"
+    },
+    {
+      "physical_npu": 6,
+      "step": 6000,
+      "coeff_t": 200,
+      "test_cases": "all"
+    },
+    {
+      "physical_npu": 7,
+      "step": 10000,
+      "coeff_t": 200,
+      "test_cases": "all"
+    }
+  ],
+  "selection": "Pilot is screening only. Confirm full100+val3 for candidate; retain artifacts and inspect texture/text cases."
+}

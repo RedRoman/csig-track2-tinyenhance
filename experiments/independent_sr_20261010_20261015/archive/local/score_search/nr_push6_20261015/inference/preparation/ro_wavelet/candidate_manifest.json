@@ -1,0 +1,25 @@
+{
+  "schema": "push6_hypir_sameweight_ro_wavelet_v1",
+  "label": "push6_a7750_ro_wavelet",
+  "CPU_only_preparation": true,
+  "GPU_started_by_preparation_agent": false,
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push6_a7750_ro_wavelet/model_dir",
+  "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "reference_runner_sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae",
+  "runner_sha256": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b",
+  "config_sha256": "8ea2367f3395cb87e98e663fb47c172de97632913776e9514a8ac44247b31cd8",
+  "isolation_sources": {
+    "ro_only": "da89a9b20d2a58b1bd87c710d83068c1740e85d2388fc6f255e29c25453293f6",
+    "wavelet_only": "0b11943b2ec79a34d16d24a6e58428dc8984d1b4ed25dec4690e3f0e108418e8"
+  },
+  "channels_last_conversion": false,
+  "compile_choice": "UNet.forward,VAE.encode,VAE.decode and complete wavelet reduce-overhead dynamicFalse; no other compile, dtype, layout or arithmetic change",
+  "cudagraph_step_marker": "Once per infer for output lifetime; no hidden forwards/RNG reset",
+  "Gaussian_tile_weighting_posterior_DDPM_and_native_interface": "Original unchanged operations, dtype, order and RNG calls",
+  "quality_reuse_claim": false,
+  "validation": "Independent3input512 and native saved-float/PNG/fourRNG/ownership first; formal val3\u2192test100 canonical PNG exact103 proof or independent original103/418 scoring if any output differs",
+  "formal_parent_quality_dir": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all",
+  "render_seed": 231,
+  "scorer_seed": 1234
+}

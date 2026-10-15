@@ -1,0 +1,58 @@
+{
+  "schema": "push4_fixed_val1_native_ROI_CPU_audit_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "final_delivery": true,
+  "case": 1,
+  "ROI_box_xyxy_exclusive": [
+    2304,
+    2688,
+    2944,
+    3200
+  ],
+  "no_new_GT_or_candidate_based_ROI_selection": true,
+  "exact_native_pixel_checks": [
+    {
+      "source": "GT",
+      "original_sha256": "5190460e6507bb1fe325b681a577cb0dfd70483389ecfe30b52d59ac67ee6906",
+      "exact_native_ROI_pixels": true
+    },
+    {
+      "source": "push3_c7250_compiled_all",
+      "original_sha256": "345b6bbd3f49c6d6c69bc638e03335b704b363e38ab7729ede38000518722611",
+      "exact_native_ROI_pixels": true
+    },
+    {
+      "source": "push4_c7750_compiled_all",
+      "original_sha256": "a7731b176be7a20882b799854c9aff8a08ee0b70c885a4beb9c63c0b9eec3df4",
+      "exact_native_ROI_pixels": true
+    },
+    {
+      "source": "push4_a7750_compiled_all",
+      "original_sha256": "9636bf0452aae5f0331d44dd416e9251af3c9bd7aa818ea8fac193508aad8783",
+      "exact_native_ROI_pixels": true
+    },
+    {
+      "source": "push4_d7500_compiled_all",
+      "original_sha256": "d8c4db09e1ed3fce893e4c22981a58ccc747d437895514da3d7931adc0a42d36",
+      "exact_native_ROI_pixels": true
+    }
+  ],
+  "all_original_SHA_unchanged": true,
+  "source_checkpoint_SHA256": [
+    "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+    "c953cb853a2a98e1563171798af9d4cb5d034957a4d7da444eb1e25fd6db96a3",
+    "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+    "feb55a9e22e466e6f45f3b15d6cd38b67a679d761fc37e093b77687fafda3b50"
+  ],
+  "full_label_coverage": [
+    "push3_c7250_compiled_all",
+    "push4_c7750_compiled_all",
+    "push4_a7750_compiled_all",
+    "push4_d7500_compiled_all"
+  ],
+  "full_render_only": true,
+  "all_final_manifests": true,
+  "diagnostic_manifest_SHA256": "76550c80e46dd5d9f483929b3e98fd685203505ff03f55b0a07a1f652a9b990e",
+  "diagnostic_source_SHA256": "1c45627d739e81d0904c369ad17a0c4f8f94dfe952ae62d6f29ada5fb670436b"
+}

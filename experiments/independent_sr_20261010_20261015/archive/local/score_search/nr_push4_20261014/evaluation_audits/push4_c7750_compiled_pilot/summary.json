@@ -1,0 +1,38 @@
+{
+  "label": "push4_c7750_compiled_pilot",
+  "status": "PASS",
+  "image_rows": 23,
+  "scalar_metrics": 98,
+  "NR": 2.312034497213827,
+  "FR": 1.4438390533129373,
+  "S_subset": 3.7558735505267644,
+  "actual_checkpoint_sha256": "c953cb853a2a98e1563171798af9d4cb5d034957a4d7da444eb1e25fd6db96a3",
+  "reference_comparison": {
+    "reference_dir": "/cache/independent_sr_cuda_20261013/nr_push3_pilot_evaluations/push3_c7250_compiled_pilot",
+    "scope": "fixed20 test + validation3 pilot; S_subset only; not full score",
+    "same_original_inputs_GT_and_order": true,
+    "same_formal_metrics_and_sources": true,
+    "same_render_input_output_and_rng_policy": true,
+    "same_post_render_rng": true,
+    "same_post_score_rng": true,
+    "runner_differences": {
+      "weight_path": {
+        "reference": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step7250.pth",
+        "candidate": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_r10_500/step7750.pth"
+      },
+      "checkpoint_sha256": {
+        "reference": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+        "candidate": "c953cb853a2a98e1563171798af9d4cb5d034957a4d7da444eb1e25fd6db96a3"
+      },
+      "label": {
+        "reference": "push3_c7250_compiled",
+        "candidate": "push4_c7750_compiled"
+      }
+    },
+    "reference_checkpoint_sha256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+    "candidate_checkpoint_sha256": "c953cb853a2a98e1563171798af9d4cb5d034957a4d7da444eb1e25fd6db96a3",
+    "delta_NR": 0.006180887328007589,
+    "delta_FR": -0.002729952335357888,
+    "delta_S_subset": 0.0034509349926499233
+  }
+}

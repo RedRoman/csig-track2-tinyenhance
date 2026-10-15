@@ -1,0 +1,112 @@
+{
+  "audited_bjt": "2026-10-13T22:12:01.778134+08:00",
+  "server_port": 30416,
+  "root": "/cache/independent_sr_cuda_20261013",
+  "method": "read-only static source+actual stable protocol inspection; no GPU calls or image changes from this audit",
+  "source_sha256": {
+    "code/render_cuda_submission.py": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5",
+    "scoring_tool/eval_submission.py": "80d194fcfefc0fe409072fc26e77357d73c00e1d9ff5f03cb63ebaeb2acc734b",
+    "scoring_tool/csig_metrics.py": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2",
+    "code/hypir_cuda_runner/runner.py": "204d6d84b439213591bc8aaa13412c4b38f8eba0613a798d188541524728c29f",
+    "submissions/hypir_s6000_mt200_ct175/model_dir/runner.py": "204d6d84b439213591bc8aaa13412c4b38f8eba0613a798d188541524728c29f",
+    "submissions/hypir_s6000_mt200_ct175/model_dir/config.json": "8f0bb16bd59cf237894e88d4560193491a5dbc14af2c978896393b4997d2212c",
+    "submissions/hypir_s8000_mt200_ct200/model_dir/runner.py": "204d6d84b439213591bc8aaa13412c4b38f8eba0613a798d188541524728c29f",
+    "submissions/hypir_s8000_mt200_ct200/model_dir/config.json": "6ef92f28f77ae903ef7c7c2f1ac883fd6355a81aeb54802524455333b354d1ea",
+    "repos/HYPIR_cuda/HYPIR/enhancer/base.py": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161",
+    "repos/HYPIR_cuda/HYPIR/enhancer/sd2.py": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd",
+    "repos/HYPIR_cuda/HYPIR/utils/common.py": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+  },
+  "source_byte_backup_sha_verified": true,
+  "protocols": [
+    {
+      "label": "s6000_mt200_ct175_cuda_all",
+      "protocol_id": "0f9a8c9eda452f73e27a2617f5b44c390cbe18bf02e930125774f5bd45e8d9fb",
+      "actual_runner_sha256": "204d6d84b439213591bc8aaa13412c4b38f8eba0613a798d188541524728c29f",
+      "checkpoint_sha256": "2c82a71a94aa754bd4a26a2a474c2bbe4989bde1d38d2e15d9e58eb0c3e408bc",
+      "model_t": 200,
+      "coeff_t": 175,
+      "full103_order": "PASS",
+      "native_input_output": "PASS",
+      "BF16_internal": true,
+      "warmup": false
+    },
+    {
+      "label": "s8000_mt200_ct200_cuda_all",
+      "protocol_id": "805eb574b8150fde52d7fe36bf64dc8ba877410232ec766e96de0adb10a0ad53",
+      "actual_runner_sha256": "204d6d84b439213591bc8aaa13412c4b38f8eba0613a798d188541524728c29f",
+      "checkpoint_sha256": "1446f3bc67f2d5743a9f00eb52c92d1c610124779a37a98646d2c1f7f3775225",
+      "model_t": 200,
+      "coeff_t": 200,
+      "full103_order": "PASS",
+      "native_input_output": "PASS",
+      "BF16_internal": true,
+      "warmup": false
+    }
+  ],
+  "checks": [
+    {
+      "name": "input matches original CM.load_img + eval_submission.render",
+      "status": "PASS",
+      "evidence": [
+        "scoring_tool/csig_metrics.py:93-100",
+        "scoring_tool/eval_submission.py:59-66",
+        "code/render_cuda_submission.py:108-113"
+      ],
+      "finding": "RGB np.float32/255 -> CHW CUDA -> .half()*2-1; native dimensions unchanged"
+    },
+    {
+      "name": "output quantization matches original tool",
+      "status": "PASS",
+      "evidence": [
+        "scoring_tool/eval_submission.py:61-70",
+        "code/render_cuda_submission.py:114-124"
+      ],
+      "finding": "Runner.infer -> FP32 CUDA clamp[-1,1] -> CPU NumPy ((*0.5+0.5)*255).round().astype(uint8) -> lossless PNG compress_level1"
+    },
+    {
+      "name": "quality uses fresh process and no latency warmup",
+      "status": "PASS",
+      "evidence": [
+        "code/render_cuda_submission.py:65-78",
+        "code/render_cuda_submission.py:84",
+        "code/hypir_cuda_runner/runner.py:65-70"
+      ],
+      "finding": "Runner sets seed231 BEFORE construction/LoRA initialization; renderer directly processes val1..3 then numeric test1..100. The tool main calls latency before render unless --skip_latency; this renderer deliberately isolates quality from latency RNG consumption."
+    },
+    {
+      "name": "resume preserves stochastic inference sequence",
+      "status": "PASS_STATIC",
+      "evidence": [
+        "code/render_cuda_submission.py:89-104",
+        "code/render_cuda_submission.py:127-136"
+      ],
+      "finding": "Resume constructs same seeded model, then restores Python/NumPy/TorchCPU/CUDA0 RNG saved after last atomically committed image. Skipping completed prefixes does not change RNG sequence."
+    },
+    {
+      "name": "resume validates declared identity and completed PNG",
+      "status": "PASS_WITH_COVERAGE_LIMIT",
+      "evidence": [
+        "code/render_cuda_submission.py:80-104",
+        "code/hypir_cuda_runner/runner.py:80-94"
+      ],
+      "finding": "Identity includes 103 source image hashes/dimensions, checkpoint bytes hash, renderer/Runner/config/modeldir bytes and three active HYPIR Python source hashes. Completed PNG bytes and order/size are verified on resume and finalization."
+    }
+  ],
+  "coverage_limits": [
+    {
+      "severity": "protocol asset coverage gap",
+      "finding": "Runner protocol records base_model_path but does NOT hash base model unet/vae/text_encoder safetensors or their configs/tokenizer/scheduler. A changed external base at the same path would not itself alter the resume identity. Current CUDA/NPU base file equality was independently hash-confirmed before this audit; this is a provenance/resume coverage limit, no current weight mismatch found.",
+      "evidence": "code/hypir_cuda_runner/runner.py:82-94",
+      "independent_base_hash_evidence": [
+        "../cuda_base_hash_30416.json",
+        "../npu_base_hash_30207.json"
+      ]
+    },
+    {
+      "severity": "static only",
+      "finding": "No deliberate interruption/resume or GPU rerender was performed by this read-only audit."
+    }
+  ],
+  "quality_prediction_rule": "Do not reuse NPU FP32-input/PIL-floor full scores as CUDA FP16-input/NumPy-round quality scores; use newly rendered CUDA PNGs and CUDA tool metrics with matching candidate latency.",
+  "coverage_limit_sidecar_resolution": "All three CUDA eval directories now have base_model_provenance.json sidecars with initial9 asset hashes plus all10 metadata file hashes; source identities were not changed. Read sidecar chronology: extra4 metadata checks happened after firsttwo fresh initializations; rehash before future resume/reevaluation."
+}

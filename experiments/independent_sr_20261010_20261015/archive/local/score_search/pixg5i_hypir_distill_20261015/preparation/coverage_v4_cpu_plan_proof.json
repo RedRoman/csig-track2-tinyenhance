@@ -1,0 +1,46 @@
+{
+  "status": "PASS_CPU_REPLAYABLE_STRATIFIED_PLAN_AND_LR",
+  "source_sha256": "25624067758d5717e110ac7025c4e9eb8ee2ad8b2cfc292273581d6b5510fa08",
+  "input_catalog_sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+  "seed": 20261017,
+  "plan_sha256": "5466f898c854b8337d16879a867b04b14b631959df18c6baca817c9eaafe0d28",
+  "rows": 2000,
+  "every_epoch_all100_once": true,
+  "every_case_all20_strata_once": true,
+  "all_origins_8_aligned_and_context1024_in_bounds": true,
+  "same_seed_exact_replay": true,
+  "LR_boundaries": {
+    "1": [
+      1e-05,
+      2e-05
+    ],
+    "50": [
+      0.0001,
+      0.0002
+    ],
+    "51": [
+      0.0001,
+      0.0002
+    ],
+    "1000": [
+      0.0001,
+      0.0002
+    ],
+    "1001": [
+      9.999980260807434e-05,
+      0.00019999960521614868
+    ],
+    "1200": [
+      9.23606797749979e-05,
+      0.0001847213595499958
+    ],
+    "2000": [
+      2e-05,
+      4e-05
+    ]
+  },
+  "CPU_only": true,
+  "torch_imported": false,
+  "GPU_started": false,
+  "spatial_scope": "Stratified origins; not exhaustive pixel supervision"
+}

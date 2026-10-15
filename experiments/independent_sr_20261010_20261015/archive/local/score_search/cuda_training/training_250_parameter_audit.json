@@ -1,0 +1,359 @@
+{
+  "status": "passed",
+  "audited_bjt": "2026-10-14T00:17:26.332811+08:00",
+  "cpu_only": true,
+  "CUDA_VISIBLE_DEVICES": "",
+  "cuda_context_initialized_before": false,
+  "cuda_context_initialized_after": false,
+  "torch_version": "2.8.0+cu128",
+  "load_policy": "torch.load(map_location=cpu,mmap=True); weights_only=True for .pth, False for trusted local resume; no model construction/forward or CUDA RNG restore",
+  "run": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100",
+  "checkpoint_records": {
+    "step6100.pth": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/step6100.pth",
+      "bytes": 1038079419,
+      "sha256": "04468a0134579c3e5f63aea93eea2aa1ca956b102f7ed32bb3dc03c918e08ff4"
+    },
+    "step6250.pth": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/step6250.pth",
+      "bytes": 1038079419,
+      "sha256": "7b57349706372122ea67173fbb944e7e806d86e12379e3fd66ea2ebf1f96ecc3"
+    },
+    "resume_latest.pt": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+      "bytes": 3114329549,
+      "sha256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f"
+    },
+    "config.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/config.json",
+      "bytes": 30144,
+      "sha256": "2a459e95e248d1b502b651753b9598ce7adfb92c24e48863458265458ea1ca5a"
+    },
+    "config_step6100.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/config_step6100.json",
+      "bytes": 30144,
+      "sha256": "4d62ff5e8a1ea0202c0fbc88b5acd60775ed92e1d746e2b4a3540755fd2f0b59"
+    },
+    "status.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/status.json",
+      "bytes": 131,
+      "sha256": "80abe46d11321c35f4e8e341a9cc7730d75a76a23f9e91e71dda2d17a8e07a6c"
+    },
+    "train.jsonl": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/train.jsonl",
+      "bytes": 114113,
+      "sha256": "422556a5312db53ab9088aca8bc9df5deb200f13287218cd7905eb3557635945"
+    },
+    "gradient_preflight.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/gradient_preflight.json",
+      "bytes": 1137,
+      "sha256": "f9ce589530f98032f6ff8814cfa14bd0e593ee0f8bdffb8d96739dca98adeb54"
+    }
+  },
+  "keys": 514,
+  "elements": 259474432,
+  "all_checkpoints_FP32_CPU_finite": true,
+  "relative_to_step6100_real_FP32_parameter_delta": {
+    "elements": 259474432,
+    "changed_elements": 259461000,
+    "changed_fraction": 0.999948233820587,
+    "tensors_changed": 514,
+    "max_abs": 1.915823668241501e-05,
+    "l2": 0.039516587739302764,
+    "mean_abs": 1.9106188822795366e-06
+  },
+  "largest10_tensor_max_abs_deltas": [
+    {
+      "key": "up_blocks.2.resnets.1.conv_shortcut.lora_A.default.weight",
+      "elements": 327680,
+      "changed_elements": 327659,
+      "max_abs": 1.915823668241501e-05,
+      "l2": 0.0018320162690896131
+    },
+    {
+      "key": "up_blocks.3.attentions.2.transformer_blocks.0.attn1.to_v.lora_B.default.weight",
+      "elements": 81920,
+      "changed_elements": 81918,
+      "max_abs": 1.8866208847612143e-05,
+      "l2": 0.0014927909864478005
+    },
+    {
+      "key": "up_blocks.3.attentions.1.transformer_blocks.0.attn1.to_v.lora_B.default.weight",
+      "elements": 81920,
+      "changed_elements": 81918,
+      "max_abs": 1.8099788576364517e-05,
+      "l2": 0.0013484668989715482
+    },
+    {
+      "key": "up_blocks.2.attentions.1.transformer_blocks.0.attn1.to_v.lora_B.default.weight",
+      "elements": 163840,
+      "changed_elements": 163834,
+      "max_abs": 1.7904676496982574e-05,
+      "l2": 0.0013957049351916704
+    },
+    {
+      "key": "up_blocks.2.attentions.2.transformer_blocks.0.ff.net.2.lora_A.default.weight",
+      "elements": 655360,
+      "changed_elements": 655321,
+      "max_abs": 1.7814571037888527e-05,
+      "l2": 0.0027475198868121237
+    },
+    {
+      "key": "up_blocks.2.attentions.2.proj_out.lora_B.default.weight",
+      "elements": 163840,
+      "changed_elements": 163834,
+      "max_abs": 1.771422103047371e-05,
+      "l2": 0.0013612034336235438
+    },
+    {
+      "key": "up_blocks.3.resnets.1.conv2.lora_B.default.weight",
+      "elements": 81920,
+      "changed_elements": 81917,
+      "max_abs": 1.766439527273178e-05,
+      "l2": 0.0010664102697622421
+    },
+    {
+      "key": "up_blocks.2.attentions.2.transformer_blocks.0.ff.net.0.proj.lora_B.default.weight",
+      "elements": 1310720,
+      "changed_elements": 1310692,
+      "max_abs": 1.764200715115294e-05,
+      "l2": 0.004313762983567895
+    },
+    {
+      "key": "up_blocks.3.attentions.1.transformer_blocks.0.ff.net.0.proj.lora_A.default.weight",
+      "elements": 81920,
+      "changed_elements": 81914,
+      "max_abs": 1.745857298374176e-05,
+      "l2": 0.0012237718519836013
+    },
+    {
+      "key": "up_blocks.3.attentions.1.transformer_blocks.0.attn1.to_v.lora_A.default.weight",
+      "elements": 81920,
+      "changed_elements": 81919,
+      "max_abs": 1.7394311726093292e-05,
+      "l2": 0.001326191114993026
+    }
+  ],
+  "resume_integrity": {
+    "required_keys": [
+      "cuda_rng",
+      "global_step",
+      "local_step",
+      "lora",
+      "numpy_rng",
+      "optimizer",
+      "protocol_id",
+      "python_rng",
+      "torch_rng"
+    ],
+    "all_required_keys_present": true,
+    "protocol_id_matches_latest_and_step6100_config": true,
+    "local_step": 250,
+    "global_step": 6250,
+    "lora_exact_equal_to_step6250": true,
+    "lora_exact_equal_tensors": 514,
+    "adam_state_entries": 514,
+    "param_group_count": 1,
+    "state_ids_exactly_cover_unique_group_parameter_ids": true,
+    "state_fields": [
+      [
+        "exp_avg",
+        "exp_avg_sq",
+        "step"
+      ]
+    ],
+    "all_adam_steps": [
+      250
+    ],
+    "all_state_tensors_finite": true,
+    "exp_avg_exp_avg_sq_dtype": [
+      "torch.float32"
+    ],
+    "moment_elements_each": 259474432,
+    "exp_avg_sq_nonnegative": true,
+    "every_exp_avg_tensor_has_nonzero_elements": true,
+    "param_group_options": {
+      "lr": 2e-07,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": false,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": true
+    },
+    "python_and_numpy_rng_structures_loadable": true,
+    "torch_cpu_rng_loadable": true,
+    "cuda_rng_preserved_as_CPU_uint8_vector_not_restored": true,
+    "torch_rng_bytes": 5056,
+    "cuda_rng_bytes": 16,
+    "final_rng_state_sha256": {
+      "python": "71a934a19425f55dfb562869769b6213f62054012aed71b7701d434394dbdc63",
+      "numpy": "562c7c1aba45f288ff7bb6ca8f360b789eafd9cca7cdf841b9dc7a73ff70358a",
+      "cpu": "f99273ba73d059b94d75bef7dca976542b44aeb12e4e337f7d4567ec94801229",
+      "cuda": "0f34e12aeb8f226a1f5b348ce7d0fd03a0e0f789ffc25b637785afeb3ee406c4"
+    }
+  },
+  "completion_evidence": {
+    "latest_config_target_segment_steps": 250,
+    "latest_config_target_global_step": 6250,
+    "status": {
+      "stage": "complete",
+      "completed_local_steps": 250,
+      "global_step": 6250,
+      "requires_independent_quality_evaluation": true
+    },
+    "complete_marker": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/training_complete_step6250",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "training_log_rows": 250,
+    "local_steps_contiguous_1_through_250": true,
+    "global_steps_contiguous_6001_through_6250": true,
+    "all250_logged_514_nonzero_finite_lora_gradients": true,
+    "row100": {
+      "local_step": 100,
+      "global_step": 6100,
+      "case": 64,
+      "crop_xy": [
+        1429,
+        1798
+      ],
+      "loss": -0.08149083703756332,
+      "fidelity": 0.00643776822835207,
+      "reward": 1.1723814010620117,
+      "scores": {
+        "musiq": 0.5898852944374084,
+        "maniqa": 0.53810054063797,
+        "clipiqa": 0.44395551085472107
+      },
+      "gradient_norm": 0.9087311029434204,
+      "nonzero_lora_gradients": 514,
+      "step_seconds": 0.8113358020782471,
+      "elapsed_seconds": 95.48167705535889,
+      "gpu_peak_allocated_bytes": 27849609216
+    },
+    "first_resume_row101": {
+      "local_step": 101,
+      "global_step": 6101,
+      "case": 97,
+      "crop_xy": [
+        310,
+        1544
+      ],
+      "loss": -0.10249288380146027,
+      "fidelity": 0.002266704337671399,
+      "reward": 1.3967944383621216,
+      "scores": {
+        "musiq": 0.6905305981636047,
+        "maniqa": 0.6397910118103027,
+        "clipiqa": 0.6647283434867859
+      },
+      "gradient_norm": 0.19275125861167908,
+      "nonzero_lora_gradients": 514,
+      "step_seconds": 1.9639184474945068,
+      "elapsed_seconds": 1.963958740234375,
+      "gpu_peak_allocated_bytes": 29950023168
+    },
+    "last_row250": {
+      "local_step": 250,
+      "global_step": 6250,
+      "case": 36,
+      "crop_xy": [
+        2914,
+        135
+      ],
+      "loss": -0.10295377671718597,
+      "fidelity": 0.003279238473623991,
+      "reward": 1.4164401292800903,
+      "scores": {
+        "musiq": 0.6907584071159363,
+        "maniqa": 0.650411069393158,
+        "clipiqa": 0.7527061104774475
+      },
+      "gradient_norm": 0.24272313714027405,
+      "nonzero_lora_gradients": 514,
+      "step_seconds": 0.8329229354858398,
+      "elapsed_seconds": 141.67782831192017,
+      "gpu_peak_allocated_bytes": 29950023168
+    },
+    "first100_crop_sequence_sha256": "573888fe6ab87016339e099c5ae44c995cacc976fcc81500975b8eaf3c5b532f",
+    "resume150_crop_sequence_sha256": "026a4531232c19d6d4ee9267f815e62f85d8a43f0d70b42ab9eee722b93d42d6",
+    "resumed150_median_step_seconds": 0.8206088542938232,
+    "latest_protocol_id": "fa5ea19179561aac206b26f7dd3596406f1ad376dccd38f49821146623b98d52",
+    "latest_config_training_protocol": {
+      "schema": "cuda_raw_hypir_nr_training_v1",
+      "init_checkpoint": "/cache/independent_sr_cuda_20261013/source_payload/adaptation/runs/ascend_balanced/step6000.pth",
+      "init_sha256": "2c82a71a94aa754bd4a26a2a474c2bbe4989bde1d38d2e15d9e58eb0c3e408bc",
+      "anchor_checkpoint": "/cache/independent_sr_cuda_20261013/source_payload/adaptation/runs/ascend_balanced/step6000.pth",
+      "anchor_sha256": "2c82a71a94aa754bd4a26a2a474c2bbe4989bde1d38d2e15d9e58eb0c3e408bc",
+      "base_step": 6000,
+      "optimizer": "new AdamW weight_decay0 foreachFalse; FP32 LoRA params",
+      "lr": 2e-07,
+      "seed": 20261013,
+      "seed_scope": "seed before both model initialization; reset same seed AFTER all metrics initialization; then continuous crop/latent/metric RNG",
+      "model_t": 200,
+      "coeff_t": 175,
+      "rank": 256,
+      "batch": 1,
+      "patch": 512,
+      "latent": "posterior.sample once, same detached z for frozen anchor",
+      "model_precision": "BF16 base; FP32 trainable LoRA; BF16 autocast generator/decoder",
+      "metric_precision": "FP32, autocast disabled; original networks eval/as_lossTrue/loss_reductionNone",
+      "input_alignment": "tool FP16[-1,1] roundtrip on GPU, scale1 bicubic before VAE",
+      "output_alignment": "decoded RGB -> native bicubic antialias -> original differentiable wavelet_reconstruction(decoded,lq) -> clamp",
+      "nr_round_ste": false,
+      "quantization": "unencoded RGB; no quantization surrogate",
+      "reward_weight": 0.075,
+      "clip_weight": 0.1,
+      "gradient_anchor": 0.3,
+      "loss": "L1(anchor)+.1*LPIPS(anchor)+gradient_anchor*spatial_gradient_L1 - reward_weight*(MUSIQ/100+MANIQA+clip_weight*CLIPIQA)",
+      "maniqa_train_samples": 20,
+      "maniqa_formal_score_samples": 100,
+      "niqe": "evaluation only; not in training gradient",
+      "training_data": "only test100 random512 crops; validationGT excluded",
+      "anchor": "frozen raw current6000, unfused/uncompiled, same latent and coefficient",
+      "compile": false,
+      "fuse": false,
+      "metric_weights_sha256": {
+        "torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth": "e95806b9eae5f3814c410f574ba8e552362bd5bc63d758ed5b97860f5d6185aa",
+        "torch/hub/checkpoints/ckpt_koniq10k.pt": "a207f8ab57322e6be38ff5c8d019301dc032b454bef21c3c9f9dbf7974eebff6",
+        "clip/RN50.pt": "afeb0e10f9e5a86da6080e35cf09123aca3b358a0c3e3b6c78a7b63bc04b6762",
+        "torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0",
+        "torch/hub/checkpoints/alexnet-owt-7be5be79.pth": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02"
+      },
+      "versions": {
+        "torch": "2.8.0+cu128",
+        "torchvision": "0.23.0+cu128",
+        "diffusers": "0.33.1",
+        "transformers": "4.56.2",
+        "peft": "0.17.1",
+        "pyiqa": "0.1.10",
+        "numpy": "2.3.3"
+      }
+    },
+    "training_sources_still_match_frozen_protocol_hashes": {
+      "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py": true,
+      "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py": true,
+      "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py": true,
+      "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py": true,
+      "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py": true,
+      "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py": true,
+      "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py": true
+    },
+    "tracked_file_size_and_mtime_unchanged_during_audit": true
+  },
+  "scope": "Checks parameter-level FP32 continuation and saved resume completeness; does not establish full-resolution quality improvement or future optimizer loading behavior.",
+  "prior100_audit_reference": {
+    "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/training_100_parameter_audit.json",
+    "step6100_checkpoint_sha_matches_prior_audit": true,
+    "first100_crop_sequence_sha_matches_prior_audit": true
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "push7_cpu_audit_v2_interface_plan",
+  "status": "CPU_PLAN_PENDING_ACTUAL_DEPLOYMENT_SCHEMA",
+  "old_v1_frozen_source_sha256": "a47b8ee9c9b05ffbddd69a9b88293332bfa83f429e89db4f2133d1dd89336d1d",
+  "new_audit_source_planned": "/cache/independent_sr_cuda_20261013/code/push7/audit_and_join_cpu_v2.py",
+  "GPU_started": false,
+  "no_pre_registration_of_missing_checkpoint": true,
+  "common_required_manifest_fields": [
+    "schema",
+    "model_type",
+    "model_dir",
+    "checkpoint",
+    "checkpoint_sha256",
+    "runner_sha256",
+    "config_sha256",
+    "source_sha256"
+  ],
+  "hypir_sameweight": {
+    "candidate_checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+    "derived_runtime_assets": "If TensorRT engines are actually used, each real engine path/byte SHA binds separately to unchanged source checkpoint; no pretend scaled compute config",
+    "forward_RNG_comparison_to_A_required": false
+  },
+  "student": {
+    "candidate_checkpoint_sha256": "Actual new trained NAFNet checkpoint SHA, independently different from teacher/source model",
+    "model_type": "Trainer supplies actual NAFNet32 identifier and architecture source",
+    "teacher_fields": [
+      "teacher_checkpoint_sha256",
+      "teacher_render_manifest",
+      "teacher_render_manifest_sha256"
+    ],
+    "teacher_checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+    "training_fields": [
+      "weight_origin",
+      "local_step",
+      "training_source_sha256",
+      "training_config_sha256",
+      "training_marker",
+      "training_marker_sha256",
+      "resume_sha256"
+    ],
+    "teacher_is_not_candidate_checkpoint": true,
+    "forward_RNG_comparison_to_A_required": false,
+    "NAF_must_not_claim_HYPIR_SD2_base_or_lora_or_timesteps": true
+  },
+  "formal_quality_gates": [
+    "original frozen renderer/source; seed231 declared separately for each model family",
+    "actual full val3 then test1..100 canonical input byte SHA/order/native shape bound to frozen A dataset",
+    "actual103 canonical PNG byte SHA bound to render manifest and fresh scored sr_sha; no extra PNGs",
+    "GT3 actual SHA; all418 metrics finite; no test GT; per-image fresh rows equal RNG-state commit",
+    "original scorer/source/environment/metric weights; MANIQA100/eval; original per-split seed1234 continuous RNG",
+    "component means and published result agree; NR meanNIQE clamp after average; FR2-meanLPIPS-meanDISTS",
+    "candidate raw actual full byte SHA equals manifest and runtime protocol; model/teacher lineage separate",
+    "record family render post4RNG only; do not require initializer or forward RNG equality across architectures"
+  ],
+  "early_visual_gates": [
+    "new-family actual source/protocol",
+    "finite native CUDA output/range/ownership; no forced HYPIR constructor RNG alignment",
+    "final4examples taken from selected new formal103 versus frozen A formal4; diagnostic PNG never substituted for formal scores"
+  ],
+  "coordination": "Await actual trainer manifest/raw-wrapper fields before implementing minimal v2; do not create generic backend framework or change frozen v1"
+}

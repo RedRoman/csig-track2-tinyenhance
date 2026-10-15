@@ -1,0 +1,29 @@
+{
+  "label": "nr_conservative_s6100_compiled_all",
+  "status": "complete",
+  "completed": 103,
+  "expected": 103,
+  "official_full_count": true,
+  "validation": {
+    "clipiqa": 0.7156122525533041,
+    "dists": 0.20092511177062988,
+    "lpips": 0.3343098958333333,
+    "maniqa": 0.5009271105130514,
+    "musiq": 48.478406270345054,
+    "niqe": 3.9421693702504608,
+    "n": 3,
+    "fr": 1.4647649923960369,
+    "nr_val": 2.30710648874476,
+    "score": 3.7718714811407965
+  },
+  "test": {
+    "clipiqa": 0.7284177082777024,
+    "maniqa": 0.5077247950434685,
+    "musiq": 42.6936431312561,
+    "niqe": 4.021619040758457,
+    "n": 100,
+    "nr": 2.260917030557886
+  },
+  "S_proxy": 3.725682022953923,
+  "S_proxy_scope": "full100_test_NR_plus3val_FR"
+}

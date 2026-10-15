@@ -1,0 +1,38 @@
+{
+  "label": "push3_c7250_compiled_all",
+  "status": "PASS",
+  "image_rows": 103,
+  "scalar_metrics": 418,
+  "NR": 2.313125129005856,
+  "FR": 1.4465690056482952,
+  "S_proxy": 3.7596941346541515,
+  "actual_checkpoint_sha256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+  "reference_comparison": {
+    "reference_dir": "/cache/independent_sr_cuda_20261013/nr_push2_full_evaluations/nr_stage3_anchor6250_m15_s6500_compiled_all",
+    "scope": "full test100 + validation3 local proxy; no latency/official total",
+    "same_original_inputs_GT_and_order": true,
+    "same_formal_metrics_and_sources": true,
+    "same_render_input_output_and_rng_policy": true,
+    "same_post_render_rng": true,
+    "same_post_score_rng": true,
+    "runner_differences": {
+      "checkpoint_sha256": {
+        "reference": "cfcc3013fa87aa721f346d6cc285e70b6d6ff2c88315ce9f1465b07ffe020e68",
+        "candidate": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e"
+      },
+      "label": {
+        "reference": "cuda_nr_stage3_anchor6250_m15_s6500_compiled",
+        "candidate": "push3_c7250_compiled"
+      },
+      "weight_path": {
+        "reference": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m15_250/step6500.pth",
+        "candidate": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step7250.pth"
+      }
+    },
+    "reference_checkpoint_sha256": "cfcc3013fa87aa721f346d6cc285e70b6d6ff2c88315ce9f1465b07ffe020e68",
+    "candidate_checkpoint_sha256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+    "delta_NR": 0.03481476871759481,
+    "delta_FR": -0.014871676762898689,
+    "delta_S_proxy": 0.019943091954696346
+  }
+}

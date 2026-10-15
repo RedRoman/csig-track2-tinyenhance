@@ -1,0 +1,438 @@
+{
+  "label": "s6000_mt200_ct175_pilot",
+  "status": "complete",
+  "test": {
+    "clipiqa": 0.7334330141544342,
+    "maniqa": 0.5004333212971688,
+    "musiq": 46.30305986404419,
+    "niqe": 4.533397507667542,
+    "nr": 2.2435571833252905,
+    "n": 20
+  },
+  "val": {
+    "clipiqa": 0.7088867624600729,
+    "dists": 0.20066316922505698,
+    "lpips": 0.3349202473958333,
+    "maniqa": 0.49203600486119586,
+    "musiq": 48.864541371663414,
+    "niqe": 3.8632283210754395,
+    "fr": 1.4644165833791098,
+    "nr_val": 2.303245348930359,
+    "score": 3.7676619323094687,
+    "n": 3
+  },
+  "scope": "fixed20+validation3 pilot; NOT full test100",
+  "test_cases": [
+    1,
+    6,
+    7,
+    11,
+    16,
+    18,
+    21,
+    23,
+    25,
+    28,
+    31,
+    36,
+    41,
+    46,
+    51,
+    61,
+    71,
+    81,
+    91,
+    100
+  ],
+  "pred": null,
+  "pred_missing_reason": "No AutoDL-calibrated CUDA 512x512 event_p10 latency measured",
+  "not_official_score": true,
+  "protocol": {
+    "schema": "csig_score_search_tool_order_v1",
+    "label": "s6000_mt200_ct175_pilot",
+    "test_cases": [
+      1,
+      6,
+      7,
+      11,
+      16,
+      18,
+      21,
+      23,
+      25,
+      28,
+      31,
+      36,
+      41,
+      46,
+      51,
+      61,
+      71,
+      81,
+      91,
+      100
+    ],
+    "seed": 1234,
+    "seed_scope": "once per dataset/model; validation then test",
+    "metric_order_validation": [
+      "lpips",
+      "dists",
+      "niqe",
+      "musiq",
+      "maniqa",
+      "clipiqa"
+    ],
+    "metric_order_test": [
+      "niqe",
+      "musiq",
+      "maniqa",
+      "clipiqa"
+    ],
+    "image_format": "unaltered native PNG; RGB FP32 [0,1]; no resize",
+    "precision": "NR FP32; LPIPS/DISTS NPU FP16 autocast",
+    "maniqa": "KonIQ; 100 crops; microbatch4; weighted numerator/denominator",
+    "musiq": "all native tokens; CNN batches256; attention query rows256",
+    "aggregation": "component means first, then NIQE clamp/formula",
+    "backend": "npu",
+    "cross_device_equivalence": "not established",
+    "device_index": 0,
+    "torch": "2.7.1+cpu",
+    "torch_npu": "2.7.1.post2",
+    "pyiqa": "0.1.10",
+    "numpy": "1.26.4",
+    "source_sha256": {
+      "csig_metrics": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2",
+      "run_metric_study": "9dfc3c6cc7b75f8acf835a45862ecbddc7addd0c6df3ae5b9c9f47fae73379bc",
+      "metric_memory": "dc2d17aa5b31c681561797dccb6d6048facbed6551592ce4b19410baf4ddc319",
+      "adapter": "42e47c636a6408e42e5d5f8476535d35dff992f51cdf9fac86bfb19732625c89"
+    },
+    "weights_sha256": {
+      "torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0",
+      "torch/hub/checkpoints/alexnet-owt-7be5be79.pth": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+      "torch/hub/checkpoints/DISTS_weights-f5e65c96.pth": "f5e65c96230b7f6ca995691647d482237e4cab8a50c5c4a5784f219ef0748218",
+      "torch/hub/checkpoints/vgg16-397923af.pth": "397923af8e79cdbb6a7127f12361acd7a2f83e06b05044ddf496e83de57a5bf0",
+      "torch/hub/checkpoints/niqe_modelparameters.mat": "fa2aa4d12dd9595c3fb6bf8b4e1a15c79d5d1469238d0901c88dead195be578d",
+      "torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth": "e95806b9eae5f3814c410f574ba8e552362bd5bc63d758ed5b97860f5d6185aa",
+      "torch/hub/checkpoints/ckpt_koniq10k.pt": "a207f8ab57322e6be38ff5c8d019301dc032b454bef21c3c9f9dbf7974eebff6",
+      "clip/RN50.pt": "afeb0e10f9e5a86da6080e35cf09123aca3b358a0c3e3b6c78a7b63bc04b6762"
+    },
+    "tasks": [
+      {
+        "split": "validation",
+        "case": 1,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/val/case1.png",
+          "sha256": "eb42142782b6788aefa808783c41bbc288d6ef883bdb9e4b46c467606c62e617",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": {
+          "path": "/cache/independent_sr_score_search_20261013/scoring_assets/data/验证集/case1_gt.png",
+          "sha256": "5190460e6507bb1fe325b681a577cb0dfd70483389ecfe30b52d59ac67ee6906"
+        }
+      },
+      {
+        "split": "validation",
+        "case": 2,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/val/case2.png",
+          "sha256": "48a7637fff185175b1204d71c2a95437e77d03c0efe198ebb534c166c5b27a11",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": {
+          "path": "/cache/independent_sr_score_search_20261013/scoring_assets/data/验证集/case2_gt.png",
+          "sha256": "bd0b55d41fc61838efc38316825739a0de193ddfe241157468f6fc5421ff1d73"
+        }
+      },
+      {
+        "split": "validation",
+        "case": 3,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/val/case3.png",
+          "sha256": "3a068473283b8b4c6f1726b69c32ec06d9d74bb04c47d31743037d682b724be0",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": {
+          "path": "/cache/independent_sr_score_search_20261013/scoring_assets/data/验证集/case3_gt.jpg",
+          "sha256": "d8d757ec5f5078909b958b770119b13db0ba7134bd343f8593f0fdd0f2d94ba2"
+        }
+      },
+      {
+        "split": "test",
+        "case": 1,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case1.png",
+          "sha256": "71a4609b6e4a5e62771668bbfa2cc02201870a4457aa495f13ececa9644c9768",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 6,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case6.png",
+          "sha256": "dab18bf71bf1d4078071384ced2cc5cf4c6085e53072e42c2fd60c4b5250233a",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 7,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case7.png",
+          "sha256": "f16b89d82858aa35ee74157f2dcbf6ec578707c4c350cea3c339a40253e3f7c1",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 11,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case11.png",
+          "sha256": "a1f0564251ca86ffa6ab42c30b56d1429251ada1eabf9b2a892d7702088b2db9",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 16,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case16.png",
+          "sha256": "6cca4ceb4d0f129a2c13a9737e1c2ca9f6c56b103656de2745503675b91bf67f",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 18,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case18.png",
+          "sha256": "995ab3df517ab13f31b34a597f4db3cbd06adedd54e1a241371d2d5865a30a07",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 21,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case21.png",
+          "sha256": "d8ee017a063994e9587d052175bb512df52674e694bdb50f3e2f8ca5a49ad1fa",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 23,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case23.png",
+          "sha256": "b11684c39281b424c553f559a8bfeab74d965fde36293b903541f06deec87e7e",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 25,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case25.png",
+          "sha256": "712a4f97b5dc7697fe5cb10e6705e29b400152d9345bfab74aaa95fdb32a0080",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 28,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case28.png",
+          "sha256": "4427a067e45cf047bceaacc752006cbc61be2e80ea82a477075d933111f783f6",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 31,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case31.png",
+          "sha256": "802e6441f5a1c78f119bd3cf5f302d60c9bc96180c81577e7fa9a9302ab8258b",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 36,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case36.png",
+          "sha256": "c5e2e712d44d32dee9b56cce06ac43ef30c54435db0b48587d76a5f27aa66854",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 41,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case41.png",
+          "sha256": "8db13da574be6117424558b106f7258dfdf3d37d6ceb4fd4788bf9d5106a91d4",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 46,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case46.png",
+          "sha256": "eade4ce276e03551794c64ac5b49e5b58d80c15401b09c98701dfbb146abeac4",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 51,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case51.png",
+          "sha256": "d68195a0dcb0edba2392abf3b9c41c40a59be5b995daaa594b51fb7a2f549632",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 61,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case61.png",
+          "sha256": "09db5b56e7d0210443e9bdccac38489eada4d1f24dde4b59c416591085995b43",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 71,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case71.png",
+          "sha256": "ee0ed890c934b10fc42ae297781640717c946df5790650c1a1fa247e9994d9ba",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 81,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case81.png",
+          "sha256": "03c65ec247d9905043c0fa7394431cc341eaf46fb1da30014f6ebe2dad75904d",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 91,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case91.png",
+          "sha256": "b35a8d22db81302d1fbf6157ad3a458fd67e81764ed17561acb4c5bf7f9c654c",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      },
+      {
+        "split": "test",
+        "case": 100,
+        "sr": {
+          "path": "/cache/independent_sr_score_search_20261013/evaluations/s6000_mt200_ct175_pilot/render/test/case100.png",
+          "sha256": "dc0d1214ae812c990bfd7ac0ca96421be42c742ac57ecdf442e039efba2dd098",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null
+      }
+    ],
+    "render_manifest_sha256": "2a2e1b372396e1356dff6911d253aa32123a1e3c73d1b99127932073f262790c",
+    "candidate": {
+      "checkpoint_sha256": "2c82a71a94aa754bd4a26a2a474c2bbe4989bde1d38d2e15d9e58eb0c3e408bc",
+      "model_t": 200,
+      "coeff_t": 175,
+      "backend": "npu"
+    }
+  },
+  "S_subset": 3.7079737667044004
+}

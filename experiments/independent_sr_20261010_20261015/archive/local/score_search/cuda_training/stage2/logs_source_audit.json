@@ -1,0 +1,321 @@
+{
+  "status": "PASS",
+  "audited_bjt": "2026-10-14T17:31:17.970988+08:00",
+  "CPU_only": true,
+  "Torch_imported": false,
+  "GPU_calls": false,
+  "parent_config_v1_v2_helper_source_actual_SHA_unchanged": true,
+  "all250_cases_and_crops_equal": true,
+  "protocols_differ_only_declared_STE_objective": true,
+  "parent_resume_actual_SHA_checked_by_parameter_audit": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+  "results": [
+    {
+      "run": "cuda_nr_stage2_s6250_cont250",
+      "status": "PASS",
+      "protocol_id": "e1b74d29699782b6de9d1e52df10d16ba900cd4cb1de0aa600e39e3c0c70d791",
+      "nr_round_ste": false,
+      "image_training_rows": 250,
+      "local_steps": [
+        1,
+        250
+      ],
+      "global_steps": [
+        6251,
+        6500
+      ],
+      "Adam_update_labels": [
+        251,
+        500
+      ],
+      "all250_logged_LoRA_gradients_nonzero_514": true,
+      "first_three_real_NR_input_gradients": {
+        "musiq": {
+          "value": 0.5825080871582031,
+          "input_gradient_norm": 0.6105067729949951,
+          "input_gradient_finite": true
+        },
+        "maniqa": {
+          "value": 0.35730406641960144,
+          "input_gradient_norm": 0.1650579422712326,
+          "input_gradient_finite": true
+        },
+        "clipiqa": {
+          "value": 0.6361753344535828,
+          "input_gradient_norm": 6.012568950653076,
+          "input_gradient_finite": true
+        }
+      },
+      "teacher_metrics_gradient_guards_completed": true,
+      "FP32_parent_restore_proof": {
+        "protocol_id": "e1b74d29699782b6de9d1e52df10d16ba900cd4cb1de0aa600e39e3c0c70d791",
+        "parent_lineage": {
+          "parent_resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+          "parent_resume_sha256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+          "parent_config": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/config.json",
+          "parent_config_sha256": "2a459e95e248d1b502b651753b9598ce7adfb92c24e48863458265458ea1ca5a",
+          "parent_protocol_id": "fa5ea19179561aac206b26f7dd3596406f1ad376dccd38f49821146623b98d52",
+          "parent_local_step": 250,
+          "parent_global_step": 6250,
+          "parent_optimizer_step": 250,
+          "frozen_v1_source": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+          "frozen_v1_source_sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+          "restore_order": "raw6000 BF16 init -> LoRA.float -> exact parent FP32 copy -> parent AdamW -> all4 parent RNG",
+          "objective_relation": "same objective exact state continuation"
+        },
+        "restored_from": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+        "restored_stage_local_step": 0,
+        "restored_global_step": 6250,
+        "restored_optimizer_step": 250,
+        "FP32_LoRA_exact_equal_before_update": true,
+        "FP32_LoRA_tensors": 514,
+        "source_sha256": {
+          "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+          "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd",
+          "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161",
+          "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923",
+          "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f",
+          "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf",
+          "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2",
+          "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651",
+          "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812"
+        },
+        "snapshot_phase": "before_new_stage_updates",
+        "optimizer_updates_in_new_stage": 0
+      },
+      "case_crop_sequence_sha256": "a6f49c9c7bd2823cbc84bc64d3401081cb1b6d2d6ed2341e23d591056e047f56",
+      "elapsed_training_seconds": 249.59415555000305,
+      "median_step_seconds": 0.839982271194458,
+      "peak_allocated_bytes": 29950024192,
+      "first_row": {
+        "local_step": 1,
+        "global_step": 6251,
+        "optimizer_step": 251,
+        "case": 13,
+        "crop_xy": [
+          967,
+          2015
+        ],
+        "loss": -0.07047153264284134,
+        "fidelity": 0.004785704426467419,
+        "reward": 1.0034297704696655,
+        "scores": {
+          "musiq": 0.5825080871582031,
+          "maniqa": 0.35730406641960144,
+          "clipiqa": 0.6361753344535828
+        },
+        "gradient_norm": 0.4773322343826294,
+        "nonzero_lora_gradients": 514,
+        "step_seconds": 1.7823100090026855,
+        "elapsed_seconds": 1.7824838161468506,
+        "gpu_peak_allocated_bytes": 29950024192
+      },
+      "last_row": {
+        "local_step": 250,
+        "global_step": 6500,
+        "optimizer_step": 500,
+        "case": 23,
+        "crop_xy": [
+          300,
+          2003
+        ],
+        "loss": -0.07769512385129929,
+        "fidelity": 0.0019272248027846217,
+        "reward": 1.0616313219070435,
+        "scores": {
+          "musiq": 0.5089127421379089,
+          "maniqa": 0.48645806312561035,
+          "clipiqa": 0.6626052260398865
+        },
+        "gradient_norm": 0.20977970957756042,
+        "nonzero_lora_gradients": 514,
+        "step_seconds": 0.8515572547912598,
+        "elapsed_seconds": 249.59415555000305,
+        "gpu_peak_allocated_bytes": 29950024192
+      },
+      "small_files": {
+        "config.json": {
+          "bytes": 31862,
+          "sha256": "24bb8e737f7a2a204510a3b6e921531e680ccc40ec7240bdb9545ceb95e30879"
+        },
+        "status.json": {
+          "bytes": 156,
+          "sha256": "cd6a8c477761aa6eb84f9253ee985a17349cfabada330b9a1c532167620ce34a"
+        },
+        "train.jsonl": {
+          "bytes": 119846,
+          "sha256": "e5417ff53ea56e96c685ae5f88a4d7e5b688dd3bc7b26826de35033f60327166"
+        },
+        "gradient_preflight.json": {
+          "bytes": 1164,
+          "sha256": "f77463ed97197af75a414f66a83bd43d632a5ab1d87ffaeb4de39dd5f3371311"
+        },
+        "parent_migration.json": {
+          "bytes": 2896,
+          "sha256": "8710513bcaf2704cd555f88fe33f79c3a568a84def3ebfca61ea5cda5869624a"
+        },
+        "maniqa_initial_state_proof.json": {
+          "bytes": 130418,
+          "sha256": "df130e7a4ce0bf271f2a0673ce0dbcc639d9491981f94ba7255e843559a9cb36"
+        },
+        "training_complete_step6500": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "run": "cuda_nr_stage2_s6250_roundste250",
+      "status": "PASS",
+      "protocol_id": "93f5f88e1ee91997055aafc2aac6ca2d18f78cde3776b9a83529f805176433f8",
+      "nr_round_ste": true,
+      "image_training_rows": 250,
+      "local_steps": [
+        1,
+        250
+      ],
+      "global_steps": [
+        6251,
+        6500
+      ],
+      "Adam_update_labels": [
+        251,
+        500
+      ],
+      "all250_logged_LoRA_gradients_nonzero_514": true,
+      "first_three_real_NR_input_gradients": {
+        "musiq": {
+          "value": 0.5813174247741699,
+          "input_gradient_norm": 0.6112769842147827,
+          "input_gradient_finite": true
+        },
+        "maniqa": {
+          "value": 0.3572048842906952,
+          "input_gradient_norm": 0.15577448904514313,
+          "input_gradient_finite": true
+        },
+        "clipiqa": {
+          "value": 0.6479780077934265,
+          "input_gradient_norm": 6.949887275695801,
+          "input_gradient_finite": true
+        }
+      },
+      "teacher_metrics_gradient_guards_completed": true,
+      "FP32_parent_restore_proof": {
+        "protocol_id": "93f5f88e1ee91997055aafc2aac6ca2d18f78cde3776b9a83529f805176433f8",
+        "parent_lineage": {
+          "parent_resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+          "parent_resume_sha256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+          "parent_config": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/config.json",
+          "parent_config_sha256": "2a459e95e248d1b502b651753b9598ce7adfb92c24e48863458265458ea1ca5a",
+          "parent_protocol_id": "fa5ea19179561aac206b26f7dd3596406f1ad376dccd38f49821146623b98d52",
+          "parent_local_step": 250,
+          "parent_global_step": 6250,
+          "parent_optimizer_step": 250,
+          "frozen_v1_source": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+          "frozen_v1_source_sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+          "restore_order": "raw6000 BF16 init -> LoRA.float -> exact parent FP32 copy -> parent AdamW -> all4 parent RNG",
+          "objective_relation": "new round-STE objective fork; recorded Adam/RNG warmstart"
+        },
+        "restored_from": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+        "restored_stage_local_step": 0,
+        "restored_global_step": 6250,
+        "restored_optimizer_step": 250,
+        "FP32_LoRA_exact_equal_before_update": true,
+        "FP32_LoRA_tensors": 514,
+        "source_sha256": {
+          "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+          "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd",
+          "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161",
+          "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923",
+          "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f",
+          "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf",
+          "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2",
+          "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651",
+          "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812"
+        },
+        "snapshot_phase": "before_new_stage_updates",
+        "optimizer_updates_in_new_stage": 0
+      },
+      "case_crop_sequence_sha256": "a6f49c9c7bd2823cbc84bc64d3401081cb1b6d2d6ed2341e23d591056e047f56",
+      "elapsed_training_seconds": 243.90224289894104,
+      "median_step_seconds": 0.81681227684021,
+      "peak_allocated_bytes": 29952534016,
+      "first_row": {
+        "local_step": 1,
+        "global_step": 6251,
+        "optimizer_step": 251,
+        "case": 13,
+        "crop_xy": [
+          967,
+          2015
+        ],
+        "loss": -0.07046330720186234,
+        "fidelity": 0.004785704426467419,
+        "reward": 1.0033200979232788,
+        "scores": {
+          "musiq": 0.5813174247741699,
+          "maniqa": 0.3572048842906952,
+          "clipiqa": 0.6479780077934265
+        },
+        "gradient_norm": 0.45648810267448425,
+        "nonzero_lora_gradients": 514,
+        "step_seconds": 1.8219261169433594,
+        "elapsed_seconds": 1.8220980167388916,
+        "gpu_peak_allocated_bytes": 29952534016
+      },
+      "last_row": {
+        "local_step": 250,
+        "global_step": 6500,
+        "optimizer_step": 500,
+        "case": 23,
+        "crop_xy": [
+          300,
+          2003
+        ],
+        "loss": -0.07772981375455856,
+        "fidelity": 0.0019943811930716038,
+        "reward": 1.0629892349243164,
+        "scores": {
+          "musiq": 0.5097050070762634,
+          "maniqa": 0.48630672693252563,
+          "clipiqa": 0.6697756052017212
+        },
+        "gradient_norm": 0.21164770424365997,
+        "nonzero_lora_gradients": 514,
+        "step_seconds": 0.7999050617218018,
+        "elapsed_seconds": 243.90224289894104,
+        "gpu_peak_allocated_bytes": 29952534016
+      },
+      "small_files": {
+        "config.json": {
+          "bytes": 31951,
+          "sha256": "005b10a3e08ae493dd113e62799985675451b9094d929fbda3d11ce45ed28ff5"
+        },
+        "status.json": {
+          "bytes": 156,
+          "sha256": "cd6a8c477761aa6eb84f9253ee985a17349cfabada330b9a1c532167620ce34a"
+        },
+        "train.jsonl": {
+          "bytes": 119866,
+          "sha256": "7b304f16f3eeb288196b22a419693fddd64010f8244bcb70f121ffb76ee20190"
+        },
+        "gradient_preflight.json": {
+          "bytes": 1164,
+          "sha256": "6fe9daada831d89dccc0f49ec276ed0c59a3b0e6d03d912e0d809198e48b0b05"
+        },
+        "parent_migration.json": {
+          "bytes": 2914,
+          "sha256": "c8c6f4d5ff373b0bff2b38178188bd1a83637da9ee3cac349ad8f579d356808a"
+        },
+        "maniqa_initial_state_proof.json": {
+          "bytes": 130418,
+          "sha256": "df130e7a4ce0bf271f2a0673ce0dbcc639d9491981f94ba7255e843559a9cb36"
+        },
+        "training_complete_step6500": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    }
+  ]
+}

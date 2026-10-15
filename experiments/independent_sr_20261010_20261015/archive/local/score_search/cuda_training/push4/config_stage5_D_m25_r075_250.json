@@ -1,0 +1,20 @@
+{
+  "root": "/cache/independent_sr_cuda_20261013",
+  "parent_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step7250.pth",
+  "parent_resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/resume_step7250.pt",
+  "parent_config": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/config.json",
+  "expected_parent_checkpoint_sha": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+  "expected_parent_resume_sha": "b8b709f284ce627113e392ede00e43bcd522c8dc23b63719e9fcbaa573c7256d",
+  "expected_parent_config_sha": "8bcf24e6f8965593f26d31aeedcc0c58fc62af185d443d8ff46d2602336b59f7",
+  "expected_parent_protocol": "4d12b7aae1486eb1425e3d1dedca737f152033e91c62a290c569e721899f5f71",
+  "stage_steps": 250,
+  "save_every": 250,
+  "teacher": "parent6500",
+  "nr_round_ste": false,
+  "lr": 2e-07,
+  "reward_weight": 0.075,
+  "clip_weight": 0.5,
+  "musiq_weight": 2.5,
+  "gradient_anchor": 0.3,
+  "run": "cuda_nr_stage5_s7250_teacher6500_m25_r075_250"
+}

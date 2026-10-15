@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "CPU_only": true,
+  "checked_utc": "2026-10-14T14:01:54.921611+00:00",
+  "selection_sha256": "b3148b21f466854f9fe8f81c7eca1348da5bf793141799573ff3be8b20e25c3f",
+  "selected_label": "push4_a7750_compiled_all",
+  "all_three_full103_418_and_local_download_SHA_verified": true,
+  "proof_files_verified": 33,
+  "full_comparison_table_sha256": "7fcadb78f1aafaa433ac1a8a9ddce21dd169cf97ce9dbf2e2ee59e158404c82d",
+  "scope": "full100test+val3 S_proxy; no latency or official leaderboard score",
+  "audits": [
+    {
+      "label": "push4_c7750_compiled_all",
+      "status": "PASS",
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "NR": 2.3170131290749345,
+      "FR": 1.4438390533129373,
+      "S_proxy": 3.760852182387872,
+      "audit_sha256": "8b950faed1a7a7482b122aa1fc797b8a0ca571a44c963f6c15535cbad3d45088",
+      "proof_manifest_sha256": "f4dde384a3c319aa214d1059f6ed69f4cc61824c9d5687bc5f0420b31f1bc2f2"
+    },
+    {
+      "label": "push4_a7750_compiled_all",
+      "status": "PASS",
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "NR": 2.3197332792186334,
+      "FR": 1.4417232871055603,
+      "S_proxy": 3.7614565663241937,
+      "audit_sha256": "ae5b2234f5e110240507fbec515139d1b2a23bf8f664e7477e34c377e09c507b",
+      "proof_manifest_sha256": "021ef4ac4d5bb172f0089b539f84b96dc1968daf99a6422034eff00486fe57c7"
+    },
+    {
+      "label": "push4_d7500_compiled_all",
+      "status": "PASS",
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "NR": 2.3110824830824153,
+      "FR": 1.4477893312772114,
+      "S_proxy": 3.758871814359627,
+      "audit_sha256": "d2e38e6dcf3ece66c19e187484d5227576386373c989636cf0a1d85e48253bc8",
+      "proof_manifest_sha256": "5b93cbbffcede929e2f4fc09c0f186857db8282fa244ae94571d10d4be145bbc"
+    }
+  ]
+}

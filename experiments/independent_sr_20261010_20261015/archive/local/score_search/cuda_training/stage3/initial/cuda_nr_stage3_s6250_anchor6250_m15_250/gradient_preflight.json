@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "components": {
+    "musiq": {
+      "value": 0.5825080871582031,
+      "input_gradient_norm": 0.6105067729949951,
+      "input_gradient_finite": true
+    },
+    "maniqa": {
+      "value": 0.35730406641960144,
+      "input_gradient_norm": 0.16505271196365356,
+      "input_gradient_finite": true
+    },
+    "clipiqa": {
+      "value": 0.6361753344535828,
+      "input_gradient_norm": 6.012568950653076,
+      "input_gradient_finite": true
+    }
+  },
+  "row": {
+    "local_step": 1,
+    "global_step": 6251,
+    "optimizer_step": 251,
+    "case": 13,
+    "crop_xy": [
+      967,
+      2015
+    ],
+    "loss": -0.09710129350423813,
+    "fidelity": 1.1390932108960774e-14,
+    "reward": 1.294683814048767,
+    "scores": {
+      "musiq": 0.5825080871582031,
+      "maniqa": 0.35730406641960144,
+      "clipiqa": 0.6361753344535828
+    },
+    "gradient_norm": 0.759179413318634,
+    "nonzero_lora_gradients": 514,
+    "step_seconds": 1.8862881660461426,
+    "elapsed_seconds": 1.8864414691925049,
+    "gpu_peak_allocated_bytes": 29947319808
+  },
+  "no_optimizer_update_yet": true,
+  "frozen_metrics": true,
+  "frozen_same_latent_anchor": true,
+  "teacher_FP32_exact_parent6250": true,
+  "initial_fidelity_expected_zero": true,
+  "initial_fidelity_tolerance": 1e-06,
+  "musiq_weight": 1.5
+}

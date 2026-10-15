@@ -1,0 +1,448 @@
+{
+  "status": "complete",
+  "updated_at_bjt": "2026-10-14T19:51:03.228707+08:00",
+  "parent_full": {
+    "global_step": 6500,
+    "optimizer_step": 500,
+    "NR": 2.2783103602882613,
+    "FR": 1.4614406824111938,
+    "S_proxy": 3.739751042699455
+  },
+  "scope": "Three independent 750-update branches from the same6500 parent; pilot/full scores separate",
+  "training": {
+    "A": {
+      "stage": "complete",
+      "completed_local_steps": 750,
+      "global_step": 7250,
+      "optimizer_step": 1250,
+      "run": "cuda_nr_stage4_s6500_teacher6250_cont750",
+      "milestones": {
+        "6750": {
+          "global_step": 6750,
+          "local_step": 250,
+          "optimizer_step": 750,
+          "raw_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6250_cont750/step6750.pth",
+          "raw_checkpoint_sha256": "e326cceb9e92e7776d4aa2504ab7feac9bd18ad27449a09de52ca6cd06c92ede",
+          "resume_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6250_cont750/resume_step6750.pt",
+          "resume_checkpoint_sha256": "cdf90e94d2d0cd0b81155021f5b37f228e1fd9ae29219b11780469423a37c37e",
+          "resume_bytes": 3114332109,
+          "resume_mtime_ns": 1791975552179824367,
+          "resume_inode": 298189932,
+          "latest_same_inode_at_save": true,
+          "exact_FP32_LoRA_Adam_and_all4_RNG": true
+        },
+        "7000": {
+          "global_step": 7000,
+          "local_step": 500,
+          "optimizer_step": 1000,
+          "raw_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6250_cont750/step7000.pth",
+          "raw_checkpoint_sha256": "1f19654fff8ef33fbef054c095ead7e4c364d6a666f7bcdc2150c732798584f0",
+          "resume_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6250_cont750/resume_step7000.pt",
+          "resume_checkpoint_sha256": "9ca7d921642e47213466d905e86a521872f300e223d1ead6e4107e02881925b0",
+          "resume_bytes": 3114332109,
+          "resume_mtime_ns": 1791975783147768040,
+          "resume_inode": 298189991,
+          "latest_same_inode_at_save": true,
+          "exact_FP32_LoRA_Adam_and_all4_RNG": true
+        },
+        "7250": {
+          "global_step": 7250,
+          "local_step": 750,
+          "optimizer_step": 1250,
+          "raw_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6250_cont750/step7250.pth",
+          "raw_checkpoint_sha256": "25d98c31f618150315e7b14c4a5e7f94dc8c1ba3203de7debfae10f4b0a03b85",
+          "resume_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6250_cont750/resume_step7250.pt",
+          "resume_checkpoint_sha256": "b140041ab9f74414c53eecdebafbec06b241c58e23b6073f823766f16d4069b0",
+          "resume_bytes": 3114332173,
+          "resume_mtime_ns": 1791976015135770575,
+          "resume_inode": 298190096,
+          "latest_same_inode_at_save": true,
+          "exact_FP32_LoRA_Adam_and_all4_RNG": true
+        }
+      },
+      "gradient_preflight": "passed"
+    },
+    "B": {
+      "stage": "complete",
+      "completed_local_steps": 750,
+      "global_step": 7250,
+      "optimizer_step": 1250,
+      "run": "cuda_nr_stage4_s6500_teacher6500_cont750",
+      "milestones": {
+        "6750": {
+          "global_step": 6750,
+          "local_step": 250,
+          "optimizer_step": 750,
+          "raw_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_cont750/step6750.pth",
+          "raw_checkpoint_sha256": "c5db668fad0cc133e65bc3c113eb724c8cac44bfbc1f413b9ea6ae496f89d105",
+          "resume_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_cont750/resume_step6750.pt",
+          "resume_checkpoint_sha256": "9afd3b09555839310f8419bb375d34644ca37cca21f7c792851adf755b672d9a",
+          "resume_bytes": 3114331981,
+          "resume_mtime_ns": 1791975559514948034,
+          "resume_inode": 298189943,
+          "latest_same_inode_at_save": true,
+          "exact_FP32_LoRA_Adam_and_all4_RNG": true
+        },
+        "7000": {
+          "global_step": 7000,
+          "local_step": 500,
+          "optimizer_step": 1000,
+          "raw_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_cont750/step7000.pth",
+          "raw_checkpoint_sha256": "0ab9e3aa9a0dbefcff80ea44ed04b8b3eb6c615da8814ff8ab1d5dc6dbc456f2",
+          "resume_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_cont750/resume_step7000.pt",
+          "resume_checkpoint_sha256": "32c7c40f1f1747ebc9ffdd5c660cb251b6921b48c5046a0a8510b9d0e8b5a7cf",
+          "resume_bytes": 3114331981,
+          "resume_mtime_ns": 1791975799431046632,
+          "resume_inode": 298190002,
+          "latest_same_inode_at_save": true,
+          "exact_FP32_LoRA_Adam_and_all4_RNG": true
+        },
+        "7250": {
+          "global_step": 7250,
+          "local_step": 750,
+          "optimizer_step": 1250,
+          "raw_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_cont750/step7250.pth",
+          "raw_checkpoint_sha256": "b326a96d0fdfd9d18e39ec7880aa09405b981f06fe8d5af4b08c18965ede5bb1",
+          "resume_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_cont750/resume_step7250.pt",
+          "resume_checkpoint_sha256": "664640c3016f3b7b71c8c3bfd137ec0bbaa94c271c58ce146f49dfc4592d427b",
+          "resume_bytes": 3114332045,
+          "resume_mtime_ns": 1791976039274184394,
+          "resume_inode": 298190094,
+          "latest_same_inode_at_save": true,
+          "exact_FP32_LoRA_Adam_and_all4_RNG": true
+        }
+      },
+      "gradient_preflight": "passed"
+    },
+    "C": {
+      "stage": "complete",
+      "completed_local_steps": 750,
+      "global_step": 7250,
+      "optimizer_step": 1250,
+      "run": "cuda_nr_stage4_s6500_teacher6500_nrstrong750",
+      "milestones": {
+        "6750": {
+          "global_step": 6750,
+          "local_step": 250,
+          "optimizer_step": 750,
+          "raw_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step6750.pth",
+          "raw_checkpoint_sha256": "9d060b36adac92b7b75a784e0ab1b8727281836d09c4b260036dc06f2ac6a29c",
+          "resume_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/resume_step6750.pt",
+          "resume_checkpoint_sha256": "f56906c26988af9c960bf40b622f4a46234242305332b25a26538210c46c7c9b",
+          "resume_bytes": 3114332109,
+          "resume_mtime_ns": 1791975554622865556,
+          "resume_inode": 298189940,
+          "latest_same_inode_at_save": true,
+          "exact_FP32_LoRA_Adam_and_all4_RNG": true
+        },
+        "7000": {
+          "global_step": 7000,
+          "local_step": 500,
+          "optimizer_step": 1000,
+          "raw_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step7000.pth",
+          "raw_checkpoint_sha256": "122c362902c204d60c4cd8433019b9b8ebcde4ffccc8e789094b4c71ef022df0",
+          "resume_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/resume_step7000.pt",
+          "resume_checkpoint_sha256": "5c3feb67f126eb3d0f0be7ba9ee676af2b2a9a03d6dc2b328b789c274042d74e",
+          "resume_bytes": 3114332109,
+          "resume_mtime_ns": 1791975787599844211,
+          "resume_inode": 298190012,
+          "latest_same_inode_at_save": true,
+          "exact_FP32_LoRA_Adam_and_all4_RNG": true
+        },
+        "7250": {
+          "global_step": 7250,
+          "local_step": 750,
+          "optimizer_step": 1250,
+          "raw_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step7250.pth",
+          "raw_checkpoint_sha256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+          "resume_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/resume_step7250.pt",
+          "resume_checkpoint_sha256": "b8b709f284ce627113e392ede00e43bcd522c8dc23b63719e9fcbaa573c7256d",
+          "resume_bytes": 3114332109,
+          "resume_mtime_ns": 1791976021476879176,
+          "resume_inode": 298190095,
+          "latest_same_inode_at_save": true,
+          "exact_FP32_LoRA_Adam_and_all4_RNG": true
+        }
+      },
+      "gradient_preflight": "passed"
+    }
+  },
+  "evaluations": {
+    "push3_a6750_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "NR": 2.279528058355066,
+      "FR": 1.46111390988032,
+      "S_subset": 3.740641968235386
+    },
+    "push3_a7000_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "NR": 2.2823527772440784,
+      "FR": 1.4595288236935935,
+      "S_subset": 3.741881600937672
+    },
+    "push3_a7250_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "NR": 2.2833305751553623,
+      "FR": 1.4589804808298745,
+      "S_subset": 3.742311055985237
+    },
+    "push3_b6750_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "NR": 2.2836534055319593,
+      "FR": 1.4584209322929382,
+      "S_subset": 3.7420743378248975
+    },
+    "push3_b7000_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "NR": 2.2871061146444696,
+      "FR": 1.4570813377698264,
+      "S_subset": 3.744187452414296
+    },
+    "push3_b7250_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "NR": 2.2903408356998733,
+      "FR": 1.4570266008377075,
+      "S_subset": 3.747367436537581
+    },
+    "push3_c6750_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "NR": 2.2951557743901496,
+      "FR": 1.4551878770192466,
+      "S_subset": 3.750343651409396
+    },
+    "push3_c7000_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "NR": 2.3024781838782418,
+      "FR": 1.44964067141215,
+      "S_subset": 3.7521188552903917
+    },
+    "push3_c7250_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "NR": 2.3058536098858196,
+      "FR": 1.446569005648295,
+      "S_subset": 3.7524226155341145
+    },
+    "push3_c6750_compiled_all": {
+      "scope": "full",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 103,
+        "total": 103
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 103,
+        "expected": 103
+      },
+      "NR": 2.30120159758347,
+      "FR": 1.4551878770192466,
+      "S_proxy": 3.7563894746027167
+    },
+    "push3_c7000_compiled_all": {
+      "scope": "full",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 103,
+        "total": 103
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 103,
+        "expected": 103
+      },
+      "NR": 2.3091534823842323,
+      "FR": 1.44964067141215,
+      "S_proxy": 3.7587941537963823
+    },
+    "push3_c7250_compiled_all": {
+      "scope": "full",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 103,
+        "total": 103
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 103,
+        "expected": 103
+      },
+      "NR": 2.313125129005856,
+      "FR": 1.446569005648295,
+      "S_proxy": 3.759694134654151
+    }
+  },
+  "selection": {
+    "schema": "nr_push3_selection_v1",
+    "status": "selected_after_independent_full_audit",
+    "selected_utc": "2026-10-14T11:40:40.429824+00:00",
+    "label": "push3_c7250_compiled_all",
+    "NR": 2.313125129005856,
+    "FR": 1.4465690056482952,
+    "S_proxy": 3.7596941346541515,
+    "local_step": 750,
+    "global_step": 7250,
+    "optimizer_step": 1250,
+    "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step7250.pth",
+    "checkpoint_sha256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+    "resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/resume_step7250.pt",
+    "resume_sha256": "b8b709f284ce627113e392ede00e43bcd522c8dc23b63719e9fcbaa573c7256d",
+    "config": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/config.json",
+    "config_sha256": "8bcf24e6f8965593f26d31aeedcc0c58fc62af185d443d8ff46d2602336b59f7",
+    "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push3_c7250_compiled/model_dir",
+    "quality_dir": "/cache/independent_sr_cuda_20261013/nr_push3_full_evaluations/push3_c7250_compiled_all",
+    "full_audit": "/cache/independent_sr_cuda_20261013/audits/push3/evaluations/push3_c7250_compiled_all/audit.json",
+    "full_audit_sha256": "566943a05c2e64d457f74b8962caff4b84f043ded3a5c565bab6568b2c769838",
+    "training_audit": "/cache/independent_sr_cuda_20261013/audits/push3/training_stage4/milestone750_cpu_audit.json",
+    "training_audit_sha256": "da243b9fee82d389d84daef0876f0fdaa917b622df408b7fe0b9ee326cab1926",
+    "renderer_source": "/cache/independent_sr_cuda_20261013/code/render_cuda_submission.py",
+    "renderer_source_sha256": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5",
+    "runner_source_sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae",
+    "all_required_full_candidates_audited": [
+      {
+        "label": "push3_c7250_compiled_all",
+        "global_step": 7250,
+        "NR": 2.313125129005856,
+        "FR": 1.4465690056482952,
+        "S_proxy": 3.7596941346541515,
+        "checkpoint_sha256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+        "full_audit": "/cache/independent_sr_cuda_20261013/audits/push3/evaluations/push3_c7250_compiled_all/audit.json",
+        "full_audit_sha256": "566943a05c2e64d457f74b8962caff4b84f043ded3a5c565bab6568b2c769838"
+      },
+      {
+        "label": "push3_c7000_compiled_all",
+        "global_step": 7000,
+        "NR": 2.3091534823842323,
+        "FR": 1.44964067141215,
+        "S_proxy": 3.7587941537963823,
+        "checkpoint_sha256": "122c362902c204d60c4cd8433019b9b8ebcde4ffccc8e789094b4c71ef022df0",
+        "full_audit": "/cache/independent_sr_cuda_20261013/audits/push3/evaluations/push3_c7000_compiled_all/audit.json",
+        "full_audit_sha256": "2b7779f2279f7b55f803faf7ba16242473ee1a42e796f22651391f9e610156ec"
+      },
+      {
+        "label": "push3_c6750_compiled_all",
+        "global_step": 6750,
+        "NR": 2.30120159758347,
+        "FR": 1.4551878770192466,
+        "S_proxy": 3.7563894746027167,
+        "checkpoint_sha256": "9d060b36adac92b7b75a784e0ab1b8727281836d09c4b260036dc06f2ac6a29c",
+        "full_audit": "/cache/independent_sr_cuda_20261013/audits/push3/evaluations/push3_c6750_compiled_all/audit.json",
+        "full_audit_sha256": "fee31144d604d30a6b354af24f22c3122cd27abb86037441c03376084f3f0f8d"
+      }
+    ],
+    "selection_basis": "maximum original-tool S_proxy among all three independently audited full100test+val3 candidates; unchanged formal scoring; no latency or official prediction",
+    "parent_full_audit": "/cache/independent_sr_cuda_20261013/audits/push3/evaluations/parent6500_full_cpu_audit.json",
+    "parent_full_audit_sha256": "cdba2ed377af259d7730f243f5218fa60c3fc14196ca6340a83aadee7e3e72b0",
+    "delta_NR_vs6500_full": 0.03481476871759481,
+    "delta_FR_vs6500_full": -0.014871676762898689,
+    "delta_S_proxy_vs6500_full": 0.019943091954696346,
+    "selector_source_sha256": "a688e359033b0b6d9267d4e70c0b03a6426379f80efab0e17356ce29892fe17f",
+    "CPU_only": true,
+    "CUDA_context_initialized": false
+  },
+  "backup": {
+    "destination": "/temp/independent_sr_cuda_20261013_artifacts/nr_push3_20261014",
+    "manifest_sha256": "6c4cc6db3d963762cb1868d83d89969083326cc0e3932d64743a23b598c48eaa",
+    "DONE_sha256": "15846dd6f53e3327bf7331d00a27d4928b2078edca4244ee29186623cf85655d",
+    "files": 400,
+    "bytes": 6294606619,
+    "scope": "final_selected_only",
+    "selected_raw_sha256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+    "selected_immutable_resume_sha256": "b8b709f284ce627113e392ede00e43bcd522c8dc23b63719e9fcbaa573c7256d",
+    "SFS_free_bytes_at_independent_verify": 3898605568,
+    "status": "verified_complete",
+    "verified_complete": true,
+    "all_file_actual_SFS_bytes_full_SHA_and_size_reread": true,
+    "selected_global_step": 7250,
+    "native_full_PNG_count": 103
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "audited_bjt": "2026-10-13T23:46:16.885645+08:00",
+  "cuda_context_initialized": false,
+  "teacher": "frozen raw6000 coeff175 same latent; no detected parameter gradients",
+  "initial_precision": "Raw FP32 checkpoint -> BF16 plain HYPIR load -> FP32 trainable parameters; same rounding for frozen current6000 anchor.",
+  "branch_differences": {
+    "lr": [
+      2e-07,
+      1e-07
+    ],
+    "clip_weight": [
+      0.1,
+      1.0
+    ],
+    "reward_weight": [
+      0.075,
+      0.05
+    ]
+  },
+  "all100_cases_and_crops_equal": true,
+  "final_all4_rng_equal": true,
+  "quality_status": "matched compiled pilot20+validation3 still required; crop training reward not full NR",
+  "runs": [
+    {
+      "run": "cuda_nr_s6000_ct175_conservative_pilot100",
+      "checkpoint_sha256": "04468a0134579c3e5f63aea93eea2aa1ca956b102f7ed32bb3dc03c918e08ff4",
+      "keys": 514,
+      "completed_steps": 100,
+      "relative_to_actual_BF16_then_FP32_start_optimizer_delta": {
+        "elements": 259474432,
+        "changed_elements": 259462532,
+        "changed_fraction": 0.9999541380632062,
+        "tensors_changed": 514,
+        "max_abs": 1.5086960047483444e-05,
+        "l2": 0.045837599660651755,
+        "mean_abs": 2.2006031526782694e-06
+      },
+      "deployment_BF16_values_delta": {
+        "elements": 259474432,
+        "changed_elements": 44211868,
+        "changed_fraction": 0.17039007527338956,
+        "tensors_changed": 514,
+        "max_abs": 1.52587890625e-05,
+        "l2": 0.03299335461437747,
+        "mean_abs": 7.004571351092735e-07
+      },
+      "steady_median_step_seconds": 0.8196134567260742,
+      "elapsed100_seconds": 95.48167705535889,
+      "peak_allocated_bytes": 27849609216,
+      "resume_lora_equals_raw_FP32_saved_checkpoint": true,
+      "adamw_state_all_step100": true
+    },
+    {
+      "run": "cuda_nr_s6000_ct175_aligned_pilot100",
+      "checkpoint_sha256": "5ff99a06f0a0e723f534b159c62206250bdd91c58caa6a70a1db5944ee6095b5",
+      "keys": 514,
+      "completed_steps": 100,
+      "relative_to_actual_BF16_then_FP32_start_optimizer_delta": {
+        "elements": 259474432,
+        "changed_elements": 259452383,
+        "changed_fraction": 0.9999150243828263,
+        "tensors_changed": 514,
+        "max_abs": 8.675153367221355e-06,
+        "l2": 0.02533643275822315,
+        "mean_abs": 1.2107806088828454e-06
+      },
+      "deployment_BF16_values_delta": {
+        "elements": 259474432,
+        "changed_elements": 25636357,
+        "changed_fraction": 0.09880109112253496,
+        "tensors_changed": 514,
+        "max_abs": 1.52587890625e-05,
+        "l2": 0.014434332392203505,
+        "mean_abs": 2.3196130076698518e-07
+      },
+      "steady_median_step_seconds": 0.8193249702453613,
+      "elapsed100_seconds": 95.18497896194458,
+      "peak_allocated_bytes": 27849609216,
+      "resume_lora_equals_raw_FP32_saved_checkpoint": true,
+      "adamw_state_all_step100": true
+    }
+  ]
+}

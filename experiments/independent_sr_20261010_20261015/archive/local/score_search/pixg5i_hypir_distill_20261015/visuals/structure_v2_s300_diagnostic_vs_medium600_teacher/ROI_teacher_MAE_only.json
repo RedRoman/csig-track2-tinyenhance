@@ -1,0 +1,34 @@
+{
+  "scope": "Only four fixed RGB native ROIs, teacher pseudo target; no full quality/score/structure recovery claim. Candidate is diagnostic4, references are full103 crop caches; no matched full RNG claim.",
+  "source_proof_sha256": "39cba49e5c18d0aba6706acbb22fadfa704337bc01803fef97e8063030f72715",
+  "ROI_MAE": [
+    {
+      "case": 7,
+      "Medium600_vs_teacher_MAE_RGB_255": 11.324417114257812,
+      "Structure_plus300_vs_teacher_MAE_RGB_255": 10.465425491333008,
+      "delta_MAE": -0.8589916229248047,
+      "diagnostic_vs_reference_MAE": 2.9519124031066895
+    },
+    {
+      "case": 16,
+      "Medium600_vs_teacher_MAE_RGB_255": 12.013654708862305,
+      "Structure_plus300_vs_teacher_MAE_RGB_255": 11.536622047424316,
+      "delta_MAE": -0.4770326614379883,
+      "diagnostic_vs_reference_MAE": 1.9556050300598145
+    },
+    {
+      "case": 41,
+      "Medium600_vs_teacher_MAE_RGB_255": 8.477609634399414,
+      "Structure_plus300_vs_teacher_MAE_RGB_255": 8.113860130310059,
+      "delta_MAE": -0.36374950408935547,
+      "diagnostic_vs_reference_MAE": 1.7830485105514526
+    },
+    {
+      "case": 83,
+      "Medium600_vs_teacher_MAE_RGB_255": 10.04261302947998,
+      "Structure_plus300_vs_teacher_MAE_RGB_255": 9.149356842041016,
+      "delta_MAE": -0.8932561874389648,
+      "diagnostic_vs_reference_MAE": 3.2649617195129395
+    }
+  ]
+}

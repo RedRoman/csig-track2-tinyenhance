@@ -1,0 +1,32 @@
+Looking in indexes: http://repo.myhuaweicloud.com/repository/pypi/simple
+Collecting torch_tensorrt==2.8.0
+  Downloading http://repo.myhuaweicloud.com/repository/pypi/packages/fc/36/c91bd9b502c4effe9d6fecffbd8251a04d38264b5289df0f3e011b08ca07/torch_tensorrt-2.8.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_34_x86_64.whl (15.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.1/15.1 MB 20.7 MB/s eta 0:00:00
+Collecting tensorrt==10.12.0.36
+  Downloading http://repo.myhuaweicloud.com/repository/pypi/packages/2c/ad/c7cc31ec45eb2d28444f99a30f8477d6bb16ec230107a6e8bec16125890d/tensorrt-10.12.0.36.tar.gz (40 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting tensorrt-cu12==10.12.0.36
+  Downloading http://repo.myhuaweicloud.com/repository/pypi/packages/a2/5f/be05d7a6683e06333a3ba195e5d68dc602294eb21d4bbbe8c01941bb614b/tensorrt_cu12-10.12.0.36.tar.gz (18 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting tensorrt-cu12-bindings==10.12.0.36
+  Downloading http://repo.myhuaweicloud.com/repository/pypi/packages/10/96/e5bfc380c75291ab6c462b05fe915e8824b2dd53da5b317af1a9eaa0a9db/tensorrt_cu12_bindings-10.12.0.36-cp313-none-manylinux_2_28_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 42.8 MB/s eta 0:00:00
+Collecting tensorrt-cu12-libs==10.12.0.36
+  Downloading http://repo.myhuaweicloud.com/repository/pypi/packages/1e/bd/31d7dbd2d23a3558f7f4b3447586b4ef9141a0f3a0748c41c730e99cf6a6/tensorrt_cu12_libs-10.12.0.36.tar.gz (709 bytes)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Saved /cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/torch_tensorrt-2.8.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_34_x86_64.whl
+Saved /cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt-10.12.0.36.tar.gz
+Saved /cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt_cu12-10.12.0.36.tar.gz
+Saved /cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt_cu12_bindings-10.12.0.36-cp313-none-manylinux_2_28_x86_64.whl
+Saved /cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt_cu12_libs-10.12.0.36.tar.gz
+Successfully downloaded torch_tensorrt tensorrt tensorrt-cu12 tensorrt-cu12-bindings tensorrt-cu12-libs
+
+[notice] A new release of pip is available: 25.1.1 -> 26.2.1
+[notice] To update, run: /cache/independent_sr_cuda_20261013/env/bin/python -m pip install --upgrade pip

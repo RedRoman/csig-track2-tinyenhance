@@ -1,0 +1,132 @@
+{
+  "audited_bjt": "2026-10-14T00:19:25.887595+08:00",
+  "scope": "native CUDA compiled full100 test + validation3 local quality proxy; excludes latency and predicted/official total",
+  "status": "PASS",
+  "full_results": [
+    {
+      "version": "compiled6000",
+      "NR": 2.2531710809059993,
+      "FR": 1.4639289577802022,
+      "S_proxy": 3.717100038686201,
+      "delta_S_vs_compiled6000": 0.0,
+      "test_four_metrics": {
+        "niqe": 4.008259635619268,
+        "musiq": 43.187275161743166,
+        "maniqa": 0.4994988214969635,
+        "clipiqa": 0.7226254713535308
+      }
+    },
+    {
+      "version": "conservative6100",
+      "NR": 2.260917030557886,
+      "FR": 1.4647649923960369,
+      "S_proxy": 3.725682022953923,
+      "delta_S_vs_compiled6000": 0.008581984267721943,
+      "test_four_metrics": {
+        "niqe": 4.021619040758457,
+        "musiq": 42.6936431312561,
+        "maniqa": 0.5077247950434685,
+        "clipiqa": 0.7284177082777024
+      }
+    },
+    {
+      "version": "conservative6250",
+      "NR": 2.2663850433592487,
+      "FR": 1.463716487089793,
+      "S_proxy": 3.7301015304490415,
+      "delta_S_vs_compiled6000": 0.013001491762840267,
+      "test_four_metrics": {
+        "niqe": 4.0241032596781965,
+        "musiq": 42.35499105453491,
+        "maniqa": 0.5128058835864067,
+        "clipiqa": 0.7324395751953126
+      }
+    }
+  ],
+  "full_6100_and_6250_checks": {
+    "each_image_rows": 103,
+    "each_scalar_metrics": 418,
+    "actual_PNG_manifest_measurement_SHA": "PASS206",
+    "actual_inputs_SHA": "PASS206",
+    "actual_validation_GT_SHA": "PASS6",
+    "actual_sources_and_checkpoints_SHA": "PASS",
+    "mean_then_clamp_formula_max_error": 8.881784197001252e-16,
+    "same_103_inputs_and_order": true,
+    "common_runner_inference_settings": true,
+    "common_scoring_source_seed_and_metric_protocol": true,
+    "final_all4_render_rng_states_equal": true,
+    "final_all4_score_rng_states_equal": true,
+    "CPU_only_no_CUDA_context": true
+  },
+  "conservative_250_training": {
+    "status": "passed",
+    "checkpoint_sha256": "7b57349706372122ea67173fbb944e7e806d86e12379e3fd66ea2ebf1f96ecc3",
+    "resume_sha256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+    "real_FP32_delta_vs_step6100": {
+      "elements": 259474432,
+      "changed_elements": 259461000,
+      "changed_fraction": 0.999948233820587,
+      "tensors_changed": 514,
+      "max_abs": 1.915823668241501e-05,
+      "l2": 0.039516587739302764,
+      "mean_abs": 1.9106188822795366e-06
+    },
+    "resume_integrity": {
+      "local_step": 250,
+      "global_step": 6250,
+      "lora_exact_equal_to_step6250": true,
+      "adam_state_entries": 514,
+      "all_adam_steps": [
+        250
+      ],
+      "all_state_tensors_finite": true,
+      "all_required_keys_present": true
+    },
+    "log_rows": 250
+  },
+  "latency_6250": {
+    "status": "complete",
+    "single_A100_GPU0_event_p10_ms": 45.78047866821289,
+    "warmup": 30,
+    "timed_runs": 200,
+    "g4_ref_ms": 0.6502400040626526
+  },
+  "tool_predicted_total": {
+    "scope": "user original empirical predictor; not official leaderboard",
+    "rows": [
+      {
+        "version": "compiled6000",
+        "predicted_score": 54.861316549544334,
+        "event_p10_ms": 46.43932037353515,
+        "g_calibrated_ms": 30.7814760026132
+      },
+      {
+        "version": "conservative6100",
+        "predicted_score": 55.144742603774404,
+        "event_p10_ms": 46.62579345703125,
+        "g_calibrated_ms": 30.905076363225703
+      },
+      {
+        "version": "conservative6250",
+        "predicted_score": 55.51522024624155,
+        "event_p10_ms": 45.78047866821289,
+        "g_calibrated_ms": 30.34477451820786
+      }
+    ],
+    "predictor_sha256": "0af39f578f704e00a0a0a5ce55e58f1668d283ac4602065d8215b6d21cf433e1",
+    "CPU_formula_recheck": "PASS",
+    "caveat": "Prediction is extrapolated from five pixel-model fit points; no HYPIR +/-2 confidence guarantee. Small timing differences are measurements, not evidence of algorithmic speed gain.",
+    "evidence": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/results/nr_full_quality_latency_comparison.json"
+  },
+  "SFS_backup": "parent reports core verified670 files18543300225 bytes; final proof/small-file sync to be attached by parent",
+  "evidence": {
+    "full6100_audit": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/audits/nr_cuda_full_s6100_audit.json",
+    "full6250_audit": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/audits/nr_cuda_full_s6250_audit.json",
+    "training250_audit": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/training_250_parameter_audit.json",
+    "baseline_full_result": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/results/s6000_mt200_ct175_compiled_cuda_all/scores/result.json",
+    "auditor_source_sha256": "e798a10c1a245e65c58d72b47f2874370e615987f4e91afad9b0d32d823832bc",
+    "small_download": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/audits/nr_cuda_small_download_manifest.json"
+  },
+  "small_download_raw_bytes": "PASS31",
+  "new_trained_full_pilot_val3_prefix": "PASS6100and6250all3byteequal"
+}

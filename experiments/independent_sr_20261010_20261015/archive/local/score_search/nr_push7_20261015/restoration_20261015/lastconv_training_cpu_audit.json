@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "schema": "lastconv_nr100_independent_CPU_actual_artifacts_v1",
+  "run": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_nr100",
+  "source_sha256": "24dd2608888bd240b310d3a7fde678e376483229fe35c0cd7e71ab61e87f1082",
+  "CLI_sha256": "547a4ccb4d064ba37a67456293bbd29d94f58441f5cf70b627cd27c33dd6d82e",
+  "protocol_id": "134765cf4b731394ca0205a85e1dd24c5fdfcf86419474d75e4ea5b81079b9e9",
+  "updates": 100,
+  "logs100_finite_counters_loss_recomputed": true,
+  "test100_actual_input_SHA_checked": true,
+  "milestones": {
+    "0": {
+      "global_step": 7750,
+      "optimizer_step": 0,
+      "raw514_FP32_finite_equal_resume": true,
+      "selected_changed": [],
+      "other512_exact_A": true,
+      "Adam_states": 0,
+      "Adam_moments_finite_FP32_CPU": true,
+      "raw_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+      "resume_sha256": "37ef4d664194a13913478b0eecc22a947036da1fd14b1c52ef1a2369c7ebe0f3"
+    },
+    "50": {
+      "global_step": 7800,
+      "optimizer_step": 50,
+      "raw514_FP32_finite_equal_resume": true,
+      "selected_changed": [
+        "conv_out.lora_A.default.weight",
+        "conv_out.lora_B.default.weight"
+      ],
+      "other512_exact_A": true,
+      "Adam_states": 2,
+      "Adam_moments_finite_FP32_CPU": true,
+      "raw_sha256": "4370e553762572e3e8ddd921dd104cf0fb14708a4b6727be86aa7ea80e2e3706",
+      "resume_sha256": "501ea3af9aaf5812705e13ef25326ed19c4e9d3cadcd2525b3aca09de16d3d22"
+    },
+    "100": {
+      "global_step": 7850,
+      "optimizer_step": 100,
+      "raw514_FP32_finite_equal_resume": true,
+      "selected_changed": [
+        "conv_out.lora_A.default.weight",
+        "conv_out.lora_B.default.weight"
+      ],
+      "other512_exact_A": true,
+      "Adam_states": 2,
+      "Adam_moments_finite_FP32_CPU": true,
+      "raw_sha256": "8b79000d51d2fba7610b3e3ccc33e531584560c614deca50a0f8c70825b4e8a1",
+      "resume_sha256": "e17ff70c29b0b04244ac31a42e86deb2baf4cbbae25bad3b1db8a6705709c54c"
+    }
+  },
+  "final_selected_update_RMS": 7.0490964254471945e-06,
+  "final_selected_relative_L2": 0.0006444736204900281,
+  "RNG": {
+    "all_four_saved_valid": true,
+    "Python100_case_crop_replay_exact": true,
+    "MANIQA20_NumPy100_replay_exact": true,
+    "TorchCPU_exact_unchanged": true,
+    "CUDA_saved_offset_per_step": 32,
+    "CUDA_saved_offsets": {
+      "0": 0,
+      "50": 1600,
+      "100": 3200
+    },
+    "CUDA_replay_executed": false
+  },
+  "CPU_only": true,
+  "CUDA_initialized": false,
+  "source_or_run_files_modified": false,
+  "median_step_seconds": 1.7425811290740967,
+  "quality_conclusion": false,
+  "auditor_sha256": "ad7c709447cdf5318090c5b8528e00f1bff82e08b15c54ec757e6dc90aed005b",
+  "created_utc": "2026-10-15T07:17:52.046919+00:00"
+}

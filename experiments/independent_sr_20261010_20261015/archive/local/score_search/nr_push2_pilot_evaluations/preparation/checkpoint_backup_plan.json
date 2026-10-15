@@ -1,0 +1,376 @@
+{
+  "schema": "nr_push2_checkpoint_backup_plan_v1",
+  "source_root": "/cache/independent_sr_cuda_20261013",
+  "destination": "/temp/independent_sr_cuda_20261013_artifacts/nr_push2_20261014",
+  "runs": [
+    "cuda_nr_stage2_s6250_cont250",
+    "cuda_nr_stage2_s6250_roundste250"
+  ],
+  "script_path": "/cache/independent_sr_cuda_20261013/code/sync_nr_push2_artifacts.py",
+  "script_sha256": "64224c1a274823155b1b75643e042ae3629e7f423afcd47d4826b2e8e14c77ad",
+  "self_chosen_reserve_bytes": 21474836480,
+  "reserve_is_user_requirement": false,
+  "parent_reference": {
+    "prefix": "/temp/independent_sr_cuda_20261013_artifacts/nr_microtune_20261014",
+    "manifest_sha256": "99f461e6e95045cf0af053dc3b24bde74cd3531715225d0ccf95eef2d2dbd0d4",
+    "parent_resume_relative_path": "adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+    "parent_resume_sha256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+    "policy": "reference existing verified prefix; do not recopy parent checkpoint, SD2 or env"
+  },
+  "files": [
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_cont250/config.json",
+      "bytes": 31862,
+      "sha256": "24bb8e737f7a2a204510a3b6e921531e680ccc40ec7240bdb9545ceb95e30879"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_cont250/gradient_preflight.json",
+      "bytes": 1164,
+      "sha256": "f77463ed97197af75a414f66a83bd43d632a5ab1d87ffaeb4de39dd5f3371311"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_cont250/maniqa_initial_state_proof.json",
+      "bytes": 130418,
+      "sha256": "df130e7a4ce0bf271f2a0673ce0dbcc639d9491981f94ba7255e843559a9cb36"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_cont250/parent_migration.json",
+      "bytes": 2896,
+      "sha256": "8710513bcaf2704cd555f88fe33f79c3a568a84def3ebfca61ea5cda5869624a"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_cont250/resume_latest.pt",
+      "bytes": 3114330637,
+      "sha256": "f137748d876d684aadb5d62c54015d72c1fcd28b13f031550609eaa891cc0f36"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_cont250/status.json",
+      "bytes": 156,
+      "sha256": "cd6a8c477761aa6eb84f9253ee985a17349cfabada330b9a1c532167620ce34a"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_cont250/step6500.pth",
+      "bytes": 1038079419,
+      "sha256": "dc7bbf712e3039302a52951075409a23771b8d832024d1800bbe3398c41d4afa"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_cont250/train.jsonl",
+      "bytes": 119846,
+      "sha256": "e5417ff53ea56e96c685ae5f88a4d7e5b688dd3bc7b26826de35033f60327166"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_cont250/training_complete_step6500",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_roundste250/config.json",
+      "bytes": 31951,
+      "sha256": "005b10a3e08ae493dd113e62799985675451b9094d929fbda3d11ce45ed28ff5"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_roundste250/gradient_preflight.json",
+      "bytes": 1164,
+      "sha256": "6fe9daada831d89dccc0f49ec276ed0c59a3b0e6d03d912e0d809198e48b0b05"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_roundste250/maniqa_initial_state_proof.json",
+      "bytes": 130418,
+      "sha256": "df130e7a4ce0bf271f2a0673ce0dbcc639d9491981f94ba7255e843559a9cb36"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_roundste250/parent_migration.json",
+      "bytes": 2914,
+      "sha256": "c8c6f4d5ff373b0bff2b38178188bd1a83637da9ee3cac349ad8f579d356808a"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_roundste250/resume_latest.pt",
+      "bytes": 3114330637,
+      "sha256": "64da2f69b3732555ecc6954a6c4a777125235c30173606e40f354a4664969100"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_roundste250/status.json",
+      "bytes": 156,
+      "sha256": "cd6a8c477761aa6eb84f9253ee985a17349cfabada330b9a1c532167620ce34a"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_roundste250/step6500.pth",
+      "bytes": 1038079419,
+      "sha256": "095f93f17d998d708639f2a3b3641052c576b3036efcbc881eb2e88360e18070"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_roundste250/train.jsonl",
+      "bytes": 119866,
+      "sha256": "7b304f16f3eeb288196b22a419693fddd64010f8244bcb70f121ffb76ee20190"
+    },
+    {
+      "path": "adaptation/runs/cuda_nr_stage2_s6250_roundste250/training_complete_step6500",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/NR_PUSH2_BACKUP_README.txt",
+      "bytes": 2265,
+      "sha256": "ecaf466b4c95adc7977164fdd9f4487689471cc4ad3dc7b68bae8199a66d3eef"
+    },
+    {
+      "path": "code/cuda_training/README.md",
+      "bytes": 7337,
+      "sha256": "26f280289f71fa989b1006129f0228dab52b6b40d1b04f6e8f4be46c2e3b87ac"
+    },
+    {
+      "path": "code/cuda_training/RESTORE_NR_CUDA_20261014.md",
+      "bytes": 3144,
+      "sha256": "b14bc4c2bc2ba3f8e8d3ae37d7804877e14fc413ac99b0ed4db5673d60c92120"
+    },
+    {
+      "path": "code/cuda_training/STAGE_V2_README.md",
+      "bytes": 1982,
+      "sha256": "7af4b837281540ccb0c8005c1281088229118d70cfc85f958ec4bdeb388a1c06"
+    },
+    {
+      "path": "code/cuda_training/audit_matched_cpu.py",
+      "bytes": 6304,
+      "sha256": "f2b3b3fe84d18e28e088e1a3ea510a236bf2abd930876f4b3ed19e1fef2690ca"
+    },
+    {
+      "path": "code/cuda_training/audit_training_cpu.py",
+      "bytes": 6283,
+      "sha256": "80fe230546d53c71a8c91be9658e40772c0d6e02668c737352eb103217788c28"
+    },
+    {
+      "path": "code/cuda_training/config_aligned.json",
+      "bytes": 441,
+      "sha256": "672a6d90573c4ef63a27a661ffafd3e49eb0407e3c4b8987360c0413bf0bde5e"
+    },
+    {
+      "path": "code/cuda_training/config_conservative.json",
+      "bytes": 447,
+      "sha256": "efc42d398803e038f276ecc2ab79a6c3a002e48d102c3f3a52c08b05b56681ad"
+    },
+    {
+      "path": "code/cuda_training/config_stage2_cont250.json",
+      "bytes": 719,
+      "sha256": "91c6aa99c6a6596036f5487d4a41e2022224f04716b53fef4199e35437ed87b8"
+    },
+    {
+      "path": "code/cuda_training/config_stage2_roundste250.json",
+      "bytes": 722,
+      "sha256": "33bbdc392fa36a7a623fc6cd85476e098984f9e02b2b8060356287178c763be1"
+    },
+    {
+      "path": "code/cuda_training/png_quantization_surrogate.py",
+      "bytes": 1501,
+      "sha256": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812"
+    },
+    {
+      "path": "code/cuda_training/png_quantization_surrogate_cpu_audit.json",
+      "bytes": 1077,
+      "sha256": "8546d9569e1aaa1dde7703acbdcab8309f21c6f5012f16e23c9e3a6aa8447453"
+    },
+    {
+      "path": "code/cuda_training/preflight_cuda_nr.py",
+      "bytes": 287,
+      "sha256": "c1ef29a55d010b186322a299c57aa14988455652f52f91226ca6b1ec1ff70031"
+    },
+    {
+      "path": "code/cuda_training/source_sha256.json",
+      "bytes": 378,
+      "sha256": "60ec40527f07ee32d6255b56bd15a5954028386dcbb90110cf55ef0b07eabc4e"
+    },
+    {
+      "path": "code/cuda_training/stage_v2_6250_migration_plan.json",
+      "bytes": 2268,
+      "sha256": "b75de6d18687dbcde395498b61fa2e58b54be5407ea6e632b3d69525f48948eb"
+    },
+    {
+      "path": "code/cuda_training/train_cuda_nr.py",
+      "bytes": 18143,
+      "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b"
+    },
+    {
+      "path": "code/cuda_training/train_cuda_nr_stage_v2.py",
+      "bytes": 20806,
+      "sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+    },
+    {
+      "path": "code/maniqa_offline_init.py",
+      "bytes": 5324,
+      "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf"
+    },
+    {
+      "path": "code/numpy_legacy_compat.py",
+      "bytes": 1028,
+      "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f"
+    },
+    {
+      "path": "code/render_cuda_submission.py",
+      "bytes": 7979,
+      "sha256": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5"
+    },
+    {
+      "path": "code/score_cuda_stream.py",
+      "bytes": 11085,
+      "sha256": "20125b94596c669f33dc99b592424a8c1e6a44ec1247d304853823cc5e399074"
+    },
+    {
+      "path": "code/sync_nr_push2_artifacts.py",
+      "bytes": 18051,
+      "sha256": "64224c1a274823155b1b75643e042ae3629e7f423afcd47d4826b2e8e14c77ad"
+    },
+    {
+      "path": "code/update_nr_push2_status.py",
+      "bytes": 2362,
+      "sha256": "b53e9705b70ebf2a173cc3d8c9712eeb36cfefc264d97ea6bdc1f2f3d0c88fe3"
+    },
+    {
+      "path": "logs/push2_train_cont250.log",
+      "bytes": 120862,
+      "sha256": "851610cb2e374d80a244c978bdd024aa23fcd2ee51bad6432fe6283cd5180b0f"
+    },
+    {
+      "path": "logs/push2_train_roundste250.log",
+      "bytes": 120882,
+      "sha256": "dc4dddefbbb6f1739ca50ec16f057a9979fd7353c9e0069fbc1add4ead9c0ef5"
+    },
+    {
+      "path": "nr_push2_pilot_evaluations/preparation/candidate_preparation.json",
+      "bytes": 9863,
+      "sha256": "32300f4b92367ee7948a5f13c18c49239586e2e74f2d706690ddc1cfe719aa0c"
+    },
+    {
+      "path": "nr_push2_pilot_evaluations/preparation/ct175_control_S_subset.json",
+      "bytes": 1494,
+      "sha256": "b469ed6f0b9a2483dbcfb63454a74fb98011c89ba06618fd73f35ebb5ecadacf"
+    },
+    {
+      "path": "nr_push2_pilot_evaluations/preparation/render_cont6350.sh",
+      "bytes": 821,
+      "sha256": "17f71d1cc63fb5f9cac798a680b47d2aa9178044029e8b37a25c4baee0ddf792"
+    },
+    {
+      "path": "nr_push2_pilot_evaluations/preparation/render_cont6500.sh",
+      "bytes": 823,
+      "sha256": "e13b9a2e5018e5d47345ede8503b361be833787e42e1f07bf0d80c69d9cfac63"
+    },
+    {
+      "path": "nr_push2_pilot_evaluations/preparation/render_ct160.sh",
+      "bytes": 697,
+      "sha256": "8bda8ed75f6b561817358f35708c4e92129073481ac8cced5e04b0772a1aace7"
+    },
+    {
+      "path": "nr_push2_pilot_evaluations/preparation/render_ct185.sh",
+      "bytes": 697,
+      "sha256": "f53a1d0dfc86a2057d39f9b1ef996bcfe55e7391da0a173cd4df6d767038683d"
+    },
+    {
+      "path": "nr_push2_pilot_evaluations/preparation/render_roundste6500.sh",
+      "bytes": 835,
+      "sha256": "bda98a5918d7b41d3c530edc64f355aef9c3860a70c7f3dc0acbd6a89ecf9995"
+    },
+    {
+      "path": "nr_push2_pilot_evaluations/preparation/score_both_candidates.sh",
+      "bytes": 711,
+      "sha256": "134a37eb1415e7cf5bc7534787db8b85d75e8bba3be1e93e453460883c249025"
+    },
+    {
+      "path": "nr_push2_pilot_evaluations/preparation/score_ct160.sh",
+      "bytes": 650,
+      "sha256": "d0f6a91726752bc8aa2281b2c2f564582e6645fe9daa16fcf321fe4ef7aa2f3a"
+    },
+    {
+      "path": "nr_push2_pilot_evaluations/preparation/score_ct185.sh",
+      "bytes": 650,
+      "sha256": "9da02dcdf176b9135c338b84a5e68c6475195d2178f47b0a61df83088b76c1bf"
+    },
+    {
+      "path": "nr_push2_pilot_evaluations/preparation/score_stage2_both.sh",
+      "bytes": 803,
+      "sha256": "c7ba9ba48630d8b8d7d976631f7bcf97ee3b164db1c4b1d3b4a47b1bf64f2013"
+    },
+    {
+      "path": "nr_push2_pilot_evaluations/preparation/score_stage2_three.sh",
+      "bytes": 970,
+      "sha256": "5b3f35ab700e5bbd4d34f15e4174cd30e1accb3179ae157614beab0380a06081"
+    },
+    {
+      "path": "nr_push2_pilot_evaluations/preparation/stage2_midpoint_preparation.json",
+      "bytes": 4957,
+      "sha256": "b32088d925b42d6f062085e4dcb3d55a98c7f352daf8e34270d7991cb9c8c9dd"
+    },
+    {
+      "path": "nr_push2_pilot_evaluations/preparation/stage2_preparation.json",
+      "bytes": 8734,
+      "sha256": "1a074823923156cf9f9d8fb4608c85d6f982e3c9ed9ee2953b455c2a7e4c8481"
+    },
+    {
+      "path": "repos/HYPIR_cuda/HYPIR/enhancer/base.py",
+      "bytes": 5937,
+      "sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161"
+    },
+    {
+      "path": "repos/HYPIR_cuda/HYPIR/enhancer/sd2.py",
+      "bytes": 2725,
+      "sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd"
+    },
+    {
+      "path": "repos/HYPIR_cuda/HYPIR/utils/common.py",
+      "bytes": 9323,
+      "sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+    },
+    {
+      "path": "scoring_tool/csig_metrics.py",
+      "bytes": 4997,
+      "sha256": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2"
+    },
+    {
+      "path": "submissions/hypir_cuda_nr_stage2_cont_s6350_compiled/model_dir/config.json",
+      "bytes": 573,
+      "sha256": "82e75a646fc4ab2a9b987f408aba89248acaf27ad0edea4469727b949754b3d9"
+    },
+    {
+      "path": "submissions/hypir_cuda_nr_stage2_cont_s6350_compiled/model_dir/runner.py",
+      "bytes": 9130,
+      "sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae"
+    },
+    {
+      "path": "submissions/hypir_cuda_nr_stage2_cont_s6500_compiled/model_dir/config.json",
+      "bytes": 573,
+      "sha256": "99e97e246b1c1f4b58335855f051d83ce68a1e4b43ae5b288f843c9c189c7842"
+    },
+    {
+      "path": "submissions/hypir_cuda_nr_stage2_cont_s6500_compiled/model_dir/runner.py",
+      "bytes": 9130,
+      "sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae"
+    },
+    {
+      "path": "submissions/hypir_cuda_nr_stage2_roundste_s6500_compiled/model_dir/config.json",
+      "bytes": 581,
+      "sha256": "17a373a5907ba7aca946f969c37dc6a7100ecf8c9e09483de4612fb3b54a4261"
+    },
+    {
+      "path": "submissions/hypir_cuda_nr_stage2_roundste_s6500_compiled/model_dir/runner.py",
+      "bytes": 9130,
+      "sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae"
+    }
+  ],
+  "excluded": [
+    "adaptation/runs/cuda_nr_stage2_s6250_cont250/step6450.pth",
+    "adaptation/runs/cuda_nr_stage2_s6250_cont250/step6400.pth",
+    "adaptation/runs/cuda_nr_stage2_s6250_cont250/training.lock",
+    "adaptation/runs/cuda_nr_stage2_s6250_cont250/step6350.pth",
+    "adaptation/runs/cuda_nr_stage2_s6250_cont250/step6300.pth",
+    "adaptation/runs/cuda_nr_stage2_s6250_roundste250/step6450.pth",
+    "adaptation/runs/cuda_nr_stage2_s6250_roundste250/step6400.pth",
+    "adaptation/runs/cuda_nr_stage2_s6250_roundste250/training.lock",
+    "adaptation/runs/cuda_nr_stage2_s6250_roundste250/step6350.pth",
+    "adaptation/runs/cuda_nr_stage2_s6250_roundste250/step6300.pth",
+    "SD2 base weights",
+    "env",
+    "parent checkpoints already in nr_microtune_20261014",
+    "intermediate checkpoints other than step6500.pth",
+    "training locks",
+    "live rendering/scoring logs/results pending separate finalize"
+  ],
+  "scope": "checkpoint-only; final best/full/pilot quality evidence will be appended separately"
+}

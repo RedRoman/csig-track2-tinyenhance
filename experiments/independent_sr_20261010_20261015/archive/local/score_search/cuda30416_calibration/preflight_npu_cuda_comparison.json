@@ -1,0 +1,57 @@
+{
+  "scope": "Same NPU PNG bytes measured with original CUDA metrics; preflight only",
+  "validation_mean": {
+    "lpips": {
+      "npu_proxy": 0.3483479817708333,
+      "cuda_original": 0.3483479817708333,
+      "cuda_minus_npu": 0.0
+    },
+    "dists": {
+      "npu_proxy": 0.20159008105595908,
+      "cuda_original": 0.20159653822580972,
+      "cuda_minus_npu": 6.457169850648814e-06
+    },
+    "niqe": {
+      "npu_proxy": 3.641164461771647,
+      "cuda_original": 3.654787972997974,
+      "cuda_minus_npu": 0.01362351122632699
+    },
+    "musiq": {
+      "npu_proxy": 47.79887771606445,
+      "cuda_original": 47.8185666402181,
+      "cuda_minus_npu": 0.019688924153648202
+    },
+    "maniqa": {
+      "npu_proxy": 0.4635605414708455,
+      "cuda_original": 0.46294641494750977,
+      "cuda_minus_npu": -0.0006141265233357562
+    },
+    "clipiqa": {
+      "npu_proxy": 0.6754907170931498,
+      "cuda_original": 0.675468921661377,
+      "cuda_minus_npu": -2.179543177283083e-05
+    }
+  },
+  "test1": {
+    "niqe": {
+      "npu_proxy": 4.6951470375061035,
+      "cuda_original": 4.698722506809233,
+      "cuda_minus_npu": 0.0035754693031293527
+    },
+    "musiq": {
+      "npu_proxy": 43.814170837402344,
+      "cuda_original": 43.85131072998047,
+      "cuda_minus_npu": 0.037139892578125
+    },
+    "maniqa": {
+      "npu_proxy": 0.43045249581336975,
+      "cuda_original": 0.4297463595867157,
+      "cuda_minus_npu": -0.0007061362266540527
+    },
+    "clipiqa": {
+      "npu_proxy": 0.6432173848152161,
+      "cuda_original": 0.643110454082489,
+      "cuda_minus_npu": -0.00010693073272705078
+    }
+  }
+}

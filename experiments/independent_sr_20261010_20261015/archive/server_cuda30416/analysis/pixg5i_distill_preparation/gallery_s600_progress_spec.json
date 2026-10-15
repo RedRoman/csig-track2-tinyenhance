@@ -1,0 +1,81 @@
+{
+  "schema": "medium300_mild600_medium600_fixed_teacher_actual_v1",
+  "columns": [
+    {
+      "role": "distilled_pix_reference",
+      "title": "PixG5i Medium 300",
+      "label": "pixg5i_hypir_medium_s300_all",
+      "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_medium_s300_all",
+      "checkpoint_sha256": "005d13cb5b003d54e576678c52908181016cb9fa1746a9455465f5f2f619c458",
+      "runner_sha256": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a",
+      "render_protocol_sha256": "0c9c9a716ba219227443c9c9a191c4d00593fb56fe19891cb81047e9119f9ac3",
+      "render_manifest_sha256": "41e840bdda702b0fbf8d83f0a76a68d8d61bbb0103cdcd3533d9c1d00fadb9c5",
+      "binding_files": [
+        {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/candidate_manifest.json",
+          "sha256": "654f287813048468d994e9729de8d14cf68f126830a9d7967f49669e86de351b"
+        },
+        {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/model_dir/pixg5i_binding.json",
+          "sha256": "82b413c9a709f12b151db1b9212545a96bf443909b81ddf672ff1ad7b84abc48"
+        }
+      ]
+    },
+    {
+      "role": "distilled_pix_candidate",
+      "title": "PixG5i Mild 600",
+      "label": "pixg5i_hypir_mild_s600_all",
+      "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_mild_s600_all",
+      "checkpoint_sha256": "51dfbd335e4076009409ae7efc727db99f98bb6dc1cc76d1161dba9b75e3ffc5",
+      "runner_sha256": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a",
+      "render_protocol_sha256": "29f3204b8edb9633f85bec7682c88952f0f8b7997e229116eebf3972b7a42696",
+      "render_manifest_sha256": "45ffe5bc9fc6b9fbef3064deacdea0c6e8854524b0cfa4753de112a21a115802",
+      "binding_files": [
+        {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_mild_s600/candidate_manifest.json",
+          "sha256": "f34003092be152c6f7723ed2a3232fcaa9a8ea4b8b279cfbfb74136cc762320d"
+        },
+        {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_mild_s600/model_dir/pixg5i_binding.json",
+          "sha256": "44771e3d52568375578463e36883524a9000a4c4f65623efbbc23eb463c36062"
+        }
+      ]
+    },
+    {
+      "role": "distilled_pix_candidate",
+      "title": "PixG5i Medium 600",
+      "label": "pixg5i_hypir_medium_s600_all",
+      "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_medium_s600_all",
+      "checkpoint_sha256": "45c7f6bb414567f31b906fc996c037f31df7ce6aebb615c19183e02886950fab",
+      "runner_sha256": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a",
+      "render_protocol_sha256": "f1efe9d1150964b7862e5a55f7c43973184fce2c866f3fc9060daea6493d829a",
+      "render_manifest_sha256": "94b17b6d043d61684d7a2f3453a0d9d11e5455005ead455534893c233e0c839e",
+      "binding_files": [
+        {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s600/candidate_manifest.json",
+          "sha256": "1c5a7813c254ace9415486dd95fec8bf4412860f8ed7286e6989f1ab83b11b35"
+        },
+        {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s600/model_dir/pixg5i_binding.json",
+          "sha256": "2da3cd40bd913b0ca6ad3501d94761e6c15e03d0f7367c970b6066f7ad36f95c"
+        }
+      ]
+    },
+    {
+      "role": "fixed_HYPIR_teacher",
+      "title": "Fixed HYPIR teacher",
+      "label": "push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+      "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+      "checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+      "runner_sha256": "c98c406884cf07bc5541e315393b98e11351165b35c94d33f926d5443f9563c3",
+      "render_protocol_sha256": "e83eb1eb0c0e04b6f2bd9ce7ac6c07d2662bc7173796792b0774b650d8802f11",
+      "render_manifest_sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+      "binding_files": [
+        {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae/candidate_manifest.json",
+          "sha256": "d7e03918355aa9cb459c1d37f8ffafcee89856bb8b23cdf0346b5e440b3046cb"
+        }
+      ]
+    }
+  ]
+}

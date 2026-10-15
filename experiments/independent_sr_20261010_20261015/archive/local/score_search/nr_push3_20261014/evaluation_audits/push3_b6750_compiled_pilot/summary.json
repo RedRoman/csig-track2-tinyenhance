@@ -1,0 +1,38 @@
+{
+  "label": "push3_b6750_compiled_pilot",
+  "status": "PASS",
+  "image_rows": 23,
+  "scalar_metrics": 98,
+  "NR": 2.283653405531959,
+  "FR": 1.4584209322929382,
+  "S_subset": 3.742074337824897,
+  "actual_checkpoint_sha256": "c5db668fad0cc133e65bc3c113eb724c8cac44bfbc1f413b9ea6ae496f89d105",
+  "reference_comparison": {
+    "reference_dir": "/cache/independent_sr_cuda_20261013/nr_push2_pilot_evaluations/nr_stage3_anchor6250_m15_s6500_compiled_pilot",
+    "scope": "fixed20 test + validation3 pilot; S_subset only; not full score",
+    "same_original_inputs_GT_and_order": true,
+    "same_formal_metrics_and_sources": true,
+    "same_render_input_output_and_rng_policy": true,
+    "same_post_render_rng": true,
+    "same_post_score_rng": true,
+    "runner_differences": {
+      "label": {
+        "reference": "cuda_nr_stage3_anchor6250_m15_s6500_compiled",
+        "candidate": "push3_b6750_compiled"
+      },
+      "weight_path": {
+        "reference": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m15_250/step6500.pth",
+        "candidate": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_cont750/step6750.pth"
+      },
+      "checkpoint_sha256": {
+        "reference": "cfcc3013fa87aa721f346d6cc285e70b6d6ff2c88315ce9f1465b07ffe020e68",
+        "candidate": "c5db668fad0cc133e65bc3c113eb724c8cac44bfbc1f413b9ea6ae496f89d105"
+      }
+    },
+    "reference_checkpoint_sha256": "cfcc3013fa87aa721f346d6cc285e70b6d6ff2c88315ce9f1465b07ffe020e68",
+    "candidate_checkpoint_sha256": "c5db668fad0cc133e65bc3c113eb724c8cac44bfbc1f413b9ea6ae496f89d105",
+    "delta_NR": 0.0073378129872518905,
+    "delta_FR": -0.0030197501182556152,
+    "delta_S_subset": 0.004318062868996275
+  }
+}

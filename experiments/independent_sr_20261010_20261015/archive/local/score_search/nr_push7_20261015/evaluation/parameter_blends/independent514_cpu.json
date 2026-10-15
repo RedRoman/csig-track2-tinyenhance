@@ -1,0 +1,73 @@
+{
+  "status": "PASS_EXACT_FP32_LERP514_BOTH",
+  "schema": "push7_hypir_parameter_interpolation_cpu_v1",
+  "CPU_only": true,
+  "CUDA_initialized": false,
+  "derivation_manifest": {
+    "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_niqe768_parameter_blends/derivation_manifest.json",
+    "sha256": "889ab888c976d5bd4cbef659c2660b98f104f3921ef89fa39211439b16bc0be2"
+  },
+  "producer": {
+    "path": "/cache/independent_sr_cuda_20261013/code/push7/parameter_blend_teacher.py",
+    "sha256": "2bb83af6f7cd988b7cbf210aa241f7be48f93337c126ca0813ec4a02e802a2d3"
+  },
+  "auditor": {
+    "path": "/cache/independent_sr_cuda_20261013/code/push7/audit_parameter_blends_cpu.py",
+    "sha256": "1286bac0cf9e70a90a63c10b5a727a24cacec71976c416f6148c1fa3c683e20b"
+  },
+  "initial_checkpoint": {
+    "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+    "sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d"
+  },
+  "finetuned_checkpoint": {
+    "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_niqe768_100/step7850.pth",
+    "sha256": "763950727fe29a009245cd9cd855743a99803fa9fbf6824a62d38994fa8e0650"
+  },
+  "candidates": [
+    {
+      "label": "push7_a7750_niqe100_alpha025",
+      "alpha": 0.25,
+      "checkpoint": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_niqe768_parameter_blends/alpha025.pth",
+        "sha256": "daa6e782eb219222f7becc6c5d2a26038fa2a7897c90db7736c8ba38c885d993"
+      },
+      "native_candidate_manifest": {
+        "path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_niqe100_alpha025/candidate_manifest.json",
+        "sha256": "f25953aed043202685659aed99c6d240ee7ad8e338e67f8dc17e534855703777"
+      },
+      "exact_FP32_lerp_tensors": 514,
+      "changed_tensors_from_A": 514,
+      "finite_FP32": true,
+      "new_training": false,
+      "derived_optimizer_or_resume": false,
+      "upstream_training_marker": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_niqe768_100/checkpoint_step7850.json",
+        "sha256": "09b8ce4b7ad5a37f66372bd060e5592b266621df2dec30118fa68b94b14ae578"
+      }
+    },
+    {
+      "label": "push7_a7750_niqe100_alpha050",
+      "alpha": 0.5,
+      "checkpoint": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_niqe768_parameter_blends/alpha050.pth",
+        "sha256": "3438c5913333729ade0560dde38fa25813932754ddabefffde7529c511cd2f58"
+      },
+      "native_candidate_manifest": {
+        "path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_niqe100_alpha050/candidate_manifest.json",
+        "sha256": "7554add2947c16b09b674df42c75125b5359fd8a20843a365418ffec8a151923"
+      },
+      "exact_FP32_lerp_tensors": 514,
+      "changed_tensors_from_A": 514,
+      "finite_FP32": true,
+      "new_training": false,
+      "derived_optimizer_or_resume": false,
+      "upstream_training_marker": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_niqe768_100/checkpoint_step7850.json",
+        "sha256": "09b8ce4b7ad5a37f66372bd060e5592b266621df2dec30118fa68b94b14ae578"
+      }
+    }
+  ],
+  "formula": "Actual CPU torch.lerp(A_FP32,N100_FP32,alpha), not algebraically substituted",
+  "quality_or_speed_claim": false,
+  "no_fake_derived_optimizer_or_RNG": true
+}

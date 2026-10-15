@@ -1,0 +1,138 @@
+{
+  "status": "PASS_ACTUAL_FULL4_DIAGNOSTIC4_BYTES_AND_ROI_PIXELS_EXACT",
+  "CPU_only": true,
+  "GPU_used": false,
+  "scope": "Four fixed visual cases only; not full103 image/quality audit",
+  "checkpoint_sha256": "503074449893247332df973a85f9be1f348d9f130f31a28455b62790fb50c929",
+  "full_manifest": {
+    "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_coverage_v4_s200_all/render_manifest.json",
+    "sha256": "8beeb0d6f8dcac51a3e4cfad405b6d124ae1a7a6c1e12b2ba5ed457f58cf257b",
+    "records": 103,
+    "scope": "test100+validation3"
+  },
+  "records": [
+    {
+      "case": 7,
+      "ROI": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "full_PNG": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_coverage_v4_s200_all/render/test/case7.png",
+        "sha256": "c8376c871e6d2e43c585afd372b350b7b768d32aaba1fe482544d7a444c33acb",
+        "bytes": 14250581
+      },
+      "diagnostic_PNG": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/coverage_v4_s200_diagnostic/render/test/case7.png",
+        "sha256": "c8376c871e6d2e43c585afd372b350b7b768d32aaba1fe482544d7a444c33acb",
+        "bytes": 14250581
+      },
+      "native_size": [
+        4096,
+        3072
+      ],
+      "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+      "whole_PNG_bytes_equal": true,
+      "actual_ROI_RGB_pixels_equal": true,
+      "ROI_RGB_pixels_sha256": "2b8e22ca48b17be6681bc2d30973b0df23098241e0d52e738ee0867d99f9539f"
+    },
+    {
+      "case": 16,
+      "ROI": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "full_PNG": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_coverage_v4_s200_all/render/test/case16.png",
+        "sha256": "be4f2baa9edd29b375f38823c769d2b98e6ee6df5d2e86e4d0fbab3491e0cd8c",
+        "bytes": 9949476
+      },
+      "diagnostic_PNG": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/coverage_v4_s200_diagnostic/render/test/case16.png",
+        "sha256": "be4f2baa9edd29b375f38823c769d2b98e6ee6df5d2e86e4d0fbab3491e0cd8c",
+        "bytes": 9949476
+      },
+      "native_size": [
+        4096,
+        3072
+      ],
+      "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+      "whole_PNG_bytes_equal": true,
+      "actual_ROI_RGB_pixels_equal": true,
+      "ROI_RGB_pixels_sha256": "0eb310c83ab76650e51f422097f82da2445c7fc250438a6db730182f719289e6"
+    },
+    {
+      "case": 41,
+      "ROI": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "full_PNG": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_coverage_v4_s200_all/render/test/case41.png",
+        "sha256": "5d6addffbc983f7f8341d4e2baedb3c45431ade705b2fc772e19e3d14cf4412c",
+        "bytes": 14690711
+      },
+      "diagnostic_PNG": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/coverage_v4_s200_diagnostic/render/test/case41.png",
+        "sha256": "5d6addffbc983f7f8341d4e2baedb3c45431ade705b2fc772e19e3d14cf4412c",
+        "bytes": 14690711
+      },
+      "native_size": [
+        3072,
+        4096
+      ],
+      "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+      "whole_PNG_bytes_equal": true,
+      "actual_ROI_RGB_pixels_equal": true,
+      "ROI_RGB_pixels_sha256": "aa8cc7161b58c44a1854f3e38513da1d86a69e7e800bd3460d9ef50270ad4cb4"
+    },
+    {
+      "case": 83,
+      "ROI": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "full_PNG": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_coverage_v4_s200_all/render/test/case83.png",
+        "sha256": "d97a4745f2939633d6c3fd75ce9ed2bd43d087917c3144638a63510f18fd9f46",
+        "bytes": 16721780
+      },
+      "diagnostic_PNG": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/coverage_v4_s200_diagnostic/render/test/case83.png",
+        "sha256": "d97a4745f2939633d6c3fd75ce9ed2bd43d087917c3144638a63510f18fd9f46",
+        "bytes": 16721780
+      },
+      "native_size": [
+        3072,
+        4096
+      ],
+      "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+      "whole_PNG_bytes_equal": true,
+      "actual_ROI_RGB_pixels_equal": true,
+      "ROI_RGB_pixels_sha256": "8c330117fe975de2c03b3509269d3b19db246d4603ab3ff82bdfa1917b3a20c9"
+    }
+  ],
+  "no_model_selection_or_quality_score_claim": true,
+  "verifier": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/coverage_v4_s200_vs_medium300_teacher_full/verify_full_diag_equivalence.py",
+    "sha256": "10973cfb0f5020a4317673d62490c4cf2e314715f434a9374a477e9a501d3c3f"
+  },
+  "diagnostic_crop_proof": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/coverage_v4_s200_diagnostic_crop_sources/proof.json",
+    "sha256": "cce1b753efa46a87cdef51b5f1016546e206e6074c8249c937f8b287fe580f75"
+  },
+  "frozen_gallery_proof": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/coverage_v4_s200_vs_medium300_teacher_diagnostic/proof.json",
+    "sha256": "c82e29d391651eef495f7a56f8f9f4eacabb220bae4292689ad2ae7ef69654ee"
+  },
+  "frozen_gallery_unchanged": true,
+  "local_cached_ROI_pixels_equal_actual_full": true
+}

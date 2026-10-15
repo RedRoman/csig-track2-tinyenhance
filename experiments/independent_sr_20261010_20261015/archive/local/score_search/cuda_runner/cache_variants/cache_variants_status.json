@@ -1,0 +1,29 @@
+{
+  "stage": "complete",
+  "physical_gpu": 0,
+  "time": 1791899981.041149,
+  "cache_equivalence": "GPUfloat/uint8floor/round/RNG passed",
+  "fused_quality": "independent version; unverified",
+  "latency": {
+    "cached": {
+      "event_med": 105.6255989074707,
+      "event_p10": 105.32751159667968,
+      "event_min": 105.18118286132812,
+      "wall_med": 105.65560811664909,
+      "wall_min": 105.21035687997937,
+      "wall_p10": 105.35847230348736,
+      "n": 200,
+      "warm": 30
+    },
+    "cached_fused": {
+      "event_med": 85.32428741455078,
+      "event_p10": 85.1415023803711,
+      "event_min": 84.9991683959961,
+      "wall_med": 85.35843703430146,
+      "wall_min": 85.02814406529069,
+      "wall_p10": 85.17174888402224,
+      "n": 200,
+      "warm": 30
+    }
+  }
+}

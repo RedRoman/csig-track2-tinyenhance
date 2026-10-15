@@ -1,0 +1,20 @@
+{
+  "pid": 17487,
+  "args": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "-u",
+    "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_lastconv_nr_lr1e6_v2.py",
+    "--config",
+    "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/config_hypir_lastconv_lr1e6_nr100_v2.json",
+    "--stop-at",
+    "100"
+  ],
+  "log": "/cache/independent_sr_cuda_20261013/logs/lastconv_lr1e6_train100_20261015.log",
+  "physical_GPU": 2,
+  "launch_utc": "2026-10-15T07:25:33.287552+00:00",
+  "source_sha256": "8e8d5e1fcac90504d029c6df436172d9380d46ddc5b888dda01fd6b6528a25f7",
+  "config_sha256": "65ca9462b4b3669c23d1f8333949066ae12864a540291a5e3eb8df9456144b7d",
+  "actual_original_baseline_ROI_review_pass": true,
+  "teacher_only": true,
+  "distillation": false
+}

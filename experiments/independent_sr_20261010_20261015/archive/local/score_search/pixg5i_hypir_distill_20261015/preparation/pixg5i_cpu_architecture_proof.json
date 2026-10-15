@@ -1,0 +1,91 @@
+{
+  "status": "PASS_CPU_SAFE_LOAD_ARCHITECTURE_FP32_AND_TINY_SHAPES",
+  "CPU_only": true,
+  "CUDA_initialized": false,
+  "created_utc": "2026-10-15T08:55:07.389636+00:00",
+  "checkpoint": "/cache/independent_sr_cuda_20261013/source_payload/pixg5i_original/model_dir/model.pth",
+  "checkpoint_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+  "source_sha256": {
+    "model.pth": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+    "pix_model.py": "2f1cd3cd8311381e432138f489b01b982e08ebd5b09ecbc05ac87f7bfb577923",
+    "runner.py": "6222ead92dc6fb24b88c0350e41191fc27a5adc2f6ba38bd383a4badb9bd8c1e",
+    "config.yaml": "e13bab32185ac95f07ac36133eff89133a33ed90cc5ca534b7d8496bc457250d"
+  },
+  "checkpoint_top_level_types": {
+    "cfg": "dict",
+    "state": "dict",
+    "step": "int",
+    "args": "dict"
+  },
+  "original_step": 30000,
+  "original_cfg": {
+    "chs": [
+      32,
+      64,
+      128
+    ],
+    "nbs": [
+      1,
+      2,
+      5
+    ],
+    "norm": "none",
+    "tdim": 128,
+    "ps": 2,
+    "t_fixed": 999.0,
+    "arch_ver": 2,
+    "nbs_dec": [
+      1,
+      2
+    ]
+  },
+  "named_parameter_tensors": 112,
+  "parameter_elements": 3786764,
+  "state_tensors": 112,
+  "state_FP32_finite": true,
+  "state_exact_original": true,
+  "state_fingerprint_sha256": "537960d2c9d5b6e1a728d8ed6017956a2901d375be72a23ce7fbb99f9756a36e",
+  "state_fingerprint_recipe": "ordered compactJSON(name,shape,dtype),NUL,contiguous raw CPU bytes",
+  "tiny_shapes": [
+    {
+      "shape": [
+        1,
+        3,
+        64,
+        64
+      ],
+      "FP32_unfolded_folded_max_abs": 1.4603137969970703e-06,
+      "FP32_unfolded_folded_mean_abs": 1.7532768481487437e-07,
+      "input_unchanged": true
+    },
+    {
+      "shape": [
+        1,
+        3,
+        65,
+        67
+      ],
+      "FP32_unfolded_folded_max_abs": 1.1324882507324219e-06,
+      "FP32_unfolded_folded_mean_abs": 1.8597567930100922e-07,
+      "input_unchanged": true
+    },
+    {
+      "shape": [
+        1,
+        3,
+        96,
+        80
+      ],
+      "FP32_unfolded_folded_max_abs": 1.1920928955078125e-06,
+      "FP32_unfolded_folded_mean_abs": 1.6663224755575357e-07,
+      "input_unchanged": true
+    }
+  ],
+  "tiny_FP32_backward_gradients": {
+    "present": 112,
+    "finite": 112,
+    "nonzero": 112
+  },
+  "model_domain": "unfolded core([-1,1]) unclamped residual; FoldedPix([-1,1])->clamp[-1,1]",
+  "runner": "FP32 load+fold, thenFP16 channels_last; 512compile/graph; nativefull eager; OOM1024tile128overlapGaussian"
+}

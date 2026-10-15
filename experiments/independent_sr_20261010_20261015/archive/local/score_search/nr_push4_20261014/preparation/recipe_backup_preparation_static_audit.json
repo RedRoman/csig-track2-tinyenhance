@@ -1,0 +1,41 @@
+{
+  "schema": "nr_push4_recipe_backup_preparation_static_audit_v1",
+  "source_sha256": "afc2f54bffddd1e9d03cf263881f1ba4beb6022c745fc6639b7f902e0dee6cf4",
+  "AST_parsed": true,
+  "pure_stdlib_import": true,
+  "unknown_pickle_globals_rejected": true,
+  "unsafe_destinations_rejected": true,
+  "previous_3_backup_heads_readonly_pinned": true,
+  "scope": "selected_exact_resume_plus_exact_raw_recipe_and_optional_previews",
+  "raw_archive_persisted": false,
+  "full103_native_PNGs_persisted": false,
+  "default_preview_cases": [
+    7,
+    16,
+    41,
+    83
+  ],
+  "default_self_chosen_reserve_bytes": 268435456,
+  "reserve_is_user_requirement": false,
+  "large_copies_started": false,
+  "GPU_started": false,
+  "SFS_writes": false,
+  "readonly_parent7250_recipe_component_smoke": {
+    "status": "PASS",
+    "scope": "Existing parent7250 recipe validates helper only; not a new selected Stage5 recipe proof",
+    "raw_bytes": 1038079419,
+    "all_raw_ZIP_bytes_reconstructed_SHA256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+    "tensor_entries": 514,
+    "recipe_SHA256": "8fa453227b9f6a6474d77d168b0a2ff46024e046fd3c864cb5f128cd1ae6d612",
+    "gaps_SHA256": "32c8d6f57305298a75db1d77c3f27465ffa68b9edeeb8aba6cd29d495ea5f91d",
+    "prior3_heads_reverified": true,
+    "SFS_free_bytes": 3898605568,
+    "estimated_free_after_parent_example_resume_only": 784273459,
+    "self_chosen_reserve_bytes": 268435456,
+    "remaining_for_previews_metadata_after_reserve": 515838003,
+    "torch_imported": false,
+    "numpy_imported": false,
+    "GPU_started": false,
+    "SFS_writes": false
+  }
+}

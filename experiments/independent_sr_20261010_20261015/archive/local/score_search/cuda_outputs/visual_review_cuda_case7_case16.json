@@ -1,0 +1,154 @@
+{
+  "status": "reviewed_original_overviews_and_all4_exact_ROIs",
+  "cases": [
+    7,
+    16
+  ],
+  "candidate_original_PNG_count": 6,
+  "protocol": "Actual CUDA native FP16 input / rounded lossless PNG; compare only matched CUDA full-sequence outputs. No GT for the test cases. Input panels are original LQ, not GT.",
+  "sources": [
+    {
+      "label": "input",
+      "source": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/visual_checks/input/case7.jpg",
+      "source_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+      "pixel_box": [
+        2048,
+        369,
+        3277,
+        1075
+      ],
+      "size_wh": [
+        4096,
+        3072
+      ]
+    },
+    {
+      "label": "s8000_mt200_ct200_cuda_all",
+      "source": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_outputs/s8000_mt200_ct200_cuda_all/render/test/case7.png",
+      "source_sha256": "7fb0a491dee7245337f1377b4907a7c27c1e738e55a01faf8f73f63fa644cb22",
+      "pixel_box": [
+        2048,
+        369,
+        3277,
+        1075
+      ],
+      "size_wh": [
+        4096,
+        3072
+      ]
+    },
+    {
+      "label": "s6000_mt200_ct175_cuda_all",
+      "source": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_outputs/s6000_mt200_ct175_cuda_all/render/test/case7.png",
+      "source_sha256": "eb36cab346b552836cb9d44f1836c9a0260126810d947ea58c937c2387034505",
+      "pixel_box": [
+        2048,
+        369,
+        3277,
+        1075
+      ],
+      "size_wh": [
+        4096,
+        3072
+      ]
+    },
+    {
+      "label": "s6000_mt200_ct175_compiled_cuda_all",
+      "source": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_outputs/s6000_mt200_ct175_compiled_cuda_all/render/test/case7.png",
+      "source_sha256": "2bbefc4e5a0cf1011504c505a007d9714879c6f57430e2131057ecefa370e4ff",
+      "pixel_box": [
+        2048,
+        369,
+        3277,
+        1075
+      ],
+      "size_wh": [
+        4096,
+        3072
+      ]
+    },
+    {
+      "label": "input",
+      "source": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/visual_checks/input/case16.jpg",
+      "source_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+      "pixel_box": [
+        2294,
+        768,
+        2949,
+        1536
+      ],
+      "size_wh": [
+        4096,
+        3072
+      ]
+    },
+    {
+      "label": "s8000_mt200_ct200_cuda_all",
+      "source": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_outputs/s8000_mt200_ct200_cuda_all/render/test/case16.png",
+      "source_sha256": "a94ea97a9a6871ee42b66b0aae0b1e634c418985bfe423473a4649c17fc179d2",
+      "pixel_box": [
+        2294,
+        768,
+        2949,
+        1536
+      ],
+      "size_wh": [
+        4096,
+        3072
+      ]
+    },
+    {
+      "label": "s6000_mt200_ct175_cuda_all",
+      "source": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_outputs/s6000_mt200_ct175_cuda_all/render/test/case16.png",
+      "source_sha256": "360d68c6f07efee34616b20b5c79656bedcace42e43570a5f15cbf8f8c70f080",
+      "pixel_box": [
+        2294,
+        768,
+        2949,
+        1536
+      ],
+      "size_wh": [
+        4096,
+        3072
+      ]
+    },
+    {
+      "label": "s6000_mt200_ct175_compiled_cuda_all",
+      "source": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_outputs/s6000_mt200_ct175_compiled_cuda_all/render/test/case16.png",
+      "source_sha256": "7da7935ffc5cb6a2e6863b5c3aaea864fc25cc8c7b370a7c677e2de7180cbe40",
+      "pixel_box": [
+        2294,
+        768,
+        2949,
+        1536
+      ],
+      "size_wh": [
+        4096,
+        3072
+      ]
+    }
+  ],
+  "ROI_manifest": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_outputs/inspection_rois/preview_manifest.json",
+  "preview_layout": "row1 input|s8000_ct200; row2 s6000_ct175_unfused|s6000_ct175_compiled",
+  "ROI_operations": "same normalized box converted by round(coord*width_or_height), integer crop and paste only; no resizing/filter/color correction; sources unchanged",
+  "reviewed_full_images": "All6 original PNGs viewed individually with view_image; UI automatically displayed overviews at1824x1368. Exact ROI panels viewed at original pixel resolution.",
+  "findings": [
+    {
+      "case": 7,
+      "areas": [
+        "text",
+        "glass"
+      ],
+      "observation": "The3 versions preserve the broad main Chinese glyph silhouettes, banner layout, window bars and diagonal supports.6k175 glass dots/dark fine outlines have somewhat weaker contrast than8k200. Compiled vs unfused6k175 shows small fine-texture and edge changes, but no clear newly missing main glyph or large structural collapse in these inspected regions. Regular dot/vertical-chain glazing texture persists."
+    },
+    {
+      "case": 16,
+      "areas": [
+        "wall",
+        "window grid"
+      ],
+      "observation": "All3 retain the main window/grid geometry and bright interior elements.6k175 weakens wall honeycomb/pit contrast somewhat relative to8k200; compiled remains close tounfused in broad structure while changing some fine texture/edge details. Honeycomb patterns remain conspicuous in both6k versions and are not visibly resolved."
+    }
+  ],
+  "limitations": "Two selected cases only; does not establish all103-image structure preservation or authenticity of generated texture. No claim that high NR proves GT recovery. Compiled output requires its own full score because it is not byte-identical."
+}

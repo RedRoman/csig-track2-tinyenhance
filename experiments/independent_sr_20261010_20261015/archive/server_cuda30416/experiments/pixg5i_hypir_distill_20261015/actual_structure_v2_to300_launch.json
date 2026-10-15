@@ -1,0 +1,19 @@
+{
+  "pid": 94132,
+  "args": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "-u",
+    "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_structure_v2.py",
+    "--config",
+    "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/config_structure_v2.json",
+    "--resume",
+    "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/resume_step1.pt",
+    "--stop-at",
+    "300"
+  ],
+  "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_structure_v2_to300_20261015.log",
+  "physical_GPU": 2,
+  "launch_utc": "2026-10-15T12:00:33.559572+00:00",
+  "new_phase_target": 300,
+  "total_distillation_target": 900
+}

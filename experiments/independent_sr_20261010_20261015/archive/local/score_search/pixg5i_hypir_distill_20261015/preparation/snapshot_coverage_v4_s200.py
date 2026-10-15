@@ -1,0 +1,73 @@
+"""New CACHE-only exact structure-v2 local200/global2000 snapshot; logs are frozen prefixes, not live files."""
+from pathlib import Path
+import hashlib,json,os,shutil,tarfile
+R=Path('/cache/independent_sr_cuda_20261013');E=R/'experiments/pixg5i_hypir_distill_20261015';C=Path('/cache/pixg5i_coverage_v4_s200_snapshot_20261015')
+import argparse
+_ap=argparse.ArgumentParser(description=__doc__);_ap.add_argument('--audit-sha256',required=True)
+AUDIT_SHA=_ap.parse_args().audit_sha256
+def need(x,m):
+    if not x:raise RuntimeError(m)
+def sha(p):
+    h=hashlib.sha256()
+    with Path(p).open('rb') as f:
+        for b in iter(lambda:f.read(8*1024**2),b''):h.update(b)
+    return h.hexdigest()
+def read(p):return json.loads(Path(p).read_text())
+def write(p,x):
+    p.parent.mkdir(parents=True,exist_ok=True)
+    with p.open('x') as f:json.dump(x,f,indent=2,allow_nan=False);f.write('\n')
+need(not C.exists(),'New immutable CACHE snapshot only');C.mkdir();records={};source_guards={}
+def add(source,expected=None,key=None):
+    source=Path(source);need(source.is_file() and source.stat().st_size<60*1024**2,'Bounded actual files only')
+    rel=key or str(source.relative_to(R));need(not Path(rel).is_absolute() and '..' not in Path(rel).parts,'Safe snapshot relative path')
+    digest=sha(source);need(expected is None or digest==expected,'Actual source SHA differs')
+    if rel in records:need(records[rel]['sha256']==digest,'Snapshot collision');return
+    s=source.stat();token=(s.st_size,s.st_mtime_ns,s.st_ino,s.st_dev);out=C/rel;out.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,out)
+    t=source.stat();need(token==(t.st_size,t.st_mtime_ns,t.st_ino,t.st_dev) and sha(out)==digest,'Copy/source changed')
+    records[rel]=dict(path=rel,bytes=out.stat().st_size,sha256=digest,source=str(source));source_guards[str(source)]=token
+audit_path=E/'audits/coverage_v4_training_steps200_cpu.json';need(sha(audit_path)==AUDIT_SHA,'Actual independent training audit')
+audit=read(audit_path);need(audit['status']=='PASS_PIXG5I_COVERAGE_FP32_TWO_ADAM_SCALER_RNG' and audit['steps']==[0,200] and len(audit['models'])==1 and audit['models'][0]['variant']=='coverage_v4','Training audit not PASS');add(audit_path,AUDIT_SHA)
+add('/cache/audit_pixg5i_coverage_training_cpu.py',audit['auditor_source_sha256'],'backup_proofs/audit_training_cpu.py')
+for model in audit['models']:
+    d=Path(model['run']);m=read(d/'checkpoint_step200.json');proof=model['milestones']['200']
+    need(m['raw_sha256']==proof['raw_sha256'] and m['resume_sha256']==proof['resume_sha256'] and m['local_step']==m['optimizer_step']==200,'Actual audited structure checkpoint200')
+    need(sha(d/'checkpoint_step200.json')==proof['marker_sha256'] and m['global_step']==2000 and m['parent_distillation_steps']==1800 and m['phase_initial_checkpoint_sha256']==audit['parent_global1800_checkpoint_sha256'],'Exact audit marker and phase/global/parent identity')
+    need(m['reset_head'] is False and sha(d/'training_plan.json')==m['training_plan_sha256']==proof['sampler_plan_sha256'] and m['sampler_next_index']==proof['sampler_next_index']==200,'Exact actual no-reset sampler state')
+    for key,hkey in [('raw_checkpoint','raw_sha256'),('resume_checkpoint','resume_sha256')]:add(m[key],m[hkey])
+    for n in ['checkpoint_step200.json','config.json','input_catalog.json','teacher_catalog.json','initial_deployment_relation.json','gradient_preflight_step1.json','training_plan.json']:
+        add(d/n)
+    for path,h in read(d/'config.json')['protocol']['source_sha256'].items():add(path,h)
+    lines=(d/'train.jsonl').read_text().splitlines();need(len(lines)>=200,'Actual200 log rows missing');prefix=('\n'.join(lines[:200])+'\n').encode()
+    need(hashlib.sha256(prefix).hexdigest()==model['log_prefix_sha256'],'Actual200 log prefix differs')
+    rel=str(d.relative_to(R)/'train_step200_snapshot.jsonl');out=C/rel;out.write_bytes(prefix)
+    records[rel]=dict(path=rel,bytes=len(prefix),sha256=hashlib.sha256(prefix).hexdigest(),source=str(d/'train.jsonl'),scope='first200 actual lines; future appended lines deliberately excluded')
+    cm=R/'submissions'/('pixg5i_hypir_'+model['variant']+'_s200')/'candidate_manifest.json'
+    if cm.is_file():
+        add(cm);registered=read(cm)
+        for name,row in registered['files'].items():
+            if name!='model.pth':add(row['path'],row['sha256'])
+write(C/'RECOVERY_SCOPE.json',dict(scope='One actual structure-v2 local200/global2000 raw weight+matching immutable fresh two-group body110/head2 FP32 Adam200/scaler/fourRNG resume, small sources/proofs and frozen200 logs',
+    initial_package_checkpoint_sha256=audit['initial_package_sha256'],initial_package_weights_copied=False,
+    phase_parent_raw_sha256=audit['parent_global1800_checkpoint_sha256'],phase_parent_weights_copied=False,phase_parent_recovery='Prior frozen local backup_headreset_v3_s600_verified/artifact/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/step600.pth',
+    local_step=200,optimizer_step=200,total_distillation_steps=2000,reset_head=False,spatial_scope="Stratified context origins; not full pixel coverage",
+    initial_package_location='Local original_package/model_dir/model.pth or remote source_payload/pixg5i_original/model_dir/model.pth',
+    teacher_raw_sha256=audit['teacher_raw_sha256'],teacher_PNGs_copied=False,
+    teacher_training_directory='/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test',
+    external_for_further_training='Fixed100 teacher PNGs and original100 JPEGs, two frozen LPIPS weights and native CUDA runtime remain external; no teacher needed to deploy student.',
+    deployment_weight_reconstruction='Copy each backed-up runs/pixg5i_hypir_VARIANT/step200.pth to corresponding submissions/pixg5i_hypir_VARIANT_s200/model_dir/model.pth; identical actual SHA.',
+    future_log_append_allowed=True,SFS_written=False,GPU_started=False,quality_conclusion=False))
+add(Path(__file__),key='backup_code/snapshot_coverage_v4_s200.py')
+for path,token in source_guards.items():
+    s=Path(path).stat();need((s.st_size,s.st_mtime_ns,s.st_ino,s.st_dev)==token,'Immutable source changed before commit')
+rows=[]
+for p in sorted(C.rglob('*')):
+    need(not p.is_symlink(),'No snapshot symlinks')
+    if p.is_file():rows.append(dict(path=str(p.relative_to(C)),bytes=p.stat().st_size,sha256=sha(p)))
+manifest=dict(status='complete',schema='pixg5i_actual_coverage_v4_s200_CACHE_MAC_snapshot_v1',files=rows,count=len(rows),bytes=sum(r['bytes'] for r in rows),
+    training_audit_sha256=AUDIT_SHA,all_actual_snapshot_file_SHA_verified=True,source_records=list(records.values()),
+    mutable_log_scope='first200 lines frozen independently; later append does not invalidate snapshot',SFS_written=False,GPU_started=False)
+write(C/'manifest.json',manifest);write(C/'DONE',dict(status='complete',manifest_sha256=sha(C/'manifest.json'),files=len(rows),bytes=manifest['bytes']))
+archive=Path('/cache/pixg5i_coverage_v4_s200_verified.tar');need(not archive.exists(),'New cache tar only')
+with tarfile.open(archive,'x') as tar:tar.add(C,arcname='.')
+receipt=dict(status='CACHE_SNAPSHOT_READY_LOCAL_TRANSFER_PENDING',directory=str(C),files=len(rows),bytes=manifest['bytes'],manifest_sha256=sha(C/'manifest.json'),DONE_sha256=sha(C/'DONE'),tar=str(archive),tar_sha256=sha(archive),SFS_written=False,GPU_started=False)
+write(Path('/cache/pixg5i_coverage_v4_s200_snapshot_receipt.json'),receipt);print(json.dumps(receipt),flush=True)

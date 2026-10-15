@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "audit_bjt": "2026-10-14T17:44:41.784825+08:00",
+  "scope": "running v3 initialization and first pre-update gradient evidence only; final250 parameter audit deferred until COMPLETE",
+  "CPU_only": true,
+  "Torch_imported": false,
+  "v3_running_source_SHA_confirmed_at_17_43_56": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c",
+  "initial_case_crop_fidelity_scores_match": true,
+  "results": [
+    {
+      "run": "cuda_nr_stage3_s6250_anchor6250_m1_250",
+      "status": "PASS",
+      "protocol_id": "b5b015d7fc765f55e2d74a5765f4f05ae4b0a6597f90cfee78b9d20fdc7ab459",
+      "musiq_weight": 1.0,
+      "teacher_frozen_exact_parent6250_FP32": true,
+      "student_FP32_restore_and_Adam250": true,
+      "first_case": 13,
+      "first_crop": [
+        967,
+        2015
+      ],
+      "first_fidelity": 1.1390932108960774e-14,
+      "first_NR_scores": {
+        "musiq": 0.5825080871582031,
+        "maniqa": 0.35730406641960144,
+        "clipiqa": 0.6361753344535828
+      },
+      "first_NR_input_gradient_norm": {
+        "musiq": 0.6105067133903503,
+        "maniqa": 0.16505424678325653,
+        "clipiqa": 6.012568950653076
+      },
+      "nonzero_LoRA_gradients": 514,
+      "small_file_SHA": {
+        "gradient_preflight.json": "627a4b9eb67abdcc8d0ef680679826a0fb823fcaccbd8bc61431685da22991b5",
+        "config.json": "94007c563d60a4191858dd29fc1cb66f25cca742a38dd0070e6a08cf36a4ec97",
+        "parent_migration.json": "9d1d2cdb2340b74c3c9a228ac2c5fbcefb9e7e0cb89190aa962b76208f0031cc"
+      }
+    },
+    {
+      "run": "cuda_nr_stage3_s6250_anchor6250_m15_250",
+      "status": "PASS",
+      "protocol_id": "995cae4104717ed2e578cb0867efae4171a36d97b281925534fd1f74f662bff1",
+      "musiq_weight": 1.5,
+      "teacher_frozen_exact_parent6250_FP32": true,
+      "student_FP32_restore_and_Adam250": true,
+      "first_case": 13,
+      "first_crop": [
+        967,
+        2015
+      ],
+      "first_fidelity": 1.1390932108960774e-14,
+      "first_NR_scores": {
+        "musiq": 0.5825080871582031,
+        "maniqa": 0.35730406641960144,
+        "clipiqa": 0.6361753344535828
+      },
+      "first_NR_input_gradient_norm": {
+        "musiq": 0.6105067729949951,
+        "maniqa": 0.16505271196365356,
+        "clipiqa": 6.012568950653076
+      },
+      "nonzero_LoRA_gradients": 514,
+      "small_file_SHA": {
+        "gradient_preflight.json": "57e1440d29e8952569c574ba8808e80b6c30515660e186c28fb2d6d6d7044635",
+        "config.json": "c6beaad0a6427a3eaaf3e829c04a25982c7ddbcb2df5c157f0aa37df686e0c5a",
+        "parent_migration.json": "5af3f5e63e03e0bf698a5a7ddb4dabc1de26d5a052479a359d2ab510045d7de6"
+      }
+    }
+  ]
+}

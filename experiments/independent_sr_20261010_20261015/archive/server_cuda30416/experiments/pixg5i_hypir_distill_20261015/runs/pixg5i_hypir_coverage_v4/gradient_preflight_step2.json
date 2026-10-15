@@ -1,0 +1,56 @@
+{
+  "status": "PASS_FINITE112_AND_REAL_UPDATE",
+  "row": {
+    "local_step": 2,
+    "optimizer_step": 2,
+    "case": 12,
+    "sampler_cycle": 0,
+    "sampler_stratum_xy": [
+      0,
+      0
+    ],
+    "sampler_plan_sha256": "5466f898c854b8337d16879a867b04b14b631959df18c6baca817c9eaafe0d28",
+    "context_crop_xy": [
+      608,
+      272
+    ],
+    "loss_crop_xy": [
+      864,
+      528
+    ],
+    "teacher_png_sha256": "03c4045d8a59730b3525d72935fde60008e061bb3dafa06b34e14f6ecf6b75f7",
+    "loss": 0.10740575194358826,
+    "L1_teacher_raw": 0.06008024513721466,
+    "LPIPS_teacher_clamped": 0.2758820354938507,
+    "gradient_teacher_raw": 0.03436775505542755,
+    "multiscale_L1_teacher_raw": 0.04541199654340744,
+    "multiscale_gradient_teacher_raw": 0.043099209666252136,
+    "global_distillation_step": 1802,
+    "finite_parameter_gradients": 112,
+    "nonzero_parameter_gradients": 112,
+    "gradient_norm_before_clip": 0.13228197395801544,
+    "actual_updated_tensors": 112,
+    "actual_body_updated_tensors": 110,
+    "actual_head_updated_tensors": 2,
+    "head_lr": 2.3673469387755103e-05,
+    "update_RMS": 8.225177225540392e-06,
+    "lr": 1.1836734693877552e-05,
+    "grad_scaler_scale": 1024.0,
+    "raw_outside01_fraction": 0.008083343505859375,
+    "step_seconds": 1.2679059505462646,
+    "elapsed_seconds": 1.267967939376831
+  },
+  "true_RGB_gradient_norm": 0.0018814104842022061,
+  "FP32_master_all": true,
+  "frozen_LPIPS": true,
+  "teacher_detached": true,
+  "weighted_RGB_gradient_norms": {
+    "L1": 0.0011276372242718935,
+    "LPIPS": 0.00027800147654488683,
+    "gradient": 0.0003410120843909681,
+    "MS_L1": 0.0004958356730639935,
+    "MS_gradient": 0.00030926550971344113
+  },
+  "phase_initial_checkpoint_sha256": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa",
+  "NR_reward": 0.0
+}

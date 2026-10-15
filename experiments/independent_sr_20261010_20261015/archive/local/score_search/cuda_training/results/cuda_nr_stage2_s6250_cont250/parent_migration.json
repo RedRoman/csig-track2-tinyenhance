@@ -1,0 +1,36 @@
+{
+  "protocol_id": "e1b74d29699782b6de9d1e52df10d16ba900cd4cb1de0aa600e39e3c0c70d791",
+  "parent_lineage": {
+    "parent_resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+    "parent_resume_sha256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+    "parent_config": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/config.json",
+    "parent_config_sha256": "2a459e95e248d1b502b651753b9598ce7adfb92c24e48863458265458ea1ca5a",
+    "parent_protocol_id": "fa5ea19179561aac206b26f7dd3596406f1ad376dccd38f49821146623b98d52",
+    "parent_local_step": 250,
+    "parent_global_step": 6250,
+    "parent_optimizer_step": 250,
+    "frozen_v1_source": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+    "frozen_v1_source_sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+    "restore_order": "raw6000 BF16 init -> LoRA.float -> exact parent FP32 copy -> parent AdamW -> all4 parent RNG",
+    "objective_relation": "same objective exact state continuation"
+  },
+  "restored_from": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+  "restored_stage_local_step": 0,
+  "restored_global_step": 6250,
+  "restored_optimizer_step": 250,
+  "FP32_LoRA_exact_equal_before_update": true,
+  "FP32_LoRA_tensors": 514,
+  "source_sha256": {
+    "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+    "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd",
+    "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161",
+    "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923",
+    "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f",
+    "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf",
+    "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2",
+    "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651",
+    "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812"
+  },
+  "snapshot_phase": "before_new_stage_updates",
+  "optimizer_updates_in_new_stage": 0
+}

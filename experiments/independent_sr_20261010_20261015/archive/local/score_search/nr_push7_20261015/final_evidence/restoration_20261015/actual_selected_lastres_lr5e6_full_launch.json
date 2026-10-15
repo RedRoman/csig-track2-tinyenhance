@@ -1,0 +1,44 @@
+[
+  {
+    "name": "selected_lastres_lr5e6_full_render",
+    "pid": 43949,
+    "args": [
+      "/cache/independent_sr_cuda_20261013/env/bin/python",
+      "-u",
+      "/cache/independent_sr_cuda_20261013/code/render_cuda_submission.py",
+      "--model-dir",
+      "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae/model_dir",
+      "--test-dir",
+      "/cache/independent_sr_cuda_20261013/source_payload/assets/input",
+      "--val-dir",
+      "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/\u9a8c\u8bc1\u96c6",
+      "--out-dir",
+      "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+      "--cases",
+      "all"
+    ],
+    "log": "/cache/independent_sr_cuda_20261013/logs/selected_lastres_lr5e6_full_render_20261015.log",
+    "physical_GPU": 0,
+    "launch_utc": "2026-10-15T08:23:17.396937+00:00",
+    "candidate_manifest_sha256": "d7e03918355aa9cb459c1d37f8ffafcee89856bb8b23cdf0346b5e440b3046cb"
+  },
+  {
+    "name": "selected_lastres_lr5e6_full_score",
+    "pid": 43950,
+    "args": [
+      "/cache/independent_sr_cuda_20261013/env/bin/python",
+      "-u",
+      "/cache/independent_sr_cuda_20261013/code/score_cuda_stream.py",
+      "--tool-dir",
+      "/cache/independent_sr_cuda_20261013/scoring_tool",
+      "--evaluation",
+      "push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all=/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render",
+      "--out-root",
+      "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations"
+    ],
+    "log": "/cache/independent_sr_cuda_20261013/logs/selected_lastres_lr5e6_full_score_20261015.log",
+    "physical_GPU": 1,
+    "launch_utc": "2026-10-15T08:23:17.397684+00:00",
+    "candidate_manifest_sha256": "d7e03918355aa9cb459c1d37f8ffafcee89856bb8b23cdf0346b5e440b3046cb"
+  }
+]

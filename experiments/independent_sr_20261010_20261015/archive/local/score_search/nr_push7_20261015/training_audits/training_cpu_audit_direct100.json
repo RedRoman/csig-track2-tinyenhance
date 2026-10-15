@@ -1,0 +1,182 @@
+{
+  "schema": "hypir_push7_independent_training_cpu_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "CUDA_initialized": false,
+  "run": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100",
+  "protocol_id": "79c1f8184a7ae0fbbc9f4d744478ebfd9d12417432c370e84d867e799f36b7bf",
+  "training_source_sha256": "8a90192c200efa934e3234984855575c1b25feffdc1279cd64e3db10619f1c4c",
+  "initial_A_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "no_teacher_outputs": true,
+  "no_val_GT_training": true,
+  "new_Adam_initial_step": 0,
+  "actual_training_updates": 100,
+  "all100_logs_finite_and_counters_and_loss_recomputed": true,
+  "actual_test_inputs_SHA_checked": 100,
+  "milestones": {
+    "0": {
+      "global_step": 7750,
+      "optimizer_step": 0,
+      "FP32_tensors": 514,
+      "FP32_elements": 259474432,
+      "raw_exact_equal_resume": true,
+      "actual_changed_tensors": 0,
+      "Adam_states": 0,
+      "Adam_moments_FP32_CPU_finite": true,
+      "raw_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+      "resume_sha256": "b53ed147a3c24d95f945449c015745264d0d7fcb681fe610771eecb86ccd7e15"
+    },
+    "1": {
+      "global_step": 7751,
+      "optimizer_step": 1,
+      "FP32_tensors": 514,
+      "FP32_elements": 259474432,
+      "raw_exact_equal_resume": true,
+      "actual_changed_tensors": 514,
+      "Adam_states": 514,
+      "Adam_moments_FP32_CPU_finite": true,
+      "raw_sha256": "2962b9ea90af0b1db68daf4c424c5214d6c0f6e355c704610dbc8ad9b0a8c2ec",
+      "resume_sha256": "4c3a325c40f22c6c09a0ab61c0e6413c494913fcc357699e8cc3bf351800f160"
+    },
+    "50": {
+      "global_step": 7800,
+      "optimizer_step": 50,
+      "FP32_tensors": 514,
+      "FP32_elements": 259474432,
+      "raw_exact_equal_resume": true,
+      "actual_changed_tensors": 514,
+      "Adam_states": 514,
+      "Adam_moments_FP32_CPU_finite": true,
+      "raw_sha256": "cfbcfefedf57777c5f91163cf3ea227b8b9566a3536af3ae15d2c1256f73ce56",
+      "resume_sha256": "cd0c2ee52321f0ccd1a9441c904ad212f0d87043d6f5bfcdcc9ca268f101e9ae"
+    },
+    "100": {
+      "global_step": 7850,
+      "optimizer_step": 100,
+      "FP32_tensors": 514,
+      "FP32_elements": 259474432,
+      "raw_exact_equal_resume": true,
+      "actual_changed_tensors": 514,
+      "Adam_states": 514,
+      "Adam_moments_FP32_CPU_finite": true,
+      "raw_sha256": "e9ffd70e5d1534d2152c81c67b07db89968651563de44b97fb444a2a5a69d910",
+      "resume_sha256": "3ba9c0f5a9b9f1b460ba0978c20fd6466a7ec0c7682571f5b8cc5d50ac31ab12"
+    }
+  },
+  "final_update": {
+    "RMS": 1.7157661649108178e-05,
+    "relative_L2": 0.0035896929174785014,
+    "max_tensor_relative_L2": 0.016147228435813742
+  },
+  "RNG": {
+    "all_four_saved_at_each_milestone": true,
+    "all100_Python_case_crop_replay_exact": true,
+    "all100_MANIQA_NumPy20_crop_draw_replay_exact": true,
+    "TorchCPU_exact_unchanged": true,
+    "CUDA_saved_seed_count": 1,
+    "CUDA_actual_offsets": {
+      "0": 0,
+      "1": 8,
+      "50": 400,
+      "100": 800
+    },
+    "CUDA_offset_increment_per_update": 8,
+    "CUDA_replay_not_executed": true
+  },
+  "median_step_seconds": 0.7994627952575684,
+  "peak_allocated_bytes": 26500018688,
+  "file_records": {
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/checkpoint_step7750.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/checkpoint_step7750.json",
+      "sha256": "144d15f04422a2959c47e38f2317901ebdc405ea8d42c5ac47806ed2ebf04a0c",
+      "bytes": 3252
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/resume_step7750.pt": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/resume_step7750.pt",
+      "sha256": "b53ed147a3c24d95f945449c015745264d0d7fcb681fe610771eecb86ccd7e15",
+      "bytes": 1038094711
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+      "sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+      "bytes": 1038079419
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/checkpoint_step7751.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/checkpoint_step7751.json",
+      "sha256": "eeb9d45b76f567c443a12c4f210e7b20ea6cc383c11a2f625bc19ed17a23c6e6",
+      "bytes": 3240
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/resume_step7751.pt": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/resume_step7751.pt",
+      "sha256": "4c3a325c40f22c6c09a0ab61c0e6413c494913fcc357699e8cc3bf351800f160",
+      "bytes": 3114329549
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/step7751.pth": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/step7751.pth",
+      "sha256": "2962b9ea90af0b1db68daf4c424c5214d6c0f6e355c704610dbc8ad9b0a8c2ec",
+      "bytes": 1038079419
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/checkpoint_step7800.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/checkpoint_step7800.json",
+      "sha256": "1033e12b92cf13e38ca9a34b35a02104acf14aff1830f86096dbf5c93c0a71e5",
+      "bytes": 3242
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/resume_step7800.pt": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/resume_step7800.pt",
+      "sha256": "cd0c2ee52321f0ccd1a9441c904ad212f0d87043d6f5bfcdcc9ca268f101e9ae",
+      "bytes": 3114329613
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/step7800.pth": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/step7800.pth",
+      "sha256": "cfbcfefedf57777c5f91163cf3ea227b8b9566a3536af3ae15d2c1256f73ce56",
+      "bytes": 1038079419
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/checkpoint_step7850.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/checkpoint_step7850.json",
+      "sha256": "a8736a41f96c6fe2490b6509462fcc77925f1aa48597c511a0c12420d6f1ea1f",
+      "bytes": 3244
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/resume_step7850.pt": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/resume_step7850.pt",
+      "sha256": "3ba9c0f5a9b9f1b460ba0978c20fd6466a7ec0c7682571f5b8cc5d50ac31ab12",
+      "bytes": 3114329549
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/step7850.pth": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/step7850.pth",
+      "sha256": "e9ffd70e5d1534d2152c81c67b07db89968651563de44b97fb444a2a5a69d910",
+      "bytes": 1038079419
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/config.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/config.json",
+      "sha256": "27e0111cffabd2aaf69bb08acd46525e2aa01a62e429b8ab0701011a68a7d2ba",
+      "bytes": 27470
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/input_catalog.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/input_catalog.json",
+      "sha256": "5c2f945ce000314e802a9c2ddff2ebe91cf20edb65aff491b1d1c9fb4b9071ac",
+      "bytes": 19586
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/train.jsonl": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/train.jsonl",
+      "sha256": "3e368a140ad88d6d7ffc1a43c49642644716ce1815bb1c26a9ff671359dfb966",
+      "bytes": 89637
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/status.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/status.json",
+      "sha256": "0649ab82a0087022a6efd136be7d38edba3d71427df36d66f166be13d9610ad7",
+      "bytes": 222
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/initialization_proof.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/initialization_proof.json",
+      "sha256": "28115a2eca18298163a7bff93096352b17c0b042eac8f7e817303630c51df66d",
+      "bytes": 58372
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/gradient_preflight.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_direct_nr100/gradient_preflight.json",
+      "sha256": "dff7888bed48cae131ebfe0f6a5be84e2def8d167ea24a13ab095b650495840a",
+      "bytes": 1986
+    }
+  },
+  "auditor_source_sha256": "1a47cec6faa10450fb89aa8737b2ffc9e1a3a9ff63f18512ca078a910ac895ff",
+  "limitations": "No GPU/model rerun; CUDA RNG consistency is saved Philox-counter continuity, not CUDA replay. Runtime TF32 in trainer protocol is configured constants, not an added process getter; no current quality/score conclusion."
+}

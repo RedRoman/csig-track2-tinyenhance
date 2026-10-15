@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "components": {
+    "musiq": {
+      "input_gradient_norm": 0.4268651604652405,
+      "finite": true,
+      "nonzero": true
+    },
+    "maniqa": {
+      "input_gradient_norm": 0.1586032509803772,
+      "finite": true,
+      "nonzero": true
+    },
+    "clipiqa": {
+      "input_gradient_norm": 2.2891831398010254,
+      "finite": true,
+      "nonzero": true
+    },
+    "content": {
+      "input_gradient_norm": 0.00044437070027925074,
+      "finite": true,
+      "nonzero": true
+    },
+    "niqe": {
+      "input_gradient_norm": 4.660094261169434,
+      "finite": true,
+      "nonzero": true
+    },
+    "weighted_NIQE": {
+      "input_gradient_norm": 0.02330058626830578,
+      "finite": true,
+      "nonzero": true
+    },
+    "weighted_content": {
+      "LoRA_gradient_L2": 0.010154486433035731,
+      "finite": true,
+      "nonzero_tensors": 2,
+      "zero_at_initial_anchor_expected": false
+    },
+    "weighted_NR_reward": {
+      "LoRA_gradient_L2": 0.08363360641757228,
+      "finite": true,
+      "nonzero_tensors": 2,
+      "zero_at_initial_anchor_expected": false
+    },
+    "weighted_NIQE_penalty": {
+      "LoRA_gradient_L2": 0.08007132542049779,
+      "finite": true,
+      "nonzero_tensors": 2,
+      "zero_at_initial_anchor_expected": false
+    },
+    "weighted_parameter_anchor": {
+      "LoRA_gradient_L2": 3.45811453755823e-05,
+      "finite": true,
+      "nonzero_tensors": 2,
+      "zero_at_initial_anchor_expected": false
+    }
+  },
+  "row": {
+    "local_step": 2,
+    "global_step": 7752,
+    "optimizer_step": 2,
+    "case": 62,
+    "crop_xy": [
+      0,
+      0
+    ],
+    "loss": -0.1376089750080255,
+    "content": 0.007615212816745043,
+    "L1_input": 0.056584641337394714,
+    "LPIPS_input": 0.5170328617095947,
+    "gradient_input": 0.026263825595378876,
+    "parameter_anchor": 2.7388108447823356e-10,
+    "reward": 1.6846122741699219,
+    "NIQE": 4.6474099487275415,
+    "NIQE_over10": 0.46474099487275417,
+    "weighted_NIQE_penalty": 0.02323704974363771,
+    "scores": {
+      "musiq": 0.6651971340179443,
+      "maniqa": 0.6171055436134338,
+      "clipiqa": 0.697109580039978
+    },
+    "gradient_norm": 0.1551325023174286,
+    "finite_optimizer_parameter_gradients": 2,
+    "nonzero_optimizer_parameter_gradients": 2,
+    "all514_finite_gradient_count": 514,
+    "all514_nonzero_gradient_count": 514,
+    "requires_grad_LoRA_tensor_count": 514,
+    "optimizer_tensor_count": 2,
+    "optimizer_parameter_keys": [
+      "conv_out.lora_A.default.weight",
+      "conv_out.lora_B.default.weight"
+    ],
+    "lr": 2e-07,
+    "step_seconds": 3.9829158782958984,
+    "elapsed_seconds": 3.9829587936401367,
+    "gpu_peak_allocated_bytes": 33962562560
+  },
+  "no_optimizer_update_yet": true,
+  "teacher_output_loss": false,
+  "PNG_STE_forward_exact": true,
+  "frozen_metrics": true
+}

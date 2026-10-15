@@ -1,0 +1,64 @@
+{
+  "schema": "hypir_teacher_push7_selection_v1",
+  "status": "BEST_VALIDATED_TEACHER_PENDING_FURTHER_65_SEARCH",
+  "selected_label": "push7_a7750_trtvae_fp16_all",
+  "selected_name": "HYPIR A7750 / TensorRT VAE 保画质加速版",
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/model_dir",
+  "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "architecture": "HYPIR SD2 rank256 native512/stride256",
+  "lightweight_model": false,
+  "distillation": false,
+  "teacher_weights_changed": false,
+  "selected_candidate_new_training": false,
+  "quality_scope": "fresh103_native_PNGs_and_original418_metrics",
+  "quality_reused": false,
+  "PNG_exact": false,
+  "NR": 2.3193312111166215,
+  "FR": 1.4416551788647969,
+  "S_proxy": 3.7609863899814187,
+  "tool_prediction": 62.32913337707007,
+  "event_p10_ms": 34.25361785888672,
+  "score_target": 65,
+  "score_target_achieved": false,
+  "same_batch_baseline": {
+    "NR": 2.3197332792186334,
+    "FR": 1.4417232871055603,
+    "S_proxy": 3.7614565663241937,
+    "event_p10_ms": 41.42765998840332,
+    "normalized_g_ms": 22.793251320134527,
+    "original_tool_prediction": 60.04738558516993,
+    "reaches65": false
+  },
+  "score_gain": 2.2817477919001448,
+  "speed_reduction_fraction": 0.17317034395678643,
+  "quality_dir": "/cache/independent_sr_cuda_20261013/nr_push7_hypir_full_evaluations/push7_a7750_trtvae_fp16_all",
+  "formal_speed_dir": "/cache/independent_sr_cuda_20261013/calibration/push7_teacher_formal_20261015T0604",
+  "quality_audit": {
+    "local": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/evaluation/hypir_full/trtvae_fp16_all.json",
+    "remote": "/cache/independent_sr_cuda_20261013/audits/push7/hypir_full/trtvae_fp16_all.json",
+    "sha256": "1e54ac9a0681b67144c2f173e458d9c23c8f1d9d41fec17e7c278cc80470c63b"
+  },
+  "speed_audit": {
+    "local": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/evaluation/speed/formal4_independent_cpu.json",
+    "remote": "/cache/independent_sr_cuda_20261013/audits/push7/speed/formal4_independent_cpu.json",
+    "sha256": "e3db1f53c9b316b982a9b8e7fb5e740ef948e4174a2ca7718b659a6696020275"
+  },
+  "visual": {
+    "local": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/visuals/hypir_trtvae_full_final/preview_provenance.json",
+    "sha256": "30db6c3af40de49ed715a52a849140de3952b83d4cff16a3cc07a8b42713a468",
+    "gallery": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/visuals/hypir_trtvae_full_final/index.html",
+    "root_actually_reviewed_cases": [
+      7,
+      16,
+      41,
+      83
+    ],
+    "finding": "No obvious newly introduced text deformation, line bending, broad smearing or dense artificial texture in four fixed 1:1 ROIs; minor texture differences remain"
+  },
+  "previous_preference": {
+    "local": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/results/current_preference_before_push7.json",
+    "sha256": "ebe1e217ddaa8b9a1969727ae955b24410c3e29112bb210d6b8ac5540f996d80"
+  },
+  "updated_utc": "2026-10-15T06:11:44.664021+00:00"
+}

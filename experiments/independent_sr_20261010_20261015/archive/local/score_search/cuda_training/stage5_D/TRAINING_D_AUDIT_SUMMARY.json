@@ -1,0 +1,210 @@
+{
+  "schema": "stage5_D_single250_training_CPU_audit_summary_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "CUDA_context_initialized": false,
+  "scope": "Training-state integrity and real paired D/C control only. No metric score or selection claim.",
+  "run": "cuda_nr_stage5_s7250_teacher6500_m25_r075_250",
+  "global_step": 7500,
+  "local_step": 250,
+  "Adam_step": 1500,
+  "parent_global_step": 7250,
+  "parent_Adam_step": 1250,
+  "teacher_global_step": 6500,
+  "only_objective_change_vs_C250": {
+    "reward_weight": {
+      "C": 0.1,
+      "D": 0.075
+    }
+  },
+  "same_CLI_other_than_run_target_reward": true,
+  "same_initial_student_scores_teacher_fidelity": true,
+  "same_complete250_case_crop_sequence": true,
+  "same_terminal_four_RNG": true,
+  "all514_FP32_LoRA_finite_raw_equal_immutable_resume": true,
+  "all514_FP32_Adam_moments_finite_with_step1500": true,
+  "LoRA": {
+    "keys": 514,
+    "elements": 259474432,
+    "dtype": "torch.float32",
+    "device": "cpu",
+    "all_finite": true
+  },
+  "Adam": {
+    "state_entries": 514,
+    "parameter_ids_complete_unique": true,
+    "shape_to_parameter_order_checked": true,
+    "all_steps": [
+      1500
+    ],
+    "all_moments_FP32_CPU_finite": true,
+    "moment_elements_each": 259474432,
+    "exp_avg_sq_nonnegative": true,
+    "every_exp_avg_tensor_has_nonzero_values": true,
+    "state_field_sets": [
+      [
+        "exp_avg",
+        "exp_avg_sq",
+        "step"
+      ]
+    ],
+    "moment_dtypes": [
+      "torch.float32"
+    ],
+    "parameter_group_options": {
+      "lr": 2e-07,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": false,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": true
+    }
+  },
+  "checkpoint": {
+    "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_r075_250/step7500.pth",
+    "bytes": 1038079419,
+    "sha256": "feb55a9e22e466e6f45f3b15d6cd38b67a679d761fc37e093b77687fafda3b50",
+    "mtime_bjt": "2026-10-14T21:42:54.452369+08:00"
+  },
+  "resume": {
+    "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_r075_250/resume_step7500.pt",
+    "bytes": 3114332813,
+    "sha256": "cf36292bd2674cee46fea64b0cf5eb3976bf102c4113dc09e6b71e5ebcdd21f4",
+    "mtime_bjt": "2026-10-14T21:42:57.704425+08:00"
+  },
+  "config": {
+    "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_r075_250/config.json",
+    "bytes": 35380,
+    "sha256": "baeec8d0bd39f2008f52f7bf53dd08600dce3635b32ff20829ccf36e215b9870",
+    "mtime_bjt": "2026-10-14T21:39:12.913587+08:00"
+  },
+  "FP32_delta_vs_parent7250": {
+    "elements": 259474432,
+    "changed_elements": 259464406,
+    "changed_fraction": 0.9999613603547651,
+    "tensors_changed": 514,
+    "max_abs": 2.542184665799141e-05,
+    "l2": 0.052218637094918155,
+    "mean_abs": 2.520652868926736e-06,
+    "method": "FP32 elementwise subtraction; FP64 sum(abs) and sum(square); every tensor/element checked",
+    "largest10_tensors_by_max_abs": [
+      {
+        "key": "up_blocks.3.attentions.2.transformer_blocks.0.ff.net.0.proj.lora_B.default.weight",
+        "elements": 655360,
+        "changed_elements": 655351,
+        "max_abs": 2.542184665799141e-05,
+        "l2": 0.004456849206280108
+      },
+      {
+        "key": "up_blocks.3.attentions.2.transformer_blocks.0.attn1.to_out.0.lora_A.default.weight",
+        "elements": 81920,
+        "changed_elements": 81918,
+        "max_abs": 2.4850480258464813e-05,
+        "l2": 0.0019205078381026217
+      },
+      {
+        "key": "up_blocks.3.attentions.2.transformer_blocks.0.attn2.to_q.lora_A.default.weight",
+        "elements": 81920,
+        "changed_elements": 81920,
+        "max_abs": 2.432381734251976e-05,
+        "l2": 0.001908729247402184
+      },
+      {
+        "key": "up_blocks.3.attentions.2.transformer_blocks.0.ff.net.0.proj.lora_A.default.weight",
+        "elements": 81920,
+        "changed_elements": 81917,
+        "max_abs": 2.376362681388855e-05,
+        "l2": 0.0020284497819661063
+      },
+      {
+        "key": "up_blocks.3.attentions.2.proj_in.lora_B.default.weight",
+        "elements": 81920,
+        "changed_elements": 81920,
+        "max_abs": 2.3672357201576233e-05,
+        "l2": 0.0024070485563918703
+      },
+      {
+        "key": "up_blocks.3.attentions.2.proj_in.lora_A.default.weight",
+        "elements": 81920,
+        "changed_elements": 81919,
+        "max_abs": 2.3198779672384262e-05,
+        "l2": 0.0020004052357648853
+      },
+      {
+        "key": "up_blocks.2.attentions.1.transformer_blocks.0.ff.net.0.proj.lora_B.default.weight",
+        "elements": 1310720,
+        "changed_elements": 1310693,
+        "max_abs": 2.319684426765889e-05,
+        "l2": 0.004377876971823795
+      },
+      {
+        "key": "up_blocks.2.attentions.2.transformer_blocks.0.attn2.to_k.lora_B.default.weight",
+        "elements": 163840,
+        "changed_elements": 163835,
+        "max_abs": 2.2911466658115387e-05,
+        "l2": 0.0015255423507276123
+      },
+      {
+        "key": "up_blocks.3.attentions.2.transformer_blocks.0.ff.net.2.lora_A.default.weight",
+        "elements": 327680,
+        "changed_elements": 327660,
+        "max_abs": 2.268352545797825e-05,
+        "l2": 0.002535918726608955
+      },
+      {
+        "key": "up_blocks.3.attentions.2.proj_out.lora_B.default.weight",
+        "elements": 81920,
+        "changed_elements": 81918,
+        "max_abs": 2.2654799977317452e-05,
+        "l2": 0.0017312666649482824
+      }
+    ]
+  },
+  "trainer_v5_SHA256": "4b5bdf40aab5d2fd35c92f8fc714c675e62bd86228bc3fb79e48e896b70278f2",
+  "evidence_files": {
+    "audit_stage5_cpu.py": {
+      "bytes": 20161,
+      "sha256": "e07bf36ebf8b1bd0457129a565e151bd0086602e780f1a58283be81103160195"
+    },
+    "initial_stage5_cpu.py": {
+      "bytes": 7014,
+      "sha256": "3e863366dbbfd5cc35ace0c99a9d39c63085c018596f6aea2841611b433a97d7"
+    },
+    "compare_D_vs_C_cpu.py": {
+      "bytes": 5090,
+      "sha256": "b14d5193f08c39322245d3c8b59fa33bbc53e2641e06478f885d465ab34598ad"
+    },
+    "independent_audit_plan.json": {
+      "bytes": 3786,
+      "sha256": "065570a944a719a64c1b9471e7b264ba75c3aff777f40321b0347feab46e907f"
+    },
+    "config_stage5_D_m25_r075_250.json": {
+      "bytes": 1124,
+      "sha256": "3371737e22449aa1db73a56a560ba186ec9027c332d5e05c5e4786829d35bdf3"
+    },
+    "initial_cpu_audit.json": {
+      "bytes": 2372,
+      "sha256": "da869c49cab2fbfeaf1fcaeded434fd9450e7459232de8f21a657250d07e8efe"
+    },
+    "initial_D_vs_C_control_audit.json": {
+      "bytes": 1574,
+      "sha256": "506169ccc7e0f9668c47b074a0638b220ab50c0e88777881bd65b29b9d74506d"
+    },
+    "milestone250_cpu_audit.json": {
+      "bytes": 16163,
+      "sha256": "09d702fc680e007ec5acc169967ce157108bc684532359f20a408ddf3f7d9343"
+    },
+    "terminal_D_vs_C_control_audit.json": {
+      "bytes": 2534,
+      "sha256": "4bee5ba9ca6a58279e6a7a330bd8f9577625064d2c58936784e4dee740976e0a"
+    }
+  }
+}

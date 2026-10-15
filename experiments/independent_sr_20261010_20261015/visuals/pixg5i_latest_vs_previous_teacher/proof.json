@@ -1,0 +1,332 @@
+{
+  "status": "PASS_DIAGNOSTIC4_VS_FULL_REFERENCE_NATIVE_ROI",
+  "CPU_only": true,
+  "GPU_used": false,
+  "diagnostic_crop_proof": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/coverage_v4_s200_diagnostic_crop_sources/proof.json",
+    "sha256": "cce1b753efa46a87cdef51b5f1016546e206e6074c8249c937f8b287fe580f75",
+    "bytes": 13775
+  },
+  "full_reference_gallery_proof": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/fresh_baseline_teacher_mild300_medium300/proof.json",
+    "sha256": "5c93cc0d1c338ae0ae09b36b719961a2bc5abd847c620af11cbb74927179a6d7",
+    "bytes": 411562
+  },
+  "candidate_checkpoint_sha256": "503074449893247332df973a85f9be1f348d9f130f31a28455b62790fb50c929",
+  "reference_pixels_scope": "Content-addressed crop cache from actual SHA/pixel-verified full103 PNGs",
+  "outputs": [
+    {
+      "case": 7,
+      "ROI": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "diagnostic_source": {
+        "case": 7,
+        "ROI": [
+          1856,
+          1408,
+          2496,
+          1856
+        ],
+        "native_source": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/coverage_v4_s200_diagnostic/render/test/case7.png",
+          "sha256": "c8376c871e6d2e43c585afd372b350b7b768d32aaba1fe482544d7a444c33acb",
+          "bytes": 14250581
+        },
+        "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+        "size": [
+          4096,
+          3072
+        ],
+        "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "output": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_coverage_v4_s200_diagnostic_ROI4/case7_structure_v2_diagnostic_native_ROI.png",
+          "sha256": "b968cec8f2a9cbaa14b5026ba263b162d0bb6dd2214a6be12d930ad75c7694ff",
+          "bytes": 338541
+        },
+        "crop_pixels_exact": true
+      },
+      "full_reference_sources": [
+        {
+          "split": "test",
+          "case": 7,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_medium_s300_all/render/test/case7.png",
+            "sha256": "dcb98a7ef351d1a061b1c7430d2db3112239c01577cbe069b4cc7d86f3336717",
+            "bytes": 19540159
+          },
+          "native_size": [
+            4096,
+            3072
+          ],
+          "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4"
+        },
+        {
+          "split": "test",
+          "case": 7,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case7.png",
+            "sha256": "911723395979a5d2455dd1cba15edeecc2905c29cc65d8a3149427d51e423356",
+            "bytes": 17719353
+          },
+          "native_size": [
+            4096,
+            3072
+          ],
+          "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4"
+        }
+      ],
+      "cached_panel": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/fresh_baseline_teacher_mild300_medium300/case7_fresh_distill_ROI_1to1.png",
+        "sha256": "293afe94a1c08fc651c99ac864697285ac8bf6999c0409591e17c74a7186877b",
+        "bytes": 1969727
+      },
+      "crop_pixels_exact": true,
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/coverage_v4_s200_vs_medium300_teacher_diagnostic/case7_diagnostic_structure_ROI_1to1.png",
+      "sha256": "b900ff6bf881f8240f5f9a915fdbf19a9dbf2d072557b0864a5b4906bc994ccb",
+      "bytes": 1747381
+    },
+    {
+      "case": 16,
+      "ROI": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "diagnostic_source": {
+        "case": 16,
+        "ROI": [
+          1280,
+          1216,
+          1920,
+          1728
+        ],
+        "native_source": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/coverage_v4_s200_diagnostic/render/test/case16.png",
+          "sha256": "be4f2baa9edd29b375f38823c769d2b98e6ee6df5d2e86e4d0fbab3491e0cd8c",
+          "bytes": 9949476
+        },
+        "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+        "size": [
+          4096,
+          3072
+        ],
+        "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "output": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_coverage_v4_s200_diagnostic_ROI4/case16_structure_v2_diagnostic_native_ROI.png",
+          "sha256": "ba0148b31035211eb008dcdbf6e557867ce6cea9d913fc7a42779b249a7d4f87",
+          "bytes": 331044
+        },
+        "crop_pixels_exact": true
+      },
+      "full_reference_sources": [
+        {
+          "split": "test",
+          "case": 16,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_medium_s300_all/render/test/case16.png",
+            "sha256": "0d08afb76df6c68ae085e3c2e18cab1bee479698c01560f623d8444db9ed6219",
+            "bytes": 15281056
+          },
+          "native_size": [
+            4096,
+            3072
+          ],
+          "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307"
+        },
+        {
+          "split": "test",
+          "case": 16,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case16.png",
+            "sha256": "629b4754054546f859e0ca4bbd79fef937709b1456c1b70683b0a529ba7b1ee2",
+            "bytes": 16887578
+          },
+          "native_size": [
+            4096,
+            3072
+          ],
+          "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307"
+        }
+      ],
+      "cached_panel": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/fresh_baseline_teacher_mild300_medium300/case16_fresh_distill_ROI_1to1.png",
+        "sha256": "f8aa6221660f0ae20625248b3a67fcd8d587db9274e6e7beb87969dce7e5f664",
+        "bytes": 2022553
+      },
+      "crop_pixels_exact": true,
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/coverage_v4_s200_vs_medium300_teacher_diagnostic/case16_diagnostic_structure_ROI_1to1.png",
+      "sha256": "3463a3025bfc0e4552d0b646d118f23f0ce9a890c512f67efe4a84d7351b5ef1",
+      "bytes": 1858596
+    },
+    {
+      "case": 41,
+      "ROI": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "diagnostic_source": {
+        "case": 41,
+        "ROI": [
+          768,
+          1664,
+          1408,
+          2176
+        ],
+        "native_source": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/coverage_v4_s200_diagnostic/render/test/case41.png",
+          "sha256": "5d6addffbc983f7f8341d4e2baedb3c45431ade705b2fc772e19e3d14cf4412c",
+          "bytes": 14690711
+        },
+        "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+        "size": [
+          3072,
+          4096
+        ],
+        "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "output": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_coverage_v4_s200_diagnostic_ROI4/case41_structure_v2_diagnostic_native_ROI.png",
+          "sha256": "8c965827c29e57d34cc740a500968ed0f034bb01f453db17389fdda0abdac0ff",
+          "bytes": 364008
+        },
+        "crop_pixels_exact": true
+      },
+      "full_reference_sources": [
+        {
+          "split": "test",
+          "case": 41,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_medium_s300_all/render/test/case41.png",
+            "sha256": "950f9bdbd7ef14e76267bfd32ef308b9576e57bdd62709775fd44722450def35",
+            "bytes": 18057908
+          },
+          "native_size": [
+            3072,
+            4096
+          ],
+          "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b"
+        },
+        {
+          "split": "test",
+          "case": 41,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case41.png",
+            "sha256": "9dab9aee1bf1ea6668a12dafcbf2c095f7f9c4dca5567b03dec153054a414368",
+            "bytes": 22923560
+          },
+          "native_size": [
+            3072,
+            4096
+          ],
+          "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b"
+        }
+      ],
+      "cached_panel": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/fresh_baseline_teacher_mild300_medium300/case41_fresh_distill_ROI_1to1.png",
+        "sha256": "8fabb61a64267aea94159ea23342a642290346f66ca99912085750abee7a11e5",
+        "bytes": 2031513
+      },
+      "crop_pixels_exact": true,
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/coverage_v4_s200_vs_medium300_teacher_diagnostic/case41_diagnostic_structure_ROI_1to1.png",
+      "sha256": "3b3da8ca7134557ff92ae1146c328f947fd716e684499b62bf130da1bdf564e0",
+      "bytes": 1983207
+    },
+    {
+      "case": 83,
+      "ROI": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "diagnostic_source": {
+        "case": 83,
+        "ROI": [
+          1216,
+          1920,
+          1856,
+          2432
+        ],
+        "native_source": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/coverage_v4_s200_diagnostic/render/test/case83.png",
+          "sha256": "d97a4745f2939633d6c3fd75ce9ed2bd43d087917c3144638a63510f18fd9f46",
+          "bytes": 16721780
+        },
+        "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+        "size": [
+          3072,
+          4096
+        ],
+        "before_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "after_fourRNG_sha256": "cc23b57e757ca1c17982174fb56b46850df5550afa350677203c4f03a3545a55",
+        "output": {
+          "path": "/cache/independent_sr_cuda_20261013/analysis/pixg5i_coverage_v4_s200_diagnostic_ROI4/case83_structure_v2_diagnostic_native_ROI.png",
+          "sha256": "2a96b21a0ea19bdc2fd4b754d3de3e3fef8bd067e7e6bcfcad4b07a9e3c93c4f",
+          "bytes": 460001
+        },
+        "crop_pixels_exact": true
+      },
+      "full_reference_sources": [
+        {
+          "split": "test",
+          "case": 83,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_medium_s300_all/render/test/case83.png",
+            "sha256": "477e74b5445d080a0f26bff08edfdfa49f630635652e88196ad85cc719857e76",
+            "bytes": 21422813
+          },
+          "native_size": [
+            3072,
+            4096
+          ],
+          "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038"
+        },
+        {
+          "split": "test",
+          "case": 83,
+          "PNG": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case83.png",
+            "sha256": "99c152fd94abede36ea724f754ebd042a78a1452e1c696792b1aae178b216673",
+            "bytes": 21597996
+          },
+          "native_size": [
+            3072,
+            4096
+          ],
+          "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038"
+        }
+      ],
+      "cached_panel": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/fresh_baseline_teacher_mild300_medium300/case83_fresh_distill_ROI_1to1.png",
+        "sha256": "3dde93ce38ddf6398f6fd6ae18eb26bfa77371ef1a1ad59accc96d42f6090be5",
+        "bytes": 2488329
+      },
+      "crop_pixels_exact": true,
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/coverage_v4_s200_vs_medium300_teacher_diagnostic/case83_diagnostic_structure_ROI_1to1.png",
+      "sha256": "729dc05b3c2ef702058f42de0953021e4dca9949eee24dd0d494a531749d439d",
+      "bytes": 2237404
+    }
+  ],
+  "same_input_SHA_and_geometry": true,
+  "matched_full_RNG_or_score_claim": false,
+  "no_resampling_filter_enhancement": true,
+  "HTML": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/coverage_v4_s200_vs_medium300_teacher_diagnostic/index.html",
+    "sha256": "f00e8268b9c6ed4b8dd067db476a2cf39c0b73c5e8b1d1a07e39ff99f774fa60",
+    "bytes": 1062
+  },
+  "helper": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/preparation/present_coverage_v4_s200_medium300_teacher.py",
+    "sha256": "e8f581251b7600dcc7481685308f12ec8d03210dbdfe6bf7857fe07dd841f425",
+    "bytes": 6284
+  }
+}

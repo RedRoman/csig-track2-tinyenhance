@@ -1,0 +1,38 @@
+{
+  "schema": "stage5_D_vs_C_independent_CPU_control_comparison_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "GPU_used": false,
+  "audited_utc": "2026-10-14T13:40:48.734499+00:00",
+  "CLI_only_diff": {
+    "reward_weight": {
+      "C": 0.1,
+      "D": 0.075
+    },
+    "run": {
+      "C": "cuda_nr_stage5_s7250_teacher6500_m25_r10_500",
+      "D": "cuda_nr_stage5_s7250_teacher6500_m25_r075_250"
+    },
+    "stage_steps": {
+      "C": 500,
+      "D": 250
+    }
+  },
+  "same_parent_raw_resume_config_SHA": true,
+  "same_independently_replayed_first_case_crop": true,
+  "first_case": 93,
+  "first_crop_xy": [
+    60,
+    1399
+  ],
+  "pre_update_student_metric_scores_exact_equal": true,
+  "pre_update_teacher_fidelity_exact_equal": true,
+  "initial_loss_delta_matches_only_reward_change": true,
+  "scope": "Initial migration/CLI/first sample only; no terminal-state or quality claim.",
+  "evidence": {
+    "/cache/independent_sr_cuda_20261013/code/cuda_training/push4/config_stage5_C_m25_r10_500.json": "4052f7430bbeaddaf1d6851efbb82555e705fd1ac128d14b5388ec48559d8240",
+    "/cache/independent_sr_cuda_20261013/code/cuda_training/push4/config_stage5_D_m25_r075_250.json": "3371737e22449aa1db73a56a560ba186ec9027c332d5e05c5e4786829d35bdf3",
+    "/cache/independent_sr_cuda_20261013/audits/push4/training_stage5/initial_cpu_audit.json": "93127bff6d0f56c7a312c9822d76e67c035d8c0c2bea5af67090c16a5dd32d0b",
+    "/cache/independent_sr_cuda_20261013/audits/push4/training_stage5_D/initial_cpu_audit.json": "da869c49cab2fbfeaf1fcaeded434fd9450e7459232de8f21a657250d07e8efe"
+  }
+}

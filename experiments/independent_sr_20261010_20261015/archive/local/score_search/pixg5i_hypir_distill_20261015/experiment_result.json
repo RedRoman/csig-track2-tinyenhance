@@ -1,0 +1,54 @@
+{
+  "status": "COMPLETE_DISTILLATION_FULL_SCORING_AND_SINGLE_GPU_TIMING",
+  "completed_at_Asia_Shanghai": "2026-10-15T19:45:09.876745+08:00",
+  "archive": "/Users/hezihao/Downloads/赛题二_pixG5i_g_b4e0686c.zip",
+  "archive_sha256": "f8e154da5ea9cb2fe165a316f824003459661945e6bbe22efd025d8592d573d6",
+  "student_parameters": 3786764,
+  "architecture_unchanged": true,
+  "teacher": "HYPIR latest fixed 23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+  "real_distillation_steps": [
+    100,
+    300
+  ],
+  "NR_training_reward": false,
+  "validation_GT_training": false,
+  "quality_count_per_model": "103 images / 418 scalar metrics",
+  "formal_timing": "same physical A100 GPU0; original benchmark n200/warm30/seed231; common min bracketing G4 p10",
+  "models": [
+    {
+      "label": "original",
+      "NR": 2.827770143571551,
+      "FR": 1.2795354723930359,
+      "S": 4.107305615964587,
+      "event_p10_ms": 0.7208960056304932,
+      "tool_estimate": 153.36911074227373
+    },
+    {
+      "label": "mild300",
+      "NR": 2.358091225081692,
+      "FR": 1.3739440043767293,
+      "S": 3.732035229458421,
+      "event_p10_ms": 0.719871997833252,
+      "tool_estimate": 118.26439060912479
+    },
+    {
+      "label": "medium300",
+      "NR": 2.406142042267218,
+      "FR": 1.3735355536142984,
+      "S": 3.7796775958815165,
+      "event_p10_ms": 0.7229440212249756,
+      "tool_estimate": 122.16443662327818
+    }
+  ],
+  "selected_for_presentation": "medium300 trial only",
+  "quality_conclusion": "Dense artificial texture and some pitting are reduced, with increased smoothing. Text swelling, fused/thick bars, leaf/background structural loss and edge artifacts remain. Teacher structural quality not recovered. NR and total estimated score decline; FR improves.",
+  "original_model_preserved": true,
+  "HYPIR_teacher_preference_unchanged": true,
+  "active_training": false,
+  "active_GPU_jobs": false,
+  "formal_proof": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/calibration/pixg5i_s300_formal_20261015/s300_formal_cpu.json",
+    "sha256": "754c56165dc234c967646905698343c8fd95a87649b0f748aebb215ac6f23eab"
+  },
+  "gallery": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/selected_medium300_vs_original_teacher/index.html"
+}

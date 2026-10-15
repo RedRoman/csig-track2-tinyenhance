@@ -1,0 +1,47 @@
+{
+  "scope": "Selected max-change ROI descriptive RGB error only; not formal LPIPS/DISTS or test score",
+  "box": [
+    2304,
+    2688,
+    2944,
+    3200
+  ],
+  "rows": [
+    {
+      "label": "nr_stage3_anchor6250_m15_s6500_compiled_all",
+      "ROI_RGB_MAE_vs_GT_in_uint8_levels": 23.378173828125,
+      "metrics": {
+        "lpips": 0.491943359375,
+        "dists": 0.21062010526657104,
+        "niqe": 2.4015667659801303,
+        "musiq": 51.64265441894531,
+        "maniqa": 0.47587135434150696,
+        "clipiqa": 0.7220986485481262
+      }
+    },
+    {
+      "label": "push3_c7000_compiled_all",
+      "ROI_RGB_MAE_vs_GT_in_uint8_levels": 23.29291534423828,
+      "metrics": {
+        "lpips": 0.50537109375,
+        "dists": 0.22009283304214478,
+        "niqe": 2.6542761930133802,
+        "musiq": 52.909969329833984,
+        "maniqa": 0.5262607932090759,
+        "clipiqa": 0.7690795660018921
+      }
+    },
+    {
+      "label": "push3_c7250_compiled_all",
+      "ROI_RGB_MAE_vs_GT_in_uint8_levels": 23.302703857421875,
+      "metrics": {
+        "lpips": 0.50732421875,
+        "dists": 0.2218884825706482,
+        "niqe": 2.7170805269655953,
+        "musiq": 52.89921569824219,
+        "maniqa": 0.5338627696037292,
+        "clipiqa": 0.7757006883621216
+      }
+    }
+  ]
+}

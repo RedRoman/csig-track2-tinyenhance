@@ -1,0 +1,136 @@
+{
+  "schema": "cuda_nr_stage4_CPU_audit_summary_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "parent": "sealed6500/Adam500 exactFP32",
+  "separate_branches": 3,
+  "new_updates_per_branch": 750,
+  "total_branch_updates": 2250,
+  "total_checkpoints_audited": 9,
+  "all_boundaries_case_crop_sequences_paired": true,
+  "all_boundaries_four_RNG_states_paired": true,
+  "quality_not_assessed_by_parameter_audit": true,
+  "audit_plan_SHA256": "ff5a763f17a17d5658d21ef6279d7f98d94f41412b1fe96e69fd26e2891401eb",
+  "audit_source_SHA256": "7d77bc1ed819d47375bf9ee4f0239c5335b219d1877a5da6f1656a8438d99d1d",
+  "reports": [
+    {
+      "path": "cuda_training/stage4/milestone250_cpu_audit.json",
+      "sha256": "722d39eeff6e46f14f3783ffde094304af34996d19d328fcec818b6665b9146e",
+      "local_step": 250,
+      "status": "PASS"
+    },
+    {
+      "path": "cuda_training/stage4/milestone500_cpu_audit.json",
+      "sha256": "10237f5fb23fa5e6ecc092a97cb7e40b3e733c2d1305d8780654e287216928ea",
+      "local_step": 500,
+      "status": "PASS"
+    },
+    {
+      "path": "cuda_training/stage4/milestone750_cpu_audit.json",
+      "sha256": "da243b9fee82d389d84daef0876f0fdaa917b622df408b7fe0b9ee326cab1926",
+      "local_step": 750,
+      "status": "PASS"
+    }
+  ],
+  "checkpoints": [
+    {
+      "run": "cuda_nr_stage4_s6500_teacher6250_cont750",
+      "stage_local_step": 250,
+      "global_step": 6750,
+      "Adam_step": 750,
+      "FP32_delta_L2_vs6500": 0.047590645439545574,
+      "all514_changed": true,
+      "raw_exact_resume": true,
+      "raw_SHA256": "e326cceb9e92e7776d4aa2504ab7feac9bd18ad27449a09de52ca6cd06c92ede",
+      "resume_SHA256": "cdf90e94d2d0cd0b81155021f5b37f228e1fd9ae29219b11780469423a37c37e"
+    },
+    {
+      "run": "cuda_nr_stage4_s6500_teacher6500_cont750",
+      "stage_local_step": 250,
+      "global_step": 6750,
+      "Adam_step": 750,
+      "FP32_delta_L2_vs6500": 0.05558568783617472,
+      "all514_changed": true,
+      "raw_exact_resume": true,
+      "raw_SHA256": "c5db668fad0cc133e65bc3c113eb724c8cac44bfbc1f413b9ea6ae496f89d105",
+      "resume_SHA256": "9afd3b09555839310f8419bb375d34644ca37cca21f7c792851adf755b672d9a"
+    },
+    {
+      "run": "cuda_nr_stage4_s6500_teacher6500_nrstrong750",
+      "stage_local_step": 250,
+      "global_step": 6750,
+      "Adam_step": 750,
+      "FP32_delta_L2_vs6500": 0.09386320875306396,
+      "all514_changed": true,
+      "raw_exact_resume": true,
+      "raw_SHA256": "9d060b36adac92b7b75a784e0ab1b8727281836d09c4b260036dc06f2ac6a29c",
+      "resume_SHA256": "f56906c26988af9c960bf40b622f4a46234242305332b25a26538210c46c7c9b"
+    },
+    {
+      "run": "cuda_nr_stage4_s6500_teacher6250_cont750",
+      "stage_local_step": 500,
+      "global_step": 7000,
+      "Adam_step": 1000,
+      "FP32_delta_L2_vs6500": 0.06990063017298252,
+      "all514_changed": true,
+      "raw_exact_resume": true,
+      "raw_SHA256": "1f19654fff8ef33fbef054c095ead7e4c364d6a666f7bcdc2150c732798584f0",
+      "resume_SHA256": "9ca7d921642e47213466d905e86a521872f300e223d1ead6e4107e02881925b0"
+    },
+    {
+      "run": "cuda_nr_stage4_s6500_teacher6500_cont750",
+      "stage_local_step": 500,
+      "global_step": 7000,
+      "Adam_step": 1000,
+      "FP32_delta_L2_vs6500": 0.07636669085040289,
+      "all514_changed": true,
+      "raw_exact_resume": true,
+      "raw_SHA256": "0ab9e3aa9a0dbefcff80ea44ed04b8b3eb6c615da8814ff8ab1d5dc6dbc456f2",
+      "resume_SHA256": "32c7c40f1f1747ebc9ffdd5c660cb251b6921b48c5046a0a8510b9d0e8b5a7cf"
+    },
+    {
+      "run": "cuda_nr_stage4_s6500_teacher6500_nrstrong750",
+      "stage_local_step": 500,
+      "global_step": 7000,
+      "Adam_step": 1000,
+      "FP32_delta_L2_vs6500": 0.1344978159013079,
+      "all514_changed": true,
+      "raw_exact_resume": true,
+      "raw_SHA256": "122c362902c204d60c4cd8433019b9b8ebcde4ffccc8e789094b4c71ef022df0",
+      "resume_SHA256": "5c3feb67f126eb3d0f0be7ba9ee676af2b2a9a03d6dc2b328b789c274042d74e"
+    },
+    {
+      "run": "cuda_nr_stage4_s6500_teacher6250_cont750",
+      "stage_local_step": 750,
+      "global_step": 7250,
+      "Adam_step": 1250,
+      "FP32_delta_L2_vs6500": 0.088976848536937,
+      "all514_changed": true,
+      "raw_exact_resume": true,
+      "raw_SHA256": "25d98c31f618150315e7b14c4a5e7f94dc8c1ba3203de7debfae10f4b0a03b85",
+      "resume_SHA256": "b140041ab9f74414c53eecdebafbec06b241c58e23b6073f823766f16d4069b0"
+    },
+    {
+      "run": "cuda_nr_stage4_s6500_teacher6500_cont750",
+      "stage_local_step": 750,
+      "global_step": 7250,
+      "Adam_step": 1250,
+      "FP32_delta_L2_vs6500": 0.09463054819450432,
+      "all514_changed": true,
+      "raw_exact_resume": true,
+      "raw_SHA256": "b326a96d0fdfd9d18e39ec7880aa09405b981f06fe8d5af4b08c18965ede5bb1",
+      "resume_SHA256": "664640c3016f3b7b71c8c3bfd137ec0bbaa94c271c58ce146f49dfc4592d427b"
+    },
+    {
+      "run": "cuda_nr_stage4_s6500_teacher6500_nrstrong750",
+      "stage_local_step": 750,
+      "global_step": 7250,
+      "Adam_step": 1250,
+      "FP32_delta_L2_vs6500": 0.16625704974667393,
+      "all514_changed": true,
+      "raw_exact_resume": true,
+      "raw_SHA256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+      "resume_SHA256": "b8b709f284ce627113e392ede00e43bcd522c8dc23b63719e9fcbaa573c7256d"
+    }
+  ]
+}

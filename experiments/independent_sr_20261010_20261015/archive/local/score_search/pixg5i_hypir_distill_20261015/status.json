@@ -1,0 +1,211 @@
+{
+  "schema": "pixg5i_hypir_output_distillation_progress_v1",
+  "updated_utc": "2026-10-15T11:45:43.890928+00:00",
+  "scope": {
+    "created_utc": "2026-10-15T08:53:29.974797+00:00",
+    "user_request": "以赛题二_pixG5i_g_b4e0686c.zip内小模型为主模型，用本轮HYPIR教师蒸馏减轻NR过度优化伪影，再用原评分工具评分",
+    "student": "/cache/independent_sr_cuda_20261013/source_payload/pixg5i_original/model_dir",
+    "student_original_model_SHA256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+    "teacher": "push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+    "teacher_raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+    "teacher_outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+    "teacher_fixed": true,
+    "HYPIR_preference_unchanged": true,
+    "distillation_explicitly_authorized_this_turn": true,
+    "validation_GT_training": false
+  },
+  "baseline": {
+    "label": "pixg5i_original_20261015_all",
+    "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_original_20261015/model_dir",
+    "fresh_quality": "complete_103_418",
+    "render_physical_GPU": 0,
+    "score_physical_GPU": 1,
+    "NR": 2.827770143571551,
+    "FR": 1.2795354723930359,
+    "S": 4.107305615964587
+  },
+  "training": {
+    "status": "COMPLETE_BOTH_100_AND_300",
+    "student_parameter_elements": 3786764,
+    "student_parameter_tensors": 112,
+    "original_step": 30000,
+    "fresh_optimizer": true,
+    "planned_stage_steps": 600,
+    "planned_gates": [
+      1,
+      100,
+      300,
+      600
+    ],
+    "two_losses": {
+      "mild": {
+        "teacher_L1": 1,
+        "LPIPS": 0.05,
+        "teacher_gradient_L1": 0.1
+      },
+      "medium": {
+        "teacher_L1": 1,
+        "LPIPS": 0.1,
+        "teacher_gradient_L1": 0.3
+      }
+    },
+    "NR_reward": false,
+    "teacher_fixed": true,
+    "validation_GT_training": false,
+    "completed_steps_per_run": 300,
+    "active": false,
+    "next_step": "No additional training in this iteration",
+    "next_step_requires_new_work": false
+  },
+  "HYPIR_model_preference_modified": false,
+  "score_estimate_claim": true,
+  "candidates": {
+    "mild": {
+      "label": "pixg5i_hypir_mild_s300_all",
+      "render": {
+        "status": "complete",
+        "completed": 103,
+        "total": 103,
+        "time": 1792057525.756135
+      },
+      "score": {
+        "status": "complete",
+        "completed": 103,
+        "expected": 103,
+        "last_split": "test",
+        "last_case": 100
+      },
+      "quality_result": {
+        "label": "pixg5i_hypir_mild_s300_all",
+        "status": "complete",
+        "completed": 103,
+        "expected": 103,
+        "official_full_count": true,
+        "validation": {
+          "clipiqa": 0.7854910294214884,
+          "dists": 0.2742493549982707,
+          "lpips": 0.351806640625,
+          "maniqa": 0.5105888644854227,
+          "musiq": 45.18815485636393,
+          "niqe": 4.82837576028761,
+          "n": 3,
+          "fr": 1.3739440043767293,
+          "nr_val": 2.2651238664417894,
+          "score": 3.6390678708185185
+        },
+        "test": {
+          "clipiqa": 0.7867444443702698,
+          "maniqa": 0.5726793923974037,
+          "musiq": 43.40213441848755,
+          "niqe": 4.353539558708571,
+          "n": 100,
+          "nr": 2.358091225081692
+        },
+        "S_proxy": 3.732035229458421,
+        "S_proxy_scope": "full100_test_NR_plus3val_FR"
+      }
+    },
+    "medium": {
+      "label": "pixg5i_hypir_medium_s300_all",
+      "render": {
+        "status": "complete",
+        "completed": 103,
+        "total": 103,
+        "time": 1792057528.0354185
+      },
+      "score": {
+        "status": "complete",
+        "completed": 103,
+        "expected": 103,
+        "last_split": "test",
+        "last_case": 100
+      },
+      "quality_result": {
+        "label": "pixg5i_hypir_medium_s300_all",
+        "status": "complete",
+        "completed": 103,
+        "expected": 103,
+        "official_full_count": true,
+        "validation": {
+          "clipiqa": 0.8054978450139364,
+          "dists": 0.27339641253153485,
+          "lpips": 0.3530680338541667,
+          "maniqa": 0.5352087418238322,
+          "musiq": 44.292808532714844,
+          "niqe": 4.643021686912043,
+          "n": 3,
+          "fr": 1.3735355536142984,
+          "nr_val": 2.3193325034737127,
+          "score": 3.692868057088011
+        },
+        "test": {
+          "clipiqa": 0.8036075112223625,
+          "maniqa": 0.5948049008846283,
+          "musiq": 42.67413864135742,
+          "niqe": 4.1901175625334695,
+          "n": 100,
+          "nr": 2.406142042267218
+        },
+        "S_proxy": 3.7796775958815165,
+        "S_proxy_scope": "full100_test_NR_plus3val_FR"
+      }
+    }
+  },
+  "status": "COMPLETE_DISTILLATION_FULL_SCORING_AND_SINGLE_GPU_TIMING",
+  "result": {
+    "status": "COMPLETE_DISTILLATION_FULL_SCORING_AND_SINGLE_GPU_TIMING",
+    "completed_at_Asia_Shanghai": "2026-10-15T19:45:09.876745+08:00",
+    "archive": "/Users/hezihao/Downloads/赛题二_pixG5i_g_b4e0686c.zip",
+    "archive_sha256": "f8e154da5ea9cb2fe165a316f824003459661945e6bbe22efd025d8592d573d6",
+    "student_parameters": 3786764,
+    "architecture_unchanged": true,
+    "teacher": "HYPIR latest fixed 23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+    "real_distillation_steps": [
+      100,
+      300
+    ],
+    "NR_training_reward": false,
+    "validation_GT_training": false,
+    "quality_count_per_model": "103 images / 418 scalar metrics",
+    "formal_timing": "same physical A100 GPU0; original benchmark n200/warm30/seed231; common min bracketing G4 p10",
+    "models": [
+      {
+        "label": "original",
+        "NR": 2.827770143571551,
+        "FR": 1.2795354723930359,
+        "S": 4.107305615964587,
+        "event_p10_ms": 0.7208960056304932,
+        "tool_estimate": 153.36911074227373
+      },
+      {
+        "label": "mild300",
+        "NR": 2.358091225081692,
+        "FR": 1.3739440043767293,
+        "S": 3.732035229458421,
+        "event_p10_ms": 0.719871997833252,
+        "tool_estimate": 118.26439060912479
+      },
+      {
+        "label": "medium300",
+        "NR": 2.406142042267218,
+        "FR": 1.3735355536142984,
+        "S": 3.7796775958815165,
+        "event_p10_ms": 0.7229440212249756,
+        "tool_estimate": 122.16443662327818
+      }
+    ],
+    "selected_for_presentation": "medium300 trial only",
+    "quality_conclusion": "Dense artificial texture and some pitting are reduced, with increased smoothing. Text swelling, fused/thick bars, leaf/background structural loss and edge artifacts remain. Teacher structural quality not recovered. NR and total estimated score decline; FR improves.",
+    "original_model_preserved": true,
+    "HYPIR_teacher_preference_unchanged": true,
+    "active_training": false,
+    "active_GPU_jobs": false,
+    "formal_proof": {
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/calibration/pixg5i_s300_formal_20261015/s300_formal_cpu.json",
+      "sha256": "754c56165dc234c967646905698343c8fd95a87649b0f748aebb215ac6f23eab"
+    },
+    "gallery": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/selected_medium300_vs_original_teacher/index.html"
+  },
+  "active_training": false,
+  "active_GPU_jobs": false
+}

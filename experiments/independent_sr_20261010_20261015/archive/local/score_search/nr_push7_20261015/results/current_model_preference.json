@@ -1,0 +1,65 @@
+{
+  "schema": "current_model_visual_preference_v3",
+  "resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/resume_step7850.pt",
+  "resume_sha256": "35e339656581c89c772e6d9b00592a73cd397481f00d4d9bfd78c4bab7d05745",
+  "score_target_subject_to_visual_quality": true,
+  "user_feedback": "感觉有点推过了，出现伪影了，previous model output目前看是比较好的",
+  "scope_correction": "先别做轻量保真网络，这个是用于教师的hypir，不要蒸馏",
+  "future_priority": [
+    "Preserve the visual quality of HYPIR A7750",
+    "Reject newly visible text deformation, bent straight lines, smearing or dense artificial texture",
+    "Seek tool-score improvement only within the visual-quality constraint"
+  ],
+  "fixed_visual_cases": [
+    7,
+    16,
+    41,
+    83
+  ],
+  "status": "BEST_VALIDATED_CURRENT_MATCHED_HYPIR_NR_CANDIDATE",
+  "preferred_label": "push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+  "preferred_name": "HYPIR教师末端LoRA NR微调100步",
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae/model_dir",
+  "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/step7850.pth",
+  "checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+  "NR": 2.3267079146643903,
+  "FR": 1.4491248528162637,
+  "S_proxy": 3.775832767480654,
+  "tool_prediction": 61.203792053984166,
+  "event_p10_ms": 32.78950500488281,
+  "quality_dir": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+  "render_dir": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render",
+  "quality_reused": false,
+  "PNG_exact": false,
+  "distillation": false,
+  "lightweight_model": false,
+  "model_family": "HYPIR teacher",
+  "teacher_weights_changed": true,
+  "source_selection": "/cache/independent_sr_cuda_20261013/results/nr_push7_lastres_lr5e6_selection.json",
+  "source_selection_local": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/results/nr_push7_lastres_lr5e6_selection.json",
+  "source_selection_sha256": "20432acddbc1fae82ec6c073131e8669b7e2b5306d40f3514841c8d5da6ab073",
+  "score_target": 65,
+  "score_target_achieved": false,
+  "previous_preference": {
+    "path": "/cache/independent_sr_cuda_20261013/results/current_preference_before_lastres_lr5e6.json",
+    "sha256": "a9c0ca6f23694fa2c480c0ee996c4309e13befbffb56abca3d1059604dab0912",
+    "historical_tool_prediction": 62.95369508917984,
+    "score_scope": "Previous instance and previous G4 reference; preserved, not used in this comparison"
+  },
+  "updated_utc": "2026-10-15T08:44:00.460157+00:00",
+  "score_context": "Fresh recovered instance; both models full103/418, same GPU0 200/30/231; preselected common min of bracketing G4 p10s",
+  "same_batch_baseline": {
+    "NR": 2.319338811831183,
+    "FR": 1.4415876865386963,
+    "S_full": 3.760926498369879,
+    "event_p10_ms": 32.80384063720703,
+    "normalized_g_ms": 21.777737141362998,
+    "original_tool_prediction": 60.569434638579615,
+    "reaches65": false,
+    "G4_endpoint_predictions": {
+      "g4_pre": 62.28071921837742,
+      "g4_post": 60.569434638579615
+    }
+  },
+  "score_gain": 0.6343574154045513
+}

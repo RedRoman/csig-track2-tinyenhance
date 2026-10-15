@@ -1,0 +1,105 @@
+{
+  "schema": "nr_push5_independent_final_backup_receipt_v1",
+  "status": "verified_complete",
+  "scope": "selected_portable_student_resume_reference_and_four_previews",
+  "destination": "/temp/independent_sr_cuda_20261013_artifacts/nr_push5_20261014",
+  "manifest_sha256": "dd1c4201736386223cc162a0d57fc8d9c87cb6b07c1d1146ac11165ba8c0eb87",
+  "DONE_sha256": "5f893666e3fa16a4e4666e3ee666dedb126697061542ea9753aff8f8f447f495",
+  "files": 83,
+  "bytes": 141526567,
+  "selected_local_step": 250,
+  "selected_optimizer_step": 250,
+  "selected_raw_sha256": "8c95e115e12219bca8bea2b2d04e0a01552f072de56619fab878ae61a9643237",
+  "selected_resume_sha256": "38e2d27d200fb85a654da137935b1943f223c484570b84643f03b237f098d9fb",
+  "predicted_tool_score": 128.4293835584416,
+  "full103_PNGs_persisted": false,
+  "verified_utc": "2026-10-14T15:15:37.146183+00:00",
+  "verification_started_utc": "2026-10-14T15:15:36.635373+00:00",
+  "CPU_only": true,
+  "CUDA_context_initialized": false,
+  "all_file_actual_SFS_bytes_full_SHA_and_size_reread": true,
+  "actual_physical_inventory_equal_manifest_plus_heads": true,
+  "tensor_archive_count": 3,
+  "persisted_preview_PNG_count": 4,
+  "duplicate_raw_persisted": false,
+  "raw_exact_bytes_available_as_deployment_modelpth": true,
+  "full_metric_rows": 103,
+  "full_metric_scalars": 418,
+  "NR": 2.475466363858716,
+  "FR": 1.3665044506390889,
+  "S_proxy": 3.841970814497805,
+  "full103_original_PNGs_rehashed_in_this_postcommit_verifier": false,
+  "full103_actual_PNG_audit_bound_to_archived_manifest": true,
+  "selected_training_audit_sha256": "113dae57958284e6dc6ee32d036e663ea846f7703607132109484c13aa4ee9b1",
+  "selected_full_audit_sha256": "da93f0d71954164226f95dce57081e15b3c7347d0fb66677f39ac0c14ca8e8e0",
+  "paired_prediction_sha256": "6cb05c63189c6e2c0a3804ee5534463c2fac80a30d3004bdfb42c4d7bb41fd51",
+  "selection_sha256": "aedfa48c0bc557efc97545a0d3259372598e6c3ec1e39a5c4db5371994e9c99a",
+  "report_sha256": "e6b73dd38d2f2090b41e1e86de0bffab96c16165817f44eb308f6df7eca9f426",
+  "selection_and_report_source_bytes_match_archive": true,
+  "previous_backup_heads_reverified": [
+    {
+      "prefix": "nr_microtune_20261014",
+      "manifest_sha256": "99f461e6e95045cf0af053dc3b24bde74cd3531715225d0ccf95eef2d2dbd0d4",
+      "DONE_sha256": "92cadf2e81aba1864e027e1fded512c008b15585018e1c1eda7d9658b45b8d12"
+    },
+    {
+      "prefix": "nr_push2_20261014",
+      "manifest_sha256": "ef284432a338b0a4574f52be645f4a40571ef94e775e1e39a2c0d1cfc1d13e8d",
+      "DONE_sha256": "0a9cb512123ca402baaf43e21db2204853b2033fbcb61a1739f802306b36703f"
+    },
+    {
+      "prefix": "nr_push3_20261014",
+      "manifest_sha256": "6c4cc6db3d963762cb1868d83d89969083326cc0e3932d64743a23b598c48eaa",
+      "DONE_sha256": "15846dd6f53e3327bf7331d00a27d4928b2078edca4244ee29186623cf85655d"
+    },
+    {
+      "prefix": "nr_push4_20261014",
+      "manifest_sha256": "3e1c41dc447fcb242aac85d7e6834b7bcb5f6d3f5a23ff63f255e682506cd35a",
+      "DONE_sha256": "ac09208eef5b26f75f5bdf55ccfc5a02b694673ed3540df67607a5a6488e722f"
+    }
+  ],
+  "SFS_free_bytes_at_independent_verify": 374341632,
+  "self_chosen_reserve_bytes": 134217728,
+  "reserve_is_user_requirement": false,
+  "root_backup_exit": {
+    "session_id": 7198,
+    "exit_code": 0,
+    "status": "root_observed_exit0_after_commit",
+    "manifest_sha256": "dd1c4201736386223cc162a0d57fc8d9c87cb6b07c1d1146ac11165ba8c0eb87",
+    "log": "/cache/push5_backup_execute.log",
+    "log_sha256": "8ef397bd031cf9984efd3ee1244a886519d43fffe685a16879155318ff9169b9",
+    "utc": "2026-10-14T15:14:05.486876+00:00"
+  },
+  "root_backup_exit_marker_sha256": "13ba39623b35f2f6da6cef81955a0bfe3adecb248bcc0a81a7382e3a9f098c17",
+  "root_backup_log_sha256": "8ef397bd031cf9984efd3ee1244a886519d43fffe685a16879155318ff9169b9",
+  "root_backup_log_commit_matches_DONE": true,
+  "selected_backup_plan_sha256": "8dab16796de298b87c3b6072e9bc769be263c77e5bdfc56d60213cfae8c6b575",
+  "GPU_process_evidence": {
+    "start": {
+      "NVML_visible_compute_processes": [],
+      "all_GPUs_have_no_visible_compute_processes": true
+    },
+    "end": {
+      "NVML_visible_compute_processes": [],
+      "all_GPUs_have_no_visible_compute_processes": true
+    }
+  },
+  "verification_script": "/cache/push5_verify_final_20261014.py",
+  "verification_script_sha256": "0f6a4ee54095c825b86dbcd6923709c18f1d0e76673279b7d9c7e543f33e749d",
+  "verification_scope": "Postcommit independent complete SFS byte reread; original training and native103 audit are bound by their retained proof hashes. No CUDA imports or SFS writes. Receipt is new cache metadata only.",
+  "backup": {
+    "status": "verified_complete",
+    "scope": "selected_portable_student_resume_reference_and_four_previews",
+    "destination": "/temp/independent_sr_cuda_20261013_artifacts/nr_push5_20261014",
+    "manifest_sha256": "dd1c4201736386223cc162a0d57fc8d9c87cb6b07c1d1146ac11165ba8c0eb87",
+    "DONE_sha256": "5f893666e3fa16a4e4666e3ee666dedb126697061542ea9753aff8f8f447f495",
+    "files": 83,
+    "bytes": 141526567,
+    "selected_local_step": 250,
+    "selected_optimizer_step": 250,
+    "selected_raw_sha256": "8c95e115e12219bca8bea2b2d04e0a01552f072de56619fab878ae61a9643237",
+    "selected_resume_sha256": "38e2d27d200fb85a654da137935b1943f223c484570b84643f03b237f098d9fb",
+    "predicted_tool_score": 128.4293835584416,
+    "full103_PNGs_persisted": false
+  }
+}

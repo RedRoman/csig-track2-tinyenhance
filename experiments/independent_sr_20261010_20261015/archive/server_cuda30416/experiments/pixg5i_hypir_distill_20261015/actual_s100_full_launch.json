@@ -1,0 +1,90 @@
+[
+  {
+    "name": "mild",
+    "task": "render",
+    "pid": 58132,
+    "args": [
+      "/cache/independent_sr_cuda_20261013/env/bin/python",
+      "-u",
+      "/cache/independent_sr_cuda_20261013/code/render_cuda_submission.py",
+      "--model-dir",
+      "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_mild_s100/model_dir",
+      "--test-dir",
+      "/cache/independent_sr_cuda_20261013/source_payload/assets/input",
+      "--val-dir",
+      "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/\u9a8c\u8bc1\u96c6",
+      "--out-dir",
+      "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_mild_s100_all",
+      "--cases",
+      "all"
+    ],
+    "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_mild_s100_full_render_20261015.log",
+    "physical_GPU": 0,
+    "launch_utc": "2026-10-15T09:29:51.143532+00:00",
+    "candidate_manifest_sha256": "f1d5ca308f00f118a2d03bb7c87ee612c182410df1437f9c4ac52df082f5c739"
+  },
+  {
+    "name": "mild",
+    "task": "score",
+    "pid": 58133,
+    "args": [
+      "/cache/independent_sr_cuda_20261013/env/bin/python",
+      "-u",
+      "/cache/independent_sr_cuda_20261013/code/score_cuda_stream.py",
+      "--tool-dir",
+      "/cache/independent_sr_cuda_20261013/scoring_tool",
+      "--evaluation",
+      "pixg5i_hypir_mild_s100_all=/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_mild_s100_all/render",
+      "--out-root",
+      "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations"
+    ],
+    "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_mild_s100_full_score_20261015.log",
+    "physical_GPU": 1,
+    "launch_utc": "2026-10-15T09:29:51.144285+00:00",
+    "candidate_manifest_sha256": "f1d5ca308f00f118a2d03bb7c87ee612c182410df1437f9c4ac52df082f5c739"
+  },
+  {
+    "name": "medium",
+    "task": "render",
+    "pid": 58134,
+    "args": [
+      "/cache/independent_sr_cuda_20261013/env/bin/python",
+      "-u",
+      "/cache/independent_sr_cuda_20261013/code/render_cuda_submission.py",
+      "--model-dir",
+      "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s100/model_dir",
+      "--test-dir",
+      "/cache/independent_sr_cuda_20261013/source_payload/assets/input",
+      "--val-dir",
+      "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/\u9a8c\u8bc1\u96c6",
+      "--out-dir",
+      "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_medium_s100_all",
+      "--cases",
+      "all"
+    ],
+    "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_medium_s100_full_render_20261015.log",
+    "physical_GPU": 2,
+    "launch_utc": "2026-10-15T09:29:51.145138+00:00",
+    "candidate_manifest_sha256": "d69d5c87ab7a6cabb5ca4fa6b0f91b1d4db3ae958d0afe76ac91e06516b25ce7"
+  },
+  {
+    "name": "medium",
+    "task": "score",
+    "pid": 58135,
+    "args": [
+      "/cache/independent_sr_cuda_20261013/env/bin/python",
+      "-u",
+      "/cache/independent_sr_cuda_20261013/code/score_cuda_stream.py",
+      "--tool-dir",
+      "/cache/independent_sr_cuda_20261013/scoring_tool",
+      "--evaluation",
+      "pixg5i_hypir_medium_s100_all=/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_medium_s100_all/render",
+      "--out-root",
+      "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations"
+    ],
+    "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_medium_s100_full_score_20261015.log",
+    "physical_GPU": 3,
+    "launch_utc": "2026-10-15T09:29:51.145759+00:00",
+    "candidate_manifest_sha256": "d69d5c87ab7a6cabb5ca4fa6b0f91b1d4db3ae958d0afe76ac91e06516b25ce7"
+  }
+]

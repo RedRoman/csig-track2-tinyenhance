@@ -1,0 +1,83 @@
+{
+  "status": "PASS_CPU_PREPARATION_ONLY",
+  "schema": "hypir_trt_hybrid_cpu_preparation_v1",
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/model_dir",
+  "CPU_only": true,
+  "Torch_imported": false,
+  "TRT_imported": false,
+  "GPU_executed": false,
+  "no_training": true,
+  "no_distillation": true,
+  "original_DFD_source_byte_identical": true,
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "encoder_manifest_IO": [
+    [
+      1,
+      3,
+      512,
+      512
+    ],
+    [
+      1,
+      8,
+      64,
+      64
+    ]
+  ],
+  "decoder_manifest_IO": [
+    [
+      1,
+      4,
+      64,
+      64
+    ],
+    [
+      1,
+      3,
+      512,
+      512
+    ]
+  ],
+  "actual_runtime_IO_RNG_restore_and_output_ownership": "Strictly guarded in Runner but not executed by this CPU audit; root must GPU smoke",
+  "quality_reuse_claim": false,
+  "requires_new_actual_quality_evaluation": true,
+  "file_records": {
+    "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/model_dir/runner.py": {
+      "sha256": "2bc74f65029c5c95c9a8c285bf7db1c63b03a15fb9fa06cd56d93cf6b1fe2fc9",
+      "bytes": 9006
+    },
+    "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/model_dir/config.json": {
+      "sha256": "661bf9bd6a7ecb2ae5b475dda9dcd855700bb52be87ab0f2b6d97740f32308f4",
+      "bytes": 1752
+    },
+    "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/model_dir/reference_runner.py": {
+      "sha256": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b",
+      "bytes": 9504
+    },
+    "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/model_dir/trt_vae_runtime_v2.py": {
+      "sha256": "dc2597edfe8a7d71526535bd4e7540bd9c7623de00b6639c61139e08837aa9a4",
+      "bytes": 4634
+    },
+    "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine": {
+      "sha256": "14c206896a7caa6b6491dae33133d149283025cfb8e15b6cf129d8854176ba55",
+      "bytes": 71304884
+    },
+    "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component_manifest.json": {
+      "sha256": "21d3781a5cc092062d4ef87844e74ce916c461ea5b9939658917333d74a2f0ae",
+      "bytes": 8300
+    },
+    "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine": {
+      "sha256": "fe81087086d76aa8d0111cb80070b65b897e0438ebb2a8a020ef0ced8bc6bf30",
+      "bytes": 102396372
+    },
+    "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component_manifest.json": {
+      "sha256": "1a3a349641e65ca5ad5d92301b25b3b1eae214e760645b5a7c294460f0ac08fd",
+      "bytes": 8483
+    },
+    "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/candidate_manifest.json": {
+      "sha256": "4f8ee8866e5d740f7cfbcfe89c6bf9a07e155a0a60469c4e9cb1361d8f789429",
+      "bytes": 2503
+    }
+  },
+  "auditor_source_sha256": "b568f634224d3c8862868c0f367e3ee77aa2d7519598b54aed41aa7a7882b9a5"
+}

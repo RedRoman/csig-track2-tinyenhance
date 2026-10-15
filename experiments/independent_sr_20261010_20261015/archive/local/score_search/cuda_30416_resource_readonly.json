@@ -1,0 +1,71 @@
+{
+  "port": 30416,
+  "ssh_alias": "huawei-modelarts-31514",
+  "hostname": "os-node-created-slr9d",
+  "remote_user": "ma-user",
+  "inspection": "Read-only hardware, directory and installed-package checks. No model inference, GPU allocation workload, dependency installation or remote file mutation was performed.",
+  "gpu": {
+    "count": 4,
+    "name": "NVIDIA A100-SXM4-80GB",
+    "total_memory_mib_each": 81920,
+    "observed_used_memory_mib_each": 0,
+    "observed_utilization_percent_each": 0,
+    "observed_compute_processes": [],
+    "driver_version": "580.126.20",
+    "recommended_fixed_device": 0,
+    "availability_caveat": "An inspection-time snapshot; later launch should recheck occupancy."
+  },
+  "system_python": {
+    "path": "/usr/bin/python3",
+    "version": "3.10.12",
+    "torch": "absent"
+  },
+  "usable_cuda_python": {
+    "path": "/home/ma-user/miniconda3/bin/python",
+    "version": "3.13.5",
+    "torch": "2.8.0+cu128",
+    "torch_cuda_version": "12.8",
+    "cuda_is_available": true,
+    "cuda_device_count": 4,
+    "torchvision": "0.23.0+cu128",
+    "diffusers": "0.35.1",
+    "transformers": "4.56.2",
+    "accelerate": "1.10.1",
+    "safetensors": "0.6.2",
+    "einops": "0.8.1",
+    "Pillow": "11.3.0",
+    "numpy": "2.3.3",
+    "huggingface_hub": "0.35.1",
+    "missing": ["peft", "omegaconf", "xformers", "pyiqa"]
+  },
+  "mounts": {
+    "/cache": {
+      "type": "ext4",
+      "availability_1024_blocks": 10840154364,
+      "shared_stage_visible": false,
+      "observation": "Local filesystem; top-level contents empty at inspection time."
+    },
+    "/temp": {
+      "type": "nfs",
+      "availability_1024_blocks": 63437824,
+      "capacity_percent": 96,
+      "shared_stage_visible": true
+    }
+  },
+  "sd2_base": {
+    "usable_path": "/temp/zihaohe_stage/baselines/sd21b",
+    "unet_weights": "/temp/zihaohe_stage/baselines/sd21b/unet/diffusion_pytorch_model.safetensors",
+    "vae_weights": "/temp/zihaohe_stage/baselines/sd21b/vae/diffusion_pytorch_model.safetensors",
+    "text_encoder_weights": "/temp/zihaohe_stage/baselines/sd21b/text_encoder/model.safetensors",
+    "observation": "Config, tokenizer, scheduler, feature extractor and unet/vae/text encoder safetensors files are present; weights are real files rather than symbolic links. Not loaded or hashed during this inspection.",
+    "incomplete_other_path": "/temp/zihaohe_stage/baselines/models/stable-diffusion-2-1-base",
+    "incomplete_other_contents": ["feature_extractor", "model_index.json", "scheduler", "tokenizer"]
+  },
+  "hypir_source_path": "/temp/zihaohe_stage/baselines/StrSR-main/HYPIR",
+  "hypir_source_caveat": "An existing StrSR internal HYPIR source tree; not verified as identical to the original independent_sr experiment. Prefer the experiment's deployment runner/source for calibrated comparison.",
+  "conda_envs": {
+    "directory": "/home/ma-user/miniconda3/envs",
+    "symlink_target": "/cache/envs",
+    "registered_but_unavailable_env": "/home/ma-user/miniconda3/envs/pt28"
+  }
+}

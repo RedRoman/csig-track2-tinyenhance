@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "CPU_only": true,
+  "CUDA_context_initialized": false,
+  "script_sha256": "1b9a1df4ec15e346655d1e4a5e2bfef1b4551a8847f9604aa4eadea42a90ad0e",
+  "original_tiler_source": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py",
+  "original_tiler_source_sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923",
+  "original_tiler_used_without_mutation": true,
+  "FP64_overlapping_CopySlices_gradcheck": true,
+  "checkpoint_tests": [
+    {
+      "dtype": "torch.float64",
+      "output_dtype": "torch.float64",
+      "plain_calls": 6,
+      "checkpoint_calls": 12,
+      "checkpoint_outputs_exact": true,
+      "input_and_FP32_parameter_gradients_exact": true,
+      "finite_nonzero_gradients": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "output_dtype": "torch.float32",
+      "plain_calls": 6,
+      "checkpoint_calls": 12,
+      "checkpoint_outputs_exact": true,
+      "input_and_FP32_parameter_gradients_exact": true,
+      "finite_nonzero_gradients": true
+    }
+  ],
+  "scope": "Small original-tiler CPU autograd/control only; actual CUDA full-HYPIR NR preflight remains required"
+}

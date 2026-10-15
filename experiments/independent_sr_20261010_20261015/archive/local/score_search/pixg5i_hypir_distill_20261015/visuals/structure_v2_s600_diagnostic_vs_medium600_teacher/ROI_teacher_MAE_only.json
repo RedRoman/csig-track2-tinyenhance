@@ -1,0 +1,35 @@
+{
+  "scope": "Only four fixed RGB native ROIs with fixed teacher pseudo target; diagnostic300 and600 versus full-reference crop cache. No full score or structure recovery proof.",
+  "source_proof_sha256": "7b66e9eeee4c0b48bdac3b74b933e6c0afd7c88ceaa7316d76925af173bb0946",
+  "phase300_source_proof_sha256": "39cba49e5c18d0aba6706acbb22fadfa704337bc01803fef97e8063030f72715",
+  "ROI_MAE": [
+    {
+      "case": 7,
+      "medium600_to_teacher_MAE255": 11.324417114257812,
+      "phase300_to_teacher_MAE255": 10.465425491333008,
+      "phase600_to_teacher_MAE255": 10.334752082824707,
+      "phase300_vs600_MAE255": 1.2888044118881226
+    },
+    {
+      "case": 16,
+      "medium600_to_teacher_MAE255": 12.013654708862305,
+      "phase300_to_teacher_MAE255": 11.536622047424316,
+      "phase600_to_teacher_MAE255": 11.411165237426758,
+      "phase300_vs600_MAE255": 1.1456491947174072
+    },
+    {
+      "case": 41,
+      "medium600_to_teacher_MAE255": 8.477609634399414,
+      "phase300_to_teacher_MAE255": 8.113860130310059,
+      "phase600_to_teacher_MAE255": 8.012664794921875,
+      "phase300_vs600_MAE255": 1.029358983039856
+    },
+    {
+      "case": 83,
+      "medium600_to_teacher_MAE255": 10.04261302947998,
+      "phase300_to_teacher_MAE255": 9.149356842041016,
+      "phase600_to_teacher_MAE255": 8.807145118713379,
+      "phase300_vs600_MAE255": 1.5103576183319092
+    }
+  ]
+}

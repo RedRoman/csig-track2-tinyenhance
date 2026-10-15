@@ -1,0 +1,48 @@
+{
+  "scope": "Fixed12 cases, native resolution, Ascend FP32; NOT official score or test100 score; cross-device numerical parity not established",
+  "cases": [
+    7,
+    16,
+    17,
+    18,
+    23,
+    24,
+    25,
+    28,
+    32,
+    33,
+    41,
+    44
+  ],
+  "protocol": "JPEG100/subsampling0; seed1234 per image; MANIQA100 weighted crops microbatch4; MUSIQ chunks with no resizing",
+  "means": {
+    "0": {
+      "niqe": 3.5754047433535256,
+      "musiq": 44.384469985961914,
+      "maniqa": 0.3917669951915741,
+      "clipiqa": 0.6554642717043558,
+      "NR_subset": 2.133535492420197
+    },
+    "1000": {
+      "niqe": 3.7425947189331055,
+      "musiq": 42.84218724568685,
+      "maniqa": 0.47650868942340213,
+      "clipiqa": 0.7360361615816752,
+      "NR_subset": 2.266707251568635
+    },
+    "4000": {
+      "niqe": 3.569192032019297,
+      "musiq": 45.84073877334595,
+      "maniqa": 0.4251003861427307,
+      "clipiqa": 0.6899247566858927,
+      "NR_subset": 2.216513327360153
+    },
+    "8000": {
+      "niqe": 3.6172229846318564,
+      "musiq": 46.20992660522461,
+      "maniqa": 0.4476517190535863,
+      "clipiqa": 0.7136194755633672,
+      "NR_subset": 2.261648162206014
+    }
+  }
+}

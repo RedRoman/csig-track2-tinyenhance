@@ -1,0 +1,100 @@
+{
+  "schema": "push7_original_niqe_cpu_input_gradient_probe_v1",
+  "status": "COMPLETED_CPU_ONLY",
+  "CPU_only": true,
+  "CUDA_initialized": false,
+  "Torch_threads": 1,
+  "torch": "2.8.0+cu128",
+  "pyiqa": "0.1.10",
+  "installed_source_sha256": {
+    "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/niqe_arch.py": "cad3765957607f4ce2a58f76572f75d1d658d68a296d54e7a92e9e062107b7d0",
+    "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/func_util.py": "3e0ea50d455e426fca9565dc7c599ec37648fbdcf7c4d5a0a4b41134a62ec3ab",
+    "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/models/inference_model.py": "29b6d8ad8f67a940aa866f9911ef733632a1cf01f71caf400ba0c818f30dc23a",
+    "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/functions.py": "20257b4e2b432b018fa369319dc10a6aa91d75485e7743d7339b6efcec2467fd"
+  },
+  "NIQE_parameters": {
+    "path": "/cache/independent_sr_cuda_20261013/scoring_tool/weights/torch/hub/checkpoints/niqe_modelparameters.mat",
+    "sha256": "fa2aa4d12dd9595c3fb6bf8b4e1a15c79d5d1469238d0901c88dead195be578d"
+  },
+  "probe_source_sha256": "ea163daccc661e3e0ca1e466817c2f89806a9d936786cab0eb8a2f3fba036f3b",
+  "results": [
+    {
+      "kind": "textured",
+      "size": 384,
+      "input_rgb_sha256": "6bc1a566d2b93e1bc5d31401ce7b2463d14ccffe0ae610c26444038a1527ad04",
+      "forward": 32.75786152240347,
+      "as_loss_false": 32.75786152240347,
+      "forward_exact_equal": true,
+      "as_loss_true_requires_grad": true,
+      "as_loss_false_requires_grad": false,
+      "output_dtype": "torch.float64",
+      "gradient_dtype": "torch.float32",
+      "gradient_finite": true,
+      "gradient_nonzero_elements": 442368,
+      "gradient_L2": 70.2284189820433,
+      "gradient_max_abs": 2.2599081993103027,
+      "NIQE_over10_gradient_L2": 7.022841898204329,
+      "coefficient_in_loss_when_reward_point05": 0.005,
+      "coefficient_in_loss_when_reward_point1": 0.01,
+      "status": "PASS_FINITE_NONZERO_INPUT_GRADIENT",
+      "actual_original_forward_downhill_sign_probes": [
+        {
+          "epsilon": 0.00392156862745098,
+          "NIQE_after_negative_sign_step": 22.12075029362368,
+          "delta": -10.637111228779794
+        },
+        {
+          "epsilon": 0.00784313725490196,
+          "NIQE_after_negative_sign_step": 20.861437962204235,
+          "delta": -11.896423560199239
+        }
+      ],
+      "CPU_seconds": 0.5308783398941159
+    },
+    {
+      "kind": "textured",
+      "size": 512,
+      "input_rgb_sha256": "c1b9f71f2b2531496d61218d9ff1461d07d276328da3b1d66f62db66b2591192",
+      "forward": 35.571094399241794,
+      "as_loss_false": 35.571094399241794,
+      "forward_exact_equal": true,
+      "as_loss_true_requires_grad": true,
+      "as_loss_false_requires_grad": false,
+      "output_dtype": "torch.float64",
+      "gradient_dtype": "torch.float32",
+      "gradient_finite": true,
+      "gradient_nonzero_elements": 691200,
+      "gradient_L2": 63.24845261965025,
+      "gradient_max_abs": 1.9442312717437744,
+      "NIQE_over10_gradient_L2": 6.3248452619650255,
+      "coefficient_in_loss_when_reward_point05": 0.005,
+      "coefficient_in_loss_when_reward_point1": 0.01,
+      "status": "PASS_FINITE_NONZERO_INPUT_GRADIENT",
+      "actual_original_forward_downhill_sign_probes": [
+        {
+          "epsilon": 0.00392156862745098,
+          "NIQE_after_negative_sign_step": 22.107027896899826,
+          "delta": -13.464066502341968
+        },
+        {
+          "epsilon": 0.00784313725490196,
+          "NIQE_after_negative_sign_step": 20.37929278414866,
+          "delta": -15.191801615093134
+        }
+      ],
+      "CPU_seconds": 0.9030260250438005
+    },
+    {
+      "kind": "flat",
+      "size": 384,
+      "input_rgb_sha256": "fc38f9d2865bb5d1b21d4e42d4c42138c4f60aa3d0445bdd23e1f72d3bc2382f",
+      "status": "FORWARD_OR_BACKWARD_FAILED",
+      "error_type": "_LinAlgError",
+      "error": "linalg.svd: (Batch element 0): The algorithm failed to converge because the input matrix contained non-finite values.",
+      "CPU_seconds": 0.12182159605436027
+    }
+  ],
+  "estimator": "Installed original NIQE unchanged; argmin alpha treated as piecewise constant and diff_round is installed STE. Gradient is not exact finite-difference derivative of quantized score.",
+  "previous_training_omission": "Frozen helper NAMES=[musiq,maniqa,clipiqa,lpips] and new directNR explicit three-score dict omitted NIQE; prior claim formal-only/no-gradient was not verified for this installed implementation.",
+  "proposed_only_if_stable": "Future HYPIR direct NR may add original niqe(as_lossTrue)/10 to loss with reward_weight; no new training launched. Crop statistics differ from native full score; exact formal original networks/formula remain unchanged."
+}

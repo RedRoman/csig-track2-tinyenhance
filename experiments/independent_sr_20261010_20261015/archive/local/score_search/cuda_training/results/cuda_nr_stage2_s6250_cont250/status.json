@@ -1,0 +1,28 @@
+{
+  "stage": "training",
+  "completed_local_steps": 192,
+  "total": 250,
+  "row": {
+    "local_step": 192,
+    "global_step": 6442,
+    "optimizer_step": 442,
+    "case": 11,
+    "crop_xy": [
+      11,
+      3271
+    ],
+    "loss": -0.0991063266992569,
+    "fidelity": 0.0017230845987796783,
+    "reward": 1.34439218044281,
+    "scores": {
+      "musiq": 0.6727105379104614,
+      "maniqa": 0.5975585579872131,
+      "clipiqa": 0.7412297129631042
+    },
+    "gradient_norm": 0.4019222855567932,
+    "nonzero_lora_gradients": 514,
+    "step_seconds": 0.8295724391937256,
+    "elapsed_seconds": 190.27422428131104,
+    "gpu_peak_allocated_bytes": 29950024192
+  }
+}

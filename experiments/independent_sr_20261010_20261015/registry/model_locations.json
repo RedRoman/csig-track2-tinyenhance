@@ -1,0 +1,2101 @@
+{
+  "snapshot_UTC": "2026-10-15T13:52:54.891115+00:00",
+  "large_weights_uploaded": false,
+  "current_HYPIR_preference": {
+    "schema": "current_model_visual_preference_v3",
+    "resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/resume_step7850.pt",
+    "resume_sha256": "35e339656581c89c772e6d9b00592a73cd397481f00d4d9bfd78c4bab7d05745",
+    "score_target_subject_to_visual_quality": true,
+    "user_feedback": "感觉有点推过了，出现伪影了，previous model output目前看是比较好的",
+    "scope_correction": "先别做轻量保真网络，这个是用于教师的hypir，不要蒸馏",
+    "future_priority": [
+      "Preserve the visual quality of HYPIR A7750",
+      "Reject newly visible text deformation, bent straight lines, smearing or dense artificial texture",
+      "Seek tool-score improvement only within the visual-quality constraint"
+    ],
+    "fixed_visual_cases": [
+      7,
+      16,
+      41,
+      83
+    ],
+    "status": "BEST_VALIDATED_CURRENT_MATCHED_HYPIR_NR_CANDIDATE",
+    "preferred_label": "push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+    "preferred_name": "HYPIR教师末端LoRA NR微调100步",
+    "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae/model_dir",
+    "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/step7850.pth",
+    "checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+    "NR": 2.3267079146643903,
+    "FR": 1.4491248528162637,
+    "S_proxy": 3.775832767480654,
+    "tool_prediction": 61.203792053984166,
+    "event_p10_ms": 32.78950500488281,
+    "quality_dir": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+    "render_dir": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render",
+    "quality_reused": false,
+    "PNG_exact": false,
+    "distillation": false,
+    "lightweight_model": false,
+    "model_family": "HYPIR teacher",
+    "teacher_weights_changed": true,
+    "source_selection": "/cache/independent_sr_cuda_20261013/results/nr_push7_lastres_lr5e6_selection.json",
+    "source_selection_local": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/results/nr_push7_lastres_lr5e6_selection.json",
+    "source_selection_sha256": "20432acddbc1fae82ec6c073131e8669b7e2b5306d40f3514841c8d5da6ab073",
+    "score_target": 65,
+    "score_target_achieved": false,
+    "previous_preference": {
+      "path": "/cache/independent_sr_cuda_20261013/results/current_preference_before_lastres_lr5e6.json",
+      "sha256": "a9c0ca6f23694fa2c480c0ee996c4309e13befbffb56abca3d1059604dab0912",
+      "historical_tool_prediction": 62.95369508917984,
+      "score_scope": "Previous instance and previous G4 reference; preserved, not used in this comparison"
+    },
+    "updated_utc": "2026-10-15T08:44:00.460157+00:00",
+    "score_context": "Fresh recovered instance; both models full103/418, same GPU0 200/30/231; preselected common min of bracketing G4 p10s",
+    "same_batch_baseline": {
+      "NR": 2.319338811831183,
+      "FR": 1.4415876865386963,
+      "S_full": 3.760926498369879,
+      "event_p10_ms": 32.80384063720703,
+      "normalized_g_ms": 21.777737141362998,
+      "original_tool_prediction": 60.569434638579615,
+      "reaches65": false,
+      "G4_endpoint_predictions": {
+        "g4_pre": 62.28071921837742,
+        "g4_post": 60.569434638579615
+      }
+    },
+    "score_gain": 0.6343574154045513
+  },
+  "latest_PixG5i_trial_selected": false,
+  "candidate_count": 24,
+  "registered_candidates": [
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/hypir_push7_a7750_lastconv_lr1e6_nr_s7800/candidate_manifest.json",
+      "manifest_sha256": "1c47e6d215ed0e2ff3f43436359ac110d5b8144ef7e354ea6c00bd683208a92a",
+      "fields": {
+        "schema": "hypir_lastconv_nr_candidate_v1",
+        "label": "push7_a7750_lastconv_lr1e6_nr_s7800",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastconv_lr1e6_nr_s7800/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_lr1e6_nr100/step7800.pth",
+        "checkpoint_sha256": "177e856ddad6574ba661a5c28b07d6848e60b3026e8ca729ad99769a06770b5f",
+        "model_type": "HYPIR_SD2_rank256_native512",
+        "local_step": 50,
+        "optimizer_step": 50,
+        "global_step": 7800,
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_lr1e6_nr100/config.json",
+            "sha256": "80becfa27ecf2e326d14f00146c16f51382da0111bf85779d049fc33a9be3c9a"
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_lr1e6_nr100/checkpoint_step7800.json",
+            "sha256": "49ba2f37db49a4e6940294b4bfef1287871d25204532856d78c9f1a4a2b67f54"
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_lr1e6_nr100/input_catalog.json",
+            "sha256": "5c2f945ce000314e802a9c2ddff2ebe91cf20edb65aff491b1d1c9fb4b9071ac"
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_lr1e6_nr100/resume_step7800.pt",
+            "sha256": "869b0fb4e008b69f229c8d2f7a97423af07bbd3c0a71bc65140116d712bb2f9a"
+          },
+          "parity_proof": {
+            "path": "/cache/independent_sr_cuda_20261013/analysis/push7/hypir_direct_nr/deployment_parity_probe_v1.json",
+            "sha256": "ddd34d2ea7e1ab834fa8928c6e39da417d3be40ce2f7307ae9c1172743e44950"
+          },
+          "sources": [
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+              "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py",
+              "sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py",
+              "sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py",
+              "sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py",
+              "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py",
+              "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py",
+              "sha256": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v3.py",
+              "sha256": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py",
+              "sha256": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py",
+              "sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v4.py",
+              "sha256": "5f2d40b41034db7f9ae5f6a5f64d90b77bff6bc849422e1fc03ba3eb1600f311"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v5.py",
+              "sha256": "4b5bdf40aab5d2fd35c92f8fc714c675e62bd86228bc3fb79e48e896b70278f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_lastconv_nr_lr1e6_v2.py",
+              "sha256": "8e8d5e1fcac90504d029c6df436172d9380d46ddc5b888dda01fd6b6528a25f7"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/deployment_fused_lora.py",
+              "sha256": "b215dc4247ecb06cd3040160b7671e8e3c956b090bef4909d3020e90b5719738"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_direct_nr_niqe768_v4.py",
+              "sha256": "3dd7388abd78659de9a22831ead98a75e88a9b8558473eb5cd7178a89e51b109"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/niqe_arch.py",
+              "sha256": "cad3765957607f4ce2a58f76572f75d1d658d68a296d54e7a92e9e062107b7d0"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/func_util.py",
+              "sha256": "3e0ea50d455e426fca9565dc7c599ec37648fbdcf7c4d5a0a4b41134a62ec3ab"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/models/inference_model.py",
+              "sha256": "29b6d8ad8f67a940aa866f9911ef733632a1cf01f71caf400ba0c818f30dc23a"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/functions.py",
+              "sha256": "20257b4e2b432b018fa369319dc10a6aa91d75485e7743d7339b6efcec2467fd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/utils/color_util.py",
+              "sha256": "0135950633f81ab6f12531c6bed00537fd0071b655215a58ffc19d4e8573e078"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/resize.py",
+              "sha256": "4760eedccf2ba9ccd60ea898cc0b58248157b997660f526ee6d5c080cfea0f84"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/padding.py",
+              "sha256": "e2f92917002e8e68020f30dea854c9678532a4d851d9564d6fc2726806fbe02e"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/math_util.py",
+              "sha256": "be5bdc9d4d15975d17c3c2ea45cbfe4d517b088ed909f4c96fff2052493ad279"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/hypir_push7_a7750_lastconv_lr1e6_nr_s7850/candidate_manifest.json",
+      "manifest_sha256": "45cee1c8e9af789c13a151a9954bbe443edeca5677c1d89d96c48f34433f777b",
+      "fields": {
+        "schema": "hypir_lastconv_nr_candidate_v1",
+        "label": "push7_a7750_lastconv_lr1e6_nr_s7850",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastconv_lr1e6_nr_s7850/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_lr1e6_nr100/step7850.pth",
+        "checkpoint_sha256": "3e6d8db1ee37901022423caf8708126be80c9a1457ca1a5eb82f206623c41ecd",
+        "model_type": "HYPIR_SD2_rank256_native512",
+        "local_step": 100,
+        "optimizer_step": 100,
+        "global_step": 7850,
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_lr1e6_nr100/config.json",
+            "sha256": "80becfa27ecf2e326d14f00146c16f51382da0111bf85779d049fc33a9be3c9a"
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_lr1e6_nr100/checkpoint_step7850.json",
+            "sha256": "3209831725febaff0ffb8946dc4b000a45b1e5729d7963bcd203e65ebd55a38c"
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_lr1e6_nr100/input_catalog.json",
+            "sha256": "5c2f945ce000314e802a9c2ddff2ebe91cf20edb65aff491b1d1c9fb4b9071ac"
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_lr1e6_nr100/resume_step7850.pt",
+            "sha256": "52b10bbe6f00dc9b137ce5b1fadf4fa2e9905f4fac6a8d9105f75ea709712cad"
+          },
+          "parity_proof": {
+            "path": "/cache/independent_sr_cuda_20261013/analysis/push7/hypir_direct_nr/deployment_parity_probe_v1.json",
+            "sha256": "ddd34d2ea7e1ab834fa8928c6e39da417d3be40ce2f7307ae9c1172743e44950"
+          },
+          "sources": [
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+              "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py",
+              "sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py",
+              "sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py",
+              "sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py",
+              "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py",
+              "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py",
+              "sha256": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v3.py",
+              "sha256": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py",
+              "sha256": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py",
+              "sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v4.py",
+              "sha256": "5f2d40b41034db7f9ae5f6a5f64d90b77bff6bc849422e1fc03ba3eb1600f311"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v5.py",
+              "sha256": "4b5bdf40aab5d2fd35c92f8fc714c675e62bd86228bc3fb79e48e896b70278f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_lastconv_nr_lr1e6_v2.py",
+              "sha256": "8e8d5e1fcac90504d029c6df436172d9380d46ddc5b888dda01fd6b6528a25f7"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/deployment_fused_lora.py",
+              "sha256": "b215dc4247ecb06cd3040160b7671e8e3c956b090bef4909d3020e90b5719738"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_direct_nr_niqe768_v4.py",
+              "sha256": "3dd7388abd78659de9a22831ead98a75e88a9b8558473eb5cd7178a89e51b109"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/niqe_arch.py",
+              "sha256": "cad3765957607f4ce2a58f76572f75d1d658d68a296d54e7a92e9e062107b7d0"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/func_util.py",
+              "sha256": "3e0ea50d455e426fca9565dc7c599ec37648fbdcf7c4d5a0a4b41134a62ec3ab"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/models/inference_model.py",
+              "sha256": "29b6d8ad8f67a940aa866f9911ef733632a1cf01f71caf400ba0c818f30dc23a"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/functions.py",
+              "sha256": "20257b4e2b432b018fa369319dc10a6aa91d75485e7743d7339b6efcec2467fd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/utils/color_util.py",
+              "sha256": "0135950633f81ab6f12531c6bed00537fd0071b655215a58ffc19d4e8573e078"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/resize.py",
+              "sha256": "4760eedccf2ba9ccd60ea898cc0b58248157b997660f526ee6d5c080cfea0f84"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/padding.py",
+              "sha256": "e2f92917002e8e68020f30dea854c9678532a4d851d9564d6fc2726806fbe02e"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/math_util.py",
+              "sha256": "be5bdc9d4d15975d17c3c2ea45cbfe4d517b088ed909f4c96fff2052493ad279"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/hypir_push7_a7750_lastconv_nr_s7800/candidate_manifest.json",
+      "manifest_sha256": "a1875fac6fa200efbfc933fe4f9e8f9be30b28217ae9601ce4a9f8cd231fb2fd",
+      "fields": {
+        "schema": "hypir_lastconv_nr_candidate_v1",
+        "label": "push7_a7750_lastconv_nr_s7800",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastconv_nr_s7800/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_nr100/step7800.pth",
+        "checkpoint_sha256": "4370e553762572e3e8ddd921dd104cf0fb14708a4b6727be86aa7ea80e2e3706",
+        "model_type": "HYPIR_SD2_rank256_native512",
+        "local_step": 50,
+        "optimizer_step": 50,
+        "global_step": 7800,
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_nr100/config.json",
+            "sha256": "1e45dd03d655c1b9b68ee3b3ef802f622543a28d593a11e6276a41d22a922162"
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_nr100/checkpoint_step7800.json",
+            "sha256": "ba391bda2cdfd4f19f1ee55698da082ba2836d2797bb35cc9c69b42c9607ff22"
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_nr100/input_catalog.json",
+            "sha256": "5c2f945ce000314e802a9c2ddff2ebe91cf20edb65aff491b1d1c9fb4b9071ac"
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_nr100/resume_step7800.pt",
+            "sha256": "501ea3af9aaf5812705e13ef25326ed19c4e9d3cadcd2525b3aca09de16d3d22"
+          },
+          "parity_proof": {
+            "path": "/cache/independent_sr_cuda_20261013/analysis/push7/hypir_direct_nr/deployment_parity_probe_v1.json",
+            "sha256": "ddd34d2ea7e1ab834fa8928c6e39da417d3be40ce2f7307ae9c1172743e44950"
+          },
+          "sources": [
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+              "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py",
+              "sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py",
+              "sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py",
+              "sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py",
+              "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py",
+              "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py",
+              "sha256": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v3.py",
+              "sha256": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py",
+              "sha256": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py",
+              "sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v4.py",
+              "sha256": "5f2d40b41034db7f9ae5f6a5f64d90b77bff6bc849422e1fc03ba3eb1600f311"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v5.py",
+              "sha256": "4b5bdf40aab5d2fd35c92f8fc714c675e62bd86228bc3fb79e48e896b70278f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_lastconv_nr_v1.py",
+              "sha256": "24dd2608888bd240b310d3a7fde678e376483229fe35c0cd7e71ab61e87f1082"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/deployment_fused_lora.py",
+              "sha256": "b215dc4247ecb06cd3040160b7671e8e3c956b090bef4909d3020e90b5719738"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_direct_nr_niqe768_v4.py",
+              "sha256": "3dd7388abd78659de9a22831ead98a75e88a9b8558473eb5cd7178a89e51b109"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/niqe_arch.py",
+              "sha256": "cad3765957607f4ce2a58f76572f75d1d658d68a296d54e7a92e9e062107b7d0"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/func_util.py",
+              "sha256": "3e0ea50d455e426fca9565dc7c599ec37648fbdcf7c4d5a0a4b41134a62ec3ab"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/models/inference_model.py",
+              "sha256": "29b6d8ad8f67a940aa866f9911ef733632a1cf01f71caf400ba0c818f30dc23a"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/functions.py",
+              "sha256": "20257b4e2b432b018fa369319dc10a6aa91d75485e7743d7339b6efcec2467fd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/utils/color_util.py",
+              "sha256": "0135950633f81ab6f12531c6bed00537fd0071b655215a58ffc19d4e8573e078"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/resize.py",
+              "sha256": "4760eedccf2ba9ccd60ea898cc0b58248157b997660f526ee6d5c080cfea0f84"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/padding.py",
+              "sha256": "e2f92917002e8e68020f30dea854c9678532a4d851d9564d6fc2726806fbe02e"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/math_util.py",
+              "sha256": "be5bdc9d4d15975d17c3c2ea45cbfe4d517b088ed909f4c96fff2052493ad279"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/hypir_push7_a7750_lastconv_nr_s7850/candidate_manifest.json",
+      "manifest_sha256": "f346811f03834309ebd26737b982c97896dc0920871550eabf7b2cd87ca6efa5",
+      "fields": {
+        "schema": "hypir_lastconv_nr_candidate_v1",
+        "label": "push7_a7750_lastconv_nr_s7850",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastconv_nr_s7850/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_nr100/step7850.pth",
+        "checkpoint_sha256": "8b79000d51d2fba7610b3e3ccc33e531584560c614deca50a0f8c70825b4e8a1",
+        "model_type": "HYPIR_SD2_rank256_native512",
+        "local_step": 100,
+        "optimizer_step": 100,
+        "global_step": 7850,
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_nr100/config.json",
+            "sha256": "1e45dd03d655c1b9b68ee3b3ef802f622543a28d593a11e6276a41d22a922162"
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_nr100/checkpoint_step7850.json",
+            "sha256": "eacf430b98876d3f0fed7e09d3365224490c7ddf32b2d28baaa4eb3494fc31e9"
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_nr100/input_catalog.json",
+            "sha256": "5c2f945ce000314e802a9c2ddff2ebe91cf20edb65aff491b1d1c9fb4b9071ac"
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastconv_nr100/resume_step7850.pt",
+            "sha256": "e17ff70c29b0b04244ac31a42e86deb2baf4cbbae25bad3b1db8a6705709c54c"
+          },
+          "parity_proof": {
+            "path": "/cache/independent_sr_cuda_20261013/analysis/push7/hypir_direct_nr/deployment_parity_probe_v1.json",
+            "sha256": "ddd34d2ea7e1ab834fa8928c6e39da417d3be40ce2f7307ae9c1172743e44950"
+          },
+          "sources": [
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+              "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py",
+              "sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py",
+              "sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py",
+              "sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py",
+              "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py",
+              "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py",
+              "sha256": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v3.py",
+              "sha256": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py",
+              "sha256": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py",
+              "sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v4.py",
+              "sha256": "5f2d40b41034db7f9ae5f6a5f64d90b77bff6bc849422e1fc03ba3eb1600f311"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v5.py",
+              "sha256": "4b5bdf40aab5d2fd35c92f8fc714c675e62bd86228bc3fb79e48e896b70278f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_lastconv_nr_v1.py",
+              "sha256": "24dd2608888bd240b310d3a7fde678e376483229fe35c0cd7e71ab61e87f1082"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/deployment_fused_lora.py",
+              "sha256": "b215dc4247ecb06cd3040160b7671e8e3c956b090bef4909d3020e90b5719738"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_direct_nr_niqe768_v4.py",
+              "sha256": "3dd7388abd78659de9a22831ead98a75e88a9b8558473eb5cd7178a89e51b109"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/niqe_arch.py",
+              "sha256": "cad3765957607f4ce2a58f76572f75d1d658d68a296d54e7a92e9e062107b7d0"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/func_util.py",
+              "sha256": "3e0ea50d455e426fca9565dc7c599ec37648fbdcf7c4d5a0a4b41134a62ec3ab"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/models/inference_model.py",
+              "sha256": "29b6d8ad8f67a940aa866f9911ef733632a1cf01f71caf400ba0c818f30dc23a"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/functions.py",
+              "sha256": "20257b4e2b432b018fa369319dc10a6aa91d75485e7743d7339b6efcec2467fd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/utils/color_util.py",
+              "sha256": "0135950633f81ab6f12531c6bed00537fd0071b655215a58ffc19d4e8573e078"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/resize.py",
+              "sha256": "4760eedccf2ba9ccd60ea898cc0b58248157b997660f526ee6d5c080cfea0f84"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/padding.py",
+              "sha256": "e2f92917002e8e68020f30dea854c9678532a4d851d9564d6fc2726806fbe02e"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/math_util.py",
+              "sha256": "be5bdc9d4d15975d17c3c2ea45cbfe4d517b088ed909f4c96fff2052493ad279"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7800/candidate_manifest.json",
+      "manifest_sha256": "ecd95ecfdac32d62658bd77acc7cb13b53758f519d6a108e99c168d177126e26",
+      "fields": {
+        "schema": "hypir_lastres_nr_candidate_v1",
+        "label": "push7_a7750_lastres_lr5e6_nr_s7800",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7800/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/step7800.pth",
+        "checkpoint_sha256": "dc184b14f549fc01aeafbdc3bdcf6a7112e6bc3944d6c047c557ed850074d7b7",
+        "model_type": "HYPIR_SD2_rank256_native512",
+        "local_step": 50,
+        "optimizer_step": 50,
+        "global_step": 7800,
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/config.json",
+            "sha256": "20e182c71b68bad38f97bcde504d8dcd0664075d3d39be99c183aa55a5c3e822"
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/checkpoint_step7800.json",
+            "sha256": "a21b4463390cd74d59e5636206442e8431980ec909499aa6ed1999f1a3c3b400"
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/input_catalog.json",
+            "sha256": "5c2f945ce000314e802a9c2ddff2ebe91cf20edb65aff491b1d1c9fb4b9071ac"
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/resume_step7800.pt",
+            "sha256": "79ef6c6bc33b08f6e1b83855ca02eb109fd6b4cd4aa4cd2667f108fd5b743fc0"
+          },
+          "parity_proof": {
+            "path": "/cache/independent_sr_cuda_20261013/analysis/push7/hypir_direct_nr/deployment_parity_probe_v1.json",
+            "sha256": "ddd34d2ea7e1ab834fa8928c6e39da417d3be40ce2f7307ae9c1172743e44950"
+          },
+          "sources": [
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+              "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py",
+              "sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py",
+              "sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py",
+              "sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py",
+              "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py",
+              "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py",
+              "sha256": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v3.py",
+              "sha256": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py",
+              "sha256": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py",
+              "sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v4.py",
+              "sha256": "5f2d40b41034db7f9ae5f6a5f64d90b77bff6bc849422e1fc03ba3eb1600f311"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v5.py",
+              "sha256": "4b5bdf40aab5d2fd35c92f8fc714c675e62bd86228bc3fb79e48e896b70278f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_lastres_nr_lr5e6_v4.py",
+              "sha256": "5f99fcebc6cb50ed5c3ae18ae8df0cdf10cb2ab3b62e124c5097b0c81cf5cd9b"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/deployment_fused_lora.py",
+              "sha256": "b215dc4247ecb06cd3040160b7671e8e3c956b090bef4909d3020e90b5719738"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_direct_nr_niqe768_v4.py",
+              "sha256": "3dd7388abd78659de9a22831ead98a75e88a9b8558473eb5cd7178a89e51b109"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/niqe_arch.py",
+              "sha256": "cad3765957607f4ce2a58f76572f75d1d658d68a296d54e7a92e9e062107b7d0"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/func_util.py",
+              "sha256": "3e0ea50d455e426fca9565dc7c599ec37648fbdcf7c4d5a0a4b41134a62ec3ab"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/models/inference_model.py",
+              "sha256": "29b6d8ad8f67a940aa866f9911ef733632a1cf01f71caf400ba0c818f30dc23a"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/functions.py",
+              "sha256": "20257b4e2b432b018fa369319dc10a6aa91d75485e7743d7339b6efcec2467fd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/utils/color_util.py",
+              "sha256": "0135950633f81ab6f12531c6bed00537fd0071b655215a58ffc19d4e8573e078"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/resize.py",
+              "sha256": "4760eedccf2ba9ccd60ea898cc0b58248157b997660f526ee6d5c080cfea0f84"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/padding.py",
+              "sha256": "e2f92917002e8e68020f30dea854c9678532a4d851d9564d6fc2726806fbe02e"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/math_util.py",
+              "sha256": "be5bdc9d4d15975d17c3c2ea45cbfe4d517b088ed909f4c96fff2052493ad279"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850/candidate_manifest.json",
+      "manifest_sha256": "0477903b0bc478064ad2f03a5d429eb37459097ac6a0014ec76d92efef7fa4c0",
+      "fields": {
+        "schema": "hypir_lastres_nr_candidate_v1",
+        "label": "push7_a7750_lastres_lr5e6_nr_s7850",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/step7850.pth",
+        "checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+        "model_type": "HYPIR_SD2_rank256_native512",
+        "local_step": 100,
+        "optimizer_step": 100,
+        "global_step": 7850,
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/config.json",
+            "sha256": "20e182c71b68bad38f97bcde504d8dcd0664075d3d39be99c183aa55a5c3e822"
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/checkpoint_step7850.json",
+            "sha256": "b02411f66d77570b011b622c7975c21930222e6ce0f7d7635b4eb62f6da2eda5"
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/input_catalog.json",
+            "sha256": "5c2f945ce000314e802a9c2ddff2ebe91cf20edb65aff491b1d1c9fb4b9071ac"
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/resume_step7850.pt",
+            "sha256": "35e339656581c89c772e6d9b00592a73cd397481f00d4d9bfd78c4bab7d05745"
+          },
+          "parity_proof": {
+            "path": "/cache/independent_sr_cuda_20261013/analysis/push7/hypir_direct_nr/deployment_parity_probe_v1.json",
+            "sha256": "ddd34d2ea7e1ab834fa8928c6e39da417d3be40ce2f7307ae9c1172743e44950"
+          },
+          "sources": [
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+              "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py",
+              "sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py",
+              "sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py",
+              "sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py",
+              "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py",
+              "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py",
+              "sha256": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v3.py",
+              "sha256": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py",
+              "sha256": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py",
+              "sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v4.py",
+              "sha256": "5f2d40b41034db7f9ae5f6a5f64d90b77bff6bc849422e1fc03ba3eb1600f311"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v5.py",
+              "sha256": "4b5bdf40aab5d2fd35c92f8fc714c675e62bd86228bc3fb79e48e896b70278f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_lastres_nr_lr5e6_v4.py",
+              "sha256": "5f99fcebc6cb50ed5c3ae18ae8df0cdf10cb2ab3b62e124c5097b0c81cf5cd9b"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/deployment_fused_lora.py",
+              "sha256": "b215dc4247ecb06cd3040160b7671e8e3c956b090bef4909d3020e90b5719738"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_direct_nr_niqe768_v4.py",
+              "sha256": "3dd7388abd78659de9a22831ead98a75e88a9b8558473eb5cd7178a89e51b109"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/niqe_arch.py",
+              "sha256": "cad3765957607f4ce2a58f76572f75d1d658d68a296d54e7a92e9e062107b7d0"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/func_util.py",
+              "sha256": "3e0ea50d455e426fca9565dc7c599ec37648fbdcf7c4d5a0a4b41134a62ec3ab"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/models/inference_model.py",
+              "sha256": "29b6d8ad8f67a940aa866f9911ef733632a1cf01f71caf400ba0c818f30dc23a"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/functions.py",
+              "sha256": "20257b4e2b432b018fa369319dc10a6aa91d75485e7743d7339b6efcec2467fd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/utils/color_util.py",
+              "sha256": "0135950633f81ab6f12531c6bed00537fd0071b655215a58ffc19d4e8573e078"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/resize.py",
+              "sha256": "4760eedccf2ba9ccd60ea898cc0b58248157b997660f526ee6d5c080cfea0f84"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/padding.py",
+              "sha256": "e2f92917002e8e68020f30dea854c9678532a4d851d9564d6fc2726806fbe02e"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/math_util.py",
+              "sha256": "be5bdc9d4d15975d17c3c2ea45cbfe4d517b088ed909f4c96fff2052493ad279"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae/candidate_manifest.json",
+      "manifest_sha256": "d7e03918355aa9cb459c1d37f8ffafcee89856bb8b23cdf0346b5e440b3046cb",
+      "fields": {
+        "schema": "hypir_finetuned_trt_unet_vae_candidate_v1",
+        "label": "push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/step7850.pth",
+        "checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+        "model_type": "HYPIR_SD2_rank256_finetuned_TRT_UNet_VAE_native512",
+        "local_step": 100,
+        "optimizer_step": 100,
+        "global_step": 7850,
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/config.json",
+            "sha256": "20e182c71b68bad38f97bcde504d8dcd0664075d3d39be99c183aa55a5c3e822"
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/checkpoint_step7850.json",
+            "sha256": "b02411f66d77570b011b622c7975c21930222e6ce0f7d7635b4eb62f6da2eda5"
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/input_catalog.json",
+            "sha256": "5c2f945ce000314e802a9c2ddff2ebe91cf20edb65aff491b1d1c9fb4b9071ac"
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/resume_step7850.pt",
+            "sha256": "35e339656581c89c772e6d9b00592a73cd397481f00d4d9bfd78c4bab7d05745"
+          },
+          "parity_proof": {
+            "path": "/cache/independent_sr_cuda_20261013/analysis/push7/hypir_direct_nr/deployment_parity_probe_v1.json",
+            "sha256": "ddd34d2ea7e1ab834fa8928c6e39da417d3be40ce2f7307ae9c1172743e44950"
+          },
+          "sources": [
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+              "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py",
+              "sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py",
+              "sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py",
+              "sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py",
+              "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py",
+              "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py",
+              "sha256": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v3.py",
+              "sha256": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py",
+              "sha256": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py",
+              "sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v4.py",
+              "sha256": "5f2d40b41034db7f9ae5f6a5f64d90b77bff6bc849422e1fc03ba3eb1600f311"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v5.py",
+              "sha256": "4b5bdf40aab5d2fd35c92f8fc714c675e62bd86228bc3fb79e48e896b70278f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_lastres_nr_lr5e6_v4.py",
+              "sha256": "5f99fcebc6cb50ed5c3ae18ae8df0cdf10cb2ab3b62e124c5097b0c81cf5cd9b"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/deployment_fused_lora.py",
+              "sha256": "b215dc4247ecb06cd3040160b7671e8e3c956b090bef4909d3020e90b5719738"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_direct_nr_niqe768_v4.py",
+              "sha256": "3dd7388abd78659de9a22831ead98a75e88a9b8558473eb5cd7178a89e51b109"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/niqe_arch.py",
+              "sha256": "cad3765957607f4ce2a58f76572f75d1d658d68a296d54e7a92e9e062107b7d0"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/func_util.py",
+              "sha256": "3e0ea50d455e426fca9565dc7c599ec37648fbdcf7c4d5a0a4b41134a62ec3ab"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/models/inference_model.py",
+              "sha256": "29b6d8ad8f67a940aa866f9911ef733632a1cf01f71caf400ba0c818f30dc23a"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/functions.py",
+              "sha256": "20257b4e2b432b018fa369319dc10a6aa91d75485e7743d7339b6efcec2467fd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/utils/color_util.py",
+              "sha256": "0135950633f81ab6f12531c6bed00537fd0071b655215a58ffc19d4e8573e078"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/resize.py",
+              "sha256": "4760eedccf2ba9ccd60ea898cc0b58248157b997660f526ee6d5c080cfea0f84"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/padding.py",
+              "sha256": "e2f92917002e8e68020f30dea854c9678532a4d851d9564d6fc2726806fbe02e"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/math_util.py",
+              "sha256": "be5bdc9d4d15975d17c3c2ea45cbfe4d517b088ed909f4c96fff2052493ad279"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/hypir_push7_a7750_lastres_nr_s7800/candidate_manifest.json",
+      "manifest_sha256": "c18d9d90b485d34e42311a9db350f375f6d2a54349894defd35ade94c589f98a",
+      "fields": {
+        "schema": "hypir_lastres_nr_candidate_v1",
+        "label": "push7_a7750_lastres_nr_s7800",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_nr_s7800/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_nr100/step7800.pth",
+        "checkpoint_sha256": "3d4f0be7c7492ad04c740a6eb8c2fb8673beb710289a7fd97d108ee167fdd6ec",
+        "model_type": "HYPIR_SD2_rank256_native512",
+        "local_step": 50,
+        "optimizer_step": 50,
+        "global_step": 7800,
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_nr100/config.json",
+            "sha256": "cd70b4f96de5d52dd62f6f235ce9f3564b8e8375d7d44a1e45d697a3f2f4e91e"
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_nr100/checkpoint_step7800.json",
+            "sha256": "c9eaef3916c1fab4b259bb6168483ec2415b94f85792af44abb46f955024ed3b"
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_nr100/input_catalog.json",
+            "sha256": "5c2f945ce000314e802a9c2ddff2ebe91cf20edb65aff491b1d1c9fb4b9071ac"
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_nr100/resume_step7800.pt",
+            "sha256": "911050f5f11f92f82f076597b600121746a94abc7f8811204e5f876a30642c8d"
+          },
+          "parity_proof": {
+            "path": "/cache/independent_sr_cuda_20261013/analysis/push7/hypir_direct_nr/deployment_parity_probe_v1.json",
+            "sha256": "ddd34d2ea7e1ab834fa8928c6e39da417d3be40ce2f7307ae9c1172743e44950"
+          },
+          "sources": [
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+              "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py",
+              "sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py",
+              "sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py",
+              "sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py",
+              "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py",
+              "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py",
+              "sha256": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v3.py",
+              "sha256": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py",
+              "sha256": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py",
+              "sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v4.py",
+              "sha256": "5f2d40b41034db7f9ae5f6a5f64d90b77bff6bc849422e1fc03ba3eb1600f311"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v5.py",
+              "sha256": "4b5bdf40aab5d2fd35c92f8fc714c675e62bd86228bc3fb79e48e896b70278f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_lastres_nr_v3.py",
+              "sha256": "18178cdbc4b8af36505fce6b6286d990049e13100e497007e6ba2890e47950de"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/deployment_fused_lora.py",
+              "sha256": "b215dc4247ecb06cd3040160b7671e8e3c956b090bef4909d3020e90b5719738"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_direct_nr_niqe768_v4.py",
+              "sha256": "3dd7388abd78659de9a22831ead98a75e88a9b8558473eb5cd7178a89e51b109"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/niqe_arch.py",
+              "sha256": "cad3765957607f4ce2a58f76572f75d1d658d68a296d54e7a92e9e062107b7d0"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/func_util.py",
+              "sha256": "3e0ea50d455e426fca9565dc7c599ec37648fbdcf7c4d5a0a4b41134a62ec3ab"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/models/inference_model.py",
+              "sha256": "29b6d8ad8f67a940aa866f9911ef733632a1cf01f71caf400ba0c818f30dc23a"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/functions.py",
+              "sha256": "20257b4e2b432b018fa369319dc10a6aa91d75485e7743d7339b6efcec2467fd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/utils/color_util.py",
+              "sha256": "0135950633f81ab6f12531c6bed00537fd0071b655215a58ffc19d4e8573e078"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/resize.py",
+              "sha256": "4760eedccf2ba9ccd60ea898cc0b58248157b997660f526ee6d5c080cfea0f84"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/padding.py",
+              "sha256": "e2f92917002e8e68020f30dea854c9678532a4d851d9564d6fc2726806fbe02e"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/math_util.py",
+              "sha256": "be5bdc9d4d15975d17c3c2ea45cbfe4d517b088ed909f4c96fff2052493ad279"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/hypir_push7_a7750_lastres_nr_s7850/candidate_manifest.json",
+      "manifest_sha256": "bf9ac78249c2c50b0855c35152228fea46bc7f39b8f02346514f81d9145fbf3a",
+      "fields": {
+        "schema": "hypir_lastres_nr_candidate_v1",
+        "label": "push7_a7750_lastres_nr_s7850",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_nr_s7850/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_nr100/step7850.pth",
+        "checkpoint_sha256": "2b80554edd02656af642f9bdd7a2308460bebbf3b37e25513ad44ed2dc3fafd9",
+        "model_type": "HYPIR_SD2_rank256_native512",
+        "local_step": 100,
+        "optimizer_step": 100,
+        "global_step": 7850,
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_nr100/config.json",
+            "sha256": "cd70b4f96de5d52dd62f6f235ce9f3564b8e8375d7d44a1e45d697a3f2f4e91e"
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_nr100/checkpoint_step7850.json",
+            "sha256": "6d058402280a0609cd9b3a33ed6f772989c256ee54e8b469663c9407a90f2b51"
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_nr100/input_catalog.json",
+            "sha256": "5c2f945ce000314e802a9c2ddff2ebe91cf20edb65aff491b1d1c9fb4b9071ac"
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_nr100/resume_step7850.pt",
+            "sha256": "57335f4d91b8aa2a562c407a2d7a1ca770827148d01e3c59c0ef5ea7fcf0ad06"
+          },
+          "parity_proof": {
+            "path": "/cache/independent_sr_cuda_20261013/analysis/push7/hypir_direct_nr/deployment_parity_probe_v1.json",
+            "sha256": "ddd34d2ea7e1ab834fa8928c6e39da417d3be40ce2f7307ae9c1172743e44950"
+          },
+          "sources": [
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+              "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py",
+              "sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py",
+              "sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py",
+              "sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py",
+              "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py",
+              "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py",
+              "sha256": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v3.py",
+              "sha256": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py",
+              "sha256": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py",
+              "sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v4.py",
+              "sha256": "5f2d40b41034db7f9ae5f6a5f64d90b77bff6bc849422e1fc03ba3eb1600f311"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v5.py",
+              "sha256": "4b5bdf40aab5d2fd35c92f8fc714c675e62bd86228bc3fb79e48e896b70278f2"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_lastres_nr_v3.py",
+              "sha256": "18178cdbc4b8af36505fce6b6286d990049e13100e497007e6ba2890e47950de"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/deployment_fused_lora.py",
+              "sha256": "b215dc4247ecb06cd3040160b7671e8e3c956b090bef4909d3020e90b5719738"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_direct_nr_niqe768_v4.py",
+              "sha256": "3dd7388abd78659de9a22831ead98a75e88a9b8558473eb5cd7178a89e51b109"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/niqe_arch.py",
+              "sha256": "cad3765957607f4ce2a58f76572f75d1d658d68a296d54e7a92e9e062107b7d0"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/func_util.py",
+              "sha256": "3e0ea50d455e426fca9565dc7c599ec37648fbdcf7c4d5a0a4b41134a62ec3ab"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/models/inference_model.py",
+              "sha256": "29b6d8ad8f67a940aa866f9911ef733632a1cf01f71caf400ba0c818f30dc23a"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/functions.py",
+              "sha256": "20257b4e2b432b018fa369319dc10a6aa91d75485e7743d7339b6efcec2467fd"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/utils/color_util.py",
+              "sha256": "0135950633f81ab6f12531c6bed00537fd0071b655215a58ffc19d4e8573e078"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/resize.py",
+              "sha256": "4760eedccf2ba9ccd60ea898cc0b58248157b997660f526ee6d5c080cfea0f84"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/padding.py",
+              "sha256": "e2f92917002e8e68020f30dea854c9678532a4d851d9564d6fc2726806fbe02e"
+            },
+            {
+              "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/math_util.py",
+              "sha256": "be5bdc9d4d15975d17c3c2ea45cbfe4d517b088ed909f4c96fff2052493ad279"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/hypir_push7_a7750_trt_unet_vae_fp16/candidate_manifest.json",
+      "manifest_sha256": "3e422d0e8474532a7fc20838504c743c32e19b03770e440eaada6eee003d38f3",
+      "fields": {
+        "schema": "hypir_trt_unet_vae_hybrid_candidate_v1",
+        "label": "push7_a7750_trt_unet_vae_fp16",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+        "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+        "model_type": "HYPIR_SD2_rank256_TRT_UNet_VAE_native512"
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/pixg5i_hypir_coverage_v4_s200/candidate_manifest.json",
+      "manifest_sha256": "d897b171ebd1e94cfa730dd4c344045e58460813e3bd831f6929a00941660ebe",
+      "fields": {
+        "schema": "pixg5i_registered_candidate_v1",
+        "label": "pixg5i_hypir_coverage_v4_s200",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/step200.pth",
+        "checkpoint_sha256": "503074449893247332df973a85f9be1f348d9f130f31a28455b62790fb50c929",
+        "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir/model.pth",
+        "model_type": "supplied_pixG5i_pixel_UNet",
+        "variant": "coverage_v4",
+        "stage": "distilled_checkpoint",
+        "local_step": 200,
+        "optimizer_step": 200,
+        "global_step": 2000,
+        "parent_distillation_steps": 1800,
+        "total_distillation_steps": 2000,
+        "phase_initial_checkpoint_sha256": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa",
+        "training_phase": "coverage_v4",
+        "teacher": {
+          "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+          "applied_to_this_checkpoint": true,
+          "render_manifest": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+            "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+            "bytes": 81396
+          }
+        },
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/config.json",
+            "sha256": "fadf6a9577c2b9f2747382b3ba3ebcbe64464add1c2544154d31fc499aa127bf",
+            "bytes": 80311
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/checkpoint_step200.json",
+            "sha256": "1334a9adb60211d28fe91762591c9b1d38d7050973a65290db4f6187f584193a",
+            "bytes": 5968
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/input_catalog.json",
+            "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+            "bytes": 23987
+          },
+          "teacher_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/teacher_catalog.json",
+            "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+            "bytes": 39787
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/resume_step200.pt",
+            "sha256": "e2d47be279fd3c688df232ec9ebb895f23587580ab4e40871cfb6fd79bc766ec",
+            "bytes": 45582907
+          },
+          "training_source": {
+            "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_coverage_v4.py",
+            "sha256": "25624067758d5717e110ac7025c4e9eb8ee2ad8b2cfc292273581d6b5510fa08",
+            "bytes": 33020
+          },
+          "training_plan": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/training_plan.json",
+            "sha256": "5466f898c854b8337d16879a867b04b14b631959df18c6baca817c9eaafe0d28",
+            "bytes": 276974
+          }
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/pixg5i_hypir_headreset_v3_s100/candidate_manifest.json",
+      "manifest_sha256": "e7ec8bafd8895c701a36962a7680d192ed1c82876ae1f3c624a90943f1f9eafc",
+      "fields": {
+        "schema": "pixg5i_registered_candidate_v1",
+        "label": "pixg5i_hypir_headreset_v3_s100",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s100/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/step100.pth",
+        "checkpoint_sha256": "cc9aefbb2a543ea65a53c38595e4c90c8f6b76150b77e862ac4396646921f1b8",
+        "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s100/model_dir/model.pth",
+        "model_type": "supplied_pixG5i_pixel_UNet",
+        "variant": "headreset_v3",
+        "stage": "distilled_checkpoint",
+        "local_step": 100,
+        "optimizer_step": 100,
+        "global_step": 1300,
+        "parent_distillation_steps": 1200,
+        "total_distillation_steps": 1300,
+        "phase_initial_checkpoint_sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+        "training_phase": "headreset_v3",
+        "teacher": {
+          "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+          "applied_to_this_checkpoint": true,
+          "render_manifest": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+            "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+            "bytes": 81396
+          }
+        },
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/config.json",
+            "sha256": "bd4d8f0d2488604f9b4e78b268d39b953d5298bd6fed4ccdcf08033eaccfced8",
+            "bytes": 79316
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/checkpoint_step100.json",
+            "sha256": "f61a63c6ce01fd48e4963ca46041e1184db0db6a763e959ed2cbeeb0584ed6a7",
+            "bytes": 5679
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/input_catalog.json",
+            "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+            "bytes": 23987
+          },
+          "teacher_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/teacher_catalog.json",
+            "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+            "bytes": 39787
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/resume_step100.pt",
+            "sha256": "2039f35fa4482ffc53ce7f13e589b1d4c2124b37ab53f450d381133caf7b742f",
+            "bytes": 45582843
+          },
+          "training_source": {
+            "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_headreset_v3.py",
+            "sha256": "3e64743ff117de1934ba7da04f3c24e822ba8573d91e842230eeb86a1c6c05cb",
+            "bytes": 31556
+          }
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/pixg5i_hypir_headreset_v3_s300/candidate_manifest.json",
+      "manifest_sha256": "ee0cbe9fedde18493a3b90db904f94daf0d6686d2915722a019f664d7e4df699",
+      "fields": {
+        "schema": "pixg5i_registered_candidate_v1",
+        "label": "pixg5i_hypir_headreset_v3_s300",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s300/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/step300.pth",
+        "checkpoint_sha256": "a40462e6481d188ed120a5fca1adbbf425f2ed3de5bd1f81f4f8628d788ff167",
+        "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s300/model_dir/model.pth",
+        "model_type": "supplied_pixG5i_pixel_UNet",
+        "variant": "headreset_v3",
+        "stage": "distilled_checkpoint",
+        "local_step": 300,
+        "optimizer_step": 300,
+        "global_step": 1500,
+        "parent_distillation_steps": 1200,
+        "total_distillation_steps": 1500,
+        "phase_initial_checkpoint_sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+        "training_phase": "headreset_v3",
+        "teacher": {
+          "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+          "applied_to_this_checkpoint": true,
+          "render_manifest": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+            "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+            "bytes": 81396
+          }
+        },
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/config.json",
+            "sha256": "bd4d8f0d2488604f9b4e78b268d39b953d5298bd6fed4ccdcf08033eaccfced8",
+            "bytes": 79316
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/checkpoint_step300.json",
+            "sha256": "c1d061b2d939c2add40526fa57dbb94c124edc0e2facfcb5ebde0ad2c8dfd89a",
+            "bytes": 5679
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/input_catalog.json",
+            "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+            "bytes": 23987
+          },
+          "teacher_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/teacher_catalog.json",
+            "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+            "bytes": 39787
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/resume_step300.pt",
+            "sha256": "d522c6a05ff9124fb465cce867941c19300cdbc43ed505d89a3d0792aacbd7d3",
+            "bytes": 45582843
+          },
+          "training_source": {
+            "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_headreset_v3.py",
+            "sha256": "3e64743ff117de1934ba7da04f3c24e822ba8573d91e842230eeb86a1c6c05cb",
+            "bytes": 31556
+          }
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/pixg5i_hypir_headreset_v3_s600/candidate_manifest.json",
+      "manifest_sha256": "398a259dcb8bd6616b6d3043ed414eba73ef63e400bb21eceaf19f1160081a56",
+      "fields": {
+        "schema": "pixg5i_registered_candidate_v1",
+        "label": "pixg5i_hypir_headreset_v3_s600",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s600/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/step600.pth",
+        "checkpoint_sha256": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa",
+        "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s600/model_dir/model.pth",
+        "model_type": "supplied_pixG5i_pixel_UNet",
+        "variant": "headreset_v3",
+        "stage": "distilled_checkpoint",
+        "local_step": 600,
+        "optimizer_step": 600,
+        "global_step": 1800,
+        "parent_distillation_steps": 1200,
+        "total_distillation_steps": 1800,
+        "phase_initial_checkpoint_sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+        "training_phase": "headreset_v3",
+        "teacher": {
+          "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+          "applied_to_this_checkpoint": true,
+          "render_manifest": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+            "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+            "bytes": 81396
+          }
+        },
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/config.json",
+            "sha256": "bd4d8f0d2488604f9b4e78b268d39b953d5298bd6fed4ccdcf08033eaccfced8",
+            "bytes": 79316
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/checkpoint_step600.json",
+            "sha256": "72a3c7ca6d4beac6234b3f933fb0ad871b483a66863e884c17b389bacdc7cd76",
+            "bytes": 5679
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/input_catalog.json",
+            "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+            "bytes": 23987
+          },
+          "teacher_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/teacher_catalog.json",
+            "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+            "bytes": 39787
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/resume_step600.pt",
+            "sha256": "d37cbcfbd1254fd2838d36140c7cd51ef61abe0a5fedd85fc0115e1afdce9fdf",
+            "bytes": 45582779
+          },
+          "training_source": {
+            "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_headreset_v3.py",
+            "sha256": "3e64743ff117de1934ba7da04f3c24e822ba8573d91e842230eeb86a1c6c05cb",
+            "bytes": 31556
+          }
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/pixg5i_hypir_medium_s100/candidate_manifest.json",
+      "manifest_sha256": "d69d5c87ab7a6cabb5ca4fa6b0f91b1d4db3ae958d0afe76ac91e06516b25ce7",
+      "fields": {
+        "schema": "pixg5i_registered_candidate_v1",
+        "label": "pixg5i_hypir_medium_s100",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s100/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/step100.pth",
+        "checkpoint_sha256": "afa0b9a5702615be5314868e345a703f4014c29b40462cf38c9adc0e707008de",
+        "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s100/model_dir/model.pth",
+        "model_type": "supplied_pixG5i_pixel_UNet",
+        "variant": "medium",
+        "stage": "distilled_checkpoint",
+        "local_step": 100,
+        "optimizer_step": 100,
+        "teacher": {
+          "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+          "applied_to_this_checkpoint": true,
+          "render_manifest": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+            "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+            "bytes": 81396
+          }
+        },
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/config.json",
+            "sha256": "fc858e493f4b12ad10dd7005eff4b30401d63dc9a7ef120654c763973d926d71",
+            "bytes": 76282
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/checkpoint_step100.json",
+            "sha256": "b6a78f20cb7e9e916346b33eea942041fc7b2c6c86195da40bed1690270705b5",
+            "bytes": 3244
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/input_catalog.json",
+            "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+            "bytes": 23987
+          },
+          "teacher_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/teacher_catalog.json",
+            "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+            "bytes": 39787
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/resume_step100.pt",
+            "sha256": "9eba194c7748e44534e06845160bd5248f57bd6b0aa0a593d4bc38023c71402c",
+            "bytes": 45582459
+          },
+          "training_source": {
+            "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir.py",
+            "sha256": "d58e6dd66eac6b3f93a899a3008e48a568a9601a62b52cc3c99d73b9f1612604",
+            "bytes": 22459
+          }
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/pixg5i_hypir_medium_s300/candidate_manifest.json",
+      "manifest_sha256": "654f287813048468d994e9729de8d14cf68f126830a9d7967f49669e86de351b",
+      "fields": {
+        "schema": "pixg5i_registered_candidate_v1",
+        "label": "pixg5i_hypir_medium_s300",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/step300.pth",
+        "checkpoint_sha256": "005d13cb5b003d54e576678c52908181016cb9fa1746a9455465f5f2f619c458",
+        "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/model_dir/model.pth",
+        "model_type": "supplied_pixG5i_pixel_UNet",
+        "variant": "medium",
+        "stage": "distilled_checkpoint",
+        "local_step": 300,
+        "optimizer_step": 300,
+        "teacher": {
+          "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+          "applied_to_this_checkpoint": true,
+          "render_manifest": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+            "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+            "bytes": 81396
+          }
+        },
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/config.json",
+            "sha256": "fc858e493f4b12ad10dd7005eff4b30401d63dc9a7ef120654c763973d926d71",
+            "bytes": 76282
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/checkpoint_step300.json",
+            "sha256": "c4c5024358b06abbf5b71871eb72ef4388514143f3f7682f3a06735b342f9831",
+            "bytes": 3244
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/input_catalog.json",
+            "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+            "bytes": 23987
+          },
+          "teacher_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/teacher_catalog.json",
+            "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+            "bytes": 39787
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/resume_step300.pt",
+            "sha256": "bdde4b8e4783723f0eee3ed7e09f693e829dd5d444c5ba6ab716dc73a799580f",
+            "bytes": 45582459
+          },
+          "training_source": {
+            "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir.py",
+            "sha256": "d58e6dd66eac6b3f93a899a3008e48a568a9601a62b52cc3c99d73b9f1612604",
+            "bytes": 22459
+          }
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/pixg5i_hypir_medium_s600/candidate_manifest.json",
+      "manifest_sha256": "1c5a7813c254ace9415486dd95fec8bf4412860f8ed7286e6989f1ab83b11b35",
+      "fields": {
+        "schema": "pixg5i_registered_candidate_v1",
+        "label": "pixg5i_hypir_medium_s600",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s600/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/step600.pth",
+        "checkpoint_sha256": "45c7f6bb414567f31b906fc996c037f31df7ce6aebb615c19183e02886950fab",
+        "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s600/model_dir/model.pth",
+        "model_type": "supplied_pixG5i_pixel_UNet",
+        "variant": "medium",
+        "stage": "distilled_checkpoint",
+        "local_step": 600,
+        "optimizer_step": 600,
+        "teacher": {
+          "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+          "applied_to_this_checkpoint": true,
+          "render_manifest": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+            "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+            "bytes": 81396
+          }
+        },
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/config.json",
+            "sha256": "fc858e493f4b12ad10dd7005eff4b30401d63dc9a7ef120654c763973d926d71",
+            "bytes": 76282
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/checkpoint_step600.json",
+            "sha256": "b314e5ef353e9f9c7196c8e263cc173f036289aa5249ecd847c03bfc697dbc9b",
+            "bytes": 3244
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/input_catalog.json",
+            "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+            "bytes": 23987
+          },
+          "teacher_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/teacher_catalog.json",
+            "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+            "bytes": 39787
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/resume_step600.pt",
+            "sha256": "45dc395979567bd0650eba92301a0d63507f217e9f7f7e0128043ca411e93b5e",
+            "bytes": 45582459
+          },
+          "training_source": {
+            "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir.py",
+            "sha256": "d58e6dd66eac6b3f93a899a3008e48a568a9601a62b52cc3c99d73b9f1612604",
+            "bytes": 22459
+          }
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/pixg5i_hypir_mild_s100/candidate_manifest.json",
+      "manifest_sha256": "f1d5ca308f00f118a2d03bb7c87ee612c182410df1437f9c4ac52df082f5c739",
+      "fields": {
+        "schema": "pixg5i_registered_candidate_v1",
+        "label": "pixg5i_hypir_mild_s100",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_mild_s100/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/step100.pth",
+        "checkpoint_sha256": "6a2a7e69c24b8af8287ce91d7f8ec451149818fde312c6919d0eb42d714d1e2a",
+        "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_mild_s100/model_dir/model.pth",
+        "model_type": "supplied_pixG5i_pixel_UNet",
+        "variant": "mild",
+        "stage": "distilled_checkpoint",
+        "local_step": 100,
+        "optimizer_step": 100,
+        "teacher": {
+          "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+          "applied_to_this_checkpoint": true,
+          "render_manifest": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+            "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+            "bytes": 81396
+          }
+        },
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/config.json",
+            "sha256": "2ae1fd2e9ce0f1a89eb96a4a04054aa0ee3158756d5ae633d46819d7bdf21e97",
+            "bytes": 76279
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/checkpoint_step100.json",
+            "sha256": "4d557dd80965f0fb24fbb1e1abaa8a92462af0b6797b1fa1bff3b218b2263e42",
+            "bytes": 3234
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/input_catalog.json",
+            "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+            "bytes": 23987
+          },
+          "teacher_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/teacher_catalog.json",
+            "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+            "bytes": 39787
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/resume_step100.pt",
+            "sha256": "49c6ebeb0429b6b3c27dd0beaa94552679ea087d82f64705e15697aa1e268aaa",
+            "bytes": 45582459
+          },
+          "training_source": {
+            "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir.py",
+            "sha256": "d58e6dd66eac6b3f93a899a3008e48a568a9601a62b52cc3c99d73b9f1612604",
+            "bytes": 22459
+          }
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/pixg5i_hypir_mild_s300/candidate_manifest.json",
+      "manifest_sha256": "2158e9756fe9fa9cac8a4e26e86c17b091b133fd2d81621c304de434e6e87922",
+      "fields": {
+        "schema": "pixg5i_registered_candidate_v1",
+        "label": "pixg5i_hypir_mild_s300",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_mild_s300/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/step300.pth",
+        "checkpoint_sha256": "594c116d72b755625545ba8e00f4ee45ef2f83184ac62562501a53ccc7217a46",
+        "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_mild_s300/model_dir/model.pth",
+        "model_type": "supplied_pixG5i_pixel_UNet",
+        "variant": "mild",
+        "stage": "distilled_checkpoint",
+        "local_step": 300,
+        "optimizer_step": 300,
+        "teacher": {
+          "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+          "applied_to_this_checkpoint": true,
+          "render_manifest": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+            "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+            "bytes": 81396
+          }
+        },
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/config.json",
+            "sha256": "2ae1fd2e9ce0f1a89eb96a4a04054aa0ee3158756d5ae633d46819d7bdf21e97",
+            "bytes": 76279
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/checkpoint_step300.json",
+            "sha256": "51e1000c633e189c72eb97a3f0c5f4c7df1909cce49f3af5315df17576e1db3e",
+            "bytes": 3234
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/input_catalog.json",
+            "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+            "bytes": 23987
+          },
+          "teacher_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/teacher_catalog.json",
+            "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+            "bytes": 39787
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/resume_step300.pt",
+            "sha256": "67b34c81fb140252f1b3b525ead033a6afa286d959181b76531d553bb779b0aa",
+            "bytes": 45582459
+          },
+          "training_source": {
+            "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir.py",
+            "sha256": "d58e6dd66eac6b3f93a899a3008e48a568a9601a62b52cc3c99d73b9f1612604",
+            "bytes": 22459
+          }
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/pixg5i_hypir_mild_s600/candidate_manifest.json",
+      "manifest_sha256": "f34003092be152c6f7723ed2a3232fcaa9a8ea4b8b279cfbfb74136cc762320d",
+      "fields": {
+        "schema": "pixg5i_registered_candidate_v1",
+        "label": "pixg5i_hypir_mild_s600",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_mild_s600/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/step600.pth",
+        "checkpoint_sha256": "51dfbd335e4076009409ae7efc727db99f98bb6dc1cc76d1161dba9b75e3ffc5",
+        "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_mild_s600/model_dir/model.pth",
+        "model_type": "supplied_pixG5i_pixel_UNet",
+        "variant": "mild",
+        "stage": "distilled_checkpoint",
+        "local_step": 600,
+        "optimizer_step": 600,
+        "teacher": {
+          "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+          "applied_to_this_checkpoint": true,
+          "render_manifest": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+            "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+            "bytes": 81396
+          }
+        },
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/config.json",
+            "sha256": "2ae1fd2e9ce0f1a89eb96a4a04054aa0ee3158756d5ae633d46819d7bdf21e97",
+            "bytes": 76279
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/checkpoint_step600.json",
+            "sha256": "4709ae9c35b1012f03b4c733316024ad59f05482f1ccad211734e5def88dc607",
+            "bytes": 3234
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/input_catalog.json",
+            "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+            "bytes": 23987
+          },
+          "teacher_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/teacher_catalog.json",
+            "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+            "bytes": 39787
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/resume_step600.pt",
+            "sha256": "04e1c91f36e4ba63324dd315186eaea69054698a475454ce96a6cc80da704dd7",
+            "bytes": 45582459
+          },
+          "training_source": {
+            "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir.py",
+            "sha256": "d58e6dd66eac6b3f93a899a3008e48a568a9601a62b52cc3c99d73b9f1612604",
+            "bytes": 22459
+          }
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/pixg5i_hypir_structure_v2_s1200/candidate_manifest.json",
+      "manifest_sha256": "ef0e1b96ab8935d41856628721d9dd12f945048d3cf512f20454362521e2f9ec",
+      "fields": {
+        "schema": "pixg5i_registered_candidate_v1",
+        "label": "pixg5i_hypir_structure_v2_s1200",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s1200/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/step1200.pth",
+        "checkpoint_sha256": "2dc54794f3816c073c57a8e9f7a31e434ff80c0342ee5a6e2cc26506256a0edc",
+        "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s1200/model_dir/model.pth",
+        "model_type": "supplied_pixG5i_pixel_UNet",
+        "variant": "structure_v2",
+        "stage": "distilled_checkpoint",
+        "local_step": 1200,
+        "optimizer_step": 1200,
+        "global_step": 1800,
+        "parent_distillation_steps": 600,
+        "total_distillation_steps": 1800,
+        "phase_initial_checkpoint_sha256": "45c7f6bb414567f31b906fc996c037f31df7ce6aebb615c19183e02886950fab",
+        "training_phase": "structure_v2",
+        "teacher": {
+          "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+          "applied_to_this_checkpoint": true,
+          "render_manifest": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+            "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+            "bytes": 81396
+          }
+        },
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/config.json",
+            "sha256": "f0991c614f0843bd9e4a053c7d89b53ce6ad0300aa1d7b45204a728917528402",
+            "bytes": 78463
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/checkpoint_step1200.json",
+            "sha256": "670747d8e7438ef99fc9e995143d5f52fba7a1cd6fa09dc0effcdb4f4297ef81",
+            "bytes": 5044
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/input_catalog.json",
+            "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+            "bytes": 23987
+          },
+          "teacher_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/teacher_catalog.json",
+            "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+            "bytes": 39787
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/resume_step1200.pt",
+            "sha256": "4d56a69128de070eb982ed1b003a4d9a4fb8c3f6d9e53f0ff63568cbd1a6b418",
+            "bytes": 45582651
+          },
+          "training_source": {
+            "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_structure_v2.py",
+            "sha256": "3c2e83ce965ce4dbc33fa5306679c8e969f1fe1477d41af27c9ed1fc6834225e",
+            "bytes": 28078
+          }
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/pixg5i_hypir_structure_v2_s300/candidate_manifest.json",
+      "manifest_sha256": "273cd19af27ba763ccb912457346a4ce6f21447ce3abeef364a04ff4c5edaa95",
+      "fields": {
+        "schema": "pixg5i_registered_candidate_v1",
+        "label": "pixg5i_hypir_structure_v2_s300",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s300/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/step300.pth",
+        "checkpoint_sha256": "1424f32377bc5ad6975f942be4fb7718049a6b0b5b044a9bbe07f10e0cb971da",
+        "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s300/model_dir/model.pth",
+        "model_type": "supplied_pixG5i_pixel_UNet",
+        "variant": "structure_v2",
+        "stage": "distilled_checkpoint",
+        "local_step": 300,
+        "optimizer_step": 300,
+        "global_step": 900,
+        "parent_distillation_steps": 600,
+        "total_distillation_steps": 900,
+        "phase_initial_checkpoint_sha256": "45c7f6bb414567f31b906fc996c037f31df7ce6aebb615c19183e02886950fab",
+        "training_phase": "structure_v2",
+        "teacher": {
+          "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+          "applied_to_this_checkpoint": true,
+          "render_manifest": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+            "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+            "bytes": 81396
+          }
+        },
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/config.json",
+            "sha256": "f0991c614f0843bd9e4a053c7d89b53ce6ad0300aa1d7b45204a728917528402",
+            "bytes": 78463
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/checkpoint_step300.json",
+            "sha256": "62bdf4f3f552ecdc78e9b07b27ec60f41a1ee5f599c602e5d3bae2e10cee8166",
+            "bytes": 5039
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/input_catalog.json",
+            "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+            "bytes": 23987
+          },
+          "teacher_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/teacher_catalog.json",
+            "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+            "bytes": 39787
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/resume_step300.pt",
+            "sha256": "7a24fc2017412d111333af09281784ab88a69d4a0bbb6be140f9ce10897e6be6",
+            "bytes": 45582651
+          },
+          "training_source": {
+            "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_structure_v2.py",
+            "sha256": "3c2e83ce965ce4dbc33fa5306679c8e969f1fe1477d41af27c9ed1fc6834225e",
+            "bytes": 28078
+          }
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/pixg5i_hypir_structure_v2_s600/candidate_manifest.json",
+      "manifest_sha256": "812c2b19021a24cbcd4de993fb8da328c85c3f4dfe9502a239a71674a55fb7c0",
+      "fields": {
+        "schema": "pixg5i_registered_candidate_v1",
+        "label": "pixg5i_hypir_structure_v2_s600",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s600/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/step600.pth",
+        "checkpoint_sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+        "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s600/model_dir/model.pth",
+        "model_type": "supplied_pixG5i_pixel_UNet",
+        "variant": "structure_v2",
+        "stage": "distilled_checkpoint",
+        "local_step": 600,
+        "optimizer_step": 600,
+        "global_step": 1200,
+        "parent_distillation_steps": 600,
+        "total_distillation_steps": 1200,
+        "phase_initial_checkpoint_sha256": "45c7f6bb414567f31b906fc996c037f31df7ce6aebb615c19183e02886950fab",
+        "training_phase": "structure_v2",
+        "teacher": {
+          "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+          "applied_to_this_checkpoint": true,
+          "render_manifest": {
+            "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+            "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+            "bytes": 81396
+          }
+        },
+        "training_provenance": {
+          "config": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/config.json",
+            "sha256": "f0991c614f0843bd9e4a053c7d89b53ce6ad0300aa1d7b45204a728917528402",
+            "bytes": 78463
+          },
+          "marker": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/checkpoint_step600.json",
+            "sha256": "2c8a02d4e00859f2d65721f29bbadd6541f902aebfb6a8fccff82b366cc8050f",
+            "bytes": 5040
+          },
+          "input_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/input_catalog.json",
+            "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+            "bytes": 23987
+          },
+          "teacher_catalog": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/teacher_catalog.json",
+            "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+            "bytes": 39787
+          },
+          "resume": {
+            "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/resume_step600.pt",
+            "sha256": "0feaebcdd5eff2c759c5e6a7a73f6b761cdd778381a502cecd8eb07a91ab3bd5",
+            "bytes": 45582651
+          },
+          "training_source": {
+            "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_structure_v2.py",
+            "sha256": "3c2e83ce965ce4dbc33fa5306679c8e969f1fe1477d41af27c9ed1fc6834225e",
+            "bytes": 28078
+          }
+        }
+      }
+    },
+    {
+      "archived_manifest": "archive/server_cuda30416/submissions/pixg5i_original_20261015/candidate_manifest.json",
+      "manifest_sha256": "f47a1b5318be533c221d612a2baf99d90ee49267d4728e50bfb8e42b395bfbff",
+      "fields": {
+        "schema": "pixg5i_registered_candidate_v1",
+        "label": "pixg5i_original_20261015",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_original_20261015/model_dir",
+        "checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_original_20261015/model_dir/model.pth",
+        "checkpoint_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+        "model_type": "supplied_pixG5i_pixel_UNet",
+        "stage": "original_baseline",
+        "teacher": {
+          "label": "push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+          "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+          "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+          "applied_to_this_checkpoint": false
+        },
+        "training_provenance": null
+      }
+    }
+  ],
+  "other_version_indexes": [
+    "../independent_sr_round2_versions.json",
+    "../HYPIR_HISTORY_VERSIONS.json",
+    "../pixg5i_versions.json"
+  ],
+  "historical_unknowns": [
+    "round2 nr_v2_strength/balanced exact configs/checkpoints/status not found",
+    "old AGENT_HANDOFF.md body not found",
+    "historical ports not re-probed"
+  ]
+}

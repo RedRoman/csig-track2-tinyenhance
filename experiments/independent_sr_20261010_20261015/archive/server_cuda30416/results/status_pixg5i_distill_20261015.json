@@ -1,0 +1,79 @@
+{
+  "updated_at_UTC": "2026-10-15T13:17:55.121063+00:00",
+  "status": "iteration_complete_no_main_model_replacement",
+  "user_request": "继续蒸馏，降低NR过度优化伪影",
+  "fixed_teacher": "push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+  "architecture": "original PixUNet2, unchanged 3786764 parameters",
+  "previous_completed": {
+    "standard_mild_steps": 600,
+    "standard_medium_steps": 600,
+    "structure_v2_phase_steps": 1200,
+    "structure_v2_total_distillation_steps": 1800,
+    "v2_s1200_checkpoint_sha256": "2dc54794f3816c073c57a8e9f7a31e434ff80c0342ee5a6e2cc26506256a0edc"
+  },
+  "current_run": {
+    "name": "pixg5i_hypir_coverage_v4",
+    "status": "stopped_at200_visual_and_full_quality_gate_failed",
+    "parent": "headreset_v3_s600_total1800",
+    "parent_raw_sha256": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa",
+    "reset_head": false,
+    "NR_reward": 0,
+    "no_val_GT_training": true,
+    "source_sha256": "25624067758d5717e110ac7025c4e9eb8ee2ad8b2cfc292273581d6b5510fa08",
+    "CLI_sha256": "6cd1004d143f37879dfbe512bb8e1fc2e5018cb5371bf7d0b30a0a7870c9ee9d",
+    "training_plan_sha256": "5466f898c854b8337d16879a867b04b14b631959df18c6baca817c9eaafe0d28",
+    "plan_scope": "20 rounds of100 cases without replacement, per-case20 context-origin strata with seeded jitter; not full pixel coverage",
+    "maximum_new_steps": 2000,
+    "current_stop_at": 200,
+    "local_step_and_global_distillation_count": "N / 1800+N",
+    "full_scoring": {
+      "complete": true,
+      "scope": "full103_418",
+      "NR": 1.436555328781106,
+      "FR": 1.3494069576263428,
+      "S_full": 2.7859622864074485,
+      "quality_audit_sha256": "45562a7cc4742b48a4bf0248f95361feb588ba6ec52f3bb855d813c5a6441c71"
+    },
+    "launch_receipt": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/actual_coverage_v4_to200_launch.json",
+    "completed_phase_steps": 200,
+    "global_distillation_steps": 2000,
+    "checkpoint_sha256": "503074449893247332df973a85f9be1f348d9f130f31a28455b62790fb50c929",
+    "selected": false,
+    "visual_gate": "No material reconstruction improvement in fixed4ROI; fine text/rods/leaves remain soft. Do not continue to600 automatically.",
+    "timing": "Not run for rejected candidate; no total tool estimate"
+  },
+  "HYPIR_current_preference_unchanged_expected_sha256": "fee6134cc473881b64b0c0e0214536b0e1992464e21ab6385560f9add6564603",
+  "headreset_v3_negative_control": {
+    "name": "pixg5i_hypir_headreset_v3",
+    "parent": "structure_v2_phase600_total1200",
+    "parent_raw_sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+    "reset": "outc.weight and outc.bias only, 3468 elements; body110 tensors exact parent",
+    "NR_reward": 0,
+    "train_pairs": "test100 inputs and frozen HYPIR PNGs only",
+    "full_scoring": {
+      "s300": {
+        "NR": 1.431927511264448,
+        "FR": 1.3746500611305237,
+        "S_full": 2.8065775723949717,
+        "complete": true,
+        "selected": false
+      },
+      "s600": {
+        "NR": 1.4231506704893706,
+        "FR": 1.3670883576075237,
+        "S_full": 2.7902390280968943,
+        "complete": true,
+        "selected": false
+      }
+    },
+    "completed_phase_steps": 600,
+    "total_lineage_distillation_steps": 1800,
+    "checkpoint_sha256": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa",
+    "timing": "Not run for rejected negative-control candidates",
+    "visual_assessment": "dense false textures reduced; structure/detail reconstruction still limited; do not claim teacher equivalence"
+  },
+  "main_model_replaced": false,
+  "training_active": false,
+  "scoring_active": false,
+  "result": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/continuation_20261015_result.json"
+}

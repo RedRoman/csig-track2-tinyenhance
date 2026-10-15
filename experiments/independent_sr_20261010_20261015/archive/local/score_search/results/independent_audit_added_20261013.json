@@ -1,0 +1,122 @@
+{
+  "audited_bjt": "2026-10-13T21:07:16.494275+08:00",
+  "server": "/cache/independent_sr_score_search_20261013",
+  "scope": "pilot subset; not full test100 or official score",
+  "checks": [
+    {
+      "label": "s6000_mt200_ct175_pilot",
+      "image_rows": 23,
+      "scalar_count": 98,
+      "test_NR": 2.2435571833252905,
+      "val_FR": 1.4644165833791098,
+      "score_key": "S_subset",
+      "score": 3.7079737667044004,
+      "max_formula_delta": 0.0,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent read 2026-10-13T21:07:16.494275+08:00)",
+      "metric_weight8_actual_sha": "PASS (protocol equals 8 independently verified actual/reference/migration hashes on 20:45:22)",
+      "component_means": {
+        "test": {
+          "niqe": 4.533397507667542,
+          "musiq": 46.30305986404419,
+          "maniqa": 0.5004333212971688,
+          "clipiqa": 0.7334330141544342
+        },
+        "validation": {
+          "lpips": 0.3349202473958333,
+          "dists": 0.20066316922505698,
+          "niqe": 3.8632283210754395,
+          "musiq": 48.864541371663414,
+          "maniqa": 0.49203600486119586,
+          "clipiqa": 0.7088867624600729
+        }
+      },
+      "render_candidate": {
+        "checkpoint_sha256": "2c82a71a94aa754bd4a26a2a474c2bbe4989bde1d38d2e15d9e58eb0c3e408bc",
+        "model_t": 200,
+        "coeff_t": 175,
+        "latent": null,
+        "patch": 512,
+        "stride": 256
+      }
+    },
+    {
+      "label": "s8000_mt200_ct200_mode_p512_pilot",
+      "image_rows": 23,
+      "scalar_count": 98,
+      "test_NR": 2.2062912806272506,
+      "val_FR": 1.4499650398890178,
+      "score_key": "S_subset",
+      "score": 3.6562563205162686,
+      "max_formula_delta": 0.0,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent read 2026-10-13T21:07:16.494275+08:00)",
+      "metric_weight8_actual_sha": "PASS (protocol equals 8 independently verified actual/reference/migration hashes on 20:45:22)",
+      "component_means": {
+        "test": {
+          "niqe": 4.275427114963532,
+          "musiq": 45.70988025665283,
+          "maniqa": 0.47367357909679414,
+          "clipiqa": 0.7030616104602814
+        },
+        "validation": {
+          "lpips": 0.3483479817708333,
+          "dists": 0.20168697834014893,
+          "niqe": 3.642249266306559,
+          "musiq": 47.84327189127604,
+          "maniqa": 0.46347569425900775,
+          "clipiqa": 0.675458828608195
+        }
+      },
+      "render_candidate": {
+        "checkpoint_sha256": "1446f3bc67f2d5743a9f00eb52c92d1c610124779a37a98646d2c1f7f3775225",
+        "model_t": 200,
+        "coeff_t": 200,
+        "latent": "mode",
+        "patch": 512,
+        "stride": 256
+      }
+    },
+    {
+      "label": "s8000_mt200_ct200_sample_p768_pilot",
+      "image_rows": 23,
+      "scalar_count": 98,
+      "test_NR": 2.1541411848664285,
+      "val_FR": 1.465738832950592,
+      "score_key": "S_subset",
+      "score": 3.6198800178170205,
+      "max_formula_delta": 0.0,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent read 2026-10-13T21:07:16.494275+08:00)",
+      "metric_weight8_actual_sha": "PASS (protocol equals 8 independently verified actual/reference/migration hashes on 20:45:22)",
+      "component_means": {
+        "test": {
+          "niqe": 4.655202496051788,
+          "musiq": 46.04420070648193,
+          "maniqa": 0.4659952834248543,
+          "clipiqa": 0.6932241439819335
+        },
+        "validation": {
+          "lpips": 0.3336181640625,
+          "dists": 0.20064300298690796,
+          "niqe": 3.7190454800923667,
+          "musiq": 40.51998392740885,
+          "maniqa": 0.46598324179649353,
+          "clipiqa": 0.6616939703623453
+        }
+      },
+      "render_candidate": {
+        "checkpoint_sha256": "1446f3bc67f2d5743a9f00eb52c92d1c610124779a37a98646d2c1f7f3775225",
+        "model_t": 200,
+        "coeff_t": 200,
+        "latent": "sample",
+        "patch": 768,
+        "stride": 384
+      }
+    }
+  ],
+  "pending": []
+}

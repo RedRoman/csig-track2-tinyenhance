@@ -1,0 +1,357 @@
+{
+  "version": "1",
+  "pip_version": "25.1.1",
+  "install": [
+    {
+      "download_info": {
+        "url": "file:///cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/dllist-2.0.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=cd307b1a91bc46fae084f8c817d79be7e34951b149a2fd69004772e03573bfb3",
+          "hashes": {
+            "sha256": "cd307b1a91bc46fae084f8c817d79be7e34951b149a2fd69004772e03573bfb3"
+          }
+        }
+      },
+      "is_direct": true,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.2",
+        "name": "dllist",
+        "version": "2.0.0",
+        "summary": "List the shared libraries loaded by the current process.",
+        "description": "# dllist\n\n> [!NOTE]\n> This functionality is available [in the standard library](https://github.com/python/cpython/pull/122946) starting in Python 3.14\n\nA very small Python library to list the DLLs loaded by the current process.\nThis is equivalent to the [`dllist`](https://docs.julialang.org/en/v1/stdlib/Libdl/#Base.Libc.Libdl.dllist) function in Julia.\n\n*Note*: This library is tested on macOS, Linux, and Windows.\nSome platforms which provide the same API as Linux (e.g. FreeBSD) also work.\n\n## Installation\n\n`dllist` is [available on PyPI](https://pypi.org/project/dllist/):\n\n```\npip install dllist\n```\n\n## Usage\nThe single function this library provides is `dllist()`, which returns a list of the shared\nibraries loaded by the current process.\nThe first element is usually a representation of the current process itself (often, the empty string),\nand the rest are the shared libraries loaded by the process.\n```python\nimport dllist\nprint(dllist.dllist())\n# ['', 'linux-vdso.so.1', '/lib/x86_64-linux-gnu/libpthread.so.0', '/lib/x86_64-linux-gnu/libdl.so.2', ... ]\n```\n\n*Note*: The library paths are not postprocessed by this library. Depending on your usage, you may need to convert them to absolute paths and/or perform case-normalization (Windows).\n",
+        "description_content_type": "text/markdown",
+        "author_email": "Brian Ward <bward@flatironinstitute.org>",
+        "license": "BSD-3-Clause",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Programming Language :: Python :: 3",
+          "Development Status :: 5 - Production/Stable",
+          "License :: OSI Approved :: BSD License",
+          "Topic :: System",
+          "Topic :: Utilities"
+        ],
+        "requires_dist": [
+          "pytest; extra == \"test\"",
+          "pytest-cov; extra == \"test\""
+        ],
+        "requires_python": ">=3.8",
+        "project_url": [
+          "Homepage, https://github.com/wardbrian/dllist",
+          "Bug Tracker, https://github.com/wardbrian/dllist/issues"
+        ],
+        "provides_extra": [
+          "test"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "file:///cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt-10.12.0.36-py2.py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=5266336f901a2c27f2d35d8b623637c26c03c6f39ee542923be7ac9831c9c424",
+          "hashes": {
+            "sha256": "5266336f901a2c27f2d35d8b623637c26c03c6f39ee542923be7ac9831c9c424"
+          }
+        }
+      },
+      "is_direct": true,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "tensorrt",
+        "version": "10.12.0.36",
+        "dynamic": [
+          "author",
+          "classifier",
+          "description",
+          "description-content-type",
+          "download-url",
+          "home-page",
+          "keywords",
+          "license",
+          "license-file",
+          "requires-dist",
+          "summary"
+        ],
+        "summary": "TensorRT Metapackage",
+        "description": "\nMetapackage for NVIDIA TensorRT, which is an SDK that facilitates high-performance machine learning inference. It is designed to work in a complementary fashion with training frameworks such as TensorFlow, PyTorch, and MXNet. It focuses specifically on running an already-trained network quickly and efficiently on NVIDIA hardware.\n\nIf the dependencies of this package cannot be correctly installed from PyPI for any reason, you can try using the NVIDIA package index instead:\n```\nexport NVIDIA_TENSORRT_DISABLE_INTERNAL_PIP=0\npip install tensorrt\n```\n",
+        "description_content_type": "text/markdown",
+        "keywords": [
+          "nvidia",
+          "tensorrt",
+          "deeplearning",
+          "inference"
+        ],
+        "home_page": "https://github.com/nvidia/tensorrt",
+        "download_url": "https://developer.nvidia.com/tensorrt",
+        "author": "NVIDIA Corporation",
+        "license": "Proprietary",
+        "license_file": [
+          "LICENSE.txt"
+        ],
+        "classifier": [
+          "License :: Other/Proprietary License",
+          "Intended Audience :: Developers",
+          "Programming Language :: Python :: 3"
+        ],
+        "requires_dist": [
+          "tensorrt_cu12==10.12.0.36"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "file:///cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt_cu12-10.12.0.36-py2.py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=5f8c9a64ae38db389e60e66eb7cfcca38eaa169ea26e7e674496a8719ca85cb0",
+          "hashes": {
+            "sha256": "5f8c9a64ae38db389e60e66eb7cfcca38eaa169ea26e7e674496a8719ca85cb0"
+          }
+        }
+      },
+      "is_direct": true,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "tensorrt_cu12",
+        "version": "10.12.0.36",
+        "dynamic": [
+          "author",
+          "classifier",
+          "description",
+          "description-content-type",
+          "download-url",
+          "home-page",
+          "keywords",
+          "license",
+          "license-file",
+          "provides-extra",
+          "requires-dist",
+          "requires-python",
+          "summary"
+        ],
+        "summary": "A high performance deep learning inference library",
+        "description": "\nNVIDIA TensorRT is an SDK that facilitates high-performance machine learning inference. It is designed to work in a complementary fashion with training frameworks such as TensorFlow, PyTorch, and MXNet. It focuses specifically on running an already-trained network quickly and efficiently on NVIDIA hardware.\n\nIf the dependencies of this package cannot be correctly installed from PyPI for any reason, you can try using the NVIDIA package index instead:\n```\nexport NVIDIA_TENSORRT_DISABLE_INTERNAL_PIP=0\npip install tensorrt\n```\n",
+        "description_content_type": "text/markdown",
+        "keywords": [
+          "nvidia",
+          "tensorrt",
+          "deeplearning",
+          "inference"
+        ],
+        "home_page": "https://github.com/nvidia/tensorrt",
+        "download_url": "https://developer.nvidia.com/tensorrt",
+        "author": "NVIDIA Corporation",
+        "license": "Proprietary",
+        "license_file": [
+          "LICENSE.txt"
+        ],
+        "classifier": [
+          "License :: Other/Proprietary License",
+          "Intended Audience :: Developers",
+          "Programming Language :: Python :: 3"
+        ],
+        "requires_dist": [
+          "tensorrt_cu12_libs==10.12.0.36",
+          "tensorrt_cu12_bindings==10.12.0.36",
+          "numpy; extra == \"numpy\""
+        ],
+        "requires_python": ">=3.6",
+        "provides_extra": [
+          "numpy"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "file:///cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt_cu12_bindings-10.12.0.36-cp313-none-manylinux_2_28_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=0eb8d3e41279b1d0d329b85372d5d720c8d2ff1228f6273142d717b44d75935b",
+          "hashes": {
+            "sha256": "0eb8d3e41279b1d0d329b85372d5d720c8d2ff1228f6273142d717b44d75935b"
+          }
+        }
+      },
+      "is_direct": true,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.1",
+        "name": "tensorrt_cu12_bindings",
+        "version": "10.12.0.36",
+        "summary": "A high performance deep learning inference library",
+        "description": "A high performance deep learning inference library\n",
+        "keywords": [
+          "nvidia",
+          "tensorrt",
+          "deeplearning",
+          "inference"
+        ],
+        "home_page": "https://github.com/nvidia/tensorrt",
+        "download_url": "https://developer.nvidia.com/tensorrt",
+        "author": "NVIDIA Corporation",
+        "license": "Proprietary",
+        "license_file": [
+          "LICENSE.txt"
+        ],
+        "classifier": [
+          "License :: Other/Proprietary License",
+          "Intended Audience :: Developers",
+          "Programming Language :: Python :: 3"
+        ],
+        "requires_dist": [
+          "numpy ; extra == 'numpy'"
+        ],
+        "provides_extra": [
+          "numpy"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "file:///cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/tensorrt_cu12_libs-10.12.0.36-py2.py3-none-manylinux_2_28_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=3910039e1d49de0edfdc8bf273e40ad4b85a9d57c7c383fe0e22f75417df9610",
+          "hashes": {
+            "sha256": "3910039e1d49de0edfdc8bf273e40ad4b85a9d57c7c383fe0e22f75417df9610"
+          }
+        }
+      },
+      "is_direct": true,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.1",
+        "name": "tensorrt_cu12_libs",
+        "version": "10.12.0.36",
+        "summary": "TensorRT Libraries",
+        "description": "TensorRT Libraries\n",
+        "keywords": [
+          "nvidia",
+          "tensorrt",
+          "deeplearning",
+          "inference"
+        ],
+        "home_page": "https://github.com/nvidia/tensorrt",
+        "download_url": "https://developer.nvidia.com/tensorrt",
+        "author": "NVIDIA Corporation",
+        "license": "Proprietary",
+        "license_file": [
+          "LICENSE.txt"
+        ],
+        "classifier": [
+          "License :: Other/Proprietary License",
+          "Intended Audience :: Developers",
+          "Programming Language :: Python :: 3"
+        ],
+        "requires_dist": [
+          "nvidia-cuda-runtime-cu12"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "file:///cache/independent_sr_cuda_20261013/restoration_20261015/trt_wheels/torch_tensorrt-2.8.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_34_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=0df341e72bec335bdf236506cee22530146a3c2a2bcf224e82a8a83e8d2d14f8",
+          "hashes": {
+            "sha256": "0df341e72bec335bdf236506cee22530146a3c2a2bcf224e82a8a83e8d2d14f8"
+          }
+        }
+      },
+      "is_direct": true,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.1",
+        "name": "torch_tensorrt",
+        "version": "2.8.0",
+        "summary": "Torch-TensorRT is a package which allows users to automatically compile PyTorch and TorchScript modules to TensorRT while remaining in PyTorch",
+        "description": "<div align=\"center\">\n\nTorch-TensorRT\n===========================\n<h4> Easily achieve the best inference performance for any PyTorch model on the NVIDIA platform. </h4>\n\n[![Documentation](https://img.shields.io/badge/docs-master-brightgreen)](https://nvidia.github.io/Torch-TensorRT/)\n[![pytorch](https://img.shields.io/badge/PyTorch-2.8-green)](https://download.pytorch.org/whl/nightly/cu128)\n[![cuda](https://img.shields.io/badge/CUDA-12.8-green)](https://developer.nvidia.com/cuda-downloads)\n[![trt](https://img.shields.io/badge/TensorRT-10.11.0-green)](https://github.com/nvidia/tensorrt-llm)\n[![license](https://img.shields.io/badge/license-BSD--3--Clause-blue)](./LICENSE)\n[![Linux x86-64 Nightly Wheels](https://github.com/pytorch/TensorRT/actions/workflows/build-test-linux-x86_64.yml/badge.svg?branch=nightly)](https://github.com/pytorch/TensorRT/actions/workflows/build-test-linux-x86_64.yml)\n[![Linux SBSA Nightly Wheels](https://github.com/pytorch/TensorRT/actions/workflows/build-test-linux-aarch64.yml/badge.svg?branch=nightly)](https://github.com/pytorch/TensorRT/actions/workflows/build-test-linux-aarch64.yml)\n[![Windows Nightly Wheels](https://github.com/pytorch/TensorRT/actions/workflows/build-test-windows.yml/badge.svg?branch=nightly)](https://github.com/pytorch/TensorRT/actions/workflows/build-test-windows.yml)\n\n---\n<div align=\"left\">\n\nTorch-TensorRT brings the power of TensorRT to PyTorch. Accelerate inference latency by up to 5x compared to eager execution in just one line of code.\n</div></div>\n\n## Installation\nStable versions of Torch-TensorRT are published on PyPI\n```bash\npip install torch-tensorrt\n```\n\nNightly versions of Torch-TensorRT are published on the PyTorch package index\n```bash\npip install --pre torch-tensorrt --index-url https://download.pytorch.org/whl/nightly/cu128\n```\n\nTorch-TensorRT is also distributed in the ready-to-run [NVIDIA NGC PyTorch Container](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch) which has all dependencies with the proper versions and example notebooks included.\n\nFor more advanced installation  methods, please see [here](https://pytorch.org/TensorRT/getting_started/installation.html)\n\n## Quickstart\n\n### Option 1: torch.compile\nYou can use Torch-TensorRT anywhere you use `torch.compile`:\n\n```python\nimport torch\nimport torch_tensorrt\n\nmodel = MyModel().eval().cuda() # define your model here\nx = torch.randn((1, 3, 224, 224)).cuda() # define what the inputs to the model will look like\n\noptimized_model = torch.compile(model, backend=\"tensorrt\")\noptimized_model(x) # compiled on first run\n\noptimized_model(x) # this will be fast!\n```\n\n### Option 2: Export\nIf you want to optimize your model ahead-of-time and/or deploy in a C++ environment, Torch-TensorRT provides an export-style workflow that serializes an optimized module. This module can be deployed in PyTorch or with libtorch (i.e. without a Python dependency).\n\n#### Step 1: Optimize + serialize\n```python\nimport torch\nimport torch_tensorrt\n\nmodel = MyModel().eval().cuda() # define your model here\ninputs = [torch.randn((1, 3, 224, 224)).cuda()] # define a list of representative inputs here\n\ntrt_gm = torch_tensorrt.compile(model, ir=\"dynamo\", inputs=inputs)\ntorch_tensorrt.save(trt_gm, \"trt.ep\", inputs=inputs) # PyTorch only supports Python runtime for an ExportedProgram. For C++ deployment, use a TorchScript file\ntorch_tensorrt.save(trt_gm, \"trt.ts\", output_format=\"torchscript\", inputs=inputs)\n```\n\n#### Step 2: Deploy\n##### Deployment in PyTorch:\n```python\nimport torch\nimport torch_tensorrt\n\ninputs = [torch.randn((1, 3, 224, 224)).cuda()] # your inputs go here\n\n# You can run this in a new python session!\nmodel = torch.export.load(\"trt.ep\").module()\n# model = torch_tensorrt.load(\"trt.ep\").module() # this also works\nmodel(*inputs)\n```\n\n##### Deployment in C++:\n```cpp\n#include \"torch/script.h\"\n#include \"torch_tensorrt/torch_tensorrt.h\"\n\nauto trt_mod = torch::jit::load(\"trt.ts\");\nauto input_tensor = [...]; // fill this with your inputs\nauto results = trt_mod.forward({input_tensor});\n```\n\n## Further resources\n- [Up to 50% faster Stable Diffusion inference with one line of code](https://pytorch.org/TensorRT/tutorials/_rendered_examples/dynamo/torch_compile_stable_diffusion.html#sphx-glr-tutorials-rendered-examples-dynamo-torch-compile-stable-diffusion-py)\n- [Optimize LLMs from Hugging Face with Torch-TensorRT]() \\[coming soon\\]\n- [Run your model in FP8 with Torch-TensorRT](https://pytorch.org/TensorRT/tutorials/_rendered_examples/dynamo/vgg16_fp8_ptq.html)\n- [Tools to resolve graph breaks and boost performance]() \\[coming soon\\]\n- [Tech Talk (GTC '23)](https://www.nvidia.com/en-us/on-demand/session/gtcspring23-s51714/)\n- [Documentation](https://nvidia.github.io/Torch-TensorRT/)\n\n\n## Platform Support\n\n| Platform            | Support                                          |\n| ------------------- | ------------------------------------------------ |\n| Linux AMD64 / GPU   | **Supported**                                    |\n| Linux SBSA / GPU    | **Supported**                                    |\n| Windows / GPU       | **Supported (Dynamo only)**                      |\n| Linux Jetson / GPU | **Source Compilation Supported on JetPack-4.4+**  |\n| Linux Jetson / DLA | **Source Compilation Supported on JetPack-4.4+**  |\n| Linux ppc64le / GPU | Not supported                                    |\n\n> Note: Refer [NVIDIA L4T PyTorch NGC container](https://ngc.nvidia.com/catalog/containers/nvidia:l4t-pytorch) for PyTorch libraries on JetPack.\n\n### Dependencies\n\nThese are the following dependencies used to verify the testcases. Torch-TensorRT can work with other versions, but the tests are not guaranteed to pass.\n\n- Bazel 8.1.1\n- Libtorch 2.8.0.dev (latest nightly)\n- CUDA 12.8 (CUDA 12.6 on Jetson)\n- TensorRT 10.11 (TensorRT 10.3 on Jetson)\n\n## Deprecation Policy\n\nDeprecation is used to inform developers that some APIs and tools are no longer recommended for use. Beginning with version 2.3, Torch-TensorRT has the following deprecation policy:\n\nDeprecation notices are communicated in the Release Notes. Deprecated API functions will have a statement in the source documenting when they were deprecated. Deprecated methods and classes will issue deprecation warnings at runtime, if they are used. Torch-TensorRT provides a 6-month migration period after the deprecation. APIs and tools continue to work during the migration period. After the migration period ends, APIs and tools are removed in a manner consistent with semantic versioning.\n\n## Contributing\n\nTake a look at the [CONTRIBUTING.md](CONTRIBUTING.md)\n\n\n## License\n\nThe Torch-TensorRT license can be found in the [LICENSE](./LICENSE) file. It is licensed with a BSD Style licence\n",
+        "description_content_type": "text/markdown",
+        "keywords": [
+          "pytorch",
+          "torch",
+          "tensorrt",
+          "trt",
+          "ai",
+          "artificial intelligence",
+          "ml",
+          "machine learning",
+          "dl",
+          "deep learning",
+          "compiler",
+          "dynamo",
+          "torchscript",
+          "inference"
+        ],
+        "author_email": "NVIDIA Corporation <narens@nvidia.com>",
+        "license": "Copyright (c) 2020-present, NVIDIA CORPORATION. All rights reserved.\nCopyright (c) Meta Platforms, Inc. and affiliates.\n\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions\nare met:\n\n1. Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright\n   notice, this list of conditions and the following disclaimer in the\n   documentation and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its contributors\n   may be used to endorse or promote products derived from this software\n   without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ``AS IS'' AND ANY\nEXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR\nPURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR\nCONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,\nEXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,\nPROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR\nPROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY\nOF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Environment :: GPU :: NVIDIA CUDA",
+          "License :: OSI Approved :: BSD License",
+          "Intended Audience :: Developers",
+          "Intended Audience :: Science/Research",
+          "Operating System :: POSIX :: Linux",
+          "Programming Language :: C++",
+          "Programming Language :: Python",
+          "Programming Language :: Python :: Implementation :: CPython",
+          "Topic :: Scientific/Engineering",
+          "Topic :: Scientific/Engineering :: Artificial Intelligence",
+          "Topic :: Software Development",
+          "Topic :: Software Development :: Libraries"
+        ],
+        "requires_dist": [
+          "packaging >=23",
+          "typing-extensions >=4.7.0",
+          "dllist",
+          "torch <2.9.0,>=2.8.0 ; platform_machine != \"aarch64\" or (platform_machine == \"aarch64\" and \"tegra\" not in platform_release)",
+          "tensorrt <10.13.0,>=10.12.0 ; platform_machine != \"aarch64\" or (platform_machine == \"aarch64\" and \"tegra\" not in platform_release)",
+          "tensorrt-cu12-bindings <10.13.0,>=10.12.0 ; platform_machine != \"aarch64\" or (platform_machine == \"aarch64\" and \"tegra\" not in platform_release)",
+          "tensorrt-cu12-libs <10.13.0,>=10.12.0 ; platform_machine != \"aarch64\" or (platform_machine == \"aarch64\" and \"tegra\" not in platform_release)",
+          "numpy ; platform_machine != \"aarch64\" or (platform_machine == \"aarch64\" and \"tegra\" not in platform_release)",
+          "torch <2.9.0,>=2.8.0 ; platform_machine == \"aarch64\" and \"tegra\" in platform_release",
+          "tensorrt <10.4.0,>=10.3.0 ; platform_machine == \"aarch64\" and \"tegra\" in platform_release",
+          "numpy <2.0.0 ; platform_machine == \"aarch64\" and \"tegra\" in platform_release",
+          "nvidia-modelopt[all] >=0.27.1 ; extra == 'quantization'",
+          "torchvision <0.24.0,>=0.23.0 ; (platform_machine != \"aarch64\" or (platform_machine == \"aarch64\" and \"tegra\" not in platform_release)) and extra == 'torchvision'",
+          "torchvision <0.23.0,>=0.22.0 ; (platform_machine == \"aarch64\" and \"tegra\" in platform_release) and extra == 'torchvision'"
+        ],
+        "requires_python": ">=3.9",
+        "project_url": [
+          "Homepage, https://pytorch.org/tensorrt",
+          "Documentation, https://pytorch.org/tensorrt",
+          "Repository, https://github.com/pytorch/tensorrt.git",
+          "Changelog, https://github.com/pytorch/tensorrt/releases"
+        ],
+        "provides_extra": [
+          "quantization",
+          "torchvision"
+        ]
+      }
+    }
+  ],
+  "environment": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.13.5",
+    "os_name": "posix",
+    "platform_machine": "x86_64",
+    "platform_release": "4.18.0-147.5.2.15.h1109.eulerosv2r10.x86_64",
+    "platform_system": "Linux",
+    "platform_version": "#1 SMP Thu Dec 8 04:08:54 UTC 2022",
+    "python_full_version": "3.13.5",
+    "platform_python_implementation": "CPython",
+    "python_version": "3.13",
+    "sys_platform": "linux"
+  }
+}

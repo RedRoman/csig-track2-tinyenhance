@@ -1,0 +1,79 @@
+{
+  "label": "push4_a7750_compiled_pilot",
+  "scope": "fixed20+val3; not full score",
+  "auditor_sha256": "afdd1aae490f07eebd387e97f580d9134352e7b5a7f43e36af64bca7b3c72162",
+  "monitor_sha256": "1c591e8ac85e071303561081bbe610ff21b8892aa5340d54c4b68bb029ac4f6d",
+  "actual_stage5_checkpoint_marker_sha256": "860df8ada386586bb845435e6ee961b861d8b6154a1554783d1e61aa4b2ccc5f",
+  "global_step": 7750,
+  "stage_local_step": 500,
+  "optimizer_step": 1750,
+  "actual_raw_checkpoint_matches_completed_marker": true,
+  "files": [
+    {
+      "path": "checkpoint_marker.json",
+      "source": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/checkpoint_step7750.json",
+      "bytes": 723,
+      "sha256": "860df8ada386586bb845435e6ee961b861d8b6154a1554783d1e61aa4b2ccc5f"
+    },
+    {
+      "path": "render_protocol.json",
+      "source": "/cache/independent_sr_cuda_20261013/nr_push4_pilot_evaluations/push4_a7750_compiled_pilot/render_protocol.json",
+      "bytes": 10601,
+      "sha256": "647a65ed4fdb84df466766336bcc9d3055f24c37907797c0674d82789c14c896"
+    },
+    {
+      "path": "render_manifest.json",
+      "source": "/cache/independent_sr_cuda_20261013/nr_push4_pilot_evaluations/push4_a7750_compiled_pilot/render_manifest.json",
+      "bytes": 17316,
+      "sha256": "067fe6052ff661ceafa6a7f7351980b8037f40759079465e614fe353bee3688e"
+    },
+    {
+      "path": "render_status.json",
+      "source": "/cache/independent_sr_cuda_20261013/nr_push4_pilot_evaluations/push4_a7750_compiled_pilot/render_status.json",
+      "bytes": 89,
+      "sha256": "56d5407266094664330395f01d5bbadcd4097d647d533f2667417671de531b51"
+    },
+    {
+      "path": "render_progress.pt",
+      "source": "/cache/independent_sr_cuda_20261013/nr_push4_pilot_evaluations/push4_a7750_compiled_pilot/render_progress.pt",
+      "bytes": 19941,
+      "sha256": "e03392bdc3517f0641e9d8e4208c64a6899a005c7106197955b8aeb378aa3a82"
+    },
+    {
+      "path": "scores/protocol.json",
+      "source": "/cache/independent_sr_cuda_20261013/nr_push4_pilot_evaluations/push4_a7750_compiled_pilot/scores/protocol.json",
+      "bytes": 144243,
+      "sha256": "24749015ef0d22eef34e7ae774555bcbe7e5dd74b8b50ade1db34407f80702c1"
+    },
+    {
+      "path": "scores/result.json",
+      "source": "/cache/independent_sr_cuda_20261013/nr_push4_pilot_evaluations/push4_a7750_compiled_pilot/scores/result.json",
+      "bytes": 734,
+      "sha256": "cd3a288e0d34a035ef27bdc2e08dc87f38cce5950eb015b43e46f90c0296d3aa"
+    },
+    {
+      "path": "scores/status.json",
+      "source": "/cache/independent_sr_cuda_20261013/nr_push4_pilot_evaluations/push4_a7750_compiled_pilot/scores/status.json",
+      "bytes": 108,
+      "sha256": "c584e3e3312dca0f6896ba7eef821a3384406e47de0dc6faedd7ca321992e538"
+    },
+    {
+      "path": "scores/measurements.jsonl",
+      "source": "/cache/independent_sr_cuda_20261013/nr_push4_pilot_evaluations/push4_a7750_compiled_pilot/scores/measurements.jsonl",
+      "bytes": 13297,
+      "sha256": "581c6db7dc4100819c07664b3ca3fa58f1f575c3a4b44d6970d3d3c12d98137f"
+    },
+    {
+      "path": "scores/rng_checkpoint.pt",
+      "source": "/cache/independent_sr_cuda_20261013/nr_push4_pilot_evaluations/push4_a7750_compiled_pilot/scores/rng_checkpoint.pt",
+      "bytes": 22453,
+      "sha256": "9ac012e3d8463e68f5d3384168c625a296eb4f43035c2043432df88f7a9ca94c"
+    },
+    {
+      "path": "registration.json",
+      "source": "/cache/independent_sr_cuda_20261013/submissions/hypir_push4_a7750_compiled/registration.json",
+      "bytes": 6565,
+      "sha256": "924e45772bad7ae8f58e7606784044d33a94836da83c78414f096e72a135032f"
+    }
+  ]
+}

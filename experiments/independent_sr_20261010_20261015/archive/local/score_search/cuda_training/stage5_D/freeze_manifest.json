@@ -1,0 +1,53 @@
+{
+  "schema": "stage5_D_training_audit_freeze_v1",
+  "status": "FROZEN",
+  "frozen_utc": "2026-10-14T13:45:03.623290+00:00",
+  "CPU_only": true,
+  "CUDA_context_initialized": false,
+  "files": {
+    "audit_stage5_cpu.py": {
+      "bytes": 20161,
+      "sha256": "e07bf36ebf8b1bd0457129a565e151bd0086602e780f1a58283be81103160195"
+    },
+    "initial_stage5_cpu.py": {
+      "bytes": 7014,
+      "sha256": "3e863366dbbfd5cc35ace0c99a9d39c63085c018596f6aea2841611b433a97d7"
+    },
+    "compare_D_vs_C_cpu.py": {
+      "bytes": 5090,
+      "sha256": "b14d5193f08c39322245d3c8b59fa33bbc53e2641e06478f885d465ab34598ad"
+    },
+    "independent_audit_plan.json": {
+      "bytes": 3786,
+      "sha256": "065570a944a719a64c1b9471e7b264ba75c3aff777f40321b0347feab46e907f"
+    },
+    "config_stage5_D_m25_r075_250.json": {
+      "bytes": 1124,
+      "sha256": "3371737e22449aa1db73a56a560ba186ec9027c332d5e05c5e4786829d35bdf3"
+    },
+    "initial_cpu_audit.json": {
+      "bytes": 2372,
+      "sha256": "da869c49cab2fbfeaf1fcaeded434fd9450e7459232de8f21a657250d07e8efe"
+    },
+    "initial_D_vs_C_control_audit.json": {
+      "bytes": 1574,
+      "sha256": "506169ccc7e0f9668c47b074a0638b220ab50c0e88777881bd65b29b9d74506d"
+    },
+    "milestone250_cpu_audit.json": {
+      "bytes": 16163,
+      "sha256": "09d702fc680e007ec5acc169967ce157108bc684532359f20a408ddf3f7d9343"
+    },
+    "terminal_D_vs_C_control_audit.json": {
+      "bytes": 2534,
+      "sha256": "4bee5ba9ca6a58279e6a7a330bd8f9577625064d2c58936784e4dee740976e0a"
+    },
+    "TRAINING_D_AUDIT_SUMMARY.json": {
+      "bytes": 7131,
+      "sha256": "c179474cae46d693ab1544833afc36d5a41ae77fc61f3e8795350a362c4c6782"
+    },
+    "TRAINING_D_AUDIT_SUMMARY.md": {
+      "bytes": 1701,
+      "sha256": "15e8a2cdd104d878a3bb9bbaa4a50a64d1a00ca0b46cd9508548fc366aceae72"
+    }
+  }
+}

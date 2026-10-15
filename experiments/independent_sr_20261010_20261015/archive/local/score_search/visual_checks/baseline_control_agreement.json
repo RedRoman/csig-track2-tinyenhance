@@ -1,0 +1,52 @@
+{
+  "meaning": "Agreement between two model outputs; not error against GT and not a quality score",
+  "controls": [
+    {
+      "case": 7,
+      "equal_pixels": false,
+      "mean_absolute_uint8_channel_difference": 0.332331207063463,
+      "p95_absolute_uint8_channel_difference": 1.0,
+      "max_absolute_uint8_channel_difference": 123,
+      "fraction_changed_channel_values": 0.2794429196251763
+    },
+    {
+      "case": 16,
+      "equal_pixels": false,
+      "mean_absolute_uint8_channel_difference": 0.36148383882310653,
+      "p95_absolute_uint8_channel_difference": 1.0,
+      "max_absolute_uint8_channel_difference": 91,
+      "fraction_changed_channel_values": 0.30649203724331325
+    },
+    {
+      "case": 23,
+      "equal_pixels": false,
+      "mean_absolute_uint8_channel_difference": 0.359383503595988,
+      "p95_absolute_uint8_channel_difference": 1.0,
+      "max_absolute_uint8_channel_difference": 101,
+      "fraction_changed_channel_values": 0.28361739052666557
+    },
+    {
+      "case": 28,
+      "equal_pixels": false,
+      "mean_absolute_uint8_channel_difference": 1.3948505454593234,
+      "p95_absolute_uint8_channel_difference": 5.0,
+      "max_absolute_uint8_channel_difference": 181,
+      "fraction_changed_channel_values": 0.6089698738522
+    },
+    {
+      "case": 41,
+      "equal_pixels": false,
+      "mean_absolute_uint8_channel_difference": 0.71345321337382,
+      "p95_absolute_uint8_channel_difference": 3.0,
+      "max_absolute_uint8_channel_difference": 199,
+      "fraction_changed_channel_values": 0.40936679310268825
+    }
+  ],
+  "expected_difference_reason": "Full and pilot render different ordered case sequences. After the shared prefix, skipped cases change the continuous VAE.sample RNG draws; byte differences from case6 onward are expected. These measurements do not identify a cross-machine/backend discrepancy.",
+  "same_prefix_controls_reported_by_root": {
+    "val1": "New8000 pilot and old full have identical SHA256",
+    "test1": "New8000 pilot and old full have identical SHA256",
+    "limitation": "These two matching prefix samples do not prove all103 images are identical."
+  },
+  "screening_baseline": "s8000_mt200_ct200_pilot from the same batch, validation1..3 then the same fixed20 numeric cases, used by every pilot candidate"
+}

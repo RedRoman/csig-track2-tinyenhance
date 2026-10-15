@@ -1,0 +1,21 @@
+{
+  "pid": 23626,
+  "args": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "-u",
+    "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_lastres_nr_lr5e6_v4.py",
+    "--config",
+    "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/config_hypir_lastres_lr5e6_nr100_v4.json",
+    "--stop-at",
+    "100"
+  ],
+  "log": "/cache/independent_sr_cuda_20261013/logs/lastres_lr5e6_train100_20261015.log",
+  "physical_GPU": 2,
+  "launch_utc": "2026-10-15T08:00:10.582028+00:00",
+  "source_sha256": "5f99fcebc6cb50ed5c3ae18ae8df0cdf10cb2ab3b62e124c5097b0c81cf5cd9b",
+  "config_sha256": "3ba6800813879ba4fbcf8bcf57dc9af41268a0b367359a370dd7f5738b7ab8fc",
+  "optimizer_tensor_count": 6,
+  "unselected_LoRA_tensor_count": 508,
+  "teacher_only": true,
+  "distillation": false
+}

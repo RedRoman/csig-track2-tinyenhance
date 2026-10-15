@@ -1,0 +1,79 @@
+{
+  "schema": "push5_independent_pixel_full_native103_418_CPU_audit_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "GPU_used": false,
+  "audited_utc": "2026-10-14T14:46:12.188631+00:00",
+  "label": "push5_pix_g4_distill250_full",
+  "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_push5_full_evaluations/push5_pix_g4_distill250_full",
+  "provenance": "new trained student",
+  "image_rows": 103,
+  "scalar_metrics": 418,
+  "actual103_PNG_SHA_size_scored_manifest_PASS": true,
+  "actual103_input_SHA_and_order_PASS": true,
+  "actual3_GT_SHA_PASS": true,
+  "all_metric_values_finite": true,
+  "component_means_recomputed": {
+    "validation": {
+      "lpips": 0.349609375,
+      "dists": 0.28388617436091107,
+      "niqe": 4.477693237777032,
+      "musiq": 44.71489715576172,
+      "maniqa": 0.6082402666409811,
+      "clipiqa": 0.8806024789810181
+    },
+    "test": {
+      "niqe": 4.1873075737999255,
+      "musiq": 40.13766962051392,
+      "maniqa": 0.6228379267454147,
+      "clipiqa": 0.8699824982881545
+    }
+  },
+  "max_published_component_delta": 8.881784197001252e-16,
+  "NR": 2.475466363858716,
+  "FR": 1.3665044506390889,
+  "S_proxy": 3.841970814497805,
+  "actual_checkpoint_sha256": "8c95e115e12219bca8bea2b2d04e0a01552f072de56619fab878ae61a9643237",
+  "actual_runner_sha256": "c5f59b7e42f3050d0bc62b1fccdcc38a6e01c91edbd54d3c03061fe5f2129abd",
+  "original_renderer_scorer_metric_sources_PASS": true,
+  "actual_metric_weights_sha256": {
+    "clip/RN50.pt": "afeb0e10f9e5a86da6080e35cf09123aca3b358a0c3e3b6c78a7b63bc04b6762",
+    "torch/hub/checkpoints/DISTS_weights-f5e65c96.pth": "f5e65c96230b7f6ca995691647d482237e4cab8a50c5c4a5784f219ef0748218",
+    "torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0",
+    "torch/hub/checkpoints/alexnet-owt-7be5be79.pth": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+    "torch/hub/checkpoints/ckpt_koniq10k.pt": "a207f8ab57322e6be38ff5c8d019301dc032b454bef21c3c9f9dbf7974eebff6",
+    "torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth": "e95806b9eae5f3814c410f574ba8e552362bd5bc63d758ed5b97860f5d6185aa",
+    "torch/hub/checkpoints/niqe_modelparameters.mat": "fa2aa4d12dd9595c3fb6bf8b4e1a15c79d5d1469238d0901c88dead195be578d",
+    "torch/hub/checkpoints/vgg16-397923af.pth": "397923af8e79cdbb6a7127f12361acd7a2f83e06b05044ddf496e83de57a5bf0"
+  },
+  "render_protocol_id": "ad7b3b3e4975ecef6a202bedbcaad01b25c92964fc79c80213b81d84a407a4e2",
+  "metadata_file_SHA256": {
+    "/cache/independent_sr_cuda_20261013/nr_push5_full_evaluations/push5_pix_g4_distill250_full/render_manifest.json": "cfcab373c6086709115b8716efbe5dc61dd7b895ffd5204b4959be0afac5bf51",
+    "/cache/independent_sr_cuda_20261013/nr_push5_full_evaluations/push5_pix_g4_distill250_full/render_protocol.json": "404375e808626524a213c0b5b06930c0ccc58679f0876bb08974168229dbca6c",
+    "/cache/independent_sr_cuda_20261013/nr_push5_full_evaluations/push5_pix_g4_distill250_full/scores/result.json": "d88e5e65bd97367a4f998b12b025ec1d986b97320178cb616fddb87d3f3a85a4",
+    "/cache/independent_sr_cuda_20261013/nr_push5_full_evaluations/push5_pix_g4_distill250_full/scores/protocol.json": "0a4e63fc82abac42e32b51cb5dabe785256f9f6d052c617b736d1b11506c3ee2",
+    "/cache/independent_sr_cuda_20261013/nr_push5_full_evaluations/push5_pix_g4_distill250_full/scores/measurements.jsonl": "92aa0097b5108d62e609c56b57ec06dcf13e5ca99f06d0eeb8815df3b8740d4d"
+  },
+  "all_actual_PNG_input_GT_records_digest_SHA256": "8d0a71dc089c2b581a9e51425facba1f126c1c2ce067eea74fcf6c174d08737f",
+  "score_seed": 1234,
+  "score_seed_scope": "once at start of each split for each label, continuous draw order within that split",
+  "metric_order": {
+    "validation": [
+      "lpips",
+      "dists",
+      "niqe",
+      "musiq",
+      "maniqa",
+      "clipiqa"
+    ],
+    "test": [
+      "niqe",
+      "musiq",
+      "maniqa",
+      "clipiqa"
+    ]
+  },
+  "image_policy": "CM.load_img original FP32 RGB[0,1]; FR FP16 autocast only; all NR original FP32; no resize or edits",
+  "not_official_leaderboard_score": true,
+  "prediction_not_computed_without_fresh_same_card_latency": true
+}

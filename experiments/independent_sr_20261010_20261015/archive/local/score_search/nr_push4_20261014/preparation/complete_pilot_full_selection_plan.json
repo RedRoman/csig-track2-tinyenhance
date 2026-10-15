@@ -1,0 +1,25 @@
+{
+  "schema": "nr_push4_complete_pilot_full_selection_plan_v1",
+  "created_utc": "2026-10-14T13:25:41.388932+00:00",
+  "parent_label": "push3_c7250_compiled_all",
+  "parent_full_NR": 2.313125129005856,
+  "parent_full_FR": 1.4465690056482952,
+  "parent_full_S_proxy": 3.7596941346541515,
+  "training_complete": true,
+  "independent_branches": 3,
+  "updates_each": 500,
+  "new_global_steps": [
+    7500,
+    7750
+  ],
+  "all6_pilots_independently_audited": true,
+  "pilot_scope": "fixed test20+val3, 23 PNG/98 scalars, S_subset only",
+  "full_candidates": [
+    "push4_c7750_compiled_all",
+    "push4_a7750_compiled_all"
+  ],
+  "full_scope": "full test100+val3, 103 PNG/418 scalars, S_proxy",
+  "final_selection_rule": "After both actual full audits PASS, retain the highest original-tool S_proxy among parent7250 and these two full candidates. Never replace the best based only on training reward or subset score.",
+  "latency_rule": "Final weights/config only; one physical GPU0, fresh sequential G4, parent7250 and selected, original warm30/n200/seed231; unchanged original predict; report quality-only at fixed-parent latency separately.",
+  "storage_rule": "Do not modify three prior prefixes. Persist selected immutable exact FP32 LoRA+Adam+4RNG resume, exact original raw ZIP reconstruction recipe/gaps, four native preview PNGs and small proof/code/metrics. Full103 PNGs and redundant raw remain on cache, not duplicated to SFS. Source+destination byte SHA must PASS."
+}

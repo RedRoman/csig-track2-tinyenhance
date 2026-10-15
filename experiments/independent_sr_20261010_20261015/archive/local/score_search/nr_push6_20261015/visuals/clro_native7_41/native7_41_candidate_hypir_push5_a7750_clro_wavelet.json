@@ -1,0 +1,170 @@
+{
+  "execute": true,
+  "phase": "candidate",
+  "suite": "native7_41",
+  "cases": [
+    7,
+    41
+  ],
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push5_a7750_clro_wavelet/model_dir",
+  "out_dir": "/cache/independent_sr_cuda_20261013/analysis/push6/clro_native7_41",
+  "reference_dir": "/cache/independent_sr_cuda_20261013/audits/push6/clro_correctness/native7_41",
+  "runner_sha256": "34a70fae57bc412fd3e0394e0573942e63c2764334847dab67eee3c4b696b092",
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "helper_sha256": "2ce3f1f8fc64cf056768a0db9a56644613175ffee7f86d9f9f2f638570731efd",
+  "status": "complete",
+  "scope": "Fixed visual diagnostic only; not full quality/latency or permission to reuse A7750 quality",
+  "output_ownership_preserved": true,
+  "constructor_four_RNG_equal_reference": true,
+  "reused_reference_files_SHA256": {
+    "/cache/independent_sr_cuda_20261013/audits/push6/clro_correctness/native7_41/native7_41_initial_rng.pt": "84d40729083cc72203f7ea974f7eb151e881976590e1b2303bee9a00434bb75b",
+    "/cache/independent_sr_cuda_20261013/audits/push6/clro_correctness/native7_41/native7_41_reference_7.pt": "3a2847335923002b5c14bf2bd5080bb1675d18978e4c48c7a712c68ec0f89044",
+    "/cache/independent_sr_cuda_20261013/audits/push6/clro_correctness/native7_41/native7_41_reference_41.pt": "6e48bc219386bb03d0089d7976ae62c43868fd9b74a5e013d40694dee19e9b5d"
+  },
+  "original_protocol": {
+    "schema": "hypir_cuda_runner_v1",
+    "label": "push5_a7750_clro_wavelet",
+    "runner_path": "HYPIR_sd2_rank256_mt200_ct175_bf16_fused_gpu_cachedempty_cl_ro_waveletcompile",
+    "weight_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+    "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+    "base_model_path": "/temp/zihaohe_stage/baselines/sd21b",
+    "repo_path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda",
+    "versions": {
+      "torch": "2.8.0+cu128",
+      "torchvision": "0.23.0+cu128",
+      "diffusers": "0.33.1",
+      "transformers": "4.56.2",
+      "peft": "0.17.1",
+      "accelerate": "1.10.1",
+      "numpy": "2.3.3",
+      "Pillow": "11.3.0"
+    },
+    "input": "CUDA FP16 [-1,1] -> CUDA FP32 [0,1]; native shape",
+    "output": "CUDA FP32 [-1,1]; upstream clamp[0,1]; native shape; no CPU image copy",
+    "internal_precision": "BF16",
+    "seed": "231 before initialization; continuous inference RNG",
+    "model_t": 200,
+    "coeff_t": 175,
+    "lora_rank": 256,
+    "patch": 512,
+    "stride": 256,
+    "scale": 1,
+    "caption": "",
+    "latent": "upstream posterior.sample",
+    "fusion": "UNet fuse_lora(scale1,safe_fusing=True)+unload_lora",
+    "fused_requires_separate_quality_score": true,
+    "source_sha256": {
+      "HYPIR/enhancer/base.py": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161",
+      "HYPIR/enhancer/sd2.py": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd",
+      "HYPIR/utils/common.py": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+    },
+    "runner_sha256": "34a70fae57bc412fd3e0394e0573942e63c2764334847dab67eee3c4b696b092",
+    "numerical_flags": {
+      "matmul_allow_tf32": true,
+      "cudnn_allow_tf32": true,
+      "cudnn_benchmark": false
+    },
+    "no_warmup_during_initialization": true,
+    "fixed_empty_caption_cache": "original prepare_inputs(batch1,prompt empty) once; identical tensors reused",
+    "compilation": "torch.compile reduce-overhead dynamicFalse of UNet.forward,VAE.encode,VAE.decode and full wavelet reconstruction; native tile loop/sampling/scheduler uncompiled",
+    "memory_format": "channels_last UNet and VAE parameters; input/output tensor contract unchanged",
+    "speed_candidate": "push5 channels_last + deterministic subgraph CUDA graphs + complete wavelet compile",
+    "cudagraph_step_policy": "torch.compiler.cudagraph_mark_step_begin once at every infer entry; no hidden forwards or seed resets",
+    "compiled_requires_separate_quality_score": true
+  },
+  "rows": [
+    {
+      "case": 7,
+      "input_path": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case7.jpg",
+      "input_source_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+      "input_float_sha256": "18c03c6696c458966c718f3d93b5f6b0812ecb5ac9afc9ad42d9c45ccc270e5d",
+      "shape": [
+        1,
+        3,
+        3072,
+        4096
+      ],
+      "finite_range_contract_PASS": true,
+      "float_sha256": "a60d8f51bd7a07e03231fda7afa12ae0d6b10a59b1d0962deed9923916ce2c8e",
+      "png": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/push6/clro_native7_41/native7_41_candidate_hypir_push5_a7750_clro_wavelet_case7.png",
+        "sha256": "084601ff54d3cea927a67b3e2b7038139011e545dc4777fa494811051803e7b4",
+        "bytes": 18446782
+      },
+      "pre_four_RNG_SHA256": {
+        "python": "5c2909987672a020437b7ab423d1a6f51fb5997707c1a020c3ac5e815fcc3abe",
+        "numpy": "ab1a6ba056a08e1e28271a140fab59b0e71f196f454a747d7d0e818a69f466fa",
+        "cpu": "5acd373081100d24b53d5faad136f45c7da80e04f480fdd8aeca3af7991ba4d9",
+        "cuda": [
+          "abbb0ec5516a063a500077ae2306d3d9ff1cbeaaeca1bf8be56c85cc36e2123d"
+        ]
+      },
+      "post_four_RNG_SHA256": {
+        "python": "5c2909987672a020437b7ab423d1a6f51fb5997707c1a020c3ac5e815fcc3abe",
+        "numpy": "ab1a6ba056a08e1e28271a140fab59b0e71f196f454a747d7d0e818a69f466fa",
+        "cpu": "5acd373081100d24b53d5faad136f45c7da80e04f480fdd8aeca3af7991ba4d9",
+        "cuda": [
+          "7e23d8d62b7fe24f654a7fc80ef70b4d9fa1d2f273cb54f7297f03820ffd0d23"
+        ]
+      },
+      "reference_png": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/push6/clro_native7_41/native7_41_reference_case7.png",
+        "sha256": "f5c1ee419616d2e70830b7d60e2e25d5250217440e43ce63cc9f3ea4ce229e96",
+        "bytes": 18448541
+      },
+      "float_equal": false,
+      "max_abs": 1.2252706289291382,
+      "mean_abs": 0.0022975970059633255,
+      "png_equal": false,
+      "post_four_rng_equal": true,
+      "reference_PT_sha256": "3a2847335923002b5c14bf2bd5080bb1675d18978e4c48c7a712c68ec0f89044"
+    },
+    {
+      "case": 41,
+      "input_path": "/cache/independent_sr_cuda_20261013/source_payload/assets/input/case41.jpg",
+      "input_source_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+      "input_float_sha256": "85466dfd6b0c6e2a7bd2c66a863d2a68662d32f153ae258edf5ef8548257a853",
+      "shape": [
+        1,
+        3,
+        4096,
+        3072
+      ],
+      "finite_range_contract_PASS": true,
+      "float_sha256": "23b6d73bb2a4737a56fd799170f261ddebd980c38a6df6e2c9e245f3949114b5",
+      "png": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/push6/clro_native7_41/native7_41_candidate_hypir_push5_a7750_clro_wavelet_case41.png",
+        "sha256": "4ccf137218fbeb7374ec6b56a7140a1a44b1bd59632165394b11f12ad8562e43",
+        "bytes": 23287777
+      },
+      "pre_four_RNG_SHA256": {
+        "python": "5c2909987672a020437b7ab423d1a6f51fb5997707c1a020c3ac5e815fcc3abe",
+        "numpy": "ab1a6ba056a08e1e28271a140fab59b0e71f196f454a747d7d0e818a69f466fa",
+        "cpu": "5acd373081100d24b53d5faad136f45c7da80e04f480fdd8aeca3af7991ba4d9",
+        "cuda": [
+          "7e23d8d62b7fe24f654a7fc80ef70b4d9fa1d2f273cb54f7297f03820ffd0d23"
+        ]
+      },
+      "post_four_RNG_SHA256": {
+        "python": "5c2909987672a020437b7ab423d1a6f51fb5997707c1a020c3ac5e815fcc3abe",
+        "numpy": "ab1a6ba056a08e1e28271a140fab59b0e71f196f454a747d7d0e818a69f466fa",
+        "cpu": "5acd373081100d24b53d5faad136f45c7da80e04f480fdd8aeca3af7991ba4d9",
+        "cuda": [
+          "2e90415465c911293fb52bfcf72c60e3fb696f807ce0f579f86aba050282debd"
+        ]
+      },
+      "reference_png": {
+        "path": "/cache/independent_sr_cuda_20261013/analysis/push6/clro_native7_41/native7_41_reference_case41.png",
+        "sha256": "c49e88ea08123497da5ef0f8e84ebcbb68bd8f68c5695c82157d189a9b81cad8",
+        "bytes": 23288377
+      },
+      "float_equal": false,
+      "max_abs": 1.7004145383834839,
+      "mean_abs": 0.006222274620085955,
+      "png_equal": false,
+      "post_four_rng_equal": true,
+      "reference_PT_sha256": "6e48bc219386bb03d0089d7976ae62c43868fd9b74a5e013d40694dee19e9b5d"
+    }
+  ],
+  "all_float_png_four_RNG_exact": false
+}

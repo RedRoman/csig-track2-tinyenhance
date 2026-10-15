@@ -1,0 +1,59 @@
+{
+  "status": "PASS_LOG100_RNG_AND_FROZEN_SOURCE",
+  "schema": "lastres_lr5e6_minimal_CPU_log_RNG_v1",
+  "run": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100",
+  "source_sha256": "5f99fcebc6cb50ed5c3ae18ae8df0cdf10cb2ab3b62e124c5097b0c81cf5cd9b",
+  "CLI_sha256": "3ba6800813879ba4fbcf8bcf57dc9af41268a0b367359a370dd7f5738b7ab8fc",
+  "protocol_id": "0f593933151d84f12f6ef03475edebb1eb196dee8d957da9812debab6eebc419",
+  "updates": 100,
+  "logs100_finite_counters_loss_recomputed": true,
+  "milestones": {
+    "0": {
+      "global_step": 7750,
+      "optimizer_step": 0,
+      "saved_RNG_valid": true,
+      "root_registration_exact_raw_resume_Adam6_frozen508_scope_referenced": false,
+      "raw_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+      "resume_sha256": "d69a3b364db6bb99fff2ce39b0b3c640d68114336286cbe21b1a3bf01b0bb107",
+      "large_weights_rehashed_in_this_log_RNG_check": false
+    },
+    "50": {
+      "global_step": 7800,
+      "optimizer_step": 50,
+      "saved_RNG_valid": true,
+      "root_registration_exact_raw_resume_Adam6_frozen508_scope_referenced": true,
+      "raw_sha256": "dc184b14f549fc01aeafbdc3bdcf6a7112e6bc3944d6c047c557ed850074d7b7",
+      "resume_sha256": "79ef6c6bc33b08f6e1b83855ca02eb109fd6b4cd4aa4cd2667f108fd5b743fc0",
+      "large_weights_rehashed_in_this_log_RNG_check": false
+    },
+    "100": {
+      "global_step": 7850,
+      "optimizer_step": 100,
+      "saved_RNG_valid": true,
+      "root_registration_exact_raw_resume_Adam6_frozen508_scope_referenced": true,
+      "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+      "resume_sha256": "35e339656581c89c772e6d9b00592a73cd397481f00d4d9bfd78c4bab7d05745",
+      "large_weights_rehashed_in_this_log_RNG_check": false
+    }
+  },
+  "RNG": {
+    "all_four_saved_valid": true,
+    "Python100_case_crop_replay_exact": true,
+    "MANIQA20_NumPy100_replay_exact": true,
+    "TorchCPU_exact_unchanged": true,
+    "CUDA_saved_offsets": {
+      "0": 0,
+      "50": 1600,
+      "100": 3200
+    },
+    "CUDA_replay_executed": false
+  },
+  "CPU_only": true,
+  "CUDA_initialized": false,
+  "large_checkpoint_or_metric_weights_rehashed_here": false,
+  "raw_resume_semantic_scope": "Referenced root CPU216c registrar for exact514 raw/resume/selected6/508A/Adam6; capsule separately verifies complete original file SHA",
+  "source_or_run_files_modified": false,
+  "quality_conclusion": false,
+  "auditor_sha256": "2fb3c61a2154261c63821b7843587c5bef1ee765650b58a09ab14e12180c5a5f",
+  "created_utc": "2026-10-15T08:10:46.066874+00:00"
+}

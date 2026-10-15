@@ -1,0 +1,67 @@
+{
+  "schema": "hypir_trt_unet_vae_hybrid_candidate_v1",
+  "status": "CPU_REGISTERED_ACTUAL_ENGINE_ARTIFACTS",
+  "label": "push7_a7750_trt_unet_vae_fp16",
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir",
+  "model_type": "HYPIR_SD2_rank256_TRT_UNet_VAE_native512",
+  "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "runner_sha256": "270d2434179d17658e9f1df228c8ef99124a2695141c92f0b5fecfa73d8d3080",
+  "config_sha256": "63e227319f2c2fb327257a810f6709b4f1d738732571f6c100e22b75174694e5",
+  "implementation_sources": {
+    "runner.py": "270d2434179d17658e9f1df228c8ef99124a2695141c92f0b5fecfa73d8d3080",
+    "vae_hybrid_runner.py": "2bc74f65029c5c95c9a8c285bf7db1c63b03a15fb9fa06cd56d93cf6b1fe2fc9",
+    "reference_runner.py": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b",
+    "trt_vae_runtime_v2.py": "dc2597edfe8a7d71526535bd4e7540bd9c7623de00b6639c61139e08837aa9a4"
+  },
+  "actual_engines": {
+    "encoder": {
+      "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine",
+      "sha256": "14c206896a7caa6b6491dae33133d149283025cfb8e15b6cf129d8854176ba55",
+      "manifest": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component_manifest.json",
+      "manifest_sha256": "21d3781a5cc092062d4ef87844e74ce916c461ea5b9939658917333d74a2f0ae"
+    },
+    "decoder": {
+      "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine",
+      "sha256": "fe81087086d76aa8d0111cb80070b65b897e0438ebb2a8a020ef0ced8bc6bf30",
+      "manifest": "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component_manifest.json",
+      "manifest_sha256": "1a3a349641e65ca5ad5d92301b25b3b1eae214e760645b5a7c294460f0ac08fd"
+    },
+    "UNet": {
+      "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/unet_fp16_A7750/component.engine",
+      "sha256": "08fca16f286c604614e9322ded93f848b0c1d3dd40de7ca793f10b98f286aec8",
+      "manifest": "/cache/independent_sr_cuda_20261013/backends/push7_trt/unet_fp16_A7750/component_manifest.json",
+      "manifest_sha256": "627f1e314b1a6d6a467fd1eca2188b9ed840d54ba9bc9b80ec9ae27a84c68db6"
+    }
+  },
+  "actual_base_UNet_sha256": "6dfae3e5f7d459b50f4b0850ead945972c75bb0e1897628933e169eb43974214",
+  "BF16_original_fused_G_state": {
+    "sha256": "6f8bdfc47ccc360b76f3889aff6002550d7ec602865fd3cf8dfb8c7e36ca6ed8",
+    "tensors": 686,
+    "elements": 865910724,
+    "recipe": "ordered name/shape/dtype compactJSON, NUL, contiguous CPU raw tensor bytes"
+  },
+  "fixed_conditioning": {
+    "BF16_sha256": {
+      "sha256": "f65bb78e0c2376a4df09f17d8671ba7dfe163375d3349a1db49f12c5bbd9d0a9",
+      "tensors": 2,
+      "elements": 78849,
+      "recipe": "ordered name/shape/dtype compactJSON, NUL, contiguous CPU raw tensor bytes"
+    },
+    "FP16_sha256": {
+      "sha256": "0008da3ec7f91844e17610a5929d68b151938ac5d895bacbb088f9c098d5003b",
+      "tensors": 2,
+      "elements": 78849,
+      "recipe": "ordered name/shape/dtype compactJSON, NUL, contiguous CPU raw tensor bytes"
+    },
+    "cast_changed_elements": 2,
+    "cast_max_abs": 2.9802322387695312e-08
+  },
+  "constructor_fixed_conditioning_and_four_RNG": "Strict runtime guards; not executed by CPU registrar",
+  "component_diagnostics_not_tool_score": true,
+  "no_training": true,
+  "no_distillation": true,
+  "quality_reuse_claim": false,
+  "requires_new_actual_full103_418": true,
+  "CPU_registrar_sha256": "2fb90b177d9993d21f2d13f502646afb4d9890b039503fc51e75ddefd4b87f6f"
+}

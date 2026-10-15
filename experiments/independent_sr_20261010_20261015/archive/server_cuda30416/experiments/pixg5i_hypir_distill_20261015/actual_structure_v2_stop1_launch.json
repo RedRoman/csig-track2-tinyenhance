@@ -1,0 +1,20 @@
+{
+  "pid": 92699,
+  "args": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "-u",
+    "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_structure_v2.py",
+    "--config",
+    "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/config_structure_v2.json",
+    "--stop-at",
+    "1"
+  ],
+  "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_structure_v2_stop1_20261015.log",
+  "physical_GPU": 2,
+  "physical_GPU_UUID": "GPU-509b5691-80fe-dc50-b2f0-ed9e7d7c4c1d",
+  "launch_utc": "2026-10-15T11:58:38.956103+00:00",
+  "parent_checkpoint_sha256": "45c7f6bb414567f31b906fc996c037f31df7ce6aebb615c19183e02886950fab",
+  "fresh_optimizer": true,
+  "new_phase_steps": 1200,
+  "actual_stop_target": 1
+}

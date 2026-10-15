@@ -1,0 +1,62 @@
+{
+  "status": "all_nine_pilots_selected_cases_reviewed",
+  "reviewed_at_utc": "2026-10-13T13:25:52Z",
+  "cases": [7, 16, 23, 28, 41],
+  "baseline": "s8000_mt200_ct200_pilot",
+  "new_candidates": [
+    "s6000_mt200_ct175_pilot",
+    "s8000_mt200_ct200_mode_p512_pilot",
+    "s8000_mt200_ct200_sample_p768_pilot"
+  ],
+  "comparison_candidates": ["s6000_mt200_ct200_pilot", "s8000_mt200_ct175_pilot"],
+  "review_basis": "All nine candidate labels have original PNGs for five selected cases, downloaded by read-only SSH and checked against remote SHA256. Follow-up review used view_image on all nine exact pixel ROI composites. Entire original baseline and sample_p768 case23/case28 PNGs were additionally viewed; the tool resized the full images only for display. No original PNG was edited. No GT is available, and this is a qualitative selected-case review rather than a whole-set quality ranking.",
+  "candidate_manifest": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/visual_checks/original_download_manifest.json",
+  "preview_manifest": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/visual_checks/derived_previews/followup_preview_manifest.json",
+  "initial_review": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/visual_checks/visual_review_initial6.json",
+  "preview_operation": "Integer crop and paste of original pixels with labels; no resize, filter, sharpening, or color change; source PNGs untouched.",
+  "preview_layout_rows": [
+    ["input", "s8000_mt200_ct200_pilot"],
+    ["s6000_mt200_ct200_pilot", "s6000_mt200_ct175_pilot"],
+    ["s8000_mt200_ct175_pilot", "s8000_mt200_ct200_mode_p512_pilot"],
+    ["s8000_mt200_ct200_sample_p768_pilot", null]
+  ],
+  "paired_sampling_control": "All pilots use validation1..3 followed by the same fixed20 numeric cases. Old full8000 is historical context only: differing full/pilot case order changes continuous VAE.sample draws after the shared prefix, so later byte differences are expected and are not attributed to cross-machine backend differences. Root reported exact SHA256 agreement for val1 and test1, which does not prove all103 images identical.",
+  "findings": [
+    {
+      "case": 7,
+      "areas": ["text", "glass"],
+      "s6000_ct175": "Main glyph shapes remain similar to6000_ct200. Glass dot patterns and fine dark outlines weaken but remain visible, similar to8000_ct175.",
+      "mode_p512": "Regular glass dot patterns remain; no clear large structural or glyph benefit is visible.",
+      "sample_p768": "Glass dot patterns are partly reduced or redistributed but persist in some panes. Main glyph silhouettes remain broadly stable; visual evidence does not establish more accurate text recovery."
+    },
+    {
+      "case": 16,
+      "areas": ["wall", "window grid"],
+      "s6000_ct175": "The wall honeycomb/pit contrast is visibly lower than6000_ct200 and close to8000_ct175, but the pattern remains clearly present.",
+      "mode_p512": "The same regular wall honeycomb remains. Main window structure stays stable.",
+      "sample_p768": "The honeycomb in the selected upper-wall ROI is largely absent, leaving a smoother wall. Main window bars remain readable, while small granules and bright fine window details soften or change. This is a local visual texture improvement, not proof of GT fidelity."
+    },
+    {
+      "case": 23,
+      "areas": ["text", "glass"],
+      "s6000_ct175": "Glazing honeycomb contrast is reduced relative to6000_ct200, close to8000_ct175, but is not eliminated. Main sign and foreground branch silhouettes remain similar.",
+      "mode_p512": "Dense glazing honeycomb remains, with no clear solution to repetitive patterns.",
+      "sample_p768": "The left portion of the large upper glass pane is much smoother. A narrow right strip and neighboring small pane still show conspicuous regular horizontal bands, with a visible transition from the smoother portion. Main sign silhouettes remain broadly stable, but the upper part of the rightmost 餐 glyph becomes softer. Whole-image views confirm these local differences without a large sign-layout change."
+    },
+    {
+      "case": 28,
+      "areas": ["foreground leaves and twigs", "background foliage"],
+      "s6000_ct175": "Fine background texture is weaker; foreground leaf silhouettes are mostly similar to6000_ct200 in the selected ROI. Fine generated detail remains unverified.",
+      "mode_p512": "Fine background noise changes slightly, without a clearly visible large improvement.",
+      "sample_p768": "Background masses are smoother, but visible fine leaf shapes, arrangements, and twig geometry change relative to the same-batch8000_pilot. The original whole-image pair confirms changes around the central bright foliage cluster. This is a material fine-structure change, so smoother appearance must not be described as more faithful content recovery."
+    },
+    {
+      "case": 41,
+      "areas": ["flower", "leaves"],
+      "s6000_ct175": "Fine petal and leaf texture is softer than6000_ct200; the flower silhouette remains stable. Large smooth petal color planes and hard contours remain.",
+      "mode_p512": "The broad flower shape and wax-like large smooth planes remain, with no convincing resolution of the appearance problem.",
+      "sample_p768": "The flower silhouette remains broadly stable, although some folds and highlights change. A conspicuous needle-like leaf fringe is greatly reduced to smaller serration in the leaf ROI, and leaf surfaces are smoother. Large smooth petal planes and strong contours still remain; this does not establish that wax-like appearance is resolved or that changed details are authentic."
+    }
+  ],
+  "conclusion": "6000_ct175 offers partial suppression of the high-scoring6000_ct200 repetitive texture, with a softness tradeoff. Mode_p512 does not visibly solve the recurrent patterns. Sample_p768 makes a larger local difference on case16 wall and parts of case23 glass, but leaves residual/redistributed bands, softens a glyph, and changes fine foliage structure in case28. No reviewed candidate clearly resolves flower wax-like appearance. Proxy NR/S results must be reported separately from content fidelity."
+}

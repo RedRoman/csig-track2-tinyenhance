@@ -1,0 +1,22 @@
+{
+  "label": "push7_a7750_s050_residual",
+  "repo_path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda",
+  "base_model_path": "/temp/zihaohe_stage/baselines/sd21b",
+  "weight_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+  "device_index": 0,
+  "seed": 231,
+  "lora_rank": 256,
+  "model_t": 200,
+  "coeff_t": 175,
+  "internal_precision": "bfloat16",
+  "patch_size": 256,
+  "stride": 128,
+  "upscale": 1,
+  "caption": "",
+  "fuse_lora": true,
+  "cache_empty_caption": true,
+  "compile_tiles": true,
+  "compute_scale": 0.5,
+  "reconstruction_mode": "residual",
+  "candidate_requires_independent_full_quality": true
+}

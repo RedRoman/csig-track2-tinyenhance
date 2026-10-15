@@ -1,0 +1,77 @@
+{
+  "schema": "pixg5i_distillation_continuation_result_20261015",
+  "status": "completed_iteration_no_candidate_selected",
+  "conclusion_zh": "继续训练降低了密集假纹理，但细节变软；未通过结构恢复门槛，完整指标也未胜出。不替换原主模型。",
+  "fixed_teacher_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+  "quality_scope": "original scoring tool full100test_NR_plus3validation_FR;103images/418finite metrics per model",
+  "latest_quality_audit": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/evaluation/coverage_v4_s200_full.json",
+    "sha256": "45562a7cc4742b48a4bf0248f95361feb588ba6ec52f3bb855d813c5a6441c71"
+  },
+  "quality_rows": [
+    {
+      "label": "pixg5i_original_20261015_all",
+      "NR": 2.827770143571551,
+      "FR": 1.2795354723930359,
+      "S_full": 4.107305615964587
+    },
+    {
+      "label": "pixg5i_hypir_medium_s600_all",
+      "NR": 2.3185995928238987,
+      "FR": 1.378493070602417,
+      "S_full": 3.6970926634263157
+    },
+    {
+      "label": "pixg5i_hypir_coverage_v4_s200_all",
+      "NR": 1.436555328781106,
+      "FR": 1.3494069576263428,
+      "S_full": 2.7859622864074485
+    }
+  ],
+  "negative_controls": [
+    {
+      "label": "headreset_v3_s300",
+      "NR": 1.431927511264448,
+      "FR": 1.3746500611305237,
+      "S_full": 2.8065775723949717
+    },
+    {
+      "label": "headreset_v3_s600",
+      "NR": 1.4231506704893706,
+      "FR": 1.3670883576075237,
+      "S_full": 2.7902390280968943
+    }
+  ],
+  "total_tool_prediction": null,
+  "timing": "Not run for rejected candidates; no reused latency or invented total scores",
+  "training_trials": {
+    "standard_mild_and_medium": "600 steps each, complete; original teacher L1/LPIPS/gradient",
+    "structure_v2": "1200 new steps from standard medium600; visual platform",
+    "headreset_v3": "600 new steps from structure_v2_s600; zero only3468 output-head elements initially; low LR yielded soft outputs",
+    "coverage_v4": "200 new steps from headreset600; no further head reset; full original112 FP32 retained, higher body/headLR1e-4/2e-4 withwarmup, uniform100-case sampling and spatialstrata; stopped at visual gate200"
+  },
+  "model_architecture_unchanged": true,
+  "parameter_elements": 3786764,
+  "NR_reward": 0,
+  "no_val_GT_training": true,
+  "teacher_at_runtime": false,
+  "latest_checkpoint_sha256": "503074449893247332df973a85f9be1f348d9f130f31a28455b62790fb50c929",
+  "latest_registered_manifest_sha256": "d897b171ebd1e94cfa730dd4c344045e58460813e3bd831f6929a00941660ebe",
+  "visual_gallery": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/coverage_v4_s200_vs_medium300_teacher_diagnostic/index.html",
+  "visual_columns": [
+    "previous medium300",
+    "actual coverage_v4_s200",
+    "fixed HYPIR teacher"
+  ],
+  "visual_cases": [
+    7,
+    16,
+    41,
+    83
+  ],
+  "visual_scope": "native1:1 fixedROI; diagnostic PNGs SHA and ROI pixels verified identical to corresponding full103 output PNGs",
+  "visual_equivalence_proof": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/coverage_v4_s200_vs_medium300_teacher_full/full_diag_equivalence.json",
+  "main_model_replaced": false,
+  "resume_backup": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/backup_coverage_v4_s200_verified/artifact",
+  "remote_experiment_root": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015"
+}

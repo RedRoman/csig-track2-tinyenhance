@@ -1,0 +1,154 @@
+{
+  "schema": "hypir_push7_independent_training_cpu_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "CUDA_initialized": false,
+  "run": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100",
+  "protocol_id": "038c268b4eb690ed546e2155bc0269b660064dc247e0ae5253d9ce178dcb56c1",
+  "training_source_sha256": "8a90192c200efa934e3234984855575c1b25feffdc1279cd64e3db10619f1c4c",
+  "initial_A_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "no_teacher_outputs": true,
+  "no_val_GT_training": true,
+  "new_Adam_initial_step": 0,
+  "actual_training_updates": 100,
+  "all100_logs_finite_and_counters_and_loss_recomputed": true,
+  "actual_test_inputs_SHA_checked": 100,
+  "milestones": {
+    "0": {
+      "global_step": 7750,
+      "optimizer_step": 0,
+      "FP32_tensors": 514,
+      "FP32_elements": 259474432,
+      "raw_exact_equal_resume": true,
+      "actual_changed_tensors": 0,
+      "Adam_states": 0,
+      "Adam_moments_FP32_CPU_finite": true,
+      "raw_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+      "resume_sha256": "ac242d569b26c7ad33f701023cec021c16afc36dcfd4712b5b673a8c55d0c77c"
+    },
+    "50": {
+      "global_step": 7800,
+      "optimizer_step": 50,
+      "FP32_tensors": 514,
+      "FP32_elements": 259474432,
+      "raw_exact_equal_resume": true,
+      "actual_changed_tensors": 514,
+      "Adam_states": 514,
+      "Adam_moments_FP32_CPU_finite": true,
+      "raw_sha256": "e5a5ebbc0390fbf42f28ce85316b3ae0eaaa162d27d96f2f9c1feb14d59d3d0d",
+      "resume_sha256": "15d74829ce11ba40f0b66a4944a76840d9fa3f171a0652a6950a099202d63851"
+    },
+    "100": {
+      "global_step": 7850,
+      "optimizer_step": 100,
+      "FP32_tensors": 514,
+      "FP32_elements": 259474432,
+      "raw_exact_equal_resume": true,
+      "actual_changed_tensors": 514,
+      "Adam_states": 514,
+      "Adam_moments_FP32_CPU_finite": true,
+      "raw_sha256": "09b6308e85529085fe2446adfd3e5aa7de06f24b207866787959d5c9d7f369e7",
+      "resume_sha256": "ec9d614d19585991ad9d9acbe1b35d757e4e8af6fb9672d7b8fb45390df3f927"
+    }
+  },
+  "final_update": {
+    "RMS": 1.494881179025754e-05,
+    "relative_L2": 0.003127561605167557,
+    "max_tensor_relative_L2": 0.013439821069369837
+  },
+  "RNG": {
+    "all_four_saved_at_each_milestone": true,
+    "all100_Python_case_crop_replay_exact": true,
+    "all100_MANIQA_NumPy20_crop_draw_replay_exact": true,
+    "TorchCPU_exact_unchanged": true,
+    "CUDA_saved_seed_count": 1,
+    "CUDA_actual_offsets": {
+      "0": 0,
+      "50": 400,
+      "100": 800
+    },
+    "CUDA_offset_increment_per_update": 8,
+    "CUDA_replay_not_executed": true
+  },
+  "median_step_seconds": 0.8021831512451172,
+  "peak_allocated_bytes": 24417089536,
+  "file_records": {
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/checkpoint_step7750.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/checkpoint_step7750.json",
+      "sha256": "74b17def877099e609c9d9434eb5aab9c7be2fc034f395e599a7bb7d9f3267fa",
+      "bytes": 3254
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/resume_step7750.pt": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/resume_step7750.pt",
+      "sha256": "ac242d569b26c7ad33f701023cec021c16afc36dcfd4712b5b673a8c55d0c77c",
+      "bytes": 1038094711
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+      "sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+      "bytes": 1038079419
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/checkpoint_step7800.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/checkpoint_step7800.json",
+      "sha256": "a7f16d09c05f7fde408e005f7c32f483b310ed0949c38ec6cc4989d3d0504fd3",
+      "bytes": 3245
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/resume_step7800.pt": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/resume_step7800.pt",
+      "sha256": "15d74829ce11ba40f0b66a4944a76840d9fa3f171a0652a6950a099202d63851",
+      "bytes": 3114329613
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/step7800.pth": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/step7800.pth",
+      "sha256": "e5a5ebbc0390fbf42f28ce85316b3ae0eaaa162d27d96f2f9c1feb14d59d3d0d",
+      "bytes": 1038079419
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/checkpoint_step7850.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/checkpoint_step7850.json",
+      "sha256": "4a2b612a7c09f6db12acd34b8dc5c2a3714850e46b8b63eb82d4eae2f1ffa079",
+      "bytes": 3247
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/resume_step7850.pt": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/resume_step7850.pt",
+      "sha256": "ec9d614d19585991ad9d9acbe1b35d757e4e8af6fb9672d7b8fb45390df3f927",
+      "bytes": 3114329549
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/step7850.pth": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/step7850.pth",
+      "sha256": "09b6308e85529085fe2446adfd3e5aa7de06f24b207866787959d5c9d7f369e7",
+      "bytes": 1038079419
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/config.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/config.json",
+      "sha256": "5246d07498f421780795f84fb296f91e307e23d20c264086b8f29f6a8ebcdc84",
+      "bytes": 27472
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/input_catalog.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/input_catalog.json",
+      "sha256": "5c2f945ce000314e802a9c2ddff2ebe91cf20edb65aff491b1d1c9fb4b9071ac",
+      "bytes": 19586
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/train.jsonl": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/train.jsonl",
+      "sha256": "50830190f51f2dcf731459386e105e91e616ca9e1fe768fe3b23146db0b09e5f",
+      "bytes": 89565
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/status.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/status.json",
+      "sha256": "0649ab82a0087022a6efd136be7d38edba3d71427df36d66f166be13d9610ad7",
+      "bytes": 222
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/initialization_proof.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/initialization_proof.json",
+      "sha256": "0b2ede1507a027002af3e18414304bb78f5bdfd42557bb9511519782cd1102e0",
+      "bytes": 58372
+    },
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/gradient_preflight.json": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_nrdominant100/gradient_preflight.json",
+      "sha256": "fa501b38a15308756b0f2cb096ea8ecd88c779ccd2184c74161e771cefbc5e0c",
+      "bytes": 1954
+    }
+  },
+  "auditor_source_sha256": "1a47cec6faa10450fb89aa8737b2ffc9e1a3a9ff63f18512ca078a910ac895ff",
+  "limitations": "No GPU/model rerun; CUDA RNG consistency is saved Philox-counter continuity, not CUDA replay. Runtime TF32 in trainer protocol is configured constants, not an added process getter; no current quality/score conclusion."
+}

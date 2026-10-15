@@ -1,0 +1,2370 @@
+{
+  "label": "ascend_balanced_s8000",
+  "status": "complete",
+  "test": {
+    "clipiqa": 0.6890088513493537,
+    "maniqa": 0.47243971049785616,
+    "musiq": 43.15159112930298,
+    "niqe": 3.8264845275878905,
+    "nr": 2.210316020381451,
+    "n": 100
+  },
+  "val": {
+    "clipiqa": 0.6754907170931498,
+    "dists": 0.20159008105595908,
+    "lpips": 0.3483479817708333,
+    "maniqa": 0.4635605414708455,
+    "musiq": 47.79887771606445,
+    "niqe": 3.641164461771647,
+    "fr": 1.4500619371732077,
+    "nr_val": 2.2529235895474753,
+    "score": 3.702985526720683,
+    "n": 3
+  },
+  "S_proxy": 3.6603779575546587,
+  "pred": null,
+  "pred_missing_reason": "No AutoDL-calibrated CUDA 512x512 event_p10 latency measured",
+  "not_official_score": true,
+  "protocol": {
+    "schema": "csig_png_npu_stream_tool_order_v1",
+    "label": "ascend_balanced_s8000",
+    "seed": 1234,
+    "seed_scope": "once per dataset/model; validation then test",
+    "metric_order_validation": [
+      "lpips",
+      "dists",
+      "niqe",
+      "musiq",
+      "maniqa",
+      "clipiqa"
+    ],
+    "metric_order_test": [
+      "niqe",
+      "musiq",
+      "maniqa",
+      "clipiqa"
+    ],
+    "image_format": "committed native PNG; RGB FP32 [0,1]; no resize",
+    "precision": "NR FP32; LPIPS/DISTS NPU FP16 autocast",
+    "maniqa": "KonIQ; 100 crops; microbatch4; weighted numerator/denominator",
+    "musiq": "all native tokens; CNN batches256; attention query rows256",
+    "aggregation": "component means first, then NIQE clamp/formula",
+    "backend": "Ascend NPU; CUDA numerical equivalence not established",
+    "device_index": 0,
+    "torch": "2.7.1+cpu",
+    "torch_npu": "2.7.1.post2",
+    "pyiqa": "0.1.10",
+    "numpy": "1.26.4",
+    "checkpoint_sha256": "1446f3bc67f2d5743a9f00eb52c92d1c610124779a37a98646d2c1f7f3775225",
+    "source_sha256": {
+      "stream_adapter": "7fe64b6fe6f9306e16ec8f6e671c9e4bc60e3b28e0cafbd1a18c221cb5e6c8b7",
+      "serial_helpers": "82d768e29bd08535bf838e940476778d19de4d912f762d30c4ba53b085860513",
+      "csig_metrics": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2",
+      "run_metric_study": "9474e5c5f97b63d3b45a791a658ba6f6290e9b07ddcf4e9562932b51cef15bc2",
+      "metric_memory": "dc2d17aa5b31c681561797dccb6d6048facbed6551592ce4b19410baf4ddc319"
+    },
+    "weights_sha256": {
+      "torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0",
+      "torch/hub/checkpoints/alexnet-owt-7be5be79.pth": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+      "torch/hub/checkpoints/DISTS_weights-f5e65c96.pth": "f5e65c96230b7f6ca995691647d482237e4cab8a50c5c4a5784f219ef0748218",
+      "torch/hub/checkpoints/vgg16-397923af.pth": "397923af8e79cdbb6a7127f12361acd7a2f83e06b05044ddf496e83de57a5bf0",
+      "torch/hub/checkpoints/niqe_modelparameters.mat": "fa2aa4d12dd9595c3fb6bf8b4e1a15c79d5d1469238d0901c88dead195be578d",
+      "torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth": "e95806b9eae5f3814c410f574ba8e552362bd5bc63d758ed5b97860f5d6185aa",
+      "torch/hub/checkpoints/ckpt_koniq10k.pt": "a207f8ab57322e6be38ff5c8d019301dc032b454bef21c3c9f9dbf7974eebff6",
+      "clip/RN50.pt": "afeb0e10f9e5a86da6080e35cf09123aca3b358a0c3e3b6c78a7b63bc04b6762"
+    },
+    "tasks": [
+      {
+        "split": "validation",
+        "case": 1,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/data/验证集/case1_lq.jpg",
+          "sha256": "b5e6acccca137defac4c8683b8dd3d4399ad216b1a4d092e5209c998fb8afc43",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/data/验证集/case1_gt.png",
+          "sha256": "5190460e6507bb1fe325b681a577cb0dfd70483389ecfe30b52d59ac67ee6906",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/val/case1.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/val/case1.png"
+      },
+      {
+        "split": "validation",
+        "case": 2,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/data/验证集/case2_lq.jpg",
+          "sha256": "caa9d1f2e3178efa4fff6752dfb615055e5d9dd957b9895f0e6452cfc788d4bf",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/data/验证集/case2_gt.png",
+          "sha256": "bd0b55d41fc61838efc38316825739a0de193ddfe241157468f6fc5421ff1d73",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/val/case2.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/val/case2.png"
+      },
+      {
+        "split": "validation",
+        "case": 3,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/data/验证集/case3_lq.jpg",
+          "sha256": "cbc1f832ee6513dbbec3666a7e56793de0ab6269615c7efa3dd320354df33b20",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/data/验证集/case3_gt.jpg",
+          "sha256": "d8d757ec5f5078909b958b770119b13db0ba7134bd343f8593f0fdd0f2d94ba2",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/val/case3.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/val/case3.png"
+      },
+      {
+        "split": "test",
+        "case": 1,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case1.jpg",
+          "sha256": "4f6ac610c8d08dd3d16655ef46211b8b5dcaa5bb303886763aaa4162cc11a464",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case1.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case1.png"
+      },
+      {
+        "split": "test",
+        "case": 2,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case2.jpg",
+          "sha256": "d1f6629f2e4ae67314abb371b0b11b9b9653672d114e8b8d0f2aab22f2150ecb",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case2.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case2.png"
+      },
+      {
+        "split": "test",
+        "case": 3,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case3.jpg",
+          "sha256": "055d88cf9f33803e22a4474d0613e002d177975c98a3fa8b7d87b46d79bbf3f0",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case3.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case3.png"
+      },
+      {
+        "split": "test",
+        "case": 4,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case4.jpg",
+          "sha256": "ace96fe7537ee283af3a00b500f3cf131b2b274532498b577a04fe269a0f1fb0",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case4.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case4.png"
+      },
+      {
+        "split": "test",
+        "case": 5,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case5.jpg",
+          "sha256": "aeaf5cdb8ee03d5a9ddc5627b5093d5edecad46fd87b85157bcae6783424bc78",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case5.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case5.png"
+      },
+      {
+        "split": "test",
+        "case": 6,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case6.jpg",
+          "sha256": "6d3e98d4d3380c40c51225a8f97783dccde8e5c57c4f6c26b9b6a5b2ed4e283c",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case6.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case6.png"
+      },
+      {
+        "split": "test",
+        "case": 7,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case7.jpg",
+          "sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case7.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case7.png"
+      },
+      {
+        "split": "test",
+        "case": 8,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case8.jpg",
+          "sha256": "900d6c6ca6fae8798d8f6ad6dec53b2828307a637bf91179a43af95fa0df0c0b",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case8.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case8.png"
+      },
+      {
+        "split": "test",
+        "case": 9,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case9.jpg",
+          "sha256": "7292fe975c8c8555f2520dc543e04cfdec686e2ff4bf742d88a816d50c6a760d",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case9.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case9.png"
+      },
+      {
+        "split": "test",
+        "case": 10,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case10.jpg",
+          "sha256": "5e9548de691a198cdcda02a80e09e1ad740894212bbb44c529bb5b85a68150f9",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case10.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case10.png"
+      },
+      {
+        "split": "test",
+        "case": 11,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case11.jpg",
+          "sha256": "9ce8442488300b4ad69e3060a28b031718fc802d4a52eaba98ee42a2f47664d9",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case11.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case11.png"
+      },
+      {
+        "split": "test",
+        "case": 12,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case12.jpg",
+          "sha256": "c0faeac42e37c11441902a8e7927443d8efb8bc3885b2f2eb085ea9bd117a34e",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case12.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case12.png"
+      },
+      {
+        "split": "test",
+        "case": 13,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case13.jpg",
+          "sha256": "2437109d1475d216f581d43baae7b917d58fcae9fb085348f57e66626612ad8b",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case13.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case13.png"
+      },
+      {
+        "split": "test",
+        "case": 14,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case14.jpg",
+          "sha256": "b5831ca478d74fc22eb25ab620e72e8ba7d5abb9b4e1f9d185c491c5601ea530",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case14.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case14.png"
+      },
+      {
+        "split": "test",
+        "case": 15,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case15.jpg",
+          "sha256": "b121cf224392a4e173d966bee616df5b81a7901a9ab0bcf27bdb34d7b68960e1",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case15.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case15.png"
+      },
+      {
+        "split": "test",
+        "case": 16,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case16.jpg",
+          "sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case16.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case16.png"
+      },
+      {
+        "split": "test",
+        "case": 17,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case17.jpg",
+          "sha256": "aad92fc22db1a4872bcdd32dda17233c49344a127cdb0e2f30434726a94446e3",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case17.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case17.png"
+      },
+      {
+        "split": "test",
+        "case": 18,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case18.jpg",
+          "sha256": "ee803aa89d2be9630e425f239f7aef11a641a6534fff81014120f2ad56ed37ca",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case18.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case18.png"
+      },
+      {
+        "split": "test",
+        "case": 19,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case19.jpg",
+          "sha256": "314b41cb2d30b7a507be7d4e7f5904cf1442fb868fc0031572e50989df77e9f5",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case19.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case19.png"
+      },
+      {
+        "split": "test",
+        "case": 20,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case20.jpg",
+          "sha256": "2f4166001f8ce1ce283cf099dec3b3256d38d97ea189eea665d3f508334491a5",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case20.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case20.png"
+      },
+      {
+        "split": "test",
+        "case": 21,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case21.jpg",
+          "sha256": "f159f5dfbfe9385c2f8466f98880f792adc4b5cb149263134486e9f4f12625e1",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case21.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case21.png"
+      },
+      {
+        "split": "test",
+        "case": 22,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case22.jpg",
+          "sha256": "38f50a5b02471599f2f60d9b3aebe1adb1f6c09ac644fafaba4c7734d91b22ce",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case22.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case22.png"
+      },
+      {
+        "split": "test",
+        "case": 23,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case23.jpg",
+          "sha256": "844f653f251b95efcd99dc9b69d8cbe260fc837e42a42f6dba1767ddf43026d2",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case23.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case23.png"
+      },
+      {
+        "split": "test",
+        "case": 24,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case24.jpg",
+          "sha256": "63676448c35efaf123234f306eb03e35b3c263bd502a7b759214ab9a902da36e",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case24.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case24.png"
+      },
+      {
+        "split": "test",
+        "case": 25,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case25.jpg",
+          "sha256": "8c4cc0cfa70657be28bd1f592846d440fb9502a2e52ccbd35a71e607968b695f",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case25.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case25.png"
+      },
+      {
+        "split": "test",
+        "case": 26,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case26.jpg",
+          "sha256": "18bc2d59de0dcb8dc1913f8e452a55401b571702e2af2170a9f2152bc1d1d37f",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case26.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case26.png"
+      },
+      {
+        "split": "test",
+        "case": 27,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case27.jpg",
+          "sha256": "a7a389014028efbb7c4318eb1f24408bc773a4e968d96f1c3a0676f0f341b725",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case27.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case27.png"
+      },
+      {
+        "split": "test",
+        "case": 28,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case28.jpg",
+          "sha256": "b64ac96cd767ae485803207ae43778a4251c3b8085dc4c882acc6d5dc32ddb11",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case28.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case28.png"
+      },
+      {
+        "split": "test",
+        "case": 29,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case29.jpg",
+          "sha256": "cd1d3d79cdbfbd906b50cad110fb9ae4a5c2dc5af4ecf20859101c74a9e33f96",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case29.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case29.png"
+      },
+      {
+        "split": "test",
+        "case": 30,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case30.jpg",
+          "sha256": "d5303f2eb6dc0159de1d1db021b3524b0c5c14000124e50232f1527d09f515a6",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case30.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case30.png"
+      },
+      {
+        "split": "test",
+        "case": 31,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case31.jpg",
+          "sha256": "ec6d5b2fa78fa75ac5afa5131120c867166af02d7c3d57f130566fc5c818ca73",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case31.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case31.png"
+      },
+      {
+        "split": "test",
+        "case": 32,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case32.jpg",
+          "sha256": "efd72eb0f9a865c87413b607179b9092d69061c58f9f1c600a299cb1f66e6ae6",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case32.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case32.png"
+      },
+      {
+        "split": "test",
+        "case": 33,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case33.jpg",
+          "sha256": "bb08342163e0f361f84d4fcbaac2899c5e4f8a43fafa5b23094da22f4c3a32dd",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case33.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case33.png"
+      },
+      {
+        "split": "test",
+        "case": 34,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case34.jpg",
+          "sha256": "631bd3b9deedc32454a13dc368d21b719309e6b636ca53d4fef1aab33a47e35d",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case34.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case34.png"
+      },
+      {
+        "split": "test",
+        "case": 35,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case35.jpg",
+          "sha256": "5856170638f6125f685facdf4ea8c998905a2db85a75b46c3da4bcbdff878ec2",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case35.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case35.png"
+      },
+      {
+        "split": "test",
+        "case": 36,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case36.jpg",
+          "sha256": "48ab6744bd1b0fe7cf16db9bab10e2270405ac54e7c0c252963a4c27ac162b29",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case36.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case36.png"
+      },
+      {
+        "split": "test",
+        "case": 37,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case37.jpg",
+          "sha256": "c7dbd3129ae08f6bcf2a7cf41ef14f865f349f0a0cd77e05cef1bbe9d0dc7be7",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case37.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case37.png"
+      },
+      {
+        "split": "test",
+        "case": 38,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case38.jpg",
+          "sha256": "a8b8d683e7c1fae9d1b52bed3f604f89fbaabfe809d795a041a160e9790d2c9b",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case38.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case38.png"
+      },
+      {
+        "split": "test",
+        "case": 39,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case39.jpg",
+          "sha256": "3164f79aa6c5d6bb0d442b928db618771387c8b67fa4a209a5e7edd2fa75875f",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case39.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case39.png"
+      },
+      {
+        "split": "test",
+        "case": 40,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case40.jpg",
+          "sha256": "ddeeaa845e0ee1d92a65eb9a99fdffdf07b8f03de3c92c802e44caa552ed204a",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case40.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case40.png"
+      },
+      {
+        "split": "test",
+        "case": 41,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case41.jpg",
+          "sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case41.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case41.png"
+      },
+      {
+        "split": "test",
+        "case": 42,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case42.jpg",
+          "sha256": "f31500fdfa3aa9891e614382d49baf4f0e7ae3218f8ed2f1301e47bfc2bd4d63",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case42.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case42.png"
+      },
+      {
+        "split": "test",
+        "case": 43,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case43.jpg",
+          "sha256": "5261db6de9c868313d3b125c5b8ee91e575db1f659f0e56e361fbe421f1b84d1",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case43.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case43.png"
+      },
+      {
+        "split": "test",
+        "case": 44,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case44.jpg",
+          "sha256": "d8ece0e8833298f43ac65bd0cf4945229999aa1c8721f3123abeeb0c93eae76e",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case44.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case44.png"
+      },
+      {
+        "split": "test",
+        "case": 45,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case45.jpg",
+          "sha256": "7f8f4a101db60eef6df73fcea1907e8c55fee68b704b4f547607b1aed4498b57",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case45.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case45.png"
+      },
+      {
+        "split": "test",
+        "case": 46,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case46.jpg",
+          "sha256": "227c85c799b47d9b9110533be3cd21cba05d09c29834204c152c4eceba2ca3b4",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case46.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case46.png"
+      },
+      {
+        "split": "test",
+        "case": 47,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case47.jpg",
+          "sha256": "a49a1b652338e986ada65b2a884044fbeb6cd97c4ba3977c68920e882d395d82",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case47.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case47.png"
+      },
+      {
+        "split": "test",
+        "case": 48,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case48.jpg",
+          "sha256": "f5091d9a4421cd76dc1be31b7d9906c4af859318566c6821a09144f229f7c92a",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case48.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case48.png"
+      },
+      {
+        "split": "test",
+        "case": 49,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case49.jpg",
+          "sha256": "673d71dc866edd7367c73057c6a0422a6935c21065a9348f68daabac00780c88",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case49.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case49.png"
+      },
+      {
+        "split": "test",
+        "case": 50,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case50.jpg",
+          "sha256": "d35e4a17c3dc3606e7f123848a5854ae015f26ba7187ce9b4777ed925e648627",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case50.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case50.png"
+      },
+      {
+        "split": "test",
+        "case": 51,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case51.jpg",
+          "sha256": "64db996f4638ca01d8e9ea6aaf1753aa580731587e49cf642e086e4d84b194e5",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case51.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case51.png"
+      },
+      {
+        "split": "test",
+        "case": 52,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case52.jpg",
+          "sha256": "047fc811ef37bb7fc13973b70065cab9962a67ecd70fa1c16248dcf7a456e6f4",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case52.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case52.png"
+      },
+      {
+        "split": "test",
+        "case": 53,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case53.jpg",
+          "sha256": "ca5ec46b5409317435cea841ed122cede677d44c06bff97d8169ed53a06e0963",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case53.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case53.png"
+      },
+      {
+        "split": "test",
+        "case": 54,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case54.jpg",
+          "sha256": "df1a608c96cdbe338da6d09a3f8107436e8b26ff1e6d641440f482e4c352b95f",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case54.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case54.png"
+      },
+      {
+        "split": "test",
+        "case": 55,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case55.jpg",
+          "sha256": "69eb1eb4db5b7b36be51372dbfce070b1e024fda51c42177399888d344deb0db",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case55.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case55.png"
+      },
+      {
+        "split": "test",
+        "case": 56,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case56.jpg",
+          "sha256": "c08138b3cf7c2a5d94bbb3e410f0bcbf732ea56ad21a3b1d7f9c5572a55ad99e",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case56.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case56.png"
+      },
+      {
+        "split": "test",
+        "case": 57,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case57.jpg",
+          "sha256": "b038a41447ba2631f568c4ea7e0235469559434dbbfa74a6794999b639676b6e",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case57.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case57.png"
+      },
+      {
+        "split": "test",
+        "case": 58,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case58.jpg",
+          "sha256": "0fe69b6f157dc7a0ec6a3a442090f7fd3ecee112b769c4c8d16440950fe2ca03",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case58.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case58.png"
+      },
+      {
+        "split": "test",
+        "case": 59,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case59.jpg",
+          "sha256": "6938dc4b352a92879a3335a0ceef96c5adb9d638fe8d8daa387021708687dc9e",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case59.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case59.png"
+      },
+      {
+        "split": "test",
+        "case": 60,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case60.jpg",
+          "sha256": "4ddcb51fb413b5659f9c9cb3bfe41aadc8cf9025035eee6024df3465b18d21d8",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case60.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case60.png"
+      },
+      {
+        "split": "test",
+        "case": 61,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case61.jpg",
+          "sha256": "3a26b47810b4b523cbd98deebe15a49b3c4c655132f50d9b29af242f34d6e15a",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case61.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case61.png"
+      },
+      {
+        "split": "test",
+        "case": 62,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case62.jpg",
+          "sha256": "1f0641d6e2c5cfd71cb521055f07a58aa79e1fbd781c1fb6be212043e2ccca71",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case62.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case62.png"
+      },
+      {
+        "split": "test",
+        "case": 63,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case63.jpg",
+          "sha256": "e195898459f7096ec223d796fc377a0d88fa7830a21108b73cd410a875363acc",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case63.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case63.png"
+      },
+      {
+        "split": "test",
+        "case": 64,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case64.jpg",
+          "sha256": "abfae94c73c3984c8cf4ce20474cbb45c9249222598e581d4e40e27bb574bbd5",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case64.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case64.png"
+      },
+      {
+        "split": "test",
+        "case": 65,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case65.jpg",
+          "sha256": "9763857428b185b70fb97f1488c5164ccbb9e20e5afa74f6e862f87b045cd453",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case65.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case65.png"
+      },
+      {
+        "split": "test",
+        "case": 66,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case66.jpg",
+          "sha256": "cf030efaa056d1be82ad3aea72e341ff880246fb5c76d24a9887fef2873ca5bb",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case66.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case66.png"
+      },
+      {
+        "split": "test",
+        "case": 67,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case67.jpg",
+          "sha256": "00368fac6ab07a502fa752255693e42bf5e426b0727b2e12fa4765fed431bbdb",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case67.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case67.png"
+      },
+      {
+        "split": "test",
+        "case": 68,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case68.jpg",
+          "sha256": "3f7c71f83cbeda9e82174ad367b213aae00cc0fd29b1e2dff21138ebd368d650",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case68.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case68.png"
+      },
+      {
+        "split": "test",
+        "case": 69,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case69.jpg",
+          "sha256": "d3f584fad852be9d2167183ff3d8d0c927a13b17c3fe1d611eea851ff06f4870",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case69.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case69.png"
+      },
+      {
+        "split": "test",
+        "case": 70,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case70.jpg",
+          "sha256": "4be235805e06baad998a9e52b42e9638bb450c38c7b00c4be0768a73cd510157",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case70.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case70.png"
+      },
+      {
+        "split": "test",
+        "case": 71,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case71.jpg",
+          "sha256": "e7e356001c36368734e7d5ba9f802e9cdbe1969acb8899ceb8f58aefc49c9a19",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case71.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case71.png"
+      },
+      {
+        "split": "test",
+        "case": 72,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case72.jpg",
+          "sha256": "d5c95a34dd7966c2968e7bd995fe77f810f131d03271901bec0427157dab9341",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case72.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case72.png"
+      },
+      {
+        "split": "test",
+        "case": 73,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case73.jpg",
+          "sha256": "f4d3aea15088bf52e543ae6ca9b8136c7942f0554cd979792506f832a2514643",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case73.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case73.png"
+      },
+      {
+        "split": "test",
+        "case": 74,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case74.jpg",
+          "sha256": "5c97276e2ca460b0ad6d91f541024fe07c04bb248944e071b002a2103c06bfd5",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case74.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case74.png"
+      },
+      {
+        "split": "test",
+        "case": 75,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case75.jpg",
+          "sha256": "c287bdd6236b1710e2af634b2585901e41c31668d7f2756ec496964ec63d5b82",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case75.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case75.png"
+      },
+      {
+        "split": "test",
+        "case": 76,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case76.jpg",
+          "sha256": "d47c87d9f3cbdac9f0e816bd0fbe2774ceb957c57d3a8075dfdab13f0f54f3c2",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case76.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case76.png"
+      },
+      {
+        "split": "test",
+        "case": 77,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case77.jpg",
+          "sha256": "ab99037ad9de097f1d73d940173ced545727030d9f60717b681c05f75a6f1755",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case77.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case77.png"
+      },
+      {
+        "split": "test",
+        "case": 78,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case78.jpg",
+          "sha256": "5c4cd5be7ebb088305aeb154457197f430c4981db4fa5854751332b2a81b4739",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case78.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case78.png"
+      },
+      {
+        "split": "test",
+        "case": 79,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case79.jpg",
+          "sha256": "50ae695946f609077e93198cd4c53e0e6190e4e34ff372f7e3e252c49dafd737",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case79.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case79.png"
+      },
+      {
+        "split": "test",
+        "case": 80,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case80.jpg",
+          "sha256": "d7e8f2647284cad00eeb3347a3a2971429114e9e24181ede52450ce7f128bb4f",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case80.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case80.png"
+      },
+      {
+        "split": "test",
+        "case": 81,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case81.jpg",
+          "sha256": "754aa7814d1b58da34d3afe527211131856ec26458a776f78a2dd8c52326d0c4",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case81.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case81.png"
+      },
+      {
+        "split": "test",
+        "case": 82,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case82.jpg",
+          "sha256": "8f6fbf37c6ac0ab83e2ca216b6eeeac8c5dedaba89aca3807d0a823b5fb33bee",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case82.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case82.png"
+      },
+      {
+        "split": "test",
+        "case": 83,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case83.jpg",
+          "sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case83.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case83.png"
+      },
+      {
+        "split": "test",
+        "case": 84,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case84.jpg",
+          "sha256": "2016879129d68cf09d78eb24feb0735f00346a442ced30de28d988f7149d34b1",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case84.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case84.png"
+      },
+      {
+        "split": "test",
+        "case": 85,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case85.jpg",
+          "sha256": "729a6003ff696d4726858c3e7e9909e743a03c5951230a8c74d78a729a7d81d6",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case85.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case85.png"
+      },
+      {
+        "split": "test",
+        "case": 86,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case86.jpg",
+          "sha256": "9c4ef9bb9b2bb9d5d392115ecf8ab389c92d029214c8cc32bb4c1adba18b2787",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case86.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case86.png"
+      },
+      {
+        "split": "test",
+        "case": 87,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case87.jpg",
+          "sha256": "61067811d6375caf97251b9a5c40d9a6ef36abaa4856e40cd44f1509a69f1c2b",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case87.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case87.png"
+      },
+      {
+        "split": "test",
+        "case": 88,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case88.jpg",
+          "sha256": "ed94d9bf117e472d4ebec9c054eb12688904c7e205dd03929cf1733497fc171a",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case88.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case88.png"
+      },
+      {
+        "split": "test",
+        "case": 89,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case89.jpg",
+          "sha256": "b04dfecdcd2c73039acf7e21b5746795fcf67ccde57f2e198d193cba44d72b41",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case89.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case89.png"
+      },
+      {
+        "split": "test",
+        "case": 90,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case90.jpg",
+          "sha256": "82795472937efa96632f136675220e954a0307eff2f6ed44f3c0842843b7d14b",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case90.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case90.png"
+      },
+      {
+        "split": "test",
+        "case": 91,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case91.jpg",
+          "sha256": "70873693b472bafcf860f019b854c3d59b96d2c5c6a460b7957f73596e937058",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case91.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case91.png"
+      },
+      {
+        "split": "test",
+        "case": 92,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case92.jpg",
+          "sha256": "817ec44d6946086ba9043e2d8c9c5a6c7ebaf31b5844ec2f79377f171b67ec3e",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case92.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case92.png"
+      },
+      {
+        "split": "test",
+        "case": 93,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case93.jpg",
+          "sha256": "610eb0b024008b1f60ba41a1ebd171392a852fb6283d5a20b386288a88cbcf87",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case93.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case93.png"
+      },
+      {
+        "split": "test",
+        "case": 94,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case94.jpg",
+          "sha256": "b00cd1b4f477b76d8779706b78fe471ad058fce51b5ed8301cb9bb2d3af2dac3",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case94.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case94.png"
+      },
+      {
+        "split": "test",
+        "case": 95,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case95.jpg",
+          "sha256": "09cfab05b7bb29d3826462cb9c32914f7cf79eb668cc8dc0a1f291cb5faddccb",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case95.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case95.png"
+      },
+      {
+        "split": "test",
+        "case": 96,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case96.jpg",
+          "sha256": "04de39bd9907b46768a89a2eb4d382f431bf29ab13c9ca62be141cdd20d2606b",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case96.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case96.png"
+      },
+      {
+        "split": "test",
+        "case": 97,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case97.jpg",
+          "sha256": "c9930226fe8fc99a631e774b78767674afdf8df1aa7a777768eb320690469413",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case97.png",
+          "size_hw": [
+            4096,
+            3072
+          ]
+        },
+        "render_output": "render/test/case97.png"
+      },
+      {
+        "split": "test",
+        "case": 98,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case98.jpg",
+          "sha256": "7331bac29cb1e357c282ed29db3344d2268e599d291e16044782b2f72a0535d8",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case98.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case98.png"
+      },
+      {
+        "split": "test",
+        "case": 99,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case99.jpg",
+          "sha256": "6e5859ce67d40f9c2cb6777509887fc5e32cdf00f3208c6446877a27f3d827df",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case99.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case99.png"
+      },
+      {
+        "split": "test",
+        "case": 100,
+        "source": {
+          "path": "/cache/independent_sr_ascend_20261012/assets/input/case100.jpg",
+          "sha256": "8000d7a69ba51ef6bed576d7e3d1395ae8e341eab573a2b7f5f60582365f3f57",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "gt": null,
+        "sr": {
+          "path": "/cache/independent_sr_ascend_20261012/evaluations/csig_step8000_20261013/render/test/case100.png",
+          "size_hw": [
+            3072,
+            4096
+          ]
+        },
+        "render_output": "render/test/case100.png"
+      }
+    ]
+  },
+  "protocol_id": "3a3717658e38ff46cb184e43c2bdbca6063e5056db4c150508933390834e6760",
+  "checkpoint_sha256": "1446f3bc67f2d5743a9f00eb52c92d1c610124779a37a98646d2c1f7f3775225",
+  "actual_png_sha256": [
+    "e38174f70f8cb1f625d1dbb0f4a48efe3455c03a550c7a33c3c495ee5c994446",
+    "6fc2ab645a3e6ec98e8e14f8671a1c09905337a651e04430a08d2b69906a204c",
+    "21f635a6ec0a127c6309b45c1997b4deed15922f163481179029089e68555500",
+    "857143486861e9affe506fece3f4169f94d73c2b48a17f08fd753aafe479216b",
+    "7d8958c09f0aadef9b189a0d51ec195ba675eb6fc8c0cbb9e9ec6cdea697516c",
+    "bd155423ed97e641e299bc4199af6148ddff26794440fae6b979afd50f255779",
+    "550feac0df3d02392c0d855a9338a88bab0120a7e0f94ba9fd07f328454947c8",
+    "00f0128e49138598eef45f4064953f4f919f2f1761c188658ea35cf4731e1458",
+    "bc1c5e1768b941880f0402bede2f3a348dfeb1802c86d2dd87a73b0ed95d7a38",
+    "c219cc882c118e6fc8cdd5f36655bc0f748c1f7c7a2ed5fb6b085a67501d6600",
+    "c6e5950f618b0f7d284082e53a1ecfc6e1d5e73daafaac7895aefe13b9ee9e31",
+    "eb6356ff416ac1742b01e509372912a59ffde64945ca928ccb54a34ef6cf0f9c",
+    "2f55fdc9d10e3fae4242d5b6ccaa3af37b9623b23d295a171e9fbd8e35722ceb",
+    "842d8cb9a07d3e7dce34384980b4a473d47c56c1ba468ae556dd4d59191a657e",
+    "404520512a1053c0e5b4cbed624a7d13ddc1dc915a74adbb23d3c8df622efbdd",
+    "d28a47ee4168152b6efb8c2ae9bbf932245915112f5ef82f1ea009171aca8b4c",
+    "a763a3ab52fe91d2151a694b6c5aedf08799e4d1cc7588005116de62d5264f96",
+    "f174196994b57d0549673df42532879b088a1714e6eed8dba02156b467c2bb5c",
+    "c27e001b23bbd1d053d6f3df1e93697f601de2c4f05f7cbf98a3108068e56f1c",
+    "a595a2818ee4389bc9d97f7ce0d87f0c669d784b479c23f5ec08b7164036d884",
+    "247180e79ab42a031d27082247a50d8c11ca25ff45fff33f144a63b2b54da657",
+    "27d49ced8f596dca76de0595f7af95f29cbbabd631ce544dcd2271c47eca282a",
+    "6e4bbc6ff9a9e4a0980e209e43ee2d2291087a33ea9c137aa3cb124b9e5debe8",
+    "069f6dd4a4991de29aba27363af78936772cccfb3e12aba3cd415b7dc63330ed",
+    "f49481bfc66bd877d664b3dcca0ebac04b799b0f6cdcad5260e0904c11e85fc5",
+    "d97fc5be27b0db6ed7676660df20b30a14d4512a1141e383df4773302b112763",
+    "5f51a1b4dd24594246f9a282016eb6d079417dd77a0c75c4fc985bf12ddada14",
+    "0f5051bc34ee9641f9e786beea6692cc15313e8f987c86e38df408ca3f55902b",
+    "6f12e8cead7f4f4d08a2b0a7bf127a0a9164e87ce307c83b495a9e5c473c3298",
+    "ca85949d1cc659f60246fdf650372b609664d4ff82316a08b28818491367e5e7",
+    "2a1ed0cc9dc46c2f86ab62bedd4596e92977af5293bbdeb99e6bd4540de7227c",
+    "8c80e6c220c690ec36e9c1a99d8a307b508460e6302c4cf99aa73ba2c5176052",
+    "bd0cd206d6b078210c803237a907bd647a3e25daef4cf0d5d1d8e7935241f116",
+    "0b6310f0055e4337afe0c63b513adb30aa838b9bc302a6dbae91a4eec0fdd90e",
+    "d8fe93fb087fdbde72ba4ac2f6de07b39b854c4c501c2d5efa49200caf6a4d70",
+    "eec1e055a78c1181e2f769cd2c4bbeffb55bc22fba6739db72bf19b56d1a5bd1",
+    "0f21c0552f2b7b4da792553dc63d75d9d56bea1a0d4a9c20b6c04a402c3d98c3",
+    "ca12bcb29ff6c85f02f7bb1d2924cd4a44c07afa61bb56ee090cac1698b66710",
+    "cd9e09ba0bfac5fee4dd6c0a50cab7f3d1ec223aa3a1711924b6793611466df7",
+    "1cd31398ac3f32e44623d52073414cd1ee319f534121b063ba98e5f78799174c",
+    "ca03df3e714a25e957a0aca8b0760c67c1e69fe9b4a2b12b2879747f5cc8dc71",
+    "1595fede7f31a78ac5750a92367553bc1669098fb69ae29c0253279bf7b8f2d9",
+    "a9b146d9ffe8f7c06a8502e0ca0548bd7f950c0c0eadbfc1a60bcf7f157c7817",
+    "2f3133c7340a6ff1bc8076d85e0079a1a3e21f88b8fc487da9244bb60d1c4d40",
+    "c90ffa70abe4010a6abec01320178de33835f41112d1b7be375a3746c4a566b5",
+    "2e591f02420c5ad0342e25f78eac576b7888418f2c4bbb82e0dab13acbb799a3",
+    "c4339d5a46d619994c82d3b065bcfde2246ed85272bb84c8dc96204101486de8",
+    "3e753175677190004b7c1e21e7a7432fab960674d4e43f222c5dc7eb9bc5a20b",
+    "3584b4f7f5ee3acd49a6149878fcdbc22b37ae6d4c3071f37c9a5de055049f89",
+    "045379f36b31f512660776b4e57ec6ec4278613c219c54f3767a0db89b5837a4",
+    "e9f3c84905f1316ca58e1e85b4bef10526c4e95ee8512ef9acc60c4f4543d392",
+    "a0f5d215916b74fb4cd32bf851f4088c821849b9958aa8a33d055b5ad3514a84",
+    "e035434f14581d1db1622c2cee36324ea4641147fd0d834e7712e90310c12139",
+    "0d57739f007fe5aba3d6ce4b5ae46ab4bef2104bf8ef1af39a229c56406f8e6c",
+    "c481ec1c23ceca12cce45b28d9ea482b1715229f219487b252ec82329e3a3106",
+    "9e6c9fd63542e2cc9bdd9c02e9e1e9bc0069ccb7caf31c4f7a6f3c071080d5c1",
+    "8d56d4500e5a26d9f7a2a76ac9890ab32415b97c94c1d3f3d90788152f6ce768",
+    "ee5d50ba08d8504fbdc31f79769b2871adb9dc8dea54b96118bcf9d8e549971d",
+    "9cc479e13200755a1e93fc3e9d02541edea25485aa899d818cb7ef63fd3667c5",
+    "445c8f3f53cb0fa2fe38bdf89734df118094065359e133fbdf9bc59d3cf528e4",
+    "e190466593cb277d0b42a346b3dc17a411cb6f459a171685dbb9a41eed66dcb8",
+    "e6cdc181831dfe346e35f3c797ee11c9816af2c8801c7f9cb3b0e4636d73494b",
+    "663ab9aed413a906c740b02012121b8b6bca34b57462828ed1ac8223be1c3db7",
+    "adb7707967cc7168a196b32300231c2153b626d31c1724688a44ffadd25bd2d5",
+    "6949c038b9e7d6bdcb5169fbf3b0eb60415ac114ce0b5235ea28404f0c47d436",
+    "8797e364439d3919824074edf1302646f0f74b1a0cec6b73e43b15a78d7d07ea",
+    "80f2e454fc79c39cb77ffdcd35845744e04201e5407d83a2d0284f21c8408bf9",
+    "7df503489a5e9c733c6a26b8e809038e157d5f1a0fddd7d52c90c709608aa5ae",
+    "d06a3af99d0570609a9efc96c30f164684ea50b94f09275a339da64287b5eadf",
+    "ae679642c396133a7f82efdb02a3514a767ace202bf54c35ebaa86617c7c28f8",
+    "8f4d0e3316b91a74021ff2e648eb865194341f45877b7a26a1c353a3b791a0d0",
+    "a79ffeda90c98dfe9a05a7df9ccc616b8c8e09b844a32650efd097fc9d7ead25",
+    "da23462248b50d5bbfb469da55976c3945570231417e4f0a54e67014b6a17d1a",
+    "ed001519b4511044623fb1ed5a705c9da369aa1fed7c5704c571e88de0ba0fb8",
+    "8389f71b5bd5585af4255fd259af0473446b4c32dd98d282063b6efa9f43c77a",
+    "218a4ae1e1d260cc590726f06d959242352d449d47a2585e429e9728564cbf9d",
+    "8b458d4fa9bdcf9c06fa4cef143c0aee6339a99b9d72dae31868b2fa16ecd320",
+    "57b99f0b354bea6a1513bd5e06cdaf07617c47200a330acef1e01220f315aeb7",
+    "be41bddd2dbf23a249829b5a05611d89d307aa62541514dd92f77016df9fdd5a",
+    "b572ea88ed22bebf5f27413e7f480421c6ffca2b7f916c192eae81707177ae39",
+    "32b5dc7d32f074c44f22aa76776b952f3b971abe51819358bb8c4af6cbded9a2",
+    "15c4519d010d90977fd871d9653a8ebaeae3983c95a7c26862048da8efc1675c",
+    "511cc17cbf4222625e1401cd73696955fe1783d68dafb9d8653174c5209228ba",
+    "1984eac5f056afb0ef4235f0fd92ee6e314ef3224b6701ba55c9d46c057f0b08",
+    "bac6c41ca9929068156768b0d05ebb1b7c0bee1b3dc318e5cf053c120b599805",
+    "63b2d6849d464bbcb9aec627d9713ac99b657417da040cdd4f69f4b08c5e0ed5",
+    "15a0460640fe2d0f407856534aa6d630ca2a6e7d2a00ef6578ddfbdd38a2b09b",
+    "ea1579a3cd8241ef91547944b16664da44d3789e8b40a8aacafcad09cf5667df",
+    "c491721011f55fa5d55a2f1be5ba63c3b81c34ad1528b880748d1542e6b14927",
+    "1c119a9214be387986a04c64268d9dc0289296de1c8ea2834aba83d69b6feea8",
+    "d50c06811bbadbfe096126d1ac278224ed39bd3ddaf7b22f25499ba493f6a8d0",
+    "3d30d2507b5264cdbe06856af0ea8002e196771119e05600061950580d511f31",
+    "4209ec23621ffa272bd4b57dcfdfe69fdd76be04a97ea25c6c76e0ddab931239",
+    "3c16149ed11e665615f01e2bb0c1c2a4ba729de7bba83ac7f56d9cded6fe3b60",
+    "c0afc34bbde2d372a3fb0a782e1f3682d1f63377b51c5dab2ed29fcccbc0c052",
+    "bacad56a08a3add544e3fb6541e46a864b08f5dcb05020c42a7f495bdcf2615f",
+    "b2538ef7ae8b73f3bc5daf29ef4893895c483817cb1a834b8efabdfde3661409",
+    "1adfb0b32c4a5859245bcb4d210fcac8fcc657a92a6de0be146e1ce35ba243cc",
+    "17076b5f7139dca60514aae6f49ab0a05c10a2c398474ec69ecf772c51235ef8",
+    "b9779efd4e961203aa4d63ef3c816b59ec6b7361b82ca1d4a3b5e17795eb9f24",
+    "0f13d0bf7c24f6f716039faa6d19ca00c3a91aa7748317dbaa82e84d1b49b57e",
+    "684cd09e8d46be26488499d4cbdfc378da70f6d29f5682d2d56c4ca7539de769",
+    "4277566b180de1dc8921a0c414f280ea57e44ccffd85e90042a44ce7f3d246aa"
+  ]
+}

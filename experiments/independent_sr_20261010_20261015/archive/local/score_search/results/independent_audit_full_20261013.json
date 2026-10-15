@@ -1,0 +1,105 @@
+{
+  "audited_bjt": "2026-10-13T21:19:48.606837+08:00",
+  "scope": "full test100+validation3; proxy quality score, not official speed-calibrated score",
+  "server": "/cache/independent_sr_score_search_20261013",
+  "checks": [
+    {
+      "label": "s8000_mt200_ct200_all",
+      "image_rows": 103,
+      "scalar_count": 418,
+      "test_NR": 2.210316020381451,
+      "val_FR": 1.4500619371732077,
+      "score_key": "S_proxy",
+      "score": 3.6603779575546587,
+      "max_formula_delta": 0.0,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent read 2026-10-13T21:09:06.830948+08:00)",
+      "metric_weight8_actual_sha": "PASS (protocol equals eight actual/reference/migration hashes independently verified on 20:45:22)",
+      "component_means": {
+        "test": {
+          "niqe": 3.8264845275878905,
+          "musiq": 43.15159112930298,
+          "maniqa": 0.47243971049785616,
+          "clipiqa": 0.6890088513493537
+        },
+        "validation": {
+          "lpips": 0.3483479817708333,
+          "dists": 0.20159008105595908,
+          "niqe": 3.641164461771647,
+          "musiq": 47.79887771606445,
+          "maniqa": 0.4635605414708455,
+          "clipiqa": 0.6754907170931498
+        }
+      },
+      "checkpoint_sha256": "1446f3bc67f2d5743a9f00eb52c92d1c610124779a37a98646d2c1f7f3775225"
+    },
+    {
+      "label": "s6000_mt200_ct200_all",
+      "image_rows": 103,
+      "scalar_count": 418,
+      "test_NR": 2.2432590885281565,
+      "val_FR": 1.4453386863072715,
+      "score_key": "S_proxy",
+      "score": 3.688597774835428,
+      "max_formula_delta": 0.0,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent server read 2026-10-13T21:19:48.606837+08:00)",
+      "metric_weight8_actual_sha": "PASS (same eight actual/reference/migration hashes independently verified 20:45:22)",
+      "component_means": {
+        "test": {
+          "niqe": 3.8074078607559203,
+          "musiq": 41.091837615966796,
+          "maniqa": 0.4997324848175049,
+          "clipiqa": 0.7133490136265754
+        },
+        "validation": {
+          "lpips": 0.3507893880208333,
+          "dists": 0.20387192567189535,
+          "niqe": 3.5921977361043296,
+          "musiq": 45.89824930826823,
+          "maniqa": 0.494968185822169,
+          "clipiqa": 0.7040972709655762
+        }
+      },
+      "checkpoint_sha256": "2c82a71a94aa754bd4a26a2a474c2bbe4989bde1d38d2e15d9e58eb0c3e408bc",
+      "protocol_schema": "csig_png_npu_stream_tool_order_v1",
+      "server_actual_original_input_hash": "PASS (all103 actual source files)"
+    },
+    {
+      "label": "s10000_mt200_ct200_all",
+      "image_rows": 103,
+      "scalar_count": 418,
+      "test_NR": 2.210150559580326,
+      "val_FR": 1.4502068758010864,
+      "score_key": "S_proxy",
+      "score": 3.6603574353814126,
+      "max_formula_delta": 0.0,
+      "case_order": "PASS",
+      "row_vs_render_commit_hash": "PASS",
+      "server_actual_png_hash": "PASS (independent server read 2026-10-13T21:19:48.606837+08:00)",
+      "metric_weight8_actual_sha": "PASS (same eight actual/reference/migration hashes independently verified 20:45:22)",
+      "component_means": {
+        "test": {
+          "niqe": 3.8150964474678037,
+          "musiq": 43.09713293075561,
+          "maniqa": 0.47284398078918455,
+          "clipiqa": 0.6878448942303658
+        },
+        "validation": {
+          "lpips": 0.3484293619791667,
+          "dists": 0.20136376221974692,
+          "niqe": 3.636879285176595,
+          "musiq": 47.87830607096354,
+          "maniqa": 0.46351246039072674,
+          "clipiqa": 0.6740088860193888
+        }
+      },
+      "checkpoint_sha256": "15bd5ec68d1c8312859b3d1f90402de592bb26f092f7c35154ca8552243e3068",
+      "protocol_schema": "csig_png_npu_stream_tool_order_v1",
+      "server_actual_original_input_hash": "PASS (all103 actual source files)"
+    }
+  ],
+  "pending": []
+}

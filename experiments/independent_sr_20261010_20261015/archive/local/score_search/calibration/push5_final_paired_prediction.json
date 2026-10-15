@@ -1,0 +1,174 @@
+{
+  "schema": "push5_final_fresh_paired_full103_prediction_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "created_utc": "2026-10-14T14:48:22.277814+00:00",
+  "physical_card_proof": {
+    "uuid": "GPU-2018f8c4-5c1f-600d-186a-eba0459e1b10",
+    "pci_bus_id": "00000000:9D:00.0",
+    "name": "NVIDIA A100-SXM4-80GB",
+    "same_physical_UUID_PCI_all_three": true,
+    "fresh_sequential_processes": true,
+    "launch_sha256": "c651d8c0e6a9e2540f795df9bfd7d3bc62dfff5f807ca780ee26b790b63b6fd8"
+  },
+  "benchmark_script_sha256": "3e85026bd91ad8fb7fb91c5d3c74211cc33a9cff0f8316f7e56cde864ae41995",
+  "original_predict_sha256": "0af39f578f704e00a0a0a5ce55e58f1668d283ac4602065d8215b6d21cf433e1",
+  "join_source_sha256": "a00797509cb73e1e7dfc89cc63958b70e50e564555f8960abba5e788fc7a3621",
+  "g4_reference_reproduction": {
+    "NR": 2.7597173432143904,
+    "FR": 1.3216533660888672,
+    "S_proxy": 4.081370709303258,
+    "event_p10_ms": 0.7464960217475891,
+    "normalized_g_ms": 0.431,
+    "original_tool_prediction": 152.66092269131033
+  },
+  "hypir_A7750": {
+    "NR": 2.3197332792186334,
+    "FR": 1.4417232871055603,
+    "S_proxy": 3.7614565663241937,
+    "event_p10_ms": 46.41955795288086,
+    "normalized_g_ms": 26.8009860666833,
+    "original_tool_prediction": 58.15040052341064
+  },
+  "newly_trained_student": {
+    "NR": 2.475466363858716,
+    "FR": 1.3665044506390889,
+    "S_proxy": 3.841970814497805,
+    "event_p10_ms": 0.7864320278167725,
+    "normalized_g_ms": 0.4540576160011178,
+    "original_tool_prediction": 128.4293835584416
+  },
+  "newly_trained_student_reaches70": true,
+  "training_proof": {
+    "training_config": "/cache/independent_sr_cuda_20261013/adaptation/runs/pix_push5_g4_nr250/config.json",
+    "training_config_sha256": "0c30dc226303bc62ddd10110b1960461a215ceb3a657535995a5df94191e7707",
+    "protocol_id": "59ebaa1fa308b98a76f8f43e6ed1551d4e83e4c69b0aa760efbecd39cea03803",
+    "initial_FP32_proof_sha256": "e31204168c085b10807df16ef7a8f20976726d7ac7968f4044742d7f3ffb5e55",
+    "offline_teacher": "Frozen original native A7750 test100 PNGs, aligned same case/coordinates; no online self-anchor",
+    "teacher_raw_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+    "teacher_manifest_sha256": "35355c94cace390b5f5918cfb607d85b0f55c9cd1e1ba0a4f6a4d034abb54e16",
+    "new_Adam_initial_step": 0,
+    "all100_new_Adam_steps_match": true,
+    "resume_four_RNG_present": true,
+    "status": "PASS",
+    "CPU_only": true,
+    "local_training_step": 250,
+    "optimizer_step": 250,
+    "reference_step": 30000,
+    "reference_checkpoint_sha256": "283cb7d051a4686e558057b8fb0dcd927b47a8cb7474101fab4162c457c2bb83",
+    "origin": "Fine-tuned from supplied trained G4 reference using offline A7750 PNG pseudo-labels; new optimizer/training stage",
+    "FP32_parameter_tensors": 100,
+    "changed_parameter_tensors_vs_supplied_G4": 100,
+    "raw_checkpoint_sha256": "8c95e115e12219bca8bea2b2d04e0a01552f072de56619fab878ae61a9643237",
+    "resume_sha256": "38e2d27d200fb85a654da137935b1943f223c484570b84643f03b237f098d9fb",
+    "marker_sha256": "809f5d419477a7f515a7a51b908ced961e8995bc4b3a7a679138685a780f0b6c",
+    "exact_raw_resume_parameters_equal": true
+  },
+  "qualities": {
+    "g4": {
+      "label": "push5_g4_reference_full",
+      "NR": 2.7597173432143904,
+      "FR": 1.3216533660888672,
+      "S": 4.081370709303258,
+      "component_means": {
+        "validation": {
+          "lpips": 0.3720296223958333,
+          "dists": 0.3063170115152995,
+          "niqe": 3.685252558681576,
+          "musiq": 59.657952626546226,
+          "maniqa": 0.7333316008249918,
+          "clipiqa": 0.9269632895787557
+        },
+        "test": {
+          "niqe": 3.6939206249392256,
+          "musiq": 45.09374706268311,
+          "maniqa": 0.7651437157392502,
+          "clipiqa": 0.9130282193422318
+        }
+      },
+      "checkpoint": "/cache/independent_sr_cuda_20261013/submissions/push5_g4_reference/model_dir/model.pth",
+      "checkpoint_sha256": "283cb7d051a4686e558057b8fb0dcd927b47a8cb7474101fab4162c457c2bb83",
+      "model_dir": "/cache/independent_sr_cuda_20261013/submissions/push5_g4_reference/model_dir",
+      "runner_sha256": "276da6fe32a8e67f595f6ecf8a95b4b3ad2d87ec2beb0ca9b8fb1822777ff972",
+      "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_push5_full_evaluations/push5_g4_reference_full",
+      "result_sha256": "120d8695987514b33f86167aa31f451b2e77574ba076b0516ebc62fd621d7910",
+      "render_protocol_sha256": "7bb0417630f0fa3cced94c148629e20f001e9c02cf05fb2679f96f5ab6c7a5b3",
+      "actual103_PNG_input_GT_SHA_verified": true,
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "ledger_sha256": "9f5fc28c2c315c9b2ece7ec33f263181d2cb2a25b86b64ba29b31bedd2aee7c2"
+    },
+    "hypir": {
+      "label": "push4_a7750_compiled_all",
+      "NR": 2.3197332792186334,
+      "FR": 1.4417232871055603,
+      "S": 3.7614565663241937,
+      "component_means": {
+        "validation": {
+          "lpips": 0.3455403645833333,
+          "dists": 0.21273634831110635,
+          "niqe": 4.364917716628572,
+          "musiq": 37.00266647338867,
+          "maniqa": 0.5774780511856079,
+          "clipiqa": 0.7694729765256246
+        },
+        "test": {
+          "niqe": 4.276370415664122,
+          "musiq": 39.583499126434326,
+          "maniqa": 0.5752561512589455,
+          "clipiqa": 0.7762791782617569
+        }
+      },
+      "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+      "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+      "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push4_a7750_compiled/model_dir",
+      "runner_sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae",
+      "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all",
+      "result_sha256": "7ca11141c057866a3e517d887e4e527aece7edb73bc56526aa2d394bc5915051",
+      "render_protocol_sha256": "c0c2389b844b83ccda971f9179b04221f0a3751add428deef3bfc96ba80a0dc7",
+      "actual103_PNG_input_GT_SHA_verified": true,
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "ledger_sha256": "edc98e7e8be4f1d0399fa2be8e5c19330cbbec79a73e71a287c518685c1d9ab0"
+    },
+    "student": {
+      "label": "push5_pix_g4_distill250_full",
+      "NR": 2.475466363858716,
+      "FR": 1.3665044506390889,
+      "S": 3.841970814497805,
+      "component_means": {
+        "validation": {
+          "lpips": 0.349609375,
+          "dists": 0.28388617436091107,
+          "niqe": 4.477693237777032,
+          "musiq": 44.71489715576172,
+          "maniqa": 0.6082402666409811,
+          "clipiqa": 0.8806024789810181
+        },
+        "test": {
+          "niqe": 4.1873075737999255,
+          "musiq": 40.13766962051392,
+          "maniqa": 0.6228379267454147,
+          "clipiqa": 0.8699824982881545
+        }
+      },
+      "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/pix_push5_g4_nr250/step250.pth",
+      "checkpoint_sha256": "8c95e115e12219bca8bea2b2d04e0a01552f072de56619fab878ae61a9643237",
+      "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pix_push5_g4_nr250_s250/model_dir",
+      "runner_sha256": "c5f59b7e42f3050d0bc62b1fccdcc38a6e01c91edbd54d3c03061fe5f2129abd",
+      "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_push5_full_evaluations/push5_pix_g4_distill250_full",
+      "result_sha256": "d88e5e65bd97367a4f998b12b025ec1d986b97320178cb616fddb87d3f3a85a4",
+      "render_protocol_sha256": "404375e808626524a213c0b5b06930c0ccc58679f0876bb08974168229dbca6c",
+      "actual103_PNG_input_GT_SHA_verified": true,
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "ledger_sha256": "ed9ee163114aca0e7b859fb5f5ffeb28edd23f1bff41aadd96aec9e1c2f84603"
+    }
+  },
+  "calibration_sha256": {
+    "g4": "79ce25d80e15c54ec3fd86b45b8594991d115305538b2f3d5edf3f33f38fb3d7",
+    "hypir": "d33c19dff30141be22f9e5f5a3110d984ff6daff88c0d0bf41120322d795514f",
+    "student": "7fc4a7b952fe9765708a8b47fb8882b30012b0c12b1ef5432abf44fa1c2a2358"
+  },
+  "interpretation": "Original five-point empirical tool prediction, not official leaderboard score. Supplied G4 full reproduction is separate from new Pix training initialized from G4. Fixed one fresh G4 calibration, no target-driven reference/sample selection; same physical GPU0, fresh sequential warm30/n200/seed231."
+}

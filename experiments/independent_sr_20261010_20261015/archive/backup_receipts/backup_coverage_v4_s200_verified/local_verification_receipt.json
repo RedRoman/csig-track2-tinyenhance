@@ -1,0 +1,42 @@
+{
+  "status": "verified_complete_CACHE_MAC_ONLY",
+  "directory": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/backup_coverage_v4_s200_verified/artifact",
+  "manifest_sha256": "ce94a7fe3f1d199fead13331dfb17250d2063d80c169d6a4088929573a425731",
+  "DONE_sha256": "f019a93b0f002ad1204a29ce175ee74b0cf824c29d74b9205da986e26aa69a18",
+  "files": 32,
+  "bytes": 61782729,
+  "tar_sha256": "849059a762dc88f4774addaabcd4232d54779a9cce84e3c92766fede5263a6b9",
+  "actual_all_file_complete_SHA_size_PASS": true,
+  "training_audit_sha256": "7d4be677283aced016ddd69f70994bc6412274231282d5428344ddb86978a4c7",
+  "milestones": [
+    {
+      "variant": "coverage_v4",
+      "raw_sha256": "503074449893247332df973a85f9be1f348d9f130f31a28455b62790fb50c929",
+      "resume_sha256": "e2d47be279fd3c688df232ec9ebb895f23587580ab4e40871cfb6fd79bc766ec",
+      "local_step": 200,
+      "optimizer_step": 200,
+      "state_tensors": 112,
+      "sampler_plan_sha256": "5466f898c854b8337d16879a867b04b14b631959df18c6baca817c9eaafe0d28",
+      "sampler_next_index": 200
+    }
+  ],
+  "frozen_log_prefix_steps": 200,
+  "total_distillation_steps": 2000,
+  "phase_parent_checkpoint_sha256": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa",
+  "phase_parent_recovery": "../backup_headreset_v3_s600_verified/artifact/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/step600.pth",
+  "reset_head": false,
+  "head_group_names": [
+    "outc.weight",
+    "outc.bias"
+  ],
+  "head_group_elements": 3468,
+  "sampler_plan_sha256": "5466f898c854b8337d16879a867b04b14b631959df18c6baca817c9eaafe0d28",
+  "sampler_next_index": 200,
+  "phase_parent_weights_not_duplicated": true,
+  "future_log_append_allowed": true,
+  "original_weights_not_duplicated": true,
+  "teacher_images_external": true,
+  "SFS_written": false,
+  "GPU_started": false,
+  "quality_conclusion": false
+}

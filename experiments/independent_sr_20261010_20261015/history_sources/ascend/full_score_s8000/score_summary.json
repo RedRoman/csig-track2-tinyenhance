@@ -1,0 +1,29 @@
+{
+  "model": "ascend_balanced_s8000",
+  "checkpoint_step": 8000,
+  "test_images": 100,
+  "validation_images": 3,
+  "test_NR": 2.210316020381451,
+  "validation_FR": 1.4500619371732077,
+  "quality_total_S_proxy": 3.6603779575546587,
+  "test_metric_means": {
+    "niqe": 3.8264845275878905,
+    "musiq": 43.15159112930298,
+    "maniqa": 0.47243971049785616,
+    "clipiqa": 0.6890088513493537
+  },
+  "validation_metric_means": {
+    "lpips": 0.3483479817708333,
+    "dists": 0.20159008105595908,
+    "niqe": 3.641164461771647,
+    "musiq": 47.79887771606445,
+    "maniqa": 0.4635605414708455,
+    "clipiqa": 0.6754907170931498
+  },
+  "predicted_leaderboard_score": null,
+  "prediction_missing_reason": "No AutoDL-calibrated CUDA 512x512 event_p10 latency measured",
+  "backend": "Ascend NPU; CUDA numerical equivalence not established",
+  "scoring_weights_match_supplied_archive": true,
+  "source_result": "results_png_tool_order/result.json",
+  "records_verified": 103
+}

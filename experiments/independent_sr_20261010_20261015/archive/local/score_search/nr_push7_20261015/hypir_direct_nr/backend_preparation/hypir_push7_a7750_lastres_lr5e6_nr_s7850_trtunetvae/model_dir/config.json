@@ -1,0 +1,164 @@
+{
+  "label": "push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae",
+  "repo_path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda",
+  "base_model_path": "/temp/zihaohe_stage/baselines/sd21b",
+  "weight_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/step7850.pth",
+  "device_index": 0,
+  "seed": 231,
+  "lora_rank": 256,
+  "model_t": 200,
+  "coeff_t": 175,
+  "internal_precision": "bfloat16",
+  "patch_size": 512,
+  "stride": 256,
+  "upscale": 1,
+  "caption": "",
+  "fuse_lora": true,
+  "cache_empty_caption": true,
+  "compile_tiles": true,
+  "checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+  "training_provenance": {
+    "config": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/config.json",
+      "sha256": "20e182c71b68bad38f97bcde504d8dcd0664075d3d39be99c183aa55a5c3e822"
+    },
+    "marker": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/checkpoint_step7850.json",
+      "sha256": "b02411f66d77570b011b622c7975c21930222e6ce0f7d7635b4eb62f6da2eda5"
+    },
+    "input_catalog": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/input_catalog.json",
+      "sha256": "5c2f945ce000314e802a9c2ddff2ebe91cf20edb65aff491b1d1c9fb4b9071ac"
+    },
+    "resume": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/resume_step7850.pt",
+      "sha256": "35e339656581c89c772e6d9b00592a73cd397481f00d4d9bfd78c4bab7d05745"
+    },
+    "parity_proof": {
+      "path": "/cache/independent_sr_cuda_20261013/analysis/push7/hypir_direct_nr/deployment_parity_probe_v1.json",
+      "sha256": "ddd34d2ea7e1ab834fa8928c6e39da417d3be40ce2f7307ae9c1172743e44950"
+    },
+    "sources": [
+      {
+        "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+        "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py",
+        "sha256": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py",
+        "sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py",
+        "sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py",
+        "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py",
+        "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py",
+        "sha256": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v3.py",
+        "sha256": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py",
+        "sha256": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py",
+        "sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v4.py",
+        "sha256": "5f2d40b41034db7f9ae5f6a5f64d90b77bff6bc849422e1fc03ba3eb1600f311"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v5.py",
+        "sha256": "4b5bdf40aab5d2fd35c92f8fc714c675e62bd86228bc3fb79e48e896b70278f2"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_lastres_nr_lr5e6_v4.py",
+        "sha256": "5f99fcebc6cb50ed5c3ae18ae8df0cdf10cb2ab3b62e124c5097b0c81cf5cd9b"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/deployment_fused_lora.py",
+        "sha256": "b215dc4247ecb06cd3040160b7671e8e3c956b090bef4909d3020e90b5719738"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_direct_nr_niqe768_v4.py",
+        "sha256": "3dd7388abd78659de9a22831ead98a75e88a9b8558473eb5cd7178a89e51b109"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/niqe_arch.py",
+        "sha256": "cad3765957607f4ce2a58f76572f75d1d658d68a296d54e7a92e9e062107b7d0"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/func_util.py",
+        "sha256": "3e0ea50d455e426fca9565dc7c599ec37648fbdcf7c4d5a0a4b41134a62ec3ab"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/models/inference_model.py",
+        "sha256": "29b6d8ad8f67a940aa866f9911ef733632a1cf01f71caf400ba0c818f30dc23a"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/functions.py",
+        "sha256": "20257b4e2b432b018fa369319dc10a6aa91d75485e7743d7339b6efcec2467fd"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/utils/color_util.py",
+        "sha256": "0135950633f81ab6f12531c6bed00537fd0071b655215a58ffc19d4e8573e078"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/resize.py",
+        "sha256": "4760eedccf2ba9ccd60ea898cc0b58248157b997660f526ee6d5c080cfea0f84"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/padding.py",
+        "sha256": "e2f92917002e8e68020f30dea854c9678532a4d851d9564d6fc2726806fbe02e"
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/matlab_utils/math_util.py",
+        "sha256": "be5bdc9d4d15975d17c3c2ea45cbfe4d517b088ed909f4c96fff2052493ad279"
+      }
+    ]
+  },
+  "native_candidate_manifest": {
+    "path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850/candidate_manifest.json",
+    "sha256": "0477903b0bc478064ad2f03a5d429eb37459097ac6a0014ec76d92efef7fa4c0"
+  },
+  "backend": "HYPIR_BF16_UNet_FP16_TRT_VAE_native512",
+  "UNet_TRT_backend": "finetuned_FP16_TRT_fixed64_empty_t200",
+  "TRT_site": "/cache/independent_sr_cuda_20261013/backends/push7_trt/site",
+  "base_vae_path": "/temp/zihaohe_stage/baselines/sd21b/vae/diffusion_pytorch_model.safetensors",
+  "TRT_engines": {
+    "encoder": {
+      "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine",
+      "sha256": "14c206896a7caa6b6491dae33133d149283025cfb8e15b6cf129d8854176ba55",
+      "manifest": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component_manifest.json",
+      "manifest_sha256": "21d3781a5cc092062d4ef87844e74ce916c461ea5b9939658917333d74a2f0ae"
+    },
+    "decoder": {
+      "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine",
+      "sha256": "fe81087086d76aa8d0111cb80070b65b897e0438ebb2a8a020ef0ced8bc6bf30",
+      "manifest": "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component_manifest.json",
+      "manifest_sha256": "1a3a349641e65ca5ad5d92301b25b3b1eae214e760645b5a7c294460f0ac08fd"
+    }
+  },
+  "TRT_UNet_engine": {
+    "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/push7_a7750_lastres_lr5e6_nr_s7850_unet_fp16/component.engine",
+    "sha256": "6912f4afae77ef4815f8b8d568a9d5eef76ea3c130b554e01987452374ba8a77",
+    "manifest": "/cache/independent_sr_cuda_20261013/backends/push7_trt/push7_a7750_lastres_lr5e6_nr_s7850_unet_fp16/component_manifest.json",
+    "manifest_sha256": "efecdadd0677fcd5072aa4c307fa7f7f824e29071c150558ede24823cf39cdbe"
+  }
+}

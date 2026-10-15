@@ -1,0 +1,18 @@
+{
+  "launched_at_UTC": "2026-10-15T12:51:55.543430+00:00",
+  "pid": 121758,
+  "gpu": 3,
+  "argv": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "-u",
+    "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_coverage_v4.py",
+    "--config",
+    "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/config_coverage_v4.json",
+    "--stop-at",
+    "200",
+    "--resume",
+    "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/resume_step1.pt"
+  ],
+  "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_coverage_v4_to200_20261015.log",
+  "root_actual_CPU_preflight": "PASS initial112=parent; step1 raw=resume FP32 finite; twoAdam groups112 step1 finite; saved fourRNG/scaler and sampler index/hash"
+}

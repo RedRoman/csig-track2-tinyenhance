@@ -1,0 +1,3445 @@
+{
+  "schema": "push4_complete_pilot_platform_readonly_CPU_analysis_v1",
+  "CPU_only": true,
+  "GPU_used": false,
+  "scope": "fixed20test+all3val pilot23/98; not full100 score; completed PASS only",
+  "complete_cohort": true,
+  "complete_count": 6,
+  "pending": [],
+  "parent": {
+    "label": "push3_c7250_compiled_pilot",
+    "contributions": {
+      "CLIPIQA": 0.7819485872983932,
+      "MANIQA": 0.568996687233448,
+      "MUSIQ/100": 0.43242205238342285,
+      "NIQE_term": 0.5224862829705555,
+      "LPIPS_FR_term": -0.3428955078125,
+      "DISTS_FR_term": -0.21053548653920492,
+      "NR": 2.3058536098858196,
+      "FR": 1.4465690056482952,
+      "S_subset": 3.7524226155341145
+    },
+    "proofs": {
+      "audit": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_20261014/preparation/parent7250_pilot_cpu_audit.json",
+        "sha256": "dba683b8cc0efba63902167adf04d8e7082ae88fe52c354a969c5e2c7de90a7f"
+      },
+      "rows": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push3_20261014/evaluation_audits/push3_c7250_compiled_pilot/proof/scores/measurements.jsonl",
+        "sha256": "d15ed7cb894ea5d6a21cd5c6b596fa6c5c140ce65677de70353cff057ad1b72d"
+      },
+      "checkpoint_sha256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e"
+    }
+  },
+  "pilot_rank_by_S_subset_only": [
+    "push4_c7750_compiled_pilot",
+    "push4_a7750_compiled_pilot",
+    "push4_c7500_compiled_pilot",
+    "push4_a7500_compiled_pilot",
+    "push4_b7750_compiled_pilot",
+    "push4_b7500_compiled_pilot"
+  ],
+  "candidates": {
+    "push4_a7500_compiled_pilot": {
+      "contributions": {
+        "CLIPIQA": 0.7854775071144104,
+        "MANIQA": 0.5728865325450897,
+        "MUSIQ/100": 0.4309473628997803,
+        "NIQE_term": 0.5193148877392624,
+        "LPIPS_FR_term": -0.3444417317708333,
+        "DISTS_FR_term": -0.21176141500473022,
+        "NR": 2.308626290298543,
+        "FR": 1.4437968532244365,
+        "S_subset": 3.7524231435229796
+      },
+      "component_means": {
+        "test": {
+          "clipiqa": 0.7854775071144104,
+          "maniqa": 0.5728865325450897,
+          "musiq": 43.09473628997803,
+          "niqe": 4.806851122607377
+        },
+        "validation": {
+          "clipiqa": 0.7678519686063131,
+          "maniqa": 0.5767447153727213,
+          "musiq": 37.16766611735026,
+          "niqe": 4.3610695513577475,
+          "lpips": 0.3444417317708333,
+          "dists": 0.21176141500473022
+        }
+      },
+      "proofs": {
+        "audit": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_20261014/evaluation_audits/push4_a7500_compiled_pilot/audit.json",
+          "sha256": "956333835217c8e6c24238e781b3875143f9ddb88b775a9db6f12ba473e1c54d"
+        },
+        "rows": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_20261014/evaluation_audits/push4_a7500_compiled_pilot/proof/scores/measurements.jsonl",
+          "sha256": "2c11838aaad742e057fbed10179de148baea313df1afd99a1b308c217b20f8b5"
+        },
+        "checkpoint_sha256": "2f42290e89af582a532b75e4871cf8fa92fce0d8bbd86c5dc0ebe00286657b70"
+      },
+      "vs_parent7250": {
+        "delta_normalized_contributions": {
+          "CLIPIQA": 0.0035289198160172175,
+          "MANIQA": 0.0038898453116417153,
+          "MUSIQ/100": -0.001474689483642544,
+          "NIQE_term": -0.0031713952312931726,
+          "LPIPS_FR_term": -0.0015462239583333148,
+          "DISTS_FR_term": -0.0012259284655253,
+          "NR": 0.002772680412723272,
+          "FR": -0.0027721524238586426,
+          "S_subset": 5.279888650733255e-07
+        },
+        "test_better_count_NR": 16,
+        "test_better_counts_by_contribution": {
+          "CLIPIQA": 20,
+          "MANIQA": 20,
+          "MUSIQ/100": 8,
+          "NIQE_term": 1
+        },
+        "test20_paired": [
+          {
+            "case": 1,
+            "delta_NR": -4.928762930227074e-05,
+            "delta_contributions": {
+              "CLIPIQA": 0.0034793615341186523,
+              "MANIQA": 0.005659639835357666,
+              "MUSIQ/100": -0.00688283920288086,
+              "NIQE_term": -0.0023054497958977294
+            }
+          },
+          {
+            "case": 6,
+            "delta_NR": 0.003478479161501795,
+            "delta_contributions": {
+              "CLIPIQA": 0.0034474730491638184,
+              "MANIQA": 0.0027669668197631836,
+              "MUSIQ/100": 7.650375366210937e-05,
+              "NIQE_term": -0.002812464461087316
+            }
+          },
+          {
+            "case": 7,
+            "delta_NR": 0.005611400513174551,
+            "delta_contributions": {
+              "CLIPIQA": 0.0026835203170776367,
+              "MANIQA": 0.005402088165283203,
+              "MUSIQ/100": 0.00017787933349609376,
+              "NIQE_term": -0.0026520873026823822
+            }
+          },
+          {
+            "case": 11,
+            "delta_NR": 0.010876324150026057,
+            "delta_contributions": {
+              "CLIPIQA": 0.0036560893058776855,
+              "MANIQA": 0.0038247108459472656,
+              "MUSIQ/100": 0.0008868026733398437,
+              "NIQE_term": 0.0025087213248612627
+            }
+          },
+          {
+            "case": 16,
+            "delta_NR": 0.003842825026893131,
+            "delta_contributions": {
+              "CLIPIQA": 0.009481191635131836,
+              "MANIQA": 0.007369637489318848,
+              "MUSIQ/100": -0.008073692321777343,
+              "NIQE_term": -0.004934311775780209
+            }
+          },
+          {
+            "case": 18,
+            "delta_NR": -0.0031635569587492897,
+            "delta_contributions": {
+              "CLIPIQA": 0.005924820899963379,
+              "MANIQA": 0.0027909278869628906,
+              "MUSIQ/100": -0.0035456085205078126,
+              "NIQE_term": -0.008333697225167747
+            }
+          },
+          {
+            "case": 21,
+            "delta_NR": 0.00414310113576267,
+            "delta_contributions": {
+              "CLIPIQA": 0.004315793514251709,
+              "MANIQA": 0.00015503168106079102,
+              "MUSIQ/100": 0.00032962799072265624,
+              "NIQE_term": -0.0006573520502724861
+            }
+          },
+          {
+            "case": 23,
+            "delta_NR": -0.0031024602230174383,
+            "delta_contributions": {
+              "CLIPIQA": 0.0030115246772766113,
+              "MANIQA": 0.006555378437042236,
+              "MUSIQ/100": -0.007212371826171875,
+              "NIQE_term": -0.005456991511164411
+            }
+          },
+          {
+            "case": 25,
+            "delta_NR": 0.006982147214737609,
+            "delta_contributions": {
+              "CLIPIQA": 0.005953013896942139,
+              "MANIQA": 0.0026847422122955322,
+              "MUSIQ/100": 0.0015407943725585938,
+              "NIQE_term": -0.003196403267058656
+            }
+          },
+          {
+            "case": 28,
+            "delta_NR": 0.004346402588271312,
+            "delta_contributions": {
+              "CLIPIQA": 0.004801392555236816,
+              "MANIQA": 0.0048482418060302734,
+              "MUSIQ/100": -0.001139984130859375,
+              "NIQE_term": -0.004163247642136403
+            }
+          },
+          {
+            "case": 31,
+            "delta_NR": 0.001178119904289545,
+            "delta_contributions": {
+              "CLIPIQA": 0.0015064477920532227,
+              "MANIQA": 0.0026059746742248535,
+              "MUSIQ/100": -0.0001413726806640625,
+              "NIQE_term": -0.0027929298813244687
+            }
+          },
+          {
+            "case": 36,
+            "delta_NR": 0.002155950776129778,
+            "delta_contributions": {
+              "CLIPIQA": 0.0013527870178222656,
+              "MANIQA": 0.003376305103302002,
+              "MUSIQ/100": 0.00011548995971679687,
+              "NIQE_term": -0.0026886313047112865
+            }
+          },
+          {
+            "case": 41,
+            "delta_NR": 0.0026095007526209992,
+            "delta_contributions": {
+              "CLIPIQA": 0.002003908157348633,
+              "MANIQA": 0.0046128034591674805,
+              "MUSIQ/100": 0.0007926559448242187,
+              "NIQE_term": -0.004799866808719333
+            }
+          },
+          {
+            "case": 46,
+            "delta_NR": 0.009077516810081985,
+            "delta_contributions": {
+              "CLIPIQA": 0.004381656646728516,
+              "MANIQA": 0.005257546901702881,
+              "MUSIQ/100": 0.0022828483581542967,
+              "NIQE_term": -0.0028445350965037087
+            }
+          },
+          {
+            "case": 51,
+            "delta_NR": 0.0005043927242576983,
+            "delta_contributions": {
+              "CLIPIQA": 0.0013731122016906738,
+              "MANIQA": 0.004845798015594482,
+              "MUSIQ/100": -0.0025844955444335937,
+              "NIQE_term": -0.0031300219485938642
+            }
+          },
+          {
+            "case": 61,
+            "delta_NR": 0.0032588515829668815,
+            "delta_contributions": {
+              "CLIPIQA": 0.003962397575378418,
+              "MANIQA": 0.004771411418914795,
+              "MUSIQ/100": -0.0017377853393554688,
+              "NIQE_term": -0.0037371720719708624
+            }
+          },
+          {
+            "case": 71,
+            "delta_NR": -0.004349788735654343,
+            "delta_contributions": {
+              "CLIPIQA": 0.0020206570625305176,
+              "MANIQA": 0.00010788440704345703,
+              "MUSIQ/100": -0.0013217735290527344,
+              "NIQE_term": -0.005156556676175583
+            }
+          },
+          {
+            "case": 81,
+            "delta_NR": 0.00134973046793597,
+            "delta_contributions": {
+              "CLIPIQA": 0.002118229866027832,
+              "MANIQA": 0.0012940764427185059,
+              "MUSIQ/100": -0.0011764144897460937,
+              "NIQE_term": -0.0008861613510642741
+            }
+          },
+          {
+            "case": 91,
+            "delta_NR": 0.0028581240813131802,
+            "delta_contributions": {
+              "CLIPIQA": 0.0026918649673461914,
+              "MANIQA": 0.004010915756225586,
+              "MUSIQ/100": -0.0010733795166015625,
+              "NIQE_term": -0.0027712771256570346
+            }
+          },
+          {
+            "case": 100,
+            "delta_NR": 0.003845834911220578,
+            "delta_contributions": {
+              "CLIPIQA": 0.002413153648376465,
+              "MANIQA": 0.00485682487487793,
+              "MUSIQ/100": -0.0008066749572753906,
+              "NIQE_term": -0.002617468654758426
+            }
+          }
+        ],
+        "validation3_paired": [
+          {
+            "case": 1,
+            "delta_FR": -0.004016757011413574,
+            "delta_lpips": 0.0029296875,
+            "delta_dists": 0.0010870695114135742
+          },
+          {
+            "case": 2,
+            "delta_FR": -0.0020821094512939453,
+            "delta_lpips": 0.000732421875,
+            "delta_dists": 0.0013496875762939453
+          },
+          {
+            "case": 3,
+            "delta_FR": -0.002217590808868408,
+            "delta_lpips": 0.0009765625,
+            "delta_dists": 0.0012410283088684082
+          }
+        ],
+        "scope": "Complete fixed20-test pilot plus all3validation only; no full100 score inference; counts descriptive, no statistical significance claim."
+      }
+    },
+    "push4_a7750_compiled_pilot": {
+      "contributions": {
+        "CLIPIQA": 0.786831870675087,
+        "MANIQA": 0.5740196034312248,
+        "MUSIQ/100": 0.431111499786377,
+        "NIQE_term": 0.5202928876818451,
+        "LPIPS_FR_term": -0.3455403645833333,
+        "DISTS_FR_term": -0.21273634831110635,
+        "NR": 2.312255861574534,
+        "FR": 1.4417232871055603,
+        "S_subset": 3.753979148680094
+      },
+      "component_means": {
+        "test": {
+          "clipiqa": 0.786831870675087,
+          "maniqa": 0.5740196034312248,
+          "musiq": 43.1111499786377,
+          "niqe": 4.797071123181548
+        },
+        "validation": {
+          "clipiqa": 0.7694729765256246,
+          "maniqa": 0.5774780511856079,
+          "musiq": 37.00266647338867,
+          "niqe": 4.364917716628572,
+          "lpips": 0.3455403645833333,
+          "dists": 0.21273634831110635
+        }
+      },
+      "proofs": {
+        "audit": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_20261014/evaluation_audits/push4_a7750_compiled_pilot/audit.json",
+          "sha256": "33e06ecb1d4b0a13205b320809defda365267316b91badaec7380397fa69e26a"
+        },
+        "rows": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_20261014/evaluation_audits/push4_a7750_compiled_pilot/proof/scores/measurements.jsonl",
+          "sha256": "581c6db7dc4100819c07664b3ca3fa58f1f575c3a4b44d6970d3d3c12d98137f"
+        },
+        "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d"
+      },
+      "vs_parent7250": {
+        "delta_normalized_contributions": {
+          "CLIPIQA": 0.004883283376693748,
+          "MANIQA": 0.005022916197776839,
+          "MUSIQ/100": -0.0013105525970458776,
+          "NIQE_term": -0.0021933952887104313,
+          "LPIPS_FR_term": -0.002644856770833315,
+          "DISTS_FR_term": -0.00220086177190143,
+          "NR": 0.006402251688714333,
+          "FR": -0.004845718542734856,
+          "S_subset": 0.0015565331459796994
+        },
+        "test_better_count_NR": 19,
+        "test_better_counts_by_contribution": {
+          "CLIPIQA": 20,
+          "MANIQA": 19,
+          "MUSIQ/100": 10,
+          "NIQE_term": 3
+        },
+        "test20_paired": [
+          {
+            "case": 1,
+            "delta_NR": 0.0018646914040782296,
+            "delta_contributions": {
+              "CLIPIQA": 0.006901204586029053,
+              "MANIQA": 0.008524119853973389,
+              "MUSIQ/100": -0.010942287445068359,
+              "NIQE_term": -0.0026183455908558527
+            }
+          },
+          {
+            "case": 6,
+            "delta_NR": 0.003190869477072127,
+            "delta_contributions": {
+              "CLIPIQA": 0.00220489501953125,
+              "MANIQA": 0.0026792287826538086,
+              "MUSIQ/100": 4.817962646484375e-05,
+              "NIQE_term": -0.0017414339515777755
+            }
+          },
+          {
+            "case": 7,
+            "delta_NR": 0.012443063303892075,
+            "delta_contributions": {
+              "CLIPIQA": 0.004688441753387451,
+              "MANIQA": 0.005739569664001465,
+              "MUSIQ/100": 0.003307952880859375,
+              "NIQE_term": -0.0012929009943562163
+            }
+          },
+          {
+            "case": 11,
+            "delta_NR": 0.015130597101117794,
+            "delta_contributions": {
+              "CLIPIQA": 0.004871547222137451,
+              "MANIQA": 0.004867374897003174,
+              "MUSIQ/100": 0.0010541915893554688,
+              "NIQE_term": 0.0043374833926216995
+            }
+          },
+          {
+            "case": 16,
+            "delta_NR": 0.004835542596866879,
+            "delta_contributions": {
+              "CLIPIQA": 0.01613837480545044,
+              "MANIQA": 0.008916199207305908,
+              "MUSIQ/100": -0.015632209777832032,
+              "NIQE_term": -0.004586821638057436
+            }
+          },
+          {
+            "case": 18,
+            "delta_NR": 0.0029060298623786096,
+            "delta_contributions": {
+              "CLIPIQA": 0.006962895393371582,
+              "MANIQA": 0.005150705575942993,
+              "MUSIQ/100": -0.0037831878662109375,
+              "NIQE_term": -0.005424383240725028
+            }
+          },
+          {
+            "case": 21,
+            "delta_NR": 0.006554817734136993,
+            "delta_contributions": {
+              "CLIPIQA": 0.002988100051879883,
+              "MANIQA": 0.000152587890625,
+              "MUSIQ/100": 0.0023876953125,
+              "NIQE_term": 0.00102643447913211
+            }
+          },
+          {
+            "case": 23,
+            "delta_NR": 0.0014405750516358218,
+            "delta_contributions": {
+              "CLIPIQA": 0.005471229553222656,
+              "MANIQA": 0.008960127830505371,
+              "MUSIQ/100": -0.00839202880859375,
+              "NIQE_term": -0.004598753523498455
+            }
+          },
+          {
+            "case": 25,
+            "delta_NR": 0.01870671803920086,
+            "delta_contributions": {
+              "CLIPIQA": 0.01074838638305664,
+              "MANIQA": 0.004712283611297607,
+              "MUSIQ/100": 0.0053118896484375,
+              "NIQE_term": -0.00206584160359089
+            }
+          },
+          {
+            "case": 28,
+            "delta_NR": 0.005546412505675411,
+            "delta_contributions": {
+              "CLIPIQA": 0.004266500473022461,
+              "MANIQA": 0.004251927137374878,
+              "MUSIQ/100": 0.0022814178466796873,
+              "NIQE_term": -0.005253432951401615
+            }
+          },
+          {
+            "case": 31,
+            "delta_NR": 0.00525785384959784,
+            "delta_contributions": {
+              "CLIPIQA": 0.003227412700653076,
+              "MANIQA": 0.003443777561187744,
+              "MUSIQ/100": 0.00020843505859375,
+              "NIQE_term": -0.0016217714708367304
+            }
+          },
+          {
+            "case": 36,
+            "delta_NR": 0.0021977924955719707,
+            "delta_contributions": {
+              "CLIPIQA": 0.0014667510986328125,
+              "MANIQA": 0.0034937262535095215,
+              "MUSIQ/100": 0.00023622512817382811,
+              "NIQE_term": -0.0029989099847441913
+            }
+          },
+          {
+            "case": 41,
+            "delta_NR": 0.008601638934300767,
+            "delta_contributions": {
+              "CLIPIQA": 0.0029315948486328125,
+              "MANIQA": 0.008596718311309814,
+              "MUSIQ/100": -0.00029937744140625,
+              "NIQE_term": -0.002627296784235611
+            }
+          },
+          {
+            "case": 46,
+            "delta_NR": 0.015958530915376946,
+            "delta_contributions": {
+              "CLIPIQA": 0.007020831108093262,
+              "MANIQA": 0.00613027811050415,
+              "MUSIQ/100": 0.006038818359375,
+              "NIQE_term": -0.0032313966625954647
+            }
+          },
+          {
+            "case": 51,
+            "delta_NR": 0.003998489726108794,
+            "delta_contributions": {
+              "CLIPIQA": 0.0019847750663757324,
+              "MANIQA": 0.008410930633544922,
+              "MUSIQ/100": -0.004355697631835937,
+              "NIQE_term": -0.0020415183419759233
+            }
+          },
+          {
+            "case": 61,
+            "delta_NR": 0.006118530158352717,
+            "delta_contributions": {
+              "CLIPIQA": 0.0032570958137512207,
+              "MANIQA": 0.004835844039916992,
+              "MUSIQ/100": 0.0005983734130859376,
+              "NIQE_term": -0.002572783108401433
+            }
+          },
+          {
+            "case": 71,
+            "delta_NR": -0.004437029983041293,
+            "delta_contributions": {
+              "CLIPIQA": 0.002907395362854004,
+              "MANIQA": -0.0007287859916687012,
+              "MUSIQ/100": -0.002395420074462891,
+              "NIQE_term": -0.004220219279763704
+            }
+          },
+          {
+            "case": 81,
+            "delta_NR": 0.0053406383894289535,
+            "delta_contributions": {
+              "CLIPIQA": 0.0034824609756469727,
+              "MANIQA": 0.000925600528717041,
+              "MUSIQ/100": -5.245208740234375e-05,
+              "NIQE_term": 0.0009850289724672833
+            }
+          },
+          {
+            "case": 91,
+            "delta_NR": 0.005791612452112478,
+            "delta_contributions": {
+              "CLIPIQA": 0.002973496913909912,
+              "MANIQA": 0.003814876079559326,
+              "MUSIQ/100": -9.796142578125e-05,
+              "NIQE_term": -0.0008987991155755104
+            }
+          },
+          {
+            "case": 100,
+            "delta_NR": 0.0065976597604192125,
+            "delta_contributions": {
+              "CLIPIQA": 0.00317227840423584,
+              "MANIQA": 0.007581233978271484,
+              "MUSIQ/100": -0.0017336082458496093,
+              "NIQE_term": -0.0024222443762385026
+            }
+          }
+        ],
+        "validation3_paired": [
+          {
+            "case": 1,
+            "delta_FR": -0.0060662031173706055,
+            "delta_lpips": 0.00439453125,
+            "delta_dists": 0.0016716718673706055
+          },
+          {
+            "case": 2,
+            "delta_FR": -0.0035303235054016113,
+            "delta_lpips": 0.0013427734375,
+            "delta_dists": 0.0021875500679016113
+          },
+          {
+            "case": 3,
+            "delta_FR": -0.004940629005432129,
+            "delta_lpips": 0.002197265625,
+            "delta_dists": 0.002743363380432129
+          }
+        ],
+        "scope": "Complete fixed20-test pilot plus all3validation only; no full100 score inference; counts descriptive, no statistical significance claim."
+      }
+    },
+    "push4_b7500_compiled_pilot": {
+      "contributions": {
+        "CLIPIQA": 0.7852944433689117,
+        "MANIQA": 0.5754950940608978,
+        "MUSIQ/100": 0.4281724452972412,
+        "NIQE_term": 0.5209299968741841,
+        "LPIPS_FR_term": -0.3479410807291667,
+        "DISTS_FR_term": -0.2124659021695455,
+        "NR": 2.3098919796012347,
+        "FR": 1.4395930171012878,
+        "S_subset": 3.7494849967025226
+      },
+      "component_means": {
+        "test": {
+          "clipiqa": 0.7852944433689117,
+          "maniqa": 0.5754950940608978,
+          "musiq": 42.81724452972412,
+          "niqe": 4.79070003125816
+        },
+        "validation": {
+          "clipiqa": 0.7684978644053141,
+          "maniqa": 0.5796133875846863,
+          "musiq": 36.60226058959961,
+          "niqe": 4.350929155990955,
+          "lpips": 0.3479410807291667,
+          "dists": 0.2124659021695455
+        }
+      },
+      "proofs": {
+        "audit": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_20261014/evaluation_audits/push4_b7500_compiled_pilot/audit.json",
+          "sha256": "2f2be329848050648864a825e65a76b6ec36ea4c95f1ed5e92d9d01b7ac87dd7"
+        },
+        "rows": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_20261014/evaluation_audits/push4_b7500_compiled_pilot/proof/scores/measurements.jsonl",
+          "sha256": "2e7633ed65f1f18c3ebd4d2d6e056d2db20faee1755065b61afcaa5c9cd0116c"
+        },
+        "checkpoint_sha256": "70f3d12dbf8bb094ab6d5ed8c1da0d61f39783460201ea3a08b5647714462aab"
+      },
+      "vs_parent7250": {
+        "delta_normalized_contributions": {
+          "CLIPIQA": 0.003345856070518516,
+          "MANIQA": 0.006498406827449843,
+          "MUSIQ/100": -0.0042496070861816615,
+          "NIQE_term": -0.0015562860963714842,
+          "LPIPS_FR_term": -0.005045572916666685,
+          "DISTS_FR_term": -0.0019304156303405762,
+          "NR": 0.004038369715415158,
+          "FR": -0.006975988547007317,
+          "S_subset": -0.002937618831591937
+        },
+        "test_better_count_NR": 15,
+        "test_better_counts_by_contribution": {
+          "CLIPIQA": 20,
+          "MANIQA": 19,
+          "MUSIQ/100": 6,
+          "NIQE_term": 6
+        },
+        "test20_paired": [
+          {
+            "case": 1,
+            "delta_NR": -0.0036154252014621246,
+            "delta_contributions": {
+              "CLIPIQA": 0.0036673545837402344,
+              "MANIQA": 0.009233713150024414,
+              "MUSIQ/100": -0.015682430267333985,
+              "NIQE_term": -0.0008340626678927876
+            }
+          },
+          {
+            "case": 6,
+            "delta_NR": 0.0013164535078107594,
+            "delta_contributions": {
+              "CLIPIQA": 0.0020889639854431152,
+              "MANIQA": 0.0041700005531311035,
+              "MUSIQ/100": 8.756637573242187e-05,
+              "NIQE_term": -0.005030077406495881
+            }
+          },
+          {
+            "case": 7,
+            "delta_NR": 0.0035227834324495963,
+            "delta_contributions": {
+              "CLIPIQA": 0.0017721056938171387,
+              "MANIQA": 0.008009910583496094,
+              "MUSIQ/100": -0.0011886978149414063,
+              "NIQE_term": -0.00507053502992223
+            }
+          },
+          {
+            "case": 11,
+            "delta_NR": 0.020730168194249003,
+            "delta_contributions": {
+              "CLIPIQA": 0.0025385618209838867,
+              "MANIQA": 0.007859528064727783,
+              "MUSIQ/100": 0.0020156097412109375,
+              "NIQE_term": 0.008316468567326396
+            }
+          },
+          {
+            "case": 16,
+            "delta_NR": -0.013440426700861801,
+            "delta_contributions": {
+              "CLIPIQA": 0.012666285037994385,
+              "MANIQA": 0.015661895275115967,
+              "MUSIQ/100": -0.040387992858886716,
+              "NIQE_term": -0.0013806141550854357
+            }
+          },
+          {
+            "case": 18,
+            "delta_NR": -0.001992448075919971,
+            "delta_contributions": {
+              "CLIPIQA": 0.005197346210479736,
+              "MANIQA": 0.004060328006744385,
+              "MUSIQ/100": -0.003949012756347656,
+              "NIQE_term": -0.0073011095367964355
+            }
+          },
+          {
+            "case": 21,
+            "delta_NR": 0.005469704174055252,
+            "delta_contributions": {
+              "CLIPIQA": 0.0005048513412475586,
+              "MANIQA": 0.0018485784530639648,
+              "MUSIQ/100": 0.0021057891845703124,
+              "NIQE_term": 0.0010104851951734163
+            }
+          },
+          {
+            "case": 23,
+            "delta_NR": -0.003991950911340716,
+            "delta_contributions": {
+              "CLIPIQA": 0.0030420422554016113,
+              "MANIQA": 0.010881125926971436,
+              "MUSIQ/100": -0.013947639465332031,
+              "NIQE_term": -0.0039674796283817315
+            }
+          },
+          {
+            "case": 25,
+            "delta_NR": 0.01106531029914196,
+            "delta_contributions": {
+              "CLIPIQA": 0.008230030536651611,
+              "MANIQA": 0.005924850702285767,
+              "MUSIQ/100": -0.000572357177734375,
+              "NIQE_term": -0.0025172137620610435
+            }
+          },
+          {
+            "case": 28,
+            "delta_NR": 0.012154022223827736,
+            "delta_contributions": {
+              "CLIPIQA": 0.0060315728187561035,
+              "MANIQA": 0.006878405809402466,
+              "MUSIQ/100": 0.004766578674316406,
+              "NIQE_term": -0.005522535078647239
+            }
+          },
+          {
+            "case": 31,
+            "delta_NR": 0.0024091661517631024,
+            "delta_contributions": {
+              "CLIPIQA": 0.00022077560424804688,
+              "MANIQA": 0.004822373390197754,
+              "MUSIQ/100": -0.002663307189941406,
+              "NIQE_term": 2.9324347258707916e-05
+            }
+          },
+          {
+            "case": 36,
+            "delta_NR": 0.0041586206172027395,
+            "delta_contributions": {
+              "CLIPIQA": 0.000536799430847168,
+              "MANIQA": 0.005744636058807373,
+              "MUSIQ/100": -0.0003250885009765625,
+              "NIQE_term": -0.001797726371475239
+            }
+          },
+          {
+            "case": 41,
+            "delta_NR": 0.00766437301590436,
+            "delta_contributions": {
+              "CLIPIQA": 0.0010519027709960938,
+              "MANIQA": 0.007237672805786133,
+              "MUSIQ/100": 0.0031476593017578124,
+              "NIQE_term": -0.0037728618626356792
+            }
+          },
+          {
+            "case": 46,
+            "delta_NR": 0.014256522970464083,
+            "delta_contributions": {
+              "CLIPIQA": 0.0035054683685302734,
+              "MANIQA": 0.008837521076202393,
+              "MUSIQ/100": 0.001697406768798828,
+              "NIQE_term": 0.00021612675693258865
+            }
+          },
+          {
+            "case": 51,
+            "delta_NR": 0.005192778957947955,
+            "delta_contributions": {
+              "CLIPIQA": 0.0016191601753234863,
+              "MANIQA": 0.00902634859085083,
+              "MUSIQ/100": -0.008097305297851562,
+              "NIQE_term": 0.0026445754896252003
+            }
+          },
+          {
+            "case": 61,
+            "delta_NR": 0.002006464349981352,
+            "delta_contributions": {
+              "CLIPIQA": 0.0024986863136291504,
+              "MANIQA": 0.006803929805755615,
+              "MUSIQ/100": -0.004043960571289062,
+              "NIQE_term": -0.0032521911981143515
+            }
+          },
+          {
+            "case": 71,
+            "delta_NR": -0.00540812330643531,
+            "delta_contributions": {
+              "CLIPIQA": 0.0029285550117492676,
+              "MANIQA": -0.0013769567012786865,
+              "MUSIQ/100": -0.004350624084472656,
+              "NIQE_term": -0.0026090975324332354
+            }
+          },
+          {
+            "case": 81,
+            "delta_NR": 0.006579684403871209,
+            "delta_contributions": {
+              "CLIPIQA": 0.0026764869689941406,
+              "MANIQA": 0.0009780526161193848,
+              "MUSIQ/100": -0.0001950836181640625,
+              "NIQE_term": 0.003120228436921746
+            }
+          },
+          {
+            "case": 91,
+            "delta_NR": 0.005783813422595676,
+            "delta_contributions": {
+              "CLIPIQA": 0.003239870071411133,
+              "MANIQA": 0.004991769790649414,
+              "MUSIQ/100": -0.0008417510986328125,
+              "NIQE_term": -0.0016060753408320583
+            }
+          },
+          {
+            "case": 100,
+            "delta_NR": 0.0069059027830560464,
+            "delta_contributions": {
+              "CLIPIQA": 0.0029003024101257324,
+              "MANIQA": 0.008374452590942383,
+              "MUSIQ/100": -0.002567501068115234,
+              "NIQE_term": -0.0018013511498968348
+            }
+          }
+        ],
+        "validation3_paired": [
+          {
+            "case": 1,
+            "delta_FR": -0.00997626781463623,
+            "delta_lpips": 0.00830078125,
+            "delta_dists": 0.0016754865646362305
+          },
+          {
+            "case": 2,
+            "delta_FR": -0.004601716995239258,
+            "delta_lpips": 0.002685546875,
+            "delta_dists": 0.0019161701202392578
+          },
+          {
+            "case": 3,
+            "delta_FR": -0.00634998083114624,
+            "delta_lpips": 0.004150390625,
+            "delta_dists": 0.0021995902061462402
+          }
+        ],
+        "scope": "Complete fixed20-test pilot plus all3validation only; no full100 score inference; counts descriptive, no statistical significance claim."
+      }
+    },
+    "push4_b7750_compiled_pilot": {
+      "contributions": {
+        "CLIPIQA": 0.7870132625102997,
+        "MANIQA": 0.5799451276659966,
+        "MUSIQ/100": 0.4271377172470093,
+        "NIQE_term": 0.5210405534539335,
+        "LPIPS_FR_term": -0.3506673177083333,
+        "DISTS_FR_term": -0.21384954452514648,
+        "NR": 2.315136660877239,
+        "FR": 1.4354831377665203,
+        "S_subset": 3.7506197986437595
+      },
+      "component_means": {
+        "test": {
+          "clipiqa": 0.7870132625102997,
+          "maniqa": 0.5799451276659966,
+          "musiq": 42.713771724700926,
+          "niqe": 4.789594465460665
+        },
+        "validation": {
+          "clipiqa": 0.7696125109990438,
+          "maniqa": 0.5827609697977701,
+          "musiq": 36.47340075174967,
+          "niqe": 4.3435395200162485,
+          "lpips": 0.3506673177083333,
+          "dists": 0.21384954452514648
+        }
+      },
+      "proofs": {
+        "audit": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_20261014/evaluation_audits/push4_b7750_compiled_pilot/audit.json",
+          "sha256": "b5b6dcae53323951ebd573832b7741f42a299252aca6f111ad76ff7b3344e78e"
+        },
+        "rows": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_20261014/evaluation_audits/push4_b7750_compiled_pilot/proof/scores/measurements.jsonl",
+          "sha256": "d4256e532d393566839b40b5f5f932a64fee7e7fada67366be30d9010da42d89"
+        },
+        "checkpoint_sha256": "03dc54bc9c748c0cdfa6889e1f5ac2dd07716b87a6c2fd0601b6c4c1af8ecbb6"
+      },
+      "vs_parent7250": {
+        "delta_normalized_contributions": {
+          "CLIPIQA": 0.005064675211906455,
+          "MANIQA": 0.010948440432548612,
+          "MUSIQ/100": -0.005284335136413576,
+          "NIQE_term": -0.0014457295166220296,
+          "LPIPS_FR_term": -0.007771809895833315,
+          "DISTS_FR_term": -0.0033140579859415598,
+          "NR": 0.009283050991419461,
+          "FR": -0.011085867881774902,
+          "S_subset": -0.0018028168903549968
+        },
+        "test_better_count_NR": 16,
+        "test_better_counts_by_contribution": {
+          "CLIPIQA": 18,
+          "MANIQA": 19,
+          "MUSIQ/100": 10,
+          "NIQE_term": 6
+        },
+        "test20_paired": [
+          {
+            "case": 1,
+            "delta_NR": -0.0052013184299056206,
+            "delta_contributions": {
+              "CLIPIQA": 0.005648791790008545,
+              "MANIQA": 0.014683365821838379,
+              "MUSIQ/100": -0.02227519989013672,
+              "NIQE_term": -0.003258276151615824
+            }
+          },
+          {
+            "case": 6,
+            "delta_NR": 0.001789905509428902,
+            "delta_contributions": {
+              "CLIPIQA": 0.003310680389404297,
+              "MANIQA": 0.005291461944580078,
+              "MUSIQ/100": 0.00014934539794921874,
+              "NIQE_term": -0.006961582222504692
+            }
+          },
+          {
+            "case": 7,
+            "delta_NR": 0.016030067519618482,
+            "delta_contributions": {
+              "CLIPIQA": 0.0035802721977233887,
+              "MANIQA": 0.011357486248016357,
+              "MUSIQ/100": 0.00614593505859375,
+              "NIQE_term": -0.005053625984715015
+            }
+          },
+          {
+            "case": 11,
+            "delta_NR": 0.029511998141551494,
+            "delta_contributions": {
+              "CLIPIQA": 0.0038328170776367188,
+              "MANIQA": 0.015250861644744873,
+              "MUSIQ/100": 0.0026329803466796876,
+              "NIQE_term": 0.007795339072490215
+            }
+          },
+          {
+            "case": 16,
+            "delta_NR": -0.017333560884056156,
+            "delta_contributions": {
+              "CLIPIQA": 0.02048438787460327,
+              "MANIQA": 0.024220764636993408,
+              "MUSIQ/100": -0.05836822509765625,
+              "NIQE_term": -0.003670488297996588
+            }
+          },
+          {
+            "case": 18,
+            "delta_NR": 3.314186918853233e-05,
+            "delta_contributions": {
+              "CLIPIQA": 0.008971214294433594,
+              "MANIQA": 0.008465886116027832,
+              "MUSIQ/100": -0.00893341064453125,
+              "NIQE_term": -0.008470547896741643
+            }
+          },
+          {
+            "case": 21,
+            "delta_NR": 0.012375665518662905,
+            "delta_contributions": {
+              "CLIPIQA": -0.0006590485572814941,
+              "MANIQA": 0.006970226764678955,
+              "MUSIQ/100": 0.00369659423828125,
+              "NIQE_term": 0.0023678930729841953
+            }
+          },
+          {
+            "case": 23,
+            "delta_NR": -0.001979254559248212,
+            "delta_contributions": {
+              "CLIPIQA": 0.005731403827667236,
+              "MANIQA": 0.01896125078201294,
+              "MUSIQ/100": -0.024049949645996094,
+              "NIQE_term": -0.0026219595229322935
+            }
+          },
+          {
+            "case": 25,
+            "delta_NR": 0.024894002672963857,
+            "delta_contributions": {
+              "CLIPIQA": 0.012186944484710693,
+              "MANIQA": 0.014888495206832886,
+              "MUSIQ/100": 0.0001485443115234375,
+              "NIQE_term": -0.0023299813301031593
+            }
+          },
+          {
+            "case": 28,
+            "delta_NR": 0.025555449583090202,
+            "delta_contributions": {
+              "CLIPIQA": 0.008968889713287354,
+              "MANIQA": 0.009607493877410889,
+              "MUSIQ/100": 0.012259597778320313,
+              "NIQE_term": -0.005280531785928355
+            }
+          },
+          {
+            "case": 31,
+            "delta_NR": 0.005754331390828167,
+            "delta_contributions": {
+              "CLIPIQA": 0.0009895563125610352,
+              "MANIQA": 0.008707880973815918,
+              "MUSIQ/100": -0.004107589721679687,
+              "NIQE_term": 0.00016448382613090117
+            }
+          },
+          {
+            "case": 36,
+            "delta_NR": 0.004091427258519413,
+            "delta_contributions": {
+              "CLIPIQA": -0.0009945034980773926,
+              "MANIQA": 0.00715327262878418,
+              "MUSIQ/100": 0.00029270172119140627,
+              "NIQE_term": -0.00236004359337878
+            }
+          },
+          {
+            "case": 41,
+            "delta_NR": 0.016899600489244406,
+            "delta_contributions": {
+              "CLIPIQA": 0.002527952194213867,
+              "MANIQA": 0.013768970966339111,
+              "MUSIQ/100": 0.004608497619628906,
+              "NIQE_term": -0.004005820290937478
+            }
+          },
+          {
+            "case": 46,
+            "delta_NR": 0.027811616606948704,
+            "delta_contributions": {
+              "CLIPIQA": 0.005426943302154541,
+              "MANIQA": 0.013992369174957275,
+              "MUSIQ/100": 0.007077102661132813,
+              "NIQE_term": 0.0013152014687040747
+            }
+          },
+          {
+            "case": 51,
+            "delta_NR": 0.013698365407215755,
+            "delta_contributions": {
+              "CLIPIQA": 0.0025165677070617676,
+              "MANIQA": 0.016760528087615967,
+              "MUSIQ/100": -0.013264884948730469,
+              "NIQE_term": 0.007686154561268488
+            }
+          },
+          {
+            "case": 61,
+            "delta_NR": 0.006625177822623965,
+            "delta_contributions": {
+              "CLIPIQA": 0.0039025545120239258,
+              "MANIQA": 0.009240269660949707,
+              "MUSIQ/100": -0.0025858306884765626,
+              "NIQE_term": -0.003931815661873106
+            }
+          },
+          {
+            "case": 71,
+            "delta_NR": -0.008175542426510737,
+            "delta_contributions": {
+              "CLIPIQA": 0.003692328929901123,
+              "MANIQA": -0.0025361478328704834,
+              "MUSIQ/100": -0.005793895721435547,
+              "NIQE_term": -0.003537827802105831
+            }
+          },
+          {
+            "case": 81,
+            "delta_NR": 0.011153926799313858,
+            "delta_contributions": {
+              "CLIPIQA": 0.0022690892219543457,
+              "MANIQA": 0.0012984871864318848,
+              "MUSIQ/100": 0.0014159011840820313,
+              "NIQE_term": 0.006170449206845596
+            }
+          },
+          {
+            "case": 91,
+            "delta_NR": 0.008689599366154984,
+            "delta_contributions": {
+              "CLIPIQA": 0.004562497138977051,
+              "MANIQA": 0.006921589374542236,
+              "MUSIQ/100": -0.000356597900390625,
+              "NIQE_term": -0.002437889246973679
+            }
+          },
+          {
+            "case": 100,
+            "delta_NR": 0.013436420172753127,
+            "delta_contributions": {
+              "CLIPIQA": 0.004344165325164795,
+              "MANIQA": 0.013964295387268066,
+              "MUSIQ/100": -0.004378318786621094,
+              "NIQE_term": -0.0004937217530586402
+            }
+          }
+        ],
+        "validation3_paired": [
+          {
+            "case": 1,
+            "delta_FR": -0.014507472515106201,
+            "delta_lpips": 0.01220703125,
+            "delta_dists": 0.002300441265106201
+          },
+          {
+            "case": 2,
+            "delta_FR": -0.00761258602142334,
+            "delta_lpips": 0.0042724609375,
+            "delta_dists": 0.00334012508392334
+          },
+          {
+            "case": 3,
+            "delta_FR": -0.011137545108795166,
+            "delta_lpips": 0.0068359375,
+            "delta_dists": 0.004301607608795166
+          }
+        ],
+        "scope": "Complete fixed20-test pilot plus all3validation only; no full100 score inference; counts descriptive, no statistical significance claim."
+      }
+    },
+    "push4_c7500_compiled_pilot": {
+      "contributions": {
+        "CLIPIQA": 0.7815533101558685,
+        "MANIQA": 0.5669191539287567,
+        "MUSIQ/100": 0.43393120193481444,
+        "NIQE_term": 0.525948413083117,
+        "LPIPS_FR_term": -0.344970703125,
+        "DISTS_FR_term": -0.21029367049535116,
+        "NR": 2.3083520791025567,
+        "FR": 1.444735626379649,
+        "S_subset": 3.753087705482206
+      },
+      "component_means": {
+        "test": {
+          "clipiqa": 0.7815533101558685,
+          "maniqa": 0.5669191539287567,
+          "musiq": 43.393120193481444,
+          "niqe": 4.74051586916883
+        },
+        "validation": {
+          "clipiqa": 0.7636541724205017,
+          "maniqa": 0.5702808499336243,
+          "musiq": 39.35548400878906,
+          "niqe": 4.27970183909029,
+          "lpips": 0.344970703125,
+          "dists": 0.21029367049535116
+        }
+      },
+      "proofs": {
+        "audit": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_20261014/evaluation_audits/push4_c7500_compiled_pilot/audit.json",
+          "sha256": "a445cda7ce39b06cdf891f5f15a9d34da9d886a47e9dc7ac2b630866ddcf0047"
+        },
+        "rows": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_20261014/evaluation_audits/push4_c7500_compiled_pilot/proof/scores/measurements.jsonl",
+          "sha256": "30ce8db6f777438b0eac55140992f7e6f015560cb8e79946758b1293e345ef65"
+        },
+        "checkpoint_sha256": "4d6bc029c1c32693e22ec279d651759d96ad1b8bca32a69c7bbf26657ee31f5f"
+      },
+      "vs_parent7250": {
+        "delta_normalized_contributions": {
+          "CLIPIQA": -0.00039527714252474144,
+          "MANIQA": -0.0020775333046912925,
+          "MUSIQ/100": 0.0015091495513915865,
+          "NIQE_term": 0.003462130112561468,
+          "LPIPS_FR_term": -0.0020751953125,
+          "DISTS_FR_term": 0.00024181604385375977,
+          "NR": 0.0024984692167371314,
+          "FR": -0.0018333792686462402,
+          "S_subset": 0.0006650899480913353
+        },
+        "test_better_count_NR": 15,
+        "test_better_counts_by_contribution": {
+          "CLIPIQA": 11,
+          "MANIQA": 1,
+          "MUSIQ/100": 16,
+          "NIQE_term": 17
+        },
+        "test20_paired": [
+          {
+            "case": 1,
+            "delta_NR": 0.014414370821268053,
+            "delta_contributions": {
+              "CLIPIQA": 0.001544177532196045,
+              "MANIQA": -0.0007835030555725098,
+              "MUSIQ/100": 0.00840240478515625,
+              "NIQE_term": 0.005251291559488269
+            }
+          },
+          {
+            "case": 6,
+            "delta_NR": 0.0004421531129458956,
+            "delta_contributions": {
+              "CLIPIQA": -0.00035893917083740234,
+              "MANIQA": -0.002413332462310791,
+              "MUSIQ/100": 8.358001708984375e-05,
+              "NIQE_term": 0.0031308447290042452
+            }
+          },
+          {
+            "case": 7,
+            "delta_NR": 0.0025319349395701886,
+            "delta_contributions": {
+              "CLIPIQA": -0.0019170045852661133,
+              "MANIQA": -0.0024809837341308594,
+              "MUSIQ/100": 0.0036678695678710937,
+              "NIQE_term": 0.0032620536910960675
+            }
+          },
+          {
+            "case": 11,
+            "delta_NR": 0.01196613836890659,
+            "delta_contributions": {
+              "CLIPIQA": -0.0012127161026000977,
+              "MANIQA": 0.0027142763137817383,
+              "MUSIQ/100": -0.0006300735473632812,
+              "NIQE_term": 0.011094651705088231
+            }
+          },
+          {
+            "case": 16,
+            "delta_NR": 0.011863089652206416,
+            "delta_contributions": {
+              "CLIPIQA": 0.0027127861976623535,
+              "MANIQA": -0.0012669861316680908,
+              "MUSIQ/100": 0.009011650085449218,
+              "NIQE_term": 0.0014056395007629341
+            }
+          },
+          {
+            "case": 18,
+            "delta_NR": 0.0011002721118059527,
+            "delta_contributions": {
+              "CLIPIQA": 0.0022348761558532715,
+              "MANIQA": -0.0015252232551574707,
+              "MUSIQ/100": 0.005087127685546875,
+              "NIQE_term": -0.004696508474436723
+            }
+          },
+          {
+            "case": 21,
+            "delta_NR": 0.0008875372620716251,
+            "delta_contributions": {
+              "CLIPIQA": -0.0029970407485961914,
+              "MANIQA": -0.0035619139671325684,
+              "MUSIQ/100": 0.0020709991455078124,
+              "NIQE_term": 0.0053754928322925725
+            }
+          },
+          {
+            "case": 23,
+            "delta_NR": -0.0035035340529306503,
+            "delta_contributions": {
+              "CLIPIQA": -0.0015494227409362793,
+              "MANIQA": -0.0015371441841125488,
+              "MUSIQ/100": 2.98309326171875e-05,
+              "NIQE_term": -0.0004467980604990096
+            }
+          },
+          {
+            "case": 25,
+            "delta_NR": -0.008700659427584903,
+            "delta_contributions": {
+              "CLIPIQA": -0.002294778823852539,
+              "MANIQA": -0.0016131103038787842,
+              "MUSIQ/100": -0.004780731201171875,
+              "NIQE_term": -1.2039098681704275e-05
+            }
+          },
+          {
+            "case": 28,
+            "delta_NR": -0.005656217983874274,
+            "delta_contributions": {
+              "CLIPIQA": -0.003906548023223877,
+              "MANIQA": -0.0028311610221862793,
+              "MUSIQ/100": -0.00537384033203125,
+              "NIQE_term": 0.006455331393567132
+            }
+          },
+          {
+            "case": 31,
+            "delta_NR": 0.005324971113152213,
+            "delta_contributions": {
+              "CLIPIQA": 0.0008748173713684082,
+              "MANIQA": -0.0020148158073425293,
+              "MUSIQ/100": 0.0021861648559570314,
+              "NIQE_term": 0.004278804693169302
+            }
+          },
+          {
+            "case": 36,
+            "delta_NR": 0.0027833169727100506,
+            "delta_contributions": {
+              "CLIPIQA": 0.00048345327377319336,
+              "MANIQA": -0.002098977565765381,
+              "MUSIQ/100": 0.000245819091796875,
+              "NIQE_term": 0.004153022172905363
+            }
+          },
+          {
+            "case": 41,
+            "delta_NR": 0.0017376706440867555,
+            "delta_contributions": {
+              "CLIPIQA": 0.0004430413246154785,
+              "MANIQA": -0.002962470054626465,
+              "MUSIQ/100": -6.3934326171875e-05,
+              "NIQE_term": 0.004321033700269617
+            }
+          },
+          {
+            "case": 46,
+            "delta_NR": 0.0035243482418888658,
+            "delta_contributions": {
+              "CLIPIQA": 0.0007026195526123047,
+              "MANIQA": -0.0007918477058410645,
+              "MUSIQ/100": 0.0022961235046386717,
+              "NIQE_term": 0.001317452890478954
+            }
+          },
+          {
+            "case": 51,
+            "delta_NR": 0.003932954049210302,
+            "delta_contributions": {
+              "CLIPIQA": 0.0005841255187988281,
+              "MANIQA": -0.0010366439819335938,
+              "MUSIQ/100": 0.002849388122558594,
+              "NIQE_term": 0.001536084389786474
+            }
+          },
+          {
+            "case": 61,
+            "delta_NR": -0.004469377763057212,
+            "delta_contributions": {
+              "CLIPIQA": -0.005718111991882324,
+              "MANIQA": -0.0042552947998046875,
+              "MUSIQ/100": 0.0008802032470703125,
+              "NIQE_term": 0.004623825781559487
+            }
+          },
+          {
+            "case": 71,
+            "delta_NR": 0.004322783156069043,
+            "delta_contributions": {
+              "CLIPIQA": 0.0003293752670288086,
+              "MANIQA": -0.004918426275253296,
+              "MUSIQ/100": 0.002961540222167969,
+              "NIQE_term": 0.005950293942125562
+            }
+          },
+          {
+            "case": 81,
+            "delta_NR": 0.005403076841590728,
+            "delta_contributions": {
+              "CLIPIQA": 0.0010981559753417969,
+              "MANIQA": -0.0024690628051757812,
+              "MUSIQ/100": 0.0008754348754882813,
+              "NIQE_term": 0.005898548795936431
+            }
+          },
+          {
+            "case": 91,
+            "delta_NR": 0.0023965868962581103,
+            "delta_contributions": {
+              "CLIPIQA": 0.0013607144355773926,
+              "MANIQA": -0.003246784210205078,
+              "MUSIQ/100": 0.0002794647216796875,
+              "NIQE_term": 0.004003191949206108
+            }
+          },
+          {
+            "case": 100,
+            "delta_NR": -0.0003320306215537981,
+            "delta_contributions": {
+              "CLIPIQA": -0.0003191232681274414,
+              "MANIQA": -0.002457261085510254,
+              "MUSIQ/100": 0.00010396957397460937,
+              "NIQE_term": 0.002340384158109288
+            }
+          }
+        ],
+        "validation3_paired": [
+          {
+            "case": 1,
+            "delta_FR": -0.0008159279823303223,
+            "delta_lpips": 0.00244140625,
+            "delta_dists": -0.0016254782676696777
+          },
+          {
+            "case": 2,
+            "delta_FR": -0.0020932555198669434,
+            "delta_lpips": 0.0015869140625,
+            "delta_dists": 0.0005063414573669434
+          },
+          {
+            "case": 3,
+            "delta_FR": -0.002590954303741455,
+            "delta_lpips": 0.002197265625,
+            "delta_dists": 0.0003936886787414551
+          }
+        ],
+        "scope": "Complete fixed20-test pilot plus all3validation only; no full100 score inference; counts descriptive, no statistical significance claim."
+      }
+    },
+    "push4_c7750_compiled_pilot": {
+      "contributions": {
+        "CLIPIQA": 0.7810342699289322,
+        "MANIQA": 0.5669615298509598,
+        "MUSIQ/100": 0.433758734703064,
+        "NIQE_term": 0.5302799627308712,
+        "LPIPS_FR_term": -0.3456217447916667,
+        "DISTS_FR_term": -0.2105392018953959,
+        "NR": 2.312034497213827,
+        "FR": 1.4438390533129373,
+        "S_subset": 3.7558735505267644
+      },
+      "component_means": {
+        "test": {
+          "clipiqa": 0.7810342699289322,
+          "maniqa": 0.5669615298509598,
+          "musiq": 43.375873470306395,
+          "niqe": 4.697200372691288
+        },
+        "validation": {
+          "clipiqa": 0.7634755373001099,
+          "maniqa": 0.5691259900728861,
+          "musiq": 40.35374323527018,
+          "niqe": 4.237367782455956,
+          "lpips": 0.3456217447916667,
+          "dists": 0.2105392018953959
+        }
+      },
+      "proofs": {
+        "audit": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_20261014/evaluation_audits/push4_c7750_compiled_pilot/audit.json",
+          "sha256": "6f5a12e622d0cfa5c3a790ee56f5ddf20798a839e038b2b0760e1f76fff28dea"
+        },
+        "rows": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_20261014/evaluation_audits/push4_c7750_compiled_pilot/proof/scores/measurements.jsonl",
+          "sha256": "77f8d5f5e944d37002df7d052b7c93824e4453d6060bc00ca6bb8b4382e531dd"
+        },
+        "checkpoint_sha256": "c953cb853a2a98e1563171798af9d4cb5d034957a4d7da444eb1e25fd6db96a3"
+      },
+      "vs_parent7250": {
+        "delta_normalized_contributions": {
+          "CLIPIQA": -0.0009143173694610152,
+          "MANIQA": -0.002035157382488162,
+          "MUSIQ/100": 0.0013366823196411248,
+          "NIQE_term": 0.007793679760315642,
+          "LPIPS_FR_term": -0.002726236979166685,
+          "DISTS_FR_term": -3.7153561909808452e-06,
+          "NR": 0.006180887328007589,
+          "FR": -0.002729952335357888,
+          "S_subset": 0.0034509349926499233
+        },
+        "test_better_count_NR": 16,
+        "test_better_counts_by_contribution": {
+          "CLIPIQA": 9,
+          "MANIQA": 6,
+          "MUSIQ/100": 14,
+          "NIQE_term": 19
+        },
+        "test20_paired": [
+          {
+            "case": 1,
+            "delta_NR": 0.016216808854619364,
+            "delta_contributions": {
+              "CLIPIQA": 0.0009329319000244141,
+              "MANIQA": -0.00049591064453125,
+              "MUSIQ/100": 0.007595272064208985,
+              "NIQE_term": 0.008184515534917215
+            }
+          },
+          {
+            "case": 6,
+            "delta_NR": -0.004071616465627646,
+            "delta_contributions": {
+              "CLIPIQA": -0.0046440958976745605,
+              "MANIQA": -0.004812479019165039,
+              "MUSIQ/100": 0.00010095596313476562,
+              "NIQE_term": 0.005284002488077188
+            }
+          },
+          {
+            "case": 7,
+            "delta_NR": 0.008881609609090759,
+            "delta_contributions": {
+              "CLIPIQA": -0.0037133097648620605,
+              "MANIQA": -0.004857480525970459,
+              "MUSIQ/100": 0.01039825439453125,
+              "NIQE_term": 0.007054145505392029
+            }
+          },
+          {
+            "case": 11,
+            "delta_NR": 0.021378161461653843,
+            "delta_contributions": {
+              "CLIPIQA": 0.0008304119110107422,
+              "MANIQA": 0.004205167293548584,
+              "MUSIQ/100": 0.00040985107421875,
+              "NIQE_term": 0.01593273118287577
+            }
+          },
+          {
+            "case": 16,
+            "delta_NR": 0.009353546453910545,
+            "delta_contributions": {
+              "CLIPIQA": 0.002911210060119629,
+              "MANIQA": 0.0016974210739135742,
+              "MUSIQ/100": -0.0004095458984375,
+              "NIQE_term": 0.005154461218314843
+            }
+          },
+          {
+            "case": 18,
+            "delta_NR": 0.0023364622498856314,
+            "delta_contributions": {
+              "CLIPIQA": 0.0022637248039245605,
+              "MANIQA": 0.0006979703903198242,
+              "MUSIQ/100": 0.002381095886230469,
+              "NIQE_term": -0.0030063288305892224
+            }
+          },
+          {
+            "case": 21,
+            "delta_NR": 0.004978270775145397,
+            "delta_contributions": {
+              "CLIPIQA": -0.0035449862480163574,
+              "MANIQA": -0.0016897320747375488,
+              "MUSIQ/100": 0.0021257781982421875,
+              "NIQE_term": 0.008087210899657115
+            }
+          },
+          {
+            "case": 23,
+            "delta_NR": 0.003610977928244754,
+            "delta_contributions": {
+              "CLIPIQA": -0.0003253817558288574,
+              "MANIQA": 0.0008590221405029297,
+              "MUSIQ/100": -0.0027521514892578126,
+              "NIQE_term": 0.0058294890328284945
+            }
+          },
+          {
+            "case": 25,
+            "delta_NR": -0.0012860965811568193,
+            "delta_contributions": {
+              "CLIPIQA": 0.0001304149627685547,
+              "MANIQA": 0.0015678107738494873,
+              "MUSIQ/100": -0.00455657958984375,
+              "NIQE_term": 0.0015722572720688888
+            }
+          },
+          {
+            "case": 28,
+            "delta_NR": -0.00392129637040897,
+            "delta_contributions": {
+              "CLIPIQA": -0.005486667156219482,
+              "MANIQA": -0.006141871213912964,
+              "MUSIQ/100": -0.000973052978515625,
+              "NIQE_term": 0.0086802949782391
+            }
+          },
+          {
+            "case": 31,
+            "delta_NR": 0.008925517349708994,
+            "delta_contributions": {
+              "CLIPIQA": -9.506940841674805e-05,
+              "MANIQA": -0.001623690128326416,
+              "MUSIQ/100": 0.0023978424072265627,
+              "NIQE_term": 0.008246434479225595
+            }
+          },
+          {
+            "case": 36,
+            "delta_NR": 0.0051629732957477175,
+            "delta_contributions": {
+              "CLIPIQA": -0.0012569427490234375,
+              "MANIQA": -0.0034838318824768066,
+              "MUSIQ/100": 0.0008418464660644531,
+              "NIQE_term": 0.009061901461183509
+            }
+          },
+          {
+            "case": 41,
+            "delta_NR": 0.009297819848606892,
+            "delta_contributions": {
+              "CLIPIQA": 0.00015425682067871094,
+              "MANIQA": -0.0017449259757995605,
+              "MUSIQ/100": -0.000423431396484375,
+              "NIQE_term": 0.011311920400212117
+            }
+          },
+          {
+            "case": 46,
+            "delta_NR": 0.011654499024988852,
+            "delta_contributions": {
+              "CLIPIQA": 0.00013583898544311523,
+              "MANIQA": -0.0009894371032714844,
+              "MUSIQ/100": 0.00516510009765625,
+              "NIQE_term": 0.007342997045160971
+            }
+          },
+          {
+            "case": 51,
+            "delta_NR": 0.011841325474374659,
+            "delta_contributions": {
+              "CLIPIQA": 0.0006681680679321289,
+              "MANIQA": 0.0008867383003234863,
+              "MUSIQ/100": 0.000680999755859375,
+              "NIQE_term": 0.009605419350259669
+            }
+          },
+          {
+            "case": 61,
+            "delta_NR": -0.004640631996404495,
+            "delta_contributions": {
+              "CLIPIQA": -0.007287144660949707,
+              "MANIQA": -0.00804513692855835,
+              "MUSIQ/100": 0.001119537353515625,
+              "NIQE_term": 0.009572112239587937
+            }
+          },
+          {
+            "case": 71,
+            "delta_NR": 0.007757965680308309,
+            "delta_contributions": {
+              "CLIPIQA": -1.2755393981933594e-05,
+              "MANIQA": -0.004957407712936401,
+              "MUSIQ/100": 0.0011026382446289063,
+              "NIQE_term": 0.011625490542597738
+            }
+          },
+          {
+            "case": 81,
+            "delta_NR": 0.005283158333103071,
+            "delta_contributions": {
+              "CLIPIQA": -0.00021970272064208984,
+              "MANIQA": -0.004375159740447998,
+              "MUSIQ/100": 0.0009949874877929687,
+              "NIQE_term": 0.00888303330640019
+            }
+          },
+          {
+            "case": 91,
+            "delta_NR": 0.004962952247279172,
+            "delta_contributions": {
+              "CLIPIQA": 0.0003858804702758789,
+              "MANIQA": -0.0065111517906188965,
+              "MUSIQ/100": 0.000713958740234375,
+              "NIQE_term": 0.010374264827387814
+            }
+          },
+          {
+            "case": 100,
+            "delta_NR": 0.005895339387077883,
+            "delta_contributions": {
+              "CLIPIQA": -0.0001131296157836914,
+              "MANIQA": -0.0008890628814697266,
+              "MUSIQ/100": -0.00017971038818359375,
+              "NIQE_term": 0.007077242272514894
+            }
+          }
+        ],
+        "validation3_paired": [
+          {
+            "case": 1,
+            "delta_FR": -0.0016270875930786133,
+            "delta_lpips": 0.00341796875,
+            "delta_dists": -0.0017908811569213867
+          },
+          {
+            "case": 2,
+            "delta_FR": -0.0025675296783447266,
+            "delta_lpips": 0.0015869140625,
+            "delta_dists": 0.0009806156158447266
+          },
+          {
+            "case": 3,
+            "delta_FR": -0.003995239734649658,
+            "delta_lpips": 0.003173828125,
+            "delta_dists": 0.0008214116096496582
+          }
+        ],
+        "scope": "Complete fixed20-test pilot plus all3validation only; no full100 score inference; counts descriptive, no statistical significance claim."
+      }
+    }
+  },
+  "minimal_contrasts": {
+    "push4_b7500_compiled_pilot__minus__push4_a7500_compiled_pilot": {
+      "delta_normalized_contributions": {
+        "CLIPIQA": -0.00018306374549870164,
+        "MANIQA": 0.0026085615158081277,
+        "MUSIQ/100": -0.0027749176025391176,
+        "NIQE_term": 0.0016151091349216884,
+        "LPIPS_FR_term": -0.0034993489583333703,
+        "DISTS_FR_term": -0.0007044871648152762,
+        "NR": 0.0012656893026918858,
+        "FR": -0.004203836123148674,
+        "S_subset": -0.0029381468204570105
+      },
+      "test_better_count_NR": 13,
+      "test_better_counts_by_contribution": {
+        "CLIPIQA": 10,
+        "MANIQA": 18,
+        "MUSIQ/100": 7,
+        "NIQE_term": 17
+      },
+      "test20_paired": [
+        {
+          "case": 1,
+          "delta_NR": -0.003566137572159854,
+          "delta_contributions": {
+            "CLIPIQA": 0.00018799304962158203,
+            "MANIQA": 0.003574073314666748,
+            "MUSIQ/100": -0.008799591064453126,
+            "NIQE_term": 0.0014713871280049417
+          }
+        },
+        {
+          "case": 6,
+          "delta_NR": -0.0021620256536910355,
+          "delta_contributions": {
+            "CLIPIQA": -0.0013585090637207031,
+            "MANIQA": 0.00140303373336792,
+            "MUSIQ/100": 1.10626220703125e-05,
+            "NIQE_term": -0.0022176129454085647
+          }
+        },
+        {
+          "case": 7,
+          "delta_NR": -0.002088617080724955,
+          "delta_contributions": {
+            "CLIPIQA": -0.000911414623260498,
+            "MANIQA": 0.0026078224182128906,
+            "MUSIQ/100": -0.0013665771484375,
+            "NIQE_term": -0.0024184477272398476
+          }
+        },
+        {
+          "case": 11,
+          "delta_NR": 0.009853844044222945,
+          "delta_contributions": {
+            "CLIPIQA": -0.0011175274848937988,
+            "MANIQA": 0.004034817218780518,
+            "MUSIQ/100": 0.0011288070678710938,
+            "NIQE_term": 0.005807747242465133
+          }
+        },
+        {
+          "case": 16,
+          "delta_NR": -0.017283251727754932,
+          "delta_contributions": {
+            "CLIPIQA": 0.003185093402862549,
+            "MANIQA": 0.00829225778579712,
+            "MUSIQ/100": -0.032314300537109375,
+            "NIQE_term": 0.0035536976206947735
+          }
+        },
+        {
+          "case": 18,
+          "delta_NR": 0.0011711088828293193,
+          "delta_contributions": {
+            "CLIPIQA": -0.0007274746894836426,
+            "MANIQA": 0.0012694001197814941,
+            "MUSIQ/100": -0.00040340423583984375,
+            "NIQE_term": 0.0010325876883713115
+          }
+        },
+        {
+          "case": 21,
+          "delta_NR": 0.001326603038292582,
+          "delta_contributions": {
+            "CLIPIQA": -0.0038109421730041504,
+            "MANIQA": 0.0016935467720031738,
+            "MUSIQ/100": 0.0017761611938476563,
+            "NIQE_term": 0.0016678372454459022
+          }
+        },
+        {
+          "case": 23,
+          "delta_NR": -0.0008894906883232774,
+          "delta_contributions": {
+            "CLIPIQA": 3.0517578125e-05,
+            "MANIQA": 0.004325747489929199,
+            "MUSIQ/100": -0.006735267639160156,
+            "NIQE_term": 0.0014895118827826792
+          }
+        },
+        {
+          "case": 25,
+          "delta_NR": 0.004083163084404351,
+          "delta_contributions": {
+            "CLIPIQA": 0.0022770166397094727,
+            "MANIQA": 0.0032401084899902344,
+            "MUSIQ/100": -0.002113151550292969,
+            "NIQE_term": 0.0006791895049976127
+          }
+        },
+        {
+          "case": 28,
+          "delta_NR": 0.0078076196355564235,
+          "delta_contributions": {
+            "CLIPIQA": 0.0012301802635192871,
+            "MANIQA": 0.0020301640033721924,
+            "MUSIQ/100": 0.005906562805175781,
+            "NIQE_term": -0.0013592874365108364
+          }
+        },
+        {
+          "case": 31,
+          "delta_NR": 0.0012310462474735572,
+          "delta_contributions": {
+            "CLIPIQA": -0.0012856721878051758,
+            "MANIQA": 0.0022163987159729004,
+            "MUSIQ/100": -0.002521934509277344,
+            "NIQE_term": 0.0028222542285831764
+          }
+        },
+        {
+          "case": 36,
+          "delta_NR": 0.0020026698410729616,
+          "delta_contributions": {
+            "CLIPIQA": -0.0008159875869750977,
+            "MANIQA": 0.002368330955505371,
+            "MUSIQ/100": -0.0004405784606933594,
+            "NIQE_term": 0.0008909049332360474
+          }
+        },
+        {
+          "case": 41,
+          "delta_NR": 0.005054872263283361,
+          "delta_contributions": {
+            "CLIPIQA": -0.0009520053863525391,
+            "MANIQA": 0.0026248693466186523,
+            "MUSIQ/100": 0.002355003356933594,
+            "NIQE_term": 0.0010270049460836539
+          }
+        },
+        {
+          "case": 46,
+          "delta_NR": 0.005179006160382098,
+          "delta_contributions": {
+            "CLIPIQA": -0.0008761882781982422,
+            "MANIQA": 0.0035799741744995117,
+            "MUSIQ/100": -0.0005854415893554687,
+            "NIQE_term": 0.0030606618534362974
+          }
+        },
+        {
+          "case": 51,
+          "delta_NR": 0.004688386233690256,
+          "delta_contributions": {
+            "CLIPIQA": 0.0002460479736328125,
+            "MANIQA": 0.004180550575256348,
+            "MUSIQ/100": -0.005512809753417969,
+            "NIQE_term": 0.005774597438219065
+          }
+        },
+        {
+          "case": 61,
+          "delta_NR": -0.00125238723298553,
+          "delta_contributions": {
+            "CLIPIQA": -0.0014637112617492676,
+            "MANIQA": 0.0020325183868408203,
+            "MUSIQ/100": -0.0023061752319335936,
+            "NIQE_term": 0.0004849808738565109
+          }
+        },
+        {
+          "case": 71,
+          "delta_NR": -0.0010583345707809678,
+          "delta_contributions": {
+            "CLIPIQA": 0.00090789794921875,
+            "MANIQA": -0.0014848411083221436,
+            "MUSIQ/100": -0.003028850555419922,
+            "NIQE_term": 0.0025474591437423476
+          }
+        },
+        {
+          "case": 81,
+          "delta_NR": 0.005229953935935239,
+          "delta_contributions": {
+            "CLIPIQA": 0.0005582571029663086,
+            "MANIQA": -0.0003160238265991211,
+            "MUSIQ/100": 0.0009813308715820312,
+            "NIQE_term": 0.00400638978798602
+          }
+        },
+        {
+          "case": 91,
+          "delta_NR": 0.0029256893412824957,
+          "delta_contributions": {
+            "CLIPIQA": 0.0005480051040649414,
+            "MANIQA": 0.0009808540344238281,
+            "MUSIQ/100": 0.00023162841796875,
+            "NIQE_term": 0.0011652017848249763
+          }
+        },
+        {
+          "case": 100,
+          "delta_NR": 0.003060067871835468,
+          "delta_contributions": {
+            "CLIPIQA": 0.0004871487617492676,
+            "MANIQA": 0.003517627716064453,
+            "MUSIQ/100": -0.0017608261108398437,
+            "NIQE_term": 0.000816117504861591
+          }
+        }
+      ],
+      "validation3_paired": [
+        {
+          "case": 1,
+          "delta_FR": -0.005959510803222656,
+          "delta_lpips": 0.00537109375,
+          "delta_dists": 0.0005884170532226562
+        },
+        {
+          "case": 2,
+          "delta_FR": -0.0025196075439453125,
+          "delta_lpips": 0.001953125,
+          "delta_dists": 0.0005664825439453125
+        },
+        {
+          "case": 3,
+          "delta_FR": -0.004132390022277832,
+          "delta_lpips": 0.003173828125,
+          "delta_dists": 0.000958561897277832
+        }
+      ],
+      "scope": "Complete fixed20-test pilot plus all3validation only; no full100 score inference; counts descriptive, no statistical significance claim."
+    },
+    "push4_c7500_compiled_pilot__minus__push4_b7500_compiled_pilot": {
+      "delta_normalized_contributions": {
+        "CLIPIQA": -0.0037411332130432573,
+        "MANIQA": -0.008575940132141135,
+        "MUSIQ/100": 0.005758756637573248,
+        "NIQE_term": 0.005018416208932952,
+        "LPIPS_FR_term": 0.002970377604166685,
+        "DISTS_FR_term": 0.002172231674194336,
+        "NR": -0.0015399004986780263,
+        "FR": 0.005142609278361077,
+        "S_subset": 0.0036027087796832724
+      },
+      "test_better_count_NR": 6,
+      "test_better_counts_by_contribution": {
+        "CLIPIQA": 1,
+        "MANIQA": 0,
+        "MUSIQ/100": 14,
+        "NIQE_term": 19
+      },
+      "test20_paired": [
+        {
+          "case": 1,
+          "delta_NR": 0.018029796022730176,
+          "delta_contributions": {
+            "CLIPIQA": -0.0021231770515441895,
+            "MANIQA": -0.010017216205596924,
+            "MUSIQ/100": 0.024084835052490233,
+            "NIQE_term": 0.006085354227381057
+          }
+        },
+        {
+          "case": 6,
+          "delta_NR": -0.0008743003948648642,
+          "delta_contributions": {
+            "CLIPIQA": -0.0024479031562805176,
+            "MANIQA": -0.0065833330154418945,
+            "MUSIQ/100": -3.986358642578125e-06,
+            "NIQE_term": 0.008160922135500126
+          }
+        },
+        {
+          "case": 7,
+          "delta_NR": -0.0009908484928794082,
+          "delta_contributions": {
+            "CLIPIQA": -0.003689110279083252,
+            "MANIQA": -0.010490894317626953,
+            "MUSIQ/100": 0.0048565673828125,
+            "NIQE_term": 0.008332588721018297
+          }
+        },
+        {
+          "case": 11,
+          "delta_NR": -0.008764029825342412,
+          "delta_contributions": {
+            "CLIPIQA": -0.0037512779235839844,
+            "MANIQA": -0.005145251750946045,
+            "MUSIQ/100": -0.0026456832885742186,
+            "NIQE_term": 0.002778183137761836
+          }
+        },
+        {
+          "case": 16,
+          "delta_NR": 0.02530351635306822,
+          "delta_contributions": {
+            "CLIPIQA": -0.009953498840332031,
+            "MANIQA": -0.016928881406784058,
+            "MUSIQ/100": 0.049399642944335936,
+            "NIQE_term": 0.00278625365584837
+          }
+        },
+        {
+          "case": 18,
+          "delta_NR": 0.0030927201877259235,
+          "delta_contributions": {
+            "CLIPIQA": -0.002962470054626465,
+            "MANIQA": -0.0055855512619018555,
+            "MUSIQ/100": 0.009036140441894531,
+            "NIQE_term": 0.0026046010623597127
+          }
+        },
+        {
+          "case": 21,
+          "delta_NR": -0.004582166911983627,
+          "delta_contributions": {
+            "CLIPIQA": -0.00350189208984375,
+            "MANIQA": -0.005410492420196533,
+            "MUSIQ/100": -3.47900390625e-05,
+            "NIQE_term": 0.004365007637119156
+          }
+        },
+        {
+          "case": 23,
+          "delta_NR": 0.0004884168584100663,
+          "delta_contributions": {
+            "CLIPIQA": -0.004591464996337891,
+            "MANIQA": -0.012418270111083984,
+            "MUSIQ/100": 0.01397747039794922,
+            "NIQE_term": 0.003520681567882722
+          }
+        },
+        {
+          "case": 25,
+          "delta_NR": -0.01976596972672686,
+          "delta_contributions": {
+            "CLIPIQA": -0.01052480936050415,
+            "MANIQA": -0.007537961006164551,
+            "MUSIQ/100": -0.0042083740234375,
+            "NIQE_term": 0.002505174663379339
+          }
+        },
+        {
+          "case": 28,
+          "delta_NR": -0.01781024020770201,
+          "delta_contributions": {
+            "CLIPIQA": -0.00993812084197998,
+            "MANIQA": -0.009709566831588745,
+            "MUSIQ/100": -0.010140419006347656,
+            "NIQE_term": 0.011977866472214372
+          }
+        },
+        {
+          "case": 31,
+          "delta_NR": 0.00291580496138911,
+          "delta_contributions": {
+            "CLIPIQA": 0.0006540417671203613,
+            "MANIQA": -0.006837189197540283,
+            "MUSIQ/100": 0.0048494720458984375,
+            "NIQE_term": 0.004249480345910594
+          }
+        },
+        {
+          "case": 36,
+          "delta_NR": -0.0013753036444926893,
+          "delta_contributions": {
+            "CLIPIQA": -5.334615707397461e-05,
+            "MANIQA": -0.007843613624572754,
+            "MUSIQ/100": 0.0005709075927734375,
+            "NIQE_term": 0.005950748544380602
+          }
+        },
+        {
+          "case": 41,
+          "delta_NR": -0.005926702371817605,
+          "delta_contributions": {
+            "CLIPIQA": -0.0006088614463806152,
+            "MANIQA": -0.010200142860412598,
+            "MUSIQ/100": -0.0032115936279296874,
+            "NIQE_term": 0.008093895562905296
+          }
+        },
+        {
+          "case": 46,
+          "delta_NR": -0.010732174728575216,
+          "delta_contributions": {
+            "CLIPIQA": -0.0028028488159179688,
+            "MANIQA": -0.009629368782043457,
+            "MUSIQ/100": 0.0005987167358398437,
+            "NIQE_term": 0.0011013261335463653
+          }
+        },
+        {
+          "case": 51,
+          "delta_NR": -0.0012598249087376519,
+          "delta_contributions": {
+            "CLIPIQA": -0.0010350346565246582,
+            "MANIQA": -0.010062992572784424,
+            "MUSIQ/100": 0.010946693420410157,
+            "NIQE_term": -0.0011084910998387266
+          }
+        },
+        {
+          "case": 61,
+          "delta_NR": -0.0064758421130385645,
+          "delta_contributions": {
+            "CLIPIQA": -0.008216798305511475,
+            "MANIQA": -0.011059224605560303,
+            "MUSIQ/100": 0.004924163818359375,
+            "NIQE_term": 0.007876016979673838
+          }
+        },
+        {
+          "case": 71,
+          "delta_NR": 0.009730906462504355,
+          "delta_contributions": {
+            "CLIPIQA": -0.002599179744720459,
+            "MANIQA": -0.0035414695739746094,
+            "MUSIQ/100": 0.007312164306640625,
+            "NIQE_term": 0.008559391474558798
+          }
+        },
+        {
+          "case": 81,
+          "delta_NR": -0.0011766075622804805,
+          "delta_contributions": {
+            "CLIPIQA": -0.0015783309936523438,
+            "MANIQA": -0.003447115421295166,
+            "MUSIQ/100": 0.0010705184936523437,
+            "NIQE_term": 0.0027783203590146855
+          }
+        },
+        {
+          "case": 91,
+          "delta_NR": -0.0033872265263375657,
+          "delta_contributions": {
+            "CLIPIQA": -0.0018791556358337402,
+            "MANIQA": -0.008238554000854492,
+            "MUSIQ/100": 0.0011212158203125,
+            "NIQE_term": 0.0056092672900381665
+          }
+        },
+        {
+          "case": 100,
+          "delta_NR": -0.007237933404609844,
+          "delta_contributions": {
+            "CLIPIQA": -0.003219425678253174,
+            "MANIQA": -0.010831713676452637,
+            "MUSIQ/100": 0.0026714706420898435,
+            "NIQE_term": 0.004141735308006123
+          }
+        }
+      ],
+      "validation3_paired": [
+        {
+          "case": 1,
+          "delta_FR": 0.009160339832305908,
+          "delta_lpips": -0.005859375,
+          "delta_dists": -0.003300964832305908
+        },
+        {
+          "case": 2,
+          "delta_FR": 0.0025084614753723145,
+          "delta_lpips": -0.0010986328125,
+          "delta_dists": -0.0014098286628723145
+        },
+        {
+          "case": 3,
+          "delta_FR": 0.003759026527404785,
+          "delta_lpips": -0.001953125,
+          "delta_dists": -0.0018059015274047852
+        }
+      ],
+      "scope": "Complete fixed20-test pilot plus all3validation only; no full100 score inference; counts descriptive, no statistical significance claim."
+    },
+    "push4_b7750_compiled_pilot__minus__push4_a7750_compiled_pilot": {
+      "delta_normalized_contributions": {
+        "CLIPIQA": 0.00018139183521270752,
+        "MANIQA": 0.005925524234771773,
+        "MUSIQ/100": -0.003973782539367698,
+        "NIQE_term": 0.0007476657720884017,
+        "LPIPS_FR_term": -0.005126953125,
+        "DISTS_FR_term": -0.0011131962140401297,
+        "NR": 0.002880799302705128,
+        "FR": -0.006240149339040046,
+        "S_subset": -0.003359350036334696
+      },
+      "test_better_count_NR": 14,
+      "test_better_counts_by_contribution": {
+        "CLIPIQA": 11,
+        "MANIQA": 19,
+        "MUSIQ/100": 9,
+        "NIQE_term": 11
+      },
+      "test20_paired": [
+        {
+          "case": 1,
+          "delta_NR": -0.007066009833983849,
+          "delta_contributions": {
+            "CLIPIQA": -0.0012524127960205078,
+            "MANIQA": 0.00615924596786499,
+            "MUSIQ/100": -0.01133291244506836,
+            "NIQE_term": -0.0006399305607599715
+          }
+        },
+        {
+          "case": 6,
+          "delta_NR": -0.001400963967643225,
+          "delta_contributions": {
+            "CLIPIQA": 0.0011057853698730469,
+            "MANIQA": 0.0026122331619262695,
+            "MUSIQ/100": 0.000101165771484375,
+            "NIQE_term": -0.005220148270926916
+          }
+        },
+        {
+          "case": 7,
+          "delta_NR": 0.003587004215726406,
+          "delta_contributions": {
+            "CLIPIQA": -0.0011081695556640625,
+            "MANIQA": 0.005617916584014893,
+            "MUSIQ/100": 0.002837982177734375,
+            "NIQE_term": -0.0037607249903587993
+          }
+        },
+        {
+          "case": 11,
+          "delta_NR": 0.014381401040433702,
+          "delta_contributions": {
+            "CLIPIQA": -0.0010387301445007324,
+            "MANIQA": 0.0103834867477417,
+            "MUSIQ/100": 0.0015787887573242188,
+            "NIQE_term": 0.0034578556798685158
+          }
+        },
+        {
+          "case": 16,
+          "delta_NR": -0.022169103480923037,
+          "delta_contributions": {
+            "CLIPIQA": 0.004346013069152832,
+            "MANIQA": 0.0153045654296875,
+            "MUSIQ/100": -0.04273601531982422,
+            "NIQE_term": 0.0009163333400608487
+          }
+        },
+        {
+          "case": 18,
+          "delta_NR": -0.002872887993190076,
+          "delta_contributions": {
+            "CLIPIQA": 0.0020083189010620117,
+            "MANIQA": 0.003315180540084839,
+            "MUSIQ/100": -0.005150222778320312,
+            "NIQE_term": -0.0030461646560166144
+          }
+        },
+        {
+          "case": 21,
+          "delta_NR": 0.0058208477845259135,
+          "delta_contributions": {
+            "CLIPIQA": -0.003647148609161377,
+            "MANIQA": 0.006817638874053955,
+            "MUSIQ/100": 0.00130889892578125,
+            "NIQE_term": 0.0013414585938520851
+          }
+        },
+        {
+          "case": 23,
+          "delta_NR": -0.0034198296108840336,
+          "delta_contributions": {
+            "CLIPIQA": 0.0002601742744445801,
+            "MANIQA": 0.010001122951507568,
+            "MUSIQ/100": -0.015657920837402344,
+            "NIQE_term": 0.001976794000566162
+          }
+        },
+        {
+          "case": 25,
+          "delta_NR": 0.006187284633763,
+          "delta_contributions": {
+            "CLIPIQA": 0.0014385581016540527,
+            "MANIQA": 0.010176211595535278,
+            "MUSIQ/100": -0.005163345336914062,
+            "NIQE_term": -0.0002641397265122691
+          }
+        },
+        {
+          "case": 28,
+          "delta_NR": 0.020009037077414787,
+          "delta_contributions": {
+            "CLIPIQA": 0.004702389240264893,
+            "MANIQA": 0.005355566740036011,
+            "MUSIQ/100": 0.009978179931640624,
+            "NIQE_term": -2.709883452673978e-05
+          }
+        },
+        {
+          "case": 31,
+          "delta_NR": 0.0004964775412303266,
+          "delta_contributions": {
+            "CLIPIQA": -0.002237856388092041,
+            "MANIQA": 0.005264103412628174,
+            "MUSIQ/100": -0.004316024780273438,
+            "NIQE_term": 0.0017862552969676315
+          }
+        },
+        {
+          "case": 36,
+          "delta_NR": 0.0018936347629474426,
+          "delta_contributions": {
+            "CLIPIQA": -0.002461254596710205,
+            "MANIQA": 0.003659546375274658,
+            "MUSIQ/100": 5.6476593017578124e-05,
+            "NIQE_term": 0.0006388663913654113
+          }
+        },
+        {
+          "case": 41,
+          "delta_NR": 0.00829796155494364,
+          "delta_contributions": {
+            "CLIPIQA": -0.0004036426544189453,
+            "MANIQA": 0.005172252655029297,
+            "MUSIQ/100": 0.004907875061035156,
+            "NIQE_term": -0.0013785235067018675
+          }
+        },
+        {
+          "case": 46,
+          "delta_NR": 0.011853085691571756,
+          "delta_contributions": {
+            "CLIPIQA": -0.0015938878059387207,
+            "MANIQA": 0.007862091064453125,
+            "MUSIQ/100": 0.0010382843017578125,
+            "NIQE_term": 0.00454659813129954
+          }
+        },
+        {
+          "case": 51,
+          "delta_NR": 0.009699875681106961,
+          "delta_contributions": {
+            "CLIPIQA": 0.0005317926406860352,
+            "MANIQA": 0.008349597454071045,
+            "MUSIQ/100": -0.00890918731689453,
+            "NIQE_term": 0.009727672903244411
+          }
+        },
+        {
+          "case": 61,
+          "delta_NR": 0.0005066476642712468,
+          "delta_contributions": {
+            "CLIPIQA": 0.0006454586982727051,
+            "MANIQA": 0.004404425621032715,
+            "MUSIQ/100": -0.0031842041015625,
+            "NIQE_term": -0.001359032553471673
+          }
+        },
+        {
+          "case": 71,
+          "delta_NR": -0.0037385124434694463,
+          "delta_contributions": {
+            "CLIPIQA": 0.0007849335670471191,
+            "MANIQA": -0.0018073618412017822,
+            "MUSIQ/100": -0.003398475646972656,
+            "NIQE_term": 0.0006823914776578732
+          }
+        },
+        {
+          "case": 81,
+          "delta_NR": 0.005813288409884905,
+          "delta_contributions": {
+            "CLIPIQA": -0.001213371753692627,
+            "MANIQA": 0.00037288665771484375,
+            "MUSIQ/100": 0.001468353271484375,
+            "NIQE_term": 0.005185420234378313
+          }
+        },
+        {
+          "case": 91,
+          "delta_NR": 0.0028979869140425053,
+          "delta_contributions": {
+            "CLIPIQA": 0.0015890002250671387,
+            "MANIQA": 0.00310671329498291,
+            "MUSIQ/100": -0.000258636474609375,
+            "NIQE_term": -0.0015390901313981687
+          }
+        },
+        {
+          "case": 100,
+          "delta_NR": 0.006838760412333915,
+          "delta_contributions": {
+            "CLIPIQA": 0.001171886920928955,
+            "MANIQA": 0.006383061408996582,
+            "MUSIQ/100": -0.0026447105407714842,
+            "NIQE_term": 0.0019285226231798625
+          }
+        }
+      ],
+      "validation3_paired": [
+        {
+          "case": 1,
+          "delta_FR": -0.008441269397735596,
+          "delta_lpips": 0.0078125,
+          "delta_dists": 0.0006287693977355957
+        },
+        {
+          "case": 2,
+          "delta_FR": -0.0040822625160217285,
+          "delta_lpips": 0.0029296875,
+          "delta_dists": 0.0011525750160217285
+        },
+        {
+          "case": 3,
+          "delta_FR": -0.006196916103363037,
+          "delta_lpips": 0.004638671875,
+          "delta_dists": 0.0015582442283630371
+        }
+      ],
+      "scope": "Complete fixed20-test pilot plus all3validation only; no full100 score inference; counts descriptive, no statistical significance claim."
+    },
+    "push4_c7750_compiled_pilot__minus__push4_b7750_compiled_pilot": {
+      "delta_normalized_contributions": {
+        "CLIPIQA": -0.0059789925813674705,
+        "MANIQA": -0.012983597815036774,
+        "MUSIQ/100": 0.006621017456054701,
+        "NIQE_term": 0.009239409276937671,
+        "LPIPS_FR_term": 0.00504557291666663,
+        "DISTS_FR_term": 0.003310342629750579,
+        "NR": -0.003102163663411872,
+        "FR": 0.008355915546417014,
+        "S_subset": 0.00525375188300492
+      },
+      "test_better_count_NR": 7,
+      "test_better_counts_by_contribution": {
+        "CLIPIQA": 0,
+        "MANIQA": 0,
+        "MUSIQ/100": 12,
+        "NIQE_term": 20
+      },
+      "test20_paired": [
+        {
+          "case": 1,
+          "delta_NR": 0.021418127284524982,
+          "delta_contributions": {
+            "CLIPIQA": -0.004715859889984131,
+            "MANIQA": -0.015179276466369629,
+            "MUSIQ/100": 0.029870471954345702,
+            "NIQE_term": 0.011442791686533038
+          }
+        },
+        {
+          "case": 6,
+          "delta_NR": -0.005861521975056547,
+          "delta_contributions": {
+            "CLIPIQA": -0.007954776287078857,
+            "MANIQA": -0.010103940963745117,
+            "MUSIQ/100": -4.838943481445313e-05,
+            "NIQE_term": 0.01224558471058188
+          }
+        },
+        {
+          "case": 7,
+          "delta_NR": -0.0071484579105277205,
+          "delta_contributions": {
+            "CLIPIQA": -0.007293581962585449,
+            "MANIQA": -0.016214966773986816,
+            "MUSIQ/100": 0.0042523193359375,
+            "NIQE_term": 0.012107771490107045
+          }
+        },
+        {
+          "case": 11,
+          "delta_NR": -0.008133836679897647,
+          "delta_contributions": {
+            "CLIPIQA": -0.0030024051666259766,
+            "MANIQA": -0.011045694351196289,
+            "MUSIQ/100": -0.0022231292724609374,
+            "NIQE_term": 0.008137392110385555
+          }
+        },
+        {
+          "case": 16,
+          "delta_NR": 0.026687107337966705,
+          "delta_contributions": {
+            "CLIPIQA": -0.017573177814483643,
+            "MANIQA": -0.022523343563079834,
+            "MUSIQ/100": 0.05795867919921875,
+            "NIQE_term": 0.008824949516311431
+          }
+        },
+        {
+          "case": 18,
+          "delta_NR": 0.002303320380697099,
+          "delta_contributions": {
+            "CLIPIQA": -0.006707489490509033,
+            "MANIQA": -0.007767915725708008,
+            "MUSIQ/100": 0.01131450653076172,
+            "NIQE_term": 0.0054642190661524205
+          }
+        },
+        {
+          "case": 21,
+          "delta_NR": -0.007397394743517509,
+          "delta_contributions": {
+            "CLIPIQA": -0.0028859376907348633,
+            "MANIQA": -0.008659958839416504,
+            "MUSIQ/100": -0.0015708160400390624,
+            "NIQE_term": 0.005719317826672921
+          }
+        },
+        {
+          "case": 23,
+          "delta_NR": 0.005590232487492967,
+          "delta_contributions": {
+            "CLIPIQA": -0.006056785583496094,
+            "MANIQA": -0.01810222864151001,
+            "MUSIQ/100": 0.021297798156738282,
+            "NIQE_term": 0.008451448555760788
+          }
+        },
+        {
+          "case": 25,
+          "delta_NR": -0.026180099254120678,
+          "delta_contributions": {
+            "CLIPIQA": -0.012056529521942139,
+            "MANIQA": -0.013320684432983398,
+            "MUSIQ/100": -0.004705123901367188,
+            "NIQE_term": 0.003902238602172048
+          }
+        },
+        {
+          "case": 28,
+          "delta_NR": -0.02947674595349917,
+          "delta_contributions": {
+            "CLIPIQA": -0.014455556869506836,
+            "MANIQA": -0.015749365091323853,
+            "MUSIQ/100": -0.013232650756835938,
+            "NIQE_term": 0.013960826764167456
+          }
+        },
+        {
+          "case": 31,
+          "delta_NR": 0.0031711859588808263,
+          "delta_contributions": {
+            "CLIPIQA": -0.0010846257209777832,
+            "MANIQA": -0.010331571102142334,
+            "MUSIQ/100": 0.00650543212890625,
+            "NIQE_term": 0.008081950653094694
+          }
+        },
+        {
+          "case": 36,
+          "delta_NR": 0.0010715460372283038,
+          "delta_contributions": {
+            "CLIPIQA": -0.0002624392509460449,
+            "MANIQA": -0.010637104511260986,
+            "MUSIQ/100": 0.0005491447448730469,
+            "NIQE_term": 0.011421945054562288
+          }
+        },
+        {
+          "case": 41,
+          "delta_NR": -0.007601780640637513,
+          "delta_contributions": {
+            "CLIPIQA": -0.0023736953735351562,
+            "MANIQA": -0.015513896942138672,
+            "MUSIQ/100": -0.005031929016113281,
+            "NIQE_term": 0.015317740691149596
+          }
+        },
+        {
+          "case": 46,
+          "delta_NR": -0.016157117581959854,
+          "delta_contributions": {
+            "CLIPIQA": -0.005291104316711426,
+            "MANIQA": -0.01498180627822876,
+            "MUSIQ/100": -0.0019120025634765626,
+            "NIQE_term": 0.006027795576456896
+          }
+        },
+        {
+          "case": 51,
+          "delta_NR": -0.0018570399328410939,
+          "delta_contributions": {
+            "CLIPIQA": -0.0018483996391296387,
+            "MANIQA": -0.01587378978729248,
+            "MUSIQ/100": 0.013945884704589843,
+            "NIQE_term": 0.0019192647889911818
+          }
+        },
+        {
+          "case": 61,
+          "delta_NR": -0.011265809819028458,
+          "delta_contributions": {
+            "CLIPIQA": -0.011189699172973633,
+            "MANIQA": -0.017285406589508057,
+            "MUSIQ/100": 0.0037053680419921876,
+            "NIQE_term": 0.013503927901461044
+          }
+        },
+        {
+          "case": 71,
+          "delta_NR": 0.01593350810681905,
+          "delta_contributions": {
+            "CLIPIQA": -0.0037050843238830566,
+            "MANIQA": -0.002421259880065918,
+            "MUSIQ/100": 0.006896533966064453,
+            "NIQE_term": 0.01516331834470357
+          }
+        },
+        {
+          "case": 81,
+          "delta_NR": -0.005870768466210787,
+          "delta_contributions": {
+            "CLIPIQA": -0.0024887919425964355,
+            "MANIQA": -0.005673646926879883,
+            "MUSIQ/100": -0.0004209136962890625,
+            "NIQE_term": 0.0027125840995545934
+          }
+        },
+        {
+          "case": 91,
+          "delta_NR": -0.003726647118875813,
+          "delta_contributions": {
+            "CLIPIQA": -0.004176616668701172,
+            "MANIQA": -0.013432741165161133,
+            "MUSIQ/100": 0.001070556640625,
+            "NIQE_term": 0.012812154074361492
+          }
+        },
+        {
+          "case": 100,
+          "delta_NR": -0.007541080785675245,
+          "delta_contributions": {
+            "CLIPIQA": -0.004457294940948486,
+            "MANIQA": -0.014853358268737793,
+            "MUSIQ/100": 0.0041986083984375,
+            "NIQE_term": 0.007570964025573534
+          }
+        }
+      ],
+      "validation3_paired": [
+        {
+          "case": 1,
+          "delta_FR": 0.012880384922027588,
+          "delta_lpips": -0.0087890625,
+          "delta_dists": -0.004091322422027588
+        },
+        {
+          "case": 2,
+          "delta_FR": 0.005045056343078613,
+          "delta_lpips": -0.002685546875,
+          "delta_dists": -0.0023595094680786133
+        },
+        {
+          "case": 3,
+          "delta_FR": 0.007142305374145508,
+          "delta_lpips": -0.003662109375,
+          "delta_dists": -0.003480195999145508
+        }
+      ],
+      "scope": "Complete fixed20-test pilot plus all3validation only; no full100 score inference; counts descriptive, no statistical significance claim."
+    },
+    "push4_a7750_compiled_pilot__minus__push4_a7500_compiled_pilot": {
+      "delta_normalized_contributions": {
+        "CLIPIQA": 0.0013543635606765303,
+        "MANIQA": 0.0011330708861351235,
+        "MUSIQ/100": 0.00016413688659666636,
+        "NIQE_term": 0.0009779999425827413,
+        "LPIPS_FR_term": -0.0010986328125,
+        "DISTS_FR_term": -0.0009749333063761301,
+        "NR": 0.0036295712759910614,
+        "FR": -0.0020735661188762133,
+        "S_subset": 0.001556005157114626
+      },
+      "test_better_count_NR": 18,
+      "test_better_counts_by_contribution": {
+        "CLIPIQA": 16,
+        "MANIQA": 14,
+        "MUSIQ/100": 11,
+        "NIQE_term": 16
+      },
+      "test20_paired": [
+        {
+          "case": 1,
+          "delta_NR": 0.0019139790333804992,
+          "delta_contributions": {
+            "CLIPIQA": 0.0034218430519104004,
+            "MANIQA": 0.0028644800186157227,
+            "MUSIQ/100": -0.0040594482421875,
+            "NIQE_term": -0.00031289579495812346
+          }
+        },
+        {
+          "case": 6,
+          "delta_NR": -0.00028760968442966835,
+          "delta_contributions": {
+            "CLIPIQA": -0.0012425780296325684,
+            "MANIQA": -8.7738037109375e-05,
+            "MUSIQ/100": -2.8324127197265624e-05,
+            "NIQE_term": 0.0010710305095095406
+          }
+        },
+        {
+          "case": 7,
+          "delta_NR": 0.006831662790717523,
+          "delta_contributions": {
+            "CLIPIQA": 0.0020049214363098145,
+            "MANIQA": 0.0003374814987182617,
+            "MUSIQ/100": 0.003130073547363281,
+            "NIQE_term": 0.0013591863083261657
+          }
+        },
+        {
+          "case": 11,
+          "delta_NR": 0.004254272951091736,
+          "delta_contributions": {
+            "CLIPIQA": 0.0012154579162597656,
+            "MANIQA": 0.0010426640510559082,
+            "MUSIQ/100": 0.000167388916015625,
+            "NIQE_term": 0.0018287620677604366
+          }
+        },
+        {
+          "case": 16,
+          "delta_NR": 0.0009927175699737487,
+          "delta_contributions": {
+            "CLIPIQA": 0.0066571831703186035,
+            "MANIQA": 0.0015465617179870605,
+            "MUSIQ/100": -0.007558517456054688,
+            "NIQE_term": 0.00034749013772277236
+          }
+        },
+        {
+          "case": 18,
+          "delta_NR": 0.006069586821127899,
+          "delta_contributions": {
+            "CLIPIQA": 0.0010380744934082031,
+            "MANIQA": 0.0023597776889801025,
+            "MUSIQ/100": -0.000237579345703125,
+            "NIQE_term": 0.0029093139844427185
+          }
+        },
+        {
+          "case": 21,
+          "delta_NR": 0.0024117165983743227,
+          "delta_contributions": {
+            "CLIPIQA": -0.0013276934623718262,
+            "MANIQA": -2.4437904357910156e-06,
+            "MUSIQ/100": 0.0020580673217773437,
+            "NIQE_term": 0.0016837865294045962
+          }
+        },
+        {
+          "case": 23,
+          "delta_NR": 0.00454303527465326,
+          "delta_contributions": {
+            "CLIPIQA": 0.002459704875946045,
+            "MANIQA": 0.0024047493934631348,
+            "MUSIQ/100": -0.001179656982421875,
+            "NIQE_term": 0.0008582379876659552
+          }
+        },
+        {
+          "case": 25,
+          "delta_NR": 0.01172457082446325,
+          "delta_contributions": {
+            "CLIPIQA": 0.004795372486114502,
+            "MANIQA": 0.002027541399002075,
+            "MUSIQ/100": 0.0037710952758789064,
+            "NIQE_term": 0.0011305616634677662
+          }
+        },
+        {
+          "case": 28,
+          "delta_NR": 0.001200009917404099,
+          "delta_contributions": {
+            "CLIPIQA": -0.0005348920822143555,
+            "MANIQA": -0.0005963146686553955,
+            "MUSIQ/100": 0.0034214019775390624,
+            "NIQE_term": -0.0010901853092652124
+          }
+        },
+        {
+          "case": 31,
+          "delta_NR": 0.004079733945308295,
+          "delta_contributions": {
+            "CLIPIQA": 0.0017209649085998535,
+            "MANIQA": 0.0008378028869628906,
+            "MUSIQ/100": 0.0003498077392578125,
+            "NIQE_term": 0.0011711584104877383
+          }
+        },
+        {
+          "case": 36,
+          "delta_NR": 4.184171944219273e-05,
+          "delta_contributions": {
+            "CLIPIQA": 0.00011396408081054688,
+            "MANIQA": 0.00011742115020751953,
+            "MUSIQ/100": 0.00012073516845703124,
+            "NIQE_term": -0.0003102786800329049
+          }
+        },
+        {
+          "case": 41,
+          "delta_NR": 0.005992138181679767,
+          "delta_contributions": {
+            "CLIPIQA": 0.0009276866912841797,
+            "MANIQA": 0.003983914852142334,
+            "MUSIQ/100": -0.0010920333862304687,
+            "NIQE_term": 0.002172570024483722
+          }
+        },
+        {
+          "case": 46,
+          "delta_NR": 0.006881014105294962,
+          "delta_contributions": {
+            "CLIPIQA": 0.002639174461364746,
+            "MANIQA": 0.0008727312088012695,
+            "MUSIQ/100": 0.003755970001220703,
+            "NIQE_term": -0.00038686156609175627
+          }
+        },
+        {
+          "case": 51,
+          "delta_NR": 0.0034940970018510955,
+          "delta_contributions": {
+            "CLIPIQA": 0.0006116628646850586,
+            "MANIQA": 0.0035651326179504395,
+            "MUSIQ/100": -0.0017712020874023438,
+            "NIQE_term": 0.001088503606617941
+          }
+        },
+        {
+          "case": 61,
+          "delta_NR": 0.0028596785753858354,
+          "delta_contributions": {
+            "CLIPIQA": -0.0007053017616271973,
+            "MANIQA": 6.443262100219727e-05,
+            "MUSIQ/100": 0.002336158752441406,
+            "NIQE_term": 0.0011643889635694292
+          }
+        },
+        {
+          "case": 71,
+          "delta_NR": -8.724124738694876e-05,
+          "delta_contributions": {
+            "CLIPIQA": 0.0008867383003234863,
+            "MANIQA": -0.0008366703987121582,
+            "MUSIQ/100": -0.0010736465454101562,
+            "NIQE_term": 0.0009363373964118793
+          }
+        },
+        {
+          "case": 81,
+          "delta_NR": 0.003990907921492983,
+          "delta_contributions": {
+            "CLIPIQA": 0.0013642311096191406,
+            "MANIQA": -0.00036847591400146484,
+            "MUSIQ/100": 0.00112396240234375,
+            "NIQE_term": 0.0018711903235315575
+          }
+        },
+        {
+          "case": 91,
+          "delta_NR": 0.0029334883707992972,
+          "delta_contributions": {
+            "CLIPIQA": 0.0002816319465637207,
+            "MANIQA": -0.00019603967666625977,
+            "MUSIQ/100": 0.0009754180908203125,
+            "NIQE_term": 0.001872478010081524
+          }
+        },
+        {
+          "case": 100,
+          "delta_NR": 0.002751824849198634,
+          "delta_contributions": {
+            "CLIPIQA": 0.000759124755859375,
+            "MANIQA": 0.0027244091033935547,
+            "MUSIQ/100": -0.0009269332885742188,
+            "NIQE_term": 0.0001952242785199232
+          }
+        }
+      ],
+      "validation3_paired": [
+        {
+          "case": 1,
+          "delta_FR": -0.0020494461059570312,
+          "delta_lpips": 0.00146484375,
+          "delta_dists": 0.0005846023559570312
+        },
+        {
+          "case": 2,
+          "delta_FR": -0.001448214054107666,
+          "delta_lpips": 0.0006103515625,
+          "delta_dists": 0.000837862491607666
+        },
+        {
+          "case": 3,
+          "delta_FR": -0.0027230381965637207,
+          "delta_lpips": 0.001220703125,
+          "delta_dists": 0.0015023350715637207
+        }
+      ],
+      "scope": "Complete fixed20-test pilot plus all3validation only; no full100 score inference; counts descriptive, no statistical significance claim."
+    },
+    "push4_b7750_compiled_pilot__minus__push4_b7500_compiled_pilot": {
+      "delta_normalized_contributions": {
+        "CLIPIQA": 0.0017188191413879395,
+        "MANIQA": 0.004450033605098769,
+        "MUSIQ/100": -0.0010347280502319145,
+        "NIQE_term": 0.00011055657974945454,
+        "LPIPS_FR_term": -0.0027262369791666297,
+        "DISTS_FR_term": -0.0013836423556009836,
+        "NR": 0.005244681276004304,
+        "FR": -0.0041098793347675855,
+        "S_subset": 0.0011348019412369403
+      },
+      "test_better_count_NR": 16,
+      "test_better_counts_by_contribution": {
+        "CLIPIQA": 17,
+        "MANIQA": 19,
+        "MUSIQ/100": 12,
+        "NIQE_term": 10
+      },
+      "test20_paired": [
+        {
+          "case": 1,
+          "delta_NR": -0.001585893228443496,
+          "delta_contributions": {
+            "CLIPIQA": 0.0019814372062683105,
+            "MANIQA": 0.005449652671813965,
+            "MUSIQ/100": -0.006592769622802735,
+            "NIQE_term": -0.0024242134837230366
+          }
+        },
+        {
+          "case": 6,
+          "delta_NR": 0.0004734520016181421,
+          "delta_contributions": {
+            "CLIPIQA": 0.0012217164039611816,
+            "MANIQA": 0.0011214613914489746,
+            "MUSIQ/100": 6.177902221679688e-05,
+            "NIQE_term": -0.001931504816008811
+          }
+        },
+        {
+          "case": 7,
+          "delta_NR": 0.012507284087168884,
+          "delta_contributions": {
+            "CLIPIQA": 0.00180816650390625,
+            "MANIQA": 0.0033475756645202637,
+            "MUSIQ/100": 0.007334632873535156,
+            "NIQE_term": 1.6909045207214034e-05
+          }
+        },
+        {
+          "case": 11,
+          "delta_NR": 0.008781829947302491,
+          "delta_contributions": {
+            "CLIPIQA": 0.001294255256652832,
+            "MANIQA": 0.00739133358001709,
+            "MUSIQ/100": 0.00061737060546875,
+            "NIQE_term": -0.0005211294948361811
+          }
+        },
+        {
+          "case": 16,
+          "delta_NR": -0.003893134183194355,
+          "delta_contributions": {
+            "CLIPIQA": 0.007818102836608887,
+            "MANIQA": 0.008558869361877441,
+            "MUSIQ/100": -0.01798023223876953,
+            "NIQE_term": -0.0022898741429111524
+          }
+        },
+        {
+          "case": 18,
+          "delta_NR": 0.002025589945108503,
+          "delta_contributions": {
+            "CLIPIQA": 0.0037738680839538574,
+            "MANIQA": 0.004405558109283447,
+            "MUSIQ/100": -0.004984397888183594,
+            "NIQE_term": -0.0011694383599452074
+          }
+        },
+        {
+          "case": 21,
+          "delta_NR": 0.006905961344607654,
+          "delta_contributions": {
+            "CLIPIQA": -0.0011638998985290527,
+            "MANIQA": 0.00512164831161499,
+            "MUSIQ/100": 0.0015908050537109374,
+            "NIQE_term": 0.001357407877810779
+          }
+        },
+        {
+          "case": 23,
+          "delta_NR": 0.0020126963520925036,
+          "delta_contributions": {
+            "CLIPIQA": 0.002689361572265625,
+            "MANIQA": 0.008080124855041504,
+            "MUSIQ/100": -0.010102310180664063,
+            "NIQE_term": 0.001345520105449438
+          }
+        },
+        {
+          "case": 25,
+          "delta_NR": 0.013828692373821899,
+          "delta_contributions": {
+            "CLIPIQA": 0.003956913948059082,
+            "MANIQA": 0.00896364450454712,
+            "MUSIQ/100": 0.0007209014892578125,
+            "NIQE_term": 0.0001872324319578844
+          }
+        },
+        {
+          "case": 28,
+          "delta_NR": 0.013401427359262464,
+          "delta_contributions": {
+            "CLIPIQA": 0.00293731689453125,
+            "MANIQA": 0.002729088068008423,
+            "MUSIQ/100": 0.007493019104003906,
+            "NIQE_term": 0.0002420032927188842
+          }
+        },
+        {
+          "case": 31,
+          "delta_NR": 0.0033451652390650644,
+          "delta_contributions": {
+            "CLIPIQA": 0.0007687807083129883,
+            "MANIQA": 0.003885507583618164,
+            "MUSIQ/100": -0.0014442825317382813,
+            "NIQE_term": 0.00013515947887219327
+          }
+        },
+        {
+          "case": 36,
+          "delta_NR": -6.719335868332621e-05,
+          "delta_contributions": {
+            "CLIPIQA": -0.0015313029289245605,
+            "MANIQA": 0.0014086365699768066,
+            "MUSIQ/100": 0.0006177902221679687,
+            "NIQE_term": -0.000562317221903541
+          }
+        },
+        {
+          "case": 41,
+          "delta_NR": 0.009235227473340046,
+          "delta_contributions": {
+            "CLIPIQA": 0.0014760494232177734,
+            "MANIQA": 0.0065312981605529785,
+            "MUSIQ/100": 0.0014608383178710937,
+            "NIQE_term": -0.00023295842830179937
+          }
+        },
+        {
+          "case": 46,
+          "delta_NR": 0.013555093636484621,
+          "delta_contributions": {
+            "CLIPIQA": 0.0019214749336242676,
+            "MANIQA": 0.005154848098754883,
+            "MUSIQ/100": 0.005379695892333985,
+            "NIQE_term": 0.0010990747117714862
+          }
+        },
+        {
+          "case": 51,
+          "delta_NR": 0.008505586449267799,
+          "delta_contributions": {
+            "CLIPIQA": 0.0008974075317382812,
+            "MANIQA": 0.007734179496765137,
+            "MUSIQ/100": -0.005167579650878907,
+            "NIQE_term": 0.005041579071643288
+          }
+        },
+        {
+          "case": 61,
+          "delta_NR": 0.0046187134726426125,
+          "delta_contributions": {
+            "CLIPIQA": 0.0014038681983947754,
+            "MANIQA": 0.002436339855194092,
+            "MUSIQ/100": 0.0014581298828125,
+            "NIQE_term": -0.0006796244637587545
+          }
+        },
+        {
+          "case": 71,
+          "delta_NR": -0.002767419120075427,
+          "delta_contributions": {
+            "CLIPIQA": 0.0007637739181518555,
+            "MANIQA": -0.0011591911315917969,
+            "MUSIQ/100": -0.0014432716369628907,
+            "NIQE_term": -0.0009287302696725952
+          }
+        },
+        {
+          "case": 81,
+          "delta_NR": 0.004574242395442649,
+          "delta_contributions": {
+            "CLIPIQA": -0.0004073977470397949,
+            "MANIQA": 0.0003204345703125,
+            "MUSIQ/100": 0.0016109848022460938,
+            "NIQE_term": 0.0030502207699238506
+          }
+        },
+        {
+          "case": 91,
+          "delta_NR": 0.002905785943559307,
+          "delta_contributions": {
+            "CLIPIQA": 0.001322627067565918,
+            "MANIQA": 0.0019298195838928223,
+            "MUSIQ/100": 0.0004851531982421875,
+            "NIQE_term": -0.0008318139061416208
+          }
+        },
+        {
+          "case": 100,
+          "delta_NR": 0.0065305173896970815,
+          "delta_contributions": {
+            "CLIPIQA": 0.0014438629150390625,
+            "MANIQA": 0.005589842796325684,
+            "MUSIQ/100": -0.0018108177185058593,
+            "NIQE_term": 0.0013076293968381947
+          }
+        }
+      ],
+      "validation3_paired": [
+        {
+          "case": 1,
+          "delta_FR": -0.004531204700469971,
+          "delta_lpips": 0.00390625,
+          "delta_dists": 0.0006249547004699707
+        },
+        {
+          "case": 2,
+          "delta_FR": -0.003010869026184082,
+          "delta_lpips": 0.0015869140625,
+          "delta_dists": 0.001423954963684082
+        },
+        {
+          "case": 3,
+          "delta_FR": -0.004787564277648926,
+          "delta_lpips": 0.002685546875,
+          "delta_dists": 0.0021020174026489258
+        }
+      ],
+      "scope": "Complete fixed20-test pilot plus all3validation only; no full100 score inference; counts descriptive, no statistical significance claim."
+    },
+    "push4_c7750_compiled_pilot__minus__push4_c7500_compiled_pilot": {
+      "delta_normalized_contributions": {
+        "CLIPIQA": -0.0005190402269362737,
+        "MANIQA": 4.237592220313058e-05,
+        "MUSIQ/100": -0.00017246723175046164,
+        "NIQE_term": 0.004331549647754174,
+        "LPIPS_FR_term": -0.0006510416666666852,
+        "DISTS_FR_term": -0.0002455314000447406,
+        "NR": 0.003682418111270458,
+        "FR": -0.0008965730667116478,
+        "S_subset": 0.002785845044558588
+      },
+      "test_better_count_NR": 16,
+      "test_better_counts_by_contribution": {
+        "CLIPIQA": 7,
+        "MANIQA": 11,
+        "MUSIQ/100": 12,
+        "NIQE_term": 20
+      },
+      "test20_paired": [
+        {
+          "case": 1,
+          "delta_NR": 0.0018024380333513078,
+          "delta_contributions": {
+            "CLIPIQA": -0.0006112456321716309,
+            "MANIQA": 0.00028759241104125977,
+            "MUSIQ/100": -0.0008071327209472657,
+            "NIQE_term": 0.0029332239754289446
+          }
+        },
+        {
+          "case": 6,
+          "delta_NR": -0.004513769578573541,
+          "delta_contributions": {
+            "CLIPIQA": -0.004285156726837158,
+            "MANIQA": -0.002399146556854248,
+            "MUSIQ/100": 1.7375946044921874e-05,
+            "NIQE_term": 0.0021531577590729436
+          }
+        },
+        {
+          "case": 7,
+          "delta_NR": 0.0063496746695205705,
+          "delta_contributions": {
+            "CLIPIQA": -0.0017963051795959473,
+            "MANIQA": -0.0023764967918395996,
+            "MUSIQ/100": 0.006730384826660156,
+            "NIQE_term": 0.0037920918142959614
+          }
+        },
+        {
+          "case": 11,
+          "delta_NR": 0.009412023092747255,
+          "delta_contributions": {
+            "CLIPIQA": 0.00204312801361084,
+            "MANIQA": 0.0014908909797668457,
+            "MUSIQ/100": 0.0010399246215820313,
+            "NIQE_term": 0.004838079477787538
+          }
+        },
+        {
+          "case": 16,
+          "delta_NR": -0.0025095431982958697,
+          "delta_contributions": {
+            "CLIPIQA": 0.0001984238624572754,
+            "MANIQA": 0.002964407205581665,
+            "MUSIQ/100": -0.009421195983886719,
+            "NIQE_term": 0.003748821717551909
+          }
+        },
+        {
+          "case": 18,
+          "delta_NR": 0.001236190138079678,
+          "delta_contributions": {
+            "CLIPIQA": 2.8848648071289062e-05,
+            "MANIQA": 0.002223193645477295,
+            "MUSIQ/100": -0.0027060317993164063,
+            "NIQE_term": 0.0016901796438475003
+          }
+        },
+        {
+          "case": 21,
+          "delta_NR": 0.004090733513073772,
+          "delta_contributions": {
+            "CLIPIQA": -0.000547945499420166,
+            "MANIQA": 0.0018721818923950195,
+            "MUSIQ/100": 5.4779052734375e-05,
+            "NIQE_term": 0.0027117180673645437
+          }
+        },
+        {
+          "case": 23,
+          "delta_NR": 0.007114511981175404,
+          "delta_contributions": {
+            "CLIPIQA": 0.0012240409851074219,
+            "MANIQA": 0.0023961663246154785,
+            "MUSIQ/100": -0.002781982421875,
+            "NIQE_term": 0.006276287093327504
+          }
+        },
+        {
+          "case": 25,
+          "delta_NR": 0.007414562846428083,
+          "delta_contributions": {
+            "CLIPIQA": 0.0024251937866210938,
+            "MANIQA": 0.0031809210777282715,
+            "MUSIQ/100": 0.000224151611328125,
+            "NIQE_term": 0.001584296370750593
+          }
+        },
+        {
+          "case": 28,
+          "delta_NR": 0.0017349216134653037,
+          "delta_contributions": {
+            "CLIPIQA": -0.0015801191329956055,
+            "MANIQA": -0.0033107101917266846,
+            "MUSIQ/100": 0.004400787353515625,
+            "NIQE_term": 0.0022249635846719683
+          }
+        },
+        {
+          "case": 31,
+          "delta_NR": 0.0036005462365567807,
+          "delta_contributions": {
+            "CLIPIQA": -0.0009698867797851562,
+            "MANIQA": 0.0003911256790161133,
+            "MUSIQ/100": 0.00021167755126953126,
+            "NIQE_term": 0.003967629786056292
+          }
+        },
+        {
+          "case": 36,
+          "delta_NR": 0.0023796563230376665,
+          "delta_contributions": {
+            "CLIPIQA": -0.0017403960227966309,
+            "MANIQA": -0.0013848543167114258,
+            "MUSIQ/100": 0.0005960273742675781,
+            "NIQE_term": 0.004908879288278145
+          }
+        },
+        {
+          "case": 41,
+          "delta_NR": 0.0075601492045201365,
+          "delta_contributions": {
+            "CLIPIQA": -0.0002887845039367676,
+            "MANIQA": 0.0012175440788269043,
+            "MUSIQ/100": -0.0003594970703125,
+            "NIQE_term": 0.0069908866999425
+          }
+        },
+        {
+          "case": 46,
+          "delta_NR": 0.008130150783099985,
+          "delta_contributions": {
+            "CLIPIQA": -0.0005667805671691895,
+            "MANIQA": -0.00019758939743041992,
+            "MUSIQ/100": 0.0028689765930175783,
+            "NIQE_term": 0.006025544154682016
+          }
+        },
+        {
+          "case": 51,
+          "delta_NR": 0.007908371425164358,
+          "delta_contributions": {
+            "CLIPIQA": 8.404254913330078e-05,
+            "MANIQA": 0.00192338228225708,
+            "MUSIQ/100": -0.0021683883666992186,
+            "NIQE_term": 0.008069334960473195
+          }
+        },
+        {
+          "case": 61,
+          "delta_NR": -0.00017125423334728252,
+          "delta_contributions": {
+            "CLIPIQA": -0.0015690326690673828,
+            "MANIQA": -0.003789842128753662,
+            "MUSIQ/100": 0.0002393341064453125,
+            "NIQE_term": 0.00494828645802845
+          }
+        },
+        {
+          "case": 71,
+          "delta_NR": 0.0034351825242392667,
+          "delta_contributions": {
+            "CLIPIQA": -0.0003421306610107422,
+            "MANIQA": -3.898143768310547e-05,
+            "MUSIQ/100": -0.0018589019775390625,
+            "NIQE_term": 0.005675196600472177
+          }
+        },
+        {
+          "case": 81,
+          "delta_NR": -0.00011991850848765759,
+          "delta_contributions": {
+            "CLIPIQA": -0.0013178586959838867,
+            "MANIQA": -0.0019060969352722168,
+            "MUSIQ/100": 0.0001195526123046875,
+            "NIQE_term": 0.0029844845104637584
+          }
+        },
+        {
+          "case": 91,
+          "delta_NR": 0.00256636535102106,
+          "delta_contributions": {
+            "CLIPIQA": -0.0009748339653015137,
+            "MANIQA": -0.0032643675804138184,
+            "MUSIQ/100": 0.0004344940185546875,
+            "NIQE_term": 0.006371072878181705
+          }
+        },
+        {
+          "case": 100,
+          "delta_NR": 0.006227370008631681,
+          "delta_contributions": {
+            "CLIPIQA": 0.00020599365234375,
+            "MANIQA": 0.0015681982040405273,
+            "MUSIQ/100": -0.0002836799621582031,
+            "NIQE_term": 0.0047368581144056066
+          }
+        }
+      ],
+      "validation3_paired": [
+        {
+          "case": 1,
+          "delta_FR": -0.000811159610748291,
+          "delta_lpips": 0.0009765625,
+          "delta_dists": -0.00016540288925170898
+        },
+        {
+          "case": 2,
+          "delta_FR": -0.0004742741584777832,
+          "delta_lpips": 0.0,
+          "delta_dists": 0.0004742741584777832
+        },
+        {
+          "case": 3,
+          "delta_FR": -0.0014042854309082031,
+          "delta_lpips": 0.0009765625,
+          "delta_dists": 0.0004277229309082031
+        }
+      ],
+      "scope": "Complete fixed20-test pilot plus all3validation only; no full100 score inference; counts descriptive, no statistical significance claim."
+    }
+  }
+}

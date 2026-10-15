@@ -1,0 +1,1569 @@
+{
+  "schema": "push4_scientific_full_visuals_v1",
+  "created_utc": "2026-10-14T14:02:44.364377+00:00",
+  "final_selection": {
+    "label": "push4_a7750_compiled_all",
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/provenance/final_selection.json",
+    "sha256": "b3148b21f466854f9fe8f81c7eca1348da5bf793141799573ff3be8b20e25c3f",
+    "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d"
+  },
+  "models": [
+    {
+      "label": "push3_c7250_compiled_all",
+      "name": "Parent7250 / best Push3",
+      "checkpoint_sha256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+      "final_manifest": true,
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/provenance/push3_c7250_compiled_all/render_manifest.json",
+      "manifest_sha256": "c3d44d214571facf86c9151f4ae85cfd28c0d6c262e628b957293a3edefa501e",
+      "full_quality": {
+        "NR": 2.313125129005856,
+        "FR": 1.4465690056482952,
+        "S_proxy": 3.7596941346541515,
+        "component_means": {
+          "validation": {
+            "lpips": 0.3428955078125,
+            "dists": 0.21053548653920492,
+            "niqe": 4.322122831383642,
+            "musiq": 38.676076889038086,
+            "maniqa": 0.5724314451217651,
+            "clipiqa": 0.7652938961982727
+          },
+          "test": {
+            "niqe": 4.254479983830981,
+            "musiq": 39.66665840148926,
+            "maniqa": 0.5701021432876587,
+            "clipiqa": 0.7718044000864029
+          }
+        },
+        "scope": "Original full100 test NR + validation3 FR; never inferred from four selected cases"
+      }
+    },
+    {
+      "label": "push4_c7750_compiled_all",
+      "name": "C7750 / M2.5 reward0.10",
+      "checkpoint_sha256": "c953cb853a2a98e1563171798af9d4cb5d034957a4d7da444eb1e25fd6db96a3",
+      "final_manifest": true,
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/provenance/push4_c7750_compiled_all/render_manifest.json",
+      "manifest_sha256": "b37912770f37df14604b81f5b073a7295f8d3b8cd608f5bb39f8d24369943f9b",
+      "full_quality": {
+        "NR": 2.3170131290749345,
+        "FR": 1.4438390533129373,
+        "S_proxy": 3.760852182387872,
+        "component_means": {
+          "validation": {
+            "lpips": 0.3456217447916667,
+            "dists": 0.2105392018953959,
+            "niqe": 4.237367782455956,
+            "musiq": 40.35374323527018,
+            "maniqa": 0.5691259900728861,
+            "clipiqa": 0.7634755373001099
+          },
+          "test": {
+            "niqe": 4.181879476472106,
+            "musiq": 39.89262186050415,
+            "maniqa": 0.566893807053566,
+            "clipiqa": 0.7693810510635376
+          }
+        },
+        "scope": "Original full100 test NR + validation3 FR; never inferred from four selected cases"
+      }
+    },
+    {
+      "label": "push4_a7750_compiled_all",
+      "name": "A7750 / M1.5 reward0.15 | SELECTED BEST",
+      "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+      "final_manifest": true,
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/provenance/push4_a7750_compiled_all/render_manifest.json",
+      "manifest_sha256": "35355c94cace390b5f5918cfb607d85b0f55c9cd1e1ba0a4f6a4d034abb54e16",
+      "full_quality": {
+        "NR": 2.3197332792186334,
+        "FR": 1.4417232871055603,
+        "S_proxy": 3.7614565663241937,
+        "component_means": {
+          "validation": {
+            "lpips": 0.3455403645833333,
+            "dists": 0.21273634831110635,
+            "niqe": 4.364917716628572,
+            "musiq": 37.00266647338867,
+            "maniqa": 0.5774780511856079,
+            "clipiqa": 0.7694729765256246
+          },
+          "test": {
+            "niqe": 4.276370415664122,
+            "musiq": 39.583499126434326,
+            "maniqa": 0.5752561512589455,
+            "clipiqa": 0.7762791782617569
+          }
+        },
+        "scope": "Original full100 test NR + validation3 FR; never inferred from four selected cases"
+      }
+    },
+    {
+      "label": "push4_d7500_compiled_all",
+      "name": "D7500 / M2.5 reward0.075",
+      "checkpoint_sha256": "feb55a9e22e466e6f45f3b15d6cd38b67a679d761fc37e093b77687fafda3b50",
+      "final_manifest": true,
+      "manifest_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/provenance/push4_d7500_compiled_all/render_manifest.json",
+      "manifest_sha256": "8c51be782cefb1a7c9f9b9ca2aecb56334c5366a02c4240b9d94fb5b3ff78034",
+      "full_quality": {
+        "NR": 2.3110824830824153,
+        "FR": 1.4477893312772114,
+        "S_proxy": 3.758871814359627,
+        "component_means": {
+          "validation": {
+            "lpips": 0.3430582682291667,
+            "dists": 0.20915240049362183,
+            "niqe": 4.243543549930586,
+            "musiq": 42.125012715657554,
+            "maniqa": 0.5639888048171997,
+            "clipiqa": 0.7613088289896647
+          },
+          "test": {
+            "niqe": 4.185545265859351,
+            "musiq": 40.070943431854246,
+            "maniqa": 0.5616838574409485,
+            "clipiqa": 0.7672437179088593
+          }
+        },
+        "scope": "Original full100 test NR + validation3 FR; never inferred from four selected cases"
+      }
+    }
+  ],
+  "cases": [
+    7,
+    16,
+    41,
+    83
+  ],
+  "all_four_cases_available": true,
+  "all_final_manifests": true,
+  "source_files": [
+    {
+      "id": "push3_c7250_compiled_all/7",
+      "label": "push3_c7250_compiled_all",
+      "case": 7,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push3_c7250_compiled_all/render/test/case7.png",
+      "original_local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push3_visuals_20261014/push3_c7250_compiled_all/render/test/case7.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push3_full_evaluations/push3_c7250_compiled_all/render/test/case7.png",
+      "sha256": "a39844241f369414e9eaffad2af5f1b4629ea79e55ae8656771470713ceccfad",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "record": {
+        "task_index": 9,
+        "split": "test",
+        "case": 7,
+        "output": "render/test/case7.png",
+        "sha256": "a39844241f369414e9eaffad2af5f1b4629ea79e55ae8656771470713ceccfad",
+        "size": [
+          4096,
+          3072
+        ],
+        "seconds": 9.117861270904541
+      },
+      "parent_hardlink": true,
+      "metric": {
+        "label": "push3_c7250_compiled_all",
+        "split": "test",
+        "case": 7,
+        "metrics": {
+          "niqe": 4.589238597647163,
+          "musiq": 38.09018325805664,
+          "maniqa": 0.6304774880409241,
+          "clipiqa": 0.7438024878501892
+        },
+        "nr_per_image": 2.2962579487069634,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push3_full_evaluations/push3_c7250_compiled_all/render/test/case7.png",
+        "sr_sha256": "a39844241f369414e9eaffad2af5f1b4629ea79e55ae8656771470713ceccfad",
+        "gt_sha256": null,
+        "size_hw": [
+          3072,
+          4096
+        ],
+        "seconds": 3.4311923219356686,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push3_c7250_compiled_all/16",
+      "label": "push3_c7250_compiled_all",
+      "case": 16,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push3_c7250_compiled_all/render/test/case16.png",
+      "original_local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push3_visuals_20261014/push3_c7250_compiled_all/render/test/case16.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push3_full_evaluations/push3_c7250_compiled_all/render/test/case16.png",
+      "sha256": "4e5831dbf71ec92b4ef1026ebdf6f6392599bbfb39163287c40907821f9478de",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "record": {
+        "task_index": 18,
+        "split": "test",
+        "case": 16,
+        "output": "render/test/case16.png",
+        "sha256": "4e5831dbf71ec92b4ef1026ebdf6f6392599bbfb39163287c40907821f9478de",
+        "size": [
+          4096,
+          3072
+        ],
+        "seconds": 9.011351823806763
+      },
+      "parent_hardlink": true,
+      "metric": {
+        "label": "push3_c7250_compiled_all",
+        "split": "test",
+        "case": 16,
+        "metrics": {
+          "niqe": 4.760420776711424,
+          "musiq": 38.49006652832031,
+          "maniqa": 0.515844464302063,
+          "clipiqa": 0.6564489603042603
+        },
+        "nr_per_image": 2.081152012218384,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push3_full_evaluations/push3_c7250_compiled_all/render/test/case16.png",
+        "sr_sha256": "4e5831dbf71ec92b4ef1026ebdf6f6392599bbfb39163287c40907821f9478de",
+        "gt_sha256": null,
+        "size_hw": [
+          3072,
+          4096
+        ],
+        "seconds": 3.242368685081601,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push3_c7250_compiled_all/41",
+      "label": "push3_c7250_compiled_all",
+      "case": 41,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push3_c7250_compiled_all/render/test/case41.png",
+      "original_local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push3_visuals_20261014/push3_c7250_compiled_all/render/test/case41.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push3_full_evaluations/push3_c7250_compiled_all/render/test/case41.png",
+      "sha256": "c6370cc823eb4e5b6126a3f8916d6130f9c40df68b92e1a6940c9fee64e2bbf4",
+      "size_wh": [
+        3072,
+        4096
+      ],
+      "record": {
+        "task_index": 43,
+        "split": "test",
+        "case": 41,
+        "output": "render/test/case41.png",
+        "sha256": "c6370cc823eb4e5b6126a3f8916d6130f9c40df68b92e1a6940c9fee64e2bbf4",
+        "size": [
+          3072,
+          4096
+        ],
+        "seconds": 9.24191164970398
+      },
+      "parent_hardlink": true,
+      "metric": {
+        "label": "push3_c7250_compiled_all",
+        "split": "test",
+        "case": 41,
+        "metrics": {
+          "niqe": 4.4997722511413505,
+          "musiq": 50.60773468017578,
+          "maniqa": 0.6939424276351929,
+          "clipiqa": 0.8937706351280212
+        },
+        "nr_per_image": 2.643813184450837,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push3_full_evaluations/push3_c7250_compiled_all/render/test/case41.png",
+        "sr_sha256": "c6370cc823eb4e5b6126a3f8916d6130f9c40df68b92e1a6940c9fee64e2bbf4",
+        "gt_sha256": null,
+        "size_hw": [
+          4096,
+          3072
+        ],
+        "seconds": 3.160552124027163,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push3_c7250_compiled_all/83",
+      "label": "push3_c7250_compiled_all",
+      "case": 83,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push3_c7250_compiled_all/render/test/case83.png",
+      "original_local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push3_visuals_20261014/push3_c7250_compiled_all/render/test/case83.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push3_full_evaluations/push3_c7250_compiled_all/render/test/case83.png",
+      "sha256": "3fd683ec207771e6e220213a628ab20be729c171ac993337b63c3ebaa8ae2e8c",
+      "size_wh": [
+        3072,
+        4096
+      ],
+      "record": {
+        "task_index": 85,
+        "split": "test",
+        "case": 83,
+        "output": "render/test/case83.png",
+        "sha256": "3fd683ec207771e6e220213a628ab20be729c171ac993337b63c3ebaa8ae2e8c",
+        "size": [
+          3072,
+          4096
+        ],
+        "seconds": 9.282998085021973
+      },
+      "parent_hardlink": true,
+      "metric": {
+        "label": "push3_c7250_compiled_all",
+        "split": "test",
+        "case": 83,
+        "metrics": {
+          "niqe": 3.935544891115166,
+          "musiq": 24.30986976623535,
+          "maniqa": 0.5938141345977783,
+          "clipiqa": 0.8695392608642578
+        },
+        "nr_per_image": 2.312897604012873,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push3_full_evaluations/push3_c7250_compiled_all/render/test/case83.png",
+        "sr_sha256": "3fd683ec207771e6e220213a628ab20be729c171ac993337b63c3ebaa8ae2e8c",
+        "gt_sha256": null,
+        "size_hw": [
+          4096,
+          3072
+        ],
+        "seconds": 3.2344377760309726,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push4_c7750_compiled_all/7",
+      "label": "push4_c7750_compiled_all",
+      "case": 7,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_c7750_compiled_all/render/test/case7.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_c7750_compiled_all/render/test/case7.png",
+      "sha256": "c43ba24dd410298159301bf237e495443bc6fd04b42d9751468d2608091424b2",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "record": {
+        "task_index": 9,
+        "split": "test",
+        "case": 7,
+        "output": "render/test/case7.png",
+        "sha256": "c43ba24dd410298159301bf237e495443bc6fd04b42d9751468d2608091424b2",
+        "size": [
+          4096,
+          3072
+        ],
+        "seconds": 9.23457646369934
+      },
+      "parent_hardlink": false,
+      "metric": {
+        "label": "push4_c7750_compiled_all",
+        "split": "test",
+        "case": 7,
+        "metrics": {
+          "niqe": 4.521233269037562,
+          "musiq": 39.08173370361328,
+          "maniqa": 0.6239900588989258,
+          "clipiqa": 0.7400733232498169
+        },
+        "nr_per_image": 2.3027573922811193,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_c7750_compiled_all/render/test/case7.png",
+        "sr_sha256": "c43ba24dd410298159301bf237e495443bc6fd04b42d9751468d2608091424b2",
+        "gt_sha256": null,
+        "size_hw": [
+          3072,
+          4096
+        ],
+        "seconds": 3.262961483793333,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push4_c7750_compiled_all/16",
+      "label": "push4_c7750_compiled_all",
+      "case": 16,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_c7750_compiled_all/render/test/case16.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_c7750_compiled_all/render/test/case16.png",
+      "sha256": "09a228a04af8a520dcfd7069ed149483935fa5d8825d22c7e0298b1de6a12247",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "record": {
+        "task_index": 18,
+        "split": "test",
+        "case": 16,
+        "output": "render/test/case16.png",
+        "sha256": "09a228a04af8a520dcfd7069ed149483935fa5d8825d22c7e0298b1de6a12247",
+        "size": [
+          4096,
+          3072
+        ],
+        "seconds": 9.051867008209229
+      },
+      "parent_hardlink": false,
+      "metric": {
+        "label": "push4_c7750_compiled_all",
+        "split": "test",
+        "case": 16,
+        "metrics": {
+          "niqe": 4.711175986748618,
+          "musiq": 37.39500427246094,
+          "maniqa": 0.5184526443481445,
+          "clipiqa": 0.6583697199821472
+        },
+        "nr_per_image": 2.0796548083800395,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_c7750_compiled_all/render/test/case16.png",
+        "sr_sha256": "09a228a04af8a520dcfd7069ed149483935fa5d8825d22c7e0298b1de6a12247",
+        "gt_sha256": null,
+        "size_hw": [
+          3072,
+          4096
+        ],
+        "seconds": 3.235559836961329,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push4_c7750_compiled_all/41",
+      "label": "push4_c7750_compiled_all",
+      "case": 41,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_c7750_compiled_all/render/test/case41.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_c7750_compiled_all/render/test/case41.png",
+      "sha256": "a06858eee97e3cc3e3ab77250cf74ee7a84318e089887b65b2e651e54475aee8",
+      "size_wh": [
+        3072,
+        4096
+      ],
+      "record": {
+        "task_index": 43,
+        "split": "test",
+        "case": 41,
+        "output": "render/test/case41.png",
+        "sha256": "a06858eee97e3cc3e3ab77250cf74ee7a84318e089887b65b2e651e54475aee8",
+        "size": [
+          3072,
+          4096
+        ],
+        "seconds": 9.409527778625488
+      },
+      "parent_hardlink": false,
+      "metric": {
+        "label": "push4_c7750_compiled_all",
+        "split": "test",
+        "case": 41,
+        "metrics": {
+          "niqe": 4.394637588849917,
+          "musiq": 50.58103561401367,
+          "maniqa": 0.6934873461723328,
+          "clipiqa": 0.8932544589042664
+        },
+        "nr_per_image": 2.6530884023317443,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_c7750_compiled_all/render/test/case41.png",
+        "sr_sha256": "a06858eee97e3cc3e3ab77250cf74ee7a84318e089887b65b2e651e54475aee8",
+        "gt_sha256": null,
+        "size_hw": [
+          4096,
+          3072
+        ],
+        "seconds": 3.219453820027411,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push4_c7750_compiled_all/83",
+      "label": "push4_c7750_compiled_all",
+      "case": 83,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_c7750_compiled_all/render/test/case83.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_c7750_compiled_all/render/test/case83.png",
+      "sha256": "34cbde6b3a5dbf5117c339da5f44c31d98605788c91ab5c09eb5e8c8d6df5b23",
+      "size_wh": [
+        3072,
+        4096
+      ],
+      "record": {
+        "task_index": 85,
+        "split": "test",
+        "case": 83,
+        "output": "render/test/case83.png",
+        "sha256": "34cbde6b3a5dbf5117c339da5f44c31d98605788c91ab5c09eb5e8c8d6df5b23",
+        "size": [
+          3072,
+          4096
+        ],
+        "seconds": 9.303366899490356
+      },
+      "parent_hardlink": false,
+      "metric": {
+        "label": "push4_c7750_compiled_all",
+        "split": "test",
+        "case": 83,
+        "metrics": {
+          "niqe": 3.8518148195667794,
+          "musiq": 24.324176788330078,
+          "maniqa": 0.5910481214523315,
+          "clipiqa": 0.8695330023765564
+        },
+        "nr_per_image": 2.318641409755511,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_c7750_compiled_all/render/test/case83.png",
+        "sr_sha256": "34cbde6b3a5dbf5117c339da5f44c31d98605788c91ab5c09eb5e8c8d6df5b23",
+        "gt_sha256": null,
+        "size_hw": [
+          4096,
+          3072
+        ],
+        "seconds": 3.4215791651513427,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push4_a7750_compiled_all/7",
+      "label": "push4_a7750_compiled_all",
+      "case": 7,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_a7750_compiled_all/render/test/case7.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case7.png",
+      "sha256": "bfa61a3bec30ee7f27ddb12bb010a6737387e1f99345a658956a844cef4f45fc",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "record": {
+        "task_index": 9,
+        "split": "test",
+        "case": 7,
+        "output": "render/test/case7.png",
+        "sha256": "bfa61a3bec30ee7f27ddb12bb010a6737387e1f99345a658956a844cef4f45fc",
+        "size": [
+          4096,
+          3072
+        ],
+        "seconds": 9.322998285293579
+      },
+      "parent_hardlink": false,
+      "metric": {
+        "label": "push4_a7750_compiled_all",
+        "split": "test",
+        "case": 7,
+        "metrics": {
+          "niqe": 4.610486804432865,
+          "musiq": 38.58440399169922,
+          "maniqa": 0.6357000470161438,
+          "clipiqa": 0.7484660148620605
+        },
+        "nr_per_image": 2.30896142135191,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case7.png",
+        "sr_sha256": "bfa61a3bec30ee7f27ddb12bb010a6737387e1f99345a658956a844cef4f45fc",
+        "gt_sha256": null,
+        "size_hw": [
+          3072,
+          4096
+        ],
+        "seconds": 3.3061177518684417,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push4_a7750_compiled_all/16",
+      "label": "push4_a7750_compiled_all",
+      "case": 16,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_a7750_compiled_all/render/test/case16.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case16.png",
+      "sha256": "8a2c923b1a1cfb47b0b95752ce3e5027054ddc97f67fa88cb22212b9d2d25c54",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "record": {
+        "task_index": 18,
+        "split": "test",
+        "case": 16,
+        "output": "render/test/case16.png",
+        "sha256": "8a2c923b1a1cfb47b0b95752ce3e5027054ddc97f67fa88cb22212b9d2d25c54",
+        "size": [
+          4096,
+          3072
+        ],
+        "seconds": 9.24218463897705
+      },
+      "parent_hardlink": false,
+      "metric": {
+        "label": "push4_a7750_compiled_all",
+        "split": "test",
+        "case": 16,
+        "metrics": {
+          "niqe": 4.795744391141678,
+          "musiq": 36.487213134765625,
+          "maniqa": 0.5242860317230225,
+          "clipiqa": 0.6707847118377686
+        },
+        "nr_per_image": 2.0803684357942793,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case16.png",
+        "sr_sha256": "8a2c923b1a1cfb47b0b95752ce3e5027054ddc97f67fa88cb22212b9d2d25c54",
+        "gt_sha256": null,
+        "size_hw": [
+          3072,
+          4096
+        ],
+        "seconds": 3.2493077530525625,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push4_a7750_compiled_all/41",
+      "label": "push4_a7750_compiled_all",
+      "case": 41,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_a7750_compiled_all/render/test/case41.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case41.png",
+      "sha256": "2466b79f587436a82d0722dacbb8d4f62ae4a19d45b0494b69ac25cb46409403",
+      "size_wh": [
+        3072,
+        4096
+      ],
+      "record": {
+        "task_index": 43,
+        "split": "test",
+        "case": 41,
+        "output": "render/test/case41.png",
+        "sha256": "2466b79f587436a82d0722dacbb8d4f62ae4a19d45b0494b69ac25cb46409403",
+        "size": [
+          3072,
+          4096
+        ],
+        "seconds": 9.62812852859497
+      },
+      "parent_hardlink": false,
+      "metric": {
+        "label": "push4_a7750_compiled_all",
+        "split": "test",
+        "case": 41,
+        "metrics": {
+          "niqe": 4.53337229364218,
+          "musiq": 50.6085319519043,
+          "maniqa": 0.7033351063728333,
+          "clipiqa": 0.8967713713645935
+        },
+        "nr_per_image": 2.652854567892252,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case41.png",
+        "sr_sha256": "2466b79f587436a82d0722dacbb8d4f62ae4a19d45b0494b69ac25cb46409403",
+        "gt_sha256": null,
+        "size_hw": [
+          4096,
+          3072
+        ],
+        "seconds": 3.247810068074614,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push4_a7750_compiled_all/83",
+      "label": "push4_a7750_compiled_all",
+      "case": 83,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_a7750_compiled_all/render/test/case83.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case83.png",
+      "sha256": "c5ad4a4137d9be64166bc8e01f6953c5e7b4a0fa20b3538c1a6c3ad3ce3ebc03",
+      "size_wh": [
+        3072,
+        4096
+      ],
+      "record": {
+        "task_index": 85,
+        "split": "test",
+        "case": 83,
+        "output": "render/test/case83.png",
+        "sha256": "c5ad4a4137d9be64166bc8e01f6953c5e7b4a0fa20b3538c1a6c3ad3ce3ebc03",
+        "size": [
+          3072,
+          4096
+        ],
+        "seconds": 9.40263843536377
+      },
+      "parent_hardlink": false,
+      "metric": {
+        "label": "push4_a7750_compiled_all",
+        "split": "test",
+        "case": 83,
+        "metrics": {
+          "niqe": 3.966954318102594,
+          "musiq": 24.208158493041992,
+          "maniqa": 0.6050382852554321,
+          "clipiqa": 0.8718306422233582
+        },
+        "nr_per_image": 2.322255080598951,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case83.png",
+        "sr_sha256": "c5ad4a4137d9be64166bc8e01f6953c5e7b4a0fa20b3538c1a6c3ad3ce3ebc03",
+        "gt_sha256": null,
+        "size_hw": [
+          4096,
+          3072
+        ],
+        "seconds": 3.271172961918637,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push4_d7500_compiled_all/7",
+      "label": "push4_d7500_compiled_all",
+      "case": 7,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_d7500_compiled_all/render/test/case7.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_d7500_compiled_all/render/test/case7.png",
+      "sha256": "5a73a167e1af2aa7d6d451c4d01d1b3fc3810a358c02e03bb6d2db0304a8d060",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "record": {
+        "task_index": 9,
+        "split": "test",
+        "case": 7,
+        "output": "render/test/case7.png",
+        "sha256": "5a73a167e1af2aa7d6d451c4d01d1b3fc3810a358c02e03bb6d2db0304a8d060",
+        "size": [
+          4096,
+          3072
+        ],
+        "seconds": 9.200434446334839
+      },
+      "parent_hardlink": false,
+      "metric": {
+        "label": "push4_d7500_compiled_all",
+        "split": "test",
+        "case": 7,
+        "metrics": {
+          "niqe": 4.506718441895846,
+          "musiq": 38.5399169921875,
+          "maniqa": 0.6192001700401306,
+          "clipiqa": 0.7398458123207092
+        },
+        "nr_per_image": 2.2937733080931304,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_d7500_compiled_all/render/test/case7.png",
+        "sr_sha256": "5a73a167e1af2aa7d6d451c4d01d1b3fc3810a358c02e03bb6d2db0304a8d060",
+        "gt_sha256": null,
+        "size_hw": [
+          3072,
+          4096
+        ],
+        "seconds": 3.2270525090862066,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push4_d7500_compiled_all/16",
+      "label": "push4_d7500_compiled_all",
+      "case": 16,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_d7500_compiled_all/render/test/case16.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_d7500_compiled_all/render/test/case16.png",
+      "sha256": "079a765f2fe9c4963a77f39479e2c74ff97a10c17af85d98dd052a2460fb60d7",
+      "size_wh": [
+        4096,
+        3072
+      ],
+      "record": {
+        "task_index": 18,
+        "split": "test",
+        "case": 16,
+        "output": "render/test/case16.png",
+        "sha256": "079a765f2fe9c4963a77f39479e2c74ff97a10c17af85d98dd052a2460fb60d7",
+        "size": [
+          4096,
+          3072
+        ],
+        "seconds": 9.136876583099365
+      },
+      "parent_hardlink": false,
+      "metric": {
+        "label": "push4_d7500_compiled_all",
+        "split": "test",
+        "case": 16,
+        "metrics": {
+          "niqe": 4.702982135991198,
+          "musiq": 40.47985076904297,
+          "maniqa": 0.5067996978759766,
+          "clipiqa": 0.6478646397590637
+        },
+        "nr_per_image": 2.08916463172635,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_d7500_compiled_all/render/test/case16.png",
+        "sr_sha256": "079a765f2fe9c4963a77f39479e2c74ff97a10c17af85d98dd052a2460fb60d7",
+        "gt_sha256": null,
+        "size_hw": [
+          3072,
+          4096
+        ],
+        "seconds": 3.207435762975365,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push4_d7500_compiled_all/41",
+      "label": "push4_d7500_compiled_all",
+      "case": 41,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_d7500_compiled_all/render/test/case41.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_d7500_compiled_all/render/test/case41.png",
+      "sha256": "b70e9408235f3577f1cef9d4412bc6bc07c5e0bc7852aabea0ec6afa6ce5c8c4",
+      "size_wh": [
+        3072,
+        4096
+      ],
+      "record": {
+        "task_index": 43,
+        "split": "test",
+        "case": 41,
+        "output": "render/test/case41.png",
+        "sha256": "b70e9408235f3577f1cef9d4412bc6bc07c5e0bc7852aabea0ec6afa6ce5c8c4",
+        "size": [
+          3072,
+          4096
+        ],
+        "seconds": 9.363816022872925
+      },
+      "parent_hardlink": false,
+      "metric": {
+        "label": "push4_d7500_compiled_all",
+        "split": "test",
+        "case": 41,
+        "metrics": {
+          "niqe": 4.40007497283657,
+          "musiq": 50.486385345458984,
+          "maniqa": 0.6866329312324524,
+          "clipiqa": 0.8926486968994141
+        },
+        "nr_per_image": 2.6441379843027994,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_d7500_compiled_all/render/test/case41.png",
+        "sr_sha256": "b70e9408235f3577f1cef9d4412bc6bc07c5e0bc7852aabea0ec6afa6ce5c8c4",
+        "gt_sha256": null,
+        "size_hw": [
+          4096,
+          3072
+        ],
+        "seconds": 3.1954808949958533,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    },
+    {
+      "id": "push4_d7500_compiled_all/83",
+      "label": "push4_d7500_compiled_all",
+      "case": 83,
+      "local_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/push4_d7500_compiled_all/render/test/case83.png",
+      "remote_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_d7500_compiled_all/render/test/case83.png",
+      "sha256": "49dc6c13d22172e255dfe510745ad452e41f23cefcea82b39b3097a9c2fac78a",
+      "size_wh": [
+        3072,
+        4096
+      ],
+      "record": {
+        "task_index": 85,
+        "split": "test",
+        "case": 83,
+        "output": "render/test/case83.png",
+        "sha256": "49dc6c13d22172e255dfe510745ad452e41f23cefcea82b39b3097a9c2fac78a",
+        "size": [
+          3072,
+          4096
+        ],
+        "seconds": 9.463934659957886
+      },
+      "parent_hardlink": false,
+      "metric": {
+        "label": "push4_d7500_compiled_all",
+        "split": "test",
+        "case": 83,
+        "metrics": {
+          "niqe": 3.873175233510406,
+          "musiq": 24.509784698486328,
+          "maniqa": 0.5823395252227783,
+          "clipiqa": 0.8680391311645508
+        },
+        "nr_per_image": 2.308158980021152,
+        "sr_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_d7500_compiled_all/render/test/case83.png",
+        "sr_sha256": "49dc6c13d22172e255dfe510745ad452e41f23cefcea82b39b3097a9c2fac78a",
+        "gt_sha256": null,
+        "size_hw": [
+          4096,
+          3072
+        ],
+        "seconds": 3.2611207929439843,
+        "seed_scope": "split_seed1234_continuous_rng"
+      }
+    }
+  ],
+  "coordinate_convention": "integer [left,top,right,bottom), top-left source origin",
+  "previews": [
+    {
+      "type": "overview_thumbnail",
+      "case": 7,
+      "source": "push3_c7250_compiled_all/7",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "paste_xy": [
+        16,
+        208
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 7,
+      "source": "push4_c7750_compiled_all/7",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "paste_xy": [
+        544,
+        208
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 7,
+      "source": "push4_a7750_compiled_all/7",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "paste_xy": [
+        1072,
+        208
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 7,
+      "source": "push4_d7500_compiled_all/7",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "paste_xy": [
+        1600,
+        208
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 16,
+      "source": "push3_c7250_compiled_all/16",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "paste_xy": [
+        16,
+        768
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 16,
+      "source": "push4_c7750_compiled_all/16",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "paste_xy": [
+        544,
+        768
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 16,
+      "source": "push4_a7750_compiled_all/16",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "paste_xy": [
+        1072,
+        768
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 16,
+      "source": "push4_d7500_compiled_all/16",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        512,
+        384
+      ],
+      "paste_xy": [
+        1600,
+        768
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 41,
+      "source": "push3_c7250_compiled_all/41",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        384,
+        512
+      ],
+      "paste_xy": [
+        80,
+        1264
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 41,
+      "source": "push4_c7750_compiled_all/41",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        384,
+        512
+      ],
+      "paste_xy": [
+        608,
+        1264
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 41,
+      "source": "push4_a7750_compiled_all/41",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        384,
+        512
+      ],
+      "paste_xy": [
+        1136,
+        1264
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 41,
+      "source": "push4_d7500_compiled_all/41",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        384,
+        512
+      ],
+      "paste_xy": [
+        1664,
+        1264
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 83,
+      "source": "push3_c7250_compiled_all/83",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        384,
+        512
+      ],
+      "paste_xy": [
+        80,
+        1824
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 83,
+      "source": "push4_c7750_compiled_all/83",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        384,
+        512
+      ],
+      "paste_xy": [
+        608,
+        1824
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 83,
+      "source": "push4_a7750_compiled_all/83",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        384,
+        512
+      ],
+      "paste_xy": [
+        1136,
+        1824
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "overview_thumbnail",
+      "case": 83,
+      "source": "push4_d7500_compiled_all/83",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "output_size_wh": [
+        384,
+        512
+      ],
+      "paste_xy": [
+        1664,
+        1824
+      ],
+      "scale_xy": [
+        0.125,
+        0.125
+      ],
+      "resampling": "Pillow Lanczos"
+    },
+    {
+      "type": "native_roi",
+      "case": 7,
+      "source": "push3_c7250_compiled_all/7",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case7_native_1to1.png",
+      "box_xyxy_exclusive": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "paste_xy": [
+        16,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 7,
+      "source": "push4_c7750_compiled_all/7",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case7_native_1to1.png",
+      "box_xyxy_exclusive": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "paste_xy": [
+        672,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 7,
+      "source": "push4_a7750_compiled_all/7",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case7_native_1to1.png",
+      "box_xyxy_exclusive": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "paste_xy": [
+        1328,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 7,
+      "source": "push4_d7500_compiled_all/7",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case7_native_1to1.png",
+      "box_xyxy_exclusive": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "paste_xy": [
+        1984,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 16,
+      "source": "push3_c7250_compiled_all/16",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case16_native_1to1.png",
+      "box_xyxy_exclusive": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "paste_xy": [
+        16,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 16,
+      "source": "push4_c7750_compiled_all/16",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case16_native_1to1.png",
+      "box_xyxy_exclusive": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "paste_xy": [
+        672,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 16,
+      "source": "push4_a7750_compiled_all/16",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case16_native_1to1.png",
+      "box_xyxy_exclusive": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "paste_xy": [
+        1328,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 16,
+      "source": "push4_d7500_compiled_all/16",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case16_native_1to1.png",
+      "box_xyxy_exclusive": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "paste_xy": [
+        1984,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 41,
+      "source": "push3_c7250_compiled_all/41",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case41_native_1to1.png",
+      "box_xyxy_exclusive": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "paste_xy": [
+        16,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 41,
+      "source": "push4_c7750_compiled_all/41",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case41_native_1to1.png",
+      "box_xyxy_exclusive": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "paste_xy": [
+        672,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 41,
+      "source": "push4_a7750_compiled_all/41",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case41_native_1to1.png",
+      "box_xyxy_exclusive": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "paste_xy": [
+        1328,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 41,
+      "source": "push4_d7500_compiled_all/41",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case41_native_1to1.png",
+      "box_xyxy_exclusive": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "paste_xy": [
+        1984,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 83,
+      "source": "push3_c7250_compiled_all/83",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case83_native_1to1.png",
+      "box_xyxy_exclusive": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "paste_xy": [
+        16,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 83,
+      "source": "push4_c7750_compiled_all/83",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case83_native_1to1.png",
+      "box_xyxy_exclusive": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "paste_xy": [
+        672,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 83,
+      "source": "push4_a7750_compiled_all/83",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case83_native_1to1.png",
+      "box_xyxy_exclusive": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "paste_xy": [
+        1328,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    },
+    {
+      "type": "native_roi",
+      "case": 83,
+      "source": "push4_d7500_compiled_all/83",
+      "output_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case83_native_1to1.png",
+      "box_xyxy_exclusive": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "paste_xy": [
+        1984,
+        104
+      ],
+      "scale_xy": [
+        1,
+        1
+      ],
+      "resampling": null
+    }
+  ],
+  "pillow_version": "12.3.0",
+  "outputs": [
+    {
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/overview_full_comparison.png",
+      "sha256": "09d94fb8023d07fac4ac8427b5c67ed7cd7e2902004a7d54e24475fed81c5de4",
+      "size_wh": [
+        2128,
+        2352
+      ]
+    },
+    {
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case7_native_1to1.png",
+      "sha256": "44a4b9177f35a24f342819e8505fa66a800fbf126fbfe0d104a087623db37f6d",
+      "size_wh": [
+        2640,
+        558
+      ]
+    },
+    {
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case16_native_1to1.png",
+      "sha256": "4ec15c44d6ecc4ed65b567f55fb306f7f291b6799e66ac090c9abaf5d54f2e91",
+      "size_wh": [
+        2640,
+        622
+      ]
+    },
+    {
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case41_native_1to1.png",
+      "sha256": "df371576ab48af4092a358999bed48af3844d35ba50e43760583f5f35f2d3c77",
+      "size_wh": [
+        2640,
+        622
+      ]
+    },
+    {
+      "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push4_visuals_20261014/roi_case83_native_1to1.png",
+      "sha256": "16a0d5b22d29cc1584750a3d90c06e3cf8511b71b8c4f7670340c0095ccf7ecc",
+      "size_wh": [
+        2640,
+        622
+      ]
+    }
+  ],
+  "limitation": "No test GT; metric gain does not prove true detail. No full mean inferred from four examples."
+}

@@ -1,0 +1,40 @@
+WARNING: [Torch-TensorRT] - Unable to read CUDA capable devices. Return status: 100
+Unable to import quantization op. Please install modelopt library (https://github.com/NVIDIA/TensorRT-Model-Optimizer?tab=readme-ov-file#installation) to add support for compiling quantized models
+Unable to import quantize op. Please install modelopt library (https://github.com/NVIDIA/TensorRT-Model-Optimizer?tab=readme-ov-file#installation) to add support for compiling quantized models
+TensorRT-LLM is not installed. Please install TensorRT-LLM or set TRTLLM_PLUGINS_PATH to the directory containing libnvinfer_plugin_tensorrt_llm.so to use converters for torch.distributed ops
+Traceback (most recent call last):
+  File "/cache/independent_sr_cuda_20261013/restoration_20261015/audit_trt_isolated_import_v2.py", line 52, in <module>
+    import torch_tensorrt
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/__init__.py", line 125, in <module>
+    from torch_tensorrt.runtime import *  # noqa: F403
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/runtime/__init__.py", line 1, in <module>
+    from torch_tensorrt.dynamo.runtime import (  # noqa: F401
+    ...<2 lines>...
+    )
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/__init__.py", line 10, in <module>
+    from ._compiler import (
+    ...<5 lines>...
+    )
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/_compiler.py", line 38, in <module>
+    from torch_tensorrt.dynamo.lowering import (
+    ...<3 lines>...
+    )
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/lowering/__init__.py", line 7, in <module>
+    from .passes import *
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/lowering/passes/__init__.py", line 1, in <module>
+    from ._aten_lowering_pass import *
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/lowering/passes/_aten_lowering_pass.py", line 36, in <module>
+    if not is_tegra_platform():
+           ~~~~~~~~~~~~~~~~~^^
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/utils.py", line 820, in is_tegra_platform
+    if torch.cuda.get_device_capability() in [(11, 0), (8, 7), (7, 2)]:
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ma-user/miniconda3/lib/python3.13/site-packages/torch/cuda/__init__.py", line 600, in get_device_capability
+    prop = get_device_properties(device)
+  File "/home/ma-user/miniconda3/lib/python3.13/site-packages/torch/cuda/__init__.py", line 616, in get_device_properties
+    _lazy_init()  # will define _get_device_properties
+    ~~~~~~~~~~^^
+  File "/cache/independent_sr_cuda_20261013/restoration_20261015/audit_trt_isolated_import_v2.py", line 42, in blocked_cuda_init
+    raise RuntimeError('CUDA initialization forbidden during CPU-only package import')
+RuntimeError: CUDA initialization forbidden during CPU-only package import

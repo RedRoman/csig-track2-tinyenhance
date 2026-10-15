@@ -1,0 +1,29 @@
+{
+  "label": "nr_conservative_s6100_compiled_pilot",
+  "status": "complete",
+  "completed": 23,
+  "expected": 23,
+  "official_full_count": false,
+  "validation": {
+    "clipiqa": 0.7156122525533041,
+    "dists": 0.20092511177062988,
+    "lpips": 0.3343098958333333,
+    "maniqa": 0.5009271105130514,
+    "musiq": 48.478406270345054,
+    "niqe": 3.9421693702504608,
+    "n": 3,
+    "fr": 1.4647649923960369,
+    "nr_val": 2.30710648874476,
+    "score": 3.7718714811407965
+  },
+  "test": {
+    "clipiqa": 0.7390343129634858,
+    "maniqa": 0.507909108698368,
+    "musiq": 46.20080432891846,
+    "niqe": 4.49041068930714,
+    "n": 20,
+    "nr": 2.2599103960203246
+  },
+  "S_proxy": 3.7246753884163617,
+  "S_proxy_scope": "partial_or_preflight_only"
+}

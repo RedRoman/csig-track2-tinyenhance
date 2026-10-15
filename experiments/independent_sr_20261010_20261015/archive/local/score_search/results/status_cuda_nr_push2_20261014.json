@@ -1,0 +1,261 @@
+{
+  "status": "complete",
+  "updated_at_bjt": "2026-10-14T18:23:40.730371+08:00",
+  "scope": "paired250 continuations, parent6250-anchor objective forks and coefficient160/185 probes; pilot/full scopes separate",
+  "previous_best_full": {
+    "step": 6250,
+    "NR": 2.2663850433592487,
+    "FR": 1.463716487089793,
+    "S_proxy": 3.7301015304490415
+  },
+  "training": {
+    "cuda_nr_stage2_s6250_cont250": {
+      "stage": "complete",
+      "completed_local_steps": 250,
+      "global_step": 6500,
+      "optimizer_step": 500
+    },
+    "cuda_nr_stage2_s6250_roundste250": {
+      "stage": "complete",
+      "completed_local_steps": 250,
+      "global_step": 6500,
+      "optimizer_step": 500
+    },
+    "cuda_nr_stage3_s6250_anchor6250_m1_250": {
+      "stage": "complete",
+      "completed_local_steps": 250,
+      "global_step": 6500,
+      "optimizer_step": 500
+    },
+    "cuda_nr_stage3_s6250_anchor6250_m15_250": {
+      "stage": "complete",
+      "completed_local_steps": 250,
+      "global_step": 6500,
+      "optimizer_step": 500
+    }
+  },
+  "evaluations": {
+    "nr_s6250_ct160_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "test_NR": 2.2470075619656575,
+      "val_FR": 1.4709932605425518,
+      "S_subset": 3.718000822508209
+    },
+    "nr_s6250_ct175_freshcontrol_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "test_NR": 2.2664829777144697,
+      "val_FR": 1.463716487089793,
+      "S_subset": 3.7301994648042625
+    },
+    "nr_s6250_ct185_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "test_NR": 2.270527322671245,
+      "val_FR": 1.4568938215573628,
+      "S_subset": 3.7274211442286074
+    },
+    "nr_stage2_cont_s6350_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "test_NR": 2.267105437450426,
+      "val_FR": 1.4624494711558023,
+      "S_subset": 3.7295549086062283
+    },
+    "nr_stage2_cont_s6500_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "test_NR": 2.268350612005354,
+      "val_FR": 1.4624083042144775,
+      "S_subset": 3.7307589162198314
+    },
+    "nr_stage2_roundste_s6500_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "test_NR": 2.2683262638864012,
+      "val_FR": 1.4622320731480918,
+      "S_subset": 3.730558337034493
+    },
+    "nr_stage3_anchor6250_m15_s6500_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "test_NR": 2.2763155925447065,
+      "val_FR": 1.4614406824111938,
+      "S_subset": 3.7377562749559003
+    },
+    "nr_stage3_anchor6250_m1_s6500_compiled_pilot": {
+      "scope": "pilot",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 23,
+        "total": 23
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 23,
+        "expected": 23
+      },
+      "test_NR": 2.2745253017407743,
+      "val_FR": 1.4625590046246848,
+      "S_subset": 3.737084306365459
+    },
+    "nr_stage2_cont_s6500_compiled_all": {
+      "scope": "full",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 103,
+        "total": 103
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 103,
+        "expected": 103
+      },
+      "test_NR": 2.268540837285129,
+      "val_FR": 1.4624083042144775,
+      "S_proxy": 3.7309491414996065
+    },
+    "nr_stage3_anchor6250_m15_s6500_compiled_all": {
+      "scope": "full",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 103,
+        "total": 103
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 103,
+        "expected": 103
+      },
+      "test_NR": 2.2783103602882613,
+      "val_FR": 1.4614406824111938,
+      "S_proxy": 3.739751042699455
+    },
+    "nr_stage3_anchor6250_m1_s6500_compiled_all": {
+      "scope": "full",
+      "render_status.json": {
+        "status": "complete",
+        "completed": 103,
+        "total": 103
+      },
+      "scores/status.json": {
+        "status": "complete",
+        "completed": 103,
+        "expected": 103
+      },
+      "test_NR": 2.2761981143649948,
+      "val_FR": 1.4625590046246848,
+      "S_proxy": 3.7387571189896796
+    }
+  },
+  "backup": {
+    "status": "complete",
+    "scope": "final_all_pilots_and_formal_full_artifacts",
+    "files": 918,
+    "bytes": 26699358016,
+    "manifest_sha256": "ef284432a338b0a4574f52be645f4a40571ef94e775e1e39a2c0d1cfc1d13e8d",
+    "previous_manifest_sha256": "ab0951571dbcba53c77a2433f2c3c2f6b0ef17aa4ab3a0c98291848daee643db",
+    "previous_DONE_sha256": "25b151a925932d08acff6c035cbe615bff7a9b1e760a2ba927d49f8a9852bcd1",
+    "genesis_manifest_sha256": "b54f98027dad5cc30c2914f2b3791a45e4a66ab509d732f0ecbae043ad8fd8ed",
+    "destination": "/temp/independent_sr_cuda_20261013_artifacts/nr_push2_20261014",
+    "self_chosen_reserve_bytes": 9663676416,
+    "reserve_is_user_requirement": false,
+    "finalize_pending": false
+  },
+  "selection": {
+    "status": "selected_after_independent_full_audit",
+    "created_utc": "2026-10-14T10:15:02.961387+00:00",
+    "selection_rule": "highest actual complete full100 test NR plus3val FR; also highest full NR among the three new formal candidates",
+    "label": "nr_stage3_anchor6250_m15_s6500_compiled_all",
+    "NR": 2.2783103602882613,
+    "FR": 1.4614406824111938,
+    "S_proxy": 3.739751042699455,
+    "delta_vs_parent6250_full": {
+      "NR": 0.011925316929012997,
+      "FR": -0.0022758046785991137,
+      "S_proxy": 0.009649512250413661
+    },
+    "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m15_250/step6500.pth",
+    "checkpoint_sha256": "cfcc3013fa87aa721f346d6cc285e70b6d6ff2c88315ce9f1465b07ffe020e68",
+    "resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m15_250/resume_latest.pt",
+    "config": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m15_250/config.json",
+    "logs": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m15_250/train.jsonl",
+    "global_step": 6500,
+    "optimizer_step": 500,
+    "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_cuda_nr_stage3_anchor6250_m15_s6500_compiled/model_dir",
+    "quality_dir": "/cache/independent_sr_cuda_20261013/nr_push2_full_evaluations/nr_stage3_anchor6250_m15_s6500_compiled_all",
+    "full_audit_sha256": "9a0cd981f602c513352cff97f3160419bc5f2f1046689eba4593584a5d8bb68d",
+    "three_full_summary_sha256": "8900d1d6784d5a64f0b2313872b52dc1ae9230ebdf29f4d6409768502407cca6",
+    "prediction_is_official_score": false,
+    "test100_used_for_NR_training": true,
+    "validation_GT_used_for_training": false,
+    "fresh_paired_latency_ms": 46.35084838867188,
+    "empirical_tool_prediction": 55.76798647586185,
+    "parent_latency_fixed_quality_only_prediction": 55.69676122981548,
+    "prediction_audit_sha256": "e14ceca7d9f268394da84fbcc230cb4491ac71112c3a7dec476c7f8642f6f42b"
+  }
+}

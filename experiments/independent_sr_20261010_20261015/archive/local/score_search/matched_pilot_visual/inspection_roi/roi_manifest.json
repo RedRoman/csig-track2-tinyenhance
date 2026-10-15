@@ -1,0 +1,383 @@
+{
+  "coordinate_convention": "Pillow (left,top,right,bottom), right/bottom exclusive; origin top-left; native source pixels",
+  "originals_unchanged": true,
+  "roi_processing": "crop only; output PNG; no contrast, sharpening, denoising or color edits",
+  "collage_magnification": "1x for 512px ROI; 2x nearest-neighbor for 256px blue_detail; original 1x ROI separately retained",
+  "overview_processing": "downsample to 1000px width with LANCZOS for locating ROIs only; scale=1000/4096; labels/boxes outside scientific ROI data",
+  "variant_order": [
+    "input",
+    "control",
+    "conservative",
+    "aligned"
+  ],
+  "cases": {
+    "7": {
+      "source_records": {
+        "input": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/originals/input/case7.jpg",
+          "sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+          "size": [
+            4096,
+            3072
+          ]
+        },
+        "control": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/originals/control/case7.png",
+          "sha256": "c2c6322396d658c03404accc091f323da04a2b860c62ffcd156582dddccb9398",
+          "size": [
+            4096,
+            3072
+          ]
+        },
+        "conservative": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/originals/conservative/case7.png",
+          "sha256": "5e39735b6da67d69ea10e5ce4c15655ae48599c0e59812fd228c0b54ebe3fbd7",
+          "size": [
+            4096,
+            3072
+          ]
+        },
+        "aligned": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/originals/aligned/case7.png",
+          "sha256": "9783ee4ee59dfba7140c7a8e569eafdf74021c6c08b0e4c1714ec3052aa889de",
+          "size": [
+            4096,
+            3072
+          ]
+        }
+      },
+      "rois": [
+        {
+          "name": "center",
+          "box": [
+            1792,
+            1280,
+            2304,
+            1792
+          ],
+          "native_size": [
+            512,
+            512
+          ],
+          "native_roi_files": {
+            "input": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_center_input_native.png",
+            "control": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_center_control_native.png",
+            "conservative": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_center_conservative_native.png",
+            "aligned": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_center_aligned_native.png"
+          },
+          "display_scale": 1
+        },
+        {
+          "name": "blue_panel",
+          "box": [
+            2112,
+            864,
+            2624,
+            1376
+          ],
+          "native_size": [
+            512,
+            512
+          ],
+          "native_roi_files": {
+            "input": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_blue_panel_input_native.png",
+            "control": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_blue_panel_control_native.png",
+            "conservative": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_blue_panel_conservative_native.png",
+            "aligned": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_blue_panel_aligned_native.png"
+          },
+          "display_scale": 1
+        },
+        {
+          "name": "blue_detail",
+          "box": [
+            2352,
+            976,
+            2608,
+            1232
+          ],
+          "native_size": [
+            256,
+            256
+          ],
+          "native_roi_files": {
+            "input": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_blue_detail_input_native.png",
+            "control": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_blue_detail_control_native.png",
+            "conservative": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_blue_detail_conservative_native.png",
+            "aligned": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_blue_detail_aligned_native.png"
+          },
+          "display_scale": 2
+        }
+      ],
+      "collage": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_roi_collage.png"
+    },
+    "16": {
+      "source_records": {
+        "input": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/originals/input/case16.jpg",
+          "sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+          "size": [
+            4096,
+            3072
+          ]
+        },
+        "control": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/originals/control/case16.png",
+          "sha256": "7c948c0ef6c66a87f6bd0b86d072630dd6dfc8d900c68070158809aa937de8d9",
+          "size": [
+            4096,
+            3072
+          ]
+        },
+        "conservative": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/originals/conservative/case16.png",
+          "sha256": "cfb8cd07225aadc3d4d00632d11d83649f61525a07db6c7682267e467e74331e",
+          "size": [
+            4096,
+            3072
+          ]
+        },
+        "aligned": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/originals/aligned/case16.png",
+          "sha256": "a5634f8a730705ad461c899d210fa8ff3c09a0fdfec9da39b2ff5ce6d6b47b9d",
+          "size": [
+            4096,
+            3072
+          ]
+        }
+      },
+      "rois": [
+        {
+          "name": "center",
+          "box": [
+            1792,
+            1280,
+            2304,
+            1792
+          ],
+          "native_size": [
+            512,
+            512
+          ],
+          "native_roi_files": {
+            "input": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_center_input_native.png",
+            "control": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_center_control_native.png",
+            "conservative": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_center_conservative_native.png",
+            "aligned": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_center_aligned_native.png"
+          },
+          "display_scale": 1
+        },
+        {
+          "name": "left_wall",
+          "box": [
+            384,
+            960,
+            896,
+            1472
+          ],
+          "native_size": [
+            512,
+            512
+          ],
+          "native_roi_files": {
+            "input": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_left_wall_input_native.png",
+            "control": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_left_wall_control_native.png",
+            "conservative": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_left_wall_conservative_native.png",
+            "aligned": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_left_wall_aligned_native.png"
+          },
+          "display_scale": 1
+        },
+        {
+          "name": "right_wall",
+          "box": [
+            3264,
+            960,
+            3776,
+            1472
+          ],
+          "native_size": [
+            512,
+            512
+          ],
+          "native_roi_files": {
+            "input": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_right_wall_input_native.png",
+            "control": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_right_wall_control_native.png",
+            "conservative": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_right_wall_conservative_native.png",
+            "aligned": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_right_wall_aligned_native.png"
+          },
+          "display_scale": 1
+        }
+      ],
+      "collage": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_roi_collage.png"
+    },
+    "23": {
+      "source_records": {
+        "input": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/originals/input/case23.jpg",
+          "sha256": "844f653f251b95efcd99dc9b69d8cbe260fc837e42a42f6dba1767ddf43026d2",
+          "size": [
+            4096,
+            3072
+          ]
+        },
+        "control": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/originals/control/case23.png",
+          "sha256": "7a8a6f167bd963d7f6be48dc508ff43de088671f098ffdaaa28017924f96a431",
+          "size": [
+            4096,
+            3072
+          ]
+        },
+        "conservative": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/originals/conservative/case23.png",
+          "sha256": "721b824cd12c974c1e3f2194b20f3dbaedb9c2f8081ba3343172f5221716801e",
+          "size": [
+            4096,
+            3072
+          ]
+        },
+        "aligned": {
+          "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/originals/aligned/case23.png",
+          "sha256": "a3d2e223de3c47f7fe0b9a63f80f4136d877c973061f7524e11faacfdf54fcb8",
+          "size": [
+            4096,
+            3072
+          ]
+        }
+      },
+      "rois": [
+        {
+          "name": "center",
+          "box": [
+            1792,
+            1280,
+            2304,
+            1792
+          ],
+          "native_size": [
+            512,
+            512
+          ],
+          "native_roi_files": {
+            "input": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_center_input_native.png",
+            "control": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_center_control_native.png",
+            "conservative": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_center_conservative_native.png",
+            "aligned": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_center_aligned_native.png"
+          },
+          "display_scale": 1
+        },
+        {
+          "name": "glass_middle",
+          "box": [
+            2048,
+            928,
+            2560,
+            1440
+          ],
+          "native_size": [
+            512,
+            512
+          ],
+          "native_roi_files": {
+            "input": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_glass_middle_input_native.png",
+            "control": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_glass_middle_control_native.png",
+            "conservative": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_glass_middle_conservative_native.png",
+            "aligned": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_glass_middle_aligned_native.png"
+          },
+          "display_scale": 1
+        },
+        {
+          "name": "glass_lower",
+          "box": [
+            1280,
+            2096,
+            1792,
+            2608
+          ],
+          "native_size": [
+            512,
+            512
+          ],
+          "native_roi_files": {
+            "input": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_glass_lower_input_native.png",
+            "control": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_glass_lower_control_native.png",
+            "conservative": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_glass_lower_conservative_native.png",
+            "aligned": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_glass_lower_aligned_native.png"
+          },
+          "display_scale": 1
+        }
+      ],
+      "collage": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_roi_collage.png"
+    }
+  },
+  "closeups": {
+    "7": {
+      "name": "blue_closeup",
+      "box": [
+        2352,
+        976,
+        2608,
+        1232
+      ],
+      "native_size": [
+        256,
+        256
+      ],
+      "display_scale": 2,
+      "interpolation": "nearest",
+      "native_files": {
+        "control": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_blue_closeup_control_native.png",
+        "conservative": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_blue_closeup_conservative_native.png",
+        "aligned": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_blue_closeup_aligned_native.png"
+      },
+      "collage": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case7_closeup_collage.png"
+    },
+    "16": {
+      "name": "wall_closeup",
+      "box": [
+        448,
+        1120,
+        704,
+        1376
+      ],
+      "native_size": [
+        256,
+        256
+      ],
+      "display_scale": 2,
+      "interpolation": "nearest",
+      "native_files": {
+        "control": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_wall_closeup_control_native.png",
+        "conservative": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_wall_closeup_conservative_native.png",
+        "aligned": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_wall_closeup_aligned_native.png"
+      },
+      "collage": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case16_closeup_collage.png"
+    },
+    "23": {
+      "name": "honeycomb_closeup",
+      "box": [
+        2272,
+        960,
+        2528,
+        1216
+      ],
+      "native_size": [
+        256,
+        256
+      ],
+      "display_scale": 2,
+      "interpolation": "nearest",
+      "native_files": {
+        "control": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_honeycomb_closeup_control_native.png",
+        "conservative": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_honeycomb_closeup_conservative_native.png",
+        "aligned": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_honeycomb_closeup_aligned_native.png"
+      },
+      "collage": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/matched_pilot_visual/inspection_roi/case23_closeup_collage.png"
+    }
+  },
+  "preservation_check": {
+    "original_file_hashes_unchanged": true,
+    "original_files_checked": 12,
+    "native_roi_pngs_pixel_equal_to_source_crops": true,
+    "native_roi_pngs_checked": 45
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "label": "push7_a7750_trt_unet_vae_fp16",
+  "repo_path": "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda",
+  "base_model_path": "/temp/zihaohe_stage/baselines/sd21b",
+  "weight_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+  "device_index": 0,
+  "seed": 231,
+  "lora_rank": 256,
+  "model_t": 200,
+  "coeff_t": 175,
+  "internal_precision": "bfloat16",
+  "patch_size": 512,
+  "stride": 256,
+  "upscale": 1,
+  "caption": "",
+  "fuse_lora": true,
+  "cache_empty_caption": true,
+  "compile_tiles": true,
+  "backend": "HYPIR_BF16_UNet_FP16_TRT_VAE_native512",
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "base_vae_path": "/temp/zihaohe_stage/baselines/sd21b/vae/diffusion_pytorch_model.safetensors",
+  "TRT_site": "/cache/independent_sr_cuda_20261013/backends/push7_trt/site",
+  "TRT_engines": {
+    "encoder": {
+      "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine",
+      "sha256": "14c206896a7caa6b6491dae33133d149283025cfb8e15b6cf129d8854176ba55",
+      "manifest": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component_manifest.json",
+      "manifest_sha256": "21d3781a5cc092062d4ef87844e74ce916c461ea5b9939658917333d74a2f0ae"
+    },
+    "decoder": {
+      "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine",
+      "sha256": "fe81087086d76aa8d0111cb80070b65b897e0438ebb2a8a020ef0ced8bc6bf30",
+      "manifest": "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component_manifest.json",
+      "manifest_sha256": "1a3a349641e65ca5ad5d92301b25b3b1eae214e760645b5a7c294460f0ac08fd"
+    }
+  },
+  "UNet_TRT_backend": "A7750_FP16_TRT_fixed64_empty_t200",
+  "TRT_UNet_engine": {
+    "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/unet_fp16_A7750/component.engine",
+    "sha256": "08fca16f286c604614e9322ded93f848b0c1d3dd40de7ca793f10b98f286aec8",
+    "manifest": "/cache/independent_sr_cuda_20261013/backends/push7_trt/unet_fp16_A7750/component_manifest.json",
+    "manifest_sha256": "627f1e314b1a6d6a467fd1eca2188b9ed840d54ba9bc9b80ec9ae27a84c68db6"
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "schema": "push5_target70_formula_and_G4_CPU_review_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "CUDA_context_initialized": false,
+  "created_utc": "2026-10-14T14:23:45.778801+00:00",
+  "original_predictor_SHA256": "0af39f578f704e00a0a0a5ce55e58f1668d283ac4602065d8215b6d21cf433e1",
+  "empirical_prediction_not_official_score": true,
+  "current_best": {
+    "S": 3.7614565663241937,
+    "single_GPU512_p10_ms": 46.34193916320801,
+    "G4_ref_ms": 0.7813119888305664,
+    "prediction": 58.69787201922172
+  },
+  "target": 70,
+  "fixed_S_max_p10_ms_for70": 18.973396454957154,
+  "required_speedup_at_fixed_S": 2.442469342440811,
+  "fixed_p10_required_S_for70": 4.015503286289473,
+  "fixed_p10_required_delta_S": 0.25404671996527917,
+  "tradeoff_matrix_current_reference": [
+    {
+      "single_GPU512_event_p10_ms": 1,
+      "required_full_S_for70": 3.0051203233834425,
+      "delta_S_vs_best": -0.7563362429407512,
+      "prediction_at_unchanged_best_S": 118.24367959136023
+    },
+    {
+      "single_GPU512_event_p10_ms": 5,
+      "required_full_S_for70": 3.3932069878488997,
+      "delta_S_vs_best": -0.36824957847529394,
+      "prediction_at_unchanged_best_S": 90.35500390891728
+    },
+    {
+      "single_GPU512_event_p10_ms": 10,
+      "required_full_S_for70": 3.5820778254562264,
+      "delta_S_vs_best": -0.17937874086796723,
+      "prediction_at_unchanged_best_S": 79.26773003183715
+    },
+    {
+      "single_GPU512_event_p10_ms": 12,
+      "required_full_S_for70": 3.6327873858017243,
+      "delta_S_vs_best": -0.12866918052246934,
+      "prediction_at_unchanged_best_S": 76.52993119432912
+    },
+    {
+      "single_GPU512_event_p10_ms": 15,
+      "required_full_S_for70": 3.69526312528416,
+      "delta_S_vs_best": -0.06619344104003355,
+      "prediction_at_unchanged_best_S": 73.28654556752774
+    },
+    {
+      "single_GPU512_event_p10_ms": 16,
+      "required_full_S_for70": 3.7134055544562417,
+      "delta_S_vs_best": -0.04805101186795202,
+      "prediction_at_unchanged_best_S": 72.37071042870463
+    },
+    {
+      "single_GPU512_event_p10_ms": 18,
+      "required_full_S_for70": 3.7465896939018624,
+      "delta_S_vs_best": -0.014866872422331312,
+      "prediction_at_unchanged_best_S": 70.72507465487482
+    },
+    {
+      "single_GPU512_event_p10_ms": 20,
+      "required_full_S_for70": 3.7763480196068997,
+      "delta_S_vs_best": 0.014891453282706024,
+      "prediction_at_unchanged_best_S": 69.28117838923451
+    },
+    {
+      "single_GPU512_event_p10_ms": 22,
+      "required_full_S_for70": 3.8033221463761424,
+      "delta_S_vs_best": 0.041865580051948736,
+      "prediction_at_unchanged_best_S": 67.99785994432212
+    },
+    {
+      "single_GPU512_event_p10_ms": 25,
+      "required_full_S_for70": 3.839573895884511,
+      "delta_S_vs_best": 0.07811732956031747,
+      "prediction_at_unchanged_best_S": 66.31051191059899
+    },
+    {
+      "single_GPU512_event_p10_ms": 30,
+      "required_full_S_for70": 3.8914050174478465,
+      "delta_S_vs_best": 0.12994845112365283,
+      "prediction_at_unchanged_best_S": 63.9704872020336
+    },
+    {
+      "single_GPU512_event_p10_ms": 40,
+      "required_full_S_for70": 3.973439875566019,
+      "delta_S_vs_best": 0.2119833092418255,
+      "prediction_at_unchanged_best_S": 60.434468271712056
+    },
+    {
+      "single_GPU512_event_p10_ms": 46.34193916320801,
+      "required_full_S_for70": 4.015503286289473,
+      "delta_S_vs_best": 0.25404671996527917,
+      "prediction_at_unchanged_best_S": 58.69787201922172
+    }
+  ],
+  "historical_G4_calibration_sensitivity": [
+    {
+      "source": "/cache/independent_sr_cuda_20261013/calibration/g4_latency.json",
+      "source_sha256": "ed3446cd6efcf5c7a040300fd963b5ff771d205ed17ffff3de4b950729f84c82",
+      "reference_p10_ms": 0.6502400040626526,
+      "reference_min_ms": 0.6481919884681702,
+      "reference_median_ms": 0.6553599834442139,
+      "hypothetical_same_frozen_S_and_t_prediction": 56.59784196309983,
+      "target70_max_ms_at_frozen_S": 15.790441672883494,
+      "scope": "Calibration sensitivity holding candidate S/time fixed; not a new paired score."
+    },
+    {
+      "source": "/cache/independent_sr_cuda_20261013/calibration/push2_g4_latency.json",
+      "source_sha256": "e144db224334d05b5fd4990c7e01b8987adbdc4efbc3236e127fe1f8ddd0e6fb",
+      "reference_p10_ms": 0.6512640118598938,
+      "reference_min_ms": 0.6502400040626526,
+      "reference_median_ms": 0.6543359756469727,
+      "hypothetical_same_frozen_S_and_t_prediction": 56.615526844068384,
+      "target70_max_ms_at_frozen_S": 15.815308699356624,
+      "scope": "Calibration sensitivity holding candidate S/time fixed; not a new paired score."
+    },
+    {
+      "source": "/cache/independent_sr_cuda_20261013/calibration/push3_g4_latency.json",
+      "source_sha256": "1a486734c2e08cf84d1b98892d5dcae361c4f49a49ef1d71195814ba41b41d6b",
+      "reference_p10_ms": 0.6502400040626526,
+      "reference_min_ms": 0.6481919884681702,
+      "reference_median_ms": 0.6543359756469727,
+      "hypothetical_same_frozen_S_and_t_prediction": 56.59784196309983,
+      "target70_max_ms_at_frozen_S": 15.790441672883494,
+      "scope": "Calibration sensitivity holding candidate S/time fixed; not a new paired score."
+    },
+    {
+      "source": "/cache/independent_sr_cuda_20261013/calibration/push4_g4_latency.json",
+      "source_sha256": "6ff89746e28e8e34d663aca26b256ee17eec922f52445adf476916fba4e112cc",
+      "reference_p10_ms": 0.7813119888305664,
+      "reference_min_ms": 0.6492159962654114,
+      "reference_median_ms": 0.7833600044250488,
+      "hypothetical_same_frozen_S_and_t_prediction": 58.69787201922172,
+      "target70_max_ms_at_frozen_S": 18.973396454957154,
+      "scope": "Calibration sensitivity holding candidate S/time fixed; not a new paired score."
+    }
+  ],
+  "G4_same_speed_reference_required_S_for70": 2.9564667202741264,
+  "G4_README_declared_quality_only_not_remeasured_here": {
+    "NR": 2.762,
+    "FR": 1.3221,
+    "S": 4.0841,
+    "conditional_prediction_at_reference_speed": 152.95
+  },
+  "G4_asset_and_adapter_CPU_review": {
+    "status": "PASS",
+    "files_sha256": {
+      "model.pth": "283cb7d051a4686e558057b8fb0dcd927b47a8cb7474101fab4162c457c2bb83",
+      "reference_runner.py": "6222ead92dc6fb24b88c0350e41191fc27a5adc2f6ba38bd383a4badb9bd8c1e",
+      "pix_model.py": "5b1ba75929d25c2663ec5aba5f7cd4d4a56b79f214dd8e7a49e48c34eca50f5f",
+      "config.yaml": "e13bab32185ac95f07ac36133eff89133a33ed90cc5ca534b7d8496bc457250d",
+      "runner.py": "276da6fe32a8e67f595f6ecf8a95b4b3ad2d87ec2beb0ca9b8fb1822777ff972"
+    },
+    "cfg": {
+      "chs": [
+        32,
+        64,
+        128
+      ],
+      "nbs": [
+        1,
+        2,
+        4
+      ],
+      "norm": "none",
+      "tdim": 128,
+      "ps": 2,
+      "t_fixed": 999.0,
+      "arch_ver": 2
+    },
+    "historical_training_step": 30000,
+    "state_tensors": 100,
+    "FP32_parameters": 3163404,
+    "folded_parameters": 2957004,
+    "all_finite": true,
+    "outc_weight_norm": 0.6260082721710205,
+    "strict_CPU_load_and_fold_PASS": true,
+    "reference_replication_not_new_training": true,
+    "adapter_infer_delegates_original_unchanged": true
+  },
+  "active_reference_full_protocol_review": {
+    "status": "PASS_static_and_actual_inputs",
+    "full_output_completion_not_yet_claimed": true,
+    "render_protocol_id": "87338b90a3e9edd98283cd780f855e4ea4808926e211e891d9771c52fbf6155e",
+    "render_protocol_sha256": "7bb0417630f0fa3cced94c148629e20f001e9c02cf05fb2679f96f5ab6c7a5b3",
+    "score_protocol_sha256": "12f6a21421bf91a4ae4300f7a0ac8fa35ed22152d4fd8223adca3ec99a81b6b0",
+    "actual103_input_SHA_verified_and_same_order": true,
+    "actual3_GT_SHA_verified_unchanged": [
+      {
+        "case": 1,
+        "sha256": "5190460e6507bb1fe325b681a577cb0dfd70483389ecfe30b52d59ac67ee6906"
+      },
+      {
+        "case": 2,
+        "sha256": "bd0b55d41fc61838efc38316825739a0de193ddfe241157468f6fc5421ff1d73"
+      },
+      {
+        "case": 3,
+        "sha256": "d8d757ec5f5078909b958b770119b13db0ba7134bd343f8593f0fdd0f2d94ba2"
+      }
+    ],
+    "score_protocol_only_changes_vs_frozen_A": [
+      "cuda",
+      "label",
+      "render_dir"
+    ],
+    "original_renderer_and_scorer_and_metric_sources_SHA_verified": true,
+    "image_policy": "CM.load_img original FP32 RGB[0,1]; FR FP16 autocast only; all NR original FP32; no resize or edits",
+    "seed_scope": "once at start of each split for each label, continuous draw order within that split",
+    "metric_order": {
+      "validation": [
+        "lpips",
+        "dists",
+        "niqe",
+        "musiq",
+        "maniqa",
+        "clipiqa"
+      ],
+      "test": [
+        "niqe",
+        "musiq",
+        "maniqa",
+        "clipiqa"
+      ]
+    }
+  }
+}

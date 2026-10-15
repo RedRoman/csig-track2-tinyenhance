@@ -1,0 +1,23 @@
+{
+  "pid": 26162,
+  "args": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "-u",
+    "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/trained_backend_v1/build_finetuned_unet_trt.py",
+    "--native-manifest",
+    "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850/candidate_manifest.json",
+    "--native-manifest-sha256",
+    "0477903b0bc478064ad2f03a5d429eb37459097ac6a0014ec76d92efef7fa4c0",
+    "--out-dir",
+    "/cache/independent_sr_cuda_20261013/backends/push7_trt/push7_a7750_lastres_lr5e6_nr_s7850_unet_fp16",
+    "--execute"
+  ],
+  "physical_GPU": 3,
+  "log": "/cache/independent_sr_cuda_20261013/logs/lastres_lr5e6_s7850_unet_trt_build_20261015.log",
+  "launch_utc": "2026-10-15T08:15:11.602743+00:00",
+  "selected_raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+  "new_engine_required": true,
+  "not_reusing_A_UNet": true,
+  "pilot_proof": "/cache/independent_sr_cuda_20261013/audits/push7/hypir_pilot/lastres_lr5e6_50_100_recovered_matched.json",
+  "ROI_proof_local": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/visuals/hypir_lastres_lr5e6_50_100_pilot/preview_provenance.json"
+}

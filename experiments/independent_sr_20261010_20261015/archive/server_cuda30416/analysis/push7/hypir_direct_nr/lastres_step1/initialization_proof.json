@@ -1,0 +1,2490 @@
+{
+  "status": "PASS",
+  "A7750_all514_exact_FP32": true,
+  "initialization_phase": "before optional new-stage resume",
+  "fresh_Adam0": true,
+  "optimizer_tensor_count": 6,
+  "optimizer_parameter_keys": [
+    "up_blocks.3.resnets.2.conv1.lora_A.default.weight",
+    "up_blocks.3.resnets.2.conv1.lora_B.default.weight",
+    "up_blocks.3.resnets.2.conv2.lora_A.default.weight",
+    "up_blocks.3.resnets.2.conv2.lora_B.default.weight",
+    "conv_out.lora_A.default.weight",
+    "conv_out.lora_B.default.weight"
+  ],
+  "requires_grad_LoRA_tensor_count": 514,
+  "unselected508_exact_A_at_initialization": true,
+  "old_A_Adam_and_RNG_not_inherited": true,
+  "restored_new_stage_local_step": 0,
+  "actual_optimizer_step": 0,
+  "teacher_output_loss": false,
+  "distillation": false,
+  "fused_install_report": {
+    "schema": "hypir_deployment_fused_lora_v1",
+    "module_count": 257,
+    "master_tensors": 514,
+    "master_elements": 259474432,
+    "master_dtype": "torch.float32",
+    "base_dtype": "torch.bfloat16",
+    "forward": "A/B BF16 casts -> original CUDA PEFT delta -> BF16 base merge -> original Linear/Conv2d",
+    "backward": "autograd through BF16 casts; STE surrogate for rounding",
+    "persistent_during_checkpoint_recomputation": true,
+    "temporary_parameter_swap": false,
+    "base_mutated": false,
+    "state_dict_keys_and_parameter_identity_preserved": true,
+    "teacher_output_loss": false,
+    "peft_layer_source": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/peft/tuners/lora/layer.py",
+    "peft_layer_sha256": "39e2f6908c9f3faf4d2de2b6ecfdf44c96d2cae67b8155ed1b51bc67fb25b734",
+    "module_source_sha256": "b215dc4247ecb06cd3040160b7671e8e3c956b090bef4909d3020e90b5719738",
+    "layers": [
+      {
+        "name": "down_blocks.0.attentions.0.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.0.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          2560,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.0.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.0.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.1.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.1.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.1.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          2560,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.1.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.attentions.1.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.resnets.0.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          320,
+          320,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.resnets.0.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          320,
+          320,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.resnets.1.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          320,
+          320,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.resnets.1.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          320,
+          320,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.0.downsamplers.0.conv",
+        "kind": "Conv2d",
+        "base_shape": [
+          320,
+          320,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.0.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.0.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.0.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          5120,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.0.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          2560
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.0.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.1.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.1.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.1.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          5120,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.1.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          2560
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.attentions.1.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.resnets.0.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          320,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.resnets.0.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          640,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.resnets.0.conv_shortcut",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          320,
+          1,
+          1
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.resnets.1.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          640,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.resnets.1.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          640,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.1.downsamplers.0.conv",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          640,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.0.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.0.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.0.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          10240,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.0.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          5120
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.0.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.1.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.1.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.1.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          10240,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.1.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          5120
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.attentions.1.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.resnets.0.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          640,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.resnets.0.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.resnets.0.conv_shortcut",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          640,
+          1,
+          1
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.resnets.1.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.resnets.1.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.2.downsamplers.0.conv",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.3.resnets.0.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.3.resnets.0.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.3.resnets.1.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "down_blocks.3.resnets.1.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.0.resnets.0.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          2560,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.0.resnets.0.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.0.resnets.0.conv_shortcut",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          2560,
+          1,
+          1
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.0.resnets.1.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          2560,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.0.resnets.1.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.0.resnets.1.conv_shortcut",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          2560,
+          1,
+          1
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.0.resnets.2.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          2560,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.0.resnets.2.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.0.resnets.2.conv_shortcut",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          2560,
+          1,
+          1
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.0.upsamplers.0.conv",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.0.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.0.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.0.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          10240,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.0.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          5120
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.0.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.1.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.1.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.1.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          10240,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.1.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          5120
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.1.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.2.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.2.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.2.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          10240,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.2.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          5120
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.attentions.2.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.resnets.0.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          2560,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.resnets.0.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.resnets.0.conv_shortcut",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          2560,
+          1,
+          1
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.resnets.1.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          2560,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.resnets.1.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.resnets.1.conv_shortcut",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          2560,
+          1,
+          1
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.resnets.2.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1920,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.resnets.2.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.resnets.2.conv_shortcut",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1920,
+          1,
+          1
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.1.upsamplers.0.conv",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.0.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.0.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.0.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          5120,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.0.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          2560
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.0.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.1.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.1.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.1.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          5120,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.1.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          2560
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.1.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.2.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.2.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.2.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          5120,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.2.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          2560
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.attentions.2.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          640,
+          640
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.resnets.0.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          1920,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.resnets.0.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          640,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.resnets.0.conv_shortcut",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          1920,
+          1,
+          1
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.resnets.1.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.resnets.1.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          640,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.resnets.1.conv_shortcut",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          1280,
+          1,
+          1
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.resnets.2.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          960,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.resnets.2.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          640,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.resnets.2.conv_shortcut",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          960,
+          1,
+          1
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.2.upsamplers.0.conv",
+        "kind": "Conv2d",
+        "base_shape": [
+          640,
+          640,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.0.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.0.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.0.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          2560,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.0.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.0.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.1.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.1.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.1.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          2560,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.1.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.1.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.2.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.2.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.2.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          2560,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.2.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.attentions.2.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          320,
+          320
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.resnets.0.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          320,
+          960,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.resnets.0.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          320,
+          320,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.resnets.0.conv_shortcut",
+        "kind": "Conv2d",
+        "base_shape": [
+          320,
+          960,
+          1,
+          1
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.resnets.1.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          320,
+          640,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.resnets.1.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          320,
+          320,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.resnets.1.conv_shortcut",
+        "kind": "Conv2d",
+        "base_shape": [
+          320,
+          640,
+          1,
+          1
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.resnets.2.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          320,
+          640,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.resnets.2.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          320,
+          320,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "up_blocks.3.resnets.2.conv_shortcut",
+        "kind": "Conv2d",
+        "base_shape": [
+          320,
+          640,
+          1,
+          1
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.attentions.0.proj_in",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.attentions.0.transformer_blocks.0.attn1.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.attentions.0.transformer_blocks.0.attn1.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.attentions.0.transformer_blocks.0.attn1.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.attentions.0.transformer_blocks.0.attn1.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.attentions.0.transformer_blocks.0.attn2.to_q",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.attentions.0.transformer_blocks.0.attn2.to_k",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.attentions.0.transformer_blocks.0.attn2.to_v",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1024
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.attentions.0.transformer_blocks.0.attn2.to_out.0",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.attentions.0.transformer_blocks.0.ff.net.0.proj",
+        "kind": "Linear",
+        "base_shape": [
+          10240,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.attentions.0.transformer_blocks.0.ff.net.2",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          5120
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.attentions.0.proj_out",
+        "kind": "Linear",
+        "base_shape": [
+          1280,
+          1280
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.resnets.0.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.resnets.0.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.resnets.1.conv1",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "mid_block.resnets.1.conv2",
+        "kind": "Conv2d",
+        "base_shape": [
+          1280,
+          1280,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      },
+      {
+        "name": "conv_out",
+        "kind": "Conv2d",
+        "base_shape": [
+          4,
+          320,
+          3,
+          3
+        ],
+        "base_dtype": "torch.bfloat16"
+      }
+    ]
+  },
+  "parity_proof_sha256": "ddd34d2ea7e1ab834fa8928c6e39da417d3be40ce2f7307ae9c1172743e44950",
+  "parameter_anchor_unclamped_denominator_min": 0.18521669507026672,
+  "parameter_anchor_unclamped_denominator_max": 94.01620483398438,
+  "parameter_anchor_denominators_below_floor": 0,
+  "parameter_anchor_floor": 1e-12
+}

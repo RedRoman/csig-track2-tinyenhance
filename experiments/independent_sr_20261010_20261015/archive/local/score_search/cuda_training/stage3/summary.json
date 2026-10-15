@@ -1,0 +1,198 @@
+{
+  "status": "PASS",
+  "scope": "v3 parent6250 fidelity anchor + MUSIQ1/1.5 stage training integrity; independent PNG quality pending",
+  "audit_bjt": "2026-10-14T17:49:01.059828+08:00",
+  "stage_local_steps": [
+    1,
+    250
+  ],
+  "global_steps": [
+    6251,
+    6500
+  ],
+  "Adam_steps": [
+    251,
+    500
+  ],
+  "all250_case_crop_sequences_equal": true,
+  "final_all4_RNG_states_equal": true,
+  "first_case_crop_parent_replay_matches": true,
+  "first_fidelity_both": 1.1390932108960774e-14,
+  "protocols_differ_only_MUSIQ_weight": true,
+  "parent_resume_config_v1_source_actual_SHA_unchanged": {
+    "resume": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+      "bytes": 3114329549,
+      "sha256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+      "mtime_bjt": "2026-10-13T23:53:49.176236+08:00"
+    },
+    "config": {
+      "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/config.json",
+      "bytes": 30144,
+      "sha256": "2a459e95e248d1b502b651753b9598ce7adfb92c24e48863458265458ea1ca5a",
+      "mtime_bjt": "2026-10-13T23:51:23.513751+08:00"
+    },
+    "v1_source": {
+      "path": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+      "bytes": 18143,
+      "sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+      "mtime_bjt": "2026-10-13T23:33:59.946921+08:00"
+    }
+  },
+  "parent_files_unchanged_during_audit": true,
+  "v3_source_SHA256": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c",
+  "CUDA_context_initialized_before": false,
+  "CUDA_context_initialized_after": false,
+  "results": [
+    {
+      "run": "cuda_nr_stage3_s6250_anchor6250_m1_250",
+      "musiq_weight": 1.0,
+      "nr_round_ste": false,
+      "protocol_id": "b5b015d7fc765f55e2d74a5765f4f05ae4b0a6597f90cfee78b9d20fdc7ab459",
+      "final_steps": {
+        "stage_local": 250,
+        "global": 6500,
+        "Adam": 500
+      },
+      "raw6500": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m1_250/step6500.pth",
+        "bytes": 1038079419,
+        "sha256": "b05e784a08b7082a4ecae63a814d71834068ceb5e9baf26eded3836b29bcc0b8",
+        "mtime_bjt": "2026-10-14T17:47:30.069852+08:00"
+      },
+      "resume": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m1_250/resume_latest.pt",
+        "bytes": 3114330957,
+        "sha256": "4f3316c126b46e3e4d49963313110f01536ec08c442ea65eca1e790ec513a915",
+        "mtime_bjt": "2026-10-14T17:47:33.352907+08:00"
+      },
+      "teacher_evidence": {
+        "effective_anchor_resume_SHA256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+        "initializer_checkpoint": "/cache/independent_sr_cuda_20261013/source_payload/adaptation/runs/ascend_balanced/step6000.pth",
+        "initializer_SHA256": "2c82a71a94aa754bd4a26a2a474c2bbe4989bde1d38d2e15d9e58eb0c3e408bc",
+        "FP32_exact_parent6250": true,
+        "FP32_LoRA_tensors": 514,
+        "frozen": true,
+        "anchor_loading": "all514 parent_resume.lora FP32 values copied exactly into raw6000-initialized teacher; not direct resume-file weight loading",
+        "evidence_scope": "Migration proof and frozen training source checked; no teacher network reconstructed by this CPU audit."
+      },
+      "initial_fidelity": 1.1390932108960774e-14,
+      "514_FP32_finite_LoRA_and_resume_equal_raw": true,
+      "all514_Adam500_FP32_finite": true,
+      "true_FP32_delta_vs_parent6250": {
+        "elements": 259474432,
+        "changed_elements": 259463830,
+        "changed_fraction": 0.9999591404828665,
+        "tensors_changed": 514,
+        "max_abs": 2.6779016479849815e-05,
+        "l2": 0.05333105739543628,
+        "mean_abs": 2.5476197829841455e-06,
+        "method": "FP32 elementwise subtraction; FP64 sum(abs) and sum(square); every tensor/element checked"
+      },
+      "final4_RNG_hash": {
+        "python": "38702a76fb2acc4bdc8df299281a420da95d6930a60009498a7e44e885886949",
+        "numpy": "595eb41d72b9ec1878981b2a0d9ec8cb2220ba857f6128bbc0820233f6267a79",
+        "cpu": "f99273ba73d059b94d75bef7dca976542b44aeb12e4e337f7d4567ec94801229",
+        "cuda": "2200ccfbf0339a551a97b7b488b00a0f888bad1d1a975d8c2e1d4ee030e686eb"
+      },
+      "first_case_crop_parent_RNG_replay": {
+        "local_step": 1,
+        "global_step": 6251,
+        "optimizer_step": 251,
+        "case": 13,
+        "crop_xy": [
+          967,
+          2015
+        ],
+        "matches_independent_parent_Python_RNG_replay": true,
+        "initial_fidelity": 1.1390932108960774e-14,
+        "initial_fidelity_tolerance": 1e-06,
+        "initial_fidelity_abs_within_tolerance": true
+      },
+      "all250_logged_514_nonzero_gradients": true,
+      "elapsed_training_seconds": 248.82036018371582,
+      "median_step_seconds": 0.8297429084777832,
+      "peak_allocated_bytes": 29947319808
+    },
+    {
+      "run": "cuda_nr_stage3_s6250_anchor6250_m15_250",
+      "musiq_weight": 1.5,
+      "nr_round_ste": false,
+      "protocol_id": "995cae4104717ed2e578cb0867efae4171a36d97b281925534fd1f74f662bff1",
+      "final_steps": {
+        "stage_local": 250,
+        "global": 6500,
+        "Adam": 500
+      },
+      "raw6500": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m15_250/step6500.pth",
+        "bytes": 1038079419,
+        "sha256": "cfcc3013fa87aa721f346d6cc285e70b6d6ff2c88315ce9f1465b07ffe020e68",
+        "mtime_bjt": "2026-10-14T17:47:27.556809+08:00"
+      },
+      "resume": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m15_250/resume_latest.pt",
+        "bytes": 3114330957,
+        "sha256": "1f8d6991b490ebe9438b7e7b62c8ad958bac98979516d405f97a829c3c46461f",
+        "mtime_bjt": "2026-10-14T17:47:30.820864+08:00"
+      },
+      "teacher_evidence": {
+        "effective_anchor_resume_SHA256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+        "initializer_checkpoint": "/cache/independent_sr_cuda_20261013/source_payload/adaptation/runs/ascend_balanced/step6000.pth",
+        "initializer_SHA256": "2c82a71a94aa754bd4a26a2a474c2bbe4989bde1d38d2e15d9e58eb0c3e408bc",
+        "FP32_exact_parent6250": true,
+        "FP32_LoRA_tensors": 514,
+        "frozen": true,
+        "anchor_loading": "all514 parent_resume.lora FP32 values copied exactly into raw6000-initialized teacher; not direct resume-file weight loading",
+        "evidence_scope": "Migration proof and frozen training source checked; no teacher network reconstructed by this CPU audit."
+      },
+      "initial_fidelity": 1.1390932108960774e-14,
+      "514_FP32_finite_LoRA_and_resume_equal_raw": true,
+      "all514_Adam500_FP32_finite": true,
+      "true_FP32_delta_vs_parent6250": {
+        "elements": 259474432,
+        "changed_elements": 259465588,
+        "changed_fraction": 0.9999659157168904,
+        "tensors_changed": 514,
+        "max_abs": 3.081280738115311e-05,
+        "l2": 0.06014763041079606,
+        "mean_abs": 2.8833561896867815e-06,
+        "method": "FP32 elementwise subtraction; FP64 sum(abs) and sum(square); every tensor/element checked"
+      },
+      "final4_RNG_hash": {
+        "python": "38702a76fb2acc4bdc8df299281a420da95d6930a60009498a7e44e885886949",
+        "numpy": "595eb41d72b9ec1878981b2a0d9ec8cb2220ba857f6128bbc0820233f6267a79",
+        "cpu": "f99273ba73d059b94d75bef7dca976542b44aeb12e4e337f7d4567ec94801229",
+        "cuda": "2200ccfbf0339a551a97b7b488b00a0f888bad1d1a975d8c2e1d4ee030e686eb"
+      },
+      "first_case_crop_parent_RNG_replay": {
+        "local_step": 1,
+        "global_step": 6251,
+        "optimizer_step": 251,
+        "case": 13,
+        "crop_xy": [
+          967,
+          2015
+        ],
+        "matches_independent_parent_Python_RNG_replay": true,
+        "initial_fidelity": 1.1390932108960774e-14,
+        "initial_fidelity_tolerance": 1e-06,
+        "initial_fidelity_abs_within_tolerance": true
+      },
+      "all250_logged_514_nonzero_gradients": true,
+      "elapsed_training_seconds": 246.52760243415833,
+      "median_step_seconds": 0.8242602348327637,
+      "peak_allocated_bytes": 29947319808
+    }
+  ],
+  "downloaded_final_small_files_SHA": "PASS14",
+  "initial_proofs_unchanged_through_training": "PASS6",
+  "teacher_audit_scope": "Runtime exact-copy migration proof and frozen-source/gradient guards; CPU audit did not rebuild teacher network.",
+  "quality_status": "pending independent native PNG scoring under unchanged original tool formula; crop reward not S_proxy",
+  "evidence": {
+    "initialization": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/stage3/initial_audit.json",
+    "parameter_resume": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/stage3/parameter_resume_audit.json",
+    "logs_sources": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/stage3/logs_source_audit.json",
+    "download_sha": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/stage3/download_sha_manifest.json"
+  }
+}

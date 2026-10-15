@@ -1,0 +1,501 @@
+{
+  "schema": "recovered_hypir_lastres_serial_cuda_v1",
+  "status": "COMPLETE_FOUR_FRESH_PROCESSES",
+  "start_utc": "2026-10-15T08:39:22.297813+00:00",
+  "physical_GPU0_UUID": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f",
+  "benchmark_sha256": "3e85026bd91ad8fb7fb91c5d3c74211cc33a9cff0f8316f7e56cde864ae41995",
+  "launcher_sha256": "98835860247a867aca08d603c9c8ff1a0366b602e035382c34e58d80f6a16738",
+  "n": 200,
+  "warm": 30,
+  "seed": 231,
+  "reference_rule": "min(G4_pre.event_p10,G4_post.event_p10); fixed before measurements",
+  "initial_snapshot": {
+    "utc": "2026-10-15T08:39:22.157172+00:00",
+    "gpus": "0, GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 30, 210 MHz, 62.95 W\n1, GPU-d58c5eff-91e2-b1c6-d667-842e323ac951, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 60.97 W\n2, GPU-509b5691-80fe-dc50-b2f0-ed9e7d7c4c1d, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 31, 210 MHz, 62.42 W\n3, GPU-f45050cd-03d0-d6c1-0699-6f24790d970a, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 61.56 W",
+    "processes": ""
+  },
+  "jobs": [
+    {
+      "label": "g4_pre",
+      "command": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+        "--model-dir",
+        "/cache/independent_sr_cuda_20261013/calibration/g4/model_dir",
+        "--out",
+        "/cache/independent_sr_cuda_20261013/calibration/push7_lastres_recovered_formal_20261015T0840/g4_pre_latency.json",
+        "--n",
+        "200",
+        "--warm",
+        "30",
+        "--seed",
+        "231",
+        "--device",
+        "0"
+      ],
+      "before": {
+        "utc": "2026-10-15T08:39:22.298081+00:00",
+        "gpus": "0, GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 30, 210 MHz, 62.95 W\n1, GPU-d58c5eff-91e2-b1c6-d667-842e323ac951, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 60.97 W\n2, GPU-509b5691-80fe-dc50-b2f0-ed9e7d7c4c1d, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 31, 210 MHz, 62.42 W\n3, GPU-f45050cd-03d0-d6c1-0699-6f24790d970a, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 61.56 W",
+        "processes": ""
+      },
+      "start_utc": "2026-10-15T08:39:22.436321+00:00",
+      "CUDA_VISIBLE_DEVICES": "0",
+      "process_samples": [
+        {
+          "utc": "2026-10-15T08:39:22.437084+00:00",
+          "processes": ""
+        },
+        {
+          "utc": "2026-10-15T08:39:24.470288+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2962177, 548 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:26.506343+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2962177, 612 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:28.553852+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2962177, 612 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:30.603855+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2962177, 614 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:32.751013+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2962177, 614 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:34.798765+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2962177, 614 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:36.846674+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2962177, 674 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:38.896929+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2962177, 678 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:40.945733+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2962177, 678 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:42.981650+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2962177, 678 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:45.032785+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2962177, 678 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:47.069267+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2962177, 678 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:49.118202+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2962177, 606 MiB"
+        }
+      ],
+      "interference": [],
+      "container_pid": 46896,
+      "exit_code": 0,
+      "end_utc": "2026-10-15T08:39:51.315963+00:00",
+      "elapsed_seconds": 28.879644011845812,
+      "after": {
+        "utc": "2026-10-15T08:39:51.162075+00:00",
+        "gpus": "0, GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 31, 330 MHz, 63.27 W\n1, GPU-d58c5eff-91e2-b1c6-d667-842e323ac951, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 61.24 W\n2, GPU-509b5691-80fe-dc50-b2f0-ed9e7d7c4c1d, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 31, 210 MHz, 62.42 W\n3, GPU-f45050cd-03d0-d6c1-0699-6f24790d970a, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 61.56 W",
+        "processes": ""
+      },
+      "latency_512": {
+        "event_med": 0.749567985534668,
+        "event_p10": 0.7474176287651062,
+        "event_min": 0.7444480061531067,
+        "wall_med": 0.7703789742663503,
+        "wall_min": 0.7644759025424719,
+        "wall_p10": 0.767401373013854,
+        "n": 200,
+        "warm": 30
+      }
+    },
+    {
+      "label": "reference",
+      "command": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+        "--model-dir",
+        "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/model_dir",
+        "--out",
+        "/cache/independent_sr_cuda_20261013/calibration/push7_lastres_recovered_formal_20261015T0840/reference_latency.json",
+        "--n",
+        "200",
+        "--warm",
+        "30",
+        "--seed",
+        "231",
+        "--device",
+        "0",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trt_unet_vae_fp16/candidate_manifest.json",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component_manifest.json",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component_manifest.json",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/unet_fp16_A7750/component.engine",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/unet_fp16_A7750/component_manifest.json"
+      ],
+      "before": {
+        "utc": "2026-10-15T08:39:51.316524+00:00",
+        "gpus": "0, GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 31, 300 MHz, 63.27 W\n1, GPU-d58c5eff-91e2-b1c6-d667-842e323ac951, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 60.97 W\n2, GPU-509b5691-80fe-dc50-b2f0-ed9e7d7c4c1d, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 31, 210 MHz, 62.42 W\n3, GPU-f45050cd-03d0-d6c1-0699-6f24790d970a, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 61.56 W",
+        "processes": ""
+      },
+      "start_utc": "2026-10-15T08:39:51.456696+00:00",
+      "CUDA_VISIBLE_DEVICES": "0",
+      "process_samples": [
+        {
+          "utc": "2026-10-15T08:39:51.457251+00:00",
+          "processes": ""
+        },
+        {
+          "utc": "2026-10-15T08:39:53.492726+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 416 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:55.528828+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 416 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:57.564493+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 416 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:39:59.613223+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 416 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:01.661061+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 416 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:03.696038+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 416 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:05.732229+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 1244 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:07.770258+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 3256 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:09.807314+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 3962 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:11.855145+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 3962 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:13.889470+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 4838 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:15.936393+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 5698 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:17.973105+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 5718 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:20.022241+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 5718 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:22.076385+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 5718 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:24.123554+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2970181, 5718 MiB"
+        }
+      ],
+      "interference": [],
+      "container_pid": 48355,
+      "exit_code": 0,
+      "end_utc": "2026-10-15T08:40:26.325079+00:00",
+      "elapsed_seconds": 34.86838359199464,
+      "after": {
+        "utc": "2026-10-15T08:40:26.173758+00:00",
+        "gpus": "0, GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 54 %, 0 MiB, 35, 1410 MHz, 84.65 W\n1, GPU-d58c5eff-91e2-b1c6-d667-842e323ac951, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 60.90 W\n2, GPU-509b5691-80fe-dc50-b2f0-ed9e7d7c4c1d, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 31, 210 MHz, 62.35 W\n3, GPU-f45050cd-03d0-d6c1-0699-6f24790d970a, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 61.56 W",
+        "processes": ""
+      },
+      "latency_512": {
+        "event_med": 32.987648010253906,
+        "event_p10": 32.80384063720703,
+        "event_min": 32.716800689697266,
+        "wall_med": 33.01963349804282,
+        "wall_min": 32.74218295700848,
+        "wall_p10": 32.83049967139959,
+        "n": 200,
+        "warm": 30
+      }
+    },
+    {
+      "label": "candidate",
+      "command": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+        "--model-dir",
+        "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae/model_dir",
+        "--out",
+        "/cache/independent_sr_cuda_20261013/calibration/push7_lastres_recovered_formal_20261015T0840/candidate_latency.json",
+        "--n",
+        "200",
+        "--warm",
+        "30",
+        "--seed",
+        "231",
+        "--device",
+        "0",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/adaptation/runs/hypir_push7_A7750_lastres_lr5e6_nr100/step7850.pth",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae/candidate_manifest.json",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component_manifest.json",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component_manifest.json",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/push7_a7750_lastres_lr5e6_nr_s7850_unet_fp16/component.engine",
+        "--hash-file",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/push7_a7750_lastres_lr5e6_nr_s7850_unet_fp16/component_manifest.json"
+      ],
+      "before": {
+        "utc": "2026-10-15T08:40:26.325700+00:00",
+        "gpus": "0, GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 35, 1410 MHz, 85.57 W\n1, GPU-d58c5eff-91e2-b1c6-d667-842e323ac951, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 60.97 W\n2, GPU-509b5691-80fe-dc50-b2f0-ed9e7d7c4c1d, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 31, 210 MHz, 62.42 W\n3, GPU-f45050cd-03d0-d6c1-0699-6f24790d970a, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 61.50 W",
+        "processes": ""
+      },
+      "start_utc": "2026-10-15T08:40:26.463482+00:00",
+      "CUDA_VISIBLE_DEVICES": "0",
+      "process_samples": [
+        {
+          "utc": "2026-10-15T08:40:26.464061+00:00",
+          "processes": ""
+        },
+        {
+          "utc": "2026-10-15T08:40:28.500488+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 416 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:30.537810+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 416 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:32.737062+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 416 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:34.784616+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 416 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:36.833767+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 416 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:38.882311+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 416 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:40.922452+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 1244 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:42.960402+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 3290 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:45.007745+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 3962 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:47.050035+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 3982 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:49.085169+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 4838 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:51.120672+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 6396 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:53.178445+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 5718 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:55.226604+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 5718 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:57.263831+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 5718 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:40:59.312185+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 5718 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:41:01.361035+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2973801, 5718 MiB"
+        }
+      ],
+      "interference": [],
+      "container_pid": 48680,
+      "exit_code": 0,
+      "end_utc": "2026-10-15T08:41:03.560353+00:00",
+      "elapsed_seconds": 37.096874797018245,
+      "after": {
+        "utc": "2026-10-15T08:41:03.408637+00:00",
+        "gpus": "0, GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 35, 1230 MHz, 72.58 W\n1, GPU-d58c5eff-91e2-b1c6-d667-842e323ac951, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 60.97 W\n2, GPU-509b5691-80fe-dc50-b2f0-ed9e7d7c4c1d, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 31, 210 MHz, 62.42 W\n3, GPU-f45050cd-03d0-d6c1-0699-6f24790d970a, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 30, 210 MHz, 61.50 W",
+        "processes": ""
+      },
+      "latency_512": {
+        "event_med": 32.93337631225586,
+        "event_p10": 32.78950500488281,
+        "event_min": 32.747520446777344,
+        "wall_med": 32.9625440062955,
+        "wall_min": 32.77262602932751,
+        "wall_p10": 32.81572707928717,
+        "n": 200,
+        "warm": 30
+      }
+    },
+    {
+      "label": "g4_post",
+      "command": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/benchmark_cuda.py",
+        "--model-dir",
+        "/cache/independent_sr_cuda_20261013/calibration/g4/model_dir",
+        "--out",
+        "/cache/independent_sr_cuda_20261013/calibration/push7_lastres_recovered_formal_20261015T0840/g4_post_latency.json",
+        "--n",
+        "200",
+        "--warm",
+        "30",
+        "--seed",
+        "231",
+        "--device",
+        "0"
+      ],
+      "before": {
+        "utc": "2026-10-15T08:41:03.560981+00:00",
+        "gpus": "0, GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 35, 1230 MHz, 72.58 W\n1, GPU-d58c5eff-91e2-b1c6-d667-842e323ac951, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 61.24 W\n2, GPU-509b5691-80fe-dc50-b2f0-ed9e7d7c4c1d, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 31, 210 MHz, 62.42 W\n3, GPU-f45050cd-03d0-d6c1-0699-6f24790d970a, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 61.50 W",
+        "processes": ""
+      },
+      "start_utc": "2026-10-15T08:41:03.696287+00:00",
+      "CUDA_VISIBLE_DEVICES": "0",
+      "process_samples": [
+        {
+          "utc": "2026-10-15T08:41:03.697034+00:00",
+          "processes": ""
+        },
+        {
+          "utc": "2026-10-15T08:41:05.730450+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2982569, 548 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:41:07.766025+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2982569, 612 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:41:09.801901+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2982569, 612 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:41:11.850277+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2982569, 614 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:41:13.897945+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2982569, 614 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:41:15.945701+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2982569, 614 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:41:17.993784+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2982569, 674 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:41:20.041597+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2982569, 678 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:41:22.087249+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2982569, 678 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:41:24.134482+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2982569, 678 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:41:26.181552+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2982569, 678 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:41:28.228372+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2982569, 678 MiB"
+        },
+        {
+          "utc": "2026-10-15T08:41:30.275803+00:00",
+          "processes": "GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 2982569, 606 MiB"
+        }
+      ],
+      "interference": [],
+      "container_pid": 49021,
+      "exit_code": 0,
+      "end_utc": "2026-10-15T08:41:32.461022+00:00",
+      "elapsed_seconds": 28.764737100107595,
+      "after": {
+        "utc": "2026-10-15T08:41:32.311842+00:00",
+        "gpus": "0, GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 31, 360 MHz, 63.54 W\n1, GPU-d58c5eff-91e2-b1c6-d667-842e323ac951, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 61.24 W\n2, GPU-509b5691-80fe-dc50-b2f0-ed9e7d7c4c1d, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 31, 210 MHz, 62.42 W\n3, GPU-f45050cd-03d0-d6c1-0699-6f24790d970a, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 30, 210 MHz, 61.50 W",
+        "processes": ""
+      },
+      "latency_512": {
+        "event_med": 0.779263973236084,
+        "event_p10": 0.6492159962654114,
+        "event_min": 0.647167980670929,
+        "wall_med": 0.7996660424396396,
+        "wall_min": 0.6667191628366709,
+        "wall_p10": 0.6681571947410703,
+        "n": 200,
+        "warm": 30
+      }
+    }
+  ],
+  "end_utc": "2026-10-15T08:41:32.461653+00:00",
+  "final_snapshot": {
+    "utc": "2026-10-15T08:41:32.461660+00:00",
+    "gpus": "0, GPU-823adbe3-cd4b-354f-3797-a941e3cabc9f, 00000000:9D:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 31, 330 MHz, 63.27 W\n1, GPU-d58c5eff-91e2-b1c6-d667-842e323ac951, 00000000:A1:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 29, 210 MHz, 61.24 W\n2, GPU-509b5691-80fe-dc50-b2f0-ed9e7d7c4c1d, 00000000:F5:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 31, 210 MHz, 62.42 W\n3, GPU-f45050cd-03d0-d6c1-0699-6f24790d970a, 00000000:F9:00.0, NVIDIA A100-SXM4-80GB, 0 %, 0 MiB, 30, 210 MHz, 61.56 W",
+    "processes": ""
+  }
+}

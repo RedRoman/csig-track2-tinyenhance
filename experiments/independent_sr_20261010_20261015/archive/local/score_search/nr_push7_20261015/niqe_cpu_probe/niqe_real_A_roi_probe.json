@@ -1,0 +1,54 @@
+{
+  "status": "PASS_REAL_A_ROI_FINITE_NONZERO",
+  "CPU_only": true,
+  "CUDA_initialized": false,
+  "source_provenance": {
+    "source_panel": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push6_20261015/visuals/formal_A7750_vs_RO_wavelet_final/case16_formal_roi_1to1.png",
+    "source_panel_sha256": "aeeeb8ca0a1154ce027977853689ed4b2271a32dd47d83c623b6758e1927c7b0",
+    "source_proof": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push6_20261015/visuals/formal_A7750_vs_RO_wavelet_final/preview_provenance.json",
+    "source_proof_sha256": "9fcd172f2b6b7911fbb3782cff73975ea290448e4d6666837dd1783e76737597",
+    "source_proof_all_ROI_panels_exact_equal_source_crops": true,
+    "source_original_A_SHA256": "8a2c923b1a1cfb47b0b95752ce3e5027054ddc97f67fa88cb22212b9d2d25c54",
+    "native_ROI_xyxy": [
+      1344,
+      1216,
+      1856,
+      1728
+    ],
+    "panel_crop_xyxy": [
+      80,
+      96,
+      592,
+      608
+    ],
+    "output_sha256": "0652a1eb96d53967f29fe7bbc885796c55a69aa794be30c5f674b31e8c752d01",
+    "large_native_png_reread": false,
+    "resizing": false
+  },
+  "source_proof_sha256": "ce785c84f63c239f994691b80f1c0567c811bd6c6297e11fe6ed8167b328a6be",
+  "input_sha256": "0652a1eb96d53967f29fe7bbc885796c55a69aa794be30c5f674b31e8c752d01",
+  "NIQE": 6.683685638661542,
+  "normal_forward": 6.683685638661542,
+  "as_loss_forward_exact": true,
+  "gradient_dtype": "torch.float32",
+  "gradient_L2": 4.199703540840639,
+  "gradient_max_abs": 0.20762398838996887,
+  "gradient_nonzero_elements": 691200,
+  "rw01_weighted_NIQE_gradient_L2": 0.041997035408406394,
+  "rw005_weighted_NIQE_gradient_L2": 0.020998517704203197,
+  "original_score_clamp_active": true,
+  "actual_original_forward_negative_sign_probes": [
+    {
+      "epsilon": 0.00392156862745098,
+      "actual_original_NIQE": 4.608026591028624
+    },
+    {
+      "epsilon": 0.00784313725490196,
+      "actual_original_NIQE": 6.174665032012814
+    }
+  ],
+  "CPU_seconds": 0.8873896971344948,
+  "source_sha256": "c1c0bc8cc2e655e6db21d338f4d1586d33e5094fd3a6c11dcb4028b4570eeb05",
+  "NIQE_parameters_sha256": "fa2aa4d12dd9595c3fb6bf8b4e1a15c79d5d1469238d0901c88dead195be578d",
+  "limitations": "One fixed512 ROI, not full/native metrics or a LoRA-gradient/GPU proof; installed alpha argmin and diff_round STE stay unchanged."
+}

@@ -1,0 +1,38 @@
+{
+  "status": "complete",
+  "updated_at_bjt": "2026-10-14T17:05:02.609154+08:00",
+  "scope": "fresh original score_dir.py; both existing native103 PNG sets; no new training",
+  "out_root": "/cache/independent_sr_cuda_20261013/metric_rechecks/20261014_original_tool",
+  "labels": {
+    "compiled6000": {
+      "status": "complete",
+      "label": "compiled6000",
+      "completed": 103,
+      "expected": 103,
+      "expected_scalars": 418,
+      "resume_supported": false,
+      "scalar_metrics_completed": 418,
+      "last_split": "test",
+      "last_case": 100,
+      "S_proxy": 3.717100038686201,
+      "fresh_original_tool": true
+    },
+    "conservative6250": {
+      "status": "complete",
+      "label": "conservative6250",
+      "completed": 103,
+      "expected": 103,
+      "expected_scalars": 418,
+      "resume_supported": false,
+      "scalar_metrics_completed": 418,
+      "last_split": "test",
+      "last_case": 100,
+      "S_proxy": 3.7301015304490415,
+      "fresh_original_tool": true
+    }
+  },
+  "physical_cuda_devices": {
+    "compiled6000": 1,
+    "conservative6250": 0
+  }
+}

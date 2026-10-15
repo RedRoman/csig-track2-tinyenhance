@@ -1,0 +1,127 @@
+{
+  "status": "passed",
+  "audited_bjt": "2026-10-14T18:15:04.510050+08:00",
+  "cpu_only": true,
+  "no_GPU_or_benchmark_or_original_source_mutation": true,
+  "calibrations": {
+    "g4": {
+      "actual_artifact_SHA_pass": true,
+      "event_p10_ms": 0.6512640118598938,
+      "event_median_ms": 0.6543359756469727,
+      "event_p90_ms": 0.7874559760093689,
+      "n": 200,
+      "warm": 30,
+      "normalized_g_ms": null,
+      "benchmark_script_sha256": "3e85026bd91ad8fb7fb91c5d3c74211cc33a9cff0f8316f7e56cde864ae41995",
+      "cuda": {
+        "logical_device": 0,
+        "name": "NVIDIA A100-SXM4-80GB",
+        "compute_capability": [
+          8,
+          0
+        ],
+        "total_memory_bytes": 85293072384,
+        "torch_version": "2.8.0+cu128",
+        "torch_cuda_build": "12.8",
+        "cudnn_version": 91002
+      }
+    },
+    "parent6250": {
+      "actual_artifact_SHA_pass": true,
+      "event_p10_ms": 46.650162887573245,
+      "event_median_ms": 47.120384216308594,
+      "event_p90_ms": 48.845210266113284,
+      "n": 200,
+      "warm": 30,
+      "normalized_g_ms": 30.872610551785737,
+      "benchmark_script_sha256": "3e85026bd91ad8fb7fb91c5d3c74211cc33a9cff0f8316f7e56cde864ae41995",
+      "cuda": {
+        "logical_device": 0,
+        "name": "NVIDIA A100-SXM4-80GB",
+        "compute_capability": [
+          8,
+          0
+        ],
+        "total_memory_bytes": 85293072384,
+        "torch_version": "2.8.0+cu128",
+        "torch_cuda_build": "12.8",
+        "cudnn_version": 91002
+      }
+    },
+    "stage3_m1": {
+      "actual_artifact_SHA_pass": true,
+      "event_p10_ms": 46.58862113952637,
+      "event_median_ms": 46.72256088256836,
+      "event_p90_ms": 48.28692474365234,
+      "n": 200,
+      "warm": 30,
+      "normalized_g_ms": 30.831882839329374,
+      "benchmark_script_sha256": "3e85026bd91ad8fb7fb91c5d3c74211cc33a9cff0f8316f7e56cde864ae41995",
+      "cuda": {
+        "logical_device": 0,
+        "name": "NVIDIA A100-SXM4-80GB",
+        "compute_capability": [
+          8,
+          0
+        ],
+        "total_memory_bytes": 85293072384,
+        "torch_version": "2.8.0+cu128",
+        "torch_cuda_build": "12.8",
+        "cudnn_version": 91002
+      }
+    },
+    "stage3_m15": {
+      "actual_artifact_SHA_pass": true,
+      "event_p10_ms": 46.35084838867188,
+      "event_median_ms": 46.566911697387695,
+      "event_p90_ms": 47.79868049621582,
+      "n": 200,
+      "warm": 30,
+      "normalized_g_ms": 30.674527214341563,
+      "benchmark_script_sha256": "3e85026bd91ad8fb7fb91c5d3c74211cc33a9cff0f8316f7e56cde864ae41995",
+      "cuda": {
+        "logical_device": 0,
+        "name": "NVIDIA A100-SXM4-80GB",
+        "compute_capability": [
+          8,
+          0
+        ],
+        "total_memory_bytes": 85293072384,
+        "torch_version": "2.8.0+cu128",
+        "torch_cuda_build": "12.8",
+        "cudnn_version": 91002
+      }
+    }
+  },
+  "quality_artifacts": {
+    "nr_conservative_s6250_compiled_all": {
+      "status": "complete103",
+      "actual103_png_and_input_SHA_pass": true,
+      "checkpoint_sha256": "7b57349706372122ea67173fbb944e7e806d86e12379e3fd66ea2ebf1f96ecc3",
+      "fresh_latency_identity_matched": true
+    },
+    "nr_stage2_cont_s6500_compiled_all": {
+      "status": "complete103",
+      "actual103_png_and_input_SHA_pass": true,
+      "checkpoint_sha256": "dc7bbf712e3039302a52951075409a23771b8d832024d1800bbe3398c41d4afa",
+      "fresh_latency_identity_matched": false
+    },
+    "nr_stage3_anchor6250_m1_s6500_compiled_all": {
+      "status": "complete103",
+      "actual103_png_and_input_SHA_pass": true,
+      "checkpoint_sha256": "b05e784a08b7082a4ecae63a814d71834068ceb5e9baf26eded3836b29bcc0b8",
+      "fresh_latency_identity_matched": true
+    },
+    "nr_stage3_anchor6250_m15_s6500_compiled_all": {
+      "status": "complete103",
+      "actual103_png_and_input_SHA_pass": true,
+      "checkpoint_sha256": "cfcc3013fa87aa721f346d6cc285e70b6d6ff2c88315ce9f1465b07ffe020e68",
+      "fresh_latency_identity_matched": true
+    }
+  },
+  "reference_event_p10_ms": 0.6512640118598938,
+  "original_predict_sha256": "0af39f578f704e00a0a0a5ce55e58f1668d283ac4602065d8215b6d21cf433e1",
+  "same_card_scope": "All four JSONs record identical A10080GB/logical0/runtime. Same physical GPU0 is supplied by launch provenance; UUID was not recorded.",
+  "timing_noise_policy": "P10/median/P90 are descriptive samples, not a repeated-run confidence interval or proof of model speedup.",
+  "binary_weights": "Actual bytes/SHA checked; binaries not duplicated here. Existing model/checkpoint backup references retained."
+}

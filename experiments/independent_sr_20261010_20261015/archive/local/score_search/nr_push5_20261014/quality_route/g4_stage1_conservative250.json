@@ -1,0 +1,15 @@
+{
+  "root": "/cache/independent_sr_cuda_20261013",
+  "run": "pix_push5_g4_nr250",
+  "stage_steps": 250,
+  "save_every": 125,
+  "lr": 1e-05,
+  "reward_weight": 0.01,
+  "musiq_weight": 1.0,
+  "clip_weight": 0.5,
+  "gradient_anchor": 0.3,
+  "seed": 20261014,
+  "context_patch": 1024,
+  "loss_patch": 512,
+  "maniqa_samples": 20
+}

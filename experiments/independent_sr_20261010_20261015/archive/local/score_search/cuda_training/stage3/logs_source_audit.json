@@ -1,0 +1,341 @@
+{
+  "status": "PASS",
+  "audited_bjt": "2026-10-14T17:48:51.318784+08:00",
+  "CPU_only": true,
+  "Torch_imported": false,
+  "GPU_calls": false,
+  "parent_config_v1_v2_v3_helper_source_actual_SHA_unchanged": true,
+  "all250_cases_and_crops_equal": true,
+  "protocols_differ_only_MUSIQ_reward_weight": true,
+  "parent_resume_actual_SHA_checked_by_parameter_audit": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+  "results": [
+    {
+      "run": "cuda_nr_stage3_s6250_anchor6250_m1_250",
+      "status": "PASS",
+      "protocol_id": "b5b015d7fc765f55e2d74a5765f4f05ae4b0a6597f90cfee78b9d20fdc7ab459",
+      "nr_round_ste": false,
+      "musiq_weight": 1.0,
+      "image_training_rows": 250,
+      "local_steps": [
+        1,
+        250
+      ],
+      "global_steps": [
+        6251,
+        6500
+      ],
+      "Adam_update_labels": [
+        251,
+        500
+      ],
+      "all250_logged_LoRA_gradients_nonzero_514": true,
+      "first_three_real_NR_input_gradients": {
+        "musiq": {
+          "value": 0.5825080871582031,
+          "input_gradient_norm": 0.6105067133903503,
+          "input_gradient_finite": true
+        },
+        "maniqa": {
+          "value": 0.35730406641960144,
+          "input_gradient_norm": 0.16505424678325653,
+          "input_gradient_finite": true
+        },
+        "clipiqa": {
+          "value": 0.6361753344535828,
+          "input_gradient_norm": 6.012568950653076,
+          "input_gradient_finite": true
+        }
+      },
+      "teacher_metrics_gradient_guards_completed": true,
+      "FP32_parent_restore_proof": {
+        "protocol_id": "b5b015d7fc765f55e2d74a5765f4f05ae4b0a6597f90cfee78b9d20fdc7ab459",
+        "parent_lineage": {
+          "parent_resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+          "parent_resume_sha256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+          "parent_config": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/config.json",
+          "parent_config_sha256": "2a459e95e248d1b502b651753b9598ce7adfb92c24e48863458265458ea1ca5a",
+          "parent_protocol_id": "fa5ea19179561aac206b26f7dd3596406f1ad376dccd38f49821146623b98d52",
+          "parent_local_step": 250,
+          "parent_global_step": 6250,
+          "parent_optimizer_step": 250,
+          "frozen_v1_source": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+          "frozen_v1_source_sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+          "restore_order": "raw6000 BF16 init -> LoRA.float -> exact parent FP32 copy -> parent AdamW -> all4 parent RNG",
+          "objective_relation": "new frozen6250 exact-FP32 fidelity anchor objective; inherited Adam/RNG warmstart",
+          "musiq_weight": 1.0,
+          "derived_v2_source": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py",
+          "derived_v2_source_sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+        },
+        "restored_from": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+        "restored_stage_local_step": 0,
+        "restored_global_step": 6250,
+        "restored_optimizer_step": 250,
+        "FP32_LoRA_exact_equal_before_update": true,
+        "FP32_LoRA_tensors": 514,
+        "teacher_FP32_exact_parent6250": true,
+        "teacher_FP32_tensors": 514,
+        "teacher_frozen": true,
+        "anchor_resume_sha256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+        "musiq_weight": 1.0,
+        "source_sha256": {
+          "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+          "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd",
+          "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161",
+          "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923",
+          "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f",
+          "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf",
+          "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2",
+          "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v3.py": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c",
+          "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812",
+          "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+        },
+        "snapshot_phase": "before_new_stage_updates",
+        "optimizer_updates_in_new_stage": 0
+      },
+      "case_crop_sequence_sha256": "a6f49c9c7bd2823cbc84bc64d3401081cb1b6d2d6ed2341e23d591056e047f56",
+      "elapsed_training_seconds": 248.82036018371582,
+      "median_step_seconds": 0.8297429084777832,
+      "peak_allocated_bytes": 29947319808,
+      "first_row": {
+        "local_step": 1,
+        "global_step": 6251,
+        "optimizer_step": 251,
+        "case": 13,
+        "crop_xy": [
+          967,
+          2015
+        ],
+        "loss": -0.07525723427534103,
+        "fidelity": 1.1390932108960774e-14,
+        "reward": 1.0034297704696655,
+        "scores": {
+          "musiq": 0.5825080871582031,
+          "maniqa": 0.35730406641960144,
+          "clipiqa": 0.6361753344535828
+        },
+        "gradient_norm": 0.5968766808509827,
+        "nonzero_lora_gradients": 514,
+        "step_seconds": 2.0273373126983643,
+        "elapsed_seconds": 2.027496099472046,
+        "gpu_peak_allocated_bytes": 29947319808
+      },
+      "last_row": {
+        "local_step": 250,
+        "global_step": 6500,
+        "optimizer_step": 500,
+        "case": 23,
+        "crop_xy": [
+          300,
+          2003
+        ],
+        "loss": -0.07886404544115067,
+        "fidelity": 0.0017147385515272617,
+        "reward": 1.0743837356567383,
+        "scores": {
+          "musiq": 0.5164806246757507,
+          "maniqa": 0.4910912811756134,
+          "clipiqa": 0.6681178212165833
+        },
+        "gradient_norm": 0.22681140899658203,
+        "nonzero_lora_gradients": 514,
+        "step_seconds": 0.846200704574585,
+        "elapsed_seconds": 248.82036018371582,
+        "gpu_peak_allocated_bytes": 29947319808
+      },
+      "small_files": {
+        "config.json": {
+          "bytes": 32940,
+          "sha256": "94007c563d60a4191858dd29fc1cb66f25cca742a38dd0070e6a08cf36a4ec97"
+        },
+        "status.json": {
+          "bytes": 156,
+          "sha256": "cd6a8c477761aa6eb84f9253ee985a17349cfabada330b9a1c532167620ce34a"
+        },
+        "train.jsonl": {
+          "bytes": 119868,
+          "sha256": "e53d5ccf149f666e32dcbee92383a85195b9ed0e9104b2bedc72e24ebad76014"
+        },
+        "gradient_preflight.json": {
+          "bytes": 1311,
+          "sha256": "627a4b9eb67abdcc8d0ef680679826a0fb823fcaccbd8bc61431685da22991b5"
+        },
+        "parent_migration.json": {
+          "bytes": 3543,
+          "sha256": "9d1d2cdb2340b74c3c9a228ac2c5fbcefb9e7e0cb89190aa962b76208f0031cc"
+        },
+        "maniqa_initial_state_proof.json": {
+          "bytes": 130418,
+          "sha256": "df130e7a4ce0bf271f2a0673ce0dbcc639d9491981f94ba7255e843559a9cb36"
+        },
+        "training_complete_step6500": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "run": "cuda_nr_stage3_s6250_anchor6250_m15_250",
+      "status": "PASS",
+      "protocol_id": "995cae4104717ed2e578cb0867efae4171a36d97b281925534fd1f74f662bff1",
+      "nr_round_ste": false,
+      "musiq_weight": 1.5,
+      "image_training_rows": 250,
+      "local_steps": [
+        1,
+        250
+      ],
+      "global_steps": [
+        6251,
+        6500
+      ],
+      "Adam_update_labels": [
+        251,
+        500
+      ],
+      "all250_logged_LoRA_gradients_nonzero_514": true,
+      "first_three_real_NR_input_gradients": {
+        "musiq": {
+          "value": 0.5825080871582031,
+          "input_gradient_norm": 0.6105067729949951,
+          "input_gradient_finite": true
+        },
+        "maniqa": {
+          "value": 0.35730406641960144,
+          "input_gradient_norm": 0.16505271196365356,
+          "input_gradient_finite": true
+        },
+        "clipiqa": {
+          "value": 0.6361753344535828,
+          "input_gradient_norm": 6.012568950653076,
+          "input_gradient_finite": true
+        }
+      },
+      "teacher_metrics_gradient_guards_completed": true,
+      "FP32_parent_restore_proof": {
+        "protocol_id": "995cae4104717ed2e578cb0867efae4171a36d97b281925534fd1f74f662bff1",
+        "parent_lineage": {
+          "parent_resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+          "parent_resume_sha256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+          "parent_config": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/config.json",
+          "parent_config_sha256": "2a459e95e248d1b502b651753b9598ce7adfb92c24e48863458265458ea1ca5a",
+          "parent_protocol_id": "fa5ea19179561aac206b26f7dd3596406f1ad376dccd38f49821146623b98d52",
+          "parent_local_step": 250,
+          "parent_global_step": 6250,
+          "parent_optimizer_step": 250,
+          "frozen_v1_source": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py",
+          "frozen_v1_source_sha256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+          "restore_order": "raw6000 BF16 init -> LoRA.float -> exact parent FP32 copy -> parent AdamW -> all4 parent RNG",
+          "objective_relation": "new frozen6250 exact-FP32 fidelity anchor objective; inherited Adam/RNG warmstart",
+          "musiq_weight": 1.5,
+          "derived_v2_source": "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py",
+          "derived_v2_source_sha256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+        },
+        "restored_from": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_s6000_ct175_conservative_pilot100/resume_latest.pt",
+        "restored_stage_local_step": 0,
+        "restored_global_step": 6250,
+        "restored_optimizer_step": 250,
+        "FP32_LoRA_exact_equal_before_update": true,
+        "FP32_LoRA_tensors": 514,
+        "teacher_FP32_exact_parent6250": true,
+        "teacher_FP32_tensors": 514,
+        "teacher_frozen": true,
+        "anchor_resume_sha256": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+        "musiq_weight": 1.5,
+        "source_sha256": {
+          "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr.py": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+          "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/sd2.py": "5d0c0cc4b915245d3c530f7eebb6b5a8a65a0306c07c45dd8a9353d88e0c68bd",
+          "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/enhancer/base.py": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161",
+          "/cache/independent_sr_cuda_20261013/repos/HYPIR_cuda/HYPIR/utils/common.py": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923",
+          "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f",
+          "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf",
+          "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2",
+          "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v3.py": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c",
+          "/cache/independent_sr_cuda_20261013/code/cuda_training/png_quantization_surrogate.py": "13e029954c386a54e36685954066c16715b0e0f820109d55f6591da0dd723812",
+          "/cache/independent_sr_cuda_20261013/code/cuda_training/train_cuda_nr_stage_v2.py": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+        },
+        "snapshot_phase": "before_new_stage_updates",
+        "optimizer_updates_in_new_stage": 0
+      },
+      "case_crop_sequence_sha256": "a6f49c9c7bd2823cbc84bc64d3401081cb1b6d2d6ed2341e23d591056e047f56",
+      "elapsed_training_seconds": 246.52760243415833,
+      "median_step_seconds": 0.8242602348327637,
+      "peak_allocated_bytes": 29947319808,
+      "first_row": {
+        "local_step": 1,
+        "global_step": 6251,
+        "optimizer_step": 251,
+        "case": 13,
+        "crop_xy": [
+          967,
+          2015
+        ],
+        "loss": -0.09710129350423813,
+        "fidelity": 1.1390932108960774e-14,
+        "reward": 1.294683814048767,
+        "scores": {
+          "musiq": 0.5825080871582031,
+          "maniqa": 0.35730406641960144,
+          "clipiqa": 0.6361753344535828
+        },
+        "gradient_norm": 0.759179413318634,
+        "nonzero_lora_gradients": 514,
+        "step_seconds": 1.8862881660461426,
+        "elapsed_seconds": 1.8864414691925049,
+        "gpu_peak_allocated_bytes": 29947319808
+      },
+      "last_row": {
+        "local_step": 250,
+        "global_step": 6500,
+        "optimizer_step": 500,
+        "case": 23,
+        "crop_xy": [
+          300,
+          2003
+        ],
+        "loss": -0.09825710207223892,
+        "fidelity": 0.001999963540583849,
+        "reward": 1.3367608785629272,
+        "scores": {
+          "musiq": 0.5186777114868164,
+          "maniqa": 0.491879403591156,
+          "clipiqa": 0.668648898601532
+        },
+        "gradient_norm": 0.39258548617362976,
+        "nonzero_lora_gradients": 514,
+        "step_seconds": 0.8366196155548096,
+        "elapsed_seconds": 246.52760243415833,
+        "gpu_peak_allocated_bytes": 29947319808
+      },
+      "small_files": {
+        "config.json": {
+          "bytes": 32940,
+          "sha256": "c6beaad0a6427a3eaaf3e829c04a25982c7ddbcb2df5c157f0aa37df686e0c5a"
+        },
+        "status.json": {
+          "bytes": 156,
+          "sha256": "cd6a8c477761aa6eb84f9253ee985a17349cfabada330b9a1c532167620ce34a"
+        },
+        "train.jsonl": {
+          "bytes": 119778,
+          "sha256": "b36a79471eb87f59ee2da6f37c827e82147eb2d42ae838bafb0c757eda677c7d"
+        },
+        "gradient_preflight.json": {
+          "bytes": 1310,
+          "sha256": "57e1440d29e8952569c574ba8808e80b6c30515660e186c28fb2d6d6d7044635"
+        },
+        "parent_migration.json": {
+          "bytes": 3543,
+          "sha256": "5af3f5e63e03e0bf698a5a7ddb4dabc1de26d5a052479a359d2ab510045d7de6"
+        },
+        "maniqa_initial_state_proof.json": {
+          "bytes": 130418,
+          "sha256": "df130e7a4ce0bf271f2a0673ce0dbcc639d9491981f94ba7255e843559a9cb36"
+        },
+        "training_complete_step6500": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    }
+  ]
+}

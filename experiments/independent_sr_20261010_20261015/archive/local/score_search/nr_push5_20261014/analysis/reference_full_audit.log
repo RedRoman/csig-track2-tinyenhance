@@ -1,0 +1,84 @@
+{"actual_native_PNG_input_SHA_verified": 25}
+{"actual_native_PNG_input_SHA_verified": 50}
+{"actual_native_PNG_input_SHA_verified": 75}
+{"actual_native_PNG_input_SHA_verified": 100}
+AUDIT_JSON_BEGIN
+{
+  "schema": "push5_independent_pixel_full_native103_418_CPU_audit_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "GPU_used": false,
+  "audited_utc": "2026-10-14T14:31:32.627283+00:00",
+  "label": "push5_g4_reference_full",
+  "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_push5_full_evaluations/push5_g4_reference_full",
+  "provenance": "supplied reference replication, no new training",
+  "image_rows": 103,
+  "scalar_metrics": 418,
+  "actual103_PNG_SHA_size_scored_manifest_PASS": true,
+  "actual103_input_SHA_and_order_PASS": true,
+  "actual3_GT_SHA_PASS": true,
+  "all_metric_values_finite": true,
+  "component_means_recomputed": {
+    "validation": {
+      "lpips": 0.3720296223958333,
+      "dists": 0.3063170115152995,
+      "niqe": 3.685252558681576,
+      "musiq": 59.657952626546226,
+      "maniqa": 0.7333316008249918,
+      "clipiqa": 0.9269632895787557
+    },
+    "test": {
+      "niqe": 3.6939206249392256,
+      "musiq": 45.09374706268311,
+      "maniqa": 0.7651437157392502,
+      "clipiqa": 0.9130282193422318
+    }
+  },
+  "max_published_component_delta": 4.440892098500626e-16,
+  "NR": 2.7597173432143904,
+  "FR": 1.3216533660888672,
+  "S_proxy": 4.081370709303258,
+  "actual_checkpoint_sha256": "283cb7d051a4686e558057b8fb0dcd927b47a8cb7474101fab4162c457c2bb83",
+  "actual_runner_sha256": "276da6fe32a8e67f595f6ecf8a95b4b3ad2d87ec2beb0ca9b8fb1822777ff972",
+  "original_renderer_scorer_metric_sources_PASS": true,
+  "actual_metric_weights_sha256": {
+    "clip/RN50.pt": "afeb0e10f9e5a86da6080e35cf09123aca3b358a0c3e3b6c78a7b63bc04b6762",
+    "torch/hub/checkpoints/DISTS_weights-f5e65c96.pth": "f5e65c96230b7f6ca995691647d482237e4cab8a50c5c4a5784f219ef0748218",
+    "torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0",
+    "torch/hub/checkpoints/alexnet-owt-7be5be79.pth": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+    "torch/hub/checkpoints/ckpt_koniq10k.pt": "a207f8ab57322e6be38ff5c8d019301dc032b454bef21c3c9f9dbf7974eebff6",
+    "torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth": "e95806b9eae5f3814c410f574ba8e552362bd5bc63d758ed5b97860f5d6185aa",
+    "torch/hub/checkpoints/niqe_modelparameters.mat": "fa2aa4d12dd9595c3fb6bf8b4e1a15c79d5d1469238d0901c88dead195be578d",
+    "torch/hub/checkpoints/vgg16-397923af.pth": "397923af8e79cdbb6a7127f12361acd7a2f83e06b05044ddf496e83de57a5bf0"
+  },
+  "render_protocol_id": "87338b90a3e9edd98283cd780f855e4ea4808926e211e891d9771c52fbf6155e",
+  "metadata_file_SHA256": {
+    "/cache/independent_sr_cuda_20261013/nr_push5_full_evaluations/push5_g4_reference_full/render_manifest.json": "b4002c286f9e1b32e9ec954cb1ad3f730c3ce9f851a9e163b268a78c4db663ee",
+    "/cache/independent_sr_cuda_20261013/nr_push5_full_evaluations/push5_g4_reference_full/render_protocol.json": "7bb0417630f0fa3cced94c148629e20f001e9c02cf05fb2679f96f5ab6c7a5b3",
+    "/cache/independent_sr_cuda_20261013/nr_push5_full_evaluations/push5_g4_reference_full/scores/result.json": "120d8695987514b33f86167aa31f451b2e77574ba076b0516ebc62fd621d7910",
+    "/cache/independent_sr_cuda_20261013/nr_push5_full_evaluations/push5_g4_reference_full/scores/protocol.json": "12f6a21421bf91a4ae4300f7a0ac8fa35ed22152d4fd8223adca3ec99a81b6b0",
+    "/cache/independent_sr_cuda_20261013/nr_push5_full_evaluations/push5_g4_reference_full/scores/measurements.jsonl": "0c0760cd840f7994da4155f78c9bf266258e878006dad391c79782b4021a67df"
+  },
+  "all_actual_PNG_input_GT_records_digest_SHA256": "68afa0a7726d794b5ce7f0a97a9410313ec67b794443c332cbd80b2c4c5e0043",
+  "score_seed": 1234,
+  "score_seed_scope": "once at start of each split for each label, continuous draw order within that split",
+  "metric_order": {
+    "validation": [
+      "lpips",
+      "dists",
+      "niqe",
+      "musiq",
+      "maniqa",
+      "clipiqa"
+    ],
+    "test": [
+      "niqe",
+      "musiq",
+      "maniqa",
+      "clipiqa"
+    ]
+  },
+  "image_policy": "CM.load_img original FP32 RGB[0,1]; FR FP16 autocast only; all NR original FP32; no resize or edits",
+  "not_official_leaderboard_score": true,
+  "prediction_not_computed_without_fresh_same_card_latency": true
+}

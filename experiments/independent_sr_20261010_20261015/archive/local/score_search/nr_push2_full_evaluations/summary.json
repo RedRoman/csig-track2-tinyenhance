@@ -1,0 +1,255 @@
+{
+  "status": "PASS",
+  "updated_bjt": "2026-10-14T18:13:36.267967+08:00",
+  "scope": "Full test100_NR + validation3_FR local proxy; no latency/official total; pilots excluded",
+  "reference": {
+    "label": "nr_conservative_s6250_compiled_all",
+    "NR": 2.2663850433592483,
+    "FR": 1.463716487089793,
+    "S_proxy": 3.7301015304490415,
+    "component_means": {
+      "validation": {
+        "lpips": 0.3347981770833333,
+        "dists": 0.20148533582687378,
+        "niqe": 3.957624178170217,
+        "musiq": 48.1028086344401,
+        "maniqa": 0.5069840252399445,
+        "clipiqa": 0.7213497559229533
+      },
+      "test": {
+        "niqe": 4.024103259678197,
+        "musiq": 42.35499105453491,
+        "maniqa": 0.5128058835864067,
+        "clipiqa": 0.7324395751953126
+      }
+    },
+    "audit_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/audits/nr_cuda_full_s6250_audit.json",
+    "audit_sha256": "9ed317059baee61e884e362151cc234be41ea7819dca6d7dc79e9400dc21eec5"
+  },
+  "evaluations": [
+    {
+      "label": "nr_stage2_cont_s6500_compiled_all",
+      "status": "PASS",
+      "NR": 2.268540837285129,
+      "FR": 1.4624083042144775,
+      "S_proxy": 3.7309491414996065,
+      "component_means": {
+        "validation": {
+          "lpips": 0.3352864583333333,
+          "dists": 0.20230523745218912,
+          "niqe": 3.9718901321810756,
+          "musiq": 48.08006032307943,
+          "maniqa": 0.51003364721934,
+          "clipiqa": 0.7236720323562622
+        },
+        "test": {
+          "niqe": 4.0349345400610765,
+          "musiq": 42.250487174987796,
+          "maniqa": 0.5151670348644256,
+          "clipiqa": 0.7343623846769333
+        }
+      },
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "training": {
+        "run": "cuda_nr_stage2_s6250_cont250",
+        "local_steps": 250,
+        "global_step": 6500,
+        "Adam_step": 500,
+        "anchor": "frozen raw current6000, unfused/uncompiled, same latent and coefficient",
+        "musiq_reward_weight": 1.0,
+        "nr_round_ste": false,
+        "config_sha256": "24bb8e737f7a2a204510a3b6e921531e680ccc40ec7240bdb9545ceb95e30879"
+      },
+      "delta_NR_contributions": {
+        "niqe_clamp": -0.0010831280382879171,
+        "musiq_over100": -0.0010450387954711714,
+        "maniqa": 0.002361151278018947,
+        "clipiqa": 0.001922809481620713
+      },
+      "same_order_input_GT_as_parent6250": true,
+      "same_source_hashes_as_parent6250": true,
+      "same_render_post_rng_as_parent6250": true,
+      "same_score_post_rng_as_parent6250": true,
+      "actual_checkpoint_sha256": "dc7bbf712e3039302a52951075409a23771b8d832024d1800bbe3398c41d4afa",
+      "render_protocol_id": "a5291487ad8aed4baf064d34edcf89fbda92258eaa264f97ce27c7c2c2a5c766",
+      "delta_vs_parent6250_full": {
+        "NR": 0.0021557939258807224,
+        "FR": -0.0013081828753154223,
+        "S_proxy": 0.000847611050565078
+      },
+      "test_component_delta_vs_parent6250_full": {
+        "niqe": 0.010831280382879171,
+        "musiq": -0.10450387954711715,
+        "maniqa": 0.002361151278018947,
+        "clipiqa": 0.001922809481620713
+      },
+      "max_mean_formula_delta": 0.0,
+      "sha_checks": {
+        "actual_png_manifest_scored": 103,
+        "actual_source_inputs": 103,
+        "actual_GT": 3,
+        "metric_weights": 8,
+        "base_assets": 13,
+        "downloaded_small_files": 7,
+        "source_and_protocol_fingerprint": "PASS"
+      },
+      "audit_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push2_full_evaluations/audits/nr_stage2_cont_s6500_compiled_all_audit.json",
+      "audit_sha256": "c056b6a74ede53fc3a3fc4768349c2cff5eed313050240ca2b4900855f819132",
+      "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_push2_full_evaluations/nr_stage2_cont_s6500_compiled_all"
+    },
+    {
+      "label": "nr_stage3_anchor6250_m1_s6500_compiled_all",
+      "status": "PASS",
+      "NR": 2.2761981143649948,
+      "FR": 1.4625590046246848,
+      "S_proxy": 3.7387571189896796,
+      "component_means": {
+        "validation": {
+          "lpips": 0.3349202473958333,
+          "dists": 0.20252074797948202,
+          "niqe": 4.022872769448781,
+          "musiq": 47.249532063802086,
+          "maniqa": 0.5207272867361704,
+          "clipiqa": 0.7312482396761576
+        },
+        "test": {
+          "niqe": 4.05741865164386,
+          "musiq": 41.66794410705566,
+          "maniqa": 0.5245511955022812,
+          "clipiqa": 0.740709342956543
+        }
+      },
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "training": {
+        "run": "cuda_nr_stage3_s6250_anchor6250_m1_250",
+        "local_steps": 250,
+        "global_step": 6500,
+        "Adam_step": 500,
+        "anchor": "frozen parent6250 exact FP32 LoRA from sealed resume, same latent/coeff175",
+        "musiq_reward_weight": 1.0,
+        "nr_round_ste": false,
+        "config_sha256": "94007c563d60a4191858dd29fc1cb66f25cca742a38dd0070e6a08cf36a4ec97"
+      },
+      "delta_NR_contributions": {
+        "niqe_clamp": -0.0033315391965662577,
+        "musiq_over100": -0.006870469474792529,
+        "maniqa": 0.011745311915874579,
+        "clipiqa": 0.008269767761230451
+      },
+      "same_order_input_GT_as_parent6250": true,
+      "same_source_hashes_as_parent6250": true,
+      "same_render_post_rng_as_parent6250": true,
+      "same_score_post_rng_as_parent6250": true,
+      "actual_checkpoint_sha256": "b05e784a08b7082a4ecae63a814d71834068ceb5e9baf26eded3836b29bcc0b8",
+      "render_protocol_id": "3df15aa88ea0bbba1502393fb737316c660abfb60b43c919f39394e77481c2a6",
+      "delta_vs_parent6250_full": {
+        "NR": 0.009813071005746465,
+        "FR": -0.0011574824651081617,
+        "S_proxy": 0.008655588540638082
+      },
+      "test_component_delta_vs_parent6250_full": {
+        "niqe": 0.03331539196566258,
+        "musiq": -0.6870469474792529,
+        "maniqa": 0.011745311915874579,
+        "clipiqa": 0.008269767761230451
+      },
+      "max_mean_formula_delta": 8.881784197001252e-16,
+      "sha_checks": {
+        "actual_png_manifest_scored": 103,
+        "actual_source_inputs": 103,
+        "actual_GT": 3,
+        "metric_weights": 8,
+        "base_assets": 13,
+        "downloaded_small_files": 7,
+        "source_and_protocol_fingerprint": "PASS"
+      },
+      "audit_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push2_full_evaluations/audits/nr_stage3_anchor6250_m1_s6500_compiled_all_audit.json",
+      "audit_sha256": "e0becd097306655caf50261ee7810204d52c9c2b205f928c2d75d7f2e47faa62",
+      "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_push2_full_evaluations/nr_stage3_anchor6250_m1_s6500_compiled_all"
+    },
+    {
+      "label": "nr_stage3_anchor6250_m15_s6500_compiled_all",
+      "status": "PASS",
+      "NR": 2.2783103602882613,
+      "FR": 1.4614406824111938,
+      "S_proxy": 3.739751042699455,
+      "component_means": {
+        "validation": {
+          "lpips": 0.3356526692708333,
+          "dists": 0.2029066483179728,
+          "niqe": 4.022908975508362,
+          "musiq": 47.257303873697914,
+          "maniqa": 0.5225606064001719,
+          "clipiqa": 0.7321851849555969
+        },
+        "test": {
+          "niqe": 4.056440645817529,
+          "musiq": 41.60927984237671,
+          "maniqa": 0.5261591479182244,
+          "clipiqa": 0.7417024785280227
+        }
+      },
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "training": {
+        "run": "cuda_nr_stage3_s6250_anchor6250_m15_250",
+        "local_steps": 250,
+        "global_step": 6500,
+        "Adam_step": 500,
+        "anchor": "frozen parent6250 exact FP32 LoRA from sealed resume, same latent/coeff175",
+        "musiq_reward_weight": 1.5,
+        "nr_round_ste": false,
+        "config_sha256": "c6beaad0a6427a3eaaf3e829c04a25982c7ddbcb2df5c157f0aa37df686e0c5a"
+      },
+      "delta_NR_contributions": {
+        "niqe_clamp": -0.003233738613933057,
+        "musiq_over100": -0.007457112121582057,
+        "maniqa": 0.013353264331817716,
+        "clipiqa": 0.009262903332710182
+      },
+      "same_order_input_GT_as_parent6250": true,
+      "same_source_hashes_as_parent6250": true,
+      "same_render_post_rng_as_parent6250": true,
+      "same_score_post_rng_as_parent6250": true,
+      "actual_checkpoint_sha256": "cfcc3013fa87aa721f346d6cc285e70b6d6ff2c88315ce9f1465b07ffe020e68",
+      "render_protocol_id": "ac0d71d87fd93dea447304288c13361c639d9cbc445d06c0af7601e94a16d3d1",
+      "delta_vs_parent6250_full": {
+        "NR": 0.011925316929012997,
+        "FR": -0.0022758046785991137,
+        "S_proxy": 0.009649512250413661
+      },
+      "test_component_delta_vs_parent6250_full": {
+        "niqe": 0.03233738613933124,
+        "musiq": -0.7457112121582057,
+        "maniqa": 0.013353264331817716,
+        "clipiqa": 0.009262903332710182
+      },
+      "max_mean_formula_delta": 0.0,
+      "sha_checks": {
+        "actual_png_manifest_scored": 103,
+        "actual_source_inputs": 103,
+        "actual_GT": 3,
+        "metric_weights": 8,
+        "base_assets": 13,
+        "downloaded_small_files": 7,
+        "source_and_protocol_fingerprint": "PASS"
+      },
+      "audit_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push2_full_evaluations/audits/nr_stage3_anchor6250_m15_s6500_compiled_all_audit.json",
+      "audit_sha256": "9a0cd981f602c513352cff97f3160419bc5f2f1046689eba4593584a5d8bb68d",
+      "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_push2_full_evaluations/nr_stage3_anchor6250_m15_s6500_compiled_all"
+    }
+  ],
+  "pending": [],
+  "auditor_source_sha256": "9fa29d0a5f435cb8654bbb515d75466460c064bd521e550192e0c734f302d39c",
+  "notes": [
+    "All compared values are full103 values. Pilot subsets are not compared with full test NR.",
+    "Eight actual metric weights and 13 base assets hashed. Actual PNG/input/GT/source/checkpoint hashes verified.",
+    "Each split was seeded once1234, and committed RNG checkpoints match their protocol/context and rows.",
+    "CPU audit did not rerun models or score metrics, and did not initialize CUDA.",
+    "One fixed test set is used for training/model selection; small gains are empirical local proxy differences, not statistical/official leaderboard or unseen-data guarantees.",
+    "418 scalars are not independent samples; FR uses only3 validation images; one seed gives no cross-seed confidence interval.",
+    "Training MUSIQ reward weights do not change the formal scoring coefficient1/100."
+  ]
+}

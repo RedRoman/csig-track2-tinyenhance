@@ -1,0 +1,43 @@
+{
+  "schema": "hypir_trt_vae_hybrid_candidate_v1",
+  "status": "CPU_PREPARED_ACTUAL_ARTIFACT_HASHES",
+  "label": "push7_a7750_trtvae_fp16",
+  "model_type": "HYPIR_SD2_rank256_TRT_VAE_native512",
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/model_dir",
+  "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "runner_sha256": "2bc74f65029c5c95c9a8c285bf7db1c63b03a15fb9fa06cd56d93cf6b1fe2fc9",
+  "config_sha256": "661bf9bd6a7ecb2ae5b475dda9dcd855700bb52be87ab0f2b6d97740f32308f4",
+  "reference_runner_sha256": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b",
+  "TRT_runtime_sha256": "dc2597edfe8a7d71526535bd4e7540bd9c7623de00b6639c61139e08837aa9a4",
+  "original_VAE_sha256": "a1d993488569e928462932c8c38a0760b874d166399b14414135bd9c42df5815",
+  "actual_engines": {
+    "encoder": {
+      "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine",
+      "sha256": "14c206896a7caa6b6491dae33133d149283025cfb8e15b6cf129d8854176ba55",
+      "bytes": 71304884,
+      "manifest": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component_manifest.json",
+      "manifest_sha256": "21d3781a5cc092062d4ef87844e74ce916c461ea5b9939658917333d74a2f0ae"
+    },
+    "decoder": {
+      "path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine",
+      "sha256": "fe81087086d76aa8d0111cb80070b65b897e0438ebb2a8a020ef0ced8bc6bf30",
+      "bytes": 102396372,
+      "manifest": "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component_manifest.json",
+      "manifest_sha256": "1a3a349641e65ca5ad5d92301b25b3b1eae214e760645b5a7c294460f0ac08fd"
+    }
+  },
+  "no_training": true,
+  "no_distillation": true,
+  "scale": 1,
+  "patch": 512,
+  "stride": 256,
+  "quality_reuse_claim": false,
+  "requires_new_actual_full103_418": true,
+  "CPU_preparer_sha256": "b568f634224d3c8862868c0f367e3ee77aa2d7519598b54aed41aa7a7882b9a5",
+  "formal_latency_required_extra_hash_files": [
+    "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+    "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_fp16/component.engine",
+    "/cache/independent_sr_cuda_20261013/backends/push7_trt/decoder_fp16/component.engine"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "push6_hypir_sameweight_speed_candidate_v1",
+  "label": "push6_a7750_clro_unet_autotune",
+  "CPU_only_preparation": true,
+  "GPU_started_by_preparation_agent": false,
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push6_a7750_clro_unet_autotune/model_dir",
+  "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "reference_selection_sha256": "b3148b21f466854f9fe8f81c7eca1348da5bf793141799573ff3be8b20e25c3f",
+  "parent_reference_runner_sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae",
+  "starting_speed_candidate_runner_sha256": "34a70fae57bc412fd3e0394e0573942e63c2764334847dab67eee3c4b696b092",
+  "runner_sha256": "23814ee8e8991ea139bbbf5f6ab8c298d80ffa41a1aaf479ec6384dc1b400811",
+  "config_sha256": "66c75c08c499cb509775c320ea417647c957edb37ee37ffb43a0f0a5c616a6b5",
+  "changes_from39ms_candidate": [
+    "Only UNet.forward compile mode becomes max-autotune-no-cudagraphs with fullgraph=True; VAE/wavelet retain reduce-overhead",
+    "New label/path/protocol provenance text; same infer AST"
+  ],
+  "unchanged": [
+    "All network weights, BF16 precision and TF32/cudnn flags",
+    "All Gaussian tile accumulation/count division",
+    "posterior.sample and DDPM calls and their ordered RNG consumption",
+    "FP16 CUDA input/FP32 CUDA output/native sizes",
+    "Original scorer, benchmark, predict and HYPIR repo sources"
+  ],
+  "numerical_equivalence_assumed": false,
+  "full_quality_required_if_any_output_change": true,
+  "quality_priority": "A7750 remains preferred baseline; text/rail/edge deformation cannot be accepted for score or speed",
+  "bounded_run_guidance": "Autotune may take several minutes. Root assigns GPU and timeout; unsupported fullgraph or bad RNG/output ownership means stop this independent candidate, never hot-edit old sources.",
+  "expected_benefit": "Unmeasured; concentrating kernel search on UNet may improve compute while retaining VAE/wavelet graph launch savings. No 2x or70 claim."
+}

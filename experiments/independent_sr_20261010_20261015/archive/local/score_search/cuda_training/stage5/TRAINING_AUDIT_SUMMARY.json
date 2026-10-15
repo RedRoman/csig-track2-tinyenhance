@@ -1,0 +1,261 @@
+{
+  "schema": "stage5_push4_all6_saved_milestones_training_audit_summary_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "CUDA_context_initialized": false,
+  "created_utc": "2026-10-14T13:10:37.642658+00:00",
+  "parent_global_step": 7250,
+  "parent_Adam_step": 1250,
+  "branch_count": 3,
+  "saved_milestone_count": 6,
+  "scope": "Training identity and state integrity only. Official tool score and selection require independent pilot/full evaluation.",
+  "same_case_crop_sequence_across_branches": {
+    "250": true,
+    "500": true
+  },
+  "same_four_RNG_across_branches": {
+    "250": true,
+    "500": true
+  },
+  "initial_migration_PASS": true,
+  "all514_FP32_raw_equal_resume_Adam_finite_and_counters_PASS": true,
+  "frozen_source_v5_sha256": "4b5bdf40aab5d2fd35c92f8fc714c675e62bd86228bc3fb79e48e896b70278f2",
+  "evidence_files": {
+    "independent_audit_plan.json": {
+      "bytes": 8980,
+      "sha256": "7bcf151781e4341f85d1296ec76e4527c62d93e374c900638504e5109542ee3e"
+    },
+    "audit_stage5_cpu.py": {
+      "bytes": 20161,
+      "sha256": "e07bf36ebf8b1bd0457129a565e151bd0086602e780f1a58283be81103160195"
+    },
+    "initial_stage5_cpu.py": {
+      "bytes": 7014,
+      "sha256": "3e863366dbbfd5cc35ace0c99a9d39c63085c018596f6aea2841611b433a97d7"
+    },
+    "initial_cpu_audit.json": {
+      "bytes": 5621,
+      "sha256": "93127bff6d0f56c7a312c9822d76e67c035d8c0c2bea5af67090c16a5dd32d0b"
+    },
+    "milestone250_cpu_audit.json": {
+      "bytes": 43392,
+      "sha256": "fabe01704e20c9c3399c9982b270eb7d46d8fca4bddbb170785a5ed5b5465f4e"
+    },
+    "milestone500_cpu_audit.json": {
+      "bytes": 43389,
+      "sha256": "9d4e72d67a9c19f517c7928bc3311fbaef9cf1ef93bbd4a506872732dc86ae47"
+    },
+    "backup_recipe_static_review.json": {
+      "bytes": 1604,
+      "sha256": "1d45359bf3cda2f331c6fa8fb42902fbab23b7acf69a6c3bbac9e9605dbb1818"
+    },
+    "previous_full_plateau_diagnostic.json": {
+      "bytes": 8323,
+      "sha256": "98a22625f4fb878da6ab4f1dabf495a199e24bd473a9bf5609c444e14810b185"
+    },
+    "PREVIOUS_PLATEAU_AND_SHORT_PLAN.md": {
+      "bytes": 3148,
+      "sha256": "4688b338b7a107bf614b14d41c0838dd2fd707e5a016910c096c3acd78a230f8"
+    }
+  },
+  "milestones": [
+    {
+      "run": "cuda_nr_stage5_s7250_teacher6500_continue500",
+      "local_step": 250,
+      "global_step": 7500,
+      "Adam_step": 1500,
+      "LoRA": {
+        "keys": 514,
+        "elements": 259474432,
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "all_finite": true
+      },
+      "FP32_delta_vs_parent7250": {
+        "changed_elements": 259464580,
+        "changed_fraction": 0.9999620309410678,
+        "tensors_changed": 514,
+        "l2": 0.05469205027851861,
+        "max_abs": 2.897484228014946e-05
+      },
+      "checkpoint": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7500.pth",
+        "bytes": 1038079419,
+        "sha256": "2f42290e89af582a532b75e4871cf8fa92fce0d8bbd86c5dc0ebe00286657b70",
+        "mtime_bjt": "2026-10-14T21:04:09.517209+08:00"
+      },
+      "resume": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/resume_step7500.pt",
+        "bytes": 3114332685,
+        "sha256": "9b286f93797a4160ff3bd38647d2a9b9a509eae6efa0e97b8c3608d4fa888e6d",
+        "mtime_bjt": "2026-10-14T21:04:13.027270+08:00"
+      },
+      "source_audit": "milestone250_cpu_audit.json"
+    },
+    {
+      "run": "cuda_nr_stage5_s7250_teacher6500_m25_500",
+      "local_step": 250,
+      "global_step": 7500,
+      "Adam_step": 1500,
+      "LoRA": {
+        "keys": 514,
+        "elements": 259474432,
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "all_finite": true
+      },
+      "FP32_delta_vs_parent7250": {
+        "changed_elements": 259465809,
+        "changed_fraction": 0.9999667674385737,
+        "tensors_changed": 514,
+        "l2": 0.06128709158447756,
+        "max_abs": 3.248953726142645e-05
+      },
+      "checkpoint": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_500/step7500.pth",
+        "bytes": 1038079419,
+        "sha256": "70f3d12dbf8bb094ab6d5ed8c1da0d61f39783460201ea3a08b5647714462aab",
+        "mtime_bjt": "2026-10-14T21:04:00.611056+08:00"
+      },
+      "resume": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_500/resume_step7500.pt",
+        "bytes": 3114332749,
+        "sha256": "6097e41327e42483d76181e21587b8c4e64f4004552e030753e533cfa0b1c045",
+        "mtime_bjt": "2026-10-14T21:04:03.632108+08:00"
+      },
+      "source_audit": "milestone250_cpu_audit.json"
+    },
+    {
+      "run": "cuda_nr_stage5_s7250_teacher6500_m25_r10_500",
+      "local_step": 250,
+      "global_step": 7500,
+      "Adam_step": 1500,
+      "LoRA": {
+        "keys": 514,
+        "elements": 259474432,
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "all_finite": true
+      },
+      "FP32_delta_vs_parent7250": {
+        "changed_elements": 259465286,
+        "changed_fraction": 0.9999647518257213,
+        "tensors_changed": 514,
+        "l2": 0.05380825609743411,
+        "max_abs": 2.3073225747793913e-05
+      },
+      "checkpoint": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_r10_500/step7500.pth",
+        "bytes": 1038079419,
+        "sha256": "4d6bc029c1c32693e22ec279d651759d96ad1b8bca32a69c7bbf26657ee31f5f",
+        "mtime_bjt": "2026-10-14T21:04:01.397069+08:00"
+      },
+      "resume": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_r10_500/resume_step7500.pt",
+        "bytes": 3114332813,
+        "sha256": "8fda7ca1850537297500ec267b79ff7c4d2f9de4263f094fdbf239d50aa5a070",
+        "mtime_bjt": "2026-10-14T21:04:04.664126+08:00"
+      },
+      "source_audit": "milestone250_cpu_audit.json"
+    },
+    {
+      "run": "cuda_nr_stage5_s7250_teacher6500_continue500",
+      "local_step": 500,
+      "global_step": 7750,
+      "Adam_step": 1750,
+      "LoRA": {
+        "keys": 514,
+        "elements": 259474432,
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "all_finite": true
+      },
+      "FP32_delta_vs_parent7250": {
+        "changed_elements": 259467859,
+        "changed_fraction": 0.9999746680243239,
+        "tensors_changed": 514,
+        "l2": 0.08031323433665348,
+        "max_abs": 5.10169193148613e-05
+      },
+      "checkpoint": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+        "bytes": 1038079419,
+        "sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+        "mtime_bjt": "2026-10-14T21:08:13.685447+08:00"
+      },
+      "resume": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/resume_step7750.pt",
+        "bytes": 3114332685,
+        "sha256": "e240f3e810654e9503ed620a1007649d2dd056c290960b442e220e0a1451a83b",
+        "mtime_bjt": "2026-10-14T21:08:17.123507+08:00"
+      },
+      "source_audit": "milestone500_cpu_audit.json"
+    },
+    {
+      "run": "cuda_nr_stage5_s7250_teacher6500_m25_500",
+      "local_step": 500,
+      "global_step": 7750,
+      "Adam_step": 1750,
+      "LoRA": {
+        "keys": 514,
+        "elements": 259474432,
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "all_finite": true
+      },
+      "FP32_delta_vs_parent7250": {
+        "changed_elements": 259468471,
+        "changed_fraction": 0.9999770266382161,
+        "tensors_changed": 514,
+        "l2": 0.09233152826020674,
+        "max_abs": 5.539553239941597e-05
+      },
+      "checkpoint": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_500/step7750.pth",
+        "bytes": 1038079419,
+        "sha256": "03dc54bc9c748c0cdfa6889e1f5ac2dd07716b87a6c2fd0601b6c4c1af8ecbb6",
+        "mtime_bjt": "2026-10-14T21:07:52.405078+08:00"
+      },
+      "resume": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_500/resume_step7750.pt",
+        "bytes": 3114332749,
+        "sha256": "729d3d8f22858c8cd811d7bbafa97a361a623addb9f5872805dbe970396390a0",
+        "mtime_bjt": "2026-10-14T21:07:55.405129+08:00"
+      },
+      "source_audit": "milestone500_cpu_audit.json"
+    },
+    {
+      "run": "cuda_nr_stage5_s7250_teacher6500_m25_r10_500",
+      "local_step": 500,
+      "global_step": 7750,
+      "Adam_step": 1750,
+      "LoRA": {
+        "keys": 514,
+        "elements": 259474432,
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "all_finite": true
+      },
+      "FP32_delta_vs_parent7250": {
+        "changed_elements": 259467717,
+        "changed_fraction": 0.9999741207642378,
+        "tensors_changed": 514,
+        "l2": 0.07714669393555397,
+        "max_abs": 4.373490810394287e-05
+      },
+      "checkpoint": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_r10_500/step7750.pth",
+        "bytes": 1038079419,
+        "sha256": "c953cb853a2a98e1563171798af9d4cb5d034957a4d7da444eb1e25fd6db96a3",
+        "mtime_bjt": "2026-10-14T21:07:55.223126+08:00"
+      },
+      "resume": {
+        "path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_r10_500/resume_step7750.pt",
+        "bytes": 3114332813,
+        "sha256": "1d10cb6059ef95f38236fe5e5f3b9e1bbbabc4825849198d7bed097288b05d18",
+        "mtime_bjt": "2026-10-14T21:07:59.942208+08:00"
+      },
+      "source_audit": "milestone500_cpu_audit.json"
+    }
+  ]
+}

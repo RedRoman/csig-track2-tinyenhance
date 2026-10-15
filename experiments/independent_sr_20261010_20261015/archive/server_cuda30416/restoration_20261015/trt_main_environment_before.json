@@ -1,0 +1,765 @@
+{
+  "python": "/cache/independent_sr_cuda_20261013/env/bin/python",
+  "distributions": [
+    {
+      "name": "ImageIO",
+      "version": "2.38.1",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/imageio-2.38.1.dist-info"
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/jinja2-3.1.6.dist-info"
+    },
+    {
+      "name": "Markdown",
+      "version": "3.11",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/markdown-3.11.dist-info"
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.3",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/markupsafe-3.0.3.dist-info"
+    },
+    {
+      "name": "PyJWT",
+      "version": "2.10.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/PyJWT-2.10.1.dist-info"
+    },
+    {
+      "name": "PySocks",
+      "version": "1.7.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/PySocks-1.7.1.dist-info"
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/pyyaml-6.0.3.dist-info"
+    },
+    {
+      "name": "Pygments",
+      "version": "2.19.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/pygments-2.19.1.dist-info"
+    },
+    {
+      "name": "SecretStorage",
+      "version": "3.3.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/SecretStorage-3.3.1.dist-info"
+    },
+    {
+      "name": "Werkzeug",
+      "version": "3.1.9",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/werkzeug-3.1.9.dist-info"
+    },
+    {
+      "name": "absl-py",
+      "version": "2.5.1",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/absl_py-2.5.1.dist-info"
+    },
+    {
+      "name": "accelerate",
+      "version": "1.10.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/accelerate-1.10.1.dist-info"
+    },
+    {
+      "name": "addict",
+      "version": "2.4.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/addict-2.4.0.dist-info"
+    },
+    {
+      "name": "anaconda-anon-usage",
+      "version": "0.7.2",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/anaconda_anon_usage-0.7.2.dist-info"
+    },
+    {
+      "name": "anaconda-auth",
+      "version": "0.8.6",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/anaconda_auth-0.8.6.dist-info"
+    },
+    {
+      "name": "anaconda-cli-base",
+      "version": "0.5.2",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/anaconda_cli_base-0.5.2.dist-info"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.6.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/annotated_types-0.6.0.dist-info"
+    },
+    {
+      "name": "antlr4-python3-runtime",
+      "version": "4.9.3",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/antlr4_python3_runtime-4.9.3.dist-info"
+    },
+    {
+      "name": "archspec",
+      "version": "0.2.3",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/archspec-0.2.3.dist-info"
+    },
+    {
+      "name": "boltons",
+      "version": "25.0.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/boltons-25.0.0.dist-info"
+    },
+    {
+      "name": "brotlicffi",
+      "version": "1.0.9.2",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/brotlicffi-1.0.9.2.dist-info"
+    },
+    {
+      "name": "certifi",
+      "version": "2025.8.3",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/certifi-2025.8.3.dist-info"
+    },
+    {
+      "name": "cffi",
+      "version": "1.17.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/cffi-1.17.1.dist-info"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.3.2",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/charset_normalizer-3.3.2.dist-info"
+    },
+    {
+      "name": "click",
+      "version": "8.2.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/click-8.2.1.dist-info"
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/colorama-0.4.6.dist-info"
+    },
+    {
+      "name": "conda",
+      "version": "25.7.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/conda-25.7.0.dist-info"
+    },
+    {
+      "name": "conda-anaconda-telemetry",
+      "version": "0.3.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/conda_anaconda_telemetry-0.3.0.dist-info"
+    },
+    {
+      "name": "conda-anaconda-tos",
+      "version": "0.2.2",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/conda_anaconda_tos-0.2.2.dist-info"
+    },
+    {
+      "name": "conda-content-trust",
+      "version": "0.2.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/conda_content_trust-0.2.0.dist-info"
+    },
+    {
+      "name": "conda-libmamba-solver",
+      "version": "25.4.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/conda_libmamba_solver-25.4.0.dist-info"
+    },
+    {
+      "name": "conda-package-handling",
+      "version": "2.4.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/conda_package_handling-2.4.0.dist-info"
+    },
+    {
+      "name": "conda_package_streaming",
+      "version": "0.12.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/conda_package_streaming-0.12.0.dist-info"
+    },
+    {
+      "name": "contourpy",
+      "version": "1.4.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/contourpy-1.4.0.dist-info"
+    },
+    {
+      "name": "cryptography",
+      "version": "45.0.5",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/cryptography-45.0.5.dist-info"
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/cycler-0.12.1.dist-info"
+    },
+    {
+      "name": "diffusers",
+      "version": "0.33.1",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/diffusers-0.33.1.dist-info"
+    },
+    {
+      "name": "diffusers",
+      "version": "0.35.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/diffusers-0.35.1.dist-info"
+    },
+    {
+      "name": "distro",
+      "version": "1.9.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/distro-1.9.0.dist-info"
+    },
+    {
+      "name": "einops",
+      "version": "0.8.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/einops-0.8.1.dist-info"
+    },
+    {
+      "name": "facexlib",
+      "version": "0.3.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/facexlib-0.3.0.dist-info"
+    },
+    {
+      "name": "filelock",
+      "version": "3.19.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/filelock-3.19.1.dist-info"
+    },
+    {
+      "name": "filterpy",
+      "version": "1.4.5",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/filterpy-1.4.5.dist-info"
+    },
+    {
+      "name": "flash_attn",
+      "version": "2.8.3",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/flash_attn-2.8.3.dist-info"
+    },
+    {
+      "name": "fonttools",
+      "version": "4.66.1",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/fonttools-4.66.1.dist-info"
+    },
+    {
+      "name": "frozendict",
+      "version": "2.4.2",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/frozendict-2.4.2.dist-info"
+    },
+    {
+      "name": "fsspec",
+      "version": "2025.9.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/fsspec-2025.9.0.dist-info"
+    },
+    {
+      "name": "ftfy",
+      "version": "6.3.1",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/ftfy-6.3.1.dist-info"
+    },
+    {
+      "name": "future",
+      "version": "1.0.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/future-1.0.0.dist-info"
+    },
+    {
+      "name": "grpcio",
+      "version": "1.84.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/grpcio-1.84.0.dist-info"
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.1.10",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/hf_xet-1.1.10.dist-info"
+    },
+    {
+      "name": "huggingface-hub",
+      "version": "0.35.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/huggingface_hub-0.35.1.dist-info"
+    },
+    {
+      "name": "idna",
+      "version": "3.7",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/idna-3.7.dist-info"
+    },
+    {
+      "name": "imgaug",
+      "version": "0.4.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/imgaug-0.4.0.dist-info"
+    },
+    {
+      "name": "importlib_metadata",
+      "version": "8.7.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/importlib_metadata-8.7.0.dist-info"
+    },
+    {
+      "name": "jaraco.classes",
+      "version": "3.4.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/jaraco_classes-3.4.0.dist-info"
+    },
+    {
+      "name": "jaraco.context",
+      "version": "0.0.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/jaraco.context-0.0.0.dist-info"
+    },
+    {
+      "name": "jaraco.functools",
+      "version": "4.1.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/jaraco.functools-4.1.0.dist-info"
+    },
+    {
+      "name": "jeepney",
+      "version": "0.7.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/jeepney-0.7.1.dist-info"
+    },
+    {
+      "name": "jsonpatch",
+      "version": "1.33",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/jsonpatch-1.33.dist-info"
+    },
+    {
+      "name": "jsonpointer",
+      "version": "3.0.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/jsonpointer-3.0.0.dist-info"
+    },
+    {
+      "name": "keyring",
+      "version": "25.6.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/keyring-25.6.0.dist-info"
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.1",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/kiwisolver-1.5.1.dist-info"
+    },
+    {
+      "name": "lazy-loader",
+      "version": "0.6",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/lazy_loader-0.6.dist-info"
+    },
+    {
+      "name": "libmambapy",
+      "version": "2.0.5",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/libmambapy-2.0.5.dist-info"
+    },
+    {
+      "name": "llvmlite",
+      "version": "0.50.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/llvmlite-0.50.0.dist-info"
+    },
+    {
+      "name": "lmdb",
+      "version": "3.0.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/lmdb-3.0.0.dist-info"
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "2.2.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/markdown_it_py-2.2.0.dist-info"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.11.2",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/matplotlib-3.11.2.dist-info"
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/mdurl-0.1.0.dist-info"
+    },
+    {
+      "name": "menuinst",
+      "version": "2.3.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/menuinst-2.3.1.dist-info"
+    },
+    {
+      "name": "more-itertools",
+      "version": "10.3.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/more_itertools-10.3.0.dist-info"
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/mpmath-1.3.0.dist-info"
+    },
+    {
+      "name": "networkx",
+      "version": "3.5",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/networkx-3.5.dist-info"
+    },
+    {
+      "name": "ninja",
+      "version": "1.13.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/ninja-1.13.0.dist-info"
+    },
+    {
+      "name": "numba",
+      "version": "0.68.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/numba-0.68.0.dist-info"
+    },
+    {
+      "name": "numpy",
+      "version": "2.3.3",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/numpy-2.3.3.dist-info"
+    },
+    {
+      "name": "nvidia-cublas-cu12",
+      "version": "12.8.4.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/nvidia_cublas_cu12-12.8.4.1.dist-info"
+    },
+    {
+      "name": "nvidia-cuda-cupti-cu12",
+      "version": "12.8.90",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/nvidia_cuda_cupti_cu12-12.8.90.dist-info"
+    },
+    {
+      "name": "nvidia-cuda-nvrtc-cu12",
+      "version": "12.8.93",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/nvidia_cuda_nvrtc_cu12-12.8.93.dist-info"
+    },
+    {
+      "name": "nvidia-cuda-runtime-cu12",
+      "version": "12.8.90",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/nvidia_cuda_runtime_cu12-12.8.90.dist-info"
+    },
+    {
+      "name": "nvidia-cudnn-cu12",
+      "version": "9.10.2.21",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/nvidia_cudnn_cu12-9.10.2.21.dist-info"
+    },
+    {
+      "name": "nvidia-cufft-cu12",
+      "version": "11.3.3.83",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/nvidia_cufft_cu12-11.3.3.83.dist-info"
+    },
+    {
+      "name": "nvidia-cufile-cu12",
+      "version": "1.13.1.3",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/nvidia_cufile_cu12-1.13.1.3.dist-info"
+    },
+    {
+      "name": "nvidia-curand-cu12",
+      "version": "10.3.9.90",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/nvidia_curand_cu12-10.3.9.90.dist-info"
+    },
+    {
+      "name": "nvidia-cusolver-cu12",
+      "version": "11.7.3.90",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/nvidia_cusolver_cu12-11.7.3.90.dist-info"
+    },
+    {
+      "name": "nvidia-cusparse-cu12",
+      "version": "12.5.8.93",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/nvidia_cusparse_cu12-12.5.8.93.dist-info"
+    },
+    {
+      "name": "nvidia-cusparselt-cu12",
+      "version": "0.7.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/nvidia_cusparselt_cu12-0.7.1.dist-info"
+    },
+    {
+      "name": "nvidia-nccl-cu12",
+      "version": "2.27.3",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/nvidia_nccl_cu12-2.27.3.dist-info"
+    },
+    {
+      "name": "nvidia-nvjitlink-cu12",
+      "version": "12.8.93",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/nvidia_nvjitlink_cu12-12.8.93.dist-info"
+    },
+    {
+      "name": "nvidia-nvtx-cu12",
+      "version": "12.8.90",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/nvidia_nvtx_cu12-12.8.90.dist-info"
+    },
+    {
+      "name": "omegaconf",
+      "version": "2.3.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/omegaconf-2.3.0.dist-info"
+    },
+    {
+      "name": "openai-clip",
+      "version": "1.0.1",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/openai_clip-1.0.1.dist-info"
+    },
+    {
+      "name": "opencv-python",
+      "version": "5.0.0.93",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/opencv_python-5.0.0.93.dist-info"
+    },
+    {
+      "name": "packaging",
+      "version": "25.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/packaging-25.0.dist-info"
+    },
+    {
+      "name": "pandas",
+      "version": "3.0.6",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pandas-3.0.6.dist-info"
+    },
+    {
+      "name": "peft",
+      "version": "0.17.1",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/peft-0.17.1.dist-info"
+    },
+    {
+      "name": "pillow",
+      "version": "11.3.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/pillow-11.3.0.dist-info"
+    },
+    {
+      "name": "pip",
+      "version": "25.1.1",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pip-25.1.1.dist-info"
+    },
+    {
+      "name": "pip",
+      "version": "25.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/pip-25.1.dist-info"
+    },
+    {
+      "name": "pkce",
+      "version": "1.0.3",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/pkce-1.0.3.dist-info"
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.3.7",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/platformdirs-4.3.7.dist-info"
+    },
+    {
+      "name": "pluggy",
+      "version": "1.5.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/pluggy-1.5.0.dist-info"
+    },
+    {
+      "name": "protobuf",
+      "version": "6.32.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/protobuf-6.32.1.dist-info"
+    },
+    {
+      "name": "psutil",
+      "version": "7.1.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/psutil-7.1.0.dist-info"
+    },
+    {
+      "name": "pycosat",
+      "version": "0.6.6",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/pycosat-0.6.6.dist-info"
+    },
+    {
+      "name": "pycparser",
+      "version": "2.21",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/pycparser-2.21.dist-info"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.11.7",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/pydantic-2.11.7.dist-info"
+    },
+    {
+      "name": "pydantic-settings",
+      "version": "2.6.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/pydantic_settings-2.6.1.dist-info"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.33.2",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/pydantic_core-2.33.2.dist-info"
+    },
+    {
+      "name": "pyiqa",
+      "version": "0.1.10",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa-0.1.10.dist-info"
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyparsing-3.3.3.dist-info"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/python_dateutil-2.9.0.post0.dist-info"
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.1.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/python_dotenv-1.1.0.dist-info"
+    },
+    {
+      "name": "readchar",
+      "version": "4.0.5",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/readchar-4.0.5.dist-info"
+    },
+    {
+      "name": "regex",
+      "version": "2025.9.18",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/regex-2025.9.18.dist-info"
+    },
+    {
+      "name": "requests",
+      "version": "2.32.4",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/requests-2.32.4.dist-info"
+    },
+    {
+      "name": "rich",
+      "version": "13.9.4",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/rich-13.9.4.dist-info"
+    },
+    {
+      "name": "ruamel.yaml",
+      "version": "0.18.10",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/ruamel.yaml-0.18.10.dist-info"
+    },
+    {
+      "name": "ruamel.yaml.clib",
+      "version": "0.2.12",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/ruamel.yaml.clib-0.2.12.dist-info"
+    },
+    {
+      "name": "safetensors",
+      "version": "0.6.2",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/safetensors-0.6.2.dist-info"
+    },
+    {
+      "name": "scikit-image",
+      "version": "0.26.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/scikit_image-0.26.0.dist-info"
+    },
+    {
+      "name": "scipy",
+      "version": "1.18.1",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/scipy-1.18.1.dist-info"
+    },
+    {
+      "name": "semver",
+      "version": "3.0.2",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/semver-3.0.2.dist-info"
+    },
+    {
+      "name": "sentencepiece",
+      "version": "0.2.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/sentencepiece-0.2.1.dist-info"
+    },
+    {
+      "name": "setuptools",
+      "version": "78.1.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/setuptools-78.1.1-py3.13.egg-info"
+    },
+    {
+      "name": "shapely",
+      "version": "2.2.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/shapely-2.2.0.dist-info"
+    },
+    {
+      "name": "shellingham",
+      "version": "1.5.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/shellingham-1.5.0.dist-info"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/six-1.17.0.dist-info"
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/sympy-1.14.0.dist-info"
+    },
+    {
+      "name": "tensorboard",
+      "version": "2.21.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/tensorboard-2.21.0.dist-info"
+    },
+    {
+      "name": "tensorboard-data-server",
+      "version": "0.7.2",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/tensorboard_data_server-0.7.2.dist-info"
+    },
+    {
+      "name": "tifffile",
+      "version": "2026.9.20",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/tifffile-2026.9.20.dist-info"
+    },
+    {
+      "name": "timm",
+      "version": "1.0.28",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/timm-1.0.28.dist-info"
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.22.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/tokenizers-0.22.1.dist-info"
+    },
+    {
+      "name": "tomli",
+      "version": "2.2.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/tomli-2.2.1.dist-info"
+    },
+    {
+      "name": "torch",
+      "version": "2.8.0+cu128",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/torch-2.8.0+cu128.dist-info"
+    },
+    {
+      "name": "torchaudio",
+      "version": "2.8.0+cu128",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/torchaudio-2.8.0+cu128.dist-info"
+    },
+    {
+      "name": "torchvision",
+      "version": "0.23.0+cu128",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/torchvision-0.23.0+cu128.dist-info"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.67.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/tqdm-4.67.1.dist-info"
+    },
+    {
+      "name": "transformers",
+      "version": "4.56.2",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/transformers-4.56.2.dist-info"
+    },
+    {
+      "name": "triton",
+      "version": "3.4.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/triton-3.4.0.dist-info"
+    },
+    {
+      "name": "truststore",
+      "version": "0.10.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/truststore-0.10.1.dist-info"
+    },
+    {
+      "name": "typer",
+      "version": "0.9.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/typer-0.9.0.dist-info"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/typing_inspection-0.4.0.dist-info"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.12.2",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/typing_extensions-4.12.2.dist-info"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.5.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/urllib3-2.5.0.dist-info"
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.9.2",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/wcwidth-0.9.2.dist-info"
+    },
+    {
+      "name": "wheel",
+      "version": "0.45.1",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/wheel-0.45.1.dist-info"
+    },
+    {
+      "name": "yapf",
+      "version": "0.43.0",
+      "path": "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/yapf-0.43.0.dist-info"
+    },
+    {
+      "name": "zipp",
+      "version": "3.23.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/zipp-3.23.0.dist-info"
+    },
+    {
+      "name": "zstandard",
+      "version": "0.23.0",
+      "path": "/home/ma-user/miniconda3/lib/python3.13/site-packages/zstandard-0.23.0.dist-info"
+    }
+  ]
+}

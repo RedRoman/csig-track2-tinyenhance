@@ -1,0 +1,14 @@
+# Push4 D250独立CPU审计
+
+状态PASS，未初始化CUDA。D从封存7250的FP32 LoRA、Adam1250和四类RNG开始，沿C仅reward .10→.075，其余teacher6500、MUSIQ2.5、CLIP.5、LR2e-7、L1 1、LPIPS.1、gradient.3均不变，真实执行250步，完成global7500/Adam1500。
+
+D CLI实际SHA已固定；审计器audit_stage5_cpu.py和initial_stage5_cpu.py与原stage5逐字节相同，只新增单D独立plan。该plan将250视为终点，要求run complete、training_complete_step7500和不可变checkpoint marker，未借用原C的终点或评分。
+
+父raw与immutable resume全部514项FP32逐项相等，初始514项LoRA与1028个Adam矩恢复、冻结old6500教师、实际v5源码和CLI、真实评分指标输入梯度均通过审查。250步所有梯度finite/nonzero，损失和reward逐行复算，保存的raw/resume514项逐项相等；Adam514项FP32矩finite，所有step=1500。
+
+另外使用compare_D_vs_C_cpu.py独立比较已有真实CPU证据。D与旧C开始时case93/crop[60,1399]、三个student metrics和teacher fidelity逐值相等，loss只因reward系数变化；全部250个case/crop序列SHA相同，D/C终点Python、NumPy、CPU、CUDA四类RNG实际存档SHA逐项相同。单D审计报告内部的自比较不被当作该跨分支证据。
+
+D raw step7500.pth SHA256：feb55a9e22e466e6f45f3b15d6cd38b67a679d761fc37e093b77687fafda3b50
+D immutable resume_step7500.pt SHA256：cf36292bd2674cee46fea64b0cf5eb3976bf102c4113dc09e6b71e5ebcdd21f4
+
+本审计仅证明训练状态和控制变量，不证明工具分数改善；原工具完整评分与最终选择由独立full103图/418指标审计决定。旧stage5、pilot分析、Push3源码和SFS备份未修改。

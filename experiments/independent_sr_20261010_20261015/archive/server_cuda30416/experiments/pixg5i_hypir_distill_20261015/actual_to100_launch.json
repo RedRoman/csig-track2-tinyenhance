@@ -1,0 +1,38 @@
+[
+  {
+    "name": "mild",
+    "pid": 57352,
+    "args": [
+      "/cache/independent_sr_cuda_20261013/env/bin/python",
+      "-u",
+      "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir.py",
+      "--config",
+      "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/config_mild.json",
+      "--resume",
+      "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/resume_step1.pt",
+      "--stop-at",
+      "100"
+    ],
+    "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_hypir_mild_to100_20261015.log",
+    "physical_GPU": 2,
+    "launch_utc": "2026-10-15T09:26:24.313018+00:00"
+  },
+  {
+    "name": "medium",
+    "pid": 57353,
+    "args": [
+      "/cache/independent_sr_cuda_20261013/env/bin/python",
+      "-u",
+      "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir.py",
+      "--config",
+      "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/config_medium.json",
+      "--resume",
+      "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/resume_step1.pt",
+      "--stop-at",
+      "100"
+    ],
+    "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_hypir_medium_to100_20261015.log",
+    "physical_GPU": 3,
+    "launch_utc": "2026-10-15T09:26:24.313829+00:00"
+  }
+]

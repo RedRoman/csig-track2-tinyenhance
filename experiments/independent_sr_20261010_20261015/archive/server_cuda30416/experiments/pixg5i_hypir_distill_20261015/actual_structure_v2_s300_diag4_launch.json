@@ -1,0 +1,21 @@
+{
+  "pid": 95982,
+  "args": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "-u",
+    "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/render_pixg5i_diagnostic4.py",
+    "--model-dir",
+    "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_structure_v2_s300/model_dir",
+    "--candidate-manifest-sha256",
+    "273cd19af27ba763ccb912457346a4ce6f21447ce3abeef364a04ff4c5edaa95",
+    "--checkpoint-sha256",
+    "1424f32377bc5ad6975f942be4fb7718049a6b0b5b044a9bbe07f10e0cb971da",
+    "--out-dir",
+    "/cache/independent_sr_cuda_20261013/analysis/pixg5i_diag4/structure_v2_s300",
+    "--execute"
+  ],
+  "physical_GPU": 0,
+  "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_structure_v2_s300_diag4_20261015.log",
+  "launch_utc": "2026-10-15T12:04:43.321111+00:00",
+  "scope": "Diagnostic4 only, no full quality or score claim"
+}

@@ -1,0 +1,337 @@
+{
+  "schema": "push6_quality_first_fresh_triplet_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "created_utc": "2026-10-14T18:11:32.046080+00:00",
+  "timings": {
+    "g4": {
+      "artifact": {
+        "path": "/cache/independent_sr_cuda_20261013/calibration/push6_quality_first/g4_latency.json",
+        "sha256": "4685a16f82e7dcbde492f39dedf33653c79ca2649fd5514707fb6199e8875e04",
+        "bytes": 14042
+      },
+      "model_dir": "/cache/independent_sr_cuda_20261013/calibration/g4/model_dir",
+      "runner_sha256": "6222ead92dc6fb24b88c0350e41191fc27a5adc2f6ba38bd383a4badb9bd8c1e",
+      "seed": 231,
+      "n": 200,
+      "warm": 30,
+      "input": {
+        "device": "cuda:0",
+        "shape": [
+          1,
+          3,
+          512,
+          512
+        ],
+        "dtype": "torch.float16",
+        "distribution": "uniform [-1,1)",
+        "allocation_excluded_from_timing": true
+      },
+      "output": {
+        "device": "cuda:0",
+        "dtype": "torch.float16",
+        "shape": [
+          1,
+          3,
+          512,
+          512
+        ],
+        "all_finite": true,
+        "min": -1.0,
+        "max": 1.0,
+        "within_minus1_plus1": true,
+        "clamping_applied_by_benchmark": false
+      },
+      "cuda": {
+        "logical_device": 0,
+        "name": "NVIDIA A100-SXM4-80GB",
+        "compute_capability": [
+          8,
+          0
+        ],
+        "total_memory_bytes": 85293072384,
+        "torch_version": "2.8.0+cu128",
+        "torch_cuda_build": "12.8",
+        "cudnn_version": 91002
+      },
+      "recomputed": {
+        "event_p10": 0.6492159962654114,
+        "event_med": 0.7823359966278076,
+        "event_min": 0.647167980670929,
+        "wall_p10": 0.6677042692899704,
+        "wall_med": 0.802977941930294,
+        "wall_min": 0.6654418539255857
+      },
+      "actual_artifact_SHA_verified": true,
+      "raw200_verified": true
+    },
+    "parent": {
+      "artifact": {
+        "path": "/cache/independent_sr_cuda_20261013/calibration/push6_quality_first/a7750_parent_latency.json",
+        "sha256": "9e7446510116c9171d464f831c0bf5d1155d0cd05b95d4d3c9d126821a97661f",
+        "bytes": 13770
+      },
+      "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push4_a7750_compiled/model_dir",
+      "runner_sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae",
+      "seed": 231,
+      "n": 200,
+      "warm": 30,
+      "input": {
+        "device": "cuda:0",
+        "shape": [
+          1,
+          3,
+          512,
+          512
+        ],
+        "dtype": "torch.float16",
+        "distribution": "uniform [-1,1)",
+        "allocation_excluded_from_timing": true
+      },
+      "output": {
+        "device": "cuda:0",
+        "dtype": "torch.float32",
+        "shape": [
+          1,
+          3,
+          512,
+          512
+        ],
+        "all_finite": true,
+        "min": -1.0,
+        "max": 1.0,
+        "within_minus1_plus1": true,
+        "clamping_applied_by_benchmark": false
+      },
+      "cuda": {
+        "logical_device": 0,
+        "name": "NVIDIA A100-SXM4-80GB",
+        "compute_capability": [
+          8,
+          0
+        ],
+        "total_memory_bytes": 85293072384,
+        "torch_version": "2.8.0+cu128",
+        "torch_cuda_build": "12.8",
+        "cudnn_version": 91002
+      },
+      "recomputed": {
+        "event_p10": 46.94210510253906,
+        "event_med": 47.14700889587402,
+        "event_min": 46.85004806518555,
+        "wall_p10": 46.97281741537154,
+        "wall_med": 47.17800742946565,
+        "wall_min": 46.88047803938389
+      },
+      "actual_artifact_SHA_verified": true,
+      "raw200_verified": true
+    },
+    "candidate": {
+      "artifact": {
+        "path": "/cache/independent_sr_cuda_20261013/calibration/push6_quality_first/a7750_ro_wavelet_latency.json",
+        "sha256": "4e914f394de48281f63a2892859dac5685569b388ed91d7d5a9003d1b1d02c63",
+        "bytes": 13831
+      },
+      "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push6_a7750_ro_wavelet/model_dir",
+      "runner_sha256": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b",
+      "seed": 231,
+      "n": 200,
+      "warm": 30,
+      "input": {
+        "device": "cuda:0",
+        "shape": [
+          1,
+          3,
+          512,
+          512
+        ],
+        "dtype": "torch.float16",
+        "distribution": "uniform [-1,1)",
+        "allocation_excluded_from_timing": true
+      },
+      "output": {
+        "device": "cuda:0",
+        "dtype": "torch.float32",
+        "shape": [
+          1,
+          3,
+          512,
+          512
+        ],
+        "all_finite": true,
+        "min": -1.0,
+        "max": 1.0,
+        "within_minus1_plus1": true,
+        "clamping_applied_by_benchmark": false
+      },
+      "cuda": {
+        "logical_device": 0,
+        "name": "NVIDIA A100-SXM4-80GB",
+        "compute_capability": [
+          8,
+          0
+        ],
+        "total_memory_bytes": 85293072384,
+        "torch_version": "2.8.0+cu128",
+        "torch_cuda_build": "12.8",
+        "cudnn_version": 91002
+      },
+      "recomputed": {
+        "event_p10": 41.438209533691406,
+        "event_med": 41.59795379638672,
+        "event_min": 41.40339279174805,
+        "wall_p10": 41.46867371164262,
+        "wall_med": 41.62573255598545,
+        "wall_min": 41.42877901904285
+      },
+      "actual_artifact_SHA_verified": true,
+      "raw200_verified": true
+    }
+  },
+  "launch": {
+    "root_evidence": {
+      "path": "/cache/independent_sr_cuda_20261013/calibration/push6_quality_first/root_launch_evidence.json",
+      "sha256": "20c3306be17092677b6543de1d8992355e7cab14d6fc6d69efdf75f6d907582d",
+      "bytes": 2712
+    },
+    "physical_slot": 0,
+    "UUID": "GPU-2018f8c4-5c1f-600d-186a-eba0459e1b10",
+    "PCI": "00000000:9D:00.0",
+    "snapshots": [
+      {
+        "path": "/cache/independent_sr_cuda_20261013/calibration/push6_quality_first/gpu_before_candidate.csv",
+        "sha256": "22558fc149b13f521ef45683edae99fcef8306f8dfae10a33cb3dd4b6e0faf96",
+        "bytes": 85
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/calibration/push6_quality_first/gpu_after_candidate.csv",
+        "sha256": "22558fc149b13f521ef45683edae99fcef8306f8dfae10a33cb3dd4b6e0faf96",
+        "bytes": 85
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/calibration/push6_quality_first/processes_before_candidate.csv",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "/cache/independent_sr_cuda_20261013/calibration/push6_quality_first/processes_after_candidate.csv",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    ],
+    "order": [
+      "g4",
+      "parent",
+      "candidate"
+    ],
+    "all_exit0": true,
+    "evidence_scope": "Root actual fresh CUDA_VISIBLE_DEVICES0 command/exit records plus candidate-only physical before/after snapshots; no before-G4 snapshot claimed"
+  },
+  "source": {
+    "path": "/cache/independent_sr_cuda_20261013/code/push6/join_quality_first.py",
+    "sha256": "a1daf156da5e4010a513a4738c8c18f575ac427bbdba11aea99bf4aef69bfe11",
+    "bytes": 19384
+  },
+  "quality_proof_requested": "/cache/independent_sr_cuda_20261013/audits/push6/formal_png103/ro_wavelet_exact103_v2.json",
+  "quality_mode": "exact103",
+  "speed_only": {
+    "parent_event_p10_ms": 46.94210510253906,
+    "candidate_event_p10_ms": 41.438209533691406,
+    "latency_reduction_fraction": 0.11724858859280152
+  },
+  "candidate_quality_confirmed": true,
+  "candidate_prediction_available": true,
+  "quality": {
+    "mode": "exact103",
+    "independent_proof": {
+      "path": "/cache/independent_sr_cuda_20261013/audits/push6/formal_png103/ro_wavelet_exact103_v2.json",
+      "sha256": "bc5dff12c258069bb77e5f3e0b6982737a9d74ea705782bb230ef244b1850e16",
+      "bytes": 30847
+    },
+    "parent": {
+      "NR": 2.3197332792186334,
+      "FR": 1.4417232871055603,
+      "S_proxy": 3.7614565663241937,
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "score_result": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/scores/result.json",
+        "sha256": "7ca11141c057866a3e517d887e4e527aece7edb73bc56526aa2d394bc5915051",
+        "bytes": 741
+      },
+      "score_records": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/scores/measurements.jsonl",
+        "sha256": "f52d3e6b23ca65914033d3aac6a3035e84aa5ee97224a634e1c7d0a6ccfb04b9",
+        "bytes": 57837
+      },
+      "score_protocol": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/scores/protocol.json",
+        "sha256": "591bc3bfaea673b327d7766f014fba05133912cff9d610b7bb565f17f6203a92",
+        "bytes": 147112
+      }
+    },
+    "candidate": {
+      "NR": 2.3197332792186334,
+      "FR": 1.4417232871055603,
+      "S_proxy": 3.7614565663241937,
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "score_result": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/scores/result.json",
+        "sha256": "7ca11141c057866a3e517d887e4e527aece7edb73bc56526aa2d394bc5915051",
+        "bytes": 741
+      },
+      "score_records": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/scores/measurements.jsonl",
+        "sha256": "f52d3e6b23ca65914033d3aac6a3035e84aa5ee97224a634e1c7d0a6ccfb04b9",
+        "bytes": 57837
+      },
+      "score_protocol": {
+        "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/scores/protocol.json",
+        "sha256": "591bc3bfaea673b327d7766f014fba05133912cff9d610b7bb565f17f6203a92",
+        "bytes": 147112
+      }
+    },
+    "parent_manifest": {
+      "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render_manifest.json",
+      "sha256": "35355c94cace390b5f5918cfb607d85b0f55c9cd1e1ba0a4f6a4d034abb54e16",
+      "bytes": 65167
+    },
+    "candidate_manifest": {
+      "path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render_manifest.json",
+      "sha256": "b793e6c9d641f329299725c8e07518122e764d927d64f8774154c26f074c3eb4",
+      "bytes": 65324
+    },
+    "actual_PNG103_each_cohort_rehashed": true,
+    "quality_reused_from_A": true
+  },
+  "predict_source": {
+    "path": "/cache/independent_sr_cuda_20261013/scoring_tool/predict.py",
+    "sha256": "0af39f578f704e00a0a0a5ce55e58f1668d283ac4602065d8215b6d21cf433e1",
+    "bytes": 2208
+  },
+  "predictions": {
+    "parent": {
+      "NR": 2.3197332792186334,
+      "FR": 1.4417232871055603,
+      "S_proxy": 3.7614565663241937,
+      "event_p10_ms": 46.94210510253906,
+      "normalized_g_ms": 31.163815148699914,
+      "original_tool_prediction": 56.43576232869675
+    },
+    "candidate": {
+      "NR": 2.3197332792186334,
+      "FR": 1.4417232871055603,
+      "S_proxy": 3.7614565663241937,
+      "event_p10_ms": 41.438209533691406,
+      "normalized_g_ms": 27.50990180734788,
+      "original_tool_prediction": 57.85005281670066
+    }
+  },
+  "prediction_ratio": 1.0250601822257084,
+  "quality_factor": 1.0,
+  "speed_factor": 1.0250601822257084,
+  "target70": 70,
+  "reaches_target": false,
+  "score_scope": "Original supplied predictor, not an actual official leaderboard submission"
+}

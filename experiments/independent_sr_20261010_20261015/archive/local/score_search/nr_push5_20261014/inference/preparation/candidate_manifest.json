@@ -1,0 +1,29 @@
+{
+  "schema": "push5_hypir_speed_candidate_v1",
+  "CPU_only_preparation": true,
+  "GPU_started": false,
+  "label": "push5_a7750_clro_wavelet",
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push5_a7750_clro_wavelet/model_dir",
+  "parent_selection_sha256": "b3148b21f466854f9fe8f81c7eca1348da5bf793141799573ff3be8b20e25c3f",
+  "parent_runner_sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae",
+  "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+  "runner_sha256": "34a70fae57bc412fd3e0394e0573942e63c2764334847dab67eee3c4b696b092",
+  "config_sha256": "eb8f5cbd85adf85f97f8ee3783f605fb766e96b8d631b7ad04db45078b036b66",
+  "operations_changed": [
+    "UNet/VAE channels_last storage before compile",
+    "reduce-overhead on UNet.forward,VAE.encode,VAE.decode",
+    "compile complete wavelet_reconstruction reduce-overhead",
+    "cudagraph_mark_step_begin at infer entry"
+  ],
+  "not_changed": [
+    "checkpoint/network architecture",
+    "BF16 precision",
+    "native image sizes",
+    "Gaussian tile weighting",
+    "all posterior/DDPM stochastic calls and caller seed policy",
+    "512 FP16 input/output CUDA FP32 contract",
+    "original benchmark/scorer/predict sources"
+  ],
+  "new_full_quality_required_if_any_output_change": true,
+  "speed_expectation": "Unmeasured engineering estimate only: 1.2-1.5x plausible; no evidence for 2.44x needed for70 at fixed quality."
+}

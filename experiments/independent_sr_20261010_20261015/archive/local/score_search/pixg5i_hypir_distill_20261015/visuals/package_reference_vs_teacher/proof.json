@@ -1,0 +1,155 @@
+{
+  "schema": "package_JPG_reference_vs_teacher_crop_cache_v1",
+  "CPU_only": true,
+  "GPU_used": false,
+  "JPEG_is_visual_reference_only": true,
+  "no_fresh_baseline_score_or_RNG_equivalence_claim": true,
+  "teacher_proof": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/visuals/hypir_lastres_lr5e6_trt_full_final/preview_provenance.json",
+    "sha256": "fb090f77e7012034a359aed3cbdf0427fad46fcad390971be97dfd92c81f9105"
+  },
+  "teacher_source": "Right-column RGB crop from already SHA/pixel-verified latest HYPIR fresh-full panel; no rerender or enhancement",
+  "crop_resampling": false,
+  "cases": [
+    {
+      "case": 7,
+      "ROI": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "original_JPG": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/original_package/output_dir/case7.jpg",
+        "sha256": "fad0f320ebdc88be4cbd16848d6b59e4c715373c7b86273909a96adfc777c0cb",
+        "native_size": [
+          4096,
+          3072
+        ]
+      },
+      "teacher_crop_cache": {
+        "panel": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/visuals/hypir_lastres_lr5e6_trt_full_final/case7_hypir_lastres_lr5e6_trt_full_roi_1to1.png",
+        "sha256": "5ef5b42f4fd30b3df85bb4d313cb8eb83d7cf99dbee9913821c4bfd3c3ba06f6",
+        "extracted_box": [
+          672,
+          70,
+          1312,
+          518
+        ],
+        "native_render_path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case7.png",
+        "teacher_checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c"
+      },
+      "output": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/package_reference_vs_teacher/case7_package_JPG_vs_HYPIR_teacher_ROI.png",
+        "sha256": "5d664f98f720d5201a01271fe3d95083bf8ec2e60882ebc8e4203991abe475c7",
+        "bytes": 945256
+      },
+      "crop_pixels_verified_exact": true
+    },
+    {
+      "case": 16,
+      "ROI": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "original_JPG": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/original_package/output_dir/case16.jpg",
+        "sha256": "4efe59bbf6342ec48c7ad3034ed4cabb2dcc60d6253323e964fefa2837f73ec3",
+        "native_size": [
+          4096,
+          3072
+        ]
+      },
+      "teacher_crop_cache": {
+        "panel": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/visuals/hypir_lastres_lr5e6_trt_full_final/case16_hypir_lastres_lr5e6_trt_full_roi_1to1.png",
+        "sha256": "5383655cb7cac57c4859ad94ca51d8a72eee6176dfd89f7e282772135a4f7c3e",
+        "extracted_box": [
+          672,
+          70,
+          1312,
+          582
+        ],
+        "native_render_path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case16.png",
+        "teacher_checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c"
+      },
+      "output": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/package_reference_vs_teacher/case16_package_JPG_vs_HYPIR_teacher_ROI.png",
+        "sha256": "54a76072a1c675551969f91a0658fdab8fff4820fe0c14bdf5abad94204fb9a9",
+        "bytes": 976632
+      },
+      "crop_pixels_verified_exact": true
+    },
+    {
+      "case": 41,
+      "ROI": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "original_JPG": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/original_package/output_dir/case41.jpg",
+        "sha256": "04e6ccc0789be61b18565fe758cbe2b28b9c59a699a824d1619574e272aad799",
+        "native_size": [
+          3072,
+          4096
+        ]
+      },
+      "teacher_crop_cache": {
+        "panel": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/visuals/hypir_lastres_lr5e6_trt_full_final/case41_hypir_lastres_lr5e6_trt_full_roi_1to1.png",
+        "sha256": "aad1cb34c9b19582c9b8d952910f08341af24902906e529af247fb2280de3356",
+        "extracted_box": [
+          672,
+          70,
+          1312,
+          582
+        ],
+        "native_render_path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case41.png",
+        "teacher_checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c"
+      },
+      "output": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/package_reference_vs_teacher/case41_package_JPG_vs_HYPIR_teacher_ROI.png",
+        "sha256": "906112b7c3089a18ef72ddeb7f34dad0c7c3610fe6f63dcc37d9fefeda0e9a52",
+        "bytes": 981665
+      },
+      "crop_pixels_verified_exact": true
+    },
+    {
+      "case": 83,
+      "ROI": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "original_JPG": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/original_package/output_dir/case83.jpg",
+        "sha256": "0d417ddd72311953af12d75c26f92d5004cf316c553e446f1cc647463fd1bb57",
+        "native_size": [
+          3072,
+          4096
+        ]
+      },
+      "teacher_crop_cache": {
+        "panel": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/visuals/hypir_lastres_lr5e6_trt_full_final/case83_hypir_lastres_lr5e6_trt_full_roi_1to1.png",
+        "sha256": "81f1374132712784c75d8224add39c4b9187454d31dfbb89262cc12917db9d7d",
+        "extracted_box": [
+          672,
+          70,
+          1312,
+          582
+        ],
+        "native_render_path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case83.png",
+        "teacher_checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c"
+      },
+      "output": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/package_reference_vs_teacher/case83_package_JPG_vs_HYPIR_teacher_ROI.png",
+        "sha256": "ab98f35683ca5b299ba068cd2b7066113bf442bb0e876d58af42a598a3ad3950",
+        "bytes": 1234972
+      },
+      "crop_pixels_verified_exact": true
+    }
+  ]
+}

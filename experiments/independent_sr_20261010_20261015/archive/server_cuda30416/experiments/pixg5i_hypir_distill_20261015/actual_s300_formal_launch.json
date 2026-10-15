@@ -1,0 +1,25 @@
+{
+  "pid": 66651,
+  "args": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "-u",
+    "/cache/independent_sr_cuda_20261013/code/pixg5i_distill/launch_pixg5i_formal.py",
+    "--mild-model-dir",
+    "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_mild_s300/model_dir",
+    "--medium-model-dir",
+    "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s300/model_dir",
+    "--quality-audit",
+    "/cache/independent_sr_cuda_20261013/audits/pixg5i_distill/stage300_full.json",
+    "--quality-audit-sha256",
+    "08266b9f60244208a60e63465d138d537515665a7dfda7cc124087f842253886",
+    "--quality-auditor-sha256",
+    "66768368c0d83d48e84b3b7f9f72682b18c3a612c6bad10ce720b5b1a78ebb86",
+    "--out-dir",
+    "/cache/independent_sr_cuda_20261013/calibration/pixg5i_s300_formal_20261015",
+    "--execute"
+  ],
+  "launch_utc": "2026-10-15T09:48:58.058770+00:00",
+  "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_s300_formal_20261015.log",
+  "all_GPUs_idle_before": true,
+  "all_quality_train_and_PNG_IO_finished": true
+}

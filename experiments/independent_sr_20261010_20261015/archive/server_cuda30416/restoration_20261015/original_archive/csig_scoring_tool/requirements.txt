@@ -1,0 +1,14 @@
+# 与 30674/AutoDL 评测环境一致的版本(2026-09)。torch 需 CUDA 版;pyiqa 0.1.10 已含 CLIP 实现,不需另装 clip 包。
+torch==2.5.1
+torchvision==0.20.1
+pyiqa==0.1.10
+timm==1.0.28
+open-clip-torch==2.20.0
+numpy==1.26.4
+scipy==1.15.3
+pillow>=10
+pyyaml
+opencv-python
+einops
+ftfy
+regex

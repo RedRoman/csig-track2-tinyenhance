@@ -1,0 +1,32 @@
+{
+  "status": "CPU_PLAN_PENDING_ACTUAL_UNET_ENGINE",
+  "not_a_candidate_manifest": true,
+  "GPU_launched_by_this_agent": false,
+  "training": false,
+  "distillation": false,
+  "base_hybrid_runner": {
+    "path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_trtvae_fp16/model_dir/runner.py",
+    "sha256": "2bc74f65029c5c95c9a8c285bf7db1c63b03a15fb9fa06cd56d93cf6b1fe2fc9"
+  },
+  "required_actual_manifest": "/cache/independent_sr_cuda_20261013/backends/push7_trt/unet_fp16_A7750/component_manifest.json",
+  "finalization_guards": [
+    "actual manifest BUILT_COMPONENT_PROBED and actual engine SHA/size",
+    "rawA589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d exact only",
+    "actual base UNet SHA matches builder manifest",
+    "runtime fixed FP16 1x4x64x64 single input/output",
+    "constructor fixed original BF16 empty embedding + integer timestep200 digest equals manifest fixed_conditioning.BF16_sha256.sha256",
+    "all-four RNG capture/restore around UNet engine import/context construction, no infer reset"
+  ],
+  "wrapper": "Existing VAE hybrid as parent; replace ONLY model.G.forward with FP16engine(sample.toFP16).toBF16 in original UNet2DConditionOutput. Verify cached t/text identities each call. Expose native checkpoint/source/engine hashes and explicit new backend label.",
+  "preserved": [
+    "original VAE hybrid fixed512 encoder/decoder",
+    "BF16 latent scaling before G",
+    "original scheduler.step and DDPM noise draw after eps",
+    "all three original Gaussian tile merges and native512/stride256",
+    "original wavelet/crop/clamp/round output path",
+    "uniform everycase and512 benchmark route"
+  ],
+  "no_registration_before_actual_engine": true,
+  "if_builder_failed": "Stop this backend; retain failure evidence; no fallback.",
+  "evaluation": "Fresh smoke/ownership/fourRNG, native four-case visual, actual original new103/418; component diagnostics never count as tool score or inherited A quality."
+}

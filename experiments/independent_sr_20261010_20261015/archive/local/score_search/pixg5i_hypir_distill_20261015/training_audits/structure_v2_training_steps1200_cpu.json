@@ -1,0 +1,100 @@
+{
+  "status": "PASS_PIXG5I_STRUCTURE_FP32_ADAM_SCALER_RNG",
+  "auditor_source_sha256": "da16648881ced10afd5342fc064e85f0a10d6138ec77975bcd7710d0446e535b",
+  "initial_package_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+  "teacher_raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+  "steps": [
+    0,
+    1200
+  ],
+  "models": [
+    {
+      "run": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2",
+      "variant": "structure_v2",
+      "protocol_id": "19e6c5e7fe17eb924e096021688e2cda2b3d4caa1c2efcaf069421496a9d773b",
+      "initial_package_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+      "teacher_raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+      "config_sha256": "f0991c614f0843bd9e4a053c7d89b53ce6ad0300aa1d7b45204a728917528402",
+      "milestones": {
+        "0": {
+          "local_step": 0,
+          "optimizer_step": 0,
+          "raw_sha256": "971698c87219968667a89fad647cd5f913bc694f7d4275f7ae27883c756a1839",
+          "resume_sha256": "593b87843ce9cfe8336eaff7b3643f1425507a47ce94539b8707fc4077b147b1",
+          "marker_sha256": "0065f179c2e412748ad8c7af46eb527738e91ee7cbcf13ca9122317048446edb",
+          "state_tensors": 112,
+          "parameter_elements": 3786764,
+          "raw_resume_FP32_exact": true,
+          "changed_FP32_tensors": 0,
+          "Adam_state_entries": 0,
+          "Adam_all_finite_FP32": true,
+          "Adam_steps": [],
+          "four_RNG_valid": true,
+          "grad_scaler": {
+            "scale": 1024.0,
+            "growth_factor": 2.0,
+            "backoff_factor": 0.5,
+            "growth_interval": 2000,
+            "_growth_tracker": 0
+          }
+        },
+        "1200": {
+          "local_step": 1200,
+          "optimizer_step": 1200,
+          "raw_sha256": "2dc54794f3816c073c57a8e9f7a31e434ff80c0342ee5a6e2cc26506256a0edc",
+          "resume_sha256": "4d56a69128de070eb982ed1b003a4d9a4fb8c3f6d9e53f0ff63568cbd1a6b418",
+          "marker_sha256": "670747d8e7438ef99fc9e995143d5f52fba7a1cd6fa09dc0effcdb4f4297ef81",
+          "state_tensors": 112,
+          "parameter_elements": 3786764,
+          "raw_resume_FP32_exact": true,
+          "changed_FP32_tensors": 112,
+          "Adam_state_entries": 112,
+          "Adam_all_finite_FP32": true,
+          "Adam_steps": [
+            1200
+          ],
+          "four_RNG_valid": true,
+          "grad_scaler": {
+            "scale": 1024.0,
+            "growth_factor": 2.0,
+            "backoff_factor": 0.5,
+            "growth_interval": 2000,
+            "_growth_tracker": 1200
+          }
+        }
+      },
+      "logged_prefix_steps": 1200,
+      "log_prefix_sha256": "0ab610ba5101ffbf532107801b003dd8497ab23582a12686883e76a3e2177ecf",
+      "all_prefix_losses_gradients_updates_finite": true,
+      "all_prefix_cases_crops_replayed": true,
+      "initial_deployment_relation": {
+        "FP32_unfolded_vs_folded_max_abs": 1.0132789611816406e-06,
+        "FP32_unfolded_vs_folded_mean_abs": 1.6300756300324792e-08,
+        "AMP_unfolded_vs_initial_fold_FP16_max_abs": 0.001708984375,
+        "AMP_unfolded_vs_initial_fold_FP16_mean_abs": 9.178622713079676e-05,
+        "comparison_scope": "same medium600 initial weights/same FP16-quantized1024 input, no optimizer update; finite arithmetic difference recorded, no exact claim"
+      },
+      "weighted_RGB_gradient_norms": {
+        "L1": 0.0011276372242718935,
+        "LPIPS": 0.00861155055463314,
+        "gradient": 0.0004010509583167732,
+        "MS_L1": 0.0004975219490006566,
+        "MS_gradient": 0.00033331449958495796
+      },
+      "parent_checkpoint_sha256": "45c7f6bb414567f31b906fc996c037f31df7ce6aebb615c19183e02886950fab",
+      "RNG_endpoint_digests": {
+        "0": "b4afd9806d70f4dfd2e35ed6c13c78b234080d254c0886b4a565b4d407977391",
+        "1200": "ef0e70e8ef7c559b1d029ed796b9b57b664865ad6b4c7693d0bd44351f569242"
+      },
+      "teacher_PNG_bytes_rehashed_here": false
+    }
+  ],
+  "single_run_all_case_crop_replay_and_valid_RNG_endpoints": true,
+  "parent_medium600_checkpoint_sha256": "45c7f6bb414567f31b906fc996c037f31df7ce6aebb615c19183e02886950fab",
+  "CPU_only": true,
+  "CUDA_initialized": false,
+  "quality_conclusion": false,
+  "mutable_status_not_locked": true,
+  "mutable_logs_checked_as_immutable_prefix_only": true,
+  "teacher_byte_scope": "Frozen trainer verified all100 actual PNG SHA at initialization; this audit checks catalog/manifest/log identity, not full PNG reread"
+}

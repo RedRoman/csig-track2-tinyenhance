@@ -1,0 +1,50 @@
+{
+  "status": "PASS_FINITE112_AND_REAL_UPDATE",
+  "row": {
+    "local_step": 301,
+    "optimizer_step": 301,
+    "case": 48,
+    "context_crop_xy": [
+      2848,
+      1048
+    ],
+    "loss_crop_xy": [
+      3104,
+      1304
+    ],
+    "teacher_png_sha256": "6bf03710e91501721d1589a5cadabdb5be0b85b8d0f0fa0827838d2bbe068ec2",
+    "loss": 0.04642646387219429,
+    "L1_teacher_raw": 0.025844698771834373,
+    "LPIPS_teacher_clamped": 0.3659711182117462,
+    "gradient_teacher_raw": 0.014165974222123623,
+    "multiscale_L1_teacher_raw": 0.020023636519908905,
+    "multiscale_gradient_teacher_raw": 0.014967666938900948,
+    "global_distillation_step": 1501,
+    "finite_parameter_gradients": 112,
+    "nonzero_parameter_gradients": 112,
+    "gradient_norm_before_clip": 0.05202588811516762,
+    "actual_updated_tensors": 112,
+    "actual_body_updated_tensors": 110,
+    "actual_head_updated_tensors": 2,
+    "head_lr": 2.9947552770402188e-05,
+    "update_RMS": 2.00549652618065e-06,
+    "lr": 5.989510554080438e-06,
+    "grad_scaler_scale": 1024.0,
+    "raw_outside01_fraction": 0.00136566162109375,
+    "step_seconds": 1.2873835563659668,
+    "elapsed_seconds": 1.287461757659912
+  },
+  "true_RGB_gradient_norm": 0.0019799750298261642,
+  "FP32_master_all": true,
+  "frozen_LPIPS": true,
+  "teacher_detached": true,
+  "weighted_RGB_gradient_norms": {
+    "L1": 0.0011276372242718935,
+    "LPIPS": 0.0007385726785287261,
+    "gradient": 0.0003926654171664268,
+    "MS_L1": 0.0005139296990819275,
+    "MS_gradient": 0.0002999942225869745
+  },
+  "phase_initial_checkpoint_sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+  "NR_reward": 0.0
+}

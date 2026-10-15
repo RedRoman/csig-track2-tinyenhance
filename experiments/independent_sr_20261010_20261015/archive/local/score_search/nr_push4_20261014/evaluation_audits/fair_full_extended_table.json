@@ -1,0 +1,180 @@
+{
+  "updated_utc": "2026-10-14T14:00:44.451401+00:00",
+  "scope": "all rows full100test+val3 S_proxy; no latency or official leaderboard score",
+  "status": "complete",
+  "complete_candidates": 3,
+  "expected_candidates": 3,
+  "pending": [],
+  "winner_provisional_until_all_planned_full_complete": false,
+  "rows": [
+    {
+      "label": "push4_a7750_compiled_all",
+      "scope": "full100test+validation3 S_proxy; no latency/official score",
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "NR": 2.3197332792186334,
+      "FR": 1.4417232871055603,
+      "S_proxy": 3.7614565663241937,
+      "delta_NR": 0.006608150212777275,
+      "delta_FR": -0.004845718542734856,
+      "delta_S_proxy": 0.0017624316700421971,
+      "test_means": {
+        "niqe": 4.276370415664122,
+        "musiq": 39.583499126434326,
+        "maniqa": 0.5752561512589455,
+        "clipiqa": 0.7762791782617569
+      },
+      "val_means": {
+        "lpips": 0.3455403645833333,
+        "dists": 0.21273634831110635,
+        "niqe": 4.364917716628572,
+        "musiq": 37.00266647338867,
+        "maniqa": 0.5774780511856079,
+        "clipiqa": 0.7694729765256246
+      },
+      "test_NR_contributions": {
+        "clipiqa": 0.7762791782617569,
+        "maniqa": 0.5752561512589455,
+        "musiq_div100": 0.39583499126434324,
+        "niqe": 0.5723629584335879
+      },
+      "contribution_deltas_vs7250": {
+        "clipiqa": 0.004474778175353911,
+        "maniqa": 0.005154007971286734,
+        "musiq_div100": -0.000831592750549337,
+        "niqe": -0.0021890431833140322
+      },
+      "actual_checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+      "cpu_audit_path": "/cache/independent_sr_cuda_20261013/audits/push4/evaluations/push4_a7750_compiled_all/audit.json",
+      "cpu_audit_sha256": "ae5b2234f5e110240507fbec515139d1b2a23bf8f664e7477e34c377e09c507b",
+      "is_reference": false
+    },
+    {
+      "label": "push4_c7750_compiled_all",
+      "scope": "full100test+validation3 S_proxy; no latency/official score",
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "NR": 2.3170131290749345,
+      "FR": 1.4438390533129373,
+      "S_proxy": 3.760852182387872,
+      "delta_NR": 0.0038880000690784122,
+      "delta_FR": -0.002729952335357888,
+      "delta_S_proxy": 0.0011580477337203021,
+      "test_means": {
+        "niqe": 4.181879476472106,
+        "musiq": 39.89262186050415,
+        "maniqa": 0.566893807053566,
+        "clipiqa": 0.7693810510635376
+      },
+      "val_means": {
+        "lpips": 0.3456217447916667,
+        "dists": 0.2105392018953959,
+        "niqe": 4.237367782455956,
+        "musiq": 40.35374323527018,
+        "maniqa": 0.5691259900728861,
+        "clipiqa": 0.7634755373001099
+      },
+      "test_NR_contributions": {
+        "clipiqa": 0.7693810510635376,
+        "maniqa": 0.566893807053566,
+        "musiq_div100": 0.3989262186050415,
+        "niqe": 0.5818120523527894
+      },
+      "contribution_deltas_vs7250": {
+        "clipiqa": -0.00242334902286534,
+        "maniqa": -0.003208336234092779,
+        "musiq_div100": 0.00225963459014894,
+        "niqe": 0.0072600507358875355
+      },
+      "actual_checkpoint_sha256": "c953cb853a2a98e1563171798af9d4cb5d034957a4d7da444eb1e25fd6db96a3",
+      "cpu_audit_path": "/cache/independent_sr_cuda_20261013/audits/push4/evaluations/push4_c7750_compiled_all/audit.json",
+      "cpu_audit_sha256": "8b950faed1a7a7482b122aa1fc797b8a0ca571a44c963f6c15535cbad3d45088",
+      "is_reference": false
+    },
+    {
+      "label": "push3_c7250_compiled_all",
+      "scope": "full100test+validation3 S_proxy; no latency/official score",
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "NR": 2.313125129005856,
+      "FR": 1.4465690056482952,
+      "S_proxy": 3.7596941346541515,
+      "delta_NR": 0.0,
+      "delta_FR": 0.0,
+      "delta_S_proxy": 0.0,
+      "test_means": {
+        "niqe": 4.254479983830981,
+        "musiq": 39.66665840148926,
+        "maniqa": 0.5701021432876587,
+        "clipiqa": 0.7718044000864029
+      },
+      "val_means": {
+        "lpips": 0.3428955078125,
+        "dists": 0.21053548653920492,
+        "niqe": 4.322122831383642,
+        "musiq": 38.676076889038086,
+        "maniqa": 0.5724314451217651,
+        "clipiqa": 0.7652938961982727
+      },
+      "test_NR_contributions": {
+        "clipiqa": 0.7718044000864029,
+        "maniqa": 0.5701021432876587,
+        "musiq_div100": 0.3966665840148926,
+        "niqe": 0.5745520016169019
+      },
+      "contribution_deltas_vs7250": {
+        "clipiqa": 0.0,
+        "maniqa": 0.0,
+        "musiq_div100": 0.0,
+        "niqe": 0.0
+      },
+      "actual_checkpoint_sha256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+      "cpu_audit_path": "/cache/independent_sr_cuda_20261013/audits/push4/evaluations/parent7250_full_cpu_audit.json",
+      "cpu_audit_sha256": "15d1e3765e0cfbb6a6de0f78018fa6bd0845167576598c902de52d1e301ec4d3",
+      "is_reference": true
+    },
+    {
+      "label": "push4_d7500_compiled_all",
+      "scope": "full100test+validation3 S_proxy; no latency/official score",
+      "image_rows": 103,
+      "scalar_metrics": 418,
+      "NR": 2.3110824830824153,
+      "FR": 1.4477893312772114,
+      "S_proxy": 3.758871814359627,
+      "delta_NR": -0.0020426459234408334,
+      "delta_FR": 0.0012203256289162745,
+      "delta_S_proxy": -0.0008223202945245589,
+      "test_means": {
+        "niqe": 4.185545265859351,
+        "musiq": 40.070943431854246,
+        "maniqa": 0.5616838574409485,
+        "clipiqa": 0.7672437179088593
+      },
+      "val_means": {
+        "lpips": 0.3430582682291667,
+        "dists": 0.20915240049362183,
+        "niqe": 4.243543549930586,
+        "musiq": 42.125012715657554,
+        "maniqa": 0.5639888048171997,
+        "clipiqa": 0.7613088289896647
+      },
+      "test_NR_contributions": {
+        "clipiqa": 0.7672437179088593,
+        "maniqa": 0.5616838574409485,
+        "musiq_div100": 0.40070943431854245,
+        "niqe": 0.5814454734140649
+      },
+      "contribution_deltas_vs7250": {
+        "clipiqa": -0.0045606821775436845,
+        "maniqa": -0.008418285846710227,
+        "musiq_div100": 0.00404285030364987,
+        "niqe": 0.006893471797163042
+      },
+      "actual_checkpoint_sha256": "feb55a9e22e466e6f45f3b15d6cd38b67a679d761fc37e093b77687fafda3b50",
+      "cpu_audit_path": "/cache/independent_sr_cuda_20261013/audits/push4/evaluations/push4_d7500_compiled_all/audit.json",
+      "cpu_audit_sha256": "d2e38e6dcf3ece66c19e187484d5227576386373c989636cf0a1d85e48253bc8",
+      "is_reference": false
+    }
+  ],
+  "summary_source_sha256": "553baa90b34c37f1571067c711ead22bab10a4c1f61645e530be8a981329aae8"
+}

@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "audited_bjt": "2026-10-14T17:58:47.240222+08:00",
+  "scope": "full103 test100_NR+val3_FR local proxy; no latency/official total",
+  "label": "nr_stage2_cont_s6500_compiled_all",
+  "NR": 2.268540837285129,
+  "FR": 1.4624083042144775,
+  "S_proxy": 3.7309491414996065,
+  "rows": 103,
+  "scalar_metrics": 418,
+  "checkpoint_sha256": "dc7bbf712e3039302a52951075409a23771b8d832024d1800bbe3398c41d4afa",
+  "component_means": {
+    "validation": {
+      "lpips": 0.3352864583333333,
+      "dists": 0.20230523745218912,
+      "niqe": 3.9718901321810756,
+      "musiq": 48.08006032307943,
+      "maniqa": 0.51003364721934,
+      "clipiqa": 0.7236720323562622
+    },
+    "test": {
+      "niqe": 4.0349345400610765,
+      "musiq": 42.250487174987796,
+      "maniqa": 0.5151670348644256,
+      "clipiqa": 0.7343623846769333
+    }
+  },
+  "max_mean_formula_delta": 0.0,
+  "sha_checks": {
+    "actual_png_manifest_scored": 103,
+    "actual_source_inputs": 103,
+    "actual_GT": 3,
+    "metric_weights": 8,
+    "base_assets": 13,
+    "downloaded_small_files": 7,
+    "source_and_protocol_fingerprint": "PASS"
+  },
+  "delta_vs_parent6250_full": {
+    "NR": 0.0021557939258807224,
+    "FR": -0.0013081828753154223,
+    "S_proxy": 0.000847611050565078
+  },
+  "component_delta_vs_parent6250_full": {
+    "validation": {
+      "lpips": 0.00048828125,
+      "dists": 0.0008199016253153391,
+      "niqe": 0.014265954010858728,
+      "musiq": -0.022748311360672346,
+      "maniqa": 0.0030496219793955115,
+      "clipiqa": 0.0023222764333089563
+    },
+    "test": {
+      "niqe": 0.010831280382879171,
+      "musiq": -0.10450387954711715,
+      "maniqa": 0.002361151278018947,
+      "clipiqa": 0.001922809481620713
+    }
+  },
+  "audit_path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push2_full_evaluations/audits/nr_stage2_cont_s6500_compiled_all_audit.json",
+  "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_push2_full_evaluations/nr_stage2_cont_s6500_compiled_all",
+  "notes": [
+    "Full results compared only with full results; stage3 pilots remain separate.",
+    "Hash/RNG checkpoint audit does not rerun model/metrics. CUDA was not initialized."
+  ]
+}

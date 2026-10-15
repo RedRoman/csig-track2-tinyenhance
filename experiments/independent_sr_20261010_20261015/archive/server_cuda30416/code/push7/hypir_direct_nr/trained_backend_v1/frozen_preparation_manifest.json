@@ -1,0 +1,63 @@
+{
+  "status": "FROZEN_CPU_PREPARATION_ONLY",
+  "no_GPU_or_build_or_registration": true,
+  "all_four_CPU_plans_exit0": true,
+  "cpu_plan_receipt_sha256": "d2f97e0333a23417fc298ead794e30591e4ca6b2332c347821a1d0119a11a54b",
+  "independent_necessary_static_review": "PASS from /root/push3_trainer; independent byte equality of builder core and AST equality of runner math/RNG; no blocking finding",
+  "files": [
+    {
+      "name": "CPU_PLAN_README.txt",
+      "bytes": 2699,
+      "sha256": "02e9e2cff13df9fe2d023ddc106a4a73fee2ff322d11d6265a8c1ec30b8b5ffd"
+    },
+    {
+      "name": "build_finetuned_unet_trt.py",
+      "bytes": 14895,
+      "sha256": "b7dcc1f4fa986506eda23651b94c3f65b463fb46a9fe45e464833e6017fda34d"
+    },
+    {
+      "name": "finetuned_trtvae_runner.py",
+      "bytes": 9136,
+      "sha256": "4b225fbe82c556abf4b409927d16709e771a69fb811d7c6803f7281792875862"
+    },
+    {
+      "name": "finetuned_unet_vae_runner.py",
+      "bytes": 9668,
+      "sha256": "c98c406884cf07bc5541e315393b98e11351165b35c94d33f926d5443f9563c3"
+    },
+    {
+      "name": "protected_source_ast_proof.json",
+      "bytes": 1038,
+      "sha256": "1f29a99b307624656e72a791ebacced741679e79fdc79930e0dac6560a83d65c"
+    },
+    {
+      "name": "registration_plan.py",
+      "bytes": 5690,
+      "sha256": "97a08c5e3291d8ae9182f0bf31f23a9ec976fa4a79c77df7bfc36afb34325335"
+    },
+    {
+      "name": "source_changes_from_frozen.diff",
+      "bytes": 16894,
+      "sha256": "0aa492ae05a081085b1b3b7c2a06cd297971c031b26a57226241fd41a23dd13e"
+    },
+    {
+      "name": "trained_native_binding.py",
+      "bytes": 7086,
+      "sha256": "db2052014f941f517dee730dcb44e4d8e3d9939e0de15991f663bb098e6c451d"
+    },
+    {
+      "name": "trt_vae_runtime_v2.py",
+      "bytes": 4634,
+      "sha256": "dc2597edfe8a7d71526535bd4e7540bd9c7623de00b6639c61139e08837aa9a4"
+    }
+  ],
+  "source_scope": "Only4 explicit registered HYPIR2/6-update runs; no engine/no runtime config without actual built and source-bound new UNet",
+  "pending_real_execution": [
+    "Root actual complete-pilot/ROI gate",
+    "New trained UNet build from actual current raw",
+    "Registration after actual new engine manifest",
+    "Fresh103/418 and native visual evaluation",
+    "Original-tool fresh paired timing"
+  ],
+  "runtime_metadata_dependency": "Native manifest/config/marker/catalog/parity/source files at their restored referenced paths are required"
+}

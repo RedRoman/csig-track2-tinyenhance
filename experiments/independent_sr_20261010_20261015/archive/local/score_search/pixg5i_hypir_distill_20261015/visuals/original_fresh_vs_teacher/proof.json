@@ -1,0 +1,248 @@
+{
+  "schema": "fresh_original_pixg5i_vs_fixed_HYPIR_native_ROI_v1",
+  "CPU_only": true,
+  "GPU_used": false,
+  "packaged_JPEG_used": false,
+  "all103_same_input_SHA_order_size": true,
+  "baseline_proof": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/original_fresh_ROI4/proof.json",
+    "sha256": "fc90479512c5854e5068ab1d70345d002c4bbdea6c56c12dcf263a4205389d0d"
+  },
+  "fixed_teacher_proof": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/visuals/hypir_lastres_lr5e6_trt_full_final/preview_provenance.json",
+    "sha256": "fb090f77e7012034a359aed3cbdf0427fad46fcad390971be97dfd92c81f9105"
+  },
+  "teacher_crop_cache": "Content-addressed decoded pixels from right column of independently verified latest teacher fresh-full panel. Actual teacher image path and SHA below.",
+  "no_resize_filter_or_enhancement": true,
+  "no_cross_model_RNG_or_score_claim": true,
+  "cases": [
+    {
+      "case": 7,
+      "ROI": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "actual_PixG5i_native_source": {
+        "split": "test",
+        "case": 7,
+        "PNG": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_original_20261015_all/render/test/case7.png",
+          "sha256": "f3fd692a86adf478c210f66152681ce90751660fd18643aaf698483bad375b79",
+          "bytes": 24305571
+        },
+        "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+        "size": [
+          4096,
+          3072
+        ]
+      },
+      "local_PixG5i_crop": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/original_fresh_ROI4/case7_original_fresh_native_ROI.png",
+        "sha256": "37d81a130cf3e247c304c053b057cd6206e44170152be9558683f807196021a4"
+      },
+      "actual_HYPIR_native_source": {
+        "split": "test",
+        "case": 7,
+        "PNG": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case7.png",
+          "sha256": "911723395979a5d2455dd1cba15edeecc2905c29cc65d8a3149427d51e423356",
+          "bytes": 17719353
+        },
+        "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+        "size": [
+          4096,
+          3072
+        ]
+      },
+      "local_teacher_panel_crop_cache": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/visuals/hypir_lastres_lr5e6_trt_full_final/case7_hypir_lastres_lr5e6_trt_full_roi_1to1.png",
+        "sha256": "5ef5b42f4fd30b3df85bb4d313cb8eb83d7cf99dbee9913821c4bfd3c3ba06f6",
+        "crop_box": [
+          672,
+          70,
+          1312,
+          518
+        ]
+      },
+      "output": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/original_fresh_vs_teacher/case7_fresh_PixG5i_vs_fixed_HYPIR_ROI.png",
+        "sha256": "a6cc7ffa8c9d7f0eebbf2059b51876ca623448d1da157edf6eba594a5b4dd1d2",
+        "bytes": 1368379
+      },
+      "crop_pixels_verified_exact": true
+    },
+    {
+      "case": 16,
+      "ROI": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "actual_PixG5i_native_source": {
+        "split": "test",
+        "case": 16,
+        "PNG": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_original_20261015_all/render/test/case16.png",
+          "sha256": "781db2e157e47ac25a8ea3bd452f16cafbb7aa93449be7eb1535f92097dab1a3",
+          "bytes": 18944597
+        },
+        "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+        "size": [
+          4096,
+          3072
+        ]
+      },
+      "local_PixG5i_crop": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/original_fresh_ROI4/case16_original_fresh_native_ROI.png",
+        "sha256": "a2cfc99c1409d3baa387ee380c543596871fc4ac78b09fafcae21b5766748a9e"
+      },
+      "actual_HYPIR_native_source": {
+        "split": "test",
+        "case": 16,
+        "PNG": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case16.png",
+          "sha256": "629b4754054546f859e0ca4bbd79fef937709b1456c1b70683b0a529ba7b1ee2",
+          "bytes": 16887578
+        },
+        "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+        "size": [
+          4096,
+          3072
+        ]
+      },
+      "local_teacher_panel_crop_cache": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/visuals/hypir_lastres_lr5e6_trt_full_final/case16_hypir_lastres_lr5e6_trt_full_roi_1to1.png",
+        "sha256": "5383655cb7cac57c4859ad94ca51d8a72eee6176dfd89f7e282772135a4f7c3e",
+        "crop_box": [
+          672,
+          70,
+          1312,
+          582
+        ]
+      },
+      "output": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/original_fresh_vs_teacher/case16_fresh_PixG5i_vs_fixed_HYPIR_ROI.png",
+        "sha256": "b2e6cf8a670240c3f440160c975ae5a3a24c887cd1eaa41f13965068f085bd6c",
+        "bytes": 1489503
+      },
+      "crop_pixels_verified_exact": true
+    },
+    {
+      "case": 41,
+      "ROI": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "actual_PixG5i_native_source": {
+        "split": "test",
+        "case": 41,
+        "PNG": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_original_20261015_all/render/test/case41.png",
+          "sha256": "682e6db9ff71bb811a6f1b30bf9152f29b3e13cc5163948612287bd91bb405ab",
+          "bytes": 20715600
+        },
+        "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+        "size": [
+          3072,
+          4096
+        ]
+      },
+      "local_PixG5i_crop": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/original_fresh_ROI4/case41_original_fresh_native_ROI.png",
+        "sha256": "a87e2ec76508a885ab700977dc5d58932e55ddc8011be5a2cbceae8aef1b5b0b"
+      },
+      "actual_HYPIR_native_source": {
+        "split": "test",
+        "case": 41,
+        "PNG": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case41.png",
+          "sha256": "9dab9aee1bf1ea6668a12dafcbf2c095f7f9c4dca5567b03dec153054a414368",
+          "bytes": 22923560
+        },
+        "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+        "size": [
+          3072,
+          4096
+        ]
+      },
+      "local_teacher_panel_crop_cache": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/visuals/hypir_lastres_lr5e6_trt_full_final/case41_hypir_lastres_lr5e6_trt_full_roi_1to1.png",
+        "sha256": "aad1cb34c9b19582c9b8d952910f08341af24902906e529af247fb2280de3356",
+        "crop_box": [
+          672,
+          70,
+          1312,
+          582
+        ]
+      },
+      "output": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/original_fresh_vs_teacher/case41_fresh_PixG5i_vs_fixed_HYPIR_ROI.png",
+        "sha256": "366efe03bdb27a3ada1fbf9026aaed05f87cb9f6bcfdc4c8cd385e13ea8dc496",
+        "bytes": 1514431
+      },
+      "crop_pixels_verified_exact": true
+    },
+    {
+      "case": 83,
+      "ROI": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "actual_PixG5i_native_source": {
+        "split": "test",
+        "case": 83,
+        "PNG": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_original_20261015_all/render/test/case83.png",
+          "sha256": "77582e44c28e5237e408ef55d8d732a236b142a4236c68f9ea3d6e7684d36827",
+          "bytes": 24754200
+        },
+        "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+        "size": [
+          3072,
+          4096
+        ]
+      },
+      "local_PixG5i_crop": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/original_fresh_ROI4/case83_original_fresh_native_ROI.png",
+        "sha256": "9ac02a14e5d7e1ec02ea949fbe1ad9d58a420267091280d86cdc4467838625fc"
+      },
+      "actual_HYPIR_native_source": {
+        "split": "test",
+        "case": 83,
+        "PNG": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test/case83.png",
+          "sha256": "99c152fd94abede36ea724f754ebd042a78a1452e1c696792b1aae178b216673",
+          "bytes": 21597996
+        },
+        "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+        "size": [
+          3072,
+          4096
+        ]
+      },
+      "local_teacher_panel_crop_cache": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/nr_push7_20261015/visuals/hypir_lastres_lr5e6_trt_full_final/case83_hypir_lastres_lr5e6_trt_full_roi_1to1.png",
+        "sha256": "81f1374132712784c75d8224add39c4b9187454d31dfbb89262cc12917db9d7d",
+        "crop_box": [
+          672,
+          70,
+          1312,
+          582
+        ]
+      },
+      "output": {
+        "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/original_fresh_vs_teacher/case83_fresh_PixG5i_vs_fixed_HYPIR_ROI.png",
+        "sha256": "4331f421960253a3effbb4a7ff7fe8731368d058f9ad31a49f89b28e632b69b6",
+        "bytes": 1703070
+      },
+      "crop_pixels_verified_exact": true
+    }
+  ]
+}

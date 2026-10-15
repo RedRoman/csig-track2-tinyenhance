@@ -1,0 +1,104 @@
+{
+  "status": "PASS_CPU_PLAN_ONLY_NO_ENGINE_NO_GPU_NO_REGISTRATION",
+  "CUDA_VISIBLE_DEVICES": "",
+  "torch_imported_in_controller": false,
+  "sources": [
+    {
+      "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/trained_backend_v1/build_finetuned_unet_trt.py",
+      "sha256": "b7dcc1f4fa986506eda23651b94c3f65b463fb46a9fe45e464833e6017fda34d"
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/trained_backend_v1/finetuned_trtvae_runner.py",
+      "sha256": "4b225fbe82c556abf4b409927d16709e771a69fb811d7c6803f7281792875862"
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/trained_backend_v1/finetuned_unet_vae_runner.py",
+      "sha256": "c98c406884cf07bc5541e315393b98e11351165b35c94d33f926d5443f9563c3"
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/trained_backend_v1/protected_source_ast_proof.json",
+      "sha256": "1f29a99b307624656e72a791ebacced741679e79fdc79930e0dac6560a83d65c"
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/trained_backend_v1/registration_plan.py",
+      "sha256": "97a08c5e3291d8ae9182f0bf31f23a9ec976fa4a79c77df7bfc36afb34325335"
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/trained_backend_v1/trained_native_binding.py",
+      "sha256": "db2052014f941f517dee730dcb44e4d8e3d9939e0de15991f663bb098e6c451d"
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/trained_backend_v1/trt_vae_runtime_v2.py",
+      "sha256": "dc2597edfe8a7d71526535bd4e7540bd9c7623de00b6639c61139e08837aa9a4"
+    }
+  ],
+  "plans": [
+    {
+      "command": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/trained_backend_v1/build_finetuned_unet_trt.py",
+        "--native-manifest",
+        "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastconv_lr1e6_nr_s7850/candidate_manifest.json",
+        "--native-manifest-sha256",
+        "45cee1c8e9af789c13a151a9954bbe443edeca5677c1d89d96c48f34433f777b",
+        "--out-dir",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/push7_a7750_lastconv_lr1e6_nr_s7850_unet_fp16"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "a24456f093171fdc189339d7f81822910a80e2022f8e7494047775cb25fb3623",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "CPU_PLAN_ONLY",
+      "no_candidate_registered": true
+    },
+    {
+      "command": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/trained_backend_v1/registration_plan.py",
+        "--native-manifest",
+        "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastconv_lr1e6_nr_s7850/candidate_manifest.json",
+        "--native-manifest-sha256",
+        "45cee1c8e9af789c13a151a9954bbe443edeca5677c1d89d96c48f34433f777b"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "066388ccfb5f38537b3ecda25a0ac81d7e9fe59eb19e3a4238b61bc83ee24435",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "CPU_PLAN_WAITING_REAL_NEW_UNET_ENGINE",
+      "no_candidate_registered": true
+    },
+    {
+      "command": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/trained_backend_v1/build_finetuned_unet_trt.py",
+        "--native-manifest",
+        "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_nr_s7850/candidate_manifest.json",
+        "--native-manifest-sha256",
+        "bf9ac78249c2c50b0855c35152228fea46bc7f39b8f02346514f81d9145fbf3a",
+        "--out-dir",
+        "/cache/independent_sr_cuda_20261013/backends/push7_trt/push7_a7750_lastres_nr_s7850_unet_fp16"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "cbe845864e8f53cb1d00b0388d0a8c34431d62e3478fbb4057ea32778000db8a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "CPU_PLAN_ONLY",
+      "no_candidate_registered": true
+    },
+    {
+      "command": [
+        "/cache/independent_sr_cuda_20261013/env/bin/python",
+        "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/trained_backend_v1/registration_plan.py",
+        "--native-manifest",
+        "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_nr_s7850/candidate_manifest.json",
+        "--native-manifest-sha256",
+        "bf9ac78249c2c50b0855c35152228fea46bc7f39b8f02346514f81d9145fbf3a"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "41b41619cdb1142d66bcabf6882f0bc61208ea67c0dffb71e79786412a09f4d9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "CPU_PLAN_WAITING_REAL_NEW_UNET_ENGINE",
+      "no_candidate_registered": true
+    }
+  ],
+  "no_builder_execute_flag": true,
+  "actual_engine_built_here": false,
+  "actual_candidate_registered_here": false
+}

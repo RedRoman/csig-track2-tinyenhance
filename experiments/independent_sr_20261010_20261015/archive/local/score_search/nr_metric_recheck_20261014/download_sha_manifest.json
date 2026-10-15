@@ -1,0 +1,126 @@
+{
+  "status": "PASS",
+  "compared_small_files": 17,
+  "scope": "12 fresh output files including finalstatus +5 source snapshots; no model weights downloaded",
+  "files": [
+    {
+      "relative_path": "labels/compiled6000/artifact_hashes.json",
+      "remote": "/cache/independent_sr_cuda_20261013/metric_rechecks/20261014_original_tool/compiled6000/artifact_hashes.json",
+      "bytes": 524,
+      "sha256": "08b876c3b98c4b9ac9ac7149c2182f15051e717405548561d86ff3c4b3a42188",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "labels/compiled6000/status.json",
+      "remote": "/cache/independent_sr_cuda_20261013/metric_rechecks/20261014_original_tool/compiled6000/status.json",
+      "bytes": 291,
+      "sha256": "418453feb617903aa560cf7a4ea9076c2cdf86aab98151e234787885015fdf32",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "labels/compiled6000/measurements.jsonl",
+      "remote": "/cache/independent_sr_cuda_20261013/metric_rechecks/20261014_original_tool/compiled6000/measurements.jsonl",
+      "bytes": 76539,
+      "sha256": "1ff72c02667e76eb68486f306686acaf2399c812d3847b9af3ad1b63e7ca957c",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "labels/compiled6000/protocol.json",
+      "remote": "/cache/independent_sr_cuda_20261013/metric_rechecks/20261014_original_tool/compiled6000/protocol.json",
+      "bytes": 204137,
+      "sha256": "249fc824de80581164493b226bed6db99c2af12a1d6e13cf48371c6331a17322",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "labels/compiled6000/compiled6000_test_nr.csv",
+      "remote": "/cache/independent_sr_cuda_20261013/metric_rechecks/20261014_original_tool/compiled6000/compiled6000_test_nr.csv",
+      "bytes": 10539,
+      "sha256": "d170eda461aa973ebe2a6e8759f49a9dc8f6ec6e3ccb1dc293df4ebbbc578047",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "labels/compiled6000/result.json",
+      "remote": "/cache/independent_sr_cuda_20261013/metric_rechecks/20261014_original_tool/compiled6000/result.json",
+      "bytes": 600,
+      "sha256": "13605ee73c4b6a755ba636485d6e4e58a52aba17cfc623195078a877a61567e2",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "sources/score_dir.py",
+      "remote": "/cache/independent_sr_cuda_20261013/scoring_tool/score_dir.py",
+      "bytes": 5050,
+      "sha256": "e0b700b34c68d1bcdea9f6fe1d703eaa68e708cc29632f45082a0b50ce22c9f7",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "sources/csig_metrics.py",
+      "remote": "/cache/independent_sr_cuda_20261013/scoring_tool/csig_metrics.py",
+      "bytes": 4997,
+      "sha256": "1af7fecd0aa79ec9e8b9f914332cd414b9227338159813b7f45125676c8ba1f2",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "sources/numpy_legacy_compat.py",
+      "remote": "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py",
+      "bytes": 1028,
+      "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "sources/maniqa_offline_init.py",
+      "remote": "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py",
+      "bytes": 5324,
+      "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "sources/repeat_score_tool.py",
+      "remote": "/cache/independent_sr_cuda_20261013/code/repeat_score_tool.py",
+      "bytes": 13571,
+      "sha256": "c0612f096caa9bdfca3e5c75a9c42f797df85ddab2cc01a227165c2bac42a1a6",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "labels/conservative6250/artifact_hashes.json",
+      "remote": "/cache/independent_sr_cuda_20261013/metric_rechecks/20261014_original_tool/conservative6250/artifact_hashes.json",
+      "bytes": 528,
+      "sha256": "d3a106aa9990a2cdc58ce67768fd9174accbb359ea6bb9a6d7a03d1876b58904",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "labels/conservative6250/status.json",
+      "remote": "/cache/independent_sr_cuda_20261013/metric_rechecks/20261014_original_tool/conservative6250/status.json",
+      "bytes": 296,
+      "sha256": "0e7530ea41637e14e6bb2d9111bdd772b19884b62700fb86cf136b27cab58a2f",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "labels/conservative6250/conservative6250_test_nr.csv",
+      "remote": "/cache/independent_sr_cuda_20261013/metric_rechecks/20261014_original_tool/conservative6250/conservative6250_test_nr.csv",
+      "bytes": 10502,
+      "sha256": "a3b77224bfb2c0dc02fe8ac44d56694abf96623185a0312a6c768ae81bb849a7",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "labels/conservative6250/measurements.jsonl",
+      "remote": "/cache/independent_sr_cuda_20261013/metric_rechecks/20261014_original_tool/conservative6250/measurements.jsonl",
+      "bytes": 77627,
+      "sha256": "43f2b4217a442c356394ac9408c479f0595f892e8d685aec3beb0a49062b1c10",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "labels/conservative6250/protocol.json",
+      "remote": "/cache/independent_sr_cuda_20261013/metric_rechecks/20261014_original_tool/conservative6250/protocol.json",
+      "bytes": 205307,
+      "sha256": "28d213ce1bc7f152a3e16f50a18ac34baefb7b983b8eed097b0d2e3d0bf5bfb9",
+      "remote_actual_SHA_match": true
+    },
+    {
+      "relative_path": "labels/conservative6250/result.json",
+      "remote": "/cache/independent_sr_cuda_20261013/metric_rechecks/20261014_original_tool/conservative6250/result.json",
+      "bytes": 602,
+      "sha256": "e7ba53128025b6c0b82ceede0f0d63f96cb889f60c78a89274995374c33e4de1",
+      "remote_actual_SHA_match": true
+    }
+  ]
+}

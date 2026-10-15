@@ -1,0 +1,198 @@
+{
+  "schema": "cuda_search_status_v1",
+  "time_bjt": "2026-10-13T22:43:04.620663+08:00",
+  "root": "/cache/independent_sr_cuda_20261013",
+  "candidates": [
+    {
+      "label": "s6000_mt200_ct175_compiled_cuda_all",
+      "stage": "complete",
+      "total": 103,
+      "render_completed": 103,
+      "png_count": 103,
+      "render_complete": true,
+      "scored": 103,
+      "render_status": {
+        "status": "complete",
+        "completed": 103,
+        "total": 103,
+        "time": 1791901862.204057
+      },
+      "score_status": {
+        "status": "complete",
+        "completed": 103,
+        "expected": 103,
+        "last_split": "test",
+        "last_case": 100
+      },
+      "controller_status": {},
+      "measurements": "/cache/independent_sr_cuda_20261013/evaluations/s6000_mt200_ct175_compiled_cuda_all/scores/measurements.jsonl",
+      "active_processes": [],
+      "errors": [],
+      "render_protocol_id": "68e3889b1c1ba2e76a5b131818383e6ed36e13cc021aae7bcc7c14052e139aec",
+      "render_protocol_file_sha256": "e6e06264deacdf4800bd1218c4b6cb438d9f0dfd519a1f693dc2b5db85a1b6b7",
+      "renderer_source_sha256": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5",
+      "runner_sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae",
+      "checkpoint_sha256": "2c82a71a94aa754bd4a26a2a474c2bbe4989bde1d38d2e15d9e58eb0c3e408bc",
+      "runner_internal_precision": "BF16",
+      "render_manifest_sha256": "a61080b4cb0f9f574933ccda1916a78b0a18fbe5cfccd0ea1bebc397dafa1689",
+      "complete_result": {
+        "label": "s6000_mt200_ct175_compiled_cuda_all",
+        "status": "complete",
+        "completed": 103,
+        "expected": 103,
+        "official_full_count": true,
+        "validation": {
+          "clipiqa": 0.7087689240773519,
+          "dists": 0.2008252739906311,
+          "lpips": 0.3352457682291667,
+          "maniqa": 0.4916957716147105,
+          "musiq": 48.74409612019857,
+          "niqe": 3.9201641045022293,
+          "n": 3,
+          "fr": 1.4639289577802022,
+          "nr_val": 2.295889246443825,
+          "score": 3.759818204224027
+        },
+        "test": {
+          "clipiqa": 0.7226254713535308,
+          "maniqa": 0.4994988214969635,
+          "musiq": 43.187275161743166,
+          "niqe": 4.008259635619268,
+          "n": 100,
+          "nr": 2.2531710809059993
+        },
+        "S_proxy": 3.717100038686201,
+        "S_proxy_scope": "full100_test_NR_plus3val_FR"
+      },
+      "result_file_sha256": "511b9ab33006562614679acbb1015fb45e4e3a36e9df5004146a00d3d14973f0"
+    },
+    {
+      "label": "s6000_mt200_ct175_cuda_all",
+      "stage": "complete",
+      "total": 103,
+      "render_completed": 103,
+      "png_count": 103,
+      "render_complete": true,
+      "scored": 103,
+      "render_status": {
+        "status": "complete",
+        "completed": 103,
+        "total": 103,
+        "time": 1791901788.1801062
+      },
+      "score_status": {
+        "status": "complete",
+        "completed": 103,
+        "expected": 103,
+        "last_split": "test",
+        "last_case": 100
+      },
+      "controller_status": {},
+      "measurements": "/cache/independent_sr_cuda_20261013/evaluations/s6000_mt200_ct175_cuda_all/scores/measurements.jsonl",
+      "active_processes": [],
+      "errors": [],
+      "render_protocol_id": "0f9a8c9eda452f73e27a2617f5b44c390cbe18bf02e930125774f5bd45e8d9fb",
+      "render_protocol_file_sha256": "8b4dde8f586aeb57f4f5dd6bf3a48f414c1b159eeaf71fa394518306424615ef",
+      "renderer_source_sha256": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5",
+      "runner_sha256": "204d6d84b439213591bc8aaa13412c4b38f8eba0613a798d188541524728c29f",
+      "checkpoint_sha256": "2c82a71a94aa754bd4a26a2a474c2bbe4989bde1d38d2e15d9e58eb0c3e408bc",
+      "runner_internal_precision": "BF16",
+      "render_manifest_sha256": "efbedac2e0768f0c1dc022aa0a83c2d6bbce15ec9b483aa63ab3a9ad59252c2e",
+      "complete_result": {
+        "label": "s6000_mt200_ct175_cuda_all",
+        "status": "complete",
+        "completed": 103,
+        "expected": 103,
+        "official_full_count": true,
+        "validation": {
+          "clipiqa": 0.709000825881958,
+          "dists": 0.20060928662618002,
+          "lpips": 0.3349609375,
+          "maniqa": 0.490845263004303,
+          "musiq": 48.934454600016274,
+          "niqe": 3.9232908729272093,
+          "n": 3,
+          "fr": 1.4644297758738198,
+          "nr_val": 2.2968615475937026,
+          "score": 3.7612913234675225
+        },
+        "test": {
+          "clipiqa": 0.7223085224628448,
+          "maniqa": 0.4991017761826515,
+          "musiq": 43.27276420593262,
+          "niqe": 4.007925285053351,
+          "n": 100,
+          "nr": 2.2533454121994874
+        },
+        "S_proxy": 3.717775188073307,
+        "S_proxy_scope": "full100_test_NR_plus3val_FR"
+      },
+      "result_file_sha256": "70658c1e7636628a81a3b829164e77311739c98977d249e0f30fc6bd77311d63"
+    },
+    {
+      "label": "s8000_mt200_ct200_cuda_all",
+      "stage": "complete",
+      "total": 103,
+      "render_completed": 103,
+      "png_count": 103,
+      "render_complete": true,
+      "scored": 103,
+      "render_status": {
+        "status": "complete",
+        "completed": 103,
+        "total": 103,
+        "time": 1791901799.7382164
+      },
+      "score_status": {
+        "status": "complete",
+        "completed": 103,
+        "expected": 103,
+        "last_split": "test",
+        "last_case": 100
+      },
+      "controller_status": {},
+      "measurements": "/cache/independent_sr_cuda_20261013/evaluations/s8000_mt200_ct200_cuda_all/scores/measurements.jsonl",
+      "active_processes": [],
+      "errors": [],
+      "render_protocol_id": "805eb574b8150fde52d7fe36bf64dc8ba877410232ec766e96de0adb10a0ad53",
+      "render_protocol_file_sha256": "175813a2d4821c52973f0cced0f7688f322e26b13de87a8d40ffd37518d0938f",
+      "renderer_source_sha256": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5",
+      "runner_sha256": "204d6d84b439213591bc8aaa13412c4b38f8eba0613a798d188541524728c29f",
+      "checkpoint_sha256": "1446f3bc67f2d5743a9f00eb52c92d1c610124779a37a98646d2c1f7f3775225",
+      "runner_internal_precision": "BF16",
+      "render_manifest_sha256": "ca8cd85e918c14d92cbd19f8e92c5c485499670960b18b8257669d8845cd4ead",
+      "complete_result": {
+        "label": "s8000_mt200_ct200_cuda_all",
+        "status": "complete",
+        "completed": 103,
+        "expected": 103,
+        "official_full_count": true,
+        "validation": {
+          "clipiqa": 0.6760448614756266,
+          "dists": 0.20149548848470053,
+          "lpips": 0.3485921223958333,
+          "maniqa": 0.4629276394844055,
+          "musiq": 47.83319854736328,
+          "niqe": 3.677478919661565,
+          "n": 3,
+          "fr": 1.4499123891194663,
+          "nr_val": 2.249556594467508,
+          "score": 3.6994689835869745
+        },
+        "test": {
+          "clipiqa": 0.6886409696936607,
+          "maniqa": 0.47162787824869157,
+          "musiq": 43.17371942520142,
+          "niqe": 3.834339271010245,
+          "n": 100,
+          "nr": 2.2085721150933417
+        },
+        "S_proxy": 3.658484504212808,
+        "S_proxy_scope": "full100_test_NR_plus3val_FR"
+      },
+      "result_file_sha256": "5b373554a492f0941f439b482934ebc37a5b28e432af24757bb26f8cd98dd40d"
+    }
+  ],
+  "active_processes": [],
+  "note": "CUDA quality and latency are separate; only complete result files are reported."
+}

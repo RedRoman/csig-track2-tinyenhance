@@ -1,0 +1,32 @@
+{
+  "pid": 265724,
+  "physical_npu": 2,
+  "command": [
+    "flock",
+    "-n",
+    "/cache/independent_sr_score_search_20261013/device_locks/npu2.lock",
+    "/cache/independent_sr_score_search_20261013/env/bin/python",
+    "-u",
+    "/cache/independent_sr_score_search_20261013/code/score_search/render_prefix_shard.py",
+    "--project-root",
+    "/cache/independent_sr_score_search_20261013",
+    "--eval-root",
+    "/cache/independent_sr_score_search_20261013/evaluations/prefix_validation_s8000_case37_case99",
+    "--checkpoint",
+    "/cache/independent_sr_score_search_20261013/adaptation/runs/ascend_balanced/step8000.pth",
+    "--model-t",
+    "200",
+    "--coeff-t",
+    "200",
+    "--task-indices",
+    "39,101",
+    "--reference-render-root",
+    "/cache/independent_sr_score_search_20261013/reference_s8000",
+    "--backend",
+    "npu",
+    "--device-index",
+    "0"
+  ],
+  "time": 1791897303.9512868,
+  "source_sha256": "98e3e3ac11da054938e68ec77d5a4a808f7326fa836a90a205df8d50287b8c87"
+}

@@ -1,0 +1,16 @@
+{
+  "stage": "complete",
+  "label": "s8000_mt200_ct200_mode_p512_pilot",
+  "time": 1791896724.701767,
+  "physical_npu": 2,
+  "logical_npu": 0,
+  "checkpoint": "/cache/independent_sr_score_search_20261013/adaptation/runs/ascend_balanced/step8000.pth",
+  "scope": "pilot",
+  "latent": "mode",
+  "patch": 512,
+  "stride": 256,
+  "test_NR": 2.2062912806272506,
+  "val_FR": 1.4499650398890178,
+  "S_subset": 3.6562563205162686,
+  "result": "/cache/independent_sr_score_search_20261013/evaluations/s8000_mt200_ct200_mode_p512_pilot/scores/result.json"
+}

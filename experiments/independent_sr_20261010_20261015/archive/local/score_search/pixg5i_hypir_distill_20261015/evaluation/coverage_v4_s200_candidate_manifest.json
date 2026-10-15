@@ -1,0 +1,307 @@
+{
+  "schema": "pixg5i_registered_candidate_v1",
+  "label": "pixg5i_hypir_coverage_v4_s200",
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir",
+  "stage": "distilled_checkpoint",
+  "variant": "coverage_v4",
+  "model_type": "supplied_pixG5i_pixel_UNet",
+  "checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/step200.pth",
+  "checkpoint_sha256": "503074449893247332df973a85f9be1f348d9f130f31a28455b62790fb50c929",
+  "deployed_checkpoint": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir/model.pth",
+  "initial_package_checkpoint_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+  "runner_sha256": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a",
+  "binding": {
+    "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir/pixg5i_binding.json",
+    "sha256": "47853e5b6da683b1346adc0f58b39b3d20d1f728e52a0b929652fb060777262d",
+    "bytes": 5676
+  },
+  "files": {
+    "config.yaml": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir/config.yaml",
+      "sha256": "e13bab32185ac95f07ac36133eff89133a33ed90cc5ca534b7d8496bc457250d",
+      "bytes": 35
+    },
+    "reference_runner.py": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir/reference_runner.py",
+      "sha256": "6222ead92dc6fb24b88c0350e41191fc27a5adc2f6ba38bd383a4badb9bd8c1e",
+      "bytes": 8830
+    },
+    "model.pth": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir/model.pth",
+      "sha256": "503074449893247332df973a85f9be1f348d9f130f31a28455b62790fb50c929",
+      "bytes": 15180767
+    },
+    "pix_model.py": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir/pix_model.py",
+      "sha256": "2f1cd3cd8311381e432138f489b01b982e08ebd5b09ecbc05ac87f7bfb577923",
+      "bytes": 9180
+    },
+    "runner.py": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir/runner.py",
+      "sha256": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a",
+      "bytes": 3400
+    },
+    "pixg5i_binding.json": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir/pixg5i_binding.json",
+      "sha256": "47853e5b6da683b1346adc0f58b39b3d20d1f728e52a0b929652fb060777262d",
+      "bytes": 5676
+    }
+  },
+  "training_provenance": {
+    "config": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/config.json",
+      "sha256": "fadf6a9577c2b9f2747382b3ba3ebcbe64464add1c2544154d31fc499aa127bf",
+      "bytes": 80311
+    },
+    "marker": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/checkpoint_step200.json",
+      "sha256": "1334a9adb60211d28fe91762591c9b1d38d7050973a65290db4f6187f584193a",
+      "bytes": 5968
+    },
+    "input_catalog": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/input_catalog.json",
+      "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+      "bytes": 23987
+    },
+    "teacher_catalog": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/teacher_catalog.json",
+      "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+      "bytes": 39787
+    },
+    "resume": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/resume_step200.pt",
+      "sha256": "e2d47be279fd3c688df232ec9ebb895f23587580ab4e40871cfb6fd79bc766ec",
+      "bytes": 45582907
+    },
+    "training_source": {
+      "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_coverage_v4.py",
+      "sha256": "25624067758d5717e110ac7025c4e9eb8ee2ad8b2cfc292273581d6b5510fa08",
+      "bytes": 33020
+    },
+    "training_plan": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/training_plan.json",
+      "sha256": "5466f898c854b8337d16879a867b04b14b631959df18c6baca817c9eaafe0d28",
+      "bytes": 276974
+    }
+  },
+  "teacher": {
+    "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+    "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+    "applied_to_this_checkpoint": true,
+    "render_manifest": {
+      "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+      "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+      "bytes": 81396
+    }
+  },
+  "local_step": 200,
+  "optimizer_step": 200,
+  "reference_step": 30000,
+  "training_phase": "coverage_v4",
+  "global_step": 2000,
+  "parent_distillation_steps": 1800,
+  "total_distillation_steps": 2000,
+  "phase_initial_checkpoint_sha256": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa",
+  "phase_parent": {
+    "candidate_manifest": {
+      "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s600/candidate_manifest.json",
+      "sha256": "398a259dcb8bd6616b6d3043ed414eba73ef63e400bb21eceaf19f1160081a56"
+    },
+    "parent_global_distillation_step": 1800,
+    "marker": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/checkpoint_step600.json",
+      "sha256": "72a3c7ca6d4beac6234b3f933fb0ad871b483a66863e884c17b389bacdc7cd76"
+    },
+    "config": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/config.json",
+      "sha256": "bd4d8f0d2488604f9b4e78b268d39b953d5298bd6fed4ccdcf08033eaccfced8"
+    },
+    "raw": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/step600.pth",
+      "sha256": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa"
+    },
+    "resume": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/resume_step600.pt",
+      "sha256": "d37cbcfbd1254fd2838d36140c7cd51ef61abe0a5fedd85fc0115e1afdce9fdf"
+    },
+    "parent_local_step": 600,
+    "parent_optimizer_step": 600,
+    "raw_resume_FP32_exact": true,
+    "optimizer_inherited": false,
+    "RNG_inherited": false
+  },
+  "parent_candidate_manifest": {
+    "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s600/candidate_manifest.json",
+    "sha256": "398a259dcb8bd6616b6d3043ed414eba73ef63e400bb21eceaf19f1160081a56",
+    "bytes": 13812
+  },
+  "reset_head": false,
+  "parent_historical_head_reset": {
+    "names": [
+      "outc.weight",
+      "outc.bias"
+    ],
+    "elements": 3468,
+    "initial_outc_zero": true,
+    "body110_exact_parent": true,
+    "first_step_body_gradient_zero_expected": true
+  },
+  "parameter_groups": {
+    "body_tensors": 110,
+    "head_names": [
+      "outc.weight",
+      "outc.bias"
+    ],
+    "head_elements": 3468
+  },
+  "sampler_plan_sha256": "5466f898c854b8337d16879a867b04b14b631959df18c6baca817c9eaafe0d28",
+  "sampler_next_index": 200,
+  "phase_initial_state_fingerprint_sha256": "15da2e5c6cbaad1fa52bb1530536c4eb91e85f49965d69dccab3ff0c2cc09f98",
+  "registration_CPU_proof": {
+    "status": "CPU_ACTUAL_TRAINED_CHECKPOINT_VALIDATED",
+    "model_dir": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_coverage_v4_s200/model_dir",
+    "binding": {
+      "schema": "pixg5i_hypir_distill_binding_v1",
+      "label": "pixg5i_hypir_coverage_v4_s200",
+      "stage": "distilled_checkpoint",
+      "checkpoint_sha256": "503074449893247332df973a85f9be1f348d9f130f31a28455b62790fb50c929",
+      "initial_package_checkpoint_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+      "archive_sha256": "f8e154da5ea9cb2fe165a316f824003459661945e6bbe22efd025d8592d573d6",
+      "training_provenance": {
+        "config": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/config.json",
+          "sha256": "fadf6a9577c2b9f2747382b3ba3ebcbe64464add1c2544154d31fc499aa127bf",
+          "bytes": 80311
+        },
+        "marker": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/checkpoint_step200.json",
+          "sha256": "1334a9adb60211d28fe91762591c9b1d38d7050973a65290db4f6187f584193a",
+          "bytes": 5968
+        },
+        "input_catalog": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/input_catalog.json",
+          "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+          "bytes": 23987
+        },
+        "teacher_catalog": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/teacher_catalog.json",
+          "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+          "bytes": 39787
+        },
+        "resume": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/resume_step200.pt",
+          "sha256": "e2d47be279fd3c688df232ec9ebb895f23587580ab4e40871cfb6fd79bc766ec",
+          "bytes": 45582907
+        },
+        "training_source": {
+          "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_coverage_v4.py",
+          "sha256": "25624067758d5717e110ac7025c4e9eb8ee2ad8b2cfc292273581d6b5510fa08",
+          "bytes": 33020
+        },
+        "training_plan": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_coverage_v4/training_plan.json",
+          "sha256": "5466f898c854b8337d16879a867b04b14b631959df18c6baca817c9eaafe0d28",
+          "bytes": 276974
+        }
+      },
+      "teacher": {
+        "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+        "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+        "applied_to_this_checkpoint": true,
+        "render_manifest": {
+          "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+          "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+          "bytes": 81396
+        }
+      },
+      "used_as_G4_reference": false,
+      "variant": "coverage_v4",
+      "local_step": 200,
+      "optimizer_step": 200,
+      "reference_step": 30000,
+      "training_phase": "coverage_v4",
+      "global_step": 2000,
+      "parent_distillation_steps": 1800,
+      "total_distillation_steps": 2000,
+      "phase_initial_checkpoint_sha256": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa",
+      "phase_parent": {
+        "candidate_manifest": {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s600/candidate_manifest.json",
+          "sha256": "398a259dcb8bd6616b6d3043ed414eba73ef63e400bb21eceaf19f1160081a56"
+        },
+        "parent_global_distillation_step": 1800,
+        "marker": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/checkpoint_step600.json",
+          "sha256": "72a3c7ca6d4beac6234b3f933fb0ad871b483a66863e884c17b389bacdc7cd76"
+        },
+        "config": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/config.json",
+          "sha256": "bd4d8f0d2488604f9b4e78b268d39b953d5298bd6fed4ccdcf08033eaccfced8"
+        },
+        "raw": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/step600.pth",
+          "sha256": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa"
+        },
+        "resume": {
+          "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_headreset_v3/resume_step600.pt",
+          "sha256": "d37cbcfbd1254fd2838d36140c7cd51ef61abe0a5fedd85fc0115e1afdce9fdf"
+        },
+        "parent_local_step": 600,
+        "parent_optimizer_step": 600,
+        "raw_resume_FP32_exact": true,
+        "optimizer_inherited": false,
+        "RNG_inherited": false
+      },
+      "parent_candidate_manifest": {
+        "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_headreset_v3_s600/candidate_manifest.json",
+        "sha256": "398a259dcb8bd6616b6d3043ed414eba73ef63e400bb21eceaf19f1160081a56",
+        "bytes": 13812
+      },
+      "reset_head": false,
+      "parent_historical_head_reset": {
+        "names": [
+          "outc.weight",
+          "outc.bias"
+        ],
+        "elements": 3468,
+        "initial_outc_zero": true,
+        "body110_exact_parent": true,
+        "first_step_body_gradient_zero_expected": true
+      },
+      "parameter_groups": {
+        "body_tensors": 110,
+        "head_names": [
+          "outc.weight",
+          "outc.bias"
+        ],
+        "head_elements": 3468
+      },
+      "sampler_plan_sha256": "5466f898c854b8337d16879a867b04b14b631959df18c6baca817c9eaafe0d28",
+      "sampler_next_index": 200,
+      "phase_initial_state_fingerprint_sha256": "15da2e5c6cbaad1fa52bb1530536c4eb91e85f49965d69dccab3ff0c2cc09f98"
+    },
+    "actual_changed_FP32_tensors_vs_all112_parent_initial": 112,
+    "actual_body_changed_FP32_tensors_vs_parent": 110,
+    "actual112_raw_resume_equal_FP32_finite": true,
+    "actual112_Adam_moments_finite_and_counters": true,
+    "all4_RNG_saved": true,
+    "teacher_catalog_bound_to_fixed_manifest": true,
+    "teacher_training_PNG_bytes_rehashed_here": false,
+    "actual_sampler_plan_regenerated_matches": true,
+    "sampler_next_index": 200,
+    "training_logs_replayed_here": false,
+    "sampler_scope": "Every100step cycle visits all100cases once; twenty5x4 context-origin strata percase over2000planned steps; not exhaustive pixels",
+    "CPU_only": true,
+    "CUDA_initialized": false
+  },
+  "quality_reuse_claim": false,
+  "used_as_G4_reference": false,
+  "registration_source": {
+    "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_distill/register_coverage_pixg5i_v4.py",
+    "sha256": "6bd0d21a2bf5ca3db65dee1d7b2f84571f51d337b3e8c34a82e2d8e0f4d5a96f",
+    "bytes": 18786
+  },
+  "CPU_only": true,
+  "GPU_used": false,
+  "original_inference_source_unchanged": true
+}

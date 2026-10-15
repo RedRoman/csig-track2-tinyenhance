@@ -1,0 +1,163 @@
+{
+  "status": "PASS_PIXG5I_FP32_ADAM_SCALER_RNG",
+  "auditor_source_sha256": "3db06dc98145df2a9484037b929190d5eac2ae682f51524c803869d58f720129",
+  "initial_package_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+  "teacher_raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+  "steps": [
+    0,
+    600
+  ],
+  "models": [
+    {
+      "run": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild",
+      "variant": "mild",
+      "protocol_id": "50c3abbc9cc3075339df53fceac7055434a3ef3c4b59e34d4f2f9b68a037c009",
+      "initial_package_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+      "teacher_raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+      "config_sha256": "2ae1fd2e9ce0f1a89eb96a4a04054aa0ee3158756d5ae633d46819d7bdf21e97",
+      "milestones": {
+        "0": {
+          "local_step": 0,
+          "optimizer_step": 0,
+          "raw_sha256": "c52a17629608f8534378280be23ebe64b91686674412383342d90b95f910f7c5",
+          "resume_sha256": "cb60ace4d5813fa7786ea10c39b9184acb72f5d5f48f1a15e66b366d4aa2b87c",
+          "marker_sha256": "70adb3bf6c15c21d64fad7ada4309c4cf071bbdf52cb8c80bf87971b0f656826",
+          "state_tensors": 112,
+          "parameter_elements": 3786764,
+          "raw_resume_FP32_exact": true,
+          "changed_FP32_tensors": 0,
+          "Adam_state_entries": 0,
+          "Adam_all_finite_FP32": true,
+          "Adam_steps": [],
+          "four_RNG_valid": true,
+          "grad_scaler": {
+            "scale": 1024.0,
+            "growth_factor": 2.0,
+            "backoff_factor": 0.5,
+            "growth_interval": 2000,
+            "_growth_tracker": 0
+          }
+        },
+        "600": {
+          "local_step": 600,
+          "optimizer_step": 600,
+          "raw_sha256": "51dfbd335e4076009409ae7efc727db99f98bb6dc1cc76d1161dba9b75e3ffc5",
+          "resume_sha256": "04e1c91f36e4ba63324dd315186eaea69054698a475454ce96a6cc80da704dd7",
+          "marker_sha256": "4709ae9c35b1012f03b4c733316024ad59f05482f1ccad211734e5def88dc607",
+          "state_tensors": 112,
+          "parameter_elements": 3786764,
+          "raw_resume_FP32_exact": true,
+          "changed_FP32_tensors": 112,
+          "Adam_state_entries": 112,
+          "Adam_all_finite_FP32": true,
+          "Adam_steps": [
+            600
+          ],
+          "four_RNG_valid": true,
+          "grad_scaler": {
+            "scale": 1024.0,
+            "growth_factor": 2.0,
+            "backoff_factor": 0.5,
+            "growth_interval": 2000,
+            "_growth_tracker": 600
+          }
+        }
+      },
+      "logged_prefix_steps": 600,
+      "log_prefix_sha256": "ee9822c86fe8b79af468231f7c912ce3b08c26580173ca4b905d21e7c1f8f4e3",
+      "all_prefix_losses_gradients_updates_finite": true,
+      "all_prefix_cases_crops_replayed": true,
+      "initial_deployment_relation": {
+        "FP32_unfolded_vs_folded_max_abs": 4.470348358154297e-07,
+        "FP32_unfolded_vs_folded_mean_abs": 1.6901342547726017e-08,
+        "AMP_unfolded_vs_original_fold_FP16_max_abs": 0.000946044921875,
+        "AMP_unfolded_vs_original_fold_FP16_mean_abs": 7.146531424950808e-05,
+        "comparison_scope": "same initial weights/same FP16-quantized1024 input, no optimizer update; finite arithmetic difference recorded, no exact claim"
+      },
+      "RNG_endpoint_digests": {
+        "0": "f03b9b25afc2d2a5965a51d552066760e1e8cff6713e737d5b05e6582e4e909c",
+        "600": "9739bffb2590233ce6707f76ef1778e0105b28a51790b9c06eca15929e08f56f"
+      },
+      "teacher_PNG_bytes_rehashed_here": false
+    },
+    {
+      "run": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium",
+      "variant": "medium",
+      "protocol_id": "f23c18ad89951a7a794e6bec2032f53d31e47d5c34659898d92a913bc453be05",
+      "initial_package_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+      "teacher_raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+      "config_sha256": "fc858e493f4b12ad10dd7005eff4b30401d63dc9a7ef120654c763973d926d71",
+      "milestones": {
+        "0": {
+          "local_step": 0,
+          "optimizer_step": 0,
+          "raw_sha256": "7af432c53bb3af865ab5aa94df8a8d56c5f14d12bcdcd8b386586578ffd8633c",
+          "resume_sha256": "1692676066b6c05eb1287af6a18e9e7a2ea6d6923185d285582f79655ee668ae",
+          "marker_sha256": "220479210fab9c9dc3c505d507778aa7e3e86e9ba3456ce9bddc300f56657a23",
+          "state_tensors": 112,
+          "parameter_elements": 3786764,
+          "raw_resume_FP32_exact": true,
+          "changed_FP32_tensors": 0,
+          "Adam_state_entries": 0,
+          "Adam_all_finite_FP32": true,
+          "Adam_steps": [],
+          "four_RNG_valid": true,
+          "grad_scaler": {
+            "scale": 1024.0,
+            "growth_factor": 2.0,
+            "backoff_factor": 0.5,
+            "growth_interval": 2000,
+            "_growth_tracker": 0
+          }
+        },
+        "600": {
+          "local_step": 600,
+          "optimizer_step": 600,
+          "raw_sha256": "45c7f6bb414567f31b906fc996c037f31df7ce6aebb615c19183e02886950fab",
+          "resume_sha256": "45dc395979567bd0650eba92301a0d63507f217e9f7f7e0128043ca411e93b5e",
+          "marker_sha256": "b314e5ef353e9f9c7196c8e263cc173f036289aa5249ecd847c03bfc697dbc9b",
+          "state_tensors": 112,
+          "parameter_elements": 3786764,
+          "raw_resume_FP32_exact": true,
+          "changed_FP32_tensors": 112,
+          "Adam_state_entries": 112,
+          "Adam_all_finite_FP32": true,
+          "Adam_steps": [
+            600
+          ],
+          "four_RNG_valid": true,
+          "grad_scaler": {
+            "scale": 1024.0,
+            "growth_factor": 2.0,
+            "backoff_factor": 0.5,
+            "growth_interval": 2000,
+            "_growth_tracker": 600
+          }
+        }
+      },
+      "logged_prefix_steps": 600,
+      "log_prefix_sha256": "d72fbc134ef835758ae96e8d58ebb81583d1095c3a550666385949ae63b8cd8b",
+      "all_prefix_losses_gradients_updates_finite": true,
+      "all_prefix_cases_crops_replayed": true,
+      "initial_deployment_relation": {
+        "FP32_unfolded_vs_folded_max_abs": 4.470348358154297e-07,
+        "FP32_unfolded_vs_folded_mean_abs": 1.6901342547726017e-08,
+        "AMP_unfolded_vs_original_fold_FP16_max_abs": 0.000946044921875,
+        "AMP_unfolded_vs_original_fold_FP16_mean_abs": 7.146531424950808e-05,
+        "comparison_scope": "same initial weights/same FP16-quantized1024 input, no optimizer update; finite arithmetic difference recorded, no exact claim"
+      },
+      "RNG_endpoint_digests": {
+        "0": "f03b9b25afc2d2a5965a51d552066760e1e8cff6713e737d5b05e6582e4e909c",
+        "600": "9739bffb2590233ce6707f76ef1778e0105b28a51790b9c06eca15929e08f56f"
+      },
+      "teacher_PNG_bytes_rehashed_here": false
+    }
+  ],
+  "matched_case_crop_teacher_and_RNG_endpoints": true,
+  "CPU_only": true,
+  "CUDA_initialized": false,
+  "quality_conclusion": false,
+  "mutable_status_not_locked": true,
+  "mutable_logs_checked_as_immutable_prefix_only": true,
+  "teacher_byte_scope": "Frozen trainer verified all100 actual PNG SHA at initialization; this audit checks catalog/manifest/log identity, not full PNG reread"
+}

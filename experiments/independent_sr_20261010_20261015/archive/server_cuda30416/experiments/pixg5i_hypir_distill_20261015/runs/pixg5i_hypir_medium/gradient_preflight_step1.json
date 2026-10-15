@@ -1,0 +1,36 @@
+{
+  "status": "PASS_FINITE112_AND_REAL_UPDATE",
+  "row": {
+    "local_step": 1,
+    "optimizer_step": 1,
+    "case": 28,
+    "context_crop_xy": [
+      808,
+      1800
+    ],
+    "loss_crop_xy": [
+      1064,
+      2056
+    ],
+    "teacher_png_sha256": "4115198fcb77040e7d43d95054e9b07e4b3fe670065ea24e20a97bbbbb794061",
+    "loss": 0.11816400289535522,
+    "L1_teacher_raw": 0.03480604663491249,
+    "LPIPS_teacher_clamped": 0.7451114058494568,
+    "gradient_teacher_raw": 0.029489392414689064,
+    "finite_parameter_gradients": 112,
+    "nonzero_parameter_gradients": 112,
+    "gradient_norm_before_clip": 0.5315659642219543,
+    "actual_updated_tensors": 112,
+    "update_RMS": 4.986925432604039e-06,
+    "lr": 5e-06,
+    "grad_scaler_scale": 1024.0,
+    "raw_outside01_fraction": 0.0,
+    "step_seconds": 1.3508825302124023,
+    "elapsed_seconds": 1.3509464263916016
+  },
+  "true_RGB_gradient_norm": 0.03034937009215355,
+  "FP32_master_all": true,
+  "frozen_LPIPS": true,
+  "teacher_detached": true,
+  "NR_reward": 0.0
+}

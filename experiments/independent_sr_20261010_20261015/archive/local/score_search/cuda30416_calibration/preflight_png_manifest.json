@@ -1,0 +1,86 @@
+{
+  "label": "s8000_mt200_ct200_pilot",
+  "source_port": 30207,
+  "destination_port": 30416,
+  "PNG_transformation": "none; original bytes streamed by tar/SSH",
+  "files": [
+    {
+      "split": "validation",
+      "case": 1,
+      "relative": "val/case1.png",
+      "sha256": "e38174f70f8cb1f625d1dbb0f4a48efe3455c03a550c7a33c3c495ee5c994446",
+      "npu_reference_metrics": {
+        "lpips": 0.48876953125,
+        "dists": 0.18983715772628784,
+        "niqe": 2.047884941101074,
+        "musiq": 49.91118240356445,
+        "maniqa": 0.4095337688922882,
+        "clipiqa": 0.642087996006012
+      }
+    },
+    {
+      "split": "validation",
+      "case": 2,
+      "relative": "val/case2.png",
+      "sha256": "6fc2ab645a3e6ec98e8e14f8671a1c09905337a651e04430a08d2b69906a204c",
+      "npu_reference_metrics": {
+        "lpips": 0.1680908203125,
+        "dists": 0.16766417026519775,
+        "niqe": 4.651099681854248,
+        "musiq": 36.1063117980957,
+        "maniqa": 0.5369162559509277,
+        "clipiqa": 0.6779245138168335
+      }
+    },
+    {
+      "split": "validation",
+      "case": 3,
+      "relative": "val/case3.png",
+      "sha256": "21f635a6ec0a127c6309b45c1997b4deed15922f163481179029089e68555500",
+      "npu_reference_metrics": {
+        "lpips": 0.38818359375,
+        "dists": 0.2472689151763916,
+        "niqe": 4.224508762359619,
+        "musiq": 57.3791389465332,
+        "maniqa": 0.4442315995693207,
+        "clipiqa": 0.706459641456604
+      }
+    },
+    {
+      "split": "test",
+      "case": 1,
+      "relative": "test/case1.png",
+      "sha256": "857143486861e9affe506fece3f4169f94d73c2b48a17f08fd753aafe479216b",
+      "npu_reference_metrics": {
+        "niqe": 4.6951470375061035,
+        "musiq": 43.814170837402344,
+        "maniqa": 0.43045249581336975,
+        "clipiqa": 0.6432173848152161
+      }
+    },
+    {
+      "split": "test",
+      "case": 6,
+      "relative": "test/case6.png",
+      "sha256": "829ea179a31f882d568975f06ac1831caf88542c4872c31911168b04828b654d",
+      "npu_reference_metrics": {
+        "niqe": 4.9579596519470215,
+        "musiq": 23.6882266998291,
+        "maniqa": 0.6172730922698975,
+        "clipiqa": 0.5884303450584412
+      }
+    },
+    {
+      "split": "test",
+      "case": 7,
+      "relative": "test/case7.png",
+      "sha256": "684e352301426abccc8c27dd423f67aa2b9f6bf316f3f6927ed6e943e5a4ee98",
+      "npu_reference_metrics": {
+        "niqe": 4.132589340209961,
+        "musiq": 35.619388580322266,
+        "maniqa": 0.5181037187576294,
+        "clipiqa": 0.6766053438186646
+      }
+    }
+  ]
+}

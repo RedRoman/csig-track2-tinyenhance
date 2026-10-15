@@ -1,0 +1,51 @@
+{
+  "schema": "stage5_D_vs_C_independent_CPU_control_comparison_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "GPU_used": false,
+  "audited_utc": "2026-10-14T13:44:09.398596+00:00",
+  "CLI_only_diff": {
+    "run": {
+      "C": "cuda_nr_stage5_s7250_teacher6500_m25_r10_500",
+      "D": "cuda_nr_stage5_s7250_teacher6500_m25_r075_250"
+    },
+    "reward_weight": {
+      "C": 0.1,
+      "D": 0.075
+    },
+    "stage_steps": {
+      "C": 500,
+      "D": 250
+    }
+  },
+  "same_parent_raw_resume_config_SHA": true,
+  "same_independently_replayed_first_case_crop": true,
+  "first_case": 93,
+  "first_crop_xy": [
+    60,
+    1399
+  ],
+  "pre_update_student_metric_scores_exact_equal": true,
+  "pre_update_teacher_fidelity_exact_equal": true,
+  "initial_loss_delta_matches_only_reward_change": true,
+  "scope": "Initial plus complete250-update D/C control identity; no scoring claim.",
+  "complete250_case_crop_sequence_exact_equal": true,
+  "complete250_case_crop_sequence_SHA256": "c5d96ea22ec06788c97fbfab492dddbb1e7bdc7bf9b1873322072f762fd4f559",
+  "terminal_four_RNG_state_SHA256_exact_equal": true,
+  "terminal_four_RNG_state_SHA256": {
+    "python": "c81d3427be73d21a4fc237a596aae13eec8fc9b2ab800e0257c8803adc70a36b",
+    "numpy": "1ea26a14b8dc47014d66792b356f9641515b05909716e8341fcfc98d6ee0a4c7",
+    "cpu": "f99273ba73d059b94d75bef7dca976542b44aeb12e4e337f7d4567ec94801229",
+    "cuda": "52019dcfcf3db8ebfd559cdc042fcfadf519a55b53d80387ef5e4a1cc5689f2f"
+  },
+  "global_step": 7500,
+  "Adam_step": 1500,
+  "evidence": {
+    "/cache/independent_sr_cuda_20261013/code/cuda_training/push4/config_stage5_C_m25_r10_500.json": "4052f7430bbeaddaf1d6851efbb82555e705fd1ac128d14b5388ec48559d8240",
+    "/cache/independent_sr_cuda_20261013/code/cuda_training/push4/config_stage5_D_m25_r075_250.json": "3371737e22449aa1db73a56a560ba186ec9027c332d5e05c5e4786829d35bdf3",
+    "/cache/independent_sr_cuda_20261013/audits/push4/training_stage5/initial_cpu_audit.json": "93127bff6d0f56c7a312c9822d76e67c035d8c0c2bea5af67090c16a5dd32d0b",
+    "/cache/independent_sr_cuda_20261013/audits/push4/training_stage5_D/initial_cpu_audit.json": "da869c49cab2fbfeaf1fcaeded434fd9450e7459232de8f21a657250d07e8efe",
+    "/cache/independent_sr_cuda_20261013/audits/push4/training_stage5/milestone250_cpu_audit.json": "fabe01704e20c9c3399c9982b270eb7d46d8fca4bddbb170785a5ed5b5465f4e",
+    "/cache/independent_sr_cuda_20261013/audits/push4/training_stage5_D/milestone250_cpu_audit.json": "09d702fc680e007ec5acc169967ce157108bc684532359f20a408ddf3f7d9343"
+  }
+}

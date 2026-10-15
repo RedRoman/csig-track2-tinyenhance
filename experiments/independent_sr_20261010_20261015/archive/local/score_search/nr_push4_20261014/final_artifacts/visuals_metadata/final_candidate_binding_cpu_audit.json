@@ -1,0 +1,142 @@
+{
+  "schema": "push4_final_three_candidate_visual_binding_v1",
+  "status": "PASS",
+  "CPU_only": true,
+  "created_utc": "2026-10-14T14:04:44.206945+00:00",
+  "expected_candidates": [
+    "push4_c7750_compiled_all",
+    "push4_a7750_compiled_all",
+    "push4_d7500_compiled_all"
+  ],
+  "actual_selected_label": "push4_a7750_compiled_all",
+  "actual_selection_sha256": "b3148b21f466854f9fe8f81c7eca1348da5bf793141799573ff3be8b20e25c3f",
+  "complete_candidates": [
+    {
+      "label": "push4_c7750_compiled_all",
+      "checkpoint_sha256": "c953cb853a2a98e1563171798af9d4cb5d034957a4d7da444eb1e25fd6db96a3",
+      "full103_418_recomputed": {
+        "NR": 2.3170131290749345,
+        "FR": 1.4438390533129373,
+        "S_proxy": 3.760852182387872,
+        "component_means": {
+          "validation": {
+            "lpips": 0.3456217447916667,
+            "dists": 0.2105392018953959,
+            "niqe": 4.237367782455956,
+            "musiq": 40.35374323527018,
+            "maniqa": 0.5691259900728861,
+            "clipiqa": 0.7634755373001099
+          },
+          "test": {
+            "niqe": 4.181879476472106,
+            "musiq": 39.89262186050415,
+            "maniqa": 0.566893807053566,
+            "clipiqa": 0.7693810510635376
+          }
+        },
+        "scope": "Original full100 test NR + validation3 FR; never inferred from four selected cases"
+      },
+      "independent_full_audit": "/cache/independent_sr_cuda_20261013/audits/push4/evaluations/push4_c7750_compiled_all/audit.json",
+      "independent_full_audit_sha256": "8b950faed1a7a7482b122aa1fc797b8a0ca571a44c963f6c15535cbad3d45088",
+      "final_manifest_sha256": "b37912770f37df14604b81f5b073a7295f8d3b8cd608f5bb39f8d24369943f9b"
+    },
+    {
+      "label": "push4_a7750_compiled_all",
+      "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+      "full103_418_recomputed": {
+        "NR": 2.3197332792186334,
+        "FR": 1.4417232871055603,
+        "S_proxy": 3.7614565663241937,
+        "component_means": {
+          "validation": {
+            "lpips": 0.3455403645833333,
+            "dists": 0.21273634831110635,
+            "niqe": 4.364917716628572,
+            "musiq": 37.00266647338867,
+            "maniqa": 0.5774780511856079,
+            "clipiqa": 0.7694729765256246
+          },
+          "test": {
+            "niqe": 4.276370415664122,
+            "musiq": 39.583499126434326,
+            "maniqa": 0.5752561512589455,
+            "clipiqa": 0.7762791782617569
+          }
+        },
+        "scope": "Original full100 test NR + validation3 FR; never inferred from four selected cases"
+      },
+      "independent_full_audit": "/cache/independent_sr_cuda_20261013/audits/push4/evaluations/push4_a7750_compiled_all/audit.json",
+      "independent_full_audit_sha256": "ae5b2234f5e110240507fbec515139d1b2a23bf8f664e7477e34c377e09c507b",
+      "final_manifest_sha256": "35355c94cace390b5f5918cfb607d85b0f55c9cd1e1ba0a4f6a4d034abb54e16"
+    },
+    {
+      "label": "push4_d7500_compiled_all",
+      "checkpoint_sha256": "feb55a9e22e466e6f45f3b15d6cd38b67a679d761fc37e093b77687fafda3b50",
+      "full103_418_recomputed": {
+        "NR": 2.3110824830824153,
+        "FR": 1.4477893312772114,
+        "S_proxy": 3.758871814359627,
+        "component_means": {
+          "validation": {
+            "lpips": 0.3430582682291667,
+            "dists": 0.20915240049362183,
+            "niqe": 4.243543549930586,
+            "musiq": 42.125012715657554,
+            "maniqa": 0.5639888048171997,
+            "clipiqa": 0.7613088289896647
+          },
+          "test": {
+            "niqe": 4.185545265859351,
+            "musiq": 40.070943431854246,
+            "maniqa": 0.5616838574409485,
+            "clipiqa": 0.7672437179088593
+          }
+        },
+        "scope": "Original full100 test NR + validation3 FR; never inferred from four selected cases"
+      },
+      "independent_full_audit": "/cache/independent_sr_cuda_20261013/audits/push4/evaluations/push4_d7500_compiled_all/audit.json",
+      "independent_full_audit_sha256": "d2e38e6dcf3ece66c19e187484d5227576386373c989636cf0a1d85e48253bc8",
+      "final_manifest_sha256": "8c51be782cefb1a7c9f9b9ca2aecb56334c5366a02c4240b9d94fb5b3ff78034"
+    }
+  ],
+  "actual_source_verification": {
+    "status": "PASS",
+    "CPU_only": true,
+    "no_tensor_import": true,
+    "training_source_sha256": "4b5bdf40aab5d2fd35c92f8fc714c675e62bd86228bc3fb79e48e896b70278f2",
+    "renderer_source_sha256": "1b578c945ba4b33c7d6ce522151bb9c3a8d3a004eab0c5c7e802fad6ae1bb1f5",
+    "candidates": [
+      {
+        "label": "push4_c7750_compiled_all",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push4_c7750_compiled/model_dir",
+        "runner_sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae",
+        "config_sha256": "0f172179bdca031755b2997b5466301088ec3b32b39d2ec9668e1e7800b90f09",
+        "weight_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_r10_500/step7750.pth",
+        "actual_HYPIR_source_SHA_all_match": true
+      },
+      {
+        "label": "push4_a7750_compiled_all",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push4_a7750_compiled/model_dir",
+        "runner_sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae",
+        "config_sha256": "c1ac4d805de5e52c0131ae119a57801d84289e4618c8910904514bcff66fcde6",
+        "weight_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_continue500/step7750.pth",
+        "actual_HYPIR_source_SHA_all_match": true
+      },
+      {
+        "label": "push4_d7500_compiled_all",
+        "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_push4_d7500_compiled/model_dir",
+        "runner_sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae",
+        "config_sha256": "b6ea14d585755ad8c75103f118dbbc0d88c4de6deb91470e5778507e72731132",
+        "weight_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage5_s7250_teacher6500_m25_r075_250/step7500.pth",
+        "actual_HYPIR_source_SHA_all_match": true
+      }
+    ]
+  },
+  "source_verification_code_sha256": "615aef2a32007e80cf7eefefee5ea29d9a4fadcc2ee5feffe399c1b3b1a70f78",
+  "gallery_source_sha256": "17ba6a8e59740e73df386198b83d18838e607c707ecaae4b371bc9c33ded7634",
+  "val_source_sha256": "1c45627d739e81d0904c369ad17a0c4f8f94dfe952ae62d6f29ada5fb670436b",
+  "all_16_native_sources_and_ROIs_exact": true,
+  "all_full_scores_recomputed_from_103_rows_418_metrics": true,
+  "final_visual_audit_sha256": "75d108183bbd196e5d524ea88817960625a2de70e7b0e90d64d0df3bce322712",
+  "checkpoint_actual_SHA_evidence": "Each candidate actual raw SHA is bound to the independently audited full record in the immutable final selection; the visual audit does not reload raw tensor archives"
+}

@@ -1,0 +1,32 @@
+{
+  "status": "static_review_passed",
+  "reviewed_bjt": "2026-10-14T17:49:29.833578+08:00",
+  "scope": "CPU-only static review; no model execution/GPU/source edits",
+  "source": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/cuda_training/train_cuda_nr_stage_v3.py",
+  "source_sha256": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c",
+  "teacher_restore": {
+    "initialization": "raw6000 base and same BF16 pretrained non-LoRA assets; then all514 sealed parent6250 LoRA values copied in FP32",
+    "checks": [
+      "parent resume/config SHA and protocol identity sealed",
+      "parent514 LoRA FP32/finite and ordered optimizer IDs/shape validated",
+      "teacher LoRA key set and FP32 dtype verified before copy",
+      "all514 values torch.equal against parent after copy",
+      "all teacher generator parameters frozen; target forward under no_grad",
+      "teacher remains parent6250 on stage resume, student may resume its own later state",
+      "fresh student/teacher fidelity guard <=1e-6 before first update"
+    ]
+  },
+  "source_identity": {
+    "v1": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b",
+    "v2": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651",
+    "parent_resume": "3dcf896028f41c7c4c6e15074cc69c4cdb2ff7679e6756f5ee57a9a657f61c1f",
+    "records_v3_v2_v1_helper_and_original_parent_sources": true,
+    "metric_weights_and_runtime_versions_checked_against_parent": true,
+    "base_core_assets_metadata_tokenizer_scheduler_and100inputs_checked": true
+  },
+  "objective": "explicit inherited-Adam/RNG warmstart with frozen6250 fidelity anchor; MUSIQ coefficient1 or1.5, nr_round_steFalse",
+  "rng_and_steps": "all4 parent RNG restored after both models/metrics/LUT initialization; local1..250/global6251..6500/Adam251..500",
+  "mmap": "same MAP_PRIVATE semantics audited in v2; CPU scalar alias cannot modify original parent file under verified default",
+  "findings": [],
+  "runtime_followup": "Teacher exactness and initial fidelity runtime flags were not independently loaded in this static-only review."
+}

@@ -1,0 +1,37 @@
+{
+  "scope": "CUDA original-metric compatibility preflight on existing NPU PNGs; not CUDA-rendered official100-image quality or leaderboard prediction",
+  "physical_gpu": 3,
+  "logical_gpu": 0,
+  "validation_cases": [
+    1,
+    2,
+    3
+  ],
+  "test_cases": [
+    1
+  ],
+  "seed": 1234,
+  "seed_scope": "original score_dir resets once per split after metric construction; continuous RNG within split",
+  "MANIQA_samples": 100,
+  "MANIQA_forward_chunking": "none; original full100-crop forward",
+  "original_tool_sources_modified": false,
+  "source_archive_verification": "/cache/independent_sr_cuda_20261013/scoring_tool/deployment_manifest.json",
+  "PNG_manifest": "/cache/independent_sr_cuda_20261013/preflight/baseline8000_npu/png_manifest.json",
+  "offline_init_final_state_proof": "/cache/independent_sr_cuda_20261013/preflight/baseline8000_npu/scores/maniqa_init_proof.json",
+  "result": "/cache/independent_sr_cuda_20261013/preflight/baseline8000_npu/scores/original_score_dir_preflight.json",
+  "runtime_including_metric_initialization_seconds": 28.648486852645874,
+  "wrappers": {
+    "original_tool_cuda_entry.py": {
+      "path": "/cache/independent_sr_cuda_20261013/code/original_tool_cuda_entry.py",
+      "sha256": "8c0f9064673d7b766afd22bbf41990056d7dfcaa4ff7427457203906b8f2c8ad"
+    },
+    "numpy_legacy_compat.py": {
+      "path": "/cache/independent_sr_cuda_20261013/code/numpy_legacy_compat.py",
+      "sha256": "87cdcdd5fe12b7824e219ac6a25c8358815d870d2c1f333c161c0cb41afd010f"
+    },
+    "maniqa_offline_init.py": {
+      "path": "/cache/independent_sr_cuda_20261013/code/maniqa_offline_init.py",
+      "sha256": "dbc61289d34eac63408badff9cb9adb401ccc32427a1578a74c23aedc4a10bbf"
+    }
+  }
+}

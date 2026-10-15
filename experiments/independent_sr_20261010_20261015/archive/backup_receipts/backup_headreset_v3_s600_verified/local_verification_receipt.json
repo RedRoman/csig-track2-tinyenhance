@@ -1,0 +1,38 @@
+{
+  "status": "verified_complete_CACHE_MAC_ONLY",
+  "directory": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/backup_headreset_v3_s600_verified/artifact",
+  "manifest_sha256": "c3598b0e504c86aea3e91249f6544c3bcbe4b3a8105ed4f866b0c789da6449c3",
+  "DONE_sha256": "ce729310cc17e5dccd4bb788443476aee72b26a505da7c1bcf3f06d7d3c90187",
+  "files": 31,
+  "bytes": 61863847,
+  "tar_sha256": "e6f9b5dd89d1c6b90c541287e84a6f067e6f0b798742e6d9e12c2d0d85377f53",
+  "actual_all_file_complete_SHA_size_PASS": true,
+  "training_audit_sha256": "067ccfef156437a0cb4fe3e002822d267fee9aab9a7c00f375ae86c37b46d1cc",
+  "milestones": [
+    {
+      "variant": "headreset_v3",
+      "raw_sha256": "24a68afe7c24c46fb60b768feea75ab5b32b2b681dc2a4be88765a0a05c54bfa",
+      "resume_sha256": "d37cbcfbd1254fd2838d36140c7cd51ef61abe0a5fedd85fc0115e1afdce9fdf",
+      "local_step": 600,
+      "optimizer_step": 600,
+      "state_tensors": 112
+    }
+  ],
+  "frozen_log_prefix_steps": 600,
+  "total_distillation_steps": 1800,
+  "phase_parent_checkpoint_sha256": "97e6736da384a1320398995443f441ae92cdb9bf59a50a725e894e1ad9b5cd90",
+  "phase_parent_recovery": "../backup_structure_v2_s600_verified/artifact/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/step600.pth",
+  "initial_reset_head_names": [
+    "outc.weight",
+    "outc.bias"
+  ],
+  "initial_reset_head_elements": 3468,
+  "phase_parent_weights_not_duplicated": true,
+  "future_log_append_allowed": false,
+  "headreset_phase600_complete": true,
+  "original_weights_not_duplicated": true,
+  "teacher_images_external": true,
+  "SFS_written": false,
+  "GPU_started": false,
+  "quality_conclusion": false
+}

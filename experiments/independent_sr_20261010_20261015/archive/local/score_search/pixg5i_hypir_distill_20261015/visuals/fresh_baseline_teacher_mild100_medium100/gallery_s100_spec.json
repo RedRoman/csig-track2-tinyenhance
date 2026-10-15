@@ -1,0 +1,81 @@
+{
+  "schema": "fresh_pixg5i_HYPIR_gallery_actual_s100_v1",
+  "columns": [
+    {
+      "role": "original_pix_baseline",
+      "title": "Original PixG5i",
+      "label": "pixg5i_original_20261015_all",
+      "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_original_20261015_all",
+      "checkpoint_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+      "runner_sha256": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a",
+      "render_protocol_sha256": "d9d8e0b055d6beecb5e02d271bf6c8c6b6103f7378bd202851a16b9f85723161",
+      "render_manifest_sha256": "701dd91703aa36c5e11bad3bde5aee667261bc2ed1553e2db8fff546a307422d",
+      "binding_files": [
+        {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_original_20261015/candidate_manifest.json",
+          "sha256": "f47a1b5318be533c221d612a2baf99d90ee49267d4728e50bfb8e42b395bfbff"
+        },
+        {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_original_20261015/model_dir/pixg5i_binding.json",
+          "sha256": "b6e843ecf6273ed6583aab9f9cda7ea990f3d0fd91e0cd1851770c90b3715f4f"
+        }
+      ]
+    },
+    {
+      "role": "fixed_HYPIR_teacher",
+      "title": "Fixed HYPIR teacher",
+      "label": "push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+      "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+      "checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+      "runner_sha256": "c98c406884cf07bc5541e315393b98e11351165b35c94d33f926d5443f9563c3",
+      "render_protocol_sha256": "e83eb1eb0c0e04b6f2bd9ce7ac6c07d2662bc7173796792b0774b650d8802f11",
+      "render_manifest_sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+      "binding_files": [
+        {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/hypir_push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae/candidate_manifest.json",
+          "sha256": "d7e03918355aa9cb459c1d37f8ffafcee89856bb8b23cdf0346b5e440b3046cb"
+        }
+      ]
+    },
+    {
+      "role": "distilled_pix_candidate",
+      "title": "PixG5i Mild 100",
+      "label": "pixg5i_hypir_mild_s100_all",
+      "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_mild_s100_all",
+      "checkpoint_sha256": "6a2a7e69c24b8af8287ce91d7f8ec451149818fde312c6919d0eb42d714d1e2a",
+      "runner_sha256": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a",
+      "render_protocol_sha256": "78c5bb520ca058eeb493b0d23954189791849ce6dfbc95163609f3a5af2f9429",
+      "render_manifest_sha256": "339f0ea736e8c4174b84eb56b34fbcbc3f29f4d95fa82d979cf1f354391bda5a",
+      "binding_files": [
+        {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_mild_s100/candidate_manifest.json",
+          "sha256": "f1d5ca308f00f118a2d03bb7c87ee612c182410df1437f9c4ac52df082f5c739"
+        },
+        {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_mild_s100/model_dir/pixg5i_binding.json",
+          "sha256": "d87e8502f15be53751be78d1206c5ffbb4402e940fd1177a59971311b6f599bf"
+        }
+      ]
+    },
+    {
+      "role": "distilled_pix_candidate",
+      "title": "PixG5i Medium 100",
+      "label": "pixg5i_hypir_medium_s100_all",
+      "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_pixg5i_distill_full_evaluations/pixg5i_hypir_medium_s100_all",
+      "checkpoint_sha256": "afa0b9a5702615be5314868e345a703f4014c29b40462cf38c9adc0e707008de",
+      "runner_sha256": "70c5813d20597e7260ea51b60ccdc98291e77f18e56c1131a17c4022ae4c143a",
+      "render_protocol_sha256": "8a82fc214823ab8907f5e1573039d61e4fd05cee46a21b0ba8fa3c34921694ff",
+      "render_manifest_sha256": "acfbb9c36f50572d067866c1bfd82652fcae43d4fad62cc293f4a354d0683f72",
+      "binding_files": [
+        {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s100/candidate_manifest.json",
+          "sha256": "d69d5c87ab7a6cabb5ca4fa6b0f91b1d4db3ae958d0afe76ac91e06516b25ce7"
+        },
+        {
+          "path": "/cache/independent_sr_cuda_20261013/submissions/pixg5i_hypir_medium_s100/model_dir/pixg5i_binding.json",
+          "sha256": "f5f42615bc8a30daf66b9ef2f8e61b5bc874a81ae96f9f27468a7d33c69c289b"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "pid": 20411,
+  "args": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "-u",
+    "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/train_hypir_lastres_nr_v3.py",
+    "--config",
+    "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/config_hypir_lastres_nr100_v3.json",
+    "--stop-at",
+    "1"
+  ],
+  "log": "/cache/independent_sr_cuda_20261013/logs/lastres_stop1_20261015.log",
+  "physical_GPU": 2,
+  "launch_utc": "2026-10-15T07:42:03.834285+00:00",
+  "source_sha256": "18178cdbc4b8af36505fce6b6286d990049e13100e497007e6ba2890e47950de",
+  "config_sha256": "b0f5b5977f575c493d5cf1aad989d5f1699bd3b03abdf0612a909db2653f4c5f",
+  "optimizer_tensor_count": 6,
+  "unselected_LoRA_tensor_count": 508,
+  "distillation": false
+}

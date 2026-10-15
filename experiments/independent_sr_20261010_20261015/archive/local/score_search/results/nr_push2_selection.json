@@ -1,0 +1,32 @@
+{
+  "status": "selected_after_independent_full_audit",
+  "created_utc": "2026-10-14T10:15:02.961387+00:00",
+  "selection_rule": "highest actual complete full100 test NR plus3val FR; also highest full NR among the three new formal candidates",
+  "label": "nr_stage3_anchor6250_m15_s6500_compiled_all",
+  "NR": 2.2783103602882613,
+  "FR": 1.4614406824111938,
+  "S_proxy": 3.739751042699455,
+  "delta_vs_parent6250_full": {
+    "NR": 0.011925316929012997,
+    "FR": -0.0022758046785991137,
+    "S_proxy": 0.009649512250413661
+  },
+  "checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m15_250/step6500.pth",
+  "checkpoint_sha256": "cfcc3013fa87aa721f346d6cc285e70b6d6ff2c88315ce9f1465b07ffe020e68",
+  "resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m15_250/resume_latest.pt",
+  "config": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m15_250/config.json",
+  "logs": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage3_s6250_anchor6250_m15_250/train.jsonl",
+  "global_step": 6500,
+  "optimizer_step": 500,
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_cuda_nr_stage3_anchor6250_m15_s6500_compiled/model_dir",
+  "quality_dir": "/cache/independent_sr_cuda_20261013/nr_push2_full_evaluations/nr_stage3_anchor6250_m15_s6500_compiled_all",
+  "full_audit_sha256": "9a0cd981f602c513352cff97f3160419bc5f2f1046689eba4593584a5d8bb68d",
+  "three_full_summary_sha256": "8900d1d6784d5a64f0b2313872b52dc1ae9230ebdf29f4d6409768502407cca6",
+  "prediction_is_official_score": false,
+  "test100_used_for_NR_training": true,
+  "validation_GT_used_for_training": false,
+  "fresh_paired_latency_ms": 46.35084838867188,
+  "empirical_tool_prediction": 55.76798647586185,
+  "parent_latency_fixed_quality_only_prediction": 55.69676122981548,
+  "prediction_audit_sha256": "e14ceca7d9f268394da84fbcc230cb4491ac71112c3a7dec476c7f8642f6f42b"
+}

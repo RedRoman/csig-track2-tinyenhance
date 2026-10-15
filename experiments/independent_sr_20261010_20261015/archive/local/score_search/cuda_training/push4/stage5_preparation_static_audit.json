@@ -1,0 +1,187 @@
+{
+  "schema": "cuda_nr_stage5_CPU_preparation_static_audit_v1",
+  "AST_parsed": true,
+  "old_v1_v2_v3_v4_unchanged": true,
+  "frozen_old_sources": [
+    {
+      "source": "csig_scoring_tool_review_20261013/score_search/cuda_training/train_cuda_nr.py",
+      "SHA256": "0998967aa6052ec9a5090219e17cb73c05468b06d7acc1eae27108c1c412fb4b"
+    },
+    {
+      "source": "csig_scoring_tool_review_20261013/score_search/cuda_training/train_cuda_nr_stage_v2.py",
+      "SHA256": "9ac86a8d78ba0fc085b60278a460ecaf1ffef74d0dd4e21c4b5c5d84063c4651"
+    },
+    {
+      "source": "csig_scoring_tool_review_20261013/score_search/cuda_training/train_cuda_nr_stage_v3.py",
+      "SHA256": "539844657210938295aa55eb71a2620bad40b974a9ae48ad7238ae7d70fa7c2c"
+    },
+    {
+      "source": "csig_scoring_tool_review_20261013/score_search/cuda_training/push3/train_cuda_nr_stage_v4.py",
+      "SHA256": "5f2d40b41034db7f9ae5f6a5f64d90b77bff6bc849422e1fc03ba3eb1600f311"
+    }
+  ],
+  "trainer_SHA256": "4b5bdf40aab5d2fd35c92f8fc714c675e62bd86228bc3fb79e48e896b70278f2",
+  "configs": [
+    {
+      "run": "cuda_nr_stage5_s7250_teacher6500_continue500",
+      "path": "csig_scoring_tool_review_20261013/score_search/cuda_training/push4/config_stage5_A_continue500.json",
+      "SHA256": "246957efcbebef0f96c332ff71c1816c6fde6954ea092c51ed772fc4ba5ced80",
+      "config": {
+        "root": "/cache/independent_sr_cuda_20261013",
+        "parent_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step7250.pth",
+        "parent_resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/resume_step7250.pt",
+        "parent_config": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/config.json",
+        "expected_parent_checkpoint_sha": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+        "expected_parent_resume_sha": "b8b709f284ce627113e392ede00e43bcd522c8dc23b63719e9fcbaa573c7256d",
+        "expected_parent_config_sha": "8bcf24e6f8965593f26d31aeedcc0c58fc62af185d443d8ff46d2602336b59f7",
+        "expected_parent_protocol": "4d12b7aae1486eb1425e3d1dedca737f152033e91c62a290c569e721899f5f71",
+        "stage_steps": 500,
+        "save_every": 250,
+        "teacher": "parent6500",
+        "nr_round_ste": false,
+        "lr": 2e-07,
+        "reward_weight": 0.15,
+        "clip_weight": 0.5,
+        "musiq_weight": 1.5,
+        "gradient_anchor": 0.3,
+        "run": "cuda_nr_stage5_s7250_teacher6500_continue500"
+      }
+    },
+    {
+      "run": "cuda_nr_stage5_s7250_teacher6500_m25_500",
+      "path": "csig_scoring_tool_review_20261013/score_search/cuda_training/push4/config_stage5_B_m25_500.json",
+      "SHA256": "0de03ad2baf4253642231ce53e4a3abec20c7df978d9dabbc84f0fbe0fb7d83d",
+      "config": {
+        "root": "/cache/independent_sr_cuda_20261013",
+        "parent_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step7250.pth",
+        "parent_resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/resume_step7250.pt",
+        "parent_config": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/config.json",
+        "expected_parent_checkpoint_sha": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+        "expected_parent_resume_sha": "b8b709f284ce627113e392ede00e43bcd522c8dc23b63719e9fcbaa573c7256d",
+        "expected_parent_config_sha": "8bcf24e6f8965593f26d31aeedcc0c58fc62af185d443d8ff46d2602336b59f7",
+        "expected_parent_protocol": "4d12b7aae1486eb1425e3d1dedca737f152033e91c62a290c569e721899f5f71",
+        "stage_steps": 500,
+        "save_every": 250,
+        "teacher": "parent6500",
+        "nr_round_ste": false,
+        "lr": 2e-07,
+        "reward_weight": 0.15,
+        "clip_weight": 0.5,
+        "musiq_weight": 2.5,
+        "gradient_anchor": 0.3,
+        "run": "cuda_nr_stage5_s7250_teacher6500_m25_500"
+      }
+    },
+    {
+      "run": "cuda_nr_stage5_s7250_teacher6500_m25_r10_500",
+      "path": "csig_scoring_tool_review_20261013/score_search/cuda_training/push4/config_stage5_C_m25_r10_500.json",
+      "SHA256": "4052f7430bbeaddaf1d6851efbb82555e705fd1ac128d14b5388ec48559d8240",
+      "config": {
+        "root": "/cache/independent_sr_cuda_20261013",
+        "parent_checkpoint": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/step7250.pth",
+        "parent_resume": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/resume_step7250.pt",
+        "parent_config": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage4_s6500_teacher6500_nrstrong750/config.json",
+        "expected_parent_checkpoint_sha": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+        "expected_parent_resume_sha": "b8b709f284ce627113e392ede00e43bcd522c8dc23b63719e9fcbaa573c7256d",
+        "expected_parent_config_sha": "8bcf24e6f8965593f26d31aeedcc0c58fc62af185d443d8ff46d2602336b59f7",
+        "expected_parent_protocol": "4d12b7aae1486eb1425e3d1dedca737f152033e91c62a290c569e721899f5f71",
+        "stage_steps": 500,
+        "save_every": 250,
+        "teacher": "parent6500",
+        "nr_round_ste": false,
+        "lr": 2e-07,
+        "reward_weight": 0.1,
+        "clip_weight": 0.5,
+        "musiq_weight": 2.5,
+        "gradient_anchor": 0.3,
+        "run": "cuda_nr_stage5_s7250_teacher6500_m25_r10_500"
+      }
+    }
+  ],
+  "all3_actual_configs_parsed": true,
+  "parser_invalid_cases": [
+    {
+      "case": "step0",
+      "rejected": true
+    },
+    {
+      "case": "step501",
+      "rejected": true
+    },
+    {
+      "case": "save50",
+      "rejected": true
+    },
+    {
+      "case": "STE",
+      "rejected": true
+    },
+    {
+      "case": "old_teacher6250",
+      "rejected": true
+    },
+    {
+      "case": "lr_high",
+      "rejected": true
+    },
+    {
+      "case": "reward_high",
+      "rejected": true
+    },
+    {
+      "case": "musiq_nan",
+      "rejected": true
+    },
+    {
+      "case": "musiq_high",
+      "rejected": true
+    },
+    {
+      "case": "raw_pin_override",
+      "rejected": true
+    },
+    {
+      "case": "resume_pin_override",
+      "rejected": true
+    },
+    {
+      "case": "lpips_not_added",
+      "rejected": true
+    }
+  ],
+  "valid_stage_bounds": [
+    1,
+    250,
+    500
+  ],
+  "teacher7250_optional_parse": true,
+  "LPIPS_parser_not_added_fixed_0p1": true,
+  "tensor_libraries_imported": false,
+  "GPU_launched": false,
+  "new_global_start": 7250,
+  "new_Adam_start": 1250,
+  "expected_first_update": {
+    "local": 1,
+    "global": 7251,
+    "Adam": 1251
+  },
+  "milestones": [
+    {
+      "local": 250,
+      "global": 7500,
+      "Adam": 1500,
+      "immutable_resume": "resume_step7500.pt"
+    },
+    {
+      "local": 500,
+      "global": 7750,
+      "Adam": 1750,
+      "immutable_resume": "resume_step7750.pt"
+    }
+  ],
+  "all_actual_branches_teacher6500_initial_fidelity_zero_required": false,
+  "parent_raw_SHA256": "fd733144c370352f460097037c8cb7cfd45226d3f0bbdf9e8274846ee9ed5a8e",
+  "parent_resume_SHA256": "b8b709f284ce627113e392ede00e43bcd522c8dc23b63719e9fcbaa573c7256d",
+  "parent_config_SHA256": "8bcf24e6f8965593f26d31aeedcc0c58fc62af185d443d8ff46d2602336b59f7",
+  "parent_protocol": "4d12b7aae1486eb1425e3d1dedca737f152033e91c62a290c569e721899f5f71"
+}

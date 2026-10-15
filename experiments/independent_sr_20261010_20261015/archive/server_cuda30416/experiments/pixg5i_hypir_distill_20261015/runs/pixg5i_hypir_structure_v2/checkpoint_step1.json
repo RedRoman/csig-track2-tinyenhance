@@ -1,0 +1,65 @@
+{
+  "protocol_id": "19e6c5e7fe17eb924e096021688e2cda2b3d4caa1c2efcaf069421496a9d773b",
+  "local_step": 1,
+  "optimizer_step": 1,
+  "global_step": 601,
+  "global_step_scope": "total new distillation steps since supplied package; current phase Adam/local steps separate",
+  "parent_distillation_steps": 600,
+  "phase_initial_checkpoint_sha256": "45c7f6bb414567f31b906fc996c037f31df7ce6aebb615c19183e02886950fab",
+  "parent": {
+    "marker": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/checkpoint_step600.json",
+      "sha256": "b314e5ef353e9f9c7196c8e263cc173f036289aa5249ecd847c03bfc697dbc9b"
+    },
+    "config": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/config.json",
+      "sha256": "fc858e493f4b12ad10dd7005eff4b30401d63dc9a7ef120654c763973d926d71"
+    },
+    "raw": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/step600.pth",
+      "sha256": "45c7f6bb414567f31b906fc996c037f31df7ce6aebb615c19183e02886950fab"
+    },
+    "resume": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/resume_step600.pt",
+      "sha256": "45dc395979567bd0650eba92301a0d63507f217e9f7f7e0128043ca411e93b5e"
+    },
+    "parent_local_step": 600,
+    "parent_optimizer_step": 600,
+    "raw_resume_FP32_exact": true,
+    "optimizer_inherited": false,
+    "RNG_inherited": false
+  },
+  "reference_step": 30000,
+  "raw_checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/step1.pth",
+  "raw_sha256": "dac9612c42c1eec251adc1b79f83b76ca26f66ca988794b6bf59fbede284db05",
+  "resume_checkpoint": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/resume_step1.pt",
+  "resume_sha256": "a05a149c72723f7337986d74d150e77a7dcea3dd2af31af56541fd036954c76d",
+  "source_sha256": {
+    "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_structure_v2.py": "3c2e83ce965ce4dbc33fa5306679c8e969f1fe1477d41af27c9ed1fc6834225e",
+    "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/config_structure_v2.json": "1e0704c62cf6e4dae8993311b49138ca398a866162799d262ba70a5a1852d589",
+    "/cache/independent_sr_cuda_20261013/source_payload/pixg5i_original/model_dir/pix_model.py": "2f1cd3cd8311381e432138f489b01b982e08ebd5b09ecbc05ac87f7bfb577923",
+    "/cache/independent_sr_cuda_20261013/source_payload/pixg5i_original/model_dir/runner.py": "6222ead92dc6fb24b88c0350e41191fc27a5adc2f6ba38bd383a4badb9bd8c1e",
+    "/cache/independent_sr_cuda_20261013/source_payload/pixg5i_original/model_dir/config.yaml": "e13bab32185ac95f07ac36133eff89133a33ed90cc5ca534b7d8496bc457250d",
+    "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+    "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_protocol.json": "e83eb1eb0c0e04b6f2bd9ce7ac6c07d2662bc7173796792b0774b650d8802f11",
+    "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/USER_SCOPE.json": "8b2d14469604288840190f6a8bc1a5f516614e9a5cf2905b4df0dcc823346119",
+    "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/checkpoint_step600.json": "b314e5ef353e9f9c7196c8e263cc173f036289aa5249ecd847c03bfc697dbc9b",
+    "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_medium/config.json": "fc858e493f4b12ad10dd7005eff4b30401d63dc9a7ef120654c763973d926d71",
+    "/cache/independent_sr_cuda_20261013/env/lib/python3.13/site-packages/pyiqa/archs/lpips_arch.py": "7ee2ff201a4da4bdd4605ef0a6b539889c4ea4db4ba20a3c4f4831a1b43b1480"
+  },
+  "state_tensor_count": 112,
+  "parameter_elements": 3786764,
+  "changed_FP32_state_tensors": 112,
+  "all_FP32_finite": true,
+  "optimizer_state_entries": 112,
+  "all4_RNG_saved": true,
+  "grad_scaler_saved": true,
+  "initial_package_checkpoint_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+  "teacher_checkpoint_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+  "input_catalog": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/input_catalog.json",
+  "input_catalog_sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+  "teacher_catalog": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_structure_v2/teacher_catalog.json",
+  "teacher_catalog_sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+  "no_val_GT_training": true,
+  "NR_reward": 0.0
+}

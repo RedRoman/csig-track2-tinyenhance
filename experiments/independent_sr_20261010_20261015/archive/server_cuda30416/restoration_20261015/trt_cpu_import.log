@@ -1,0 +1,49 @@
+WARNING: [Torch-TensorRT] - Unable to read CUDA capable devices. Return status: 100
+Unable to import quantization op. Please install modelopt library (https://github.com/NVIDIA/TensorRT-Model-Optimizer?tab=readme-ov-file#installation) to add support for compiling quantized models
+Unable to import quantize op. Please install modelopt library (https://github.com/NVIDIA/TensorRT-Model-Optimizer?tab=readme-ov-file#installation) to add support for compiling quantized models
+TensorRT-LLM is not installed. Please install TensorRT-LLM or set TRTLLM_PLUGINS_PATH to the directory containing libnvinfer_plugin_tensorrt_llm.so to use converters for torch.distributed ops
+Traceback (most recent call last):
+  File "/cache/independent_sr_cuda_20261013/restoration_20261015/audit_trt_isolated_import.py", line 45, in <module>
+    import torch_tensorrt
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/__init__.py", line 125, in <module>
+    from torch_tensorrt.runtime import *  # noqa: F403
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/runtime/__init__.py", line 1, in <module>
+    from torch_tensorrt.dynamo.runtime import (  # noqa: F401
+    ...<2 lines>...
+    )
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/__init__.py", line 10, in <module>
+    from ._compiler import (
+    ...<5 lines>...
+    )
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/_compiler.py", line 17, in <module>
+    from torch_tensorrt.dynamo import _defaults, partitioning
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/partitioning/__init__.py", line 1, in <module>
+    from ._adjacency_partitioner import partition as fast_partition
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/partitioning/_adjacency_partitioner.py", line 19, in <module>
+    from torch_tensorrt.dynamo.conversion._ConverterRegistry import (
+        DYNAMO_CONVERTERS as CONVERTERS,
+    )
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/conversion/__init__.py", line 8, in <module>
+    from ._conversion import convert_module, interpret_module_to_result
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/conversion/_conversion.py", line 12, in <module>
+    from torch_tensorrt.dynamo.conversion._TRTInterpreter import (
+    ...<2 lines>...
+    )
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/conversion/_TRTInterpreter.py", line 76, in <module>
+    class TRTInterpreter(torch.fx.Interpreter):  # type: ignore[misc]
+    ...<907 lines>...
+            return list(outputs)
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/conversion/_TRTInterpreter.py", line 82, in TRTInterpreter
+    compilation_settings: CompilationSettings = CompilationSettings(),
+                                                ~~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 15, in __init__
+  File "/cache/independent_sr_cuda_20261013/backends/push7_trt/site/torch_tensorrt/dynamo/_defaults.py", line 76, in default_device
+    return Device(gpu_id=torch.cuda.current_device())
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ma-user/miniconda3/lib/python3.13/site-packages/torch/cuda/__init__.py", line 1071, in current_device
+    _lazy_init()
+    ~~~~~~~~~~^^
+  File "/cache/independent_sr_cuda_20261013/restoration_20261015/audit_trt_isolated_import.py", line 39, in blocked_cuda_init
+    raise RuntimeError('CUDA initialization forbidden during CPU-only package import')
+RuntimeError: CUDA initialization forbidden during CPU-only package import

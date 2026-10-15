@@ -1,0 +1,885 @@
+{
+  "component": "encoder",
+  "precision": "bf16",
+  "component_manifest": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_bf16/component_manifest.json",
+  "component_manifest_sha256": "d325273680f2643c8e76b4e81de6021b876281f6076dc0caa21b6766fbaae795",
+  "engine_path": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_bf16/component.engine",
+  "engine_sha256": "ff1461661a8b521c363045d72717e6f4d0b8168414485fcb481cf168f7b23e16",
+  "execute": true,
+  "script_sha256": "82c2775fd257522109a4c308eed2946ea80dfc58571e381b08ec861ffc24eb85",
+  "runtime_v1_sha256": "9886c8e36bf448b86adba08db03279a02bdc1e366e47b82fce731f621f3cce1f",
+  "runtime_v2_sha256": "dc2597edfe8a7d71526535bd4e7540bd9c7623de00b6639c61139e08837aa9a4",
+  "out": "/cache/independent_sr_cuda_20261013/backends/push7_trt/encoder_bf16_stream_v2.json",
+  "status": "STREAM_FORMAT_DIAGNOSTIC_COMPLETE",
+  "created_utc": "2026-10-15T02:15:50.280045+00:00",
+  "torch": "2.8.0+cu128",
+  "tensorrt": "10.12.0.36",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "io_records": [
+    {
+      "name": "x",
+      "shape": [
+        1,
+        3,
+        512,
+        512
+      ],
+      "dtype": "DataType.BF16",
+      "format": "TensorFormat.LINEAR",
+      "format_description": "Row major linear BF16 format (kLINEAR)",
+      "strides": [
+        786432,
+        262144,
+        512,
+        1
+      ],
+      "location": "TensorLocation.DEVICE"
+    },
+    {
+      "name": "output0",
+      "shape": [
+        1,
+        8,
+        64,
+        64
+      ],
+      "dtype": "DataType.BF16",
+      "format": "TensorFormat.LINEAR",
+      "format_description": "Row major linear BF16 format (kLINEAR)",
+      "strides": [
+        32768,
+        4096,
+        64,
+        1
+      ],
+      "location": "TensorLocation.DEVICE"
+    }
+  ],
+  "caller_stream_handle": 0,
+  "worker_stream_handle": 180790464,
+  "same_engine_stream_numeric_comparisons": [
+    {
+      "offset": 0,
+      "exact": true,
+      "max_abs": 0.0,
+      "mean_abs": 0.0
+    },
+    {
+      "offset": 17,
+      "exact": true,
+      "max_abs": 0.0,
+      "mean_abs": 0.0
+    },
+    {
+      "offset": 103,
+      "exact": true,
+      "max_abs": 0.0,
+      "mean_abs": 0.0
+    }
+  ],
+  "output_ownership_preserved": true,
+  "timings_diagnostic_only": {
+    "v1_caller_stream": {
+      "warm": 30,
+      "n": 50,
+      "event_p10_ms": 34.4728588104248,
+      "event_median_ms": 34.503679275512695,
+      "wall_p10_ms": 34.50642086099833,
+      "raw_event_ms": [
+        34.493438720703125,
+        34.47296142578125,
+        34.47296142578125,
+        34.53644943237305,
+        34.51801681518555,
+        34.523136138916016,
+        34.534400939941406,
+        34.49651336669922,
+        34.55692672729492,
+        34.5456657409668,
+        34.562049865722656,
+        34.49651336669922,
+        34.525184631347656,
+        34.497535705566406,
+        34.46476745605469,
+        34.748416900634766,
+        34.537471771240234,
+        34.6695671081543,
+        34.64499282836914,
+        34.6163215637207,
+        34.4719352722168,
+        34.47808074951172,
+        34.49241638183594,
+        34.52211380004883,
+        34.477054595947266,
+        34.500606536865234,
+        34.52006530761719,
+        34.49241638183594,
+        34.48320007324219,
+        34.47603225708008,
+        34.48320007324219,
+        34.488319396972656,
+        34.4637451171875,
+        34.48012924194336,
+        34.61734390258789,
+        34.502655029296875,
+        34.51084899902344,
+        34.506752014160156,
+        34.53337478637695,
+        34.535423278808594,
+        34.46271896362305,
+        34.49651336669922,
+        34.509822845458984,
+        34.497535705566406,
+        34.504703521728516,
+        34.46579360961914,
+        34.51084899902344,
+        34.509822845458984,
+        34.49446487426758,
+        34.507774353027344
+      ],
+      "raw_wall_ms": [
+        34.573849057778716,
+        34.516398096457124,
+        34.50591606087983,
+        34.56852398812771,
+        34.55495089292526,
+        34.56797800026834,
+        34.5736350864172,
+        34.53090903349221,
+        34.59217306226492,
+        34.58247892558575,
+        34.600788028910756,
+        34.53246993012726,
+        34.558675019070506,
+        34.53310392796993,
+        34.53422989696264,
+        34.82311312109232,
+        34.57017079927027,
+        34.70173687674105,
+        34.67805916443467,
+        34.65011203661561,
+        34.50368298217654,
+        34.51098804362118,
+        34.52505497261882,
+        34.55348499119282,
+        34.50871491804719,
+        34.534565173089504,
+        34.552523866295815,
+        34.52405799180269,
+        34.518151078373194,
+        34.50647694990039,
+        34.513428807258606,
+        34.51936994679272,
+        34.494537860155106,
+        34.5624468754977,
+        34.690978936851025,
+        34.53477704897523,
+        34.54384091310203,
+        34.53845297917724,
+        34.56448297947645,
+        34.566888120025396,
+        34.49567384086549,
+        34.52936792746186,
+        34.54361599870026,
+        34.53246201388538,
+        34.53957987949252,
+        34.501217072829604,
+        34.54925608821213,
+        34.542048117145896,
+        34.528699005022645,
+        34.542715176939964
+      ]
+    },
+    "v2_dedicated_nondefault_stream": {
+      "warm": 30,
+      "n": 50,
+      "event_p10_ms": 34.54443473815918,
+      "event_median_ms": 34.55180740356445,
+      "wall_p10_ms": 34.57430882845074,
+      "raw_event_ms": [
+        34.58969497680664,
+        34.54771041870117,
+        34.541568756103516,
+        34.5456657409668,
+        34.550785064697266,
+        34.5425910949707,
+        34.552833557128906,
+        34.54771041870117,
+        34.539520263671875,
+        34.54771041870117,
+        34.552833557128906,
+        34.5425910949707,
+        34.544639587402344,
+        34.5456657409668,
+        34.53849411010742,
+        34.54975891113281,
+        34.58457565307617,
+        34.553855895996094,
+        34.553855895996094,
+        34.54771041870117,
+        34.544639587402344,
+        34.5610237121582,
+        34.5456657409668,
+        34.562049865722656,
+        34.57024002075195,
+        34.546688079833984,
+        34.55180740356445,
+        34.552833557128906,
+        34.546688079833984,
+        34.546688079833984,
+        34.548736572265625,
+        34.55180740356445,
+        34.553855895996094,
+        34.555904388427734,
+        34.548736572265625,
+        34.565120697021484,
+        34.55897521972656,
+        34.54771041870117,
+        34.552833557128906,
+        34.54975891113281,
+        34.552833557128906,
+        34.55180740356445,
+        34.59174346923828,
+        34.572288513183594,
+        34.560001373291016,
+        34.560001373291016,
+        34.552833557128906,
+        34.55180740356445,
+        34.557952880859375,
+        34.552833557128906
+      ],
+      "raw_wall_ms": [
+        34.653926035389304,
+        34.58081721328199,
+        34.572921926155686,
+        34.57622299902141,
+        34.583247965201735,
+        34.573273034766316,
+        34.58307613618672,
+        34.57702905870974,
+        34.56885693594813,
+        34.578002989292145,
+        34.583012806251645,
+        34.57174589857459,
+        34.5744239166379,
+        34.577958984300494,
+        34.569385927170515,
+        34.59856798872352,
+        34.64227891527116,
+        34.58666312508285,
+        34.58804311230779,
+        34.57859600894153,
+        34.57629191689193,
+        34.59284594282508,
+        34.578413935378194,
+        34.59887998178601,
+        34.60784303024411,
+        34.57809006795287,
+        34.58405518904328,
+        34.58465402945876,
+        34.57888285629451,
+        34.57742487080395,
+        34.57954083569348,
+        34.58161815069616,
+        34.58908596076071,
+        34.5878170337528,
+        34.57995899952948,
+        34.59979803301394,
+        34.59041891619563,
+        34.58004188723862,
+        34.583333879709244,
+        34.58020789548755,
+        34.58793694153428,
+        34.59720499813557,
+        34.64957885444164,
+        34.61614390835166,
+        34.591438015922904,
+        34.59233301691711,
+        34.58527196198702,
+        34.58408894948661,
+        34.58936605602503,
+        34.58388685248792
+      ]
+    }
+  },
+  "engine_num_layers": 113,
+  "engine_inspector": {
+    "Layers": [
+      "__myl_Cast_myl0_0",
+      "[CONVOLUTION]_[aten_ops_convolution_default]_[core_conv_in/convolution]_myl1_0",
+      "__myl_Move_myl1_1",
+      "__myl_Move_myl1_2",
+      "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl1_3",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.0.resnets.0.conv1/convolution_1]",
+      "__myl_Move_myl3_0",
+      "__myl_Move_myl3_1",
+      "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl3_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.0.resnets.0.conv2/convolution_2]",
+      "__myl_Move_myl5_0",
+      "__myl_Move_myl5_1",
+      "__myl_AddDivReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl5_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.0.resnets.1.conv1/convolution_3]",
+      "__myl_Move_myl7_0",
+      "__myl_Move_myl7_1",
+      "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl7_2",
+      "core.down_blocks.0.downsamplers.0/constant_pad_nd_value",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.0.resnets.1.conv2/convolution_4] + [ELEMENTWISE]-[aten_ops.add.Tensor]-[core.down_blocks.0.resnets.1/add_1]",
+      "[SLICE]-[aten_ops.constant_pad_nd.default]-[core.down_blocks.0.downsamplers.0/constant_pad_nd]",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.0.downsamplers.0.conv/convolution_5]",
+      "__myl_Move_myl12_0",
+      "__myl_Move_myl12_1",
+      "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl12_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.1.resnets.0.conv1/convolution_6]",
+      "__myl_Move_myl14_0",
+      "__myl_Move_myl14_1",
+      "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl14_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.1.resnets.0.conv_shortcut/convolution_8]",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.1.resnets.0.conv2/convolution_7]",
+      "__myl_Move_myl17_0",
+      "__myl_Move_myl17_1",
+      "__myl_AddDivReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl17_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.1.resnets.1.conv1/convolution_9]",
+      "__myl_Move_myl19_0",
+      "__myl_Move_myl19_1",
+      "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl19_2",
+      "core.down_blocks.1.downsamplers.0/constant_pad_nd_1_value",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.1.resnets.1.conv2/convolution_10] + [ELEMENTWISE]-[aten_ops.add.Tensor]-[core.down_blocks.1.resnets.1/add_3]",
+      "[SLICE]-[aten_ops.constant_pad_nd.default]-[core.down_blocks.1.downsamplers.0/constant_pad_nd_1]",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.1.downsamplers.0.conv/convolution_11]",
+      "__myl_Move_myl24_0",
+      "__myl_Move_myl24_1",
+      "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl24_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.resnets.0.conv1/convolution_12]",
+      "__myl_Move_myl26_0",
+      "__myl_Move_myl26_1",
+      "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl26_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.resnets.0.conv_shortcut/convolution_14]",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.resnets.0.conv2/convolution_13]",
+      "__myl_Move_myl29_0",
+      "__myl_Move_myl29_1",
+      "__myl_AddDivReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl29_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.resnets.1.conv1/convolution_15]",
+      "__myl_Move_myl31_0",
+      "__myl_Move_myl31_1",
+      "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl31_2",
+      "core.down_blocks.2.downsamplers.0/constant_pad_nd_2_value",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.resnets.1.conv2/convolution_16] + [ELEMENTWISE]-[aten_ops.add.Tensor]-[core.down_blocks.2.resnets.1/add_5]",
+      "[SLICE]-[aten_ops.constant_pad_nd.default]-[core.down_blocks.2.downsamplers.0/constant_pad_nd_2]",
+      "Reformatting CopyNode for Input Tensor 0 to [CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.downsamplers.0.conv/convolution_17]",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.downsamplers.0.conv/convolution_17]",
+      "Reformatting CopyNode for Output Tensor 0 to [CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.downsamplers.0.conv/convolution_17]",
+      "__myl_Move_myl38_0",
+      "__myl_Move_myl38_1",
+      "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl38_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.3.resnets.0.conv1/convolution_18]",
+      "__myl_Move_myl40_0",
+      "__myl_Move_myl40_1",
+      "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl40_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.3.resnets.0.conv2/convolution_19]",
+      "__myl_Move_myl42_0",
+      "__myl_Move_myl42_1",
+      "__myl_AddDivReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl42_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.3.resnets.1.conv1/convolution_20]",
+      "__myl_Move_myl44_0",
+      "__myl_Move_myl44_1",
+      "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl44_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.3.resnets.1.conv2/convolution_21]",
+      "__myl_Move_myl46_0",
+      "__myl_Move_myl46_1",
+      "__myl_AddDivReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl46_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.mid_block.resnets.0.conv1/convolution_22]",
+      "__myl_Move_myl48_0",
+      "__myl_Move_myl48_1",
+      "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl48_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.mid_block.resnets.0.conv2/convolution_23]",
+      "__myl_Cast_myl50_0",
+      "__myl_Cast_myl51_0",
+      "__myl_Add_myl52_0",
+      "__myl_MoveResh_myl52_1",
+      "__myl_Inor_myl52_2",
+      "__myl_ReshMulAdd_myl52_3",
+      "[MATRIX_MULTIPLY]_[aten_ops_linear_default]_[core_mid_block_attentions_0_to_v/linear_2_matrix_multiply]+[MATRIX_MULTIPLY]_[aten_ops_linear_default]_[core_mid_block_attentions_0_to_k/linear_1_matrix_multiply]+[MATRIX_MULTIPLY]_[aten_ops_linear_default]_[core_mid_block_attentions_0_to_q/linear_matrix_multiply]_myl52_4",
+      "[MATRIX_MULTIPLY]_[aten_ops_matmul_default]_[core_mid_block_attentions_0/matmul]_myl52_5",
+      "__myl_MulMaxrSubExpSumDivMul_myl52_6",
+      "[MATRIX_MULTIPLY]_[aten_ops_matmul_default]_[core_mid_block_attentions_0/matmul_1]_myl52_7",
+      "[MATRIX_MULTIPLY]_[aten_ops_linear_default]_[core_mid_block_attentions_0_to_out_0/linear_3_matrix_multiply]_myl52_8",
+      "__myl_AddReshAddDiv_myl52_9",
+      "__myl_GnorSiluCast_myl52_10",
+      "__myl_Cast_myl53_0",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.mid_block.resnets.1.conv1/convolution_24]",
+      "__myl_Move_myl55_0",
+      "__myl_Move_myl55_1",
+      "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl55_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.mid_block.resnets.1.conv2/convolution_25]",
+      "__myl_Cast_myl57_0",
+      "__myl_Move_myl58_0",
+      "__myl_Move_myl58_1",
+      "__myl_AddReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl58_2",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[core.conv_out/convolution_26]",
+      "[CONVOLUTION]-[aten_ops.convolution.default]-[pre/convolution_27]",
+      "__myl_Cast_myl61_0"
+    ],
+    "Bindings": [
+      "x",
+      "output0"
+    ]
+  },
+  "untimed_layer_profile": [
+    {
+      "name": "__myl_Cast_myl0_0",
+      "ms": 0.011264000087976456
+    },
+    {
+      "name": "[CONVOLUTION]_[aten_ops_convolution_default]_[core_conv_in/convolution]_myl1_0",
+      "ms": 0.16793599724769592
+    },
+    {
+      "name": "__myl_Move_myl1_1",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_Move_myl1_2",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl1_3",
+      "ms": 0.27955201268196106
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.0.resnets.0.conv1/convolution_1]",
+      "ms": 2.1575679779052734
+    },
+    {
+      "name": "__myl_Move_myl3_0",
+      "ms": 0.0071680000983178616
+    },
+    {
+      "name": "__myl_Move_myl3_1",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl3_2",
+      "ms": 0.2754560112953186
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.0.resnets.0.conv2/convolution_2]",
+      "ms": 2.1585919857025146
+    },
+    {
+      "name": "__myl_Move_myl5_0",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_Move_myl5_1",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_AddDivReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl5_2",
+      "ms": 0.4423680007457733
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.0.resnets.1.conv1/convolution_3]",
+      "ms": 2.1565439701080322
+    },
+    {
+      "name": "__myl_Move_myl7_0",
+      "ms": 0.0071680000983178616
+    },
+    {
+      "name": "__myl_Move_myl7_1",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl7_2",
+      "ms": 0.27750399708747864
+    },
+    {
+      "name": "core.down_blocks.0.downsamplers.0/constant_pad_nd_value",
+      "ms": 0.0
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.0.resnets.1.conv2/convolution_4] + [ELEMENTWISE]-[aten_ops.add.Tensor]-[core.down_blocks.0.resnets.1/add_1]",
+      "ms": 2.141184091567993
+    },
+    {
+      "name": "[SLICE]-[aten_ops.constant_pad_nd.default]-[core.down_blocks.0.downsamplers.0/constant_pad_nd]",
+      "ms": 0.2467840015888214
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.0.downsamplers.0.conv/convolution_5]",
+      "ms": 1.077247977256775
+    },
+    {
+      "name": "__myl_Move_myl12_0",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_Move_myl12_1",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl12_2",
+      "ms": 0.0727040022611618
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.1.resnets.0.conv1/convolution_6]",
+      "ms": 1.0629119873046875
+    },
+    {
+      "name": "__myl_Move_myl14_0",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_Move_myl14_1",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl14_2",
+      "ms": 0.130048006772995
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.1.resnets.0.conv_shortcut/convolution_8]",
+      "ms": 0.24883200228214264
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.1.resnets.0.conv2/convolution_7]",
+      "ms": 2.046976089477539
+    },
+    {
+      "name": "__myl_Move_myl17_0",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_Move_myl17_1",
+      "ms": 0.0071680000983178616
+    },
+    {
+      "name": "__myl_AddDivReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl17_2",
+      "ms": 0.20070399343967438
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.1.resnets.1.conv1/convolution_9]",
+      "ms": 2.042880058288574
+    },
+    {
+      "name": "__myl_Move_myl19_0",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_Move_myl19_1",
+      "ms": 0.0071680000983178616
+    },
+    {
+      "name": "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl19_2",
+      "ms": 0.14028799533843994
+    },
+    {
+      "name": "core.down_blocks.1.downsamplers.0/constant_pad_nd_1_value",
+      "ms": 0.0
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.1.resnets.1.conv2/convolution_10] + [ELEMENTWISE]-[aten_ops.add.Tensor]-[core.down_blocks.1.resnets.1/add_3]",
+      "ms": 2.0643839836120605
+    },
+    {
+      "name": "[SLICE]-[aten_ops.constant_pad_nd.default]-[core.down_blocks.1.downsamplers.0/constant_pad_nd_1]",
+      "ms": 0.12800000607967377
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.1.downsamplers.0.conv/convolution_11]",
+      "ms": 1.0967040061950684
+    },
+    {
+      "name": "__myl_Move_myl24_0",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_Move_myl24_1",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl24_2",
+      "ms": 0.04095999896526337
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.resnets.0.conv1/convolution_12]",
+      "ms": 1.0332159996032715
+    },
+    {
+      "name": "__myl_Move_myl26_0",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_Move_myl26_1",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl26_2",
+      "ms": 0.0727040022611618
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.resnets.0.conv_shortcut/convolution_14]",
+      "ms": 0.25600001215934753
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.resnets.0.conv2/convolution_13]",
+      "ms": 2.0244479179382324
+    },
+    {
+      "name": "__myl_Move_myl29_0",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_Move_myl29_1",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_AddDivReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl29_2",
+      "ms": 0.11776000261306763
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.resnets.1.conv1/convolution_15]",
+      "ms": 2.0254719257354736
+    },
+    {
+      "name": "__myl_Move_myl31_0",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_Move_myl31_1",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl31_2",
+      "ms": 0.08191999793052673
+    },
+    {
+      "name": "core.down_blocks.2.downsamplers.0/constant_pad_nd_2_value",
+      "ms": 0.0
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.resnets.1.conv2/convolution_16] + [ELEMENTWISE]-[aten_ops.add.Tensor]-[core.down_blocks.2.resnets.1/add_5]",
+      "ms": 2.0295679569244385
+    },
+    {
+      "name": "[SLICE]-[aten_ops.constant_pad_nd.default]-[core.down_blocks.2.downsamplers.0/constant_pad_nd_2]",
+      "ms": 0.06758400052785873
+    },
+    {
+      "name": "Reformatting CopyNode for Input Tensor 0 to [CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.downsamplers.0.conv/convolution_17]",
+      "ms": 0.04403200000524521
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.downsamplers.0.conv/convolution_17]",
+      "ms": 1.1079679727554321
+    },
+    {
+      "name": "Reformatting CopyNode for Output Tensor 0 to [CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.2.downsamplers.0.conv/convolution_17]",
+      "ms": 0.01228800043463707
+    },
+    {
+      "name": "__myl_Move_myl38_0",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_Move_myl38_1",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl38_2",
+      "ms": 0.030719999223947525
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.3.resnets.0.conv1/convolution_18]",
+      "ms": 0.5416960120201111
+    },
+    {
+      "name": "__myl_Move_myl40_0",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_Move_myl40_1",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl40_2",
+      "ms": 0.03174399957060814
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.3.resnets.0.conv2/convolution_19]",
+      "ms": 0.5416960120201111
+    },
+    {
+      "name": "__myl_Move_myl42_0",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_Move_myl42_1",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_AddDivReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl42_2",
+      "ms": 0.03686400130391121
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.3.resnets.1.conv1/convolution_20]",
+      "ms": 0.5406720042228699
+    },
+    {
+      "name": "__myl_Move_myl44_0",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_Move_myl44_1",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl44_2",
+      "ms": 0.03174399957060814
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.down_blocks.3.resnets.1.conv2/convolution_21]",
+      "ms": 0.5406720042228699
+    },
+    {
+      "name": "__myl_Move_myl46_0",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_Move_myl46_1",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_AddDivReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl46_2",
+      "ms": 0.03788800165057182
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.mid_block.resnets.0.conv1/convolution_22]",
+      "ms": 0.5406720042228699
+    },
+    {
+      "name": "__myl_Move_myl48_0",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_Move_myl48_1",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl48_2",
+      "ms": 0.03891199827194214
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.mid_block.resnets.0.conv2/convolution_23]",
+      "ms": 0.5406720042228699
+    },
+    {
+      "name": "__myl_Cast_myl50_0",
+      "ms": 0.01228800043463707
+    },
+    {
+      "name": "__myl_Cast_myl51_0",
+      "ms": 0.010239999741315842
+    },
+    {
+      "name": "__myl_Add_myl52_0",
+      "ms": 0.010239999741315842
+    },
+    {
+      "name": "__myl_MoveResh_myl52_1",
+      "ms": 0.009216000325977802
+    },
+    {
+      "name": "__myl_Inor_myl52_2",
+      "ms": 0.01740800030529499
+    },
+    {
+      "name": "__myl_ReshMulAdd_myl52_3",
+      "ms": 0.009216000325977802
+    },
+    {
+      "name": "[MATRIX_MULTIPLY]_[aten_ops_linear_default]_[core_mid_block_attentions_0_to_v/linear_2_matrix_multiply]+[MATRIX_MULTIPLY]_[aten_ops_linear_default]_[core_mid_block_attentions_0_to_k/linear_1_matrix_multiply]+[MATRIX_MULTIPLY]_[aten_ops_linear_default]_[core_mid_block_attentions_0_to_q/linear_matrix_multiply]_myl52_4",
+      "ms": 0.043007999658584595
+    },
+    {
+      "name": "[MATRIX_MULTIPLY]_[aten_ops_matmul_default]_[core_mid_block_attentions_0/matmul]_myl52_5",
+      "ms": 0.08806400001049042
+    },
+    {
+      "name": "__myl_MulMaxrSubExpSumDivMul_myl52_6",
+      "ms": 0.048128001391887665
+    },
+    {
+      "name": "[MATRIX_MULTIPLY]_[aten_ops_matmul_default]_[core_mid_block_attentions_0/matmul_1]_myl52_7",
+      "ms": 0.08396799862384796
+    },
+    {
+      "name": "[MATRIX_MULTIPLY]_[aten_ops_linear_default]_[core_mid_block_attentions_0_to_out_0/linear_3_matrix_multiply]_myl52_8",
+      "ms": 0.021503999829292297
+    },
+    {
+      "name": "__myl_AddReshAddDiv_myl52_9",
+      "ms": 0.010239999741315842
+    },
+    {
+      "name": "__myl_GnorSiluCast_myl52_10",
+      "ms": 0.03174399957060814
+    },
+    {
+      "name": "__myl_Cast_myl53_0",
+      "ms": 0.015359999611973763
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.mid_block.resnets.1.conv1/convolution_24]",
+      "ms": 0.5416960120201111
+    },
+    {
+      "name": "__myl_Move_myl55_0",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_Move_myl55_1",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_ReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl55_2",
+      "ms": 0.030719999223947525
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.mid_block.resnets.1.conv2/convolution_25]",
+      "ms": 0.5416960120201111
+    },
+    {
+      "name": "__myl_Cast_myl57_0",
+      "ms": 0.015359999611973763
+    },
+    {
+      "name": "__myl_Move_myl58_0",
+      "ms": 0.006144000217318535
+    },
+    {
+      "name": "__myl_Move_myl58_1",
+      "ms": 0.005119999870657921
+    },
+    {
+      "name": "__myl_AddReshCastSubMulAddSqrtDivMulAddCastReshMulAddSiluCastMeanMean_myl58_2",
+      "ms": 0.03276799991726875
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[core.conv_out/convolution_26]",
+      "ms": 0.0942080020904541
+    },
+    {
+      "name": "[CONVOLUTION]-[aten_ops.convolution.default]-[pre/convolution_27]",
+      "ms": 0.008191999979317188
+    },
+    {
+      "name": "__myl_Cast_myl61_0",
+      "ms": 0.006144000217318535
+    }
+  ],
+  "untimed_profile_sum_ms": 34.91020801011473,
+  "precision_or_tactic_inference": "Only inspector-reported facts; original non-detailed engine may omit details",
+  "official_runner_benchmark": false,
+  "new_quality_not_measured": true
+}

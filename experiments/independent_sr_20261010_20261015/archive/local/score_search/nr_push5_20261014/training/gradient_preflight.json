@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "components": {
+    "musiq": {
+      "input_gradient_norm": 0.1256665289402008,
+      "finite": true,
+      "nonzero": true
+    },
+    "maniqa": {
+      "input_gradient_norm": 0.06635225564241409,
+      "finite": true,
+      "nonzero": true
+    },
+    "clipiqa": {
+      "input_gradient_norm": 1.038596749305725,
+      "finite": true,
+      "nonzero": true
+    }
+  },
+  "row": {
+    "local_step": 1,
+    "optimizer_step": 1,
+    "case": 94,
+    "context_crop_xy": [
+      2232,
+      712
+    ],
+    "loss_crop_xy": [
+      2488,
+      968
+    ],
+    "context_patch": 1024,
+    "loss_patch": 512,
+    "teacher_png": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case94.png",
+    "teacher_png_sha256": "ef86a3a07d35e0f80299d5d3a482e5a2a799da201a6cda1c19b630f313bd043a",
+    "loss": 0.10650452971458435,
+    "fidelity": 0.12863789498806,
+    "L1": 0.0754619836807251,
+    "LPIPS": 0.35007598996162415,
+    "spatial_gradient_L1": 0.06056106835603714,
+    "reward": 2.21333646774292,
+    "scores": {
+      "musiq": 0.7520632147789001,
+      "maniqa": 1.0060919523239136,
+      "clipiqa": 0.9103628396987915
+    },
+    "gradient_norm": 0.3322412669658661,
+    "finite_parameter_gradients": 100,
+    "nonzero_parameter_gradients": 100,
+    "lr": 1e-05,
+    "step_seconds": 2.9015817642211914,
+    "elapsed_seconds": 2.9016342163085938,
+    "gpu_peak_allocated_bytes": 15883579904
+  },
+  "no_optimizer_update_yet": true,
+  "frozen_metrics_and_offline_teacher": true,
+  "expected_initial_fidelity_zero": false
+}

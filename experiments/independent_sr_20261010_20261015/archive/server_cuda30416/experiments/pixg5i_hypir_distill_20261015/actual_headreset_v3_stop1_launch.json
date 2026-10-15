@@ -1,0 +1,19 @@
+{
+  "launched_at_UTC": "2026-10-15T12:25:00.932888+00:00",
+  "pid": 103670,
+  "gpu": 3,
+  "argv": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "-u",
+    "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir_headreset_v3.py",
+    "--config",
+    "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/config_headreset_v3.json",
+    "--run",
+    "pixg5i_hypir_headreset_v3",
+    "--stop-at",
+    "1"
+  ],
+  "log": "/cache/independent_sr_cuda_20261013/logs/pixg5i_headreset_v3_stop1_20261015.log",
+  "source_sha256": "3e64743ff117de1934ba7da04f3c24e822ba8573d91e842230eeb86a1c6c05cb",
+  "CLI_sha256": "10e6a2ffeb7293f1e8b989d1cff582a332dbcf13bbbfc5ff1e2f8968bec458f0"
+}

@@ -1,0 +1,71 @@
+{
+  "status": "CPU_DIFF_PLAN_ONLY_NOT_IMPLEMENTED_NOT_BUILT",
+  "reason": "Generalizing the weight/engine lineage needs coordinated builder+wrapper metadata guards; raw-path substitution alone would allow an A-only engine to be misbound. Root requested plan first if this is not a trivial safe change.",
+  "frozen_sources": {
+    "builder": {
+      "path": "nr_push7_20261015/trt_unet_preparation/build_hypir_unet_trt.py",
+      "sha256": "4281d9be015142919b51b84d946ad8d23b8bd49451ad54adb9ada8f1d42cdcca"
+    },
+    "unet_vae_wrapper": {
+      "sha256": "270d2434179d17658e9f1df228c8ef99124a2695141c92f0b5fecfa73d8d3080"
+    },
+    "finetuned_vae_parent_reuse_byte_exact": {
+      "filename": "finetuned_trtvae_runner.py",
+      "sha256": "4b225fbe82c556abf4b409927d16709e771a69fb811d7c6803f7281792875862"
+    },
+    "original_reference_runner": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b",
+    "dedicated_stream_runtime": "dc2597edfe8a7d71526535bd4e7540bd9c7623de00b6639c61139e08837aa9a4"
+  },
+  "allowed_registered_native_inputs": [
+    {
+      "run": "hypir_push7_A7750_lastconv_nr100",
+      "schema": "hypir_lastconv_nr_candidate_v1",
+      "registrar_sha256": "b108f74548629d9877e6bb2998bee2474726e8c36b506c0539dcd35c15ba014c",
+      "optimizer_tensors": 2,
+      "frozen_exact_A": 512
+    },
+    {
+      "run": "hypir_push7_A7750_lastconv_lr1e6_nr100",
+      "schema": "hypir_lastconv_nr_candidate_v1",
+      "registrar_sha256": "c7bb01c0d9b0cc28fd972e1b4bfd60858116baef1337b0f9a936f680ee986a32",
+      "optimizer_tensors": 2,
+      "frozen_exact_A": 512
+    },
+    {
+      "run": "hypir_push7_A7750_lastres_nr100",
+      "schema": "hypir_lastres_nr_candidate_v1",
+      "registrar_sha256": "be97885d1073e94f920990c72518777cdaef4c516bc9aad454c7d24f41272d83",
+      "optimizer_tensors": 6,
+      "frozen_exact_A": 508
+    }
+  ],
+  "binding_before_any_execute": [
+    "Explicit native candidate_manifest path+SHA; accept only above real registered runs/local50 or100; actual marker/config/input_catalog small-source SHA and source/schema/counters must match.",
+    "Actual canonical raw path+full SHA must match native manifest and marker; initial_A_sha256 is separate provenance, never substituted for the candidate hash.",
+    "No teacher outputs, no validation GT, original HYPIR architecture/native512/stride256/t200/coeff175/empty caption; no blends, G4, students or arbitrary unregistered paths."
+  ],
+  "new_builder_diff": [
+    "Add native-manifest+SHA arguments; RAW/RAW_SHA become validated candidate bindings. Keep pinned A config only for unchanged SD2 base asset/source provenance.",
+    "Use new component schema hypir_finetuned_unet_fp16_trt_component_v1 and new producer SHA. Include exact native manifest/marker/raw provenance; fine_tuned_checkpoint=true, backend_has_no_training=true, no_distillation=true, quality_reuse_claim=false.",
+    "Keep original BF16 load, safe PEFT fuse/unload, then FP16 conversion; Component.forward, fixed64 latent, timestep200/empty embedding, export/require_full_compilation and all TensorRT math arguments byte-identical.",
+    "Compute and record actual new BF16 and FP16 fused-G digests (same686 tensors/865910724elements). Never require equality to A fused-G digest or use it as the candidate identity.",
+    "Preserve original conditioning digest recipe and fixed BF16/FP16 empty-text+t200 identity. New immutable output directory per native candidate; never unet_fp16_A7750. Existing warm/n remain explicitly component diagnostics, never tool timing."
+  ],
+  "new_wrapper_diff": [
+    "Clone270d; parent must be existing4b225 finetuned VAE parent byte-exact, runtimeDC and referenceDFD unchanged. Do not duplicate or alter VAE encode/decode/infer.",
+    "Replace A-only raw guard with candidate raw+SHA and native manifest binding. Accept only new completed finetuned-component schema/new producer; actual engine SHA/path/bytes/raw/native-MF SHA must match; old A manifest/schema/engine path is rejected.",
+    "Preserve forward closure and infer AST from270d; preserve conditioning object identity checks, fixed64 FP16 engine IO, BF16 eps conversion, scheduler/posterior/tiling/wavelet outside engine.",
+    "Preserve constructor four-RNG capture/restore and numerical-flag restoration exactly; no new reset in infer. Protocol removes no_training=true, records fine_tuned_checkpoint=true/backend_has_no_training=true and complete training provenance.",
+    "Config supplies actual candidate weight+SHA/provenance, new UNet engine+manifest, original two VAE engines/base/site. No ready candidate config until a real root-selected new engine exists."
+  ],
+  "acceptance_after_root_gates": [
+    "Root first decides actual complete23/98 NR and real ROI fidelity gate. These are scheduling gates, not automatic positive flags in preparation code.",
+    "Independent AST/source review before any GPU build. Root alone schedules new build and registration.",
+    "Changed weights plus FP16 backend require actual fresh103/418 and native visual review; no A/pilot quality reuse.",
+    "Original benchmark/predict and G4 unchanged; root performs fresh same-card calibration/paired timing only after actual full quality."
+  ],
+  "GPU_used": false,
+  "engine_built": false,
+  "candidate_registered": false,
+  "files_frozen_unchanged": true
+}

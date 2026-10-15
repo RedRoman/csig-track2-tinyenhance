@@ -1,0 +1,23 @@
+{
+  "root": "/cache/independent_sr_cuda_20261013",
+  "run": "hypir_push7_A7750_lastres_lr5e6_nr100",
+  "fused_module": "/cache/independent_sr_cuda_20261013/code/push7/hypir_direct_nr/deployment_fused_lora.py",
+  "fused_module_sha256": "b215dc4247ecb06cd3040160b7671e8e3c956b090bef4909d3020e90b5719738",
+  "parity_proof": "/cache/independent_sr_cuda_20261013/analysis/push7/hypir_direct_nr/deployment_parity_probe_v1.json",
+  "parity_proof_sha256": "ddd34d2ea7e1ab834fa8928c6e39da417d3be40ce2f7307ae9c1172743e44950",
+  "stage_steps": 100,
+  "stop_at": 100,
+  "save_every": 50,
+  "seed": 20261015,
+  "lr": 5e-06,
+  "reward_weight": 0.1,
+  "musiq_weight": 1.5,
+  "clip_weight": 0.1,
+  "input_l1": 0.02,
+  "input_lpips": 0.01,
+  "input_gradient": 0.05,
+  "parameter_anchor": 1.0,
+  "crop_size": 768,
+  "crop_origin_alignment": 256,
+  "niqe_weight": 0.5
+}

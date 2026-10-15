@@ -1,0 +1,55 @@
+{
+  "schema": "pixg5i_hypir_distill_binding_v1",
+  "label": "pixg5i_hypir_mild_s300",
+  "stage": "distilled_checkpoint",
+  "checkpoint_sha256": "594c116d72b755625545ba8e00f4ee45ef2f83184ac62562501a53ccc7217a46",
+  "initial_package_checkpoint_sha256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+  "archive_sha256": "f8e154da5ea9cb2fe165a316f824003459661945e6bbe22efd025d8592d573d6",
+  "training_provenance": {
+    "config": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/config.json",
+      "sha256": "2ae1fd2e9ce0f1a89eb96a4a04054aa0ee3158756d5ae633d46819d7bdf21e97",
+      "bytes": 76279
+    },
+    "marker": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/checkpoint_step300.json",
+      "sha256": "51e1000c633e189c72eb97a3f0c5f4c7df1909cce49f3af5315df17576e1db3e",
+      "bytes": 3234
+    },
+    "input_catalog": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/input_catalog.json",
+      "sha256": "d3e81154b480d00fca08883568458aaa09c0b2810fc93de3d69caeeb0ef1c077",
+      "bytes": 23987
+    },
+    "teacher_catalog": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/teacher_catalog.json",
+      "sha256": "bfc7c3e5f64ad330b05d7a6badb03075eeaa37eb4f03fb59431292746801c902",
+      "bytes": 39787
+    },
+    "resume": {
+      "path": "/cache/independent_sr_cuda_20261013/experiments/pixg5i_hypir_distill_20261015/runs/pixg5i_hypir_mild/resume_step300.pt",
+      "sha256": "67b34c81fb140252f1b3b525ead033a6afa286d959181b76531d553bb779b0aa",
+      "bytes": 45582459
+    },
+    "training_source": {
+      "path": "/cache/independent_sr_cuda_20261013/code/pixg5i_hypir_distill/train_pixg5i_hypir.py",
+      "sha256": "d58e6dd66eac6b3f93a899a3008e48a568a9601a62b52cc3c99d73b9f1612604",
+      "bytes": 22459
+    }
+  },
+  "teacher": {
+    "raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+    "outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+    "applied_to_this_checkpoint": true,
+    "render_manifest": {
+      "path": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render_manifest.json",
+      "sha256": "f1a2004d3e4fa56272bc00183a84960510dcc6066bb98b0d29930d04a7642fd6",
+      "bytes": 81396
+    }
+  },
+  "used_as_G4_reference": false,
+  "variant": "mild",
+  "local_step": 300,
+  "optimizer_step": 300,
+  "reference_step": 30000
+}

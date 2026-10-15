@@ -1,0 +1,91 @@
+{
+  "schema": "nr_stage2_midpoint_cpu_preparation_v1",
+  "source_model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_cuda_nr_stage2_cont_s6500_compiled/model_dir",
+  "model_dir": "/cache/independent_sr_cuda_20261013/submissions/hypir_cuda_nr_stage2_cont_s6350_compiled/model_dir",
+  "config_diff_only": {
+    "label": {
+      "source": "cuda_nr_stage2_cont_s6500_compiled",
+      "candidate": "cuda_nr_stage2_cont_s6350_compiled"
+    },
+    "weight_path": {
+      "source": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage2_s6250_cont250/step6500.pth",
+      "candidate": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage2_s6250_cont250/step6350.pth"
+    }
+  },
+  "files_sha256": {
+    "runner.py": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae",
+    "config.json": "82e75a646fc4ab2a9b987f408aba89248acaf27ad0edea4469727b949754b3d9",
+    "__pycache__/runner.cpython-313.pyc": "58e1ad4776ff4bbddf21b557ed534bf24dd087a1e8ec5efe1591d3696b522e89"
+  },
+  "runner_matches_source": true,
+  "runner_sha256": "396e29afc3b60e077a8ef200cb4c382b33abac4fb60ab37dd9a873eb369704ae",
+  "weight_path": "/cache/independent_sr_cuda_20261013/adaptation/runs/cuda_nr_stage2_s6250_cont250/step6350.pth",
+  "weight_exists_at_preparation": true,
+  "weight_sha256": null,
+  "weight_status": "awaiting_generation_and_parent_prelaunch_verification",
+  "evaluation_label": "nr_stage2_cont_s6350_compiled_pilot",
+  "evaluation_dir": "/cache/independent_sr_cuda_20261013/nr_push2_pilot_evaluations/nr_stage2_cont_s6350_compiled_pilot",
+  "render_argv": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "/cache/independent_sr_cuda_20261013/code/render_cuda_submission.py",
+    "--model-dir",
+    "/cache/independent_sr_cuda_20261013/submissions/hypir_cuda_nr_stage2_cont_s6350_compiled/model_dir",
+    "--test-dir",
+    "/cache/independent_sr_cuda_20261013/source_payload/assets/input",
+    "--val-dir",
+    "/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/验证集",
+    "--out-dir",
+    "/cache/independent_sr_cuda_20261013/nr_push2_pilot_evaluations/nr_stage2_cont_s6350_compiled_pilot",
+    "--cases",
+    "pilot"
+  ],
+  "render_cli": "/cache/independent_sr_cuda_20261013/env/bin/python /cache/independent_sr_cuda_20261013/code/render_cuda_submission.py --model-dir /cache/independent_sr_cuda_20261013/submissions/hypir_cuda_nr_stage2_cont_s6350_compiled/model_dir --test-dir /cache/independent_sr_cuda_20261013/source_payload/assets/input --val-dir '/cache/independent_sr_cuda_20261013/source_payload/scoring_assets/data/验证集' --out-dir /cache/independent_sr_cuda_20261013/nr_push2_pilot_evaluations/nr_stage2_cont_s6350_compiled_pilot --cases pilot",
+  "score_three_argv": [
+    "/cache/independent_sr_cuda_20261013/env/bin/python",
+    "/cache/independent_sr_cuda_20261013/code/score_cuda_stream.py",
+    "--tool-dir",
+    "/cache/independent_sr_cuda_20261013/scoring_tool",
+    "--evaluation",
+    "nr_stage2_cont_s6350_compiled_pilot=/cache/independent_sr_cuda_20261013/nr_push2_pilot_evaluations/nr_stage2_cont_s6350_compiled_pilot/render",
+    "--evaluation",
+    "nr_stage2_cont_s6500_compiled_pilot=/cache/independent_sr_cuda_20261013/nr_push2_pilot_evaluations/nr_stage2_cont_s6500_compiled_pilot/render",
+    "--evaluation",
+    "nr_stage2_roundste_s6500_compiled_pilot=/cache/independent_sr_cuda_20261013/nr_push2_pilot_evaluations/nr_stage2_roundste_s6500_compiled_pilot/render",
+    "--out-root",
+    "/cache/independent_sr_cuda_20261013/nr_push2_pilot_evaluations",
+    "--test-cases",
+    "1,6,7,11,16,18,21,23,25,28,31,36,41,46,51,61,71,81,91,100"
+  ],
+  "score_three_cli": "/cache/independent_sr_cuda_20261013/env/bin/python /cache/independent_sr_cuda_20261013/code/score_cuda_stream.py --tool-dir /cache/independent_sr_cuda_20261013/scoring_tool --evaluation nr_stage2_cont_s6350_compiled_pilot=/cache/independent_sr_cuda_20261013/nr_push2_pilot_evaluations/nr_stage2_cont_s6350_compiled_pilot/render --evaluation nr_stage2_cont_s6500_compiled_pilot=/cache/independent_sr_cuda_20261013/nr_push2_pilot_evaluations/nr_stage2_cont_s6500_compiled_pilot/render --evaluation nr_stage2_roundste_s6500_compiled_pilot=/cache/independent_sr_cuda_20261013/nr_push2_pilot_evaluations/nr_stage2_roundste_s6500_compiled_pilot/render --out-root /cache/independent_sr_cuda_20261013/nr_push2_pilot_evaluations --test-cases 1,6,7,11,16,18,21,23,25,28,31,36,41,46,51,61,71,81,91,100",
+  "scoring_labels": [
+    "nr_stage2_cont_s6350_compiled_pilot",
+    "nr_stage2_cont_s6500_compiled_pilot",
+    "nr_stage2_roundste_s6500_compiled_pilot"
+  ],
+  "test_cases": [
+    1,
+    6,
+    7,
+    11,
+    16,
+    18,
+    21,
+    23,
+    25,
+    28,
+    31,
+    36,
+    41,
+    46,
+    51,
+    61,
+    71,
+    81,
+    91,
+    100
+  ],
+  "score_report_name": "S_subset",
+  "score_scope": "fixed20_test_NR_plus3val_FR_pilot",
+  "official_full_count": false,
+  "gpu_started": false
+}

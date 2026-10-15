@@ -1,0 +1,8 @@
+{
+  "updated_utc": "2026-10-15T03:31:10.417218+00:00",
+  "allowed_model_family": "HYPIR_teacher_only",
+  "lightweight_network_and_distillation_allowed": false,
+  "user_constraint": "先别做轻量保真网络，这个是用于教师的hypir，不要蒸馏",
+  "NAF_training_started": false,
+  "planned_HYPIR_training": "same HYPIR A7750 LoRA; deployment-aligned BF16 fused forward; direct NR objective with content/parameter constraints; no teacher-output distillation"
+}

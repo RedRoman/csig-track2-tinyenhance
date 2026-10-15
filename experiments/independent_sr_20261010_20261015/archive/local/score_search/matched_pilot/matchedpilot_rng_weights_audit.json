@@ -1,0 +1,98 @@
+{
+  "cuda_initialized": false,
+  "all_final_render_rngs_equal": true,
+  "all_final_score_rngs_equal": true,
+  "records": {
+    "s6000_ct175_compiled_control_pilot": {
+      "render_post_rng_hashes": {
+        "python_rng": "fd6400be04e89b76f0110d7af3021eca9671cc0d6b7ce19e34cade223e4ddc8e",
+        "numpy_rng": "969442399355a4276ff0cfa80d389360b68080f6ef6dfe4fe2cdc1f9ef0d9149",
+        "torch_rng": "256e25c7a7850404cd3c76f2b172803a5b2195109f09772b34e3874a368ab283",
+        "device_rng": "7e56f92b0765c30892f4b080f5d526be15ae2ca15aa42d0a7d1a6d1c7d86d26e"
+      },
+      "score_post_rng_hashes": {
+        "torch_cpu": "37b4d134b430dd5edb4b01d6640421037e02c4feac8d2331cf028d85d8e76611",
+        "torch_cuda": "4ac866d80e3ed1a1365d247e2ec7d8342ff21dc29fd79606a16b9bc6215b9982",
+        "numpy": "f3e8490663d8981fcd359fb4ec8a84dd733995d4e2fa59923fdd6726a5eabb50",
+        "python": "5fa3f6b60e49df34fef027f98ad2e5835c38bda801c8c76fc8c23a5c735cb811"
+      },
+      "render_commits_equal_manifest": true,
+      "score_checkpoint_rows_equal_jsonl": true
+    },
+    "nr_conservative_s6100_compiled_pilot": {
+      "render_post_rng_hashes": {
+        "python_rng": "fd6400be04e89b76f0110d7af3021eca9671cc0d6b7ce19e34cade223e4ddc8e",
+        "numpy_rng": "969442399355a4276ff0cfa80d389360b68080f6ef6dfe4fe2cdc1f9ef0d9149",
+        "torch_rng": "256e25c7a7850404cd3c76f2b172803a5b2195109f09772b34e3874a368ab283",
+        "device_rng": "7e56f92b0765c30892f4b080f5d526be15ae2ca15aa42d0a7d1a6d1c7d86d26e"
+      },
+      "score_post_rng_hashes": {
+        "torch_cpu": "37b4d134b430dd5edb4b01d6640421037e02c4feac8d2331cf028d85d8e76611",
+        "torch_cuda": "4ac866d80e3ed1a1365d247e2ec7d8342ff21dc29fd79606a16b9bc6215b9982",
+        "numpy": "f3e8490663d8981fcd359fb4ec8a84dd733995d4e2fa59923fdd6726a5eabb50",
+        "python": "5fa3f6b60e49df34fef027f98ad2e5835c38bda801c8c76fc8c23a5c735cb811"
+      },
+      "render_commits_equal_manifest": true,
+      "score_checkpoint_rows_equal_jsonl": true
+    },
+    "nr_aligned_s6100_compiled_pilot": {
+      "render_post_rng_hashes": {
+        "python_rng": "fd6400be04e89b76f0110d7af3021eca9671cc0d6b7ce19e34cade223e4ddc8e",
+        "numpy_rng": "969442399355a4276ff0cfa80d389360b68080f6ef6dfe4fe2cdc1f9ef0d9149",
+        "torch_rng": "256e25c7a7850404cd3c76f2b172803a5b2195109f09772b34e3874a368ab283",
+        "device_rng": "7e56f92b0765c30892f4b080f5d526be15ae2ca15aa42d0a7d1a6d1c7d86d26e"
+      },
+      "score_post_rng_hashes": {
+        "torch_cpu": "37b4d134b430dd5edb4b01d6640421037e02c4feac8d2331cf028d85d8e76611",
+        "torch_cuda": "4ac866d80e3ed1a1365d247e2ec7d8342ff21dc29fd79606a16b9bc6215b9982",
+        "numpy": "f3e8490663d8981fcd359fb4ec8a84dd733995d4e2fa59923fdd6726a5eabb50",
+        "python": "5fa3f6b60e49df34fef027f98ad2e5835c38bda801c8c76fc8c23a5c735cb811"
+      },
+      "render_commits_equal_manifest": true,
+      "score_checkpoint_rows_equal_jsonl": true
+    }
+  },
+  "metric_weight_actual_sha256": [
+    {
+      "relative_path": "clip/RN50.pt",
+      "bytes": 255827503,
+      "sha256": "afeb0e10f9e5a86da6080e35cf09123aca3b358a0c3e3b6c78a7b63bc04b6762"
+    },
+    {
+      "relative_path": "torch/hub/checkpoints/DISTS_weights-f5e65c96.pth",
+      "bytes": 12288,
+      "sha256": "f5e65c96230b7f6ca995691647d482237e4cab8a50c5c4a5784f219ef0748218"
+    },
+    {
+      "relative_path": "torch/hub/checkpoints/LPIPS_v0.1_alex-df73285e.pth",
+      "bytes": 6009,
+      "sha256": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0"
+    },
+    {
+      "relative_path": "torch/hub/checkpoints/alexnet-owt-7be5be79.pth",
+      "bytes": 244408911,
+      "sha256": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02"
+    },
+    {
+      "relative_path": "torch/hub/checkpoints/ckpt_koniq10k.pt",
+      "bytes": 543335435,
+      "sha256": "a207f8ab57322e6be38ff5c8d019301dc032b454bef21c3c9f9dbf7974eebff6"
+    },
+    {
+      "relative_path": "torch/hub/checkpoints/musiq_koniq_ckpt-e95806b9.pth",
+      "bytes": 108610983,
+      "sha256": "e95806b9eae5f3814c410f574ba8e552362bd5bc63d758ed5b97860f5d6185aa"
+    },
+    {
+      "relative_path": "torch/hub/checkpoints/niqe_modelparameters.mat",
+      "bytes": 8347,
+      "sha256": "fa2aa4d12dd9595c3fb6bf8b4e1a15c79d5d1469238d0901c88dead195be578d"
+    },
+    {
+      "relative_path": "torch/hub/checkpoints/vgg16-397923af.pth",
+      "bytes": 553433881,
+      "sha256": "397923af8e79cdbb6a7127f12361acd7a2f83e06b05044ddf496e83de57a5bf0"
+    }
+  ],
+  "metric_weights_match_original_tool_archive": "PASS8"
+}

@@ -1,0 +1,456 @@
+{
+  "status": "PASS",
+  "CPU_only": true,
+  "GPU_used": false,
+  "stage": "FINAL FORMAL103",
+  "snapshot_json_sha256": "759c04098f1b94183932d414aaa5cc2687e65e623aa6eb7823a5670b1f98230e",
+  "snapshot": {
+    "schema": "push6_formal_visual_committed_snapshot_v1",
+    "status": "PASS",
+    "CPU_only": true,
+    "GPU_used": false,
+    "candidate_formal_complete103": true,
+    "committed_images": 103,
+    "formal_candidate_dir": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all",
+    "formal_parent_dir": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all",
+    "scope": "Same A7750 weights, accelerated inference; no new fine-tuning. Progress is never a full-quality result.",
+    "candidate_runner_sha256": "dfd91811af6fa1581f246e19a04f8ada10515864ca9f7d3a35fbcc5e504f9f9b",
+    "checkpoint_sha256": "589324563e9e223291d6b58ab8a02d38614582279323bdd20d19460d0d73977d",
+    "candidate_protocol_id": "04de57a6e07822e7301b9c98c508f473dfb3a66aba55ac0ff6a28bde24d4fe77",
+    "candidate_protocol_file_sha256": "b82d446a476a8a9947fd484fb50162b034f58dc629f017e0992665324f474183",
+    "committed_state_or_final_manifest_sha256": "b793e6c9d641f329299725c8e07518122e764d927d64f8774154c26f074c3eb4",
+    "parent_selection_sha256": "b3148b21f466854f9fe8f81c7eca1348da5bf793141799573ff3be8b20e25c3f",
+    "parent_full_audit_sha256": "ae5b2234f5e110240507fbec515139d1b2a23bf8f664e7477e34c377e09c507b",
+    "parent_manifest_sha256": "35355c94cace390b5f5918cfb607d85b0f55c9cd1e1ba0a4f6a4d034abb54e16",
+    "parent_records": {
+      "7": {
+        "task_index": 9,
+        "split": "test",
+        "case": 7,
+        "output": "render/test/case7.png",
+        "sha256": "bfa61a3bec30ee7f27ddb12bb010a6737387e1f99345a658956a844cef4f45fc",
+        "size": [
+          4096,
+          3072
+        ],
+        "seconds": 9.322998285293579,
+        "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case7.png",
+        "bytes": 18446665,
+        "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4"
+      },
+      "16": {
+        "task_index": 18,
+        "split": "test",
+        "case": 16,
+        "output": "render/test/case16.png",
+        "sha256": "8a2c923b1a1cfb47b0b95752ce3e5027054ddc97f67fa88cb22212b9d2d25c54",
+        "size": [
+          4096,
+          3072
+        ],
+        "seconds": 9.24218463897705,
+        "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case16.png",
+        "bytes": 17787503,
+        "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307"
+      },
+      "41": {
+        "task_index": 43,
+        "split": "test",
+        "case": 41,
+        "output": "render/test/case41.png",
+        "sha256": "2466b79f587436a82d0722dacbb8d4f62ae4a19d45b0494b69ac25cb46409403",
+        "size": [
+          3072,
+          4096
+        ],
+        "seconds": 9.62812852859497,
+        "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case41.png",
+        "bytes": 23288942,
+        "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b"
+      },
+      "83": {
+        "task_index": 85,
+        "split": "test",
+        "case": 83,
+        "output": "render/test/case83.png",
+        "sha256": "c5ad4a4137d9be64166bc8e01f6953c5e7b4a0fa20b3538c1a6c3ad3ce3ebc03",
+        "size": [
+          3072,
+          4096
+        ],
+        "seconds": 9.40263843536377,
+        "path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case83.png",
+        "bytes": 22027167,
+        "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038"
+      }
+    },
+    "candidate_records": {
+      "7": {
+        "task_index": 9,
+        "split": "test",
+        "case": 7,
+        "output": "render/test/case7.png",
+        "sha256": "bfa61a3bec30ee7f27ddb12bb010a6737387e1f99345a658956a844cef4f45fc",
+        "size": [
+          4096,
+          3072
+        ],
+        "seconds": 10.82169222831726,
+        "path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case7.png",
+        "bytes": 18446665,
+        "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4"
+      },
+      "16": {
+        "task_index": 18,
+        "split": "test",
+        "case": 16,
+        "output": "render/test/case16.png",
+        "sha256": "8a2c923b1a1cfb47b0b95752ce3e5027054ddc97f67fa88cb22212b9d2d25c54",
+        "size": [
+          4096,
+          3072
+        ],
+        "seconds": 8.65532922744751,
+        "path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case16.png",
+        "bytes": 17787503,
+        "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307"
+      },
+      "41": {
+        "task_index": 43,
+        "split": "test",
+        "case": 41,
+        "output": "render/test/case41.png",
+        "sha256": "2466b79f587436a82d0722dacbb8d4f62ae4a19d45b0494b69ac25cb46409403",
+        "size": [
+          3072,
+          4096
+        ],
+        "seconds": 8.932486772537231,
+        "path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case41.png",
+        "bytes": 23288942,
+        "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b"
+      },
+      "83": {
+        "task_index": 85,
+        "split": "test",
+        "case": 83,
+        "output": "render/test/case83.png",
+        "sha256": "c5ad4a4137d9be64166bc8e01f6953c5e7b4a0fa20b3538c1a6c3ad3ce3ebc03",
+        "size": [
+          3072,
+          4096
+        ],
+        "seconds": 8.852199077606201,
+        "path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case83.png",
+        "bytes": 22027167,
+        "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038"
+      }
+    },
+    "script_sha256": "7d110fdb66294ad4fd12eb2f4edcd77981a0d5791ce448b47f015c9b9bd65745"
+  },
+  "source_images": [
+    {
+      "case": 7,
+      "role": "A7750 quality baseline",
+      "formal_source_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case7.png",
+      "local_actual_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case7.png",
+      "gallery_link": "sources/parent_records/case7.png",
+      "sha256": "bfa61a3bec30ee7f27ddb12bb010a6737387e1f99345a658956a844cef4f45fc",
+      "bytes": 18446665,
+      "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+      "native_size": [
+        4096,
+        3072
+      ]
+    },
+    {
+      "case": 7,
+      "role": "Same-weight RO+wavelet inference",
+      "formal_source_path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case7.png",
+      "local_actual_path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case7.png",
+      "gallery_link": "sources/candidate_records/case7.png",
+      "sha256": "bfa61a3bec30ee7f27ddb12bb010a6737387e1f99345a658956a844cef4f45fc",
+      "bytes": 18446665,
+      "input_sha256": "12450718a219c244ce75c5596bef3e195587fc79bbb58386849a057a56bddac4",
+      "native_size": [
+        4096,
+        3072
+      ]
+    },
+    {
+      "case": 16,
+      "role": "A7750 quality baseline",
+      "formal_source_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case16.png",
+      "local_actual_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case16.png",
+      "gallery_link": "sources/parent_records/case16.png",
+      "sha256": "8a2c923b1a1cfb47b0b95752ce3e5027054ddc97f67fa88cb22212b9d2d25c54",
+      "bytes": 17787503,
+      "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+      "native_size": [
+        4096,
+        3072
+      ]
+    },
+    {
+      "case": 16,
+      "role": "Same-weight RO+wavelet inference",
+      "formal_source_path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case16.png",
+      "local_actual_path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case16.png",
+      "gallery_link": "sources/candidate_records/case16.png",
+      "sha256": "8a2c923b1a1cfb47b0b95752ce3e5027054ddc97f67fa88cb22212b9d2d25c54",
+      "bytes": 17787503,
+      "input_sha256": "b691416c0ac3774c17442c157468bb9a31cdf20291573db9c7c6c02a4a143307",
+      "native_size": [
+        4096,
+        3072
+      ]
+    },
+    {
+      "case": 41,
+      "role": "A7750 quality baseline",
+      "formal_source_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case41.png",
+      "local_actual_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case41.png",
+      "gallery_link": "sources/parent_records/case41.png",
+      "sha256": "2466b79f587436a82d0722dacbb8d4f62ae4a19d45b0494b69ac25cb46409403",
+      "bytes": 23288942,
+      "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+      "native_size": [
+        3072,
+        4096
+      ]
+    },
+    {
+      "case": 41,
+      "role": "Same-weight RO+wavelet inference",
+      "formal_source_path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case41.png",
+      "local_actual_path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case41.png",
+      "gallery_link": "sources/candidate_records/case41.png",
+      "sha256": "2466b79f587436a82d0722dacbb8d4f62ae4a19d45b0494b69ac25cb46409403",
+      "bytes": 23288942,
+      "input_sha256": "c8bec12f79dae8e3146f2b7c1a9e15218d451c7081c142e7ef09e7aea526182b",
+      "native_size": [
+        3072,
+        4096
+      ]
+    },
+    {
+      "case": 83,
+      "role": "A7750 quality baseline",
+      "formal_source_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case83.png",
+      "local_actual_path": "/cache/independent_sr_cuda_20261013/nr_push4_full_evaluations/push4_a7750_compiled_all/render/test/case83.png",
+      "gallery_link": "sources/parent_records/case83.png",
+      "sha256": "c5ad4a4137d9be64166bc8e01f6953c5e7b4a0fa20b3538c1a6c3ad3ce3ebc03",
+      "bytes": 22027167,
+      "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+      "native_size": [
+        3072,
+        4096
+      ]
+    },
+    {
+      "case": 83,
+      "role": "Same-weight RO+wavelet inference",
+      "formal_source_path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case83.png",
+      "local_actual_path": "/cache/independent_sr_cuda_20261013/nr_push6_full_evaluations/push6_a7750_ro_wavelet_all/render/test/case83.png",
+      "gallery_link": "sources/candidate_records/case83.png",
+      "sha256": "c5ad4a4137d9be64166bc8e01f6953c5e7b4a0fa20b3538c1a6c3ad3ce3ebc03",
+      "bytes": 22027167,
+      "input_sha256": "006b5cc69ec9b404cb92c1506d397ee55d1a23d8bac5a83a1be6a604ca658038",
+      "native_size": [
+        3072,
+        4096
+      ]
+    }
+  ],
+  "ROIs": [
+    {
+      "case": 7,
+      "column": 0,
+      "ROI_xyxy_exclusive": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "paste_xy": [
+        16,
+        96
+      ],
+      "size": [
+        640,
+        448
+      ],
+      "scale": 1,
+      "resampling": null
+    },
+    {
+      "case": 7,
+      "column": 1,
+      "ROI_xyxy_exclusive": [
+        1856,
+        1408,
+        2496,
+        1856
+      ],
+      "paste_xy": [
+        672,
+        96
+      ],
+      "size": [
+        640,
+        448
+      ],
+      "scale": 1,
+      "resampling": null
+    },
+    {
+      "case": 16,
+      "column": 0,
+      "ROI_xyxy_exclusive": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "paste_xy": [
+        16,
+        96
+      ],
+      "size": [
+        640,
+        512
+      ],
+      "scale": 1,
+      "resampling": null
+    },
+    {
+      "case": 16,
+      "column": 1,
+      "ROI_xyxy_exclusive": [
+        1280,
+        1216,
+        1920,
+        1728
+      ],
+      "paste_xy": [
+        672,
+        96
+      ],
+      "size": [
+        640,
+        512
+      ],
+      "scale": 1,
+      "resampling": null
+    },
+    {
+      "case": 41,
+      "column": 0,
+      "ROI_xyxy_exclusive": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "paste_xy": [
+        16,
+        96
+      ],
+      "size": [
+        640,
+        512
+      ],
+      "scale": 1,
+      "resampling": null
+    },
+    {
+      "case": 41,
+      "column": 1,
+      "ROI_xyxy_exclusive": [
+        768,
+        1664,
+        1408,
+        2176
+      ],
+      "paste_xy": [
+        672,
+        96
+      ],
+      "size": [
+        640,
+        512
+      ],
+      "scale": 1,
+      "resampling": null
+    },
+    {
+      "case": 83,
+      "column": 0,
+      "ROI_xyxy_exclusive": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "paste_xy": [
+        16,
+        96
+      ],
+      "size": [
+        640,
+        512
+      ],
+      "scale": 1,
+      "resampling": null
+    },
+    {
+      "case": 83,
+      "column": 1,
+      "ROI_xyxy_exclusive": [
+        1216,
+        1920,
+        1856,
+        2432
+      ],
+      "paste_xy": [
+        672,
+        96
+      ],
+      "size": [
+        640,
+        512
+      ],
+      "scale": 1,
+      "resampling": null
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/cache/independent_sr_cuda_20261013/analysis/push6/formal_A7750_vs_RO_wavelet/case7_formal_roi_1to1.png",
+      "sha256": "cb50bbfa5602f67f785423b3dd9dc8396a6cdbacb378709c21317b75798a67e5",
+      "bytes": 472566,
+      "full_native_source_SHA_equal": true
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/analysis/push6/formal_A7750_vs_RO_wavelet/case16_formal_roi_1to1.png",
+      "sha256": "49e34237af4d9e96aa5a09062f0be700be3b76c919fb5cf65e8d0bc2cd5f903a",
+      "bytes": 582111,
+      "full_native_source_SHA_equal": true
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/analysis/push6/formal_A7750_vs_RO_wavelet/case41_formal_roi_1to1.png",
+      "sha256": "d60d554247e70fb940ab8f891991b963dd8cf4c675d29a515f62ad07321f1ef6",
+      "bytes": 611388,
+      "full_native_source_SHA_equal": true
+    },
+    {
+      "path": "/cache/independent_sr_cuda_20261013/analysis/push6/formal_A7750_vs_RO_wavelet/case83_formal_roi_1to1.png",
+      "sha256": "e78176d24da80f7267c262878ff84dad30da7c8405f5d6c8cff5642a565e349d",
+      "bytes": 660631,
+      "full_native_source_SHA_equal": true
+    }
+  ],
+  "all_ROI_panels_exact_equal_source_crops": true,
+  "native_originals_unmodified": true,
+  "script_sha256": "e47075239ae53d929dfe154eb571bdd24a593d6803acc2ae9978de1721d25b79"
+}

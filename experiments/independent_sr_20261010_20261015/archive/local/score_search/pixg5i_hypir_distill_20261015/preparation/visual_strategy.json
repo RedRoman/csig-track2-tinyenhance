@@ -1,0 +1,60 @@
+{
+  "schema": "pixg5i_distill_visual_strategy_v1",
+  "status": "PACKAGE_REFERENCE_INSPECTED_FRESH_PNG_CONFIRMATION_PENDING",
+  "CPU_only": true,
+  "GPU_used": false,
+  "visual_proof": {
+    "path": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/visuals/package_reference_vs_teacher/proof.json",
+    "sha256": "0655fb51aa5c153513ef0041e4a14be43924ad913e269e7355d0b8c6b357e7c3"
+  },
+  "source_scope": "Packaged original JPEGs versus crop cache from latest fixed HYPIR fresh-full PNG; original JPEGs are visual references, not fresh scored baseline. No ground truth or cross-model RNG equivalence claim.",
+  "observed_fixed_ROIs": {
+    "case7": "Original packaged output: swollen letter strokes and many repeated small ripples/crevices in red background. Teacher has more continuous, legible glyph boundaries and flatter sign surface.",
+    "case16": "Original packaged output: horizontal grill bars merge and bend; handle region is thickened, and repeated dark holes/bright edges replace small connections. Teacher keeps many thin separated bars and a clearly bounded handle.",
+    "case41": "Original packaged output: background leaves are blurred, petal boundary has a dark/bright halo and the petal carries dense skin-like repeated texture. Teacher preserves distinguishable stems/leaves and gentler petal tone transitions.",
+    "case83": "Original packaged output: leaves and rose edges have bright overshoot, small black pits and repetitive wrinkle texture. Teacher shows cleaner leaf boundaries and more continuous petal folds."
+  },
+  "limitations": [
+    "Fine JPEG texture/compression effects cannot be assigned wholly to the model; repeat check on fresh original PNG103.",
+    "Teacher is a pseudo target, not ground truth; copying its sharpening, invented details or color errors is a fidelity risk.",
+    "Four fixed cases do not establish complete dataset quality or score."
+  ],
+  "loss_proposal": {
+    "normalization": "Pixel L1 and first-difference L1 are means on RGB [0,1]. LPIPS gets RGB [-1,1]. Horizontal/vertical first-difference means are averaged. Targets are fixed teacher native PNGs, geometrically paired to actual input by case and crop.",
+    "light": {
+      "teacher_L1": 1.0,
+      "teacher_LPIPS": 0.05,
+      "teacher_first_difference_L1": 0.1,
+      "NR_reward_initially": 0.0
+    },
+    "medium": {
+      "teacher_L1": 1.0,
+      "teacher_LPIPS": 0.1,
+      "teacher_first_difference_L1": 0.3,
+      "NR_reward_initially": 0.0
+    },
+    "same_controls": [
+      "Same original PixG5i initialization, optimizer recipe, LR, RNG/sample sequence, update count and checkpoints between losses.",
+      "Use only test100 input/teacher pseudo-target pairs for fitting; validation GT is not training data.",
+      "Preserve original checkpoint cfg/state format and original Runner deployment folding/FP16; actual step0 deployment check should detect format or output-range errors.",
+      "No teacher JPEG targets. No reward that directly maximizes sharpness/gradient magnitude."
+    ]
+  },
+  "crop_context_suggestion": {
+    "context": 1024,
+    "loss_core": 512,
+    "origin_alignment": 8,
+    "reason": "Actual package cfg uses no normalization, ps2, 3 levels and finite local convolutions. Native context reduces boundary/phase mismatch; confirm central crop equivalence on real data rather than claiming full-NN exactness from a receptive-field estimate."
+  },
+  "selection_observations": [
+    "Glyph stroke count/connectivity and sign borders; do not accept high NR that breaks characters.",
+    "Grill bar count and separation, handle/joint screw placement and dark mark topology.",
+    "Petal fold and stem/leaf boundary positions, halos, cellular repeated texture and local smoothing.",
+    "Report each formal NR component and FR separately; if artifacts improve while S drops, report that tradeoff honestly."
+  ],
+  "next_visual_gallery": {
+    "helper": "/Users/hezihao/Documents/New project/csig_scoring_tool_review_20261013/score_search/pixg5i_hypir_distill_20261015/preparation/make_fresh_distill_gallery.py",
+    "spec": "Must be supplied after actual baseline/teacher/candidate labels and hashes exist. No guessed candidate identity.",
+    "fresh_outputs_only": true
+  }
+}

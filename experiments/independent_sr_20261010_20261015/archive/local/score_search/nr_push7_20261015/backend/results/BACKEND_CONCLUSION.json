@@ -1,0 +1,172 @@
+{
+  "status": "CLOSED_NOT_PROMOTED",
+  "CPU_only": true,
+  "root_GPU_execution_recorded_in_original_manifests": true,
+  "component_results": [
+    {
+      "component": "encoder",
+      "precision": "bf16",
+      "Torch_RO_p10_ms": 9.719602870941163,
+      "TRT_p10_ms": 34.53224983215332,
+      "numeric": [
+        {
+          "input_offset": 0,
+          "float_exact": false,
+          "max_abs": 2.23828125,
+          "mean_abs": 0.029271140694618225,
+          "rmse": 0.06690480560064316
+        },
+        {
+          "input_offset": 17,
+          "float_exact": false,
+          "max_abs": 2.07421875,
+          "mean_abs": 0.030463583767414093,
+          "rmse": 0.06296432018280029
+        },
+        {
+          "input_offset": 103,
+          "float_exact": false,
+          "max_abs": 1.984375,
+          "mean_abs": 0.02797667682170868,
+          "rmse": 0.060572054237127304
+        }
+      ]
+    },
+    {
+      "component": "encoder",
+      "precision": "fp16",
+      "Torch_RO_p10_ms": 9.666355323791503,
+      "TRT_p10_ms": 7.554969453811646,
+      "numeric": [
+        {
+          "input_offset": 0,
+          "float_exact": false,
+          "max_abs": 2.238525390625,
+          "mean_abs": 0.030575614422559738,
+          "rmse": 0.06227676570415497
+        },
+        {
+          "input_offset": 17,
+          "float_exact": false,
+          "max_abs": 2.9208984375,
+          "mean_abs": 0.029007870703935623,
+          "rmse": 0.06583228707313538
+        },
+        {
+          "input_offset": 103,
+          "float_exact": false,
+          "max_abs": 2.9638671875,
+          "mean_abs": 0.02883162721991539,
+          "rmse": 0.060366325080394745
+        }
+      ]
+    },
+    {
+      "component": "decoder",
+      "precision": "bf16",
+      "Torch_RO_p10_ms": 18.945024490356445,
+      "TRT_p10_ms": 72.65269927978515,
+      "numeric": [
+        {
+          "input_offset": 0,
+          "float_exact": false,
+          "max_abs": 0.099609375,
+          "mean_abs": 0.004317810293287039,
+          "rmse": 0.006484758574515581
+        },
+        {
+          "input_offset": 17,
+          "float_exact": false,
+          "max_abs": 0.08642578125,
+          "mean_abs": 0.004447947721928358,
+          "rmse": 0.006674939766526222
+        },
+        {
+          "input_offset": 103,
+          "float_exact": false,
+          "max_abs": 0.07672119140625,
+          "mean_abs": 0.004288018215447664,
+          "rmse": 0.0065660555846989155
+        }
+      ]
+    },
+    {
+      "component": "decoder",
+      "precision": "fp16",
+      "Torch_RO_p10_ms": 19.09094371795654,
+      "TRT_p10_ms": 14.056345558166504,
+      "numeric": [
+        {
+          "input_offset": 0,
+          "float_exact": false,
+          "max_abs": 0.07114410400390625,
+          "mean_abs": 0.003212242852896452,
+          "rmse": 0.004960105288773775
+        },
+        {
+          "input_offset": 17,
+          "float_exact": false,
+          "max_abs": 0.05828857421875,
+          "mean_abs": 0.0033295312896370888,
+          "rmse": 0.005108145996928215
+        },
+        {
+          "input_offset": 103,
+          "float_exact": false,
+          "max_abs": 0.0780181884765625,
+          "mean_abs": 0.0033294158056378365,
+          "rmse": 0.005186117719858885
+        }
+      ]
+    }
+  ],
+  "stream_control": [
+    {
+      "component": "encoder",
+      "caller_p10_ms": 34.4728588104248,
+      "nondefault_p10_ms": 34.54443473815918,
+      "IO_LINEAR": true,
+      "caller_worker_same_outputs": true,
+      "owned_outputs": true,
+      "profile_total_ms": 34.91020801011473,
+      "convolution_profile_sum_ms": 31.38662397954613,
+      "profile_layers": 113,
+      "detailed_tactics_available": false
+    },
+    {
+      "component": "decoder",
+      "caller_p10_ms": 72.57579193115234,
+      "nondefault_p10_ms": 72.61787872314453,
+      "IO_LINEAR": true,
+      "caller_worker_same_outputs": true,
+      "owned_outputs": true,
+      "profile_total_ms": 73.14943919936195,
+      "convolution_profile_sum_ms": 66.98495918512344,
+      "profile_layers": 148,
+      "detailed_tactics_available": false
+    }
+  ],
+  "current_formal_parent": {
+    "S": 3.7614565663241937,
+    "p10_ms": 41.438209533691406,
+    "paired_G4_p10_ms": 0.6492159962654114,
+    "prediction": 57.85005281670066
+  },
+  "target65_same_S_max_p10_ms": 22.98924850305911,
+  "interpretation": [
+    "BF16 is slower than Torch_RO; non-default stream did not recover latency. IO was actual contiguous LINEAR, and the untimed layer profile accounts for kernel time.",
+    "FP16 saves about7.1ms across the separately measured encoder and decoder, insufficient for the required ~18.45ms full Runner reduction. Component sums cannot establish Runner latency.",
+    "BF16/FP16 engine outputs differ from their same-precision original VAE on synthetic probes; no full103 scoring or A-quality equivalence was established.",
+    "Original BF16 HYPIR weights and original isolated environments remain unchanged. No TensorRT Runner was registered, promoted, or substituted.",
+    "No further TensorRT builds/UNet conversion are planned in this attempt. Engines remain remote; only six small result JSON files were copied."
+  ],
+  "source_notes": [
+    "The native_group_norm converter uses TensorRT normalization, but non-detailed engine inspector does not expose actual per-layer precision/tactic; do not claim every convolution used FP32.",
+    "Original-A TF32 flag differs from the build diagnostic (builder disables TF32); no official prediction is computed from these probes."
+  ],
+  "references": [
+    "https://github.com/pytorch/TensorRT/releases/tag/v2.8.0",
+    "https://docs.nvidia.com/deeplearning/tensorrt/10.x.x/inference-library/python-api-docs.html",
+    "https://docs.nvidia.com/deeplearning/tensorrt/10.x.x/inference-library/accuracy-considerations.html"
+  ]
+}

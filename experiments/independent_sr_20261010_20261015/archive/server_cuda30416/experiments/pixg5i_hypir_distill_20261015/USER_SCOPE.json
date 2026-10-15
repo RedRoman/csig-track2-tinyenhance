@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-10-15T08:53:29.974797+00:00",
+  "user_request": "以赛题二_pixG5i_g_b4e0686c.zip内小模型为主模型，用本轮HYPIR教师蒸馏减轻NR过度优化伪影，再用原评分工具评分",
+  "student": "/cache/independent_sr_cuda_20261013/source_payload/pixg5i_original/model_dir",
+  "student_original_model_SHA256": "f3781766ff4f635d6e903f3fa0641d0fb1c1211842721cc9185f5bf00c119487",
+  "teacher": "push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all",
+  "teacher_raw_sha256": "23de1a93b1ddd72a268788bebbdd8ba348b2819bc35cfa6a4501ffc822fdc06c",
+  "teacher_outputs": "/cache/independent_sr_cuda_20261013/nr_push7_recovered_full_evaluations/push7_a7750_lastres_lr5e6_nr_s7850_trtunetvae_all/render/test",
+  "teacher_fixed": true,
+  "HYPIR_preference_unchanged": true,
+  "distillation_explicitly_authorized_this_turn": true,
+  "validation_GT_training": false
+}

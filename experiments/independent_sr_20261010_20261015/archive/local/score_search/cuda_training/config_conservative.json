@@ -1,0 +1,15 @@
+{
+  "run": "cuda_nr_s6000_ct175_conservative_pilot100",
+  "root": "/cache/independent_sr_cuda_20261013",
+  "anchor_checkpoint": "/cache/independent_sr_cuda_20261013/source_payload/adaptation/runs/ascend_balanced/step6000.pth",
+  "coeff_t": 175,
+  "segment_steps": 100,
+  "seed": 20261013,
+  "lr": 2e-7,
+  "reward_weight": 0.075,
+  "clip_weight": 0.1,
+  "gradient_anchor": 0.3,
+  "maniqa_samples": 20,
+  "nr_round_ste": false,
+  "save_every": 50
+}

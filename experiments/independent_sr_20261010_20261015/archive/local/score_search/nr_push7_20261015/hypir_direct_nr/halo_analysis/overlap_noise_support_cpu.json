@@ -1,0 +1,335 @@
+{
+  "status": "CPU_TOY_COMPLETE",
+  "CPU_only": true,
+  "torch_imported": false,
+  "GPU_used": false,
+  "source_sha256": "b7dfb64a6e308c922cef496fd337c92b38c03275ff77ce724ee07705c005987f",
+  "actual_common_source_sha256": "76dc674d6e0574c64f7522d66658927e50c7767cd27ead2fa594f7d996fbe923",
+  "actual_base_source_sha256": "99f5f91f49ef4248db9ba1dd4332ef0e01b5ecf6e729a267e40541cdce853161",
+  "analytic_model": "conditional independent tile samples with equal unit posterior sigma; Float64 original Gaussian formula; excludes actual means/sigmas and BF16 rounding",
+  "variance_identity": "Var(sum_i alpha_i*(mu_i+sigma_i*epsilon_i)|input)=sum_i alpha_i^2*sigma_i^2",
+  "contexts": [
+    {
+      "context_pixels": 512,
+      "encoder_tiles": 1,
+      "image_mean_equal_sigma_variance_ratio": 1.0,
+      "center512_mean_equal_sigma_variance_ratio": 1.0,
+      "minimum_equal_sigma_variance_ratio": 1.0,
+      "maximum_equal_sigma_variance_ratio": 1.0
+    },
+    {
+      "context_pixels": 768,
+      "encoder_tiles": 4,
+      "image_mean_equal_sigma_variance_ratio": 0.9473781695930588,
+      "center512_mean_equal_sigma_variance_ratio": 0.9216005796719535,
+      "minimum_equal_sigma_variance_ratio": 0.25929935169849466,
+      "maximum_equal_sigma_variance_ratio": 1.0
+    },
+    {
+      "context_pixels": 1024,
+      "encoder_tiles": 9,
+      "image_mean_equal_sigma_variance_ratio": 0.9216005796719535,
+      "center512_mean_equal_sigma_variance_ratio": 0.8464011110381008,
+      "minimum_equal_sigma_variance_ratio": 0.25929935169849466,
+      "maximum_equal_sigma_variance_ratio": 1.0
+    },
+    {
+      "context_pixels": 1536,
+      "encoder_tiles": 25,
+      "image_mean_equal_sigma_variance_ratio": 0.8961785399390921,
+      "center512_mean_equal_sigma_variance_ratio": 0.8464011110381008,
+      "minimum_equal_sigma_variance_ratio": 0.25929935169849466,
+      "maximum_equal_sigma_variance_ratio": 1.0
+    },
+    {
+      "context_pixels": 2048,
+      "encoder_tiles": 49,
+      "image_mean_equal_sigma_variance_ratio": 0.883600851393253,
+      "center512_mean_equal_sigma_variance_ratio": 0.8464011110381008,
+      "minimum_equal_sigma_variance_ratio": 0.25929935169849466,
+      "maximum_equal_sigma_variance_ratio": 1.0
+    },
+    {
+      "context_pixels": 2560,
+      "encoder_tiles": 81,
+      "image_mean_equal_sigma_variance_ratio": 0.8760969042883385,
+      "center512_mean_equal_sigma_variance_ratio": 0.8464011110381008,
+      "minimum_equal_sigma_variance_ratio": 0.25929935169849466,
+      "maximum_equal_sigma_variance_ratio": 1.0
+    }
+  ],
+  "native_interior_phase_mean_equal_sigma_variance_ratio": 0.8464011110381008,
+  "crossover_monte_carlo": {
+    "independent_samples": 20000,
+    "contributing_tiles": 4,
+    "analytic_variance": 0.25929935169849466,
+    "empirical_variance": 0.25792830702029873,
+    "empirical_mean": -7.703082311229108e-05
+  },
+  "support_fixture": "one-dimensional three-stage Gaussian blend of full-tile means, latent64/stride32; positive fixture proves possible nonlocal dependencies, does not measure HYPIR Jacobian or error",
+  "support": [
+    {
+      "context_pixels": 512,
+      "core_pixels": 512,
+      "centered_halo_pixels": 0,
+      "context_origin_on_global_grid": true,
+      "core_origin_latent_phase": 0,
+      "samples": [
+        {
+          "local_latent_coordinate": 0,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 160,
+          "missing_positive_linear_fixture_mass": 0.5312491394365586,
+          "linear_fixture_row_L1_difference": 1.0624982788731177
+        },
+        {
+          "local_latent_coordinate": 31,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 160,
+          "missing_positive_linear_fixture_mass": 0.37500086056344123,
+          "linear_fixture_row_L1_difference": 0.7500017211268826
+        },
+        {
+          "local_latent_coordinate": 63,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 160,
+          "missing_positive_linear_fixture_mass": 0.5312491394365587,
+          "linear_fixture_row_L1_difference": 1.0624982788731174
+        }
+      ]
+    },
+    {
+      "context_pixels": 768,
+      "core_pixels": 512,
+      "centered_halo_pixels": 128,
+      "context_origin_on_global_grid": true,
+      "core_origin_latent_phase": 16,
+      "samples": [
+        {
+          "local_latent_coordinate": 16,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 128,
+          "missing_positive_linear_fixture_mass": 0.3322531776130741,
+          "linear_fixture_row_L1_difference": 0.6645063552261484
+        },
+        {
+          "local_latent_coordinate": 47,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 128,
+          "missing_positive_linear_fixture_mass": 0.21875000000000003,
+          "linear_fixture_row_L1_difference": 0.4375000000000007
+        },
+        {
+          "local_latent_coordinate": 79,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 128,
+          "missing_positive_linear_fixture_mass": 0.3322531776130741,
+          "linear_fixture_row_L1_difference": 0.6645063552261482
+        },
+        {
+          "local_latent_coordinate": 12,
+          "scope": "wavelet_radius31_ceil_to4_latent_support",
+          "missing_nonzero_input_coordinates": 128,
+          "missing_positive_linear_fixture_mass": 0.4828507303817287,
+          "linear_fixture_row_L1_difference": 0.965701460763457
+        },
+        {
+          "local_latent_coordinate": 83,
+          "scope": "wavelet_radius31_ceil_to4_latent_support",
+          "missing_nonzero_input_coordinates": 128,
+          "missing_positive_linear_fixture_mass": 0.48285073038172877,
+          "linear_fixture_row_L1_difference": 0.9657014607634575
+        }
+      ]
+    },
+    {
+      "context_pixels": 1024,
+      "core_pixels": 512,
+      "centered_halo_pixels": 256,
+      "context_origin_on_global_grid": true,
+      "core_origin_latent_phase": 0,
+      "samples": [
+        {
+          "local_latent_coordinate": 32,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 96,
+          "missing_positive_linear_fixture_mass": 0.18749931154924698,
+          "linear_fixture_row_L1_difference": 0.37499862309849424
+        },
+        {
+          "local_latent_coordinate": 63,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 96,
+          "missing_positive_linear_fixture_mass": 0.06250068845075298,
+          "linear_fixture_row_L1_difference": 0.12500137690150595
+        },
+        {
+          "local_latent_coordinate": 95,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 96,
+          "missing_positive_linear_fixture_mass": 0.18749931154924698,
+          "linear_fixture_row_L1_difference": 0.37499862309849374
+        },
+        {
+          "local_latent_coordinate": 28,
+          "scope": "wavelet_radius31_ceil_to4_latent_support",
+          "missing_nonzero_input_coordinates": 96,
+          "missing_positive_linear_fixture_mass": 0.18751793362350452,
+          "linear_fixture_row_L1_difference": 0.37503586724700916
+        },
+        {
+          "local_latent_coordinate": 99,
+          "scope": "wavelet_radius31_ceil_to4_latent_support",
+          "missing_nonzero_input_coordinates": 96,
+          "missing_positive_linear_fixture_mass": 0.1875179336235046,
+          "linear_fixture_row_L1_difference": 0.3750358672470091
+        }
+      ]
+    },
+    {
+      "context_pixels": 1536,
+      "core_pixels": 512,
+      "centered_halo_pixels": 512,
+      "context_origin_on_global_grid": true,
+      "core_origin_latent_phase": 0,
+      "samples": [
+        {
+          "local_latent_coordinate": 64,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 32,
+          "missing_positive_linear_fixture_mass": 0.03124982788731175,
+          "linear_fixture_row_L1_difference": 0.06249965577462348
+        },
+        {
+          "local_latent_coordinate": 95,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 32,
+          "missing_positive_linear_fixture_mass": 1.721126882490109e-07,
+          "linear_fixture_row_L1_difference": 3.442253764893666e-07
+        },
+        {
+          "local_latent_coordinate": 127,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 32,
+          "missing_positive_linear_fixture_mass": 0.03124982788731175,
+          "linear_fixture_row_L1_difference": 0.06249965577462348
+        },
+        {
+          "local_latent_coordinate": 60,
+          "scope": "wavelet_radius31_ceil_to4_latent_support",
+          "missing_nonzero_input_coordinates": 64,
+          "missing_positive_linear_fixture_mass": 0.03125896681175224,
+          "linear_fixture_row_L1_difference": 0.06251793362350436
+        },
+        {
+          "local_latent_coordinate": 131,
+          "scope": "wavelet_radius31_ceil_to4_latent_support",
+          "missing_nonzero_input_coordinates": 64,
+          "missing_positive_linear_fixture_mass": 0.03125896681175225,
+          "linear_fixture_row_L1_difference": 0.06251793362350336
+        }
+      ]
+    },
+    {
+      "context_pixels": 2048,
+      "core_pixels": 512,
+      "centered_halo_pixels": 768,
+      "context_origin_on_global_grid": true,
+      "core_origin_latent_phase": 0,
+      "samples": [
+        {
+          "local_latent_coordinate": 96,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 0,
+          "missing_positive_linear_fixture_mass": 0,
+          "linear_fixture_row_L1_difference": 0.0
+        },
+        {
+          "local_latent_coordinate": 127,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 0,
+          "missing_positive_linear_fixture_mass": 0,
+          "linear_fixture_row_L1_difference": 0.0
+        },
+        {
+          "local_latent_coordinate": 159,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 0,
+          "missing_positive_linear_fixture_mass": 0,
+          "linear_fixture_row_L1_difference": 0.0
+        },
+        {
+          "local_latent_coordinate": 92,
+          "scope": "wavelet_radius31_ceil_to4_latent_support",
+          "missing_nonzero_input_coordinates": 32,
+          "missing_positive_linear_fixture_mass": 1.7933623504492744e-06,
+          "linear_fixture_row_L1_difference": 3.5867247009044043e-06
+        },
+        {
+          "local_latent_coordinate": 163,
+          "scope": "wavelet_radius31_ceil_to4_latent_support",
+          "missing_nonzero_input_coordinates": 32,
+          "missing_positive_linear_fixture_mass": 1.7933623504492742e-06,
+          "linear_fixture_row_L1_difference": 3.5867247007101153e-06
+        }
+      ]
+    },
+    {
+      "context_pixels": 2560,
+      "core_pixels": 512,
+      "centered_halo_pixels": 1024,
+      "context_origin_on_global_grid": true,
+      "core_origin_latent_phase": 0,
+      "samples": [
+        {
+          "local_latent_coordinate": 128,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 0,
+          "missing_positive_linear_fixture_mass": 0,
+          "linear_fixture_row_L1_difference": 0.0
+        },
+        {
+          "local_latent_coordinate": 159,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 0,
+          "missing_positive_linear_fixture_mass": 0,
+          "linear_fixture_row_L1_difference": 0.0
+        },
+        {
+          "local_latent_coordinate": 191,
+          "scope": "core",
+          "missing_nonzero_input_coordinates": 0,
+          "missing_positive_linear_fixture_mass": 0,
+          "linear_fixture_row_L1_difference": 0.0
+        },
+        {
+          "local_latent_coordinate": 124,
+          "scope": "wavelet_radius31_ceil_to4_latent_support",
+          "missing_nonzero_input_coordinates": 0,
+          "missing_positive_linear_fixture_mass": 0,
+          "linear_fixture_row_L1_difference": 0.0
+        },
+        {
+          "local_latent_coordinate": 195,
+          "scope": "wavelet_radius31_ceil_to4_latent_support",
+          "missing_nonzero_input_coordinates": 0,
+          "missing_positive_linear_fixture_mass": 0,
+          "linear_fixture_row_L1_difference": 0.0
+        }
+      ]
+    }
+  ],
+  "wavelet": {
+    "levels": 5,
+    "pixel_radius": 31,
+    "latent_support_round_up": 4,
+    "strict_aligned_interior_pre_wavelet_halo_pixels": 768,
+    "strict_aligned_interior_post_wavelet_halo_pixels": 1024
+  },
+  "limitations": [
+    "No actual VAE posterior statistics, GPU BF16 arithmetic, quality metric, speed, or memory measurements.",
+    "Matching support does not match native tile draw indices or random-number consumption; no bitwise-equivalence claim.",
+    "Native end-anchored off-grid border tiles are not represented by the aligned interior fixture.",
+    "GroupNorm and attention permit whole-tile dependency; the uniform mean fixture is only a constructive support example."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "label": "push5_pix_g4_distill250_full",
+  "status": "complete",
+  "completed": 103,
+  "expected": 103,
+  "official_full_count": true,
+  "validation": {
+    "clipiqa": 0.8806024789810181,
+    "dists": 0.28388617436091107,
+    "lpips": 0.349609375,
+    "maniqa": 0.6082402666409811,
+    "musiq": 44.71489715576172,
+    "niqe": 4.477693237777032,
+    "n": 3,
+    "fr": 1.3665044506390889,
+    "nr_val": 2.488222393401913,
+    "score": 3.854726844041002
+  },
+  "test": {
+    "clipiqa": 0.8699824982881545,
+    "maniqa": 0.6228379267454147,
+    "musiq": 40.13766962051392,
+    "niqe": 4.187307573799926,
+    "n": 100,
+    "nr": 2.475466363858716
+  },
+  "S_proxy": 3.841970814497805,
+  "S_proxy_scope": "full100_test_NR_plus3val_FR"
+}

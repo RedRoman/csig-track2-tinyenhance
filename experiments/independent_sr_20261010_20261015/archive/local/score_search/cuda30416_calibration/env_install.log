@@ -1,0 +1,23 @@
+Looking in indexes: http://repo.myhuaweicloud.com/repository/pypi/simple
+Collecting peft==0.17.1
+  Downloading http://repo.myhuaweicloud.com/repository/pypi/packages/49/fe/a2da1627aa9cb6310b6034598363bd26ac301c4a99d21f415b1b2855891e/peft-0.17.1-py3-none-any.whl (504 kB)
+Collecting omegaconf==2.3.0
+  Downloading http://repo.myhuaweicloud.com/repository/pypi/packages/e3/94/1843518e420fa3ed6919835845df698c7e27e183cb997394e4a670973a65/omegaconf-2.3.0-py3-none-any.whl (79 kB)
+Collecting pyiqa==0.1.10
+  Downloading http://repo.myhuaweicloud.com/repository/pypi/packages/84/42/33414d3245dc2a3fc62a590f99795b0675c5d3b7b961ffb0f2bf207d0006/pyiqa-0.1.10-py3-none-any.whl (238 kB)
+Collecting timm==1.0.28
+  Downloading http://repo.myhuaweicloud.com/repository/pypi/packages/c1/76/de1bfac17d183c49c6d0887903d3064ced51cf1d9ba7a8d611c1a8808c4f/timm-1.0.28-py3-none-any.whl (2.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 13.0 MB/s eta 0:00:00
+Collecting diffusers==0.33.1
+  Downloading http://repo.myhuaweicloud.com/repository/pypi/packages/e7/7a/f08f610cea8a3395ad3b4f586db23bedb43c68db6c3261145a15e7b63126/diffusers-0.33.1-py3-none-any.whl (3.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 43.6 MB/s eta 0:00:00
+Installing collected packages: timm, pyiqa, peft, omegaconf, diffusers
+  Attempting uninstall: diffusers
+    Found existing installation: diffusers 0.35.1
+    Not uninstalling diffusers at /home/ma-user/miniconda3/lib/python3.13/site-packages, outside environment /cache/independent_sr_cuda_20261013/env
+    Can't uninstall 'diffusers'. No files were found to uninstall.
+
+Successfully installed diffusers-0.33.1 omegaconf-2.3.0 peft-0.17.1 pyiqa-0.1.10 timm-1.0.28
+
+[notice] A new release of pip is available: 25.1.1 -> 26.2.1
+[notice] To update, run: /cache/independent_sr_cuda_20261013/env/bin/python -m pip install --upgrade pip

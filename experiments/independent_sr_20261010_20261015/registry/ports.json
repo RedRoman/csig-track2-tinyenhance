@@ -1,0 +1,91 @@
+{
+  "snapshot_UTC": "2026-10-15T13:52:54.891115+00:00",
+  "only_current_port_was_probed": 30416,
+  "records": [
+    {
+      "port": 32316,
+      "evidence": "direct user conversation history",
+      "usage_note": "用户最初round2端口",
+      "current_connectivity_verified": false,
+      "hardware": null
+    },
+    {
+      "port": 32193,
+      "evidence": "direct user conversation history",
+      "usage_note": "用户切换及round2/nr_v2/昇腾历史",
+      "current_connectivity_verified": false,
+      "hardware": null
+    },
+    {
+      "port": 31320,
+      "evidence": "direct user conversation history",
+      "usage_note": "用户列出的替代端口",
+      "current_connectivity_verified": false,
+      "hardware": null
+    },
+    {
+      "port": 31051,
+      "evidence": "direct user conversation history",
+      "usage_note": "用户列出的替代端口",
+      "current_connectivity_verified": false,
+      "hardware": null
+    },
+    {
+      "port": 31731,
+      "evidence": "direct user conversation history",
+      "usage_note": "用户列出的替代端口",
+      "current_connectivity_verified": false,
+      "hardware": null
+    },
+    {
+      "port": 30794,
+      "evidence": "direct user conversation history",
+      "usage_note": "用户列出的替代端口",
+      "current_connectivity_verified": false,
+      "hardware": null
+    },
+    {
+      "port": 30213,
+      "evidence": "direct user conversation history",
+      "usage_note": "用户列出的替代端口",
+      "current_connectivity_verified": false,
+      "hardware": null
+    },
+    {
+      "port": 30207,
+      "evidence": "user conversation + archived README/experiment_plan and NPU metadata",
+      "usage_note": "用户曾称CUDA，但实测报告为Ascend910B3/NPU；按实际后端记录",
+      "current_connectivity_verified": false,
+      "hardware": "historical Ascend910B3 NPU"
+    },
+    {
+      "port": 30416,
+      "evidence": "archive/server_cuda30416/LIVE_RESOURCE_SNAPSHOT.json",
+      "usage_note": "当前CUDA实验实例，snapshot时无active GPU process",
+      "current_connectivity_verified": true,
+      "hostname": "os-node-created-fg9f4",
+      "SSH_alias": "huawei-modelarts-31514",
+      "hardware": "4x NVIDIA A100-SXM4-80GB",
+      "experiment_root": "/cache/independent_sr_cuda_20261013",
+      "python": "/cache/independent_sr_cuda_20261013/env/bin/python"
+    },
+    {
+      "port": 30138,
+      "evidence": "existing repository docs/memory",
+      "current_connectivity_verified": false,
+      "usage_note": "更早CSIG ModelArts历史"
+    },
+    {
+      "port": 30674,
+      "evidence": "existing repository docs/memory",
+      "current_connectivity_verified": false,
+      "usage_note": "更早CSIG ModelArts与AutoDL跳板历史"
+    },
+    {
+      "port": 24686,
+      "evidence": "existing repository migration docs",
+      "current_connectivity_verified": false,
+      "usage_note": "更早AutoDL历史"
+    }
+  ]
+}
